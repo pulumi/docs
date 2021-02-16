@@ -1,8 +1,8 @@
 
 ---
 title: "Secret"
-title_tag: "Resource Secret | Module secretmanager | Package GCP"
-meta_desc: "Explore the Secret resource of the secretmanager module, including examples, input properties, output properties, lookup functions, and supporting types. A Secret is a logical secret whose value and versions can be accessed."
+title_tag: "gcp.secretmanager.Secret"
+meta_desc: "Documentation for the gcp.secretmanager.Secret resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -67,14 +67,14 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/secretmanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = secretmanager.NewSecret(ctx, "secret-basic", &secretmanager.SecretArgs{
-			Labels: pulumi.Map{
+		_, err := secretmanager.NewSecret(ctx, "secret_basic", &secretmanager.SecretArgs{
+			Labels: pulumi.StringMap{
 				"label": pulumi.String("my-label"),
 			},
 			Replication: &secretmanager.SecretReplicationArgs{
@@ -110,18 +110,18 @@ secret_basic = gcp.secretmanager.Secret("secret-basic",
     labels={
         "label": "my-label",
     },
-    replication={
-        "userManaged": {
-            "replicas": [
-                {
-                    "location": "us-central1",
-                },
-                {
-                    "location": "us-east1",
-                },
+    replication=gcp.secretmanager.SecretReplicationArgs(
+        user_managed=gcp.secretmanager.SecretReplicationUserManagedArgs(
+            replicas=[
+                gcp.secretmanager.SecretReplicationUserManagedReplicaArgs(
+                    location="us-central1",
+                ),
+                gcp.secretmanager.SecretReplicationUserManagedReplicaArgs(
+                    location="us-east1",
+                ),
             ],
-        },
-    },
+        ),
+    ),
     secret_id="secret")
 ```
 
@@ -163,19 +163,19 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#Secret">Secret</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#SecretArgs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/secretmanager/#Secret">Secret</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>labels=None<span class="p">, </span>project=None<span class="p">, </span>replication=None<span class="p">, </span>secret_id=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[SecretReplicationArgs]</span> = None<span class="p">, </span><span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#Secret">NewSecret</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretArgs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#Secret">Secret</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecret</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Secret</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Secret.html">Secret</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.SecretArgs.html">SecretArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,7 +186,7 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -196,7 +196,7 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#SecretArgs">SecretArgs</a></span>
+        <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -245,7 +245,7 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -255,7 +255,7 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -265,7 +265,7 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretArgs">SecretArgs</a></span>
+        <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -275,7 +275,7 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -294,7 +294,7 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -304,7 +304,7 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.SecretArgs.html">SecretArgs</a></span>
+        <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -327,12 +327,11 @@ const secret_basic = new gcp.secretmanager.Secret("secret-basic", {
 
 ## Secret Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Secret resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Secret resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -343,30 +342,29 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="replication_csharp">
 <a href="#replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
-after the Secret has been created.  Structure is documented below.
+after the Secret has been created.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secretid_csharp">
 <a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -379,22 +377,19 @@ No more than 64 labels can be assigned to a given resource.
 An object containing a list of "key": value pairs. Example:
 { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -403,30 +398,29 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="replication_go">
 <a href="#replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication</a></span>
     </dt>
     <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
-after the Secret has been created.  Structure is documented below.
+after the Secret has been created.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secretid_go">
 <a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -439,22 +433,19 @@ No more than 64 labels can be assigned to a given resource.
 An object containing a list of "key": value pairs. Example:
 { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -463,30 +454,29 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="replication_nodejs">
 <a href="#replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication</a></span>
     </dt>
     <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
-after the Secret has been created.  Structure is documented below.
+after the Secret has been created.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secretid_nodejs">
 <a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -499,22 +489,19 @@ No more than 64 labels can be assigned to a given resource.
 An object containing a list of "key": value pairs. Example:
 { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -523,32 +510,31 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="replication_python">
 <a href="#replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplication">Dict[Secret<wbr>Replication]</a></span>
+        <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
-after the Secret has been created.  Structure is documented below.
+after the Secret has been created.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secret_id_python">
 <a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels assigned to this Secret.
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
@@ -559,31 +545,24 @@ No more than 64 labels can be assigned to a given resource.
 An object containing a list of "key": value pairs. Example:
 { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Secret resource produces the following output properties:
-
 
 
 
@@ -594,37 +573,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the Secret was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -633,37 +608,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the Secret was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -672,37 +643,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the Secret was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -711,40 +678,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the Secret was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -754,19 +714,20 @@ Get an existing Secret resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#SecretState">SecretState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/secretmanager/#Secret">Secret</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Secret</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>create_time=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>replication=None<span class="p">, </span>secret_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication</span><span class="p">:</span> <span class="nx">Optional[SecretReplicationArgs]</span> = None<span class="p">, </span><span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Secret</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecret<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretState">SecretState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#Secret">Secret</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecret<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecretState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Secret</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Secret.html">Secret</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.SecretState.html">SecretState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Secret</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecretState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -868,7 +829,6 @@ Get an existing Secret resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -876,18 +836,17 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the Secret was created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -900,56 +859,51 @@ No more than 64 labels can be assigned to a given resource.
 An object containing a list of "key": value pairs. Example:
 { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_replication_csharp">
 <a href="#state_replication_csharp" style="color: inherit; text-decoration: inherit;">Replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
-after the Secret has been created.  Structure is documented below.
+after the Secret has been created.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secretid_csharp">
 <a href="#state_secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -958,18 +912,17 @@ after the Secret has been created.  Structure is documented below.
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the Secret was created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -982,56 +935,51 @@ No more than 64 labels can be assigned to a given resource.
 An object containing a list of "key": value pairs. Example:
 { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_replication_go">
 <a href="#state_replication_go" style="color: inherit; text-decoration: inherit;">Replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication</a></span>
     </dt>
     <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
-after the Secret has been created.  Structure is documented below.
+after the Secret has been created.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secretid_go">
 <a href="#state_secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1040,18 +988,17 @@ after the Secret has been created.  Structure is documented below.
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the Secret was created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1064,56 +1011,51 @@ No more than 64 labels can be assigned to a given resource.
 An object containing a list of "key": value pairs. Example:
 { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_replication_nodejs">
 <a href="#state_replication_nodejs" style="color: inherit; text-decoration: inherit;">replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication</a></span>
     </dt>
     <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
-after the Secret has been created.  Structure is documented below.
+after the Secret has been created.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secretid_nodejs">
 <a href="#state_secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1122,20 +1064,19 @@ after the Secret has been created.  Structure is documented below.
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the Secret was created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels assigned to this Secret.
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
@@ -1146,59 +1087,51 @@ No more than 64 labels can be assigned to a given resource.
 An object containing a list of "key": value pairs. Example:
 { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the Secret. Format: 'projects/{{project}}/secrets/{{secret_id}}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_replication_python">
 <a href="#state_replication_python" style="color: inherit; text-decoration: inherit;">replication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplication">Dict[Secret<wbr>Replication]</a></span>
+        <span class="property-type"><a href="#secretreplication">Secret<wbr>Replication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The replication policy of the secret data attached to the Secret. It cannot be changed
-after the Secret has been created.  Structure is documented below.
+after the Secret has been created.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secret_id_python">
 <a href="#state_secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This must be unique within the project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1208,20 +1141,8 @@ after the Secret has been created.  Structure is documented below.
 ## Supporting Types
 
 
+
 <h4 id="secretreplication">Secret<wbr>Replication</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecretReplication">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecretReplication">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretReplicationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretReplicationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Inputs.SecretReplicationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Outputs.SecretReplication.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1230,27 +1151,25 @@ after the Secret has been created.  Structure is documented below.
             title="Optional">
         <span id="automatic_csharp">
 <a href="#automatic_csharp" style="color: inherit; text-decoration: inherit;">Automatic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usermanaged_csharp">
 <a href="#usermanaged_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Managed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.  Structure is documented below.
+    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1259,27 +1178,25 @@ after the Secret has been created.  Structure is documented below.
             title="Optional">
         <span id="automatic_go">
 <a href="#automatic_go" style="color: inherit; text-decoration: inherit;">Automatic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usermanaged_go">
 <a href="#usermanaged_go" style="color: inherit; text-decoration: inherit;">User<wbr>Managed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed</a></span>
     </dt>
-    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.  Structure is documented below.
+    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1288,27 +1205,25 @@ after the Secret has been created.  Structure is documented below.
             title="Optional">
         <span id="automatic_nodejs">
 <a href="#automatic_nodejs" style="color: inherit; text-decoration: inherit;">automatic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usermanaged_nodejs">
 <a href="#usermanaged_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Managed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed</a></span>
     </dt>
-    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.  Structure is documented below.
+    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1317,45 +1232,27 @@ after the Secret has been created.  Structure is documented below.
             title="Optional">
         <span id="automatic_python">
 <a href="#automatic_python" style="color: inherit; text-decoration: inherit;">automatic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="usermanaged_python">
-<a href="#usermanaged_python" style="color: inherit; text-decoration: inherit;">user<wbr>Managed</a>
-</span> 
+        <span id="user_managed_python">
+<a href="#user_managed_python" style="color: inherit; text-decoration: inherit;">user_<wbr>managed</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplicationusermanaged">Dict[Secret<wbr>Replication<wbr>User<wbr>Managed]</a></span>
+        <span class="property-type"><a href="#secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.  Structure is documented below.
+    <dd>{{% md %}}The Secret will automatically be replicated without any restrictions.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="secretreplicationusermanaged">Secret<wbr>Replication<wbr>User<wbr>Managed</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecretReplicationUserManaged">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecretReplicationUserManaged">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretReplicationUserManagedArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretReplicationUserManagedOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Inputs.SecretReplicationUserManagedArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Outputs.SecretReplicationUserManaged.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1364,16 +1261,15 @@ after the Secret has been created.  Structure is documented below.
             title="Required">
         <span id="replicas_csharp">
 <a href="#replicas_csharp" style="color: inherit; text-decoration: inherit;">Replicas</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanagedreplica">List&lt;Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.  Structure is documented below.
+    <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1382,16 +1278,15 @@ after the Secret has been created.  Structure is documented below.
             title="Required">
         <span id="replicas_go">
 <a href="#replicas_go" style="color: inherit; text-decoration: inherit;">Replicas</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanagedreplica">[]Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica</a></span>
     </dt>
-    <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.  Structure is documented below.
+    <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1400,16 +1295,15 @@ after the Secret has been created.  Structure is documented below.
             title="Required">
         <span id="replicas_nodejs">
 <a href="#replicas_nodejs" style="color: inherit; text-decoration: inherit;">replicas</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreplicationusermanagedreplica">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.  Structure is documented below.
+    <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1418,34 +1312,17 @@ after the Secret has been created.  Structure is documented below.
             title="Required">
         <span id="replicas_python">
 <a href="#replicas_python" style="color: inherit; text-decoration: inherit;">replicas</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretreplicationusermanagedreplica">List[Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica]</a></span>
+        <span class="property-type"><a href="#secretreplicationusermanagedreplica">Sequence[Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.  Structure is documented below.
+    <dd>{{% md %}}The list of Replicas for this Secret. Cannot be empty.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="secretreplicationusermanagedreplica">Secret<wbr>Replication<wbr>User<wbr>Managed<wbr>Replica</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SecretReplicationUserManagedReplica">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SecretReplicationUserManagedReplica">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretReplicationUserManagedReplicaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/secretmanager?tab=doc#SecretReplicationUserManagedReplicaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Inputs.SecretReplicationUserManagedReplicaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.SecretManager.Outputs.SecretReplicationUserManagedReplica.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1454,16 +1331,14 @@ after the Secret has been created.  Structure is documented below.
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: "us-east1".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1472,16 +1347,14 @@ after the Secret has been created.  Structure is documented below.
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: "us-east1".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1490,16 +1363,14 @@ after the Secret has been created.  Structure is documented below.
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: "us-east1".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1508,20 +1379,30 @@ after the Secret has been created.  Structure is documented below.
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The canonical IDs of the location to replicate data. For example: "us-east1".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Secret can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:secretmanager/secret:Secret default projects/{{project}}/secrets/{{secret_id}}
+```
 
+```sh
+ $ pulumi import gcp:secretmanager/secret:Secret default {{project}}/{{secret_id}}
+```
 
+```sh
+ $ pulumi import gcp:secretmanager/secret:Secret default {{secret_id}}
+```
 
 
 
@@ -1533,6 +1414,6 @@ after the Secret has been created.  Structure is documented below.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

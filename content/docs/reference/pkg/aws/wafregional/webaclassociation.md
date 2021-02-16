@@ -1,8 +1,8 @@
 
 ---
 title: "WebAclAssociation"
-title_tag: "Resource WebAclAssociation | Module wafregional | Package AWS"
-meta_desc: "Explore the WebAclAssociation resource of the wafregional module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an association with WAF Regional Web ACL."
+title_tag: "aws.wafregional.WebAclAssociation"
+meta_desc: "Documentation for the aws.wafregional.WebAclAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -73,29 +73,29 @@ const fooWebAclAssociation = new aws.wafregional.WebAclAssociation("fooWebAclAss
 import pulumi
 import pulumi_aws as aws
 
-ipset = aws.wafregional.IpSet("ipset", ip_set_descriptors=[{
-    "type": "IPV4",
-    "value": "192.0.7.0/24",
-}])
+ipset = aws.wafregional.IpSet("ipset", ip_set_descriptors=[aws.wafregional.IpSetIpSetDescriptorArgs(
+    type="IPV4",
+    value="192.0.7.0/24",
+)])
 foo_rule = aws.wafregional.Rule("fooRule",
     metric_name="tfWAFRule",
-    predicates=[{
-        "dataId": ipset.id,
-        "negated": False,
-        "type": "IPMatch",
-    }])
+    predicates=[aws.wafregional.RulePredicateArgs(
+        data_id=ipset.id,
+        negated=False,
+        type="IPMatch",
+    )])
 foo_web_acl = aws.wafregional.WebAcl("fooWebAcl",
     metric_name="foo",
-    default_action={
-        "type": "ALLOW",
-    },
-    rules=[{
-        "action": {
-            "type": "BLOCK",
-        },
-        "priority": 1,
-        "rule_id": foo_rule.id,
-    }])
+    default_action=aws.wafregional.WebAclDefaultActionArgs(
+        type="ALLOW",
+    ),
+    rules=[aws.wafregional.WebAclRuleArgs(
+        action=aws.wafregional.WebAclRuleActionArgs(
+            type="BLOCK",
+        ),
+        priority=1,
+        rule_id=foo_rule.id,
+    )])
 foo_vpc = aws.ec2.Vpc("fooVpc", cidr_block="10.1.0.0/16")
 available = aws.get_availability_zones()
 foo_subnet = aws.ec2.Subnet("fooSubnet",
@@ -306,393 +306,6 @@ func main() {
 }
 ```
 
-## API Gateway Association Example
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const ipset = new aws.wafregional.IpSet("ipset", {ipSetDescriptors: [{
-    type: "IPV4",
-    value: "192.0.7.0/24",
-}]});
-const fooRule = new aws.wafregional.Rule("fooRule", {
-    metricName: "tfWAFRule",
-    predicates: [{
-        dataId: ipset.id,
-        negated: false,
-        type: "IPMatch",
-    }],
-});
-const fooWebAcl = new aws.wafregional.WebAcl("fooWebAcl", {
-    metricName: "foo",
-    defaultAction: {
-        type: "ALLOW",
-    },
-    rules: [{
-        action: {
-            type: "BLOCK",
-        },
-        priority: 1,
-        ruleId: fooRule.id,
-    }],
-});
-const testRestApi = new aws.apigateway.RestApi("testRestApi", {});
-const testResource = new aws.apigateway.Resource("testResource", {
-    parentId: testRestApi.rootResourceId,
-    pathPart: "test",
-    restApi: testRestApi.id,
-});
-const testMethod = new aws.apigateway.Method("testMethod", {
-    authorization: "NONE",
-    httpMethod: "GET",
-    resourceId: testResource.id,
-    restApi: testRestApi.id,
-});
-const testMethodResponse = new aws.apigateway.MethodResponse("testMethodResponse", {
-    httpMethod: testMethod.httpMethod,
-    resourceId: testResource.id,
-    restApi: testRestApi.id,
-    statusCode: "400",
-});
-const testIntegration = new aws.apigateway.Integration("testIntegration", {
-    httpMethod: testMethod.httpMethod,
-    integrationHttpMethod: "GET",
-    resourceId: testResource.id,
-    restApi: testRestApi.id,
-    type: "HTTP",
-    uri: "http://www.example.com",
-});
-const testIntegrationResponse = new aws.apigateway.IntegrationResponse("testIntegrationResponse", {
-    restApi: testRestApi.id,
-    resourceId: testResource.id,
-    httpMethod: testIntegration.httpMethod,
-    statusCode: testMethodResponse.statusCode,
-});
-const testDeployment = new aws.apigateway.Deployment("testDeployment", {restApi: testRestApi.id}, {
-    dependsOn: [testIntegrationResponse],
-});
-const testStage = new aws.apigateway.Stage("testStage", {
-    deployment: testDeployment.id,
-    restApi: testRestApi.id,
-    stageName: "test",
-});
-const association = new aws.wafregional.WebAclAssociation("association", {
-    resourceArn: testStage.arn,
-    webAclId: fooWebAcl.id,
-});
-```
-```python
-import pulumi
-import pulumi_aws as aws
-
-ipset = aws.wafregional.IpSet("ipset", ip_set_descriptors=[{
-    "type": "IPV4",
-    "value": "192.0.7.0/24",
-}])
-foo_rule = aws.wafregional.Rule("fooRule",
-    metric_name="tfWAFRule",
-    predicates=[{
-        "dataId": ipset.id,
-        "negated": False,
-        "type": "IPMatch",
-    }])
-foo_web_acl = aws.wafregional.WebAcl("fooWebAcl",
-    metric_name="foo",
-    default_action={
-        "type": "ALLOW",
-    },
-    rules=[{
-        "action": {
-            "type": "BLOCK",
-        },
-        "priority": 1,
-        "rule_id": foo_rule.id,
-    }])
-test_rest_api = aws.apigateway.RestApi("testRestApi")
-test_resource = aws.apigateway.Resource("testResource",
-    parent_id=test_rest_api.root_resource_id,
-    path_part="test",
-    rest_api=test_rest_api.id)
-test_method = aws.apigateway.Method("testMethod",
-    authorization="NONE",
-    http_method="GET",
-    resource_id=test_resource.id,
-    rest_api=test_rest_api.id)
-test_method_response = aws.apigateway.MethodResponse("testMethodResponse",
-    http_method=test_method.http_method,
-    resource_id=test_resource.id,
-    rest_api=test_rest_api.id,
-    status_code="400")
-test_integration = aws.apigateway.Integration("testIntegration",
-    http_method=test_method.http_method,
-    integration_http_method="GET",
-    resource_id=test_resource.id,
-    rest_api=test_rest_api.id,
-    type="HTTP",
-    uri="http://www.example.com")
-test_integration_response = aws.apigateway.IntegrationResponse("testIntegrationResponse",
-    rest_api=test_rest_api.id,
-    resource_id=test_resource.id,
-    http_method=test_integration.http_method,
-    status_code=test_method_response.status_code)
-test_deployment = aws.apigateway.Deployment("testDeployment", rest_api=test_rest_api.id,
-opts=ResourceOptions(depends_on=[test_integration_response]))
-test_stage = aws.apigateway.Stage("testStage",
-    deployment=test_deployment.id,
-    rest_api=test_rest_api.id,
-    stage_name="test")
-association = aws.wafregional.WebAclAssociation("association",
-    resource_arn=test_stage.arn,
-    web_acl_id=foo_web_acl.id)
-```
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var ipset = new Aws.WafRegional.IpSet("ipset", new Aws.WafRegional.IpSetArgs
-        {
-            IpSetDescriptors = 
-            {
-                new Aws.WafRegional.Inputs.IpSetIpSetDescriptorArgs
-                {
-                    Type = "IPV4",
-                    Value = "192.0.7.0/24",
-                },
-            },
-        });
-        var fooRule = new Aws.WafRegional.Rule("fooRule", new Aws.WafRegional.RuleArgs
-        {
-            MetricName = "tfWAFRule",
-            Predicates = 
-            {
-                new Aws.WafRegional.Inputs.RulePredicateArgs
-                {
-                    DataId = ipset.Id,
-                    Negated = false,
-                    Type = "IPMatch",
-                },
-            },
-        });
-        var fooWebAcl = new Aws.WafRegional.WebAcl("fooWebAcl", new Aws.WafRegional.WebAclArgs
-        {
-            MetricName = "foo",
-            DefaultAction = new Aws.WafRegional.Inputs.WebAclDefaultActionArgs
-            {
-                Type = "ALLOW",
-            },
-            Rules = 
-            {
-                new Aws.WafRegional.Inputs.WebAclRuleArgs
-                {
-                    Action = new Aws.WafRegional.Inputs.WebAclRuleActionArgs
-                    {
-                        Type = "BLOCK",
-                    },
-                    Priority = 1,
-                    RuleId = fooRule.Id,
-                },
-            },
-        });
-        var testRestApi = new Aws.ApiGateway.RestApi("testRestApi", new Aws.ApiGateway.RestApiArgs
-        {
-        });
-        var testResource = new Aws.ApiGateway.Resource("testResource", new Aws.ApiGateway.ResourceArgs
-        {
-            ParentId = testRestApi.RootResourceId,
-            PathPart = "test",
-            RestApi = testRestApi.Id,
-        });
-        var testMethod = new Aws.ApiGateway.Method("testMethod", new Aws.ApiGateway.MethodArgs
-        {
-            Authorization = "NONE",
-            HttpMethod = "GET",
-            ResourceId = testResource.Id,
-            RestApi = testRestApi.Id,
-        });
-        var testMethodResponse = new Aws.ApiGateway.MethodResponse("testMethodResponse", new Aws.ApiGateway.MethodResponseArgs
-        {
-            HttpMethod = testMethod.HttpMethod,
-            ResourceId = testResource.Id,
-            RestApi = testRestApi.Id,
-            StatusCode = "400",
-        });
-        var testIntegration = new Aws.ApiGateway.Integration("testIntegration", new Aws.ApiGateway.IntegrationArgs
-        {
-            HttpMethod = testMethod.HttpMethod,
-            IntegrationHttpMethod = "GET",
-            ResourceId = testResource.Id,
-            RestApi = testRestApi.Id,
-            Type = "HTTP",
-            Uri = "http://www.example.com",
-        });
-        var testIntegrationResponse = new Aws.ApiGateway.IntegrationResponse("testIntegrationResponse", new Aws.ApiGateway.IntegrationResponseArgs
-        {
-            RestApi = testRestApi.Id,
-            ResourceId = testResource.Id,
-            HttpMethod = testIntegration.HttpMethod,
-            StatusCode = testMethodResponse.StatusCode,
-        });
-        var testDeployment = new Aws.ApiGateway.Deployment("testDeployment", new Aws.ApiGateway.DeploymentArgs
-        {
-            RestApi = testRestApi.Id,
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                testIntegrationResponse,
-            },
-        });
-        var testStage = new Aws.ApiGateway.Stage("testStage", new Aws.ApiGateway.StageArgs
-        {
-            Deployment = testDeployment.Id,
-            RestApi = testRestApi.Id,
-            StageName = "test",
-        });
-        var association = new Aws.WafRegional.WebAclAssociation("association", new Aws.WafRegional.WebAclAssociationArgs
-        {
-            ResourceArn = testStage.Arn,
-            WebAclId = fooWebAcl.Id,
-        });
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		ipset, err := wafregional.NewIpSet(ctx, "ipset", &wafregional.IpSetArgs{
-			IpSetDescriptors: wafregional.IpSetIpSetDescriptorArray{
-				&wafregional.IpSetIpSetDescriptorArgs{
-					Type:  pulumi.String("IPV4"),
-					Value: pulumi.String("192.0.7.0/24"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		fooRule, err := wafregional.NewRule(ctx, "fooRule", &wafregional.RuleArgs{
-			MetricName: pulumi.String("tfWAFRule"),
-			Predicates: wafregional.RulePredicateArray{
-				&wafregional.RulePredicateArgs{
-					DataId:  ipset.ID(),
-					Negated: pulumi.Bool(false),
-					Type:    pulumi.String("IPMatch"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		fooWebAcl, err := wafregional.NewWebAcl(ctx, "fooWebAcl", &wafregional.WebAclArgs{
-			MetricName: pulumi.String("foo"),
-			DefaultAction: &wafregional.WebAclDefaultActionArgs{
-				Type: pulumi.String("ALLOW"),
-			},
-			Rules: wafregional.WebAclRuleArray{
-				&wafregional.WebAclRuleArgs{
-					Action: &wafregional.WebAclRuleActionArgs{
-						Type: pulumi.String("BLOCK"),
-					},
-					Priority: pulumi.Int(1),
-					RuleId:   fooRule.ID(),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		testRestApi, err := apigateway.NewRestApi(ctx, "testRestApi", nil)
-		if err != nil {
-			return err
-		}
-		testResource, err := apigateway.NewResource(ctx, "testResource", &apigateway.ResourceArgs{
-			ParentId: testRestApi.RootResourceId,
-			PathPart: pulumi.String("test"),
-			RestApi:  testRestApi.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		testMethod, err := apigateway.NewMethod(ctx, "testMethod", &apigateway.MethodArgs{
-			Authorization: pulumi.String("NONE"),
-			HttpMethod:    pulumi.String("GET"),
-			ResourceId:    testResource.ID(),
-			RestApi:       testRestApi.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		testMethodResponse, err := apigateway.NewMethodResponse(ctx, "testMethodResponse", &apigateway.MethodResponseArgs{
-			HttpMethod: testMethod.HttpMethod,
-			ResourceId: testResource.ID(),
-			RestApi:    testRestApi.ID(),
-			StatusCode: pulumi.String("400"),
-		})
-		if err != nil {
-			return err
-		}
-		testIntegration, err := apigateway.NewIntegration(ctx, "testIntegration", &apigateway.IntegrationArgs{
-			HttpMethod:            testMethod.HttpMethod,
-			IntegrationHttpMethod: pulumi.String("GET"),
-			ResourceId:            testResource.ID(),
-			RestApi:               testRestApi.ID(),
-			Type:                  pulumi.String("HTTP"),
-			Uri:                   pulumi.String("http://www.example.com"),
-		})
-		if err != nil {
-			return err
-		}
-		testIntegrationResponse, err := apigateway.NewIntegrationResponse(ctx, "testIntegrationResponse", &apigateway.IntegrationResponseArgs{
-			RestApi:    testRestApi.ID(),
-			ResourceId: testResource.ID(),
-			HttpMethod: testIntegration.HttpMethod,
-			StatusCode: testMethodResponse.StatusCode,
-		})
-		if err != nil {
-			return err
-		}
-		testDeployment, err := apigateway.NewDeployment(ctx, "testDeployment", &apigateway.DeploymentArgs{
-			RestApi: testRestApi.ID(),
-		}, pulumi.DependsOn([]pulumi.Resource{
-			testIntegrationResponse,
-		}))
-		if err != nil {
-			return err
-		}
-		testStage, err := apigateway.NewStage(ctx, "testStage", &apigateway.StageArgs{
-			Deployment: testDeployment.ID(),
-			RestApi:    testRestApi.ID(),
-			StageName:  pulumi.String("test"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = wafregional.NewWebAclAssociation(ctx, "association", &wafregional.WebAclAssociationArgs{
-			ResourceArn: testStage.Arn,
-			WebAclId:    fooWebAcl.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
 
 
 ## Create a WebAclAssociation Resource {#create}
@@ -700,19 +313,19 @@ func main() {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#WebAclAssociation">WebAclAssociation</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#WebAclAssociationArgs">WebAclAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAclAssociation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAclAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafregional/#pulumi_aws.wafregional.WebAclAssociation">WebAclAssociation</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>resource_arn=None<span class="p">, </span>web_acl_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAclAssociation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclAssociation">NewWebAclAssociation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclAssociationArgs">WebAclAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclAssociation">WebAclAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAclAssociation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAclAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAclAssociation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.WebAclAssociation.html">WebAclAssociation</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.WebAclAssociationArgs.html">WebAclAssociationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAclAssociation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAclAssociationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -723,7 +336,7 @@ func main() {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -733,7 +346,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#WebAclAssociationArgs">WebAclAssociationArgs</a></span>
+        <span class="property-type"><a href="#inputs">WebAclAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -792,7 +405,7 @@ func main() {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -802,7 +415,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclAssociationArgs">WebAclAssociationArgs</a></span>
+        <span class="property-type"><a href="#inputs">WebAclAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -831,7 +444,7 @@ func main() {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -841,7 +454,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.WebAclAssociationArgs.html">WebAclAssociationArgs</a></span>
+        <span class="property-type"><a href="#inputs">WebAclAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -864,12 +477,11 @@ func main() {
 
 ## WebAclAssociation Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The WebAclAssociation resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The WebAclAssociation resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -880,27 +492,24 @@ The WebAclAssociation resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="resourcearn_csharp">
 <a href="#resourcearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="webaclid_csharp">
 <a href="#webaclid_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF Regional WebACL to create an association.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -909,27 +518,24 @@ The WebAclAssociation resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="resourcearn_go">
 <a href="#resourcearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="webaclid_go">
 <a href="#webaclid_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF Regional WebACL to create an association.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -938,27 +544,24 @@ The WebAclAssociation resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="resourcearn_nodejs">
 <a href="#resourcearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="webaclid_nodejs">
 <a href="#webaclid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF Regional WebACL to create an association.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -967,36 +570,29 @@ The WebAclAssociation resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="resource_arn_python">
 <a href="#resource_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="web_acl_id_python">
 <a href="#web_acl_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>acl_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF Regional WebACL to create an association.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the WebAclAssociation resource produces the following output properties:
-
 
 
 
@@ -1007,15 +603,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1024,15 +618,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1041,15 +633,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1058,18 +648,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1079,19 +664,20 @@ Get an existing WebAclAssociation resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#WebAclAssociationState">WebAclAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#WebAclAssociation">WebAclAssociation</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">WebAclAssociationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">WebAclAssociation</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>resource_arn=None<span class="p">, </span>web_acl_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> WebAclAssociation</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebAclAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclAssociationState">WebAclAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#WebAclAssociation">WebAclAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebAclAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">WebAclAssociationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAclAssociation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.WebAclAssociation.html">WebAclAssociation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.WebAclAssociationState.html">WebAclAssociationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">WebAclAssociation</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">WebAclAssociationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1193,7 +779,6 @@ Get an existing WebAclAssociation resource's state with the given name, ID, and 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1201,27 +786,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_resourcearn_csharp">
 <a href="#state_resourcearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_webaclid_csharp">
 <a href="#state_webaclid_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF Regional WebACL to create an association.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1230,27 +812,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_resourcearn_go">
 <a href="#state_resourcearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_webaclid_go">
 <a href="#state_webaclid_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF Regional WebACL to create an association.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1259,27 +838,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_resourcearn_nodejs">
 <a href="#state_resourcearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_webaclid_nodejs">
 <a href="#state_webaclid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF Regional WebACL to create an association.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1288,24 +864,22 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_resource_arn_python">
 <a href="#state_resource_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_web_acl_id_python">
 <a href="#state_web_acl_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>acl_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the WAF Regional WebACL to create an association.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1313,8 +887,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+WAF Regional Web ACL Association can be imported using their `web_acl_id:resource_arn`, e.g.
+
+```sh
+ $ pulumi import aws:wafregional/webAclAssociation:WebAclAssociation foo web_acl_id:resource_arn
+```
 
 
 

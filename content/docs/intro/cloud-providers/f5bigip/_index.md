@@ -72,17 +72,27 @@ monitor = f5bigip.ltm.Monitor("backend",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  ltm "github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	ltm "github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm"
 )
 
-monitor, _ := ltm.NewMonitor(ctx, "backend", &ltm.MonitorArgs{
-  Name:     pulumi.String("/Common/backend"),
-  Parent:   pulumi.String("/Common/http"),
-  Send:     pulumi.String("GET /\r\n"),
-  Timeout:  pulumi.Int(5),
-  Interval: pulumi.Int(10),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		monitor, err := ltm.NewMonitor(ctx, "backend", &ltm.MonitorArgs{
+			Name:     pulumi.String("/Common/backend"),
+			Parent:   pulumi.String("/Common/http"),
+			Send:     pulumi.String("GET /\r\n"),
+			Timeout:  pulumi.Int(5),
+			Interval: pulumi.Int(10),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

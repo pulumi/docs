@@ -11,6 +11,7 @@ Explore the resources and functions of the firestore module in the GCP package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="document" title="Document"><span class="symbol resource"></span>Document</a></li>
     <li><a href="index" title="Index"><span class="symbol resource"></span>Index</a></li>
 </ul>
 
@@ -21,26 +22,8 @@ Explore the resources and functions of the firestore module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Firestore.html" title="Pulumi.Gcp.Firestore">Pulumi.Gcp.Firestore</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/firestore?tab=doc#" title="gcp/firestore">gcp/firestore</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/firestore/#" title="@pulumi/gcp/firestore">@pulumi/gcp/firestore</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/firestore" title="pulumi_gcp/firestore">pulumi_gcp/firestore</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

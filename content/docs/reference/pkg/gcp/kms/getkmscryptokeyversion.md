@@ -17,6 +17,7 @@ and
 
 A CryptoKeyVersion represents an individual cryptographic key, and the associated key material.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -57,7 +58,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -70,14 +71,14 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err := kms.GetKMSCryptoKey(ctx, &kms.GetKMSCryptoKeyArgs{
+		_, err = kms.GetKMSCryptoKey(ctx, &kms.GetKMSCryptoKeyArgs{
 			Name:    "my-crypto-key",
 			KeyRing: myKeyRing.SelfLink,
 		}, nil)
 		if err != nil {
 			return err
 		}
-		_, err := kms.GetKMSCryptoKeyVersion(ctx, &kms.GetKMSCryptoKeyVersionArgs{
+		_, err = kms.GetKMSCryptoKeyVersion(ctx, &kms.GetKMSCryptoKeyVersionArgs{
 			CryptoKey: data.Google_kms_key.My_key.Self_link,
 		}, nil)
 		if err != nil {
@@ -134,31 +135,30 @@ const myCryptoKeyVersion = gcp.kms.getKMSCryptoKeyVersion({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKMSCryptoKeyVersion<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#GetKMSCryptoKeyVersionArgs">GetKMSCryptoKeyVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#GetKMSCryptoKeyVersionResult">GetKMSCryptoKeyVersionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKMSCryptoKeyVersion<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKMSCryptoKeyVersionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKMSCryptoKeyVersionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_kms_crypto_key_version(</span>crypto_key=None<span class="p">, </span>version=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kms_crypto_key_version(</span><span class="nx">crypto_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKMSCryptoKeyVersionResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSCryptoKeyVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionArgs">GetKMSCryptoKeyVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionResult">GetKMSCryptoKeyVersionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSCryptoKeyVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetKMSCryptoKeyVersionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetKMSCryptoKeyVersionResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKMSCryptoKeyVersion </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.GetKMSCryptoKeyVersionResult.html">GetKMSCryptoKeyVersionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.GetKMSCryptoKeyVersionArgs.html">GetKMSCryptoKeyVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKMSCryptoKeyVersionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKMSCryptoKeyVersionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -168,27 +168,24 @@ The following arguments are supported:
             title="Required">
         <span id="cryptokey_csharp">
 <a href="#cryptokey_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `self_link` of the Google Cloud Platform CryptoKey to which the key version belongs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number for this CryptoKeyVersion. Defaults to `1`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -197,27 +194,24 @@ The following arguments are supported:
             title="Required">
         <span id="cryptokey_go">
 <a href="#cryptokey_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `self_link` of the Google Cloud Platform CryptoKey to which the key version belongs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number for this CryptoKeyVersion. Defaults to `1`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -226,27 +220,24 @@ The following arguments are supported:
             title="Required">
         <span id="cryptokey_nodejs">
 <a href="#cryptokey_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `self_link` of the Google Cloud Platform CryptoKey to which the key version belongs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The version number for this CryptoKeyVersion. Defaults to `1`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -255,30 +246,24 @@ The following arguments are supported:
             title="Required">
         <span id="crypto_key_python">
 <a href="#crypto_key_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `self_link` of the Google Cloud Platform CryptoKey to which the key version belongs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number for this CryptoKeyVersion. Defaults to `1`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -289,7 +274,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -297,80 +281,72 @@ The following output properties are available:
             title="">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cryptokey_csharp">
 <a href="#cryptokey_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="protectionlevel_csharp">
 <a href="#protectionlevel_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion. See the [protection_level reference](https://cloud.google.com/kms/docs/reference/rest/v1/ProtectionLevel) for possible outputs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="publickey_csharp">
-<a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
-</span> 
+        <span id="publickeys_csharp">
+<a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</a></span>
+        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">List&lt;Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`, this block contains details about the public key associated to this CryptoKeyVersion. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the CryptoKeyVersion. See the [state reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions#CryptoKeyVersion.CryptoKeyVersionState) for possible outputs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -379,80 +355,72 @@ The following output properties are available:
             title="">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cryptokey_go">
 <a href="#cryptokey_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="protectionlevel_go">
 <a href="#protectionlevel_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion. See the [protection_level reference](https://cloud.google.com/kms/docs/reference/rest/v1/ProtectionLevel) for possible outputs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="publickey_go">
-<a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
-</span> 
+        <span id="publickeys_go">
+<a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</a></span>
+        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">[]Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`, this block contains details about the public key associated to this CryptoKeyVersion. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the CryptoKeyVersion. See the [state reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions#CryptoKeyVersion.CryptoKeyVersionState) for possible outputs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -461,80 +429,72 @@ The following output properties are available:
             title="">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cryptokey_nodejs">
 <a href="#cryptokey_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="protectionlevel_nodejs">
 <a href="#protectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion. See the [protection_level reference](https://cloud.google.com/kms/docs/reference/rest/v1/ProtectionLevel) for possible outputs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="publickey_nodejs">
-<a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
-</span> 
+        <span id="publickeys_nodejs">
+<a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</a></span>
+        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`, this block contains details about the public key associated to this CryptoKeyVersion. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the CryptoKeyVersion. See the [state reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions#CryptoKeyVersion.CryptoKeyVersionState) for possible outputs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -543,83 +503,72 @@ The following output properties are available:
             title="">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="crypto_key_python">
 <a href="#crypto_key_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="protection_level_python">
 <a href="#protection_level_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion. See the [protection_level reference](https://cloud.google.com/kms/docs/reference/rest/v1/ProtectionLevel) for possible outputs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="public_key_python">
-<a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
-</span> 
+        <span id="public_keys_python">
+<a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Dict[Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key]</a></span>
+        <span class="property-type"><a href="#getkmscryptokeyversionpublickey">Sequence[Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`, this block contains details about the public key associated to this CryptoKeyVersion. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the CryptoKeyVersion. See the [state reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions#CryptoKeyVersion.CryptoKeyVersionState) for possible outputs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -628,17 +577,6 @@ The following output properties are available:
 
 
 <h4 id="getkmscryptokeyversionpublickey">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKMSCryptoKeyVersionPublicKey">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionPublicKey">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.Outputs.GetKMSCryptoKeyVersionPublicKey.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -649,27 +587,24 @@ The following output properties are available:
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pem_csharp">
 <a href="#pem_csharp" style="color: inherit; text-decoration: inherit;">Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -678,27 +613,24 @@ The following output properties are available:
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pem_go">
 <a href="#pem_go" style="color: inherit; text-decoration: inherit;">Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -707,27 +639,24 @@ The following output properties are available:
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pem_nodejs">
 <a href="#pem_nodejs" style="color: inherit; text-decoration: inherit;">pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -736,30 +665,24 @@ The following output properties are available:
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pem_python">
 <a href="#pem_python" style="color: inherit; text-decoration: inherit;">pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -772,6 +695,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

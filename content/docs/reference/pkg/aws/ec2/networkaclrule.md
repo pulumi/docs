@@ -1,8 +1,8 @@
 
 ---
 title: "NetworkAclRule"
-title_tag: "Resource NetworkAclRule | Module ec2 | Package AWS"
-meta_desc: "Explore the NetworkAclRule resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Creates an entry (a rule) in a network ACL with the specified rule number."
+title_tag: "aws.ec2.NetworkAclRule"
+meta_desc: "Documentation for the aws.ec2.NetworkAclRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -139,19 +139,19 @@ const barNetworkAclRule = new aws.ec2.NetworkAclRule("barNetworkAclRule", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#NetworkAclRule">NetworkAclRule</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#NetworkAclRuleArgs">NetworkAclRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NetworkAclRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NetworkAclRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.NetworkAclRule">NetworkAclRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cidr_block=None<span class="p">, </span>egress=None<span class="p">, </span>from_port=None<span class="p">, </span>icmp_code=None<span class="p">, </span>icmp_type=None<span class="p">, </span>ipv6_cidr_block=None<span class="p">, </span>network_acl_id=None<span class="p">, </span>protocol=None<span class="p">, </span>rule_action=None<span class="p">, </span>rule_number=None<span class="p">, </span>to_port=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NetworkAclRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">from_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">icmp_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">icmp_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">to_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclRule">NewNetworkAclRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclRuleArgs">NetworkAclRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclRule">NetworkAclRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNetworkAclRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NetworkAclRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkAclRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.NetworkAclRule.html">NetworkAclRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.NetworkAclRuleArgs.html">NetworkAclRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NetworkAclRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NetworkAclRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -162,7 +162,7 @@ const barNetworkAclRule = new aws.ec2.NetworkAclRule("barNetworkAclRule", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -172,7 +172,7 @@ const barNetworkAclRule = new aws.ec2.NetworkAclRule("barNetworkAclRule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#NetworkAclRuleArgs">NetworkAclRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">NetworkAclRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -231,7 +231,7 @@ const barNetworkAclRule = new aws.ec2.NetworkAclRule("barNetworkAclRule", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -241,7 +241,7 @@ const barNetworkAclRule = new aws.ec2.NetworkAclRule("barNetworkAclRule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclRuleArgs">NetworkAclRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">NetworkAclRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -270,7 +270,7 @@ const barNetworkAclRule = new aws.ec2.NetworkAclRule("barNetworkAclRule", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -280,7 +280,7 @@ const barNetworkAclRule = new aws.ec2.NetworkAclRule("barNetworkAclRule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.NetworkAclRuleArgs.html">NetworkAclRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">NetworkAclRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -303,12 +303,11 @@ const barNetworkAclRule = new aws.ec2.NetworkAclRule("barNetworkAclRule", {
 
 ## NetworkAclRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -319,126 +318,114 @@ The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="networkaclid_csharp">
 <a href="#networkaclid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network ACL.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. A value of -1 means all protocols.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ruleaction_csharp">
 <a href="#ruleaction_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulenumber_csharp">
 <a href="#rulenumber_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egress_csharp">
 <a href="#egress_csharp" style="color: inherit; text-decoration: inherit;">Egress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fromport_csharp">
 <a href="#fromport_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The from port to match.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="icmpcode_csharp">
 <a href="#icmpcode_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="icmptype_csharp">
 <a href="#icmptype_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6cidrblock_csharp">
 <a href="#ipv6cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block to allow or deny.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="toport_csharp">
 <a href="#toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The to port to match.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -447,126 +434,114 @@ The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="networkaclid_go">
 <a href="#networkaclid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network ACL.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. A value of -1 means all protocols.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ruleaction_go">
 <a href="#ruleaction_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulenumber_go">
 <a href="#rulenumber_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egress_go">
 <a href="#egress_go" style="color: inherit; text-decoration: inherit;">Egress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fromport_go">
 <a href="#fromport_go" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The from port to match.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="icmpcode_go">
 <a href="#icmpcode_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="icmptype_go">
 <a href="#icmptype_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6cidrblock_go">
 <a href="#ipv6cidrblock_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block to allow or deny.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="toport_go">
 <a href="#toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The to port to match.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -575,126 +550,114 @@ The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="networkaclid_nodejs">
 <a href="#networkaclid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network ACL.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. A value of -1 means all protocols.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ruleaction_nodejs">
 <a href="#ruleaction_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulenumber_nodejs">
 <a href="#rulenumber_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egress_nodejs">
 <a href="#egress_nodejs" style="color: inherit; text-decoration: inherit;">egress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fromport_nodejs">
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The from port to match.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="icmpcode_nodejs">
 <a href="#icmpcode_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="icmptype_nodejs">
 <a href="#icmptype_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6cidrblock_nodejs">
 <a href="#ipv6cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block to allow or deny.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="toport_nodejs">
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The to port to match.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -703,135 +666,119 @@ The NetworkAclRule resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="network_acl_id_python">
 <a href="#network_acl_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the network ACL.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol. A value of -1 means all protocols.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rule_action_python">
 <a href="#rule_action_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rule_number_python">
 <a href="#rule_number_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egress_python">
 <a href="#egress_python" style="color: inherit; text-decoration: inherit;">egress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="from_port_python">
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The from port to match.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="icmp_code_python">
 <a href="#icmp_code_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="icmp_type_python">
 <a href="#icmp_type_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv6_cidr_block_python">
 <a href="#ipv6_cidr_block_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block to allow or deny.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="to_port_python">
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The to port to match.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the NetworkAclRule resource produces the following output properties:
-
 
 
 
@@ -842,15 +789,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -859,15 +804,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -876,15 +819,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -893,18 +834,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -914,19 +850,20 @@ Get an existing NetworkAclRule resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#NetworkAclRuleState">NetworkAclRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#NetworkAclRule">NetworkAclRule</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NetworkAclRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NetworkAclRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cidr_block=None<span class="p">, </span>egress=None<span class="p">, </span>from_port=None<span class="p">, </span>icmp_code=None<span class="p">, </span>icmp_type=None<span class="p">, </span>ipv6_cidr_block=None<span class="p">, </span>network_acl_id=None<span class="p">, </span>protocol=None<span class="p">, </span>rule_action=None<span class="p">, </span>rule_number=None<span class="p">, </span>to_port=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">egress</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">from_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">icmp_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">icmp_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">to_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> NetworkAclRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkAclRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclRuleState">NetworkAclRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#NetworkAclRule">NetworkAclRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkAclRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NetworkAclRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NetworkAclRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.NetworkAclRule.html">NetworkAclRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.NetworkAclRuleState.html">NetworkAclRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NetworkAclRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NetworkAclRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1028,7 +965,6 @@ Get an existing NetworkAclRule resource's state with the given name, ID, and opt
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1036,126 +972,114 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cidrblock_csharp">
 <a href="#state_cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egress_csharp">
 <a href="#state_egress_csharp" style="color: inherit; text-decoration: inherit;">Egress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fromport_csharp">
 <a href="#state_fromport_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The from port to match.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_icmpcode_csharp">
 <a href="#state_icmpcode_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_icmptype_csharp">
 <a href="#state_icmptype_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblock_csharp">
 <a href="#state_ipv6cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block to allow or deny.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkaclid_csharp">
 <a href="#state_networkaclid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network ACL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. A value of -1 means all protocols.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ruleaction_csharp">
 <a href="#state_ruleaction_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rulenumber_csharp">
 <a href="#state_rulenumber_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_toport_csharp">
 <a href="#state_toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The to port to match.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1164,126 +1088,114 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cidrblock_go">
 <a href="#state_cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egress_go">
 <a href="#state_egress_go" style="color: inherit; text-decoration: inherit;">Egress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fromport_go">
 <a href="#state_fromport_go" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The from port to match.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_icmpcode_go">
 <a href="#state_icmpcode_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_icmptype_go">
 <a href="#state_icmptype_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblock_go">
 <a href="#state_ipv6cidrblock_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block to allow or deny.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkaclid_go">
 <a href="#state_networkaclid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network ACL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. A value of -1 means all protocols.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ruleaction_go">
 <a href="#state_ruleaction_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rulenumber_go">
 <a href="#state_rulenumber_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_toport_go">
 <a href="#state_toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The to port to match.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1292,126 +1204,114 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cidrblock_nodejs">
 <a href="#state_cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egress_nodejs">
 <a href="#state_egress_nodejs" style="color: inherit; text-decoration: inherit;">egress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fromport_nodejs">
 <a href="#state_fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The from port to match.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_icmpcode_nodejs">
 <a href="#state_icmpcode_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_icmptype_nodejs">
 <a href="#state_icmptype_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblock_nodejs">
 <a href="#state_ipv6cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block to allow or deny.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkaclid_nodejs">
 <a href="#state_networkaclid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network ACL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. A value of -1 means all protocols.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ruleaction_nodejs">
 <a href="#state_ruleaction_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rulenumber_nodejs">
 <a href="#state_rulenumber_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_toport_nodejs">
 <a href="#state_toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The to port to match.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1420,123 +1320,112 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cidr_block_python">
 <a href="#state_cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_egress_python">
 <a href="#state_egress_python" style="color: inherit; text-decoration: inherit;">egress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_from_port_python">
 <a href="#state_from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The from port to match.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_icmp_code_python">
 <a href="#state_icmp_code_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP code. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_icmp_type_python">
 <a href="#state_icmp_type_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ICMP protocol: The ICMP type. Required if specifying ICMP for the protocol. e.g. -1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_cidr_block_python">
 <a href="#state_ipv6_cidr_block_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block to allow or deny.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_acl_id_python">
 <a href="#state_network_acl_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the network ACL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol. A value of -1 means all protocols.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rule_action_python">
 <a href="#state_rule_action_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rule_number_python">
 <a href="#state_rule_number_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_to_port_python">
 <a href="#state_to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The to port to match.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1544,8 +1433,20 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+Individual rules can be imported using `NETWORK_ACL_ID:RULE_NUMBER:PROTOCOL:EGRESS`, where `PROTOCOL` can be a decimal (e.g. 6) or string (e.g. tcp) value. If importing a rule previously provisioned by Terraform, the `PROTOCOL` must be the input value used at creation time. For more information on protocol numbers and keywords, see herehttps://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml For example, import a network ACL Rule with an argument like thisconsole
+
+```sh
+ $ pulumi import aws:ec2/networkAclRule:NetworkAclRule my_rule acl-7aaabd18:100:tcp:false
+```
+
+ Or by the procotol's decimal valueconsole
+
+```sh
+ $ pulumi import aws:ec2/networkAclRule:NetworkAclRule my_rule acl-7aaabd18:100:6:false
+```
 
 
 

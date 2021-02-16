@@ -1,0 +1,122 @@
+env:
+  GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
+  PROVIDER_SHORT_NAME: ${{ github.event.client_payload.project-shortname }}
+  PROVIDER_NAME: ${{ github.event.client_payload.project }}
+  PROVIDER_VERSION: ${{ github.event.client_payload.ref }}
+
+name: provider docs build
+on:
+  repository_dispatch:
+    types:
+      - tfgen-provider
+      - non-resource-provider
+      # Non-resource providers are things like awsx / cloud / kubernetesx
+      # it's essentially anything that isn't using the resource based docs
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    needs: build-tfgen-provider-docs
+    steps:
+      - name: checkout docs repo
+        uses: actions/checkout@v2
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
+          destination_branch: "master"
+          pr_title: "Regen docs ${{ env.PROVIDER_SHORT_NAME }}@${{ env.PROVIDER_VERSION }}"
+          pr_body: ""
+          pr_label: "automation/tfgen-provider-docs"
+          github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
+
+  build-tfgen-provider-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building ${{ env.PROVIDER_NAME }} docs @ ${{ env.PROVIDER_VERSION }}"
+      - if: github.event.action != 'non-resource-provider'
+        run: echo "Building docs for a resource based provider"
+      - if: github.event.action == 'non-resource-provider'
+        run: echo "Building docs for a non-resource based provider"
+      - name: checkout docs repo
+        uses: actions/checkout@v2
+        with:
+          path: docs
+      - name: checkout pulumi repo
+        uses: actions/checkout@v2
+        with:
+          repository: pulumi/pulumi
+          path: pulumi
+      - name: checkout tfgen provider
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ github.event.client_payload.repo }}
+          ref: ${{ env.PROVIDER_VERSION }}
+          path: ${{ env.PROVIDER_NAME }}
+          token: ${{ env.GITHUB_TOKEN }}
+      - name: Install pulumictl
+        uses: jaxxstorm/action-install-gh-release@v1.1.0
+        with:
+          repo: pulumi/pulumictl
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: ${{ matrix.goversion }}
+      - name: setup node
+        uses: actions/setup-node@v2-beta
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{matrix.pythonversion}}
+      - name: setup pipenv
+        uses: dschep/install-pipenv-action@v1
+      - name: Setup DotNet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{matrix.dotnetverson}}
+      - run: make ensure ensure_tools
+        working-directory: docs
+      - name: Go based tool installs
+        run: |
+          go get -u github.com/cbroglie/mustache
+          go get -u github.com/gobuffalo/packr
+          go get -u github.com/pkg/errors
+          go get -u gopkg.in/russross/blackfriday.v2
+        working-directory: docs
+      # We only want to run typedoc and python doc for non-resource providers
+      - if: github.event.action == 'non-resource-provider'
+        name: run yarn install in nodejs sdk
+        run: yarn install && yarn run tsc
+        working-directory: ${{ env.PROVIDER_NAME }}/sdk/nodejs
+      - if: github.event.action == 'non-resource-provider'
+        name: run typedoc
+        run: PKGS=${{ env.PROVIDER_SHORT_NAME }} NOBUILD=true ./scripts/run_typedoc.sh
+        working-directory: docs
+      - if: github.event.action == 'non-resource-provider'
+        name: generate python docs
+        run: ./scripts/generate_python_docs.sh "${{ env.PROVIDER_SHORT_NAME }}"
+        working-directory: docs
+      # We only want to run resource docs for providers with a schema - for legacy purposes they are referred to as
+      # tfgen-providers in this script
+      - if: github.event.action != 'non-resource-provider'
+        name: generate resource docs
+        run: ./scripts/gen_resource_docs.sh "${{ env.PROVIDER_SHORT_NAME }}" true "${{ env.PROVIDER_VERSION }}"
+        working-directory: docs
+      - name: git status
+        run: git status && git diff
+        working-directory: docs
+      - name: commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          ref: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
+          author_name: pulumi-bot
+          author_email: "bot@pulumi.com"
+          cwd: docs
+    strategy:
+      matrix:
+        dotnetversion:
+        - 3.1.301
+        goversion:
+        - 1.15.x
+        pythonversion:
+        - "3.7"

@@ -14,6 +14,7 @@ The `alicloud.ecs.getSecurityGroupRules` data source provides a collection of se
 Each collection item represents a single `ingress` or `egress` permission rule.
 The ID of the security group can be provided via a variable or the result from the other data source `alicloud.ecs.getSecurityGroups`.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -38,7 +39,7 @@ class MyStack : Stack
         {
             Direction = "ingress",
             GroupId = groupsDs.Groups[0].Id,
-            IpProtocol = "TCP",
+            IpProtocol = "tcp",
             NicType = "internet",
         })));
         // Pass port_range to the backend service
@@ -54,7 +55,51 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		securityGroupId := cfg.RequireObject("securityGroupId")
+		opt0 := "api"
+		groupsDs, err := ecs.GetSecurityGroups(ctx, &ecs.GetSecurityGroupsArgs{
+			NameRegex: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := "ingress"
+		opt2 := "tcp"
+		opt3 := "internet"
+		ingressRulesDs, err := ecs.GetSecurityGroupRules(ctx, &ecs.GetSecurityGroupRulesArgs{
+			Direction:  &opt1,
+			GroupId:    groupsDs.Groups[0].Id,
+			IpProtocol: &opt2,
+			NicType:    &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewInstance(ctx, "backend", &ecs.InstanceArgs{
+			UserData: pulumi.String(fmt.Sprintf("%v%v", "config_service.sh --portrange=", ingressRulesDs.Rules[0].PortRange)),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,11 +111,11 @@ config = pulumi.Config()
 security_group_id = config.require_object("securityGroupId")
 groups_ds = alicloud.ecs.get_security_groups(name_regex="api")
 ingress_rules_ds = alicloud.ecs.get_security_group_rules(direction="ingress",
-    group_id=groups_ds.groups[0]["id"],
-    ip_protocol="TCP",
+    group_id=groups_ds.groups[0].id,
+    ip_protocol="tcp",
     nic_type="internet")
 # Pass port_range to the backend service
-backend = alicloud.ecs.Instance("backend", user_data=f"config_service.sh --portrange={ingress_rules_ds.rules[0]['port_range']}")
+backend = alicloud.ecs.Instance("backend", user_data=f"config_service.sh --portrange={ingress_rules_ds.rules[0].port_range}")
 ```
 
 {{% /example %}}
@@ -85,7 +130,7 @@ const config = new pulumi.Config();
 // Get the security group id from a variable
 const securityGroupId = config.require("securityGroupId");
 
-// Or get it from the alicloud.ecs.getSecurityGroups data source.
+// Or get it from the alicloud_security_groups data source.
 // Please note that the data source arguments must be enough to filter results to one security group.
 const groupsDs = pulumi.output(alicloud.ecs.getSecurityGroups({
     nameRegex: "api",
@@ -94,7 +139,7 @@ const groupsDs = pulumi.output(alicloud.ecs.getSecurityGroups({
 const ingressRulesDs = groupsDs.apply(groupsDs => alicloud.ecs.getSecurityGroupRules({
     direction: "ingress",
     groupId: groupsDs.groups[0].id,
-    ipProtocol: "TCP",
+    ipProtocol: "tcp",
     nicType: "internet",
 }, { async: true }));
 // Pass port_range to the backend service
@@ -119,7 +164,7 @@ const backend = new alicloud.ecs.Instance("backend", {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_security_group_rules(</span>direction=None<span class="p">, </span>group_id=None<span class="p">, </span>ip_protocol=None<span class="p">, </span>nic_type=None<span class="p">, </span>output_file=None<span class="p">, </span>policy=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_security_group_rules(</span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nic_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecurityGroupRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -140,7 +185,6 @@ const backend = new alicloud.ecs.Instance("backend", {
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -148,70 +192,63 @@ The following arguments are supported:
             title="Required">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group that owns the rules.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_csharp">
 <a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol. Valid values are: `tcp`, `udp`, `icmp`, `gre` and `all`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nictype_csharp">
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Refers to the network type. Can be either `internet` or `intranet`. The default value is `internet`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`. The default value is `accept`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -220,70 +257,63 @@ The following arguments are supported:
             title="Required">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group that owns the rules.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_go">
 <a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol. Valid values are: `tcp`, `udp`, `icmp`, `gre` and `all`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nictype_go">
 <a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Refers to the network type. Can be either `internet` or `intranet`. The default value is `internet`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`. The default value is `accept`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -292,70 +322,63 @@ The following arguments are supported:
             title="Required">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group that owns the rules.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocol_nodejs">
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol. Valid values are: `tcp`, `udp`, `icmp`, `gre` and `all`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nictype_nodejs">
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Refers to the network type. Can be either `internet` or `intranet`. The default value is `internet`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`. The default value is `accept`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -364,73 +387,63 @@ The following arguments are supported:
             title="Required">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the security group that owns the rules.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_protocol_python">
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol. Valid values are: `tcp`, `udp`, `icmp`, `gre` and `all`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nic_type_python">
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Refers to the network type. Can be either `internet` or `intranet`. The default value is `internet`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`. The default value is `accept`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -441,7 +454,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -449,113 +461,102 @@ The following output properties are available:
             title="">
         <span id="groupdesc_csharp">
 <a href="#groupdesc_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Desc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the security group that owns the rules.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="groupname_csharp">
 <a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security group that owns the rules.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritygrouprulesrule">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Outputs.<wbr>Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of security group rules. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization direction, `ingress` or `egress`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ipprotocol_csharp">
 <a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nictype_csharp">
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type, `internet` or `intranet`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -564,113 +565,102 @@ The following output properties are available:
             title="">
         <span id="groupdesc_go">
 <a href="#groupdesc_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Desc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the security group that owns the rules.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="groupname_go">
 <a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security group that owns the rules.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritygrouprulesrule">[]Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A list of security group rules. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization direction, `ingress` or `egress`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ipprotocol_go">
 <a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nictype_go">
 <a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type, `internet` or `intranet`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -679,113 +669,102 @@ The following output properties are available:
             title="">
         <span id="groupdesc_nodejs">
 <a href="#groupdesc_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Desc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the security group that owns the rules.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="groupname_nodejs">
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security group that owns the rules.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritygrouprulesrule">Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of security group rules. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization direction, `ingress` or `egress`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ipprotocol_nodejs">
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nictype_nodejs">
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type, `internet` or `intranet`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -794,116 +773,102 @@ The following output properties are available:
             title="">
         <span id="group_desc_python">
 <a href="#group_desc_python" style="color: inherit; text-decoration: inherit;">group_<wbr>desc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the security group that owns the rules.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="group_name_python">
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the security group that owns the rules.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecuritygrouprulesrule">List[Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getsecuritygrouprulesrule">Sequence[Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A list of security group rules. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization direction, `ingress` or `egress`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ip_protocol_python">
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nic_type_python">
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network type, `internet` or `intranet`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -925,7 +890,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -933,146 +897,134 @@ The following output properties are available:
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destcidrip_csharp">
 <a href="#destcidrip_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target IP address segment for egress authorization.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destgroupid_csharp">
 <a href="#destgroupid_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Target security group id for ingress authorization.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="destgroupowneraccount_csharp">
 <a href="#destgroupowneraccount_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Group<wbr>Owner<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alibaba Cloud account of the target security group.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ipprotocol_csharp">
 <a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol. Valid values are: `tcp`, `udp`, `icmp`, `gre` and `all`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nictype_csharp">
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Refers to the network type. Can be either `internet` or `intranet`. The default value is `internet`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`. The default value is `accept`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="portrange_csharp">
 <a href="#portrange_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of port numbers.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rule priority.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourcecidrip_csharp">
 <a href="#sourcecidrip_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source IP address segment for ingress authorization.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourcegroupid_csharp">
 <a href="#sourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Source security group ID for ingress authorization.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="sourcegroupowneraccount_csharp">
 <a href="#sourcegroupowneraccount_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Group<wbr>Owner<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alibaba Cloud account of the source security group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1081,146 +1033,134 @@ The following output properties are available:
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destcidrip_go">
 <a href="#destcidrip_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target IP address segment for egress authorization.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destgroupid_go">
 <a href="#destgroupid_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Target security group id for ingress authorization.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="destgroupowneraccount_go">
 <a href="#destgroupowneraccount_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Group<wbr>Owner<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alibaba Cloud account of the target security group.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ipprotocol_go">
 <a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol. Valid values are: `tcp`, `udp`, `icmp`, `gre` and `all`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nictype_go">
 <a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Refers to the network type. Can be either `internet` or `intranet`. The default value is `internet`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`. The default value is `accept`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="portrange_go">
 <a href="#portrange_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of port numbers.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rule priority.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourcecidrip_go">
 <a href="#sourcecidrip_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source IP address segment for ingress authorization.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourcegroupid_go">
 <a href="#sourcegroupid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Source security group ID for ingress authorization.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="sourcegroupowneraccount_go">
 <a href="#sourcegroupowneraccount_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Group<wbr>Owner<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alibaba Cloud account of the source security group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1229,146 +1169,134 @@ The following output properties are available:
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destcidrip_nodejs">
 <a href="#destcidrip_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target IP address segment for egress authorization.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="destgroupid_nodejs">
 <a href="#destgroupid_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Target security group id for ingress authorization.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="destgroupowneraccount_nodejs">
 <a href="#destgroupowneraccount_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Group<wbr>Owner<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alibaba Cloud account of the target security group.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ipprotocol_nodejs">
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol. Valid values are: `tcp`, `udp`, `icmp`, `gre` and `all`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nictype_nodejs">
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Refers to the network type. Can be either `internet` or `intranet`. The default value is `internet`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`. The default value is `accept`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="portrange_nodejs">
 <a href="#portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of port numbers.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Rule priority.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourcecidrip_nodejs">
 <a href="#sourcecidrip_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source IP address segment for ingress authorization.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourcegroupid_nodejs">
 <a href="#sourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Source security group ID for ingress authorization.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="sourcegroupowneraccount_nodejs">
 <a href="#sourcegroupowneraccount_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Group<wbr>Owner<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alibaba Cloud account of the source security group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1377,149 +1305,134 @@ The following output properties are available:
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="destcidrip_python">
-<a href="#destcidrip_python" style="color: inherit; text-decoration: inherit;">dest<wbr>Cidr<wbr>Ip</a>
-</span> 
+        <span id="dest_cidr_ip_python">
+<a href="#dest_cidr_ip_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>cidr_<wbr>ip</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Target IP address segment for egress authorization.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="destgroupid_python">
-<a href="#destgroupid_python" style="color: inherit; text-decoration: inherit;">dest<wbr>Group<wbr>Id</a>
-</span> 
+        <span id="dest_group_id_python">
+<a href="#dest_group_id_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>group_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Target security group id for ingress authorization.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="destgroupowneraccount_python">
-<a href="#destgroupowneraccount_python" style="color: inherit; text-decoration: inherit;">dest<wbr>Group<wbr>Owner<wbr>Account</a>
-</span> 
+        <span id="dest_group_owner_account_python">
+<a href="#dest_group_owner_account_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>group_<wbr>owner_<wbr>account</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alibaba Cloud account of the target security group.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization direction. Valid values are: `ingress` or `egress`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ip_protocol_python">
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol. Valid values are: `tcp`, `udp`, `icmp`, `gre` and `all`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nic_type_python">
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Refers to the network type. Can be either `internet` or `intranet`. The default value is `internet`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization policy. Can be either `accept` or `drop`. The default value is `accept`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_range_python">
 <a href="#port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The range of port numbers.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rule priority.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourcegroupid_python">
-<a href="#sourcegroupid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Group<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_cidr_ip_python">
 <a href="#source_cidr_ip_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source IP address segment for ingress authorization.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="source_group_id_python">
+<a href="#source_group_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Source security group ID for ingress authorization.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="source_group_owner_account_python">
 <a href="#source_group_owner_account_python" style="color: inherit; text-decoration: inherit;">source_<wbr>group_<wbr>owner_<wbr>account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alibaba Cloud account of the source security group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1532,6 +1445,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

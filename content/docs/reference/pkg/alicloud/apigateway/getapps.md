@@ -12,6 +12,7 @@ meta_desc: "Explore the GetApps function of the apigateway module, including exa
 
 This data source provides the apps of the current Alibaba Cloud user.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -41,7 +42,29 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "outapps"
+		dataApigatway, err := apigateway.GetApps(ctx, &apigateway.GetAppsArgs{
+			OutputFile: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstAppId", dataApigatway.Apps[0].Id)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -50,7 +73,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 data_apigatway = alicloud.apigateway.get_apps(output_file="outapps")
-pulumi.export("firstAppId", data_apigatway.apps[0]["id"])
+pulumi.export("firstAppId", data_apigatway.apps[0].id)
 ```
 
 {{% /example %}}
@@ -84,7 +107,7 @@ export const firstAppId = dataApigatway.apps[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_apps(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_apps(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAppsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -105,7 +128,6 @@ export const firstAppId = dataApigatway.apps[0].id;
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -113,48 +135,43 @@ The following arguments are supported:
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of app IDs. 
+    <dd>{{% md %}}A list of app IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter apps by name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -163,48 +180,43 @@ The following arguments are supported:
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of app IDs. 
+    <dd>{{% md %}}A list of app IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter apps by name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -213,48 +225,43 @@ The following arguments are supported:
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of app IDs. 
+    <dd>{{% md %}}A list of app IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter apps by name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -263,51 +270,43 @@ The following arguments are supported:
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of app IDs. 
+    <dd>{{% md %}}A list of app IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regex string to filter apps by name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -318,7 +317,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -326,79 +324,71 @@ The following output properties are available:
             title="">
         <span id="apps_csharp">
 <a href="#apps_csharp" style="color: inherit; text-decoration: inherit;">Apps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappsapp">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Api<wbr>Gateway.<wbr>Outputs.<wbr>Get<wbr>Apps<wbr>App&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of apps. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of app IDs. 
+    <dd>{{% md %}}A list of app IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of app names. 
+    <dd>{{% md %}}A list of app names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -407,79 +397,71 @@ The following output properties are available:
             title="">
         <span id="apps_go">
 <a href="#apps_go" style="color: inherit; text-decoration: inherit;">Apps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappsapp">[]Get<wbr>Apps<wbr>App</a></span>
     </dt>
     <dd>{{% md %}}A list of apps. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of app IDs. 
+    <dd>{{% md %}}A list of app IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of app names. 
+    <dd>{{% md %}}A list of app names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -488,79 +470,71 @@ The following output properties are available:
             title="">
         <span id="apps_nodejs">
 <a href="#apps_nodejs" style="color: inherit; text-decoration: inherit;">apps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappsapp">Get<wbr>Apps<wbr>App[]</a></span>
     </dt>
     <dd>{{% md %}}A list of apps. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of app IDs. 
+    <dd>{{% md %}}A list of app IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of app names. 
+    <dd>{{% md %}}A list of app names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -569,82 +543,71 @@ The following output properties are available:
             title="">
         <span id="apps_python">
 <a href="#apps_python" style="color: inherit; text-decoration: inherit;">apps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getappsapp">List[Get<wbr>Apps<wbr>App]</a></span>
+        <span class="property-type"><a href="#getappsapp">Sequence[Get<wbr>Apps<wbr>App]</a></span>
     </dt>
     <dd>{{% md %}}A list of apps. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of app IDs. 
+    <dd>{{% md %}}A list of app IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of app names. 
+    <dd>{{% md %}}A list of app names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -666,7 +629,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -674,71 +636,64 @@ The following output properties are available:
             title="Required">
         <span id="appcode_csharp">
 <a href="#appcode_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App code.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation time (Greenwich mean time).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App description.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}App ID, which is generated by the system and globally unique.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="modifiedtime_csharp">
 <a href="#modifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last modification time (Greenwich mean time).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -747,71 +702,64 @@ The following output properties are available:
             title="Required">
         <span id="appcode_go">
 <a href="#appcode_go" style="color: inherit; text-decoration: inherit;">App<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App code.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation time (Greenwich mean time).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App description.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}App ID, which is generated by the system and globally unique.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="modifiedtime_go">
 <a href="#modifiedtime_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last modification time (Greenwich mean time).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -820,147 +768,130 @@ The following output properties are available:
             title="Required">
         <span id="appcode_nodejs">
 <a href="#appcode_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App code.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation time (Greenwich mean time).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App description.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}App ID, which is generated by the system and globally unique.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="modifiedtime_nodejs">
 <a href="#modifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last modification time (Greenwich mean time).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="appcode_python">
-<a href="#appcode_python" style="color: inherit; text-decoration: inherit;">app<wbr>Code</a>
-</span> 
+        <span id="app_code_python">
+<a href="#app_code_python" style="color: inherit; text-decoration: inherit;">app_<wbr>code</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App code.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="createdtime_python">
-<a href="#createdtime_python" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
-</span> 
+        <span id="created_time_python">
+<a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation time (Greenwich mean time).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App description.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}App ID, which is generated by the system and globally unique.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="modifiedtime_python">
-<a href="#modifiedtime_python" style="color: inherit; text-decoration: inherit;">modified<wbr>Time</a>
-</span> 
+        <span id="modified_time_python">
+<a href="#modified_time_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>time</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last modification time (Greenwich mean time).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -973,6 +904,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

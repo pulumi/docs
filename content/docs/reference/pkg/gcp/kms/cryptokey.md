@@ -1,8 +1,8 @@
 
 ---
 title: "CryptoKey"
-title_tag: "Resource CryptoKey | Module kms | Package GCP"
-meta_desc: "Explore the CryptoKey resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. A `CryptoKey` represents a logical key that can be used for cryptographic operations."
+title_tag: "gcp.kms.CryptoKey"
+meta_desc: "Documentation for the gcp.kms.CryptoKey resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -15,7 +15,7 @@ A `CryptoKey` represents a logical key that can be used for cryptographic operat
 > **Note:** CryptoKeys cannot be deleted from Google Cloud Platform.
 Destroying a provider-managed CryptoKey will remove it from state
 and delete all CryptoKeyVersions, rendering the key unusable, but *will
-not delete the resource on the server.* When the provider destroys these keys,
+not delete the resource from the project.* When the provider destroys these keys,
 any data previously encrypted with these keys will be irrecoverable.
 For this reason, it is strongly recommended that you add lifecycle hooks
 to the resource to prevent accidental destruction.
@@ -61,7 +61,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -73,7 +73,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = kms.NewCryptoKey(ctx, "example-key", &kms.CryptoKeyArgs{
+		_, err = kms.NewCryptoKey(ctx, "example_key", &kms.CryptoKeyArgs{
 			KeyRing:        keyring.ID(),
 			RotationPeriod: pulumi.String("100000s"),
 		})
@@ -115,6 +115,104 @@ const example_key = new gcp.kms.CryptoKey("example-key", {
 
 {{% /example %}}
 
+### Kms Crypto Key Asymmetric Sign
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
+        {
+            Location = "global",
+        });
+        var example_asymmetric_sign_key = new Gcp.Kms.CryptoKey("example-asymmetric-sign-key", new Gcp.Kms.CryptoKeyArgs
+        {
+            KeyRing = keyring.Id,
+            Purpose = "ASYMMETRIC_SIGN",
+            VersionTemplate = new Gcp.Kms.Inputs.CryptoKeyVersionTemplateArgs
+            {
+                Algorithm = "EC_SIGN_P384_SHA384",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		keyring, err := kms.NewKeyRing(ctx, "keyring", &kms.KeyRingArgs{
+			Location: pulumi.String("global"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = kms.NewCryptoKey(ctx, "example_asymmetric_sign_key", &kms.CryptoKeyArgs{
+			KeyRing: keyring.ID(),
+			Purpose: pulumi.String("ASYMMETRIC_SIGN"),
+			VersionTemplate: &kms.CryptoKeyVersionTemplateArgs{
+				Algorithm: pulumi.String("EC_SIGN_P384_SHA384"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+example_asymmetric_sign_key = gcp.kms.CryptoKey("example-asymmetric-sign-key",
+    key_ring=keyring.id,
+    purpose="ASYMMETRIC_SIGN",
+    version_template=gcp.kms.CryptoKeyVersionTemplateArgs(
+        algorithm="EC_SIGN_P384_SHA384",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const example_asymmetric_sign_key = new gcp.kms.CryptoKey("example-asymmetric-sign-key", {
+    keyRing: keyring.id,
+    purpose: "ASYMMETRIC_SIGN",
+    versionTemplate: {
+        algorithm: "EC_SIGN_P384_SHA384",
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -123,19 +221,19 @@ const example_key = new gcp.kms.CryptoKey("example-key", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKey">CryptoKey</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKeyArgs">CryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CryptoKey</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/kms/#CryptoKey">CryptoKey</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>key_ring=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>purpose=None<span class="p">, </span>rotation_period=None<span class="p">, </span>version_template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">CryptoKey</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotation_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_initial_version_creation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version_template</span><span class="p">:</span> <span class="nx">Optional[CryptoKeyVersionTemplateArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKey">NewCryptoKey</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyArgs">CryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKey">CryptoKey</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCryptoKey</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CryptoKey</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.CryptoKey.html">CryptoKey</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.CryptoKeyArgs.html">CryptoKeyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CryptoKey</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CryptoKeyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -146,7 +244,7 @@ const example_key = new gcp.kms.CryptoKey("example-key", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -156,7 +254,7 @@ const example_key = new gcp.kms.CryptoKey("example-key", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKeyArgs">CryptoKeyArgs</a></span>
+        <span class="property-type"><a href="#inputs">CryptoKeyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -205,7 +303,7 @@ const example_key = new gcp.kms.CryptoKey("example-key", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -215,7 +313,7 @@ const example_key = new gcp.kms.CryptoKey("example-key", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -225,7 +323,7 @@ const example_key = new gcp.kms.CryptoKey("example-key", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyArgs">CryptoKeyArgs</a></span>
+        <span class="property-type"><a href="#inputs">CryptoKeyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -235,7 +333,7 @@ const example_key = new gcp.kms.CryptoKey("example-key", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -254,7 +352,7 @@ const example_key = new gcp.kms.CryptoKey("example-key", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -264,7 +362,7 @@ const example_key = new gcp.kms.CryptoKey("example-key", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.CryptoKeyArgs.html">CryptoKeyArgs</a></span>
+        <span class="property-type"><a href="#inputs">CryptoKeyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -287,12 +385,11 @@ const example_key = new gcp.kms.CryptoKey("example-key", {
 
 ## CryptoKey Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -303,77 +400,84 @@ The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="keyring_csharp">
 <a href="#keyring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="purpose_csharp">
 <a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
 for possible inputs.
+Default value is `ENCRYPT_DECRYPT`.
+Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rotationperiod_csharp">
 <a href="#rotationperiod_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipinitialversioncreation_csharp">
+<a href="#skipinitialversioncreation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="versiontemplate_csharp">
 <a href="#versiontemplate_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A template describing settings for new crypto key versions.  Structure is documented below.
+    <dd>{{% md %}}A template describing settings for new crypto key versions.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -382,77 +486,84 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
             title="Required">
         <span id="keyring_go">
 <a href="#keyring_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="purpose_go">
 <a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
 for possible inputs.
+Default value is `ENCRYPT_DECRYPT`.
+Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rotationperiod_go">
 <a href="#rotationperiod_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipinitialversioncreation_go">
+<a href="#skipinitialversioncreation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="versiontemplate_go">
 <a href="#versiontemplate_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}A template describing settings for new crypto key versions.  Structure is documented below.
+    <dd>{{% md %}}A template describing settings for new crypto key versions.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -461,77 +572,84 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
             title="Required">
         <span id="keyring_nodejs">
 <a href="#keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="purpose_nodejs">
 <a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
 for possible inputs.
+Default value is `ENCRYPT_DECRYPT`.
+Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rotationperiod_nodejs">
 <a href="#rotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skipinitialversioncreation_nodejs">
+<a href="#skipinitialversioncreation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="versiontemplate_nodejs">
 <a href="#versiontemplate_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}A template describing settings for new crypto key versions.  Structure is documented below.
+    <dd>{{% md %}}A template describing settings for new crypto key versions.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -540,86 +658,89 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
             title="Required">
         <span id="key_ring_python">
 <a href="#key_ring_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="purpose_python">
 <a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
 for possible inputs.
+Default value is `ENCRYPT_DECRYPT`.
+Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rotation_period_python">
 <a href="#rotation_period_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skip_initial_version_creation_python">
+<a href="#skip_initial_version_creation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>initial_<wbr>version_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="version_template_python">
 <a href="#version_template_python" style="color: inherit; text-decoration: inherit;">version_<wbr>template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">Dict[Crypto<wbr>Key<wbr>Version<wbr>Template]</a></span>
+        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A template describing settings for new crypto key versions.  Structure is documented below.
+    <dd>{{% md %}}A template describing settings for new crypto key versions.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the CryptoKey resource produces the following output properties:
-
 
 
 
@@ -630,25 +751,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -657,25 +775,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -684,25 +799,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -711,28 +823,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -742,19 +848,20 @@ Get an existing CryptoKey resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKeyState">CryptoKeyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKey">CryptoKey</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CryptoKeyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">CryptoKey</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>key_ring=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>purpose=None<span class="p">, </span>rotation_period=None<span class="p">, </span>self_link=None<span class="p">, </span>version_template=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">key_ring</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rotation_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_initial_version_creation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">version_template</span><span class="p">:</span> <span class="nx">Optional[CryptoKeyVersionTemplateArgs]</span> = None<span class="p">) -&gt;</span> CryptoKey</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCryptoKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyState">CryptoKeyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKey">CryptoKey</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCryptoKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CryptoKeyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CryptoKey</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.CryptoKey.html">CryptoKey</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.CryptoKeyState.html">CryptoKeyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">CryptoKey</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CryptoKeyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -856,7 +963,6 @@ Get an existing CryptoKey resource's state with the given name, ID, and optional
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -864,87 +970,93 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_keyring_csharp">
 <a href="#state_keyring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_purpose_csharp">
 <a href="#state_purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
 for possible inputs.
+Default value is `ENCRYPT_DECRYPT`.
+Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rotationperiod_csharp">
 <a href="#state_rotationperiod_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_skipinitialversioncreation_csharp">
+<a href="#state_skipinitialversioncreation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_versiontemplate_csharp">
 <a href="#state_versiontemplate_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A template describing settings for new crypto key versions.  Structure is documented below.
+    <dd>{{% md %}}A template describing settings for new crypto key versions.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -953,87 +1065,93 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span id="state_keyring_go">
 <a href="#state_keyring_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_purpose_go">
 <a href="#state_purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
 for possible inputs.
+Default value is `ENCRYPT_DECRYPT`.
+Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rotationperiod_go">
 <a href="#state_rotationperiod_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_skipinitialversioncreation_go">
+<a href="#state_skipinitialversioncreation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_versiontemplate_go">
 <a href="#state_versiontemplate_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}A template describing settings for new crypto key versions.  Structure is documented below.
+    <dd>{{% md %}}A template describing settings for new crypto key versions.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1042,87 +1160,93 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span id="state_keyring_nodejs">
 <a href="#state_keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_purpose_nodejs">
 <a href="#state_purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
 for possible inputs.
+Default value is `ENCRYPT_DECRYPT`.
+Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rotationperiod_nodejs">
 <a href="#state_rotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_skipinitialversioncreation_nodejs">
+<a href="#state_skipinitialversioncreation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Initial<wbr>Version<wbr>Creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_versiontemplate_nodejs">
 <a href="#state_versiontemplate_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
     </dt>
-    <dd>{{% md %}}A template describing settings for new crypto key versions.  Structure is documented below.
+    <dd>{{% md %}}A template describing settings for new crypto key versions.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1131,90 +1255,93 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span id="state_key_ring_python">
 <a href="#state_key_ring_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_purpose_python">
 <a href="#state_purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
 for possible inputs.
+Default value is `ENCRYPT_DECRYPT`.
+Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rotation_period_python">
 <a href="#state_rotation_period_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_skip_initial_version_creation_python">
+<a href="#state_skip_initial_version_creation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>initial_<wbr>version_<wbr>creation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
+You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_template_python">
 <a href="#state_version_template_python" style="color: inherit; text-decoration: inherit;">version_<wbr>template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">Dict[Crypto<wbr>Key<wbr>Version<wbr>Template]</a></span>
+        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A template describing settings for new crypto key versions.  Structure is documented below.
+    <dd>{{% md %}}A template describing settings for new crypto key versions.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1224,20 +1351,8 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
 ## Supporting Types
 
 
+
 <h4 id="cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyVersionTemplate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#CryptoKeyVersionTemplate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyVersionTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyVersionTemplateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.Inputs.CryptoKeyVersionTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.Outputs.CryptoKeyVersionTemplate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1246,28 +1361,27 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The algorithm to use when creating a version based on this template.
 See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionlevel_csharp">
 <a href="#protectionlevel_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protection level to use when creating a version based on this template.
+Default value is `SOFTWARE`.
+Possible values are `SOFTWARE` and `HSM`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1276,28 +1390,27 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The algorithm to use when creating a version based on this template.
 See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionlevel_go">
 <a href="#protectionlevel_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protection level to use when creating a version based on this template.
+Default value is `SOFTWARE`.
+Possible values are `SOFTWARE` and `HSM`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1306,28 +1419,27 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The algorithm to use when creating a version based on this template.
 See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionlevel_nodejs">
 <a href="#protectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protection level to use when creating a version based on this template.
+Default value is `SOFTWARE`.
+Possible values are `SOFTWARE` and `HSM`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1336,32 +1448,39 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The algorithm to use when creating a version based on this template.
 See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="protectionlevel_python">
-<a href="#protectionlevel_python" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
-</span> 
+        <span id="protection_level_python">
+<a href="#protection_level_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>level</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protection level to use when creating a version based on this template.
+Default value is `SOFTWARE`.
+Possible values are `SOFTWARE` and `HSM`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+CryptoKey can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:kms/cryptoKey:CryptoKey default {{key_ring}}/cryptoKeys/{{name}}
+```
 
-
+```sh
+ $ pulumi import gcp:kms/cryptoKey:CryptoKey default {{key_ring}}/{{name}}
+```
 
 
 
@@ -1373,6 +1492,6 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

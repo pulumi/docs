@@ -1,8 +1,8 @@
 
 ---
 title: "IAMAuditConfig"
-title_tag: "Resource IAMAuditConfig | Module projects | Package GCP"
-meta_desc: "Explore the IAMAuditConfig resource of the projects module, including examples, input properties, output properties, lookup functions, and supporting types. Four different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:"
+title_tag: "gcp.projects.IAMAuditConfig"
+meta_desc: "Documentation for the gcp.projects.IAMAuditConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -19,7 +19,12 @@ Four different resources help you manage your IAM policy for a project. Each of 
 
 > **Note:** `gcp.projects.IAMPolicy` **cannot** be used in conjunction with `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig` or they will fight over what your policy should be.
 
+> **Note:** `gcp.projects.IAMPolicy` **cannot** be used in conjunction with `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig` or they will fight over what your policy should be.
+
 > **Note:** `gcp.projects.IAMBinding` resources **can be** used in conjunction with `gcp.projects.IAMMember` resources **only if** they do not grant privilege to the same role.
+
+> **Note:** The underlying API method `projects.setIamPolicy` has a lot of constraints which are documented [here](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy). In addition to these constraints,
+   IAM Conditions cannot be used with Basic Roles such as Owner. Violating these constraints will result in the API returning 400 error code so please review these if you encounter errors with this resource.
 
 ## google\_project\_iam\_policy
 
@@ -36,7 +41,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const admin = gcp.organizations.getIAMPolicy({
-    binding: [{
+    bindings: [{
         role: "roles/editor",
         members: ["user:jane@example.com"],
     }],
@@ -50,10 +55,10 @@ const project = new gcp.projects.IAMPolicy("project", {
 import pulumi
 import pulumi_gcp as gcp
 
-admin = gcp.organizations.get_iam_policy(binding=[{
-    "role": "roles/editor",
-    "members": ["user:jane@example.com"],
-}])
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/editor",
+    members=["user:jane@example.com"],
+)])
 project = gcp.projects.IAMPolicy("project",
     project="your-project-id",
     policy_data=admin.policy_data)
@@ -68,15 +73,15 @@ class MyStack : Stack
     {
         var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
         {
-            Binding = 
+            Bindings = 
             {
-                
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
                 {
-                    { "role", "roles/editor" },
-                    { "members", 
+                    Role = "roles/editor",
+                    Members = 
                     {
                         "user:jane@example.com",
-                    } },
+                    },
                 },
             },
         }));
@@ -93,18 +98,18 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
-			Binding: []map[string]interface{}{
-				map[string]interface{}{
-					"role": "roles/editor",
-					"members": []string{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/editor",
+					Members: []string{
 						"user:jane@example.com",
 					},
 				},
@@ -125,7 +130,7 @@ func main() {
 }
 ```
 
-With IAM Conditions):
+With IAM Conditions:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -139,7 +144,7 @@ const admin = pulumi.output(gcp.organizations.getIAMPolicy({
             title: "expires_after_2019_12_31",
         },
         members: ["user:jane@example.com"],
-        role: "roles/editor",
+        role: "roles/compute.admin",
     }],
 }, { async: true }));
 const project = new gcp.projects.IAMPolicy("project", {
@@ -151,15 +156,15 @@ const project = new gcp.projects.IAMPolicy("project", {
 import pulumi
 import pulumi_gcp as gcp
 
-admin = gcp.organizations.get_iam_policy(bindings=[{
-    "condition": {
-        "description": "Expiring at midnight of 2019-12-31",
-        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
-        "title": "expires_after_2019_12_31",
-    },
-    "members": ["user:jane@example.com"],
-    "role": "roles/editor",
-}])
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    condition=gcp.organizations.GetIAMPolicyBindingConditionArgs(
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title="expires_after_2019_12_31",
+    ),
+    members=["user:jane@example.com"],
+    role="roles/compute.admin",
+)])
 project = gcp.projects.IAMPolicy("project",
     policy_data=admin.policy_data,
     project="your-project-id")
@@ -188,7 +193,7 @@ class MyStack : Stack
                     {
                         "user:jane@example.com",
                     },
-                    Role = "roles/editor",
+                    Role = "roles/compute.admin",
                 },
             },
         }));
@@ -205,8 +210,8 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -223,7 +228,7 @@ func main() {
 					Members: []string{
 						"user:jane@example.com",
 					},
-					Role: "roles/editor",
+					Role: "roles/compute.admin",
 				},
 			},
 		}, nil)
@@ -243,8 +248,6 @@ func main() {
 ```
 
 ## google\_project\_iam\_binding
-
-> **Note:** If `role` is set to `roles/owner` and you don't specify a user or service account you have access to in `members`, you can lock yourself out of your project.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -290,13 +293,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = projects.NewIAMBinding(ctx, "project", &projects.IAMBindingArgs{
+		_, err := projects.NewIAMBinding(ctx, "project", &projects.IAMBindingArgs{
 			Members: pulumi.StringArray{
 				pulumi.String("user:jane@example.com"),
 			},
@@ -325,7 +328,7 @@ const project = new gcp.projects.IAMBinding("project", {
     },
     members: ["user:jane@example.com"],
     project: "your-project-id",
-    role: "roles/editor",
+    role: "roles/container.admin",
 });
 ```
 ```python
@@ -333,14 +336,14 @@ import pulumi
 import pulumi_gcp as gcp
 
 project = gcp.projects.IAMBinding("project",
-    condition={
-        "description": "Expiring at midnight of 2019-12-31",
-        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
-        "title": "expires_after_2019_12_31",
-    },
+    condition=gcp.projects.IAMBindingConditionArgs(
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title="expires_after_2019_12_31",
+    ),
     members=["user:jane@example.com"],
     project="your-project-id",
-    role="roles/editor")
+    role="roles/container.admin")
 ```
 ```csharp
 using Pulumi;
@@ -363,7 +366,7 @@ class MyStack : Stack
                 "user:jane@example.com",
             },
             Project = "your-project-id",
-            Role = "roles/editor",
+            Role = "roles/container.admin",
         });
     }
 
@@ -373,13 +376,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = projects.NewIAMBinding(ctx, "project", &projects.IAMBindingArgs{
+		_, err := projects.NewIAMBinding(ctx, "project", &projects.IAMBindingArgs{
 			Condition: &projects.IAMBindingConditionArgs{
 				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
 				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
@@ -389,7 +392,7 @@ func main() {
 				pulumi.String("user:jane@example.com"),
 			},
 			Project: pulumi.String("your-project-id"),
-			Role:    pulumi.String("roles/editor"),
+			Role:    pulumi.String("roles/container.admin"),
 		})
 		if err != nil {
 			return err
@@ -442,13 +445,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = projects.NewIAMMember(ctx, "project", &projects.IAMMemberArgs{
+		_, err := projects.NewIAMMember(ctx, "project", &projects.IAMMemberArgs{
 			Member:  pulumi.String("user:jane@example.com"),
 			Project: pulumi.String("your-project-id"),
 			Role:    pulumi.String("roles/editor"),
@@ -475,7 +478,7 @@ const project = new gcp.projects.IAMMember("project", {
     },
     member: "user:jane@example.com",
     project: "your-project-id",
-    role: "roles/editor",
+    role: "roles/firebase.admin",
 });
 ```
 ```python
@@ -483,14 +486,14 @@ import pulumi
 import pulumi_gcp as gcp
 
 project = gcp.projects.IAMMember("project",
-    condition={
-        "description": "Expiring at midnight of 2019-12-31",
-        "expression": "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
-        "title": "expires_after_2019_12_31",
-    },
+    condition=gcp.projects.IAMMemberConditionArgs(
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title="expires_after_2019_12_31",
+    ),
     member="user:jane@example.com",
     project="your-project-id",
-    role="roles/editor")
+    role="roles/firebase.admin")
 ```
 ```csharp
 using Pulumi;
@@ -510,7 +513,7 @@ class MyStack : Stack
             },
             Member = "user:jane@example.com",
             Project = "your-project-id",
-            Role = "roles/editor",
+            Role = "roles/firebase.admin",
         });
     }
 
@@ -520,13 +523,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = projects.NewIAMMember(ctx, "project", &projects.IAMMemberArgs{
+		_, err := projects.NewIAMMember(ctx, "project", &projects.IAMMemberArgs{
 			Condition: &projects.IAMMemberConditionArgs{
 				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
 				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
@@ -534,7 +537,7 @@ func main() {
 			},
 			Member:  pulumi.String("user:jane@example.com"),
 			Project: pulumi.String("your-project-id"),
-			Role:    pulumi.String("roles/editor"),
+			Role:    pulumi.String("roles/firebase.admin"),
 		})
 		if err != nil {
 			return err
@@ -570,13 +573,13 @@ import pulumi_gcp as gcp
 
 project = gcp.projects.IAMAuditConfig("project",
     audit_log_configs=[
-        {
-            "logType": "ADMIN_READ",
-        },
-        {
-            "exemptedMembers": ["user:joebloggs@hashicorp.com"],
-            "logType": "DATA_READ",
-        },
+        gcp.projects.IAMAuditConfigAuditLogConfigArgs(
+            log_type="ADMIN_READ",
+        ),
+        gcp.projects.IAMAuditConfigAuditLogConfigArgs(
+            exempted_members=["user:joebloggs@hashicorp.com"],
+            log_type="DATA_READ",
+        ),
     ],
     project="your-project-id",
     service="allServices")
@@ -617,13 +620,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = projects.NewIAMAuditConfig(ctx, "project", &projects.IAMAuditConfigArgs{
+		_, err := projects.NewIAMAuditConfig(ctx, "project", &projects.IAMAuditConfigArgs{
 			AuditLogConfigs: projects.IAMAuditConfigAuditLogConfigArray{
 				&projects.IAMAuditConfigAuditLogConfigArgs{
 					LogType: pulumi.String("ADMIN_READ"),
@@ -653,19 +656,19 @@ func main() {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/projects/#IAMAuditConfig">IAMAuditConfig</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/projects/#IAMAuditConfigArgs">IAMAuditConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IAMAuditConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IAMAuditConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/projects/#IAMAuditConfig">IAMAuditConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>audit_log_configs=None<span class="p">, </span>project=None<span class="p">, </span>service=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IAMAuditConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">audit_log_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAMAuditConfigAuditLogConfigArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#IAMAuditConfig">NewIAMAuditConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#IAMAuditConfigArgs">IAMAuditConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#IAMAuditConfig">IAMAuditConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIAMAuditConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IAMAuditConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IAMAuditConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.IAMAuditConfig.html">IAMAuditConfig</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.IAMAuditConfigArgs.html">IAMAuditConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IAMAuditConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IAMAuditConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -676,7 +679,7 @@ func main() {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -686,7 +689,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/projects/#IAMAuditConfigArgs">IAMAuditConfigArgs</a></span>
+        <span class="property-type"><a href="#inputs">IAMAuditConfigArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -735,7 +738,7 @@ func main() {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -745,7 +748,7 @@ func main() {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -755,7 +758,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#IAMAuditConfigArgs">IAMAuditConfigArgs</a></span>
+        <span class="property-type"><a href="#inputs">IAMAuditConfigArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -765,7 +768,7 @@ func main() {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -784,7 +787,7 @@ func main() {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -794,7 +797,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.IAMAuditConfigArgs.html">IAMAuditConfigArgs</a></span>
+        <span class="property-type"><a href="#inputs">IAMAuditConfigArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -817,12 +820,11 @@ func main() {
 
 ## IAMAuditConfig Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IAMAuditConfig resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The IAMAuditConfig resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -833,40 +835,36 @@ The IAMAuditConfig resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="auditlogconfigs_csharp">
 <a href="#auditlogconfigs_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iamauditconfigauditlogconfig">List&lt;IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. If not specified for `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig`, uses the ID of the project configured with the provider.
 Required for `gcp.projects.IAMPolicy` - you must explicitly set the project, and it
 will not be inferred from the provider.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -875,40 +873,36 @@ will not be inferred from the provider.
             title="Required">
         <span id="auditlogconfigs_go">
 <a href="#auditlogconfigs_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iamauditconfigauditlogconfig">[]IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. If not specified for `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig`, uses the ID of the project configured with the provider.
 Required for `gcp.projects.IAMPolicy` - you must explicitly set the project, and it
 will not be inferred from the provider.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -917,40 +911,36 @@ will not be inferred from the provider.
             title="Required">
         <span id="auditlogconfigs_nodejs">
 <a href="#auditlogconfigs_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iamauditconfigauditlogconfig">IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. If not specified for `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig`, uses the ID of the project configured with the provider.
 Required for `gcp.projects.IAMPolicy` - you must explicitly set the project, and it
 will not be inferred from the provider.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -959,49 +949,41 @@ will not be inferred from the provider.
             title="Required">
         <span id="audit_log_configs_python">
 <a href="#audit_log_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iamauditconfigauditlogconfig">List[IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#iamauditconfigauditlogconfig">Sequence[IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID. If not specified for `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig`, uses the ID of the project configured with the provider.
 Required for `gcp.projects.IAMPolicy` - you must explicitly set the project, and it
 will not be inferred from the provider.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the IAMAuditConfig resource produces the following output properties:
-
 
 
 
@@ -1012,26 +994,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1040,26 +1019,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1068,26 +1044,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1096,29 +1069,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1128,19 +1095,20 @@ Get an existing IAMAuditConfig resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/projects/#IAMAuditConfigState">IAMAuditConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/projects/#IAMAuditConfig">IAMAuditConfig</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IAMAuditConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IAMAuditConfig</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>audit_log_configs=None<span class="p">, </span>etag=None<span class="p">, </span>project=None<span class="p">, </span>service=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">audit_log_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[IAMAuditConfigAuditLogConfigArgs]]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IAMAuditConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIAMAuditConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#IAMAuditConfigState">IAMAuditConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#IAMAuditConfig">IAMAuditConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIAMAuditConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IAMAuditConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IAMAuditConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.IAMAuditConfig.html">IAMAuditConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.IAMAuditConfigState.html">IAMAuditConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IAMAuditConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IAMAuditConfigState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1242,7 +1210,6 @@ Get an existing IAMAuditConfig resource's state with the given name, ID, and opt
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1250,51 +1217,46 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_auditlogconfigs_csharp">
 <a href="#state_auditlogconfigs_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iamauditconfigauditlogconfig">List&lt;IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. If not specified for `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig`, uses the ID of the project configured with the provider.
 Required for `gcp.projects.IAMPolicy` - you must explicitly set the project, and it
 will not be inferred from the provider.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_csharp">
 <a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1303,51 +1265,46 @@ will not be inferred from the provider.
             title="Optional">
         <span id="state_auditlogconfigs_go">
 <a href="#state_auditlogconfigs_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iamauditconfigauditlogconfig">[]IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. If not specified for `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig`, uses the ID of the project configured with the provider.
 Required for `gcp.projects.IAMPolicy` - you must explicitly set the project, and it
 will not be inferred from the provider.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1356,51 +1313,46 @@ will not be inferred from the provider.
             title="Optional">
         <span id="state_auditlogconfigs_nodejs">
 <a href="#state_auditlogconfigs_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iamauditconfigauditlogconfig">IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. If not specified for `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig`, uses the ID of the project configured with the provider.
 Required for `gcp.projects.IAMPolicy` - you must explicitly set the project, and it
 will not be inferred from the provider.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1409,54 +1361,46 @@ will not be inferred from the provider.
             title="Optional">
         <span id="state_audit_log_configs_python">
 <a href="#state_audit_log_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iamauditconfigauditlogconfig">List[IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#iamauditconfigauditlogconfig">Sequence[IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID. If not specified for `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig`, uses the ID of the project configured with the provider.
 Required for `gcp.projects.IAMPolicy` - you must explicitly set the project, and it
 will not be inferred from the provider.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1466,20 +1410,8 @@ will not be inferred from the provider.
 ## Supporting Types
 
 
+
 <h4 id="iamauditconfigauditlogconfig">IAMAudit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#IAMAuditConfigAuditLogConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#IAMAuditConfigAuditLogConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#IAMAuditConfigAuditLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#IAMAuditConfigAuditLogConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Inputs.IAMAuditConfigAuditLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.Outputs.IAMAuditConfigAuditLogConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1488,27 +1420,24 @@ will not be inferred from the provider.
             title="Required">
         <span id="logtype_csharp">
 <a href="#logtype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exemptedmembers_csharp">
 <a href="#exemptedmembers_csharp" style="color: inherit; text-decoration: inherit;">Exempted<wbr>Members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1517,27 +1446,24 @@ will not be inferred from the provider.
             title="Required">
         <span id="logtype_go">
 <a href="#logtype_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exemptedmembers_go">
 <a href="#exemptedmembers_go" style="color: inherit; text-decoration: inherit;">Exempted<wbr>Members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1546,60 +1472,86 @@ will not be inferred from the provider.
             title="Required">
         <span id="logtype_nodejs">
 <a href="#logtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exemptedmembers_nodejs">
 <a href="#exemptedmembers_nodejs" style="color: inherit; text-decoration: inherit;">exempted<wbr>Members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="logtype_python">
-<a href="#logtype_python" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
-</span> 
+        <span id="log_type_python">
+<a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Permission type for which logging is to be configured.  Must be one of `DATA_READ`, `DATA_WRITE`, or `ADMIN_READ`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="exemptedmembers_python">
-<a href="#exemptedmembers_python" style="color: inherit; text-decoration: inherit;">exempted<wbr>Members</a>
-</span> 
+        <span id="exempted_members_python">
+<a href="#exempted_members_python" style="color: inherit; text-decoration: inherit;">exempted_<wbr>members</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Identities that do not cause logging for this type of permission.  The format is the same as that for `members`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
 
+This member resource can be imported using the `project_id`, role, and member e.g.
 
+```sh
+ $ pulumi import gcp:projects/iAMAuditConfig:IAMAuditConfig my_project "your-project-id roles/viewer user:foo@example.com"
+```
 
+ IAM binding imports use space-delimited identifiers; the resource in question and the role.
+
+This binding resource can be imported using the `project_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:projects/iAMAuditConfig:IAMAuditConfig my_project "your-project-id roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `project_id`.
+
+```sh
+ $ pulumi import gcp:projects/iAMAuditConfig:IAMAuditConfig my_project your-project-id
+```
+
+ IAM audit config imports use the identifier of the resource in question and the service, e.g.
+
+```sh
+ $ pulumi import gcp:projects/iAMAuditConfig:IAMAuditConfig my_project "your-project-id foo.googleapis.com"
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 
@@ -1611,6 +1563,6 @@ will not be inferred from the provider.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

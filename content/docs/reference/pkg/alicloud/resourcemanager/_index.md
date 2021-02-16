@@ -15,10 +15,14 @@ Explore the resources and functions of the resourcemanager module in the AliClou
     <li><a href="folder" title="Folder"><span class="symbol resource"></span>Folder</a></li>
     <li><a href="handshake" title="Handshake"><span class="symbol resource"></span>Handshake</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
+    <li><a href="policyattachment" title="PolicyAttachment"><span class="symbol resource"></span>PolicyAttachment</a></li>
     <li><a href="policyversion" title="PolicyVersion"><span class="symbol resource"></span>PolicyVersion</a></li>
     <li><a href="resourcedirectory" title="ResourceDirectory"><span class="symbol resource"></span>ResourceDirectory</a></li>
     <li><a href="resourcegroup" title="ResourceGroup"><span class="symbol resource"></span>ResourceGroup</a></li>
+    <li><a href="resourceshare" title="ResourceShare"><span class="symbol resource"></span>ResourceShare</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+    <li><a href="sharedresource" title="SharedResource"><span class="symbol resource"></span>SharedResource</a></li>
+    <li><a href="sharedtarget" title="SharedTarget"><span class="symbol resource"></span>SharedTarget</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -27,10 +31,14 @@ Explore the resources and functions of the resourcemanager module in the AliClou
     <li><a href="getfolders" title="GetFolders"><span class="symbol function"></span>GetFolders</a></li>
     <li><a href="gethandshakes" title="GetHandshakes"><span class="symbol function"></span>GetHandshakes</a></li>
     <li><a href="getpolicies" title="GetPolicies"><span class="symbol function"></span>GetPolicies</a></li>
+    <li><a href="getpolicyattachments" title="GetPolicyAttachments"><span class="symbol function"></span>GetPolicyAttachments</a></li>
     <li><a href="getpolicyversions" title="GetPolicyVersions"><span class="symbol function"></span>GetPolicyVersions</a></li>
     <li><a href="getresourcedirectories" title="GetResourceDirectories"><span class="symbol function"></span>GetResourceDirectories</a></li>
     <li><a href="getresourcegroups" title="GetResourceGroups"><span class="symbol function"></span>GetResourceGroups</a></li>
+    <li><a href="getresourceshares" title="GetResourceShares"><span class="symbol function"></span>GetResourceShares</a></li>
     <li><a href="getroles" title="GetRoles"><span class="symbol function"></span>GetRoles</a></li>
+    <li><a href="getsharedresources" title="GetSharedResources"><span class="symbol function"></span>GetSharedResources</a></li>
+    <li><a href="getsharedtargets" title="GetSharedTargets"><span class="symbol function"></span>GetSharedTargets</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -40,26 +48,8 @@ Explore the resources and functions of the resourcemanager module in the AliClou
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ResourceManager.html" title="Pulumi.AliCloud.ResourceManager">Pulumi.AliCloud.ResourceManager</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/resourcemanager?tab=doc#" title="alicloud/resourcemanager">alicloud/resourcemanager</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/resourcemanager/#" title="@pulumi/alicloud/resourcemanager">@pulumi/alicloud/resourcemanager</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/resourcemanager" title="pulumi_alicloud/resourcemanager">pulumi_alicloud/resourcemanager</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

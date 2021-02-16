@@ -1,8 +1,8 @@
 
 ---
 title: "PolicyAttachment"
-title_tag: "Resource PolicyAttachment | Module iam | Package AWS"
-meta_desc: "Explore the PolicyAttachment resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches a Managed IAM Policy to user(s), role(s), and/or group(s)"
+title_tag: "aws.iam.PolicyAttachment"
+meta_desc: "Documentation for the aws.iam.PolicyAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -15,6 +15,7 @@ Attaches a Managed IAM Policy to user(s), role(s), and/or group(s)
 !> **WARNING:** The aws.iam.PolicyAttachment resource creates **exclusive** attachments of IAM policies. Across the entire AWS account, all of the users/roles/groups to which a single policy is attached must be declared by a single aws.iam.PolicyAttachment resource. This means that even any users/roles/groups that have the attached policy via any other mechanism (including other resources managed by this provider) will have that attached policy revoked by this resource. Consider `aws.iam.RolePolicyAttachment`, `aws.iam.UserPolicyAttachment`, or `aws.iam.GroupPolicyAttachment` instead. These resources do not enforce exclusive attachment of an IAM policy.
 
 > **NOTE:** The usage of this resource conflicts with the `aws.iam.GroupPolicyAttachment`, `aws.iam.RolePolicyAttachment`, and `aws.iam.UserPolicyAttachment` resources and will permanently show a difference if both are defined.
+
 
 {{% examples %}}
 ## Example Usage
@@ -250,19 +251,19 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyAttachment">PolicyAttachment</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyAttachmentArgs">PolicyAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PolicyAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iam/#pulumi_aws.iam.PolicyAttachment">PolicyAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>groups=None<span class="p">, </span>name=None<span class="p">, </span>policy_arn=None<span class="p">, </span>roles=None<span class="p">, </span>users=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PolicyAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#PolicyAttachment">NewPolicyAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#PolicyAttachmentArgs">PolicyAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#PolicyAttachment">PolicyAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicyAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.PolicyAttachment.html">PolicyAttachment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.PolicyAttachmentArgs.html">PolicyAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PolicyAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicyAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -273,7 +274,7 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -283,7 +284,7 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyAttachmentArgs">PolicyAttachmentArgs</a></span>
+        <span class="property-type"><a href="#inputs">PolicyAttachmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -342,7 +343,7 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -352,7 +353,7 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#PolicyAttachmentArgs">PolicyAttachmentArgs</a></span>
+        <span class="property-type"><a href="#inputs">PolicyAttachmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -381,7 +382,7 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -391,7 +392,7 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.PolicyAttachmentArgs.html">PolicyAttachmentArgs</a></span>
+        <span class="property-type"><a href="#inputs">PolicyAttachmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -414,12 +415,11 @@ const test_attach = new aws.iam.PolicyAttachment("test-attach", {
 
 ## PolicyAttachment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PolicyAttachment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The PolicyAttachment resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -430,60 +430,54 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="policyarn_csharp">
 <a href="#policyarn_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -492,60 +486,54 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="policyarn_go">
 <a href="#policyarn_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -554,60 +542,54 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="policyarn_nodejs">
 <a href="#policyarn_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">ARN</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | Group[]</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | Role[]</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | User[]</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -616,69 +598,59 @@ The PolicyAttachment resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="policy_arn_python">
 <a href="#policy_arn_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[Group, Default=String>]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[Role, Default=String>]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[User, Default=String>]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the PolicyAttachment resource produces the following output properties:
-
 
 
 
@@ -689,15 +661,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -706,15 +676,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -723,15 +691,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -740,18 +706,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -761,19 +722,20 @@ Get an existing PolicyAttachment resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyAttachmentState">PolicyAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#PolicyAttachment">PolicyAttachment</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PolicyAttachmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PolicyAttachment</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>groups=None<span class="p">, </span>name=None<span class="p">, </span>policy_arn=None<span class="p">, </span>roles=None<span class="p">, </span>users=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> PolicyAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#PolicyAttachmentState">PolicyAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#PolicyAttachment">PolicyAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PolicyAttachmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PolicyAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.PolicyAttachment.html">PolicyAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.PolicyAttachmentState.html">PolicyAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PolicyAttachment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PolicyAttachmentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -875,7 +837,6 @@ Get an existing PolicyAttachment resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -883,60 +844,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_groups_csharp">
 <a href="#state_groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyarn_csharp">
 <a href="#state_policyarn_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_roles_csharp">
 <a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_users_csharp">
 <a href="#state_users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -945,60 +900,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_groups_go">
 <a href="#state_groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyarn_go">
 <a href="#state_policyarn_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_roles_go">
 <a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_users_go">
 <a href="#state_users_go" style="color: inherit; text-decoration: inherit;">Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1007,60 +956,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_groups_nodejs">
 <a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | Group[]</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyarn_nodejs">
 <a href="#state_policyarn_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">ARN</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_roles_nodejs">
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | Role[]</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_users_nodejs">
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | User[]</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1069,63 +1012,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_groups_python">
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[Group, Default=String>]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The group(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the attachment. This cannot be an empty string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_arn_python">
 <a href="#state_policy_arn_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the policy you want to apply
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_roles_python">
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[Role, Default=String>]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The role(s) the policy should be applied to
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_users_python">
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[User, Default=String>]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The user(s) the policy should be applied to
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

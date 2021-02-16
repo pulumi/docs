@@ -1,8 +1,8 @@
 
 ---
 title: "FunctionEventInvokeConfig"
-title_tag: "Resource FunctionEventInvokeConfig | Module lambda | Package AWS"
-meta_desc: "Explore the FunctionEventInvokeConfig resource of the lambda module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an asynchronous invocation configuration for a Lambda Function or Alias. More information about asynchronous invocations and the configurable values can be found in the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html)."
+title_tag: "aws.lambda.FunctionEventInvokeConfig"
+meta_desc: "Documentation for the aws.lambda.FunctionEventInvokeConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -87,14 +87,14 @@ import pulumi_aws as aws
 
 example = aws.lambda_.FunctionEventInvokeConfig("example",
     function_name=aws_lambda_alias["example"]["function_name"],
-    destination_config={
-        "on_failure": {
+    destination_config=aws.lambda..FunctionEventInvokeConfigDestinationConfigArgs(
+        on_failure={
             "destination": aws_sqs_queue["example"]["arn"],
         },
-        "onSuccess": {
-            "destination": aws_sns_topic["example"]["arn"],
-        },
-    })
+        on_success=aws.lambda..FunctionEventInvokeConfigDestinationConfigOnSuccessArgs(
+            destination=aws_sns_topic["example"]["arn"],
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -435,19 +435,19 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#FunctionEventInvokeConfig">FunctionEventInvokeConfig</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#FunctionEventInvokeConfigArgs">FunctionEventInvokeConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FunctionEventInvokeConfig</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FunctionEventInvokeConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/lambda/#pulumi_aws.lambda.FunctionEventInvokeConfig">FunctionEventInvokeConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>destination_config=None<span class="p">, </span>function_name=None<span class="p">, </span>maximum_event_age_in_seconds=None<span class="p">, </span>maximum_retry_attempts=None<span class="p">, </span>qualifier=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FunctionEventInvokeConfig</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionEventInvokeConfigDestinationConfigArgs]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_event_age_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">maximum_retry_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">qualifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEventInvokeConfig">NewFunctionEventInvokeConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEventInvokeConfigArgs">FunctionEventInvokeConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEventInvokeConfig">FunctionEventInvokeConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFunctionEventInvokeConfig</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FunctionEventInvokeConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FunctionEventInvokeConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.FunctionEventInvokeConfig.html">FunctionEventInvokeConfig</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.FunctionEventInvokeConfigArgs.html">FunctionEventInvokeConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FunctionEventInvokeConfig</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FunctionEventInvokeConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -458,7 +458,7 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -468,7 +468,7 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#FunctionEventInvokeConfigArgs">FunctionEventInvokeConfigArgs</a></span>
+        <span class="property-type"><a href="#inputs">FunctionEventInvokeConfigArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -527,7 +527,7 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -537,7 +537,7 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEventInvokeConfigArgs">FunctionEventInvokeConfigArgs</a></span>
+        <span class="property-type"><a href="#inputs">FunctionEventInvokeConfigArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -566,7 +566,7 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -576,7 +576,7 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.FunctionEventInvokeConfigArgs.html">FunctionEventInvokeConfigArgs</a></span>
+        <span class="property-type"><a href="#inputs">FunctionEventInvokeConfigArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -599,12 +599,11 @@ const example = new aws.lambda.FunctionEventInvokeConfig("example", {
 
 ## FunctionEventInvokeConfig Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The FunctionEventInvokeConfig resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The FunctionEventInvokeConfig resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -615,60 +614,54 @@ The FunctionEventInvokeConfig resource accepts the following [input]({{< relref 
             title="Required">
         <span id="functionname_csharp">
 <a href="#functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationconfig_csharp">
 <a href="#destinationconfig_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximumeventageinseconds_csharp">
 <a href="#maximumeventageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximumretryattempts_csharp">
 <a href="#maximumretryattempts_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="qualifier_csharp">
 <a href="#qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -677,60 +670,54 @@ The FunctionEventInvokeConfig resource accepts the following [input]({{< relref 
             title="Required">
         <span id="functionname_go">
 <a href="#functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationconfig_go">
 <a href="#destinationconfig_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximumeventageinseconds_go">
 <a href="#maximumeventageinseconds_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximumretryattempts_go">
 <a href="#maximumretryattempts_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="qualifier_go">
 <a href="#qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -739,60 +726,54 @@ The FunctionEventInvokeConfig resource accepts the following [input]({{< relref 
             title="Required">
         <span id="functionname_nodejs">
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationconfig_nodejs">
 <a href="#destinationconfig_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximumeventageinseconds_nodejs">
 <a href="#maximumeventageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximumretryattempts_nodejs">
 <a href="#maximumretryattempts_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Retry<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="qualifier_nodejs">
 <a href="#qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -801,69 +782,59 @@ The FunctionEventInvokeConfig resource accepts the following [input]({{< relref 
             title="Required">
         <span id="function_name_python">
 <a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_config_python">
 <a href="#destination_config_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Dict[Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config]</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_event_age_in_seconds_python">
 <a href="#maximum_event_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>event_<wbr>age_<wbr>in_<wbr>seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_retry_attempts_python">
 <a href="#maximum_retry_attempts_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>retry_<wbr>attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="qualifier_python">
 <a href="#qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the FunctionEventInvokeConfig resource produces the following output properties:
-
 
 
 
@@ -874,15 +845,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -891,15 +860,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -908,15 +875,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -925,18 +890,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -946,19 +906,20 @@ Get an existing FunctionEventInvokeConfig resource's state with the given name, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#FunctionEventInvokeConfigState">FunctionEventInvokeConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#FunctionEventInvokeConfig">FunctionEventInvokeConfig</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FunctionEventInvokeConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">FunctionEventInvokeConfig</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>destination_config=None<span class="p">, </span>function_name=None<span class="p">, </span>maximum_event_age_in_seconds=None<span class="p">, </span>maximum_retry_attempts=None<span class="p">, </span>qualifier=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_config</span><span class="p">:</span> <span class="nx">Optional[_lambda_.FunctionEventInvokeConfigDestinationConfigArgs]</span> = None<span class="p">, </span><span class="nx">function_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maximum_event_age_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">maximum_retry_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">qualifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FunctionEventInvokeConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunctionEventInvokeConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEventInvokeConfigState">FunctionEventInvokeConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEventInvokeConfig">FunctionEventInvokeConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunctionEventInvokeConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FunctionEventInvokeConfigState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FunctionEventInvokeConfig</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.FunctionEventInvokeConfig.html">FunctionEventInvokeConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.FunctionEventInvokeConfigState.html">FunctionEventInvokeConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">FunctionEventInvokeConfig</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FunctionEventInvokeConfigState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1060,7 +1021,6 @@ Get an existing FunctionEventInvokeConfig resource's state with the given name, 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1068,60 +1028,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_destinationconfig_csharp">
 <a href="#state_destinationconfig_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_functionname_csharp">
 <a href="#state_functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maximumeventageinseconds_csharp">
 <a href="#state_maximumeventageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maximumretryattempts_csharp">
 <a href="#state_maximumretryattempts_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_csharp">
 <a href="#state_qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1130,60 +1084,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_destinationconfig_go">
 <a href="#state_destinationconfig_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_functionname_go">
 <a href="#state_functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maximumeventageinseconds_go">
 <a href="#state_maximumeventageinseconds_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maximumretryattempts_go">
 <a href="#state_maximumretryattempts_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_go">
 <a href="#state_qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1192,60 +1140,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_destinationconfig_nodejs">
 <a href="#state_destinationconfig_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_functionname_nodejs">
 <a href="#state_functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maximumeventageinseconds_nodejs">
 <a href="#state_maximumeventageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maximumretryattempts_nodejs">
 <a href="#state_maximumretryattempts_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Retry<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_nodejs">
 <a href="#state_qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1254,63 +1196,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_destination_config_python">
 <a href="#state_destination_config_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Dict[Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config]</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_function_name_python">
 <a href="#state_function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maximum_event_age_in_seconds_python">
 <a href="#state_maximum_event_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>event_<wbr>age_<wbr>in_<wbr>seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maximum_retry_attempts_python">
 <a href="#state_maximum_retry_attempts_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>retry_<wbr>attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_python">
 <a href="#state_qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1320,20 +1253,8 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionEventInvokeConfigDestinationConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionEventInvokeConfigDestinationConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionEventInvokeConfigDestinationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionEventInvokeConfigDestinationConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1342,27 +1263,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="onfailure_csharp">
 <a href="#onfailure_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onsuccess_csharp">
 <a href="#onsuccess_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Success</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1371,27 +1289,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="onfailure_go">
 <a href="#onfailure_go" style="color: inherit; text-decoration: inherit;">On<wbr>Failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onsuccess_go">
 <a href="#onsuccess_go" style="color: inherit; text-decoration: inherit;">On<wbr>Success</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1400,74 +1315,52 @@ The following state arguments are supported:
             title="Optional">
         <span id="onfailure_nodejs">
 <a href="#onfailure_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onsuccess_nodejs">
 <a href="#onsuccess_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Success</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="onsuccess_python">
-<a href="#onsuccess_python" style="color: inherit; text-decoration: inherit;">on<wbr>Success</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Dict[Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span id="on_failure_python">
 <a href="#on_failure_python" style="color: inherit; text-decoration: inherit;">on_<wbr>failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Dict[Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure]</a></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="on_success_python">
+<a href="#on_success_python" style="color: inherit; text-decoration: inherit;">on_<wbr>success</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionEventInvokeConfigDestinationConfigOnFailure">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionEventInvokeConfigDestinationConfigOnFailure">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnFailureArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnFailureOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionEventInvokeConfigDestinationConfigOnFailureArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionEventInvokeConfigDestinationConfigOnFailure.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1476,16 +1369,14 @@ The following state arguments are supported:
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1494,16 +1385,14 @@ The following state arguments are supported:
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1512,16 +1401,14 @@ The following state arguments are supported:
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1530,34 +1417,16 @@ The following state arguments are supported:
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionEventInvokeConfigDestinationConfigOnSuccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionEventInvokeConfigDestinationConfigOnSuccess">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnSuccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnSuccessOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Inputs.FunctionEventInvokeConfigDestinationConfigOnSuccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Outputs.FunctionEventInvokeConfigDestinationConfigOnSuccess.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1566,16 +1435,14 @@ The following state arguments are supported:
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1584,16 +1451,14 @@ The following state arguments are supported:
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1602,16 +1467,14 @@ The following state arguments are supported:
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1620,20 +1483,40 @@ The following state arguments are supported:
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Lambda Function Event Invoke Configs can be imported using the fully qualified Function name or Amazon Resource Name (ARN), e.g. ARN without qualifier (all versions and aliases)
 
+```sh
+ $ pulumi import aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig example arn:aws:us-east-1:123456789012:function:my_function
+```
 
+ ARN with qualifier
 
+```sh
+ $ pulumi import aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig example arn:aws:us-east-1:123456789012:function:my_function:production
+```
+
+ Name without qualifier (all versions and aliases)
+
+```sh
+ $ pulumi import aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig example my_function
+```
+
+ Name with qualifier
+
+```sh
+ $ pulumi import aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig example my_function:production
+```
 
 
 

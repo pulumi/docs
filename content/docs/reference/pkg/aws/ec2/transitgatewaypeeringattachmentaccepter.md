@@ -1,8 +1,8 @@
 
 ---
 title: "TransitGatewayPeeringAttachmentAccepter"
-title_tag: "Resource TransitGatewayPeeringAttachmentAccepter | Module ec2 | Package AWS"
-meta_desc: "Explore the TransitGatewayPeeringAttachmentAccepter resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages the accepter&#39;s side of an EC2 Transit Gateway Peering Attachment."
+title_tag: "aws.ec2.TransitGatewayPeeringAttachmentAccepter"
+meta_desc: "Documentation for the aws.ec2.TransitGatewayPeeringAttachmentAccepter resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -28,11 +28,11 @@ class MyStack : Stack
     {
         var example = new Aws.Ec2.TransitGatewayPeeringAttachmentAccepter("example", new Aws.Ec2.TransitGatewayPeeringAttachmentAccepterArgs
         {
+            TransitGatewayAttachmentId = aws_ec2_transit_gateway_peering_attachment.Example.Id,
             Tags = 
             {
                 { "Name", "Example cross-account attachment" },
             },
-            TransitGatewayAttachmentId = aws_ec2_transit_gateway_peering_attachment.Example.Id,
         });
     }
 
@@ -53,10 +53,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := ec2.NewTransitGatewayPeeringAttachmentAccepter(ctx, "example", &ec2.TransitGatewayPeeringAttachmentAccepterArgs{
+			TransitGatewayAttachmentId: pulumi.Any(aws_ec2_transit_gateway_peering_attachment.Example.Id),
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("Example cross-account attachment"),
 			},
-			TransitGatewayAttachmentId: pulumi.Any(aws_ec2_transit_gateway_peering_attachment.Example.Id),
 		})
 		if err != nil {
 			return err
@@ -74,10 +74,10 @@ import pulumi
 import pulumi_aws as aws
 
 example = aws.ec2.TransitGatewayPeeringAttachmentAccepter("example",
+    transit_gateway_attachment_id=aws_ec2_transit_gateway_peering_attachment["example"]["id"],
     tags={
         "Name": "Example cross-account attachment",
-    },
-    transit_gateway_attachment_id=aws_ec2_transit_gateway_peering_attachment["example"]["id"])
+    })
 ```
 
 {{% /example %}}
@@ -89,10 +89,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const example = new aws.ec2.TransitGatewayPeeringAttachmentAccepter("example", {
+    transitGatewayAttachmentId: aws_ec2_transit_gateway_peering_attachment.example.id,
     tags: {
         Name: "Example cross-account attachment",
     },
-    transitGatewayAttachmentId: aws_ec2_transit_gateway_peering_attachment_example.id,
 });
 ```
 
@@ -106,19 +106,19 @@ const example = new aws.ec2.TransitGatewayPeeringAttachmentAccepter("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#TransitGatewayPeeringAttachmentAccepter">TransitGatewayPeeringAttachmentAccepter</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#TransitGatewayPeeringAttachmentAccepterArgs">TransitGatewayPeeringAttachmentAccepterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">TransitGatewayPeeringAttachmentAccepter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TransitGatewayPeeringAttachmentAccepterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.TransitGatewayPeeringAttachmentAccepter">TransitGatewayPeeringAttachmentAccepter</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>tags=None<span class="p">, </span>transit_gateway_attachment_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">TransitGatewayPeeringAttachmentAccepter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_gateway_attachment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TransitGatewayPeeringAttachmentAccepter">NewTransitGatewayPeeringAttachmentAccepter</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TransitGatewayPeeringAttachmentAccepterArgs">TransitGatewayPeeringAttachmentAccepterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TransitGatewayPeeringAttachmentAccepter">TransitGatewayPeeringAttachmentAccepter</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTransitGatewayPeeringAttachmentAccepter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TransitGatewayPeeringAttachmentAccepterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TransitGatewayPeeringAttachmentAccepter</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.TransitGatewayPeeringAttachmentAccepter.html">TransitGatewayPeeringAttachmentAccepter</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.TransitGatewayPeeringAttachmentAccepterArgs.html">TransitGatewayPeeringAttachmentAccepterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">TransitGatewayPeeringAttachmentAccepter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TransitGatewayPeeringAttachmentAccepterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -129,7 +129,7 @@ const example = new aws.ec2.TransitGatewayPeeringAttachmentAccepter("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -139,7 +139,7 @@ const example = new aws.ec2.TransitGatewayPeeringAttachmentAccepter("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#TransitGatewayPeeringAttachmentAccepterArgs">TransitGatewayPeeringAttachmentAccepterArgs</a></span>
+        <span class="property-type"><a href="#inputs">TransitGatewayPeeringAttachmentAccepterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -198,7 +198,7 @@ const example = new aws.ec2.TransitGatewayPeeringAttachmentAccepter("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -208,7 +208,7 @@ const example = new aws.ec2.TransitGatewayPeeringAttachmentAccepter("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TransitGatewayPeeringAttachmentAccepterArgs">TransitGatewayPeeringAttachmentAccepterArgs</a></span>
+        <span class="property-type"><a href="#inputs">TransitGatewayPeeringAttachmentAccepterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -237,7 +237,7 @@ const example = new aws.ec2.TransitGatewayPeeringAttachmentAccepter("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -247,7 +247,7 @@ const example = new aws.ec2.TransitGatewayPeeringAttachmentAccepter("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.TransitGatewayPeeringAttachmentAccepterArgs.html">TransitGatewayPeeringAttachmentAccepterArgs</a></span>
+        <span class="property-type"><a href="#inputs">TransitGatewayPeeringAttachmentAccepterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -270,12 +270,11 @@ const example = new aws.ec2.TransitGatewayPeeringAttachmentAccepter("example", {
 
 ## TransitGatewayPeeringAttachmentAccepter Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The TransitGatewayPeeringAttachmentAccepter resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The TransitGatewayPeeringAttachmentAccepter resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -286,27 +285,24 @@ The TransitGatewayPeeringAttachmentAccepter resource accepts the following [inpu
             title="Required">
         <span id="transitgatewayattachmentid_csharp">
 <a href="#transitgatewayattachmentid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the EC2 Transit Gateway Peering Attachment to manage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Peering Attachment.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -315,27 +311,24 @@ The TransitGatewayPeeringAttachmentAccepter resource accepts the following [inpu
             title="Required">
         <span id="transitgatewayattachmentid_go">
 <a href="#transitgatewayattachmentid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the EC2 Transit Gateway Peering Attachment to manage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Peering Attachment.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -344,27 +337,24 @@ The TransitGatewayPeeringAttachmentAccepter resource accepts the following [inpu
             title="Required">
         <span id="transitgatewayattachmentid_nodejs">
 <a href="#transitgatewayattachmentid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the EC2 Transit Gateway Peering Attachment to manage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Peering Attachment.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -373,36 +363,29 @@ The TransitGatewayPeeringAttachmentAccepter resource accepts the following [inpu
             title="Required">
         <span id="transit_gateway_attachment_id_python">
 <a href="#transit_gateway_attachment_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>attachment_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the EC2 Transit Gateway Peering Attachment to manage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Peering Attachment.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the TransitGatewayPeeringAttachmentAccepter resource produces the following output properties:
-
 
 
 
@@ -413,58 +396,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peeraccountid_csharp">
 <a href="#peeraccountid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 TGW peering.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peerregion_csharp">
 <a href="#peerregion_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peertransitgatewayid_csharp">
 <a href="#peertransitgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Transit<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway to peer with.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="transitgatewayid_csharp">
 <a href="#transitgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -473,58 +450,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peeraccountid_go">
 <a href="#peeraccountid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 TGW peering.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peerregion_go">
 <a href="#peerregion_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peertransitgatewayid_go">
 <a href="#peertransitgatewayid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Transit<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway to peer with.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="transitgatewayid_go">
 <a href="#transitgatewayid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -533,58 +504,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peeraccountid_nodejs">
 <a href="#peeraccountid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 TGW peering.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peerregion_nodejs">
 <a href="#peerregion_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peertransitgatewayid_nodejs">
 <a href="#peertransitgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Transit<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway to peer with.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="transitgatewayid_nodejs">
 <a href="#transitgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -593,61 +558,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peer_account_id_python">
 <a href="#peer_account_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>account_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 TGW peering.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peer_region_python">
 <a href="#peer_region_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peer_transit_gateway_id_python">
 <a href="#peer_transit_gateway_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>transit_<wbr>gateway_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway to peer with.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="transit_gateway_id_python">
 <a href="#transit_gateway_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -657,19 +613,20 @@ Get an existing TransitGatewayPeeringAttachmentAccepter resource's state with th
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#TransitGatewayPeeringAttachmentAccepterState">TransitGatewayPeeringAttachmentAccepterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#TransitGatewayPeeringAttachmentAccepter">TransitGatewayPeeringAttachmentAccepter</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TransitGatewayPeeringAttachmentAccepterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">TransitGatewayPeeringAttachmentAccepter</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>peer_account_id=None<span class="p">, </span>peer_region=None<span class="p">, </span>peer_transit_gateway_id=None<span class="p">, </span>tags=None<span class="p">, </span>transit_gateway_attachment_id=None<span class="p">, </span>transit_gateway_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">peer_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_gateway_attachment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TransitGatewayPeeringAttachmentAccepter</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTransitGatewayPeeringAttachmentAccepter<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TransitGatewayPeeringAttachmentAccepterState">TransitGatewayPeeringAttachmentAccepterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#TransitGatewayPeeringAttachmentAccepter">TransitGatewayPeeringAttachmentAccepter</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTransitGatewayPeeringAttachmentAccepter<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TransitGatewayPeeringAttachmentAccepterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">TransitGatewayPeeringAttachmentAccepter</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.TransitGatewayPeeringAttachmentAccepter.html">TransitGatewayPeeringAttachmentAccepter</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.TransitGatewayPeeringAttachmentAccepterState.html">TransitGatewayPeeringAttachmentAccepterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">TransitGatewayPeeringAttachmentAccepter</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TransitGatewayPeeringAttachmentAccepterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -771,7 +728,6 @@ Get an existing TransitGatewayPeeringAttachmentAccepter resource's state with th
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -779,70 +735,63 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_peeraccountid_csharp">
 <a href="#state_peeraccountid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 TGW peering.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_peerregion_csharp">
 <a href="#state_peerregion_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_peertransitgatewayid_csharp">
 <a href="#state_peertransitgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Transit<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway to peer with.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Peering Attachment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayattachmentid_csharp">
 <a href="#state_transitgatewayattachmentid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the EC2 Transit Gateway Peering Attachment to manage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayid_csharp">
 <a href="#state_transitgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -851,70 +800,63 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_peeraccountid_go">
 <a href="#state_peeraccountid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 TGW peering.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_peerregion_go">
 <a href="#state_peerregion_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_peertransitgatewayid_go">
 <a href="#state_peertransitgatewayid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Transit<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway to peer with.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Peering Attachment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayattachmentid_go">
 <a href="#state_transitgatewayattachmentid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the EC2 Transit Gateway Peering Attachment to manage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayid_go">
 <a href="#state_transitgatewayid_go" style="color: inherit; text-decoration: inherit;">Transit<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -923,70 +865,63 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_peeraccountid_nodejs">
 <a href="#state_peeraccountid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 TGW peering.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_peerregion_nodejs">
 <a href="#state_peerregion_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_peertransitgatewayid_nodejs">
 <a href="#state_peertransitgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Transit<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway to peer with.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Peering Attachment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayattachmentid_nodejs">
 <a href="#state_transitgatewayattachmentid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Attachment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the EC2 Transit Gateway Peering Attachment to manage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_transitgatewayid_nodejs">
 <a href="#state_transitgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">transit<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -995,67 +930,61 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_peer_account_id_python">
 <a href="#state_peer_account_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>account_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 TGW peering.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_peer_region_python">
 <a href="#state_peer_region_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_peer_transit_gateway_id_python">
 <a href="#state_peer_transit_gateway_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>transit_<wbr>gateway_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway to peer with.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Peering Attachment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_transit_gateway_attachment_id_python">
 <a href="#state_transit_gateway_attachment_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>attachment_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the EC2 Transit Gateway Peering Attachment to manage.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_transit_gateway_id_python">
 <a href="#state_transit_gateway_id_python" style="color: inherit; text-decoration: inherit;">transit_<wbr>gateway_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1063,8 +992,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+`aws_ec2_transit_gateway_peering_attachment_accepter` can be imported by using the EC2 Transit Gateway Attachment identifier, e.g.
+
+```sh
+ $ pulumi import aws:ec2/transitGatewayPeeringAttachmentAccepter:TransitGatewayPeeringAttachmentAccepter example tgw-attach-12345678
+```
 
 
 

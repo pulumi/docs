@@ -164,7 +164,7 @@ great compiler work underpinning them.
 So let's dig in -- how does this all really work?
 
 (Note that, if you want some of the more nitty gritty details, we have a
-[doc]({{< relref "/docs/tutorials/aws/serializing-functions" >}})
+[doc]({{< relref "/docs/intro/concepts/function-serialization" >}})
 going in depth. For now, we'll try to stick to providing a high-level
 overview of what's going on, so that we can grok the basic approach.)
 

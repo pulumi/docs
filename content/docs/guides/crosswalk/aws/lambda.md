@@ -66,16 +66,16 @@ tbody tr td:first-child {
 | AWS Service | Event | Description |
 |-------------|-------|-------------|
 | API Gateway | [awsx.apigateway.API]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/apigateway#API" >}}) | create serverless APIs using a simple approach |
-| CloudWatch  | [aws.cloudwatch.onSchedule]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#onSchedule" >}}) | fire a CloudWatch event on a particular schedule, e.g. a cron expression |
-| CloudWatch  | [aws.cloudwatch.EventRule.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#EventRule-onEvent" >}}) | fire an event when a particular CloudWatch event occurs |
-| CloudWatch  | [aws.cloudwatch.LogGroup.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch#LogGroup-onEvent" >}}) | fire an event when a CloudWatch logs event occurs |
-| DynamoDB    | [aws.dynamodb.Table.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/dynamodb#Table-onEvent" >}}) | fire events for DynamoDB insert, modify, or remove operations |
-| Kinesis     | [aws.kinesis.Stream.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/kinesis#Stream-onEvent" >}}) | fire Kinesis Stream events at particular times or batch sizes |
-| S3          | [aws.s3.Bucket.onObjectCreated]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectCreated" >}}) | trigger a function anytime an object is created in an S3 Bucket |
-| S3          | [aws.s3.Bucket.onObjectRemoved]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onObjectRemoved" >}}) | trigger a function anytime an object is removed from an S3 Bucket |
-| S3          | [aws.s3.Bucket.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/s3#Bucket-onEvent" >}}) | trigger a function for a wide range of S3 Bucket events |
-| SNS         | [aws.sns.Topic.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/sns#Topic-onEvent" >}}) | fire SNS Topic events when new messages arrive |
-| SQS         | [aws.sqs.Queue.onEvent]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/sqs#Queue-onEvent" >}}) | fire SQS Queue events when new messages are enqueued (or on DLQ events, etc) |
+| CloudWatch  | aws.cloudwatch.onSchedule | fire a CloudWatch event on a particular schedule, e.g. a cron expression |
+| CloudWatch  | aws.cloudwatch.EventRule.onEvent | fire an event when a particular CloudWatch event occurs |
+| CloudWatch  | aws.cloudwatch.LogGroup.onEvent | fire an event when a CloudWatch logs event occurs |
+| DynamoDB    | aws.dynamodb.Table.onEvent | fire events for DynamoDB insert, modify, or remove operations |
+| Kinesis     | aws.kinesis.Stream.onEvent | fire Kinesis Stream events at particular times or batch sizes |
+| S3          | aws.s3.Bucket.onObjectCreated | trigger a function anytime an object is created in an S3 Bucket |
+| S3          | aws.s3.Bucket.onObjectRemoved | trigger a function anytime an object is removed from an S3 Bucket |
+| S3          | aws.s3.Bucket.onEvent | trigger a function for a wide range of S3 Bucket events |
+| SNS         | aws.sns.Topic.onEvent | fire SNS Topic events when new messages arrive |
+| SQS         | aws.sqs.Queue.onEvent | fire SQS Queue events when new messages are enqueued (or on DLQ events, etc) |
 
 There are multiple approaches to creating a Lambda function. For these examples, we will trigger the Lambda's
 execution when an S3 Bucket receives a new Object, however the manner of registering a handler is the same across
@@ -155,7 +155,7 @@ docsBucket.onObjectCreated("docsHandler", new aws.lambda.CallbackFunction("docsH
 ```
 
 For more information about the properties available on `CallbackFunction`, refer to the [API documentation](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/aws/lambda#FunctionArgs" >}}).
+{{< relref "/docs/reference/pkg/aws/lambda" >}}).
 
 ### Register an Event Handler by Creating a Lambda Function Resource
 
@@ -188,7 +188,7 @@ const docsHandlerRole = new aws.iam.Role("docsHandlerRole", {
 });
 new aws.iam.RolePolicyAttachment("zipTpsReportsFuncRoleAttach", {
    role: docsHandlerRole,
-   policyArn: aws.iam.ManagedPolicies.AWSLambdaFullAccess,
+   policyArn: aws.iam.ManagedPolicies.AWSLambdaExecute,
 });
 
 // Next, create the Lambda function itself:
@@ -306,7 +306,7 @@ so updates are always based only on what's changed.
 For example, maybe we've defined our callback function in `./app`:
 
 ```typescript
-import * as aws from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
 export async function handleDocument(e: aws.s3.BucketEvent): Promise<void> {
    // your lambda code goes here
 }
@@ -329,8 +329,8 @@ independent components versioning at their own pace.
 Lastly, it's possible to use Pulumi stacks to actually break apart your cloud resources and functions into
 independently deployable pieces. This allows teams to leverage features like RBAC. For instance, it's common for the
 DevOps team to manage the physical cloud resources like queues, topics, and buckets, while the development team
-authors and manages the serverless functions attached to them. For more information on this idea, please see
-[Organizing Projects and Stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}})
+authors and manages the serverless functions attached to them. For more information on this idea, see
+[Organizing Projects and Stacks]({{< relref "/docs/guides/organizing-projects-stacks" >}})
 
 ## Easy Lambda Log Consumption
 

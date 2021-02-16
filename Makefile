@@ -29,6 +29,12 @@ serve:
 	$(MAKE) lint
 	./scripts/serve.sh
 
+.PHONY: serve_marketing
+serve_marketing:
+	@echo -e "\033[0;32mSERVE MARKETING:\033[0m"
+	$(MAKE) lint
+	HUGO_ENVIRONMENT=marketing-dev ./scripts/serve.sh
+
 .PHONY: serve_components
 serve_components:
 	@echo -e "\033[0;32mSERVE COMPONENTS:\033[0m"
@@ -53,10 +59,6 @@ generate:
 	pulumi gen-markdown ./content/docs/reference/cli
 	./scripts/mktutorial.sh
 
-.PHONY: copy_static_prebuilt
-copy_static_prebuilt:
-	mkdir -p public && cp -R static-prebuilt/* public/
-
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
@@ -77,6 +79,20 @@ check_links_local:
 	$(MAKE) ensure
 	./scripts/check-links.sh local
 
+.PHONY: check_links
+check_links:
+	$(MAKE) banner
+	$(MAKE) ensure
+	./scripts/check-links.sh www
+
+.PHONY: new_learn_module
+new_learn_module:
+	./scripts/new-learn-module.sh
+
+.PHONY: new_learn_topic
+new_learn_topic:
+	./scripts/new-learn-topic.sh
+
 .PHONY: ci_push
 ci_push::
 	$(MAKE) banner
@@ -96,8 +112,7 @@ ci_pull_request_closed:
 	$(MAKE) banner
 	./scripts/ci-pull-request-closed.sh
 
-.PHONY: ci_schedule
-ci_schedule:
+.PHONY: ci_bucket_cleanup
+ci_bucket_cleanup:
 	$(MAKE) banner
-	$(MAKE) ensure
-	./scripts/check-links.sh www
+	./scripts/ci-bucket-cleanup.sh

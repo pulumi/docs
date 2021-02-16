@@ -1,8 +1,8 @@
 
 ---
 title: "Connection"
-title_tag: "Resource Connection | Module bigquery | Package GCP"
-meta_desc: "Explore the Connection resource of the bigquery module, including examples, input properties, output properties, lookup functions, and supporting types. A connection allows BigQuery connections to external data sources.."
+title_tag: "gcp.bigquery.Connection"
+meta_desc: "Documentation for the gcp.bigquery.Connection resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -21,6 +21,471 @@ To get more information about Connection, see:
 > **Warning:** All arguments including `cloud_sql.credential.password` will be stored in the raw
 state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Bigquery Connection Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
+        {
+            DatabaseVersion = "POSTGRES_11",
+            Region = "us-central1",
+            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+            {
+                Tier = "db-f1-micro",
+            },
+            DeletionProtection = true,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var db = new Gcp.Sql.Database("db", new Gcp.Sql.DatabaseArgs
+        {
+            Instance = instance.Name,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var pwd = new Random.RandomPassword("pwd", new Random.RandomPasswordArgs
+        {
+            Length = 16,
+            Special = false,
+        });
+        var user = new Gcp.Sql.User("user", new Gcp.Sql.UserArgs
+        {
+            Instance = instance.Name,
+            Password = pwd.Result,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var connection = new Gcp.BigQuery.Connection("connection", new Gcp.BigQuery.ConnectionArgs
+        {
+            FriendlyName = "👋",
+            Description = "a riveting description",
+            CloudSql = new Gcp.BigQuery.Inputs.ConnectionCloudSqlArgs
+            {
+                InstanceId = instance.ConnectionName,
+                Database = db.Name,
+                Type = "POSTGRES",
+                Credential = new Gcp.BigQuery.Inputs.ConnectionCloudSqlCredentialArgs
+                {
+                    Username = user.Name,
+                    Password = user.Password,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := sql.NewDatabaseInstance(ctx, "instance", &sql.DatabaseInstanceArgs{
+			DatabaseVersion: pulumi.String("POSTGRES_11"),
+			Region:          pulumi.String("us-central1"),
+			Settings: &sql.DatabaseInstanceSettingsArgs{
+				Tier: pulumi.String("db-f1-micro"),
+			},
+			DeletionProtection: pulumi.Bool(true),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		db, err := sql.NewDatabase(ctx, "db", &sql.DatabaseArgs{
+			Instance: instance.Name,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		pwd, err := random.NewRandomPassword(ctx, "pwd", &random.RandomPasswordArgs{
+			Length:  pulumi.Int(16),
+			Special: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		user, err := sql.NewUser(ctx, "user", &sql.UserArgs{
+			Instance: instance.Name,
+			Password: pwd.Result,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewConnection(ctx, "connection", &bigquery.ConnectionArgs{
+			FriendlyName: pulumi.String("👋"),
+			Description:  pulumi.String("a riveting description"),
+			CloudSql: &bigquery.ConnectionCloudSqlArgs{
+				InstanceId: instance.ConnectionName,
+				Database:   db.Name,
+				Type:       pulumi.String("POSTGRES"),
+				Credential: &bigquery.ConnectionCloudSqlCredentialArgs{
+					Username: user.Name,
+					Password: user.Password,
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_random as random
+
+instance = gcp.sql.DatabaseInstance("instance",
+    database_version="POSTGRES_11",
+    region="us-central1",
+    settings=gcp.sql.DatabaseInstanceSettingsArgs(
+        tier="db-f1-micro",
+    ),
+    deletion_protection=True,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+db = gcp.sql.Database("db", instance=instance.name,
+opts=pulumi.ResourceOptions(provider=google_beta))
+pwd = random.RandomPassword("pwd",
+    length=16,
+    special=False)
+user = gcp.sql.User("user",
+    instance=instance.name,
+    password=pwd.result,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+connection = gcp.bigquery.Connection("connection",
+    friendly_name="👋",
+    description="a riveting description",
+    cloud_sql=gcp.bigquery.ConnectionCloudSqlArgs(
+        instance_id=instance.connection_name,
+        database=db.name,
+        type="POSTGRES",
+        credential=gcp.bigquery.ConnectionCloudSqlCredentialArgs(
+            username=user.name,
+            password=user.password,
+        ),
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const instance = new gcp.sql.DatabaseInstance("instance", {
+    databaseVersion: "POSTGRES_11",
+    region: "us-central1",
+    settings: {
+        tier: "db-f1-micro",
+    },
+    deletionProtection: "true",
+}, {
+    provider: google_beta,
+});
+const db = new gcp.sql.Database("db", {instance: instance.name}, {
+    provider: google_beta,
+});
+const pwd = new random.RandomPassword("pwd", {
+    length: 16,
+    special: false,
+});
+const user = new gcp.sql.User("user", {
+    instance: instance.name,
+    password: pwd.result,
+}, {
+    provider: google_beta,
+});
+const connection = new gcp.bigquery.Connection("connection", {
+    friendlyName: "👋",
+    description: "a riveting description",
+    cloudSql: {
+        instanceId: instance.connectionName,
+        database: db.name,
+        type: "POSTGRES",
+        credential: {
+            username: user.name,
+            password: user.password,
+        },
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+### Bigquery Connection Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
+        {
+            DatabaseVersion = "POSTGRES_11",
+            Region = "us-central1",
+            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+            {
+                Tier = "db-f1-micro",
+            },
+            DeletionProtection = true,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var db = new Gcp.Sql.Database("db", new Gcp.Sql.DatabaseArgs
+        {
+            Instance = instance.Name,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var pwd = new Random.RandomPassword("pwd", new Random.RandomPasswordArgs
+        {
+            Length = 16,
+            Special = false,
+        });
+        var user = new Gcp.Sql.User("user", new Gcp.Sql.UserArgs
+        {
+            Instance = instance.Name,
+            Password = pwd.Result,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var connection = new Gcp.BigQuery.Connection("connection", new Gcp.BigQuery.ConnectionArgs
+        {
+            ConnectionId = "my-connection",
+            Location = "US",
+            FriendlyName = "👋",
+            Description = "a riveting description",
+            CloudSql = new Gcp.BigQuery.Inputs.ConnectionCloudSqlArgs
+            {
+                InstanceId = instance.ConnectionName,
+                Database = db.Name,
+                Type = "POSTGRES",
+                Credential = new Gcp.BigQuery.Inputs.ConnectionCloudSqlCredentialArgs
+                {
+                    Username = user.Name,
+                    Password = user.Password,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := sql.NewDatabaseInstance(ctx, "instance", &sql.DatabaseInstanceArgs{
+			DatabaseVersion: pulumi.String("POSTGRES_11"),
+			Region:          pulumi.String("us-central1"),
+			Settings: &sql.DatabaseInstanceSettingsArgs{
+				Tier: pulumi.String("db-f1-micro"),
+			},
+			DeletionProtection: pulumi.Bool(true),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		db, err := sql.NewDatabase(ctx, "db", &sql.DatabaseArgs{
+			Instance: instance.Name,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		pwd, err := random.NewRandomPassword(ctx, "pwd", &random.RandomPasswordArgs{
+			Length:  pulumi.Int(16),
+			Special: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		user, err := sql.NewUser(ctx, "user", &sql.UserArgs{
+			Instance: instance.Name,
+			Password: pwd.Result,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewConnection(ctx, "connection", &bigquery.ConnectionArgs{
+			ConnectionId: pulumi.String("my-connection"),
+			Location:     pulumi.String("US"),
+			FriendlyName: pulumi.String("👋"),
+			Description:  pulumi.String("a riveting description"),
+			CloudSql: &bigquery.ConnectionCloudSqlArgs{
+				InstanceId: instance.ConnectionName,
+				Database:   db.Name,
+				Type:       pulumi.String("POSTGRES"),
+				Credential: &bigquery.ConnectionCloudSqlCredentialArgs{
+					Username: user.Name,
+					Password: user.Password,
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_random as random
+
+instance = gcp.sql.DatabaseInstance("instance",
+    database_version="POSTGRES_11",
+    region="us-central1",
+    settings=gcp.sql.DatabaseInstanceSettingsArgs(
+        tier="db-f1-micro",
+    ),
+    deletion_protection=True,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+db = gcp.sql.Database("db", instance=instance.name,
+opts=pulumi.ResourceOptions(provider=google_beta))
+pwd = random.RandomPassword("pwd",
+    length=16,
+    special=False)
+user = gcp.sql.User("user",
+    instance=instance.name,
+    password=pwd.result,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+connection = gcp.bigquery.Connection("connection",
+    connection_id="my-connection",
+    location="US",
+    friendly_name="👋",
+    description="a riveting description",
+    cloud_sql=gcp.bigquery.ConnectionCloudSqlArgs(
+        instance_id=instance.connection_name,
+        database=db.name,
+        type="POSTGRES",
+        credential=gcp.bigquery.ConnectionCloudSqlCredentialArgs(
+            username=user.name,
+            password=user.password,
+        ),
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const instance = new gcp.sql.DatabaseInstance("instance", {
+    databaseVersion: "POSTGRES_11",
+    region: "us-central1",
+    settings: {
+        tier: "db-f1-micro",
+    },
+    deletionProtection: "true",
+}, {
+    provider: google_beta,
+});
+const db = new gcp.sql.Database("db", {instance: instance.name}, {
+    provider: google_beta,
+});
+const pwd = new random.RandomPassword("pwd", {
+    length: 16,
+    special: false,
+});
+const user = new gcp.sql.User("user", {
+    instance: instance.name,
+    password: pwd.result,
+}, {
+    provider: google_beta,
+});
+const connection = new gcp.bigquery.Connection("connection", {
+    connectionId: "my-connection",
+    location: "US",
+    friendlyName: "👋",
+    description: "a riveting description",
+    cloudSql: {
+        instanceId: instance.connectionName,
+        database: db.name,
+        type: "POSTGRES",
+        credential: {
+            username: user.name,
+            password: user.password,
+        },
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Connection Resource {#create}
@@ -28,19 +493,19 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Connection">Connection</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#ConnectionArgs">ConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#Connection">Connection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cloud_sql=None<span class="p">, </span>connection_id=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_sql</span><span class="p">:</span> <span class="nx">Optional[ConnectionCloudSqlArgs]</span> = None<span class="p">, </span><span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Connection">NewConnection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#ConnectionArgs">ConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Connection">Connection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConnection</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Connection.html">Connection</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.ConnectionArgs.html">ConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Connection</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -51,7 +516,7 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -61,7 +526,7 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#ConnectionArgs">ConnectionArgs</a></span>
+        <span class="property-type"><a href="#inputs">ConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -110,7 +575,7 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -120,7 +585,7 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -130,7 +595,7 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#ConnectionArgs">ConnectionArgs</a></span>
+        <span class="property-type"><a href="#inputs">ConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -140,7 +605,7 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -159,7 +624,7 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -169,7 +634,7 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.ConnectionArgs.html">ConnectionArgs</a></span>
+        <span class="property-type"><a href="#inputs">ConnectionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -192,12 +657,11 @@ state as plain-text. [Read more about sensitive data in state](https://www.terra
 
 ## Connection Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Connection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Connection resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -208,75 +672,69 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="cloudsql_csharp">
 <a href="#cloudsql_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectionid_csharp">
 <a href="#connectionid_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional connection id that should be assigned to the created connection.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive description for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location where the connection should reside.
 Cloud SQL instance must be in the same location as the connection
 with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
 Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -285,75 +743,69 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="cloudsql_go">
 <a href="#cloudsql_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectionid_go">
 <a href="#connectionid_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional connection id that should be assigned to the created connection.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive description for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location where the connection should reside.
 Cloud SQL instance must be in the same location as the connection
 with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
 Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -362,75 +814,69 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="cloudsql_nodejs">
 <a href="#cloudsql_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectionid_nodejs">
 <a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional connection id that should be assigned to the created connection.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive description for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location where the connection should reside.
 Cloud SQL instance must be in the same location as the connection
 with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
 Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -439,84 +885,74 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="cloud_sql_python">
 <a href="#cloud_sql_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectioncloudsql">Dict[Connection<wbr>Cloud<wbr>Sql]</a></span>
+        <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connection_id_python">
 <a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional connection id that should be assigned to the created connection.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive description for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geographic location where the connection should reside.
 Cloud SQL instance must be in the same location as the connection
 with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
 Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Connection resource produces the following output properties:
-
 
 
 
@@ -527,38 +963,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="hascredential_csharp">
 <a href="#hascredential_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Credential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the connection has credential assigned.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the connection in the form of:
 "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -567,38 +999,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="hascredential_go">
 <a href="#hascredential_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Credential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the connection has credential assigned.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the connection in the form of:
 "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -607,38 +1035,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="hascredential_nodejs">
 <a href="#hascredential_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Credential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the connection has credential assigned.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the connection in the form of:
 "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -647,41 +1071,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="has_credential_python">
 <a href="#has_credential_python" style="color: inherit; text-decoration: inherit;">has_<wbr>credential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the connection has credential assigned.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the connection in the form of:
 "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -691,19 +1108,20 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#ConnectionState">ConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Connection">Connection</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Connection</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cloud_sql=None<span class="p">, </span>connection_id=None<span class="p">, </span>description=None<span class="p">, </span>friendly_name=None<span class="p">, </span>has_credential=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_sql</span><span class="p">:</span> <span class="nx">Optional[ConnectionCloudSqlArgs]</span> = None<span class="p">, </span><span class="nx">connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">has_credential</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Connection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#ConnectionState">ConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Connection">Connection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ConnectionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Connection</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Connection.html">Connection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.ConnectionState.html">ConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Connection</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ConnectionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -805,7 +1223,6 @@ Get an existing Connection resource's state with the given name, ID, and optiona
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -813,98 +1230,90 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cloudsql_csharp">
 <a href="#state_cloudsql_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connectionid_csharp">
 <a href="#state_connectionid_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional connection id that should be assigned to the created connection.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive description for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_friendlyname_csharp">
 <a href="#state_friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hascredential_csharp">
 <a href="#state_hascredential_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Credential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the connection has credential assigned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location where the connection should reside.
 Cloud SQL instance must be in the same location as the connection
 with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
 Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the connection in the form of:
 "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -913,98 +1322,90 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_cloudsql_go">
 <a href="#state_cloudsql_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connectionid_go">
 <a href="#state_connectionid_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional connection id that should be assigned to the created connection.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive description for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_friendlyname_go">
 <a href="#state_friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hascredential_go">
 <a href="#state_hascredential_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Credential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the connection has credential assigned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location where the connection should reside.
 Cloud SQL instance must be in the same location as the connection
 with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
 Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the connection in the form of:
 "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1013,98 +1414,90 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_cloudsql_nodejs">
 <a href="#state_cloudsql_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connectionid_nodejs">
 <a href="#state_connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional connection id that should be assigned to the created connection.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive description for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_friendlyname_nodejs">
 <a href="#state_friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hascredential_nodejs">
 <a href="#state_hascredential_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Credential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the connection has credential assigned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location where the connection should reside.
 Cloud SQL instance must be in the same location as the connection
 with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
 Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the connection in the form of:
 "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1113,101 +1506,90 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_cloud_sql_python">
 <a href="#state_cloud_sql_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectioncloudsql">Dict[Connection<wbr>Cloud<wbr>Sql]</a></span>
+        <span class="property-type"><a href="#connectioncloudsql">Connection<wbr>Cloud<wbr>Sql<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connection_id_python">
 <a href="#state_connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional connection id that should be assigned to the created connection.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive description for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_friendly_name_python">
 <a href="#state_friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive name for the connection
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_has_credential_python">
 <a href="#state_has_credential_python" style="color: inherit; text-decoration: inherit;">has_<wbr>credential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the connection has credential assigned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geographic location where the connection should reside.
 Cloud SQL instance must be in the same location as the connection
 with following exceptions: Cloud SQL us-central1 maps to BigQuery US, Cloud SQL europe-west1 maps to BigQuery EU.
 Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the connection in the form of:
 "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1217,20 +1599,8 @@ If it is not provided, the provider project is used.
 ## Supporting Types
 
 
+
 <h4 id="connectioncloudsql">Connection<wbr>Cloud<wbr>Sql</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ConnectionCloudSql">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ConnectionCloudSql">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#ConnectionCloudSqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#ConnectionCloudSqlOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.ConnectionCloudSqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.ConnectionCloudSql.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1239,49 +1609,46 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="credential_csharp">
 <a href="#credential_csharp" style="color: inherit; text-decoration: inherit;">Credential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="database_csharp">
 <a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud SQL instance ID in the form project:location:instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.
+Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1290,49 +1657,46 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="credential_go">
 <a href="#credential_go" style="color: inherit; text-decoration: inherit;">Credential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="database_go">
 <a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud SQL instance ID in the form project:location:instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.
+Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1341,49 +1705,46 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="credential_nodejs">
 <a href="#credential_nodejs" style="color: inherit; text-decoration: inherit;">credential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="database_nodejs">
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud SQL instance ID in the form project:location:instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.
+Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1392,67 +1753,48 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="credential_python">
 <a href="#credential_python" style="color: inherit; text-decoration: inherit;">credential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#connectioncloudsqlcredential">Dict[Connection<wbr>Cloud<wbr>Sql<wbr>Credential]</a></span>
+        <span class="property-type"><a href="#connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cloud SQL properties.  Structure is documented below.
+    <dd>{{% md %}}Cloud SQL properties.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="database_python">
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud SQL instance ID in the form project:location:instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the Cloud SQL database.
+Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="connectioncloudsqlcredential">Connection<wbr>Cloud<wbr>Sql<wbr>Credential</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ConnectionCloudSqlCredential">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ConnectionCloudSqlCredential">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#ConnectionCloudSqlCredentialArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#ConnectionCloudSqlCredentialOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.ConnectionCloudSqlCredentialArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.ConnectionCloudSqlCredential.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1461,27 +1803,25 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for database.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}Password for database.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for database.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1490,27 +1830,25 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for database.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}Password for database.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for database.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1519,27 +1857,25 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for database.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}Password for database.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for database.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1548,31 +1884,41 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password for database.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}Password for database.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for database.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Connection can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:bigquery/connection:Connection default projects/{{project}}/locations/{{location}}/connections/{{connection_id}}
+```
 
+```sh
+ $ pulumi import gcp:bigquery/connection:Connection default {{project}}/{{location}}/{{connection_id}}
+```
 
+```sh
+ $ pulumi import gcp:bigquery/connection:Connection default {{location}}/{{connection_id}}
+```
 
 
 
@@ -1584,6 +1930,6 @@ If it is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

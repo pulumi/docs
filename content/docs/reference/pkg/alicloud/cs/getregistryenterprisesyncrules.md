@@ -14,6 +14,7 @@ This data source provides a list Container Registry Enterprise Edition sync rule
 
 > **NOTE:** Available in v1.90.0+
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -48,7 +49,40 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "test-namespace"
+		opt1 := "test-repo"
+		opt2 := "cri-yyy"
+		opt3 := "test-rule"
+		mySyncRules, err := cs.GetRegistryEnterpriseSyncRules(ctx, &cs.GetRegistryEnterpriseSyncRulesArgs{
+			InstanceId:       "cri-xxx",
+			NamespaceName:    &opt0,
+			RepoName:         &opt1,
+			TargetInstanceId: &opt2,
+			NameRegex:        &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		var splat0 []string
+		for _, val0 := range mySyncRules.Rules {
+			splat0 = append(splat0, val0.Id)
+		}
+		ctx.Export("output", splat0)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -61,7 +95,7 @@ my_sync_rules = alicloud.cs.get_registry_enterprise_sync_rules(instance_id="cri-
     repo_name="test-repo",
     target_instance_id="cri-yyy",
     name_regex="test-rule")
-pulumi.export("output", [__item["id"] for __item in my_sync_rules.rules])
+pulumi.export("output", [__item.id for __item in my_sync_rules.rules])
 ```
 
 {{% /example %}}
@@ -98,7 +132,7 @@ export const output = mySyncRules.then(mySyncRules => mySyncRules.rules.map(__it
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_registry_enterprise_sync_rules(</span>ids=None<span class="p">, </span>instance_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>namespace_name=None<span class="p">, </span>output_file=None<span class="p">, </span>repo_name=None<span class="p">, </span>target_instance_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_registry_enterprise_sync_rules(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">repo_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRegistryEnterpriseSyncRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -119,7 +153,6 @@ export const output = mySyncRules.then(mySyncRules => mySyncRules.rules.map(__it
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -127,81 +160,73 @@ The following arguments are supported:
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of ids to filter results by sync rule id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by sync rule name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local namespace.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reponame_csharp">
 <a href="#reponame_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetinstanceid_csharp">
 <a href="#targetinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -210,81 +235,73 @@ The following arguments are supported:
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of ids to filter results by sync rule id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by sync rule name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespacename_go">
 <a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local namespace.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reponame_go">
 <a href="#reponame_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetinstanceid_go">
 <a href="#targetinstanceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -293,81 +310,73 @@ The following arguments are supported:
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of ids to filter results by sync rule id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by sync rule name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespacename_nodejs">
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local namespace.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reponame_nodejs">
 <a href="#reponame_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetinstanceid_nodejs">
 <a href="#targetinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -376,84 +385,73 @@ The following arguments are supported:
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of ids to filter results by sync rule id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by sync rule name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_name_python">
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local namespace.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="repo_name_python">
 <a href="#repo_name_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_instance_id_python">
 <a href="#target_instance_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -464,7 +462,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -472,113 +469,102 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of matched Container Registry Enterprise Edition sync rules. Its element is a sync rule uuid.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of sync rule names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregistryenterprisesyncrulesrule">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Outputs.<wbr>Get<wbr>Registry<wbr>Enterprise<wbr>Sync<wbr>Rules<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of matched Container Registry Enterprise Edition sync rules. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local namespace.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reponame_csharp">
 <a href="#reponame_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="targetinstanceid_csharp">
 <a href="#targetinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -587,113 +573,102 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of matched Container Registry Enterprise Edition sync rules. Its element is a sync rule uuid.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of sync rule names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregistryenterprisesyncrulesrule">[]Get<wbr>Registry<wbr>Enterprise<wbr>Sync<wbr>Rules<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A list of matched Container Registry Enterprise Edition sync rules. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="namespacename_go">
 <a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local namespace.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reponame_go">
 <a href="#reponame_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="targetinstanceid_go">
 <a href="#targetinstanceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -702,113 +677,102 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of matched Container Registry Enterprise Edition sync rules. Its element is a sync rule uuid.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of sync rule names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregistryenterprisesyncrulesrule">Get<wbr>Registry<wbr>Enterprise<wbr>Sync<wbr>Rules<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of matched Container Registry Enterprise Edition sync rules. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="namespacename_nodejs">
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local namespace.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="reponame_nodejs">
 <a href="#reponame_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="targetinstanceid_nodejs">
 <a href="#targetinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -817,116 +781,102 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of matched Container Registry Enterprise Edition sync rules. Its element is a sync rule uuid.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of sync rule names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregistryenterprisesyncrulesrule">List[Get<wbr>Registry<wbr>Enterprise<wbr>Sync<wbr>Rules<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getregistryenterprisesyncrulesrule">Sequence[Get<wbr>Registry<wbr>Enterprise<wbr>Sync<wbr>Rules<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A list of matched Container Registry Enterprise Edition sync rules. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="namespace_name_python">
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local namespace.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="repo_name_python">
 <a href="#repo_name_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="target_instance_id_python">
 <a href="#target_instance_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -948,7 +898,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -956,159 +905,144 @@ The following output properties are available:
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition sync rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition sync rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local namespace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="regionid_csharp">
 <a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reponame_csharp">
 <a href="#reponame_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="syncdirection_csharp">
 <a href="#syncdirection_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`FROM` or `TO`, the direction of synchronization. `FROM` indicates that the local instance is the source instance. `TO` indicates that the local instance is the target instance to be synchronized.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="syncscope_csharp">
 <a href="#syncscope_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`REPO` or `NAMESPACE`,the scope that the synchronization rule applies.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="synctrigger_csharp">
 <a href="#synctrigger_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`PASSIVE` or `INITIATIVE`, the policy configured to trigger the synchronization rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tagfilter_csharp">
 <a href="#tagfilter_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regular expression used to filter image tags for synchronization in the source repository.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetinstanceid_csharp">
 <a href="#targetinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetnamespacename_csharp">
 <a href="#targetnamespacename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Namespace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition target namespace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetregionid_csharp">
 <a href="#targetregionid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetreponame_csharp">
 <a href="#targetreponame_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Repo<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition target repo.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1117,159 +1051,144 @@ The following output properties are available:
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition sync rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition sync rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="namespacename_go">
 <a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local namespace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="regionid_go">
 <a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reponame_go">
 <a href="#reponame_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="syncdirection_go">
 <a href="#syncdirection_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`FROM` or `TO`, the direction of synchronization. `FROM` indicates that the local instance is the source instance. `TO` indicates that the local instance is the target instance to be synchronized.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="syncscope_go">
 <a href="#syncscope_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`REPO` or `NAMESPACE`,the scope that the synchronization rule applies.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="synctrigger_go">
 <a href="#synctrigger_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`PASSIVE` or `INITIATIVE`, the policy configured to trigger the synchronization rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tagfilter_go">
 <a href="#tagfilter_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regular expression used to filter image tags for synchronization in the source repository.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetinstanceid_go">
 <a href="#targetinstanceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetnamespacename_go">
 <a href="#targetnamespacename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Namespace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition target namespace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetregionid_go">
 <a href="#targetregionid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetreponame_go">
 <a href="#targetreponame_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Repo<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition target repo.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1278,159 +1197,144 @@ The following output properties are available:
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition sync rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition sync rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="namespacename_nodejs">
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local namespace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="regionid_nodejs">
 <a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reponame_nodejs">
 <a href="#reponame_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="syncdirection_nodejs">
 <a href="#syncdirection_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`FROM` or `TO`, the direction of synchronization. `FROM` indicates that the local instance is the source instance. `TO` indicates that the local instance is the target instance to be synchronized.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="syncscope_nodejs">
 <a href="#syncscope_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`REPO` or `NAMESPACE`,the scope that the synchronization rule applies.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="synctrigger_nodejs">
 <a href="#synctrigger_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`PASSIVE` or `INITIATIVE`, the policy configured to trigger the synchronization rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tagfilter_nodejs">
 <a href="#tagfilter_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regular expression used to filter image tags for synchronization in the source repository.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetinstanceid_nodejs">
 <a href="#targetinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetnamespacename_nodejs">
 <a href="#targetnamespacename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Namespace<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition target namespace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetregionid_nodejs">
 <a href="#targetregionid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetreponame_nodejs">
 <a href="#targetreponame_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Repo<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition target repo.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1439,162 +1343,144 @@ The following output properties are available:
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition sync rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition sync rule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="namespace_name_python">
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local namespace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
-</span> 
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region of Container Registry Enterprise Edition local instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="repo_name_python">
 <a href="#repo_name_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition local repo.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="synctrigger_python">
-<a href="#synctrigger_python" style="color: inherit; text-decoration: inherit;">sync<wbr>Trigger</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}`PASSIVE` or `INITIATIVE`, the policy configured to trigger the synchronization rule.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sync_direction_python">
 <a href="#sync_direction_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`FROM` or `TO`, the direction of synchronization. `FROM` indicates that the local instance is the source instance. `TO` indicates that the local instance is the target instance to be synchronized.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sync_scope_python">
 <a href="#sync_scope_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`REPO` or `NAMESPACE`,the scope that the synchronization rule applies.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="sync_trigger_python">
+<a href="#sync_trigger_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}`PASSIVE` or `INITIATIVE`, the policy configured to trigger the synchronization rule.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tag_filter_python">
 <a href="#tag_filter_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The regular expression used to filter image tags for synchronization in the source repository.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="target_instance_id_python">
 <a href="#target_instance_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="target_namespace_name_python">
 <a href="#target_namespace_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>namespace_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition target namespace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="target_region_id_python">
 <a href="#target_region_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>region_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region of Container Registry Enterprise Edition target instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="target_repo_name_python">
 <a href="#target_repo_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>repo_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Container Registry Enterprise Edition target repo.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1607,6 +1493,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

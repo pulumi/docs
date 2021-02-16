@@ -14,6 +14,7 @@ Use this data source to get the ARN of a certificate in AWS Certificate
 Manager (ACM), you can reference
 it by domain without having to hard code the ARNs as input.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -28,7 +29,24 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var example = Output.Create(Aws.Acm.GetCertificate.InvokeAsync(new Aws.Acm.GetCertificateArgs
+        var issued = Output.Create(Aws.Acm.GetCertificate.InvokeAsync(new Aws.Acm.GetCertificateArgs
+        {
+            Domain = "tf.example.com",
+            Statuses = 
+            {
+                "ISSUED",
+            },
+        }));
+        var amazonIssued = Output.Create(Aws.Acm.GetCertificate.InvokeAsync(new Aws.Acm.GetCertificateArgs
+        {
+            Domain = "tf.example.com",
+            MostRecent = true,
+            Types = 
+            {
+                "AMAZON_ISSUED",
+            },
+        }));
+        var rsa4096 = Output.Create(Aws.Acm.GetCertificate.InvokeAsync(new Aws.Acm.GetCertificateArgs
         {
             Domain = "tf.example.com",
             KeyTypes = 
@@ -56,6 +74,26 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := acm.LookupCertificate(ctx, &acm.LookupCertificateArgs{
 			Domain: "tf.example.com",
+			Statuses: []string{
+				"ISSUED",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt0 := true
+		_, err = acm.LookupCertificate(ctx, &acm.LookupCertificateArgs{
+			Domain:     "tf.example.com",
+			MostRecent: &opt0,
+			Types: []string{
+				"AMAZON_ISSUED",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = acm.LookupCertificate(ctx, &acm.LookupCertificateArgs{
+			Domain: "tf.example.com",
 			KeyTypes: []string{
 				"RSA_4096",
 			},
@@ -75,7 +113,12 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.acm.get_certificate(domain="tf.example.com",
+issued = aws.acm.get_certificate(domain="tf.example.com",
+    statuses=["ISSUED"])
+amazon_issued = aws.acm.get_certificate(domain="tf.example.com",
+    most_recent=True,
+    types=["AMAZON_ISSUED"])
+rsa4096 = aws.acm.get_certificate(domain="tf.example.com",
     key_types=["RSA_4096"])
 ```
 
@@ -87,8 +130,19 @@ example = aws.acm.get_certificate(domain="tf.example.com",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+// Find a certificate that is issued
+const issued = pulumi.output(aws.acm.getCertificate({
+    domain: "tf.example.com",
+    statuses: ["ISSUED"],
+}, { async: true }));
+// Find a certificate issued by (not imported into) ACM
+const amazonIssued = pulumi.output(aws.acm.getCertificate({
+    domain: "tf.example.com",
+    mostRecent: true,
+    types: ["AMAZON_ISSUED"],
+}, { async: true }));
 // Find a RSA 4096 bit certificate
-const example = pulumi.output(aws.acm.getCertificate({
+const rsa4096 = pulumi.output(aws.acm.getCertificate({
     domain: "tf.example.com",
     keyTypes: ["RSA_4096"],
 }, { async: true }));
@@ -105,17 +159,17 @@ const example = pulumi.output(aws.acm.getCertificate({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCertificate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#GetCertificateArgs">GetCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#GetCertificateResult">GetCertificateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCertificate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCertificateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCertificateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_certificate(</span>domain=None<span class="p">, </span>key_types=None<span class="p">, </span>most_recent=None<span class="p">, </span>statuses=None<span class="p">, </span>tags=None<span class="p">, </span>types=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_certificate(</span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCertificateResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/acm?tab=doc#LookupCertificateArgs">LookupCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/acm?tab=doc#LookupCertificateResult">LookupCertificateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCertificateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCertificateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCertificate` in the Go SDK.
 
@@ -124,14 +178,13 @@ const example = pulumi.output(aws.acm.getCertificate({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCertificate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acm.GetCertificateResult.html">GetCertificateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acm.GetCertificateArgs.html">GetCertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCertificateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCertificateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -141,73 +194,66 @@ The following arguments are supported:
             title="Required">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the certificate to look up. If no certificate is found with this name, an error will be returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytypes_csharp">
 <a href="#keytypes_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of key algorithms to filter certificates. By default, ACM does not return all certificate types when searching. Valid values are `RSA_1024`, `RSA_2048`, `RSA_4096`, `EC_prime256v1`, `EC_secp384r1`, and `EC_secp521r1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mostrecent_csharp">
 <a href="#mostrecent_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, it sorts the certificates matched by previous criteria by the NotBefore field, returning only the most recent one. If set to false, it returns an error if more than one certificate is found. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statuses_csharp">
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of statuses on which to filter the returned list. Valid values are `PENDING_VALIDATION`, `ISSUED`,
 `INACTIVE`, `EXPIRED`, `VALIDATION_TIMED_OUT`, `REVOKED` and `FAILED`. If no value is specified, only certificates in the `ISSUED` state
 are returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags for the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="types_csharp">
 <a href="#types_csharp" style="color: inherit; text-decoration: inherit;">Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of types on which to filter the returned list. Valid values are `AMAZON_ISSUED` and `IMPORTED`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -216,73 +262,66 @@ are returned.
             title="Required">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the certificate to look up. If no certificate is found with this name, an error will be returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytypes_go">
 <a href="#keytypes_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of key algorithms to filter certificates. By default, ACM does not return all certificate types when searching. Valid values are `RSA_1024`, `RSA_2048`, `RSA_4096`, `EC_prime256v1`, `EC_secp384r1`, and `EC_secp521r1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mostrecent_go">
 <a href="#mostrecent_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, it sorts the certificates matched by previous criteria by the NotBefore field, returning only the most recent one. If set to false, it returns an error if more than one certificate is found. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statuses_go">
 <a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of statuses on which to filter the returned list. Valid values are `PENDING_VALIDATION`, `ISSUED`,
 `INACTIVE`, `EXPIRED`, `VALIDATION_TIMED_OUT`, `REVOKED` and `FAILED`. If no value is specified, only certificates in the `ISSUED` state
 are returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags for the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="types_go">
 <a href="#types_go" style="color: inherit; text-decoration: inherit;">Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of types on which to filter the returned list. Valid values are `AMAZON_ISSUED` and `IMPORTED`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -291,73 +330,66 @@ are returned.
             title="Required">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the certificate to look up. If no certificate is found with this name, an error will be returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytypes_nodejs">
 <a href="#keytypes_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of key algorithms to filter certificates. By default, ACM does not return all certificate types when searching. Valid values are `RSA_1024`, `RSA_2048`, `RSA_4096`, `EC_prime256v1`, `EC_secp384r1`, and `EC_secp521r1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mostrecent_nodejs">
 <a href="#mostrecent_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, it sorts the certificates matched by previous criteria by the NotBefore field, returning only the most recent one. If set to false, it returns an error if more than one certificate is found. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statuses_nodejs">
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of statuses on which to filter the returned list. Valid values are `PENDING_VALIDATION`, `ISSUED`,
 `INACTIVE`, `EXPIRED`, `VALIDATION_TIMED_OUT`, `REVOKED` and `FAILED`. If no value is specified, only certificates in the `ISSUED` state
 are returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags for the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="types_nodejs">
 <a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of types on which to filter the returned list. Valid values are `AMAZON_ISSUED` and `IMPORTED`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -366,76 +398,66 @@ are returned.
             title="Required">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain of the certificate to look up. If no certificate is found with this name, an error will be returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_types_python">
 <a href="#key_types_python" style="color: inherit; text-decoration: inherit;">key_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of key algorithms to filter certificates. By default, ACM does not return all certificate types when searching. Valid values are `RSA_1024`, `RSA_2048`, `RSA_4096`, `EC_prime256v1`, `EC_secp384r1`, and `EC_secp521r1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="most_recent_python">
 <a href="#most_recent_python" style="color: inherit; text-decoration: inherit;">most_<wbr>recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, it sorts the certificates matched by previous criteria by the NotBefore field, returning only the most recent one. If set to false, it returns an error if more than one certificate is found. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statuses_python">
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of statuses on which to filter the returned list. Valid values are `PENDING_VALIDATION`, `ISSUED`,
 `INACTIVE`, `EXPIRED`, `VALIDATION_TIMED_OUT`, `REVOKED` and `FAILED`. If no value is specified, only certificates in the `ISSUED` state
 are returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags for the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="types_python">
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of types on which to filter the returned list. Valid values are `AMAZON_ISSUED` and `IMPORTED`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -446,7 +468,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -454,88 +475,79 @@ The following output properties are available:
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set to the ARN of the found certificate, suitable for referencing in other resources that support ACM certificates.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the found certificate, suitable for referencing in other resources that support ACM certificates.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags for the resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keytypes_csharp">
 <a href="#keytypes_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mostrecent_csharp">
 <a href="#mostrecent_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="statuses_csharp">
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="types_csharp">
 <a href="#types_csharp" style="color: inherit; text-decoration: inherit;">Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -544,88 +556,79 @@ The following output properties are available:
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set to the ARN of the found certificate, suitable for referencing in other resources that support ACM certificates.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the found certificate, suitable for referencing in other resources that support ACM certificates.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags for the resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keytypes_go">
 <a href="#keytypes_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mostrecent_go">
 <a href="#mostrecent_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="statuses_go">
 <a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="types_go">
 <a href="#types_go" style="color: inherit; text-decoration: inherit;">Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -634,88 +637,79 @@ The following output properties are available:
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Set to the ARN of the found certificate, suitable for referencing in other resources that support ACM certificates.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the found certificate, suitable for referencing in other resources that support ACM certificates.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags for the resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keytypes_nodejs">
 <a href="#keytypes_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mostrecent_nodejs">
 <a href="#mostrecent_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="statuses_nodejs">
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="types_nodejs">
 <a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -724,91 +718,79 @@ The following output properties are available:
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Set to the ARN of the found certificate, suitable for referencing in other resources that support ACM certificates.
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the found certificate, suitable for referencing in other resources that support ACM certificates.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags for the resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_types_python">
 <a href="#key_types_python" style="color: inherit; text-decoration: inherit;">key_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="most_recent_python">
 <a href="#most_recent_python" style="color: inherit; text-decoration: inherit;">most_<wbr>recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="statuses_python">
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="types_python">
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

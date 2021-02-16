@@ -28,9 +28,9 @@ class MyStack : Stack
     {
         var node1 = new HCloud.Server("node1", new HCloud.ServerArgs
         {
-            Datacenter = "nbg1-dc3",
             Image = "debian-9",
             ServerType = "cx11",
+            Datacenter = "nbg1-dc3",
         });
         var master = new HCloud.Volume("master", new HCloud.VolumeArgs
         {
@@ -39,9 +39,9 @@ class MyStack : Stack
         });
         var main = new HCloud.VolumeAttachment("main", new HCloud.VolumeAttachmentArgs
         {
-            Automount = true,
-            ServerId = node1.Id,
             VolumeId = master.Id,
+            ServerId = node1.Id,
+            Automount = true,
         });
     }
 
@@ -55,16 +55,16 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-hcloud/sdk/go/hcloud"
+	"github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		node1, err := hcloud.NewServer(ctx, "node1", &hcloud.ServerArgs{
-			Datacenter: pulumi.String("nbg1-dc3"),
 			Image:      pulumi.String("debian-9"),
 			ServerType: pulumi.String("cx11"),
+			Datacenter: pulumi.String("nbg1-dc3"),
 		})
 		if err != nil {
 			return err
@@ -77,9 +77,9 @@ func main() {
 			return err
 		}
 		_, err = hcloud.NewVolumeAttachment(ctx, "main", &hcloud.VolumeAttachmentArgs{
-			Automount: pulumi.Bool(true),
-			ServerId:  node1.ID(),
 			VolumeId:  master.ID(),
+			ServerId:  node1.ID(),
+			Automount: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -97,16 +97,16 @@ import pulumi
 import pulumi_hcloud as hcloud
 
 node1 = hcloud.Server("node1",
-    datacenter="nbg1-dc3",
     image="debian-9",
-    server_type="cx11")
+    server_type="cx11",
+    datacenter="nbg1-dc3")
 master = hcloud.Volume("master",
     location="nbg1",
     size=10)
 main = hcloud.VolumeAttachment("main",
-    automount=True,
+    volume_id=master.id,
     server_id=node1.id,
-    volume_id=master.id)
+    automount=True)
 ```
 
 {{% /example %}}
@@ -118,18 +118,18 @@ import * as pulumi from "@pulumi/pulumi";
 import * as hcloud from "@pulumi/hcloud";
 
 const node1 = new hcloud.Server("node1", {
-    datacenter: "nbg1-dc3",
     image: "debian-9",
     serverType: "cx11",
+    datacenter: "nbg1-dc3",
 });
 const master = new hcloud.Volume("master", {
     location: "nbg1",
     size: 10,
 });
 const main = new hcloud.VolumeAttachment("main", {
+    volumeId: master.id,
+    serverId: node1.id,
     automount: true,
-    serverId: node1.id.apply(id => Number.parseFloat(id)),
-    volumeId: master.id.apply(id => Number.parseFloat(id)),
 });
 ```
 
@@ -143,19 +143,19 @@ const main = new hcloud.VolumeAttachment("main", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/hcloud/#VolumeAttachment">VolumeAttachment</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/hcloud/#VolumeAttachmentArgs">VolumeAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/hcloud/#VolumeAttachment">VolumeAttachment</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/hcloud/#VolumeAttachmentArgs">VolumeAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.VolumeAttachment">VolumeAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>automount=None<span class="p">, </span>server_id=None<span class="p">, </span>volume_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_hcloud/#pulumi_hcloud.VolumeAttachment">VolumeAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automount</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/?tab=doc#VolumeAttachment">NewVolumeAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/?tab=doc#VolumeAttachmentArgs">VolumeAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/?tab=doc#VolumeAttachment">VolumeAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/?tab=doc#VolumeAttachment">NewVolumeAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/?tab=doc#VolumeAttachmentArgs">VolumeAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/?tab=doc#VolumeAttachment">VolumeAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.VolumeAttachment.html">VolumeAttachment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.VolumeAttachmentArgs.html">VolumeAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.VolumeAttachment.html">VolumeAttachment</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.VolumeAttachmentArgs.html">VolumeAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -166,7 +166,7 @@ const main = new hcloud.VolumeAttachment("main", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -235,7 +235,7 @@ const main = new hcloud.VolumeAttachment("main", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -274,7 +274,7 @@ const main = new hcloud.VolumeAttachment("main", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -315,7 +315,6 @@ The VolumeAttachment resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -323,35 +322,34 @@ The VolumeAttachment resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="serverid_csharp">
 <a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Server to attach the Volume to.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}ID of the Volume.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="automount_csharp">
 <a href="#automount_csharp" style="color: inherit; text-decoration: inherit;">Automount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Automount the volume upon attaching it.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -360,35 +358,34 @@ The VolumeAttachment resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="serverid_go">
 <a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Server to attach the Volume to.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumeid_go">
 <a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}ID of the Volume.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="automount_go">
 <a href="#automount_go" style="color: inherit; text-decoration: inherit;">Automount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Automount the volume upon attaching it.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -397,35 +394,34 @@ The VolumeAttachment resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="serverid_nodejs">
 <a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Server to attach the Volume to.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}ID of the Volume.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="automount_nodejs">
 <a href="#automount_nodejs" style="color: inherit; text-decoration: inherit;">automount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Automount the volume upon attaching it.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -434,44 +430,39 @@ The VolumeAttachment resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="server_id_python">
 <a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Server to attach the Volume to.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}ID of the Volume.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="automount_python">
 <a href="#automount_python" style="color: inherit; text-decoration: inherit;">automount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Automount the volume upon attaching it.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the VolumeAttachment resource produces the following output properties:
-
 
 
 
@@ -482,15 +473,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -499,15 +488,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -516,15 +503,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -533,18 +518,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -554,19 +534,20 @@ Get an existing VolumeAttachment resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/hcloud/#VolumeAttachmentState">VolumeAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/hcloud/#VolumeAttachment">VolumeAttachment</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/hcloud/#VolumeAttachmentState">VolumeAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/hcloud/#VolumeAttachment">VolumeAttachment</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>automount=None<span class="p">, </span>server_id=None<span class="p">, </span>volume_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automount</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> VolumeAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolumeAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/?tab=doc#VolumeAttachmentState">VolumeAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/?tab=doc#VolumeAttachment">VolumeAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolumeAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/?tab=doc#VolumeAttachmentState">VolumeAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/?tab=doc#VolumeAttachment">VolumeAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.VolumeAttachment.html">VolumeAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud..VolumeAttachmentState.html">VolumeAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.VolumeAttachment.html">VolumeAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud..VolumeAttachmentState.html">VolumeAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -668,7 +649,6 @@ Get an existing VolumeAttachment resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -676,35 +656,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_automount_csharp">
 <a href="#state_automount_csharp" style="color: inherit; text-decoration: inherit;">Automount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Automount the volume upon attaching it.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_serverid_csharp">
 <a href="#state_serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Server to attach the Volume to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_csharp">
 <a href="#state_volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}ID of the Volume.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -713,35 +692,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_automount_go">
 <a href="#state_automount_go" style="color: inherit; text-decoration: inherit;">Automount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Automount the volume upon attaching it.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_serverid_go">
 <a href="#state_serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Server to attach the Volume to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_go">
 <a href="#state_volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}ID of the Volume.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -750,35 +728,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_automount_nodejs">
 <a href="#state_automount_nodejs" style="color: inherit; text-decoration: inherit;">automount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Automount the volume upon attaching it.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_serverid_nodejs">
 <a href="#state_serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Server to attach the Volume to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_nodejs">
 <a href="#state_volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}ID of the Volume.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -787,32 +764,32 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_automount_python">
 <a href="#state_automount_python" style="color: inherit; text-decoration: inherit;">automount</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Automount the volume upon attaching it.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_server_id_python">
 <a href="#state_server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Server to attach the Volume to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_volume_id_python">
 <a href="#state_volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}ID of the Volume.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -820,8 +797,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+Volume Attachments can be imported using the `volume_id`
+
+```sh
+ $ pulumi import hcloud:index/volumeAttachment:VolumeAttachment myvolumeattachment <volume_id>
+```
 
 
 
@@ -833,6 +816,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

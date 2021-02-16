@@ -1,8 +1,8 @@
 
 ---
 title: "Route"
-title_tag: "Resource Route | Module compute | Package GCP"
-meta_desc: "Explore the Route resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Route resource."
+title_tag: "gcp.compute.Route"
+meta_desc: "Documentation for the gcp.compute.Route resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -75,7 +75,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -133,6 +133,213 @@ const defaultRoute = new gcp.compute.Route("defaultRoute", {
 
 {{% /example %}}
 
+### Route Ilb
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.1.0/24",
+            Region = "us-central1",
+            Network = defaultNetwork.Id,
+        });
+        var hc = new Gcp.Compute.HealthCheck("hc", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+            TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        });
+        var backend = new Gcp.Compute.RegionBackendService("backend", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Region = "us-central1",
+            HealthChecks = 
+            {
+                hc.Id,
+            },
+        });
+        var defaultForwardingRule = new Gcp.Compute.ForwardingRule("defaultForwardingRule", new Gcp.Compute.ForwardingRuleArgs
+        {
+            Region = "us-central1",
+            LoadBalancingScheme = "INTERNAL",
+            BackendService = backend.Id,
+            AllPorts = true,
+            Network = defaultNetwork.Name,
+            Subnetwork = defaultSubnetwork.Name,
+        });
+        var route_ilb = new Gcp.Compute.Route("route-ilb", new Gcp.Compute.RouteArgs
+        {
+            DestRange = "0.0.0.0/0",
+            Network = defaultNetwork.Name,
+            NextHopIlb = defaultForwardingRule.Id,
+            Priority = 2000,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.1.0/24"),
+			Region:      pulumi.String("us-central1"),
+			Network:     defaultNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		hc, err := compute.NewHealthCheck(ctx, "hc", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		backend, err := compute.NewRegionBackendService(ctx, "backend", &compute.RegionBackendServiceArgs{
+			Region: pulumi.String("us-central1"),
+			HealthChecks: pulumi.String(pulumi.String{
+				hc.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		defaultForwardingRule, err := compute.NewForwardingRule(ctx, "defaultForwardingRule", &compute.ForwardingRuleArgs{
+			Region:              pulumi.String("us-central1"),
+			LoadBalancingScheme: pulumi.String("INTERNAL"),
+			BackendService:      backend.ID(),
+			AllPorts:            pulumi.Bool(true),
+			Network:             defaultNetwork.Name,
+			Subnetwork:          defaultSubnetwork.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRoute(ctx, "route_ilb", &compute.RouteArgs{
+			DestRange:  pulumi.String("0.0.0.0/0"),
+			Network:    defaultNetwork.Name,
+			NextHopIlb: defaultForwardingRule.ID(),
+			Priority:   pulumi.Int(2000),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False)
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.0.1.0/24",
+    region="us-central1",
+    network=default_network.id)
+hc = gcp.compute.HealthCheck("hc",
+    check_interval_sec=1,
+    timeout_sec=1,
+    tcp_health_check=gcp.compute.HealthCheckTcpHealthCheckArgs(
+        port=80,
+    ))
+backend = gcp.compute.RegionBackendService("backend",
+    region="us-central1",
+    health_checks=[hc.id])
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    region="us-central1",
+    load_balancing_scheme="INTERNAL",
+    backend_service=backend.id,
+    all_ports=True,
+    network=default_network.name,
+    subnetwork=default_subnetwork.name)
+route_ilb = gcp.compute.Route("route-ilb",
+    dest_range="0.0.0.0/0",
+    network=default_network.name,
+    next_hop_ilb=default_forwarding_rule.id,
+    priority=2000)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubnetworks: false});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.0.1.0/24",
+    region: "us-central1",
+    network: defaultNetwork.id,
+});
+const hc = new gcp.compute.HealthCheck("hc", {
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    tcpHealthCheck: {
+        port: "80",
+    },
+});
+const backend = new gcp.compute.RegionBackendService("backend", {
+    region: "us-central1",
+    healthChecks: [hc.id],
+});
+const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+    region: "us-central1",
+    loadBalancingScheme: "INTERNAL",
+    backendService: backend.id,
+    allPorts: true,
+    network: defaultNetwork.name,
+    subnetwork: defaultSubnetwork.name,
+});
+const route_ilb = new gcp.compute.Route("route-ilb", {
+    destRange: "0.0.0.0/0",
+    network: defaultNetwork.name,
+    nextHopIlb: defaultForwardingRule.id,
+    priority: 2000,
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -141,19 +348,19 @@ const defaultRoute = new gcp.compute.Route("defaultRoute", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Route">Route</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Route</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#Route">Route</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>dest_range=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>next_hop_gateway=None<span class="p">, </span>next_hop_ilb=None<span class="p">, </span>next_hop_instance=None<span class="p">, </span>next_hop_instance_zone=None<span class="p">, </span>next_hop_ip=None<span class="p">, </span>next_hop_vpn_tunnel=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dest_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_ilb</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_instance_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_vpn_tunnel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Route">NewRoute</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Route.html">Route</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouteArgs.html">RouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Route</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -164,7 +371,7 @@ const defaultRoute = new gcp.compute.Route("defaultRoute", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -174,7 +381,7 @@ const defaultRoute = new gcp.compute.Route("defaultRoute", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouteArgs">RouteArgs</a></span>
+        <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -223,7 +430,7 @@ const defaultRoute = new gcp.compute.Route("defaultRoute", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -233,7 +440,7 @@ const defaultRoute = new gcp.compute.Route("defaultRoute", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -243,7 +450,7 @@ const defaultRoute = new gcp.compute.Route("defaultRoute", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouteArgs">RouteArgs</a></span>
+        <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -253,7 +460,7 @@ const defaultRoute = new gcp.compute.Route("defaultRoute", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -272,7 +479,7 @@ const defaultRoute = new gcp.compute.Route("defaultRoute", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -282,7 +489,7 @@ const defaultRoute = new gcp.compute.Route("defaultRoute", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouteArgs.html">RouteArgs</a></span>
+        <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -305,12 +512,11 @@ const defaultRoute = new gcp.compute.Route("defaultRoute", {
 
 ## Route Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Route resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Route resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -321,44 +527,41 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="destrange_csharp">
 <a href="#destrange_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -368,14 +571,13 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopgateway_csharp">
 <a href="#nexthopgateway_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a gateway that should handle matching packets.
 Currently, you can only specify the internet gateway, using a full or
@@ -385,14 +587,13 @@ partial valid URL:
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopilb_csharp">
 <a href="#nexthopilb_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
 You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
@@ -400,14 +601,13 @@ https://www.googleapis.com/compute/v1/projects/project/regions/region/forwarding
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopinstance_csharp">
 <a href="#nexthopinstance_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to an instance that should handle matching packets.
 You can specify this as a full or partial URL. For example:
@@ -416,50 +616,46 @@ You can specify this as a full or partial URL. For example:
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopinstancezone_csharp">
 <a href="#nexthopinstancezone_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional when `next_hop_instance` is
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopip_csharp">
 <a href="#nexthopip_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopvpntunnel_csharp">
 <a href="#nexthopvpntunnel_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
 where there is more than one matching route of equal prefix length.
@@ -467,33 +663,29 @@ In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -502,44 +694,41 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="destrange_go">
 <a href="#destrange_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -549,14 +738,13 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopgateway_go">
 <a href="#nexthopgateway_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a gateway that should handle matching packets.
 Currently, you can only specify the internet gateway, using a full or
@@ -566,14 +754,13 @@ partial valid URL:
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopilb_go">
 <a href="#nexthopilb_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
 You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
@@ -581,14 +768,13 @@ https://www.googleapis.com/compute/v1/projects/project/regions/region/forwarding
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopinstance_go">
 <a href="#nexthopinstance_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to an instance that should handle matching packets.
 You can specify this as a full or partial URL. For example:
@@ -597,50 +783,46 @@ You can specify this as a full or partial URL. For example:
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopinstancezone_go">
 <a href="#nexthopinstancezone_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional when `next_hop_instance` is
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopip_go">
 <a href="#nexthopip_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopvpntunnel_go">
 <a href="#nexthopvpntunnel_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
 where there is more than one matching route of equal prefix length.
@@ -648,33 +830,29 @@ In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -683,44 +861,41 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="destrange_nodejs">
 <a href="#destrange_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -730,14 +905,13 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopgateway_nodejs">
 <a href="#nexthopgateway_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a gateway that should handle matching packets.
 Currently, you can only specify the internet gateway, using a full or
@@ -747,14 +921,13 @@ partial valid URL:
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopilb_nodejs">
 <a href="#nexthopilb_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
 You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
@@ -762,14 +935,13 @@ https://www.googleapis.com/compute/v1/projects/project/regions/region/forwarding
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopinstance_nodejs">
 <a href="#nexthopinstance_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to an instance that should handle matching packets.
 You can specify this as a full or partial URL. For example:
@@ -778,50 +950,46 @@ You can specify this as a full or partial URL. For example:
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopinstancezone_nodejs">
 <a href="#nexthopinstancezone_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional when `next_hop_instance` is
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopip_nodejs">
 <a href="#nexthopip_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nexthopvpntunnel_nodejs">
 <a href="#nexthopvpntunnel_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
 where there is more than one matching route of equal prefix length.
@@ -829,33 +997,29 @@ In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -864,44 +1028,41 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="dest_range_python">
 <a href="#dest_range_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -911,14 +1072,13 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="next_hop_gateway_python">
 <a href="#next_hop_gateway_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to a gateway that should handle matching packets.
 Currently, you can only specify the internet gateway, using a full or
@@ -928,14 +1088,13 @@ partial valid URL:
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="next_hop_ilb_python">
 <a href="#next_hop_ilb_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
 You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
@@ -943,14 +1102,13 @@ https://www.googleapis.com/compute/v1/projects/project/regions/region/forwarding
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="next_hop_instance_python">
 <a href="#next_hop_instance_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to an instance that should handle matching packets.
 You can specify this as a full or partial URL. For example:
@@ -959,50 +1117,46 @@ You can specify this as a full or partial URL. For example:
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="next_hop_instance_zone_python">
 <a href="#next_hop_instance_zone_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional when `next_hop_instance` is
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="next_hop_ip_python">
 <a href="#next_hop_ip_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="next_hop_vpn_tunnel_python">
 <a href="#next_hop_vpn_tunnel_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>vpn_<wbr>tunnel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
 where there is more than one matching route of equal prefix length.
@@ -1010,42 +1164,34 @@ In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Route resource produces the following output properties:
-
 
 
 
@@ -1056,37 +1202,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nexthopnetwork_csharp">
 <a href="#nexthopnetwork_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1095,37 +1237,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nexthopnetwork_go">
 <a href="#nexthopnetwork_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1134,37 +1272,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nexthopnetwork_nodejs">
 <a href="#nexthopnetwork_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1173,40 +1307,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="next_hop_network_python">
 <a href="#next_hop_network_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1216,19 +1343,20 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Route">Route</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RouteState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Route</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>dest_range=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>next_hop_gateway=None<span class="p">, </span>next_hop_ilb=None<span class="p">, </span>next_hop_instance=None<span class="p">, </span>next_hop_instance_zone=None<span class="p">, </span>next_hop_ip=None<span class="p">, </span>next_hop_network=None<span class="p">, </span>next_hop_vpn_tunnel=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dest_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_ilb</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_instance_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">next_hop_vpn_tunnel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Route</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RouteState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Route.html">Route</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RouteState.html">RouteState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Route</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RouteState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1330,7 +1458,6 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1338,33 +1465,31 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destrange_csharp">
 <a href="#state_destrange_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1374,25 +1499,23 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopgateway_csharp">
 <a href="#state_nexthopgateway_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a gateway that should handle matching packets.
 Currently, you can only specify the internet gateway, using a full or
@@ -1402,14 +1525,13 @@ partial valid URL:
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopilb_csharp">
 <a href="#state_nexthopilb_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
 You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
@@ -1417,14 +1539,13 @@ https://www.googleapis.com/compute/v1/projects/project/regions/region/forwarding
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopinstance_csharp">
 <a href="#state_nexthopinstance_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to an instance that should handle matching packets.
 You can specify this as a full or partial URL. For example:
@@ -1433,61 +1554,56 @@ You can specify this as a full or partial URL. For example:
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopinstancezone_csharp">
 <a href="#state_nexthopinstancezone_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional when `next_hop_instance` is
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopip_csharp">
 <a href="#state_nexthopip_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopnetwork_csharp">
 <a href="#state_nexthopnetwork_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopvpntunnel_csharp">
 <a href="#state_nexthopvpntunnel_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
 where there is more than one matching route of equal prefix length.
@@ -1495,44 +1611,39 @@ In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1541,33 +1652,31 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destrange_go">
 <a href="#state_destrange_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1577,25 +1686,23 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopgateway_go">
 <a href="#state_nexthopgateway_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a gateway that should handle matching packets.
 Currently, you can only specify the internet gateway, using a full or
@@ -1605,14 +1712,13 @@ partial valid URL:
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopilb_go">
 <a href="#state_nexthopilb_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
 You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
@@ -1620,14 +1726,13 @@ https://www.googleapis.com/compute/v1/projects/project/regions/region/forwarding
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopinstance_go">
 <a href="#state_nexthopinstance_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to an instance that should handle matching packets.
 You can specify this as a full or partial URL. For example:
@@ -1636,61 +1741,56 @@ You can specify this as a full or partial URL. For example:
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopinstancezone_go">
 <a href="#state_nexthopinstancezone_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional when `next_hop_instance` is
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopip_go">
 <a href="#state_nexthopip_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopnetwork_go">
 <a href="#state_nexthopnetwork_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopvpntunnel_go">
 <a href="#state_nexthopvpntunnel_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
 where there is more than one matching route of equal prefix length.
@@ -1698,44 +1798,39 @@ In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1744,33 +1839,31 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destrange_nodejs">
 <a href="#state_destrange_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1780,25 +1873,23 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopgateway_nodejs">
 <a href="#state_nexthopgateway_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a gateway that should handle matching packets.
 Currently, you can only specify the internet gateway, using a full or
@@ -1808,14 +1899,13 @@ partial valid URL:
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopilb_nodejs">
 <a href="#state_nexthopilb_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
 You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
@@ -1823,14 +1913,13 @@ https://www.googleapis.com/compute/v1/projects/project/regions/region/forwarding
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopinstance_nodejs">
 <a href="#state_nexthopinstance_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to an instance that should handle matching packets.
 You can specify this as a full or partial URL. For example:
@@ -1839,61 +1928,56 @@ You can specify this as a full or partial URL. For example:
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopinstancezone_nodejs">
 <a href="#state_nexthopinstancezone_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional when `next_hop_instance` is
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopip_nodejs">
 <a href="#state_nexthopip_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopnetwork_nodejs">
 <a href="#state_nexthopnetwork_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nexthopvpntunnel_nodejs">
 <a href="#state_nexthopvpntunnel_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
 where there is more than one matching route of equal prefix length.
@@ -1901,44 +1985,39 @@ In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1947,33 +2026,31 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dest_range_python">
 <a href="#state_dest_range_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1983,25 +2060,23 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_gateway_python">
 <a href="#state_next_hop_gateway_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to a gateway that should handle matching packets.
 Currently, you can only specify the internet gateway, using a full or
@@ -2011,14 +2086,13 @@ partial valid URL:
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_ilb_python">
 <a href="#state_next_hop_ilb_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.
 You can only specify the forwarding rule as a partial or full URL. For example, the following are all valid URLs:
@@ -2026,14 +2100,13 @@ https://www.googleapis.com/compute/v1/projects/project/regions/region/forwarding
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_instance_python">
 <a href="#state_next_hop_instance_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to an instance that should handle matching packets.
 You can specify this as a full or partial URL. For example:
@@ -2042,61 +2115,56 @@ You can specify this as a full or partial URL. For example:
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_instance_zone_python">
 <a href="#state_next_hop_instance_zone_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional when `next_hop_instance` is
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_ip_python">
 <a href="#state_next_hop_ip_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_network_python">
 <a href="#state_next_hop_network_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_vpn_tunnel_python">
 <a href="#state_next_hop_vpn_tunnel_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>vpn_<wbr>tunnel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this route. Priority is used to break ties in cases
 where there is more than one matching route of equal prefix length.
@@ -2104,41 +2172,37 @@ In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2146,8 +2210,22 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
 
 
+Route can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/route:Route default projects/{{project}}/global/routes/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/route:Route default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/route:Route default {{name}}
+```
 
 
 
@@ -2159,6 +2237,6 @@ If it is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

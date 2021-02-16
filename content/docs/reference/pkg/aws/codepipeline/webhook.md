@@ -1,8 +1,8 @@
 
 ---
 title: "Webhook"
-title_tag: "Resource Webhook | Module codepipeline | Package AWS"
-meta_desc: "Explore the Webhook resource of the codepipeline module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodePipeline Webhook."
+title_tag: "aws.codepipeline.Webhook"
+meta_desc: "Documentation for the aws.codepipeline.Webhook resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -250,67 +250,67 @@ import pulumi_github as github
 
 bar_pipeline = aws.codepipeline.Pipeline("barPipeline",
     role_arn=aws_iam_role["bar"]["arn"],
-    artifact_store={
-        "location": aws_s3_bucket["bar"]["bucket"],
-        "type": "S3",
-        "encryption_key": {
+    artifact_store=aws.codepipeline.PipelineArtifactStoreArgs(
+        location=aws_s3_bucket["bar"]["bucket"],
+        type="S3",
+        encryption_key={
             "id": data["aws_kms_alias"]["s3kmskey"]["arn"],
             "type": "KMS",
         },
-    },
+    ),
     stages=[
-        {
-            "name": "Source",
-            "actions": [{
-                "name": "Source",
-                "category": "Source",
-                "owner": "ThirdParty",
-                "provider": "GitHub",
-                "version": "1",
-                "outputArtifacts": ["test"],
-                "configuration": {
+        aws.codepipeline.PipelineStageArgs(
+            name="Source",
+            actions=[aws.codepipeline.PipelineStageActionArgs(
+                name="Source",
+                category="Source",
+                owner="ThirdParty",
+                provider="GitHub",
+                version="1",
+                output_artifacts=["test"],
+                configuration={
                     "Owner": "my-organization",
                     "Repo": "test",
                     "Branch": "master",
                 },
-            }],
-        },
-        {
-            "name": "Build",
-            "actions": [{
-                "name": "Build",
-                "category": "Build",
-                "owner": "AWS",
-                "provider": "CodeBuild",
-                "inputArtifacts": ["test"],
-                "version": "1",
-                "configuration": {
+            )],
+        ),
+        aws.codepipeline.PipelineStageArgs(
+            name="Build",
+            actions=[aws.codepipeline.PipelineStageActionArgs(
+                name="Build",
+                category="Build",
+                owner="AWS",
+                provider="CodeBuild",
+                input_artifacts=["test"],
+                version="1",
+                configuration={
                     "ProjectName": "test",
                 },
-            }],
-        },
+            )],
+        ),
     ])
 webhook_secret = "super-secret"
 bar_webhook = aws.codepipeline.Webhook("barWebhook",
     authentication="GITHUB_HMAC",
     target_action="Source",
     target_pipeline=bar_pipeline.name,
-    authentication_configuration={
-        "secretToken": webhook_secret,
-    },
-    filters=[{
-        "jsonPath": "$.ref",
-        "matchEquals": "refs/heads/{Branch}",
-    }])
+    authentication_configuration=aws.codepipeline.WebhookAuthenticationConfigurationArgs(
+        secret_token=webhook_secret,
+    ),
+    filters=[aws.codepipeline.WebhookFilterArgs(
+        json_path="$.ref",
+        match_equals="refs/heads/{Branch}",
+    )])
 # Wire the CodePipeline webhook into a GitHub repository.
 bar_repository_webhook = github.RepositoryWebhook("barRepositoryWebhook",
     repository=github_repository["repo"]["name"],
-    configuration={
-        "url": bar_webhook.url,
-        "contentType": "json",
-        "insecureSsl": True,
-        "secret": webhook_secret,
-    },
+    configuration=github.RepositoryWebhookConfigurationArgs(
+        url=bar_webhook.url,
+        content_type="json",
+        insecure_ssl=True,
+        secret=webhook_secret,
+    ),
     events=["push"])
 ```
 
@@ -402,19 +402,19 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#Webhook">Webhook</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#WebhookArgs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codepipeline/#pulumi_aws.codepipeline.Webhook">Webhook</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>authentication=None<span class="p">, </span>authentication_configuration=None<span class="p">, </span>filters=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>target_action=None<span class="p">, </span>target_pipeline=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_configuration</span><span class="p">:</span> <span class="nx">Optional[WebhookAuthenticationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_pipeline</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#Webhook">NewWebhook</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookArgs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#Webhook">Webhook</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebhook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Webhook</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Webhook.html">Webhook</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.WebhookArgs.html">WebhookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -425,7 +425,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -435,7 +435,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#WebhookArgs">WebhookArgs</a></span>
+        <span class="property-type"><a href="#inputs">WebhookArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -494,7 +494,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -504,7 +504,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookArgs">WebhookArgs</a></span>
+        <span class="property-type"><a href="#inputs">WebhookArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -533,7 +533,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -543,7 +543,7 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.WebhookArgs.html">WebhookArgs</a></span>
+        <span class="property-type"><a href="#inputs">WebhookArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -566,12 +566,11 @@ const barRepositoryWebhook = new github.RepositoryWebhook("barRepositoryWebhook"
 
 ## Webhook Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Webhook resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Webhook resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -582,82 +581,74 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="authentication_csharp">
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookfilter">List&lt;Webhook<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetaction_csharp">
 <a href="#targetaction_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetpipeline_csharp">
 <a href="#targetpipeline_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Pipeline</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authenticationconfiguration_csharp">
 <a href="#authenticationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the webhook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -666,82 +657,74 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="authentication_go">
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookfilter">[]Webhook<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetaction_go">
 <a href="#targetaction_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetpipeline_go">
 <a href="#targetpipeline_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Pipeline</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authenticationconfiguration_go">
 <a href="#authenticationconfiguration_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the webhook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -750,82 +733,74 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="authentication_nodejs">
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookfilter">Webhook<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetaction_nodejs">
 <a href="#targetaction_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetpipeline_nodejs">
 <a href="#targetpipeline_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Pipeline</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authenticationconfiguration_nodejs">
 <a href="#authenticationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the webhook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -834,91 +809,79 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="authentication_python">
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfilter">List[Webhook<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#webhookfilter">Sequence[Webhook<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="target_action_python">
 <a href="#target_action_python" style="color: inherit; text-decoration: inherit;">target_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="target_pipeline_python">
 <a href="#target_pipeline_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pipeline</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authentication_configuration_python">
 <a href="#authentication_configuration_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookauthenticationconfiguration">Dict[Webhook<wbr>Authentication<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the webhook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Webhook resource produces the following output properties:
-
 
 
 
@@ -929,26 +892,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -957,26 +917,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -985,26 +942,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1013,29 +967,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1045,19 +993,20 @@ Get an existing Webhook resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#WebhookState">WebhookState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#Webhook">Webhook</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">WebhookState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Webhook</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>authentication=None<span class="p">, </span>authentication_configuration=None<span class="p">, </span>filters=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>target_action=None<span class="p">, </span>target_pipeline=None<span class="p">, </span>url=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">authentication</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authentication_configuration</span><span class="p">:</span> <span class="nx">Optional[WebhookAuthenticationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[WebhookFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_pipeline</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Webhook</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebhook<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookState">WebhookState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#Webhook">Webhook</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebhook<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">WebhookState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Webhook</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Webhook.html">Webhook</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.WebhookState.html">WebhookState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Webhook</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">WebhookState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1159,7 +1108,6 @@ Get an existing Webhook resource's state with the given name, ID, and optional e
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1167,93 +1115,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_authentication_csharp">
 <a href="#state_authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authenticationconfiguration_csharp">
 <a href="#state_authenticationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filters_csharp">
 <a href="#state_filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookfilter">List&lt;Webhook<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the webhook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targetaction_csharp">
 <a href="#state_targetaction_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targetpipeline_csharp">
 <a href="#state_targetpipeline_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Pipeline</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1262,93 +1201,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_authentication_go">
 <a href="#state_authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authenticationconfiguration_go">
 <a href="#state_authenticationconfiguration_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filters_go">
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookfilter">[]Webhook<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the webhook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targetaction_go">
 <a href="#state_targetaction_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targetpipeline_go">
 <a href="#state_targetpipeline_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Pipeline</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1357,93 +1287,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_authentication_nodejs">
 <a href="#state_authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authenticationconfiguration_nodejs">
 <a href="#state_authenticationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filters_nodejs">
 <a href="#state_filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookfilter">Webhook<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the webhook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targetaction_nodejs">
 <a href="#state_targetaction_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targetpipeline_nodejs">
 <a href="#state_targetpipeline_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Pipeline</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1452,96 +1373,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_authentication_python">
 <a href="#state_authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authentication_configuration_python">
 <a href="#state_authentication_configuration_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookauthenticationconfiguration">Dict[Webhook<wbr>Authentication<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filters_python">
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookfilter">List[Webhook<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#webhookfilter">Sequence[Webhook<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks. Filter blocks are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the webhook.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_target_action_python">
 <a href="#state_target_action_python" style="color: inherit; text-decoration: inherit;">target_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_target_pipeline_python">
 <a href="#state_target_pipeline_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pipeline</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1551,20 +1460,8 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="webhookauthenticationconfiguration">Webhook<wbr>Authentication<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookAuthenticationConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebhookAuthenticationConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookAuthenticationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookAuthenticationConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.WebhookAuthenticationConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.WebhookAuthenticationConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1573,27 +1470,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="allowediprange_csharp">
 <a href="#allowediprange_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ip<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid CIDR block for `IP` filtering. Required for `IP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secrettoken_csharp">
 <a href="#secrettoken_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`'s `configuration` block. Required for `GITHUB_HMAC`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1602,27 +1496,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="allowediprange_go">
 <a href="#allowediprange_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ip<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid CIDR block for `IP` filtering. Required for `IP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secrettoken_go">
 <a href="#secrettoken_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`'s `configuration` block. Required for `GITHUB_HMAC`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1631,74 +1522,52 @@ The following state arguments are supported:
             title="Optional">
         <span id="allowediprange_nodejs">
 <a href="#allowediprange_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ip<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid CIDR block for `IP` filtering. Required for `IP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secrettoken_nodejs">
 <a href="#secrettoken_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`'s `configuration` block. Required for `GITHUB_HMAC`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowediprange_python">
-<a href="#allowediprange_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ip<wbr>Range</a>
-</span> 
+        <span id="allowed_ip_range_python">
+<a href="#allowed_ip_range_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ip_<wbr>range</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A valid CIDR block for `IP` filtering. Required for `IP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="secrettoken_python">
-<a href="#secrettoken_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Token</a>
-</span> 
+        <span id="secret_token_python">
+<a href="#secret_token_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>token</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared secret for the GitHub repository webhook. Set this as `secret` in your `github_repository_webhook`'s `configuration` block. Required for `GITHUB_HMAC`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="webhookfilter">Webhook<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WebhookFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WebhookFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#WebhookFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.WebhookFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.WebhookFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1707,27 +1576,24 @@ The following state arguments are supported:
             title="Required">
         <span id="jsonpath_csharp">
 <a href="#jsonpath_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [JSON path](https://github.com/json-path/JsonPath) to filter on.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="matchequals_csharp">
 <a href="#matchequals_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Equals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to match on (e.g. `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1736,27 +1602,24 @@ The following state arguments are supported:
             title="Required">
         <span id="jsonpath_go">
 <a href="#jsonpath_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [JSON path](https://github.com/json-path/JsonPath) to filter on.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="matchequals_go">
 <a href="#matchequals_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Equals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to match on (e.g. `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1765,60 +1628,58 @@ The following state arguments are supported:
             title="Required">
         <span id="jsonpath_nodejs">
 <a href="#jsonpath_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [JSON path](https://github.com/json-path/JsonPath) to filter on.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="matchequals_nodejs">
 <a href="#matchequals_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Equals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to match on (e.g. `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="jsonpath_python">
-<a href="#jsonpath_python" style="color: inherit; text-decoration: inherit;">json<wbr>Path</a>
-</span> 
+        <span id="json_path_python">
+<a href="#json_path_python" style="color: inherit; text-decoration: inherit;">json_<wbr>path</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [JSON path](https://github.com/json-path/JsonPath) to filter on.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="matchequals_python">
-<a href="#matchequals_python" style="color: inherit; text-decoration: inherit;">match<wbr>Equals</a>
-</span> 
+        <span id="match_equals_python">
+<a href="#match_equals_python" style="color: inherit; text-decoration: inherit;">match_<wbr>equals</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value to match on (e.g. `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+CodePipeline Webhooks can be imported by their ARN, e.g.
 
-
-
+```sh
+ $ pulumi import aws:codepipeline/webhook:Webhook example arn:aws:codepipeline:us-west-2:123456789012:webhook:example
+```
 
 
 

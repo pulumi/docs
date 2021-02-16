@@ -15,6 +15,7 @@ Explore the resources and functions of the monitoring module in the GCP package.
     <li><a href="customservice" title="CustomService"><span class="symbol resource"></span>CustomService</a></li>
     <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="metricdescriptor" title="MetricDescriptor"><span class="symbol resource"></span>MetricDescriptor</a></li>
     <li><a href="notificationchannel" title="NotificationChannel"><span class="symbol resource"></span>NotificationChannel</a></li>
     <li><a href="slo" title="Slo"><span class="symbol resource"></span>Slo</a></li>
     <li><a href="uptimecheckconfig" title="UptimeCheckConfig"><span class="symbol resource"></span>UptimeCheckConfig</a></li>
@@ -23,6 +24,8 @@ Explore the resources and functions of the monitoring module in the GCP package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getappengineservice" title="GetAppEngineService"><span class="symbol function"></span>GetAppEngineService</a></li>
+    <li><a href="getclusteristioservice" title="GetClusterIstioService"><span class="symbol function"></span>GetClusterIstioService</a></li>
+    <li><a href="getmeshistioservice" title="GetMeshIstioService"><span class="symbol function"></span>GetMeshIstioService</a></li>
     <li><a href="getnotificationchannel" title="GetNotificationChannel"><span class="symbol function"></span>GetNotificationChannel</a></li>
     <li><a href="getsecretversion" title="GetSecretVersion"><span class="symbol function"></span>GetSecretVersion</a></li>
     <li><a href="getuptimecheckips" title="GetUptimeCheckIPs"><span class="symbol function"></span>GetUptimeCheckIPs</a></li>
@@ -35,26 +38,8 @@ Explore the resources and functions of the monitoring module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.html" title="Pulumi.Gcp.Monitoring">Pulumi.Gcp.Monitoring</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#" title="gcp/monitoring">gcp/monitoring</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#" title="@pulumi/gcp/monitoring">@pulumi/gcp/monitoring</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/monitoring" title="pulumi_gcp/monitoring">pulumi_gcp/monitoring</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

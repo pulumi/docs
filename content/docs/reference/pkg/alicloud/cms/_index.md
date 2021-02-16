@@ -12,7 +12,21 @@ Explore the resources and functions of the cms module in the AliCloud package.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alarm" title="Alarm"><span class="symbol resource"></span>Alarm</a></li>
+    <li><a href="alarmcontact" title="AlarmContact"><span class="symbol resource"></span>AlarmContact</a></li>
+    <li><a href="alarmcontactgroup" title="AlarmContactGroup"><span class="symbol resource"></span>AlarmContactGroup</a></li>
+    <li><a href="groupmetricrule" title="GroupMetricRule"><span class="symbol resource"></span>GroupMetricRule</a></li>
+    <li><a href="monitorgroup" title="MonitorGroup"><span class="symbol resource"></span>MonitorGroup</a></li>
+    <li><a href="monitorgroupinstances" title="MonitorGroupInstances"><span class="symbol resource"></span>MonitorGroupInstances</a></li>
     <li><a href="sitemonitor" title="SiteMonitor"><span class="symbol resource"></span>SiteMonitor</a></li>
+</ul>
+
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getalarmcontactgroups" title="GetAlarmContactGroups"><span class="symbol function"></span>GetAlarmContactGroups</a></li>
+    <li><a href="getalarmcontacts" title="GetAlarmContacts"><span class="symbol function"></span>GetAlarmContacts</a></li>
+    <li><a href="getgroupmetricrules" title="GetGroupMetricRules"><span class="symbol function"></span>GetGroupMetricRules</a></li>
+    <li><a href="getmonitorgroups" title="GetMonitorGroups"><span class="symbol function"></span>GetMonitorGroups</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -22,26 +36,8 @@ Explore the resources and functions of the cms module in the AliCloud package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.html" title="Pulumi.AliCloud.Cms">Pulumi.AliCloud.Cms</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#" title="alicloud/cms">alicloud/cms</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cms/#" title="@pulumi/alicloud/cms">@pulumi/alicloud/cms</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/cms" title="pulumi_alicloud/cms">pulumi_alicloud/cms</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

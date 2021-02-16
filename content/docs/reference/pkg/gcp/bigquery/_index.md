@@ -19,8 +19,12 @@ Explore the resources and functions of the bigquery module in the GCP package.
     <li><a href="datasetiambinding" title="DatasetIamBinding"><span class="symbol resource"></span>DatasetIamBinding</a></li>
     <li><a href="datasetiammember" title="DatasetIamMember"><span class="symbol resource"></span>DatasetIamMember</a></li>
     <li><a href="datasetiampolicy" title="DatasetIamPolicy"><span class="symbol resource"></span>DatasetIamPolicy</a></li>
+    <li><a href="iambinding" title="IamBinding"><span class="symbol resource"></span>IamBinding</a></li>
+    <li><a href="iammember" title="IamMember"><span class="symbol resource"></span>IamMember</a></li>
+    <li><a href="iampolicy" title="IamPolicy"><span class="symbol resource"></span>IamPolicy</a></li>
     <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
     <li><a href="reservation" title="Reservation"><span class="symbol resource"></span>Reservation</a></li>
+    <li><a href="routine" title="Routine"><span class="symbol resource"></span>Routine</a></li>
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
 </ul>
 
@@ -36,26 +40,8 @@ Explore the resources and functions of the bigquery module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.html" title="Pulumi.Gcp.BigQuery">Pulumi.Gcp.BigQuery</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#" title="gcp/bigquery">gcp/bigquery</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#" title="@pulumi/gcp/bigquery">@pulumi/gcp/bigquery</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery" title="pulumi_gcp/bigquery">pulumi_gcp/bigquery</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
 title: "EngineSplitTraffic"
-title_tag: "Resource EngineSplitTraffic | Module appengine | Package GCP"
-meta_desc: "Explore the EngineSplitTraffic resource of the appengine module, including examples, input properties, output properties, lookup functions, and supporting types. Traffic routing configuration for versions within a single service. Traffic splits define how traffic directed to the service is assigned to versions."
+title_tag: "gcp.appengine.EngineSplitTraffic"
+meta_desc: "Documentation for the gcp.appengine.EngineSplitTraffic resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -136,14 +136,14 @@ liveapp_v1 = gcp.appengine.StandardAppVersion("liveappV1",
     service="liveapp",
     delete_service_on_destroy=True,
     runtime="nodejs10",
-    entrypoint={
-        "shell": "node ./app.js",
-    },
-    deployment={
-        "zip": {
-            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
-        },
-    },
+    entrypoint=gcp.appengine.StandardAppVersionEntrypointArgs(
+        shell="node ./app.js",
+    ),
+    deployment=gcp.appengine.StandardAppVersionDeploymentArgs(
+        zip=gcp.appengine.StandardAppVersionDeploymentZipArgs(
+            source_url=pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        ),
+    ),
     env_variables={
         "port": "8080",
     })
@@ -152,27 +152,27 @@ liveapp_v2 = gcp.appengine.StandardAppVersion("liveappV2",
     service="liveapp",
     noop_on_destroy=True,
     runtime="nodejs10",
-    entrypoint={
-        "shell": "node ./app.js",
-    },
-    deployment={
-        "zip": {
-            "sourceUrl": pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
-        },
-    },
+    entrypoint=gcp.appengine.StandardAppVersionEntrypointArgs(
+        shell="node ./app.js",
+    ),
+    deployment=gcp.appengine.StandardAppVersionDeploymentArgs(
+        zip=gcp.appengine.StandardAppVersionDeploymentZipArgs(
+            source_url=pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        ),
+    ),
     env_variables={
         "port": "8080",
     })
 liveapp = gcp.appengine.EngineSplitTraffic("liveapp",
     service=liveapp_v2.service,
     migrate_traffic=False,
-    split={
-        "shardBy": "IP",
-        "allocations": pulumi.Output.all(liveapp_v1.version_id, liveapp_v2.version_id).apply(lambda liveappV1Version_id, liveappV2Version_id: {
+    split=gcp.appengine.EngineSplitTrafficSplitArgs(
+        shard_by="IP",
+        allocations=pulumi.Output.all(liveapp_v1.version_id, liveapp_v2.version_id).apply(lambda liveappV1Version_id, liveappV2Version_id: {
             liveapp_v1_version_id: 0.75,
             liveapp_v2_version_id: 0.25,
         }),
-    })
+    ))
 ```
 
 {{% /example %}}
@@ -245,19 +245,19 @@ const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#EngineSplitTraffic">EngineSplitTraffic</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#EngineSplitTrafficArgs">EngineSplitTrafficArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EngineSplitTraffic</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EngineSplitTrafficArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#EngineSplitTraffic">EngineSplitTraffic</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>migrate_traffic=None<span class="p">, </span>project=None<span class="p">, </span>service=None<span class="p">, </span>split=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EngineSplitTraffic</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">migrate_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">split</span><span class="p">:</span> <span class="nx">Optional[EngineSplitTrafficSplitArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#EngineSplitTraffic">NewEngineSplitTraffic</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#EngineSplitTrafficArgs">EngineSplitTrafficArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#EngineSplitTraffic">EngineSplitTraffic</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEngineSplitTraffic</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EngineSplitTrafficArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EngineSplitTraffic</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.EngineSplitTraffic.html">EngineSplitTraffic</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.EngineSplitTrafficArgs.html">EngineSplitTrafficArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EngineSplitTraffic</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EngineSplitTrafficArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -268,7 +268,7 @@ const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -278,7 +278,7 @@ const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#EngineSplitTrafficArgs">EngineSplitTrafficArgs</a></span>
+        <span class="property-type"><a href="#inputs">EngineSplitTrafficArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -327,7 +327,7 @@ const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -337,7 +337,7 @@ const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -347,7 +347,7 @@ const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#EngineSplitTrafficArgs">EngineSplitTrafficArgs</a></span>
+        <span class="property-type"><a href="#inputs">EngineSplitTrafficArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -357,7 +357,7 @@ const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -376,7 +376,7 @@ const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -386,7 +386,7 @@ const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.EngineSplitTrafficArgs.html">EngineSplitTrafficArgs</a></span>
+        <span class="property-type"><a href="#inputs">EngineSplitTrafficArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -409,12 +409,11 @@ const liveapp = new gcp.appengine.EngineSplitTraffic("liveapp", {
 
 ## EngineSplitTraffic Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The EngineSplitTraffic resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The EngineSplitTraffic resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -425,50 +424,46 @@ The EngineSplitTraffic resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service these settings apply to.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="split_csharp">
 <a href="#split_csharp" style="color: inherit; text-decoration: inherit;">Split</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="migratetraffic_csharp">
 <a href="#migratetraffic_csharp" style="color: inherit; text-decoration: inherit;">Migrate<wbr>Traffic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true traffic will be migrated to this version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -477,50 +472,46 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service these settings apply to.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="split_go">
 <a href="#split_go" style="color: inherit; text-decoration: inherit;">Split</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="migratetraffic_go">
 <a href="#migratetraffic_go" style="color: inherit; text-decoration: inherit;">Migrate<wbr>Traffic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true traffic will be migrated to this version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -529,50 +520,46 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service these settings apply to.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="split_nodejs">
 <a href="#split_nodejs" style="color: inherit; text-decoration: inherit;">split</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="migratetraffic_nodejs">
 <a href="#migratetraffic_nodejs" style="color: inherit; text-decoration: inherit;">migrate<wbr>Traffic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true traffic will be migrated to this version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -581,59 +568,51 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service these settings apply to.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="split_python">
 <a href="#split_python" style="color: inherit; text-decoration: inherit;">split</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginesplittrafficsplit">Dict[Engine<wbr>Split<wbr>Traffic<wbr>Split]</a></span>
+        <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="migrate_traffic_python">
 <a href="#migrate_traffic_python" style="color: inherit; text-decoration: inherit;">migrate_<wbr>traffic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true traffic will be migrated to this version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the EngineSplitTraffic resource produces the following output properties:
-
 
 
 
@@ -644,15 +623,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -661,15 +638,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -678,15 +653,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -695,18 +668,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -716,19 +684,20 @@ Get an existing EngineSplitTraffic resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#EngineSplitTrafficState">EngineSplitTrafficState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#EngineSplitTraffic">EngineSplitTraffic</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EngineSplitTrafficState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EngineSplitTraffic</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>migrate_traffic=None<span class="p">, </span>project=None<span class="p">, </span>service=None<span class="p">, </span>split=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">migrate_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">split</span><span class="p">:</span> <span class="nx">Optional[EngineSplitTrafficSplitArgs]</span> = None<span class="p">) -&gt;</span> EngineSplitTraffic</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEngineSplitTraffic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#EngineSplitTrafficState">EngineSplitTrafficState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#EngineSplitTraffic">EngineSplitTraffic</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEngineSplitTraffic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EngineSplitTrafficState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EngineSplitTraffic</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.EngineSplitTraffic.html">EngineSplitTraffic</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.EngineSplitTrafficState.html">EngineSplitTrafficState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EngineSplitTraffic</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EngineSplitTrafficState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -830,7 +799,6 @@ Get an existing EngineSplitTraffic resource's state with the given name, ID, and
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -838,50 +806,46 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_migratetraffic_csharp">
 <a href="#state_migratetraffic_csharp" style="color: inherit; text-decoration: inherit;">Migrate<wbr>Traffic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true traffic will be migrated to this version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_csharp">
 <a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service these settings apply to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_split_csharp">
 <a href="#state_split_csharp" style="color: inherit; text-decoration: inherit;">Split</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -890,50 +854,46 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_migratetraffic_go">
 <a href="#state_migratetraffic_go" style="color: inherit; text-decoration: inherit;">Migrate<wbr>Traffic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true traffic will be migrated to this version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service these settings apply to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_split_go">
 <a href="#state_split_go" style="color: inherit; text-decoration: inherit;">Split</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -942,50 +902,46 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_migratetraffic_nodejs">
 <a href="#state_migratetraffic_nodejs" style="color: inherit; text-decoration: inherit;">migrate<wbr>Traffic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true traffic will be migrated to this version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service these settings apply to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_split_nodejs">
 <a href="#state_split_nodejs" style="color: inherit; text-decoration: inherit;">split</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -994,53 +950,46 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_migrate_traffic_python">
 <a href="#state_migrate_traffic_python" style="color: inherit; text-decoration: inherit;">migrate_<wbr>traffic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true traffic will be migrated to this version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service these settings apply to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_split_python">
 <a href="#state_split_python" style="color: inherit; text-decoration: inherit;">split</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginesplittrafficsplit">Dict[Engine<wbr>Split<wbr>Traffic<wbr>Split]</a></span>
+        <span class="property-type"><a href="#enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.  Structure is documented below.
+    <dd>{{% md %}}Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1050,20 +999,8 @@ If it is not provided, the provider project is used.
 ## Supporting Types
 
 
+
 <h4 id="enginesplittrafficsplit">Engine<wbr>Split<wbr>Traffic<wbr>Split</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#EngineSplitTrafficSplit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#EngineSplitTrafficSplit">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#EngineSplitTrafficSplitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#EngineSplitTrafficSplitOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.EngineSplitTrafficSplitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.EngineSplitTrafficSplit.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1072,27 +1009,25 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="allocations_csharp">
 <a href="#allocations_csharp" style="color: inherit; text-decoration: inherit;">Allocations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shardby_csharp">
 <a href="#shardby_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1101,27 +1036,25 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="allocations_go">
 <a href="#allocations_go" style="color: inherit; text-decoration: inherit;">Allocations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shardby_go">
 <a href="#shardby_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1130,27 +1063,25 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="allocations_nodejs">
 <a href="#allocations_nodejs" style="color: inherit; text-decoration: inherit;">allocations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shardby_nodejs">
 <a href="#shardby_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1159,31 +1090,41 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="allocations_python">
 <a href="#allocations_python" style="color: inherit; text-decoration: inherit;">allocations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="shardby_python">
-<a href="#shardby_python" style="color: inherit; text-decoration: inherit;">shard<wbr>By</a>
-</span> 
+        <span id="shard_by_python">
+<a href="#shard_by_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>by</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mechanism used to determine which version a request is sent to. The traffic selection algorithm will be stable for either type until allocations are changed.
+Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+ServiceSplitTraffic can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:appengine/engineSplitTraffic:EngineSplitTraffic default apps/{{project}}/services/{{service}}
+```
 
+```sh
+ $ pulumi import gcp:appengine/engineSplitTraffic:EngineSplitTraffic default {{project}}/{{service}}
+```
 
+```sh
+ $ pulumi import gcp:appengine/engineSplitTraffic:EngineSplitTraffic default {{service}}
+```
 
 
 
@@ -1195,6 +1136,6 @@ If it is not provided, the provider project is used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

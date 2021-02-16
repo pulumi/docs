@@ -1,8 +1,8 @@
 
 ---
 title: "OrganizationPolicy"
-title_tag: "Resource OrganizationPolicy | Module folder | Package GCP"
-meta_desc: "Explore the OrganizationPolicy resource of the folder module, including examples, input properties, output properties, lookup functions, and supporting types. Allows management of Organization policies for a Google Folder. For more information see"
+title_tag: "gcp.folder.OrganizationPolicy"
+meta_desc: "Documentation for the gcp.folder.OrganizationPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,8 +11,7 @@ meta_desc: "Explore the OrganizationPolicy resource of the folder module, includ
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Allows management of Organization policies for a Google Folder. For more information see
-[the official
-documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview) and
+[the official documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview) and
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/folders/setOrgPolicy).
 
 {{% examples %}}
@@ -50,13 +49,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/folder"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = folder.NewOrganizationPolicy(ctx, "serialPortPolicy", &folder.OrganizationPolicyArgs{
+		_, err := folder.NewOrganizationPolicy(ctx, "serialPortPolicy", &folder.OrganizationPolicyArgs{
 			BooleanPolicy: &folder.OrganizationPolicyBooleanPolicyArgs{
 				Enforced: pulumi.Bool(true),
 			},
@@ -79,9 +78,9 @@ import pulumi
 import pulumi_gcp as gcp
 
 serial_port_policy = gcp.folder.OrganizationPolicy("serialPortPolicy",
-    boolean_policy={
-        "enforced": True,
-    },
+    boolean_policy=gcp.folder.OrganizationPolicyBooleanPolicyArgs(
+        enforced=True,
+    ),
     constraint="compute.disableSerialPortAccess",
     folder="folders/123456789")
 ```
@@ -113,19 +112,19 @@ const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy",
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/folder/#OrganizationPolicy">OrganizationPolicy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/folder/#OrganizationPolicyArgs">OrganizationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OrganizationPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrganizationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/folder/#OrganizationPolicy">OrganizationPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>boolean_policy=None<span class="p">, </span>constraint=None<span class="p">, </span>folder=None<span class="p">, </span>list_policy=None<span class="p">, </span>restore_policy=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OrganizationPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">boolean_policy</span><span class="p">:</span> <span class="nx">Optional[OrganizationPolicyBooleanPolicyArgs]</span> = None<span class="p">, </span><span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">list_policy</span><span class="p">:</span> <span class="nx">Optional[OrganizationPolicyListPolicyArgs]</span> = None<span class="p">, </span><span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[OrganizationPolicyRestorePolicyArgs]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicy">NewOrganizationPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyArgs">OrganizationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicy">OrganizationPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrganizationPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrganizationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.OrganizationPolicy.html">OrganizationPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.OrganizationPolicyArgs.html">OrganizationPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OrganizationPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrganizationPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -136,7 +135,7 @@ const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy",
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -146,7 +145,7 @@ const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/folder/#OrganizationPolicyArgs">OrganizationPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">OrganizationPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -195,7 +194,7 @@ const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy",
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -205,7 +204,7 @@ const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy",
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -215,7 +214,7 @@ const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyArgs">OrganizationPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">OrganizationPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -225,7 +224,7 @@ const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy",
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -244,7 +243,7 @@ const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy",
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -254,7 +253,7 @@ const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy",
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.OrganizationPolicyArgs.html">OrganizationPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">OrganizationPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -277,12 +276,11 @@ const serialPortPolicy = new gcp.folder.OrganizationPolicy("serial_port_policy",
 
 ## OrganizationPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -293,72 +291,65 @@ The OrganizationPolicy resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="constraint_csharp">
 <a href="#constraint_csharp" style="color: inherit; text-decoration: inherit;">Constraint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="booleanpolicy_csharp">
 <a href="#booleanpolicy_csharp" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="listpolicy_csharp">
 <a href="#listpolicy_csharp" style="color: inherit; text-decoration: inherit;">List<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It
 can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restorepolicy_csharp">
 <a href="#restorepolicy_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -367,72 +358,65 @@ can also be used to allow or deny all values. Structure is documented below.
             title="Required">
         <span id="constraint_go">
 <a href="#constraint_go" style="color: inherit; text-decoration: inherit;">Constraint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="booleanpolicy_go">
 <a href="#booleanpolicy_go" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="listpolicy_go">
 <a href="#listpolicy_go" style="color: inherit; text-decoration: inherit;">List<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It
 can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restorepolicy_go">
 <a href="#restorepolicy_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -441,72 +425,65 @@ can also be used to allow or deny all values. Structure is documented below.
             title="Required">
         <span id="constraint_nodejs">
 <a href="#constraint_nodejs" style="color: inherit; text-decoration: inherit;">constraint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="booleanpolicy_nodejs">
 <a href="#booleanpolicy_nodejs" style="color: inherit; text-decoration: inherit;">boolean<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="listpolicy_nodejs">
 <a href="#listpolicy_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It
 can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restorepolicy_nodejs">
 <a href="#restorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -515,81 +492,70 @@ can also be used to allow or deny all values. Structure is documented below.
             title="Required">
         <span id="constraint_python">
 <a href="#constraint_python" style="color: inherit; text-decoration: inherit;">constraint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boolean_policy_python">
 <a href="#boolean_policy_python" style="color: inherit; text-decoration: inherit;">boolean_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicybooleanpolicy">Dict[Organization<wbr>Policy<wbr>Boolean<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="list_policy_python">
 <a href="#list_policy_python" style="color: inherit; text-decoration: inherit;">list_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicylistpolicy">Dict[Organization<wbr>Policy<wbr>List<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It
 can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restore_policy_python">
 <a href="#restore_policy_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicyrestorepolicy">Dict[Organization<wbr>Policy<wbr>Restore<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the OrganizationPolicy resource produces the following output properties:
-
 
 
 
@@ -600,37 +566,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -639,37 +601,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -678,37 +636,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -717,40 +671,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -760,19 +707,20 @@ Get an existing OrganizationPolicy resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/folder/#OrganizationPolicyState">OrganizationPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/folder/#OrganizationPolicy">OrganizationPolicy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">OrganizationPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OrganizationPolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>boolean_policy=None<span class="p">, </span>constraint=None<span class="p">, </span>etag=None<span class="p">, </span>folder=None<span class="p">, </span>list_policy=None<span class="p">, </span>restore_policy=None<span class="p">, </span>update_time=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">boolean_policy</span><span class="p">:</span> <span class="nx">Optional[OrganizationPolicyBooleanPolicyArgs]</span> = None<span class="p">, </span><span class="nx">constraint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">list_policy</span><span class="p">:</span> <span class="nx">Optional[OrganizationPolicyListPolicyArgs]</span> = None<span class="p">, </span><span class="nx">restore_policy</span><span class="p">:</span> <span class="nx">Optional[OrganizationPolicyRestorePolicyArgs]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> OrganizationPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyState">OrganizationPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicy">OrganizationPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">OrganizationPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OrganizationPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.OrganizationPolicy.html">OrganizationPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.OrganizationPolicyState.html">OrganizationPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OrganizationPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">OrganizationPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -874,7 +822,6 @@ Get an existing OrganizationPolicy resource's state with the given name, ID, and
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -882,94 +829,85 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_booleanpolicy_csharp">
 <a href="#state_booleanpolicy_csharp" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_constraint_csharp">
 <a href="#state_constraint_csharp" style="color: inherit; text-decoration: inherit;">Constraint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_csharp">
 <a href="#state_folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_listpolicy_csharp">
 <a href="#state_listpolicy_csharp" style="color: inherit; text-decoration: inherit;">List<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It
 can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restorepolicy_csharp">
 <a href="#state_restorepolicy_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -978,94 +916,85 @@ can also be used to allow or deny all values. Structure is documented below.
             title="Optional">
         <span id="state_booleanpolicy_go">
 <a href="#state_booleanpolicy_go" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_constraint_go">
 <a href="#state_constraint_go" style="color: inherit; text-decoration: inherit;">Constraint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_go">
 <a href="#state_folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_listpolicy_go">
 <a href="#state_listpolicy_go" style="color: inherit; text-decoration: inherit;">List<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It
 can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restorepolicy_go">
 <a href="#state_restorepolicy_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1074,94 +1003,85 @@ can also be used to allow or deny all values. Structure is documented below.
             title="Optional">
         <span id="state_booleanpolicy_nodejs">
 <a href="#state_booleanpolicy_nodejs" style="color: inherit; text-decoration: inherit;">boolean<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_constraint_nodejs">
 <a href="#state_constraint_nodejs" style="color: inherit; text-decoration: inherit;">constraint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_nodejs">
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_listpolicy_nodejs">
 <a href="#state_listpolicy_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It
 can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restorepolicy_nodejs">
 <a href="#state_restorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1170,97 +1090,85 @@ can also be used to allow or deny all values. Structure is documented below.
             title="Optional">
         <span id="state_boolean_policy_python">
 <a href="#state_boolean_policy_python" style="color: inherit; text-decoration: inherit;">boolean_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicybooleanpolicy">Dict[Organization<wbr>Policy<wbr>Boolean<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_constraint_python">
 <a href="#state_constraint_python" style="color: inherit; text-decoration: inherit;">constraint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_python">
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_list_policy_python">
 <a href="#state_list_policy_python" style="color: inherit; text-decoration: inherit;">list_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicylistpolicy">Dict[Organization<wbr>Policy<wbr>List<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It
 can also be used to allow or deny all values. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restore_policy_python">
 <a href="#state_restore_policy_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicyrestorepolicy">Dict[Organization<wbr>Policy<wbr>Restore<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1270,20 +1178,8 @@ can also be used to allow or deny all values. Structure is documented below.
 ## Supporting Types
 
 
+
 <h4 id="organizationpolicybooleanpolicy">Organization<wbr>Policy<wbr>Boolean<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#OrganizationPolicyBooleanPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#OrganizationPolicyBooleanPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyBooleanPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyBooleanPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Inputs.OrganizationPolicyBooleanPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Outputs.OrganizationPolicyBooleanPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1292,16 +1188,14 @@ can also be used to allow or deny all values. Structure is documented below.
             title="Required">
         <span id="enforced_csharp">
 <a href="#enforced_csharp" style="color: inherit; text-decoration: inherit;">Enforced</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Policy is enforced. If false, then any configuration is acceptable.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1310,16 +1204,14 @@ can also be used to allow or deny all values. Structure is documented below.
             title="Required">
         <span id="enforced_go">
 <a href="#enforced_go" style="color: inherit; text-decoration: inherit;">Enforced</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Policy is enforced. If false, then any configuration is acceptable.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1328,16 +1220,14 @@ can also be used to allow or deny all values. Structure is documented below.
             title="Required">
         <span id="enforced_nodejs">
 <a href="#enforced_nodejs" style="color: inherit; text-decoration: inherit;">enforced</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the Policy is enforced. If false, then any configuration is acceptable.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1346,34 +1236,16 @@ can also be used to allow or deny all values. Structure is documented below.
             title="Required">
         <span id="enforced_python">
 <a href="#enforced_python" style="color: inherit; text-decoration: inherit;">enforced</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Policy is enforced. If false, then any configuration is acceptable.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="organizationpolicylistpolicy">Organization<wbr>Policy<wbr>List<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#OrganizationPolicyListPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#OrganizationPolicyListPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyListPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyListPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Inputs.OrganizationPolicyListPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Outputs.OrganizationPolicyListPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1382,49 +1254,44 @@ can also be used to allow or deny all values. Structure is documented below.
             title="Optional">
         <span id="allow_csharp">
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicyallow">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_csharp">
 <a href="#deny_csharp" style="color: inherit; text-decoration: inherit;">Deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicydeny">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inheritfromparent_csharp">
 <a href="#inheritfromparent_csharp" style="color: inherit; text-decoration: inherit;">Inherit<wbr>From<wbr>Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the values from the effective Policy of the parent resource
 are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suggestedvalue_csharp">
 <a href="#suggestedvalue_csharp" style="color: inherit; text-decoration: inherit;">Suggested<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1433,49 +1300,44 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Optional">
         <span id="allow_go">
 <a href="#allow_go" style="color: inherit; text-decoration: inherit;">Allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicyallow">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_go">
 <a href="#deny_go" style="color: inherit; text-decoration: inherit;">Deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicydeny">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inheritfromparent_go">
 <a href="#inheritfromparent_go" style="color: inherit; text-decoration: inherit;">Inherit<wbr>From<wbr>Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the values from the effective Policy of the parent resource
 are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suggestedvalue_go">
 <a href="#suggestedvalue_go" style="color: inherit; text-decoration: inherit;">Suggested<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1484,49 +1346,44 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Optional">
         <span id="allow_nodejs">
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicyallow">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_nodejs">
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationpolicylistpolicydeny">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inheritfromparent_nodejs">
 <a href="#inheritfromparent_nodejs" style="color: inherit; text-decoration: inherit;">inherit<wbr>From<wbr>Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the values from the effective Policy of the parent resource
 are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suggestedvalue_nodejs">
 <a href="#suggestedvalue_nodejs" style="color: inherit; text-decoration: inherit;">suggested<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1535,67 +1392,46 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Optional">
         <span id="allow_python">
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicylistpolicyallow">Dict[Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow]</a></span>
+        <span class="property-type"><a href="#organizationpolicylistpolicyallow">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_python">
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#organizationpolicylistpolicydeny">Dict[Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny]</a></span>
+        <span class="property-type"><a href="#organizationpolicylistpolicydeny">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="inheritfromparent_python">
-<a href="#inheritfromparent_python" style="color: inherit; text-decoration: inherit;">inherit<wbr>From<wbr>Parent</a>
-</span> 
+        <span id="inherit_from_parent_python">
+<a href="#inherit_from_parent_python" style="color: inherit; text-decoration: inherit;">inherit_<wbr>from_<wbr>parent</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the values from the effective Policy of the parent resource
 are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="suggestedvalue_python">
-<a href="#suggestedvalue_python" style="color: inherit; text-decoration: inherit;">suggested<wbr>Value</a>
-</span> 
+        <span id="suggested_value_python">
+<a href="#suggested_value_python" style="color: inherit; text-decoration: inherit;">suggested_<wbr>value</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="organizationpolicylistpolicyallow">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#OrganizationPolicyListPolicyAllow">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#OrganizationPolicyListPolicyAllow">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyListPolicyAllowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyListPolicyAllowOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Inputs.OrganizationPolicyListPolicyAllowArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Outputs.OrganizationPolicyListPolicyAllow.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1604,27 +1440,24 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Optional">
         <span id="all_csharp">
 <a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1633,27 +1466,24 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Optional">
         <span id="all_go">
 <a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1662,27 +1492,24 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Optional">
         <span id="all_nodejs">
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1691,45 +1518,26 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Optional">
         <span id="all_python">
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="organizationpolicylistpolicydeny">Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#OrganizationPolicyListPolicyDeny">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#OrganizationPolicyListPolicyDeny">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyListPolicyDenyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyListPolicyDenyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Inputs.OrganizationPolicyListPolicyDenyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Outputs.OrganizationPolicyListPolicyDeny.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1738,27 +1546,24 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Optional">
         <span id="all_csharp">
 <a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1767,27 +1572,24 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Optional">
         <span id="all_go">
 <a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1796,27 +1598,24 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Optional">
         <span id="all_nodejs">
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1825,45 +1624,26 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Optional">
         <span id="all_python">
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="organizationpolicyrestorepolicy">Organization<wbr>Policy<wbr>Restore<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#OrganizationPolicyRestorePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#OrganizationPolicyRestorePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyRestorePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/folder?tab=doc#OrganizationPolicyRestorePolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Inputs.OrganizationPolicyRestorePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Outputs.OrganizationPolicyRestorePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1872,16 +1652,14 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Required">
         <span id="default_csharp">
 <a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}May only be set to true. If set, then the default Policy is restored.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1890,16 +1668,14 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Required">
         <span id="default_go">
 <a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}May only be set to true. If set, then the default Policy is restored.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1908,16 +1684,14 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Required">
         <span id="default_nodejs">
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}May only be set to true. If set, then the default Policy is restored.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1926,20 +1700,26 @@ are inherited, meaning the values set in this Policy are added to the values inh
             title="Required">
         <span id="default_python">
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}May only be set to true. If set, then the default Policy is restored.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Folder organization policies can be imported using any of the follow formats
 
+```sh
+ $ pulumi import gcp:folder/organizationPolicy:OrganizationPolicy policy folders/folder-1234/constraints/serviceuser.services
+```
 
-
+```sh
+ $ pulumi import gcp:folder/organizationPolicy:OrganizationPolicy policy folder-1234/serviceuser.services
+```
 
 
 
@@ -1951,6 +1731,6 @@ are inherited, meaning the values set in this Policy are added to the values inh
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

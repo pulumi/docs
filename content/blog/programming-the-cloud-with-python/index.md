@@ -49,7 +49,7 @@ infrastructure and delivery of our applications?
 > delivery. We divide our work between ourselves and computers: humans
 > for decisions, and automation for tasks.
 >
-> -- [The Software Defined Delivery Manifesto](https://sdd-manifesto.org/)
+> -- [The Software Defined Delivery Manifesto](https://github.com/sdd-manifesto/manifesto)
 
 ## That sounds great, but what is this "Pulumi" thing?
 

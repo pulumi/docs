@@ -1,8 +1,8 @@
 
 ---
 title: "ConfigGroup"
-title_tag: "Resource ConfigGroup | Module yaml | Package Kubernetes"
-meta_desc: "Explore the ConfigGroup resource of the yaml module, including examples, input properties, output properties, lookup functions, and supporting types. ConfigGroup creates a set of Kubernetes resources from Kubernetes YAML text. The YAML text"
+title_tag: "kubernetes.yaml.ConfigGroup"
+meta_desc: "Documentation for the kubernetes.yaml.ConfigGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -17,6 +17,7 @@ may be supplied using any of the following methods:
 2. Using a file pattern or a list of file patterns:
 3. Using a literal string containing YAML, or a list of such strings:
 4. Any combination of files, patterns, or YAML strings:
+
 
 {{% examples %}}
 ## Example Usage
@@ -616,19 +617,19 @@ const example = new k8s.yaml.ConfigGroup("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/yaml/#ConfigGroup">ConfigGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/yaml/#ConfigGroupOpts">ConfigGroupOpts</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions">ComponentResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ConfigGroupOpts</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions">ComponentResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/yaml/#pulumi_kubernetes.yaml.ConfigGroup">ConfigGroup</a></span><span class="p">(resource_name, </span>file<span class="p">, </span>opts=None<span class="p">, </span>transformations=None<span class="p">, </span>resource_prefix=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ConfigGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">file</span><span class="p">:</span> <span class="nx"></span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">transformations</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">resource_prefix</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml?tab=doc#ConfigGroup">NewConfigGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml?tab=doc#ConfigGroupArgs">ConfigGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml?tab=doc#ConfigGroup">ConfigGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ConfigGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Yaml.ConfigGroup.html">ConfigGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Yaml.ConfigGroupArgs.html">ConfigGroupArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.ComponentResourceOptions.html">ComponentResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ConfigGroupArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.ComponentResourceOptions.html">ComponentResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -639,7 +640,7 @@ const example = new k8s.yaml.ConfigGroup("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -649,7 +650,7 @@ const example = new k8s.yaml.ConfigGroup("example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/yaml/#ConfigGroupOpts">ConfigGroupOpts</a></span>
+        <span class="property-type"><a href="#inputs">ConfigGroupOpts</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -708,7 +709,7 @@ const example = new k8s.yaml.ConfigGroup("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -718,7 +719,7 @@ const example = new k8s.yaml.ConfigGroup("example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/yaml?tab=doc#ConfigGroupArgs">ConfigGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">ConfigGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -747,7 +748,7 @@ const example = new k8s.yaml.ConfigGroup("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -757,7 +758,7 @@ const example = new k8s.yaml.ConfigGroup("example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Yaml.ConfigGroupArgs.html">ConfigGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">ConfigGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -780,12 +781,11 @@ const example = new k8s.yaml.ConfigGroup("example", {
 
 ## ConfigGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -796,55 +796,49 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
             title="Optional">
         <span id="files_csharp">
 <a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
+        <span class="property-type">string | List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objs_csharp">
 <a href="#objs_csharp" style="color: inherit; text-decoration: inherit;">Objs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;object, Immutable<wbr>Array&lt;object&gt;&gt;</span>
+        <span class="property-type">object | List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceprefix_csharp">
 <a href="#resourceprefix_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transformations_csharp">
 <a href="#transformations_csharp" style="color: inherit; text-decoration: inherit;">Transformations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yaml_csharp">
 <a href="#yaml_csharp" style="color: inherit; text-decoration: inherit;">Yaml</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
+        <span class="property-type">string | List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -853,55 +847,49 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
             title="Optional">
         <span id="files_go">
 <a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">string | []string</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objs_go">
 <a href="#objs_go" style="color: inherit; text-decoration: inherit;">Objs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">interface{} | []interface{}</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceprefix_go">
 <a href="#resourceprefix_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transformations_go">
 <a href="#transformations_go" style="color: inherit; text-decoration: inherit;">Transformations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
+        <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yaml_go">
 <a href="#yaml_go" style="color: inherit; text-decoration: inherit;">Yaml</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">string | []string</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -910,55 +898,49 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
             title="Optional">
         <span id="files_nodejs">
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | string[]</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objs_nodejs">
 <a href="#objs_nodejs" style="color: inherit; text-decoration: inherit;">objs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">any | any[]</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceprefix_nodejs">
 <a href="#resourceprefix_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transformations_nodejs">
 <a href="#transformations_nodejs" style="color: inherit; text-decoration: inherit;">transformations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
+        <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yaml_nodejs">
 <a href="#yaml_nodejs" style="color: inherit; text-decoration: inherit;">yaml</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | string[]</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -967,64 +949,54 @@ The ConfigGroup resource accepts the following [input]({{< relref "/docs/intro/c
             title="Optional">
         <span id="files_python">
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | List[str]</span>
+        <span class="property-type">str | Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objs_python">
 <a href="#objs_python" style="color: inherit; text-decoration: inherit;">objs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">pulumi:pulumi:Any | List[Any]</span>
+        <span class="property-type">Any | Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resource_prefix_python">
 <a href="#resource_prefix_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix="foo" would produce a resource named "foo-resourceName".{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transformations_python">
 <a href="#transformations_python" style="color: inherit; text-decoration: inherit;">transformations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
+        <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}A set of transformations to apply to Kubernetes resource definitions before registering with engine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yaml_python">
 <a href="#yaml_python" style="color: inherit; text-decoration: inherit;">yaml</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | List[str]</span>
+        <span class="property-type">str | Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Path or a URL that uniquely identifies a file.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ConfigGroup resource produces the following output properties:
-
 
 
 
@@ -1035,35 +1007,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="urn_csharp">
 <a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn is the stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1072,35 +1040,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="urn_go">
 <a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn is the stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1109,35 +1073,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="urn_nodejs">
 <a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn is the stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1146,38 +1106,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="urn_python">
 <a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}urn is the stable logical URN used to distinctly address a resource, both before and after deployments.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

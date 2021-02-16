@@ -11,11 +11,24 @@ Explore the resources and functions of the sagemaker module in the AWS package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="appimageconfig" title="AppImageConfig"><span class="symbol resource"></span>AppImageConfig</a></li>
+    <li><a href="coderepository" title="CodeRepository"><span class="symbol resource"></span>CodeRepository</a></li>
+    <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="endpoint" title="Endpoint"><span class="symbol resource"></span>Endpoint</a></li>
     <li><a href="endpointconfiguration" title="EndpointConfiguration"><span class="symbol resource"></span>EndpointConfiguration</a></li>
+    <li><a href="featuregroup" title="FeatureGroup"><span class="symbol resource"></span>FeatureGroup</a></li>
+    <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
+    <li><a href="imageversion" title="ImageVersion"><span class="symbol resource"></span>ImageVersion</a></li>
     <li><a href="model" title="Model"><span class="symbol resource"></span>Model</a></li>
+    <li><a href="modelpackagegroup" title="ModelPackageGroup"><span class="symbol resource"></span>ModelPackageGroup</a></li>
     <li><a href="notebookinstance" title="NotebookInstance"><span class="symbol resource"></span>NotebookInstance</a></li>
     <li><a href="notebookinstancelifecycleconfiguration" title="NotebookInstanceLifecycleConfiguration"><span class="symbol resource"></span>NotebookInstanceLifecycleConfiguration</a></li>
+    <li><a href="userprofile" title="UserProfile"><span class="symbol resource"></span>UserProfile</a></li>
+</ul>
+
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getprebuiltecrimage" title="GetPrebuiltEcrImage"><span class="symbol function"></span>GetPrebuiltEcrImage</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -27,24 +40,6 @@ Explore the resources and functions of the sagemaker module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.html" title="Pulumi.Aws.Sagemaker">Pulumi.Aws.Sagemaker</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#" title="aws/sagemaker">aws/sagemaker</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/sagemaker/#" title="@pulumi/aws/sagemaker">@pulumi/aws/sagemaker</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/sagemaker" title="pulumi_aws/sagemaker">pulumi_aws/sagemaker</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

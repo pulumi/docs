@@ -1,8 +1,8 @@
 
 ---
 title: "RouteEntry"
-title_tag: "Resource RouteEntry | Module cen | Package AliCloud"
-meta_desc: "Explore the RouteEntry resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN route entry resource. Cloud Enterprise Network (CEN) supports publishing and withdrawing route entries of attached networks. You can publish a route entry of an attached VPC or VBR to a CEN instance, then other attached networks can learn the route if there is no route conflict. You can withdraw a published route entry when CEN does not need it any more."
+title_tag: "alicloud.cen.RouteEntry"
+meta_desc: "Documentation for the alicloud.cen.RouteEntry resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -28,6 +28,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Create a cen_route_entry resource and use it to publish a route entry pointing to an ECS.
         var hz = new AliCloud.Provider("hz", new AliCloud.ProviderArgs
         {
             Region = "cn-hangzhou",
@@ -47,60 +48,89 @@ class MyStack : Stack
         })));
         var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
         {
-            MostRecent = true,
             NameRegex = "^ubuntu_18.*64",
+            MostRecent = true,
             Owners = "system",
         }));
         var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "172.16.0.0/12",
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud.Hz,
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/21",
             VpcId = vpc.Id,
+            CidrBlock = "172.16.0.0/21",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud.Hz,
         });
         var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
         {
             Description = "foo",
             VpcId = vpc.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud.Hz,
         });
         var defaultInstance = new AliCloud.Ecs.Instance("defaultInstance", new AliCloud.Ecs.InstanceArgs
         {
+            VswitchId = defaultSwitch.Id,
             ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
-            InstanceName = name,
             InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
+            SystemDiskCategory = "cloud_efficiency",
             InternetChargeType = "PayByTraffic",
             InternetMaxBandwidthOut = 5,
             SecurityGroups = 
             {
                 defaultSecurityGroup.Id,
             },
-            SystemDiskCategory = "cloud_efficiency",
-            VswitchId = defaultSwitch.Id,
+            InstanceName = name,
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud.Hz,
         });
         var cen = new AliCloud.Cen.Instance("cen", new AliCloud.Cen.InstanceArgs
         {
         });
         var attach = new AliCloud.Cen.InstanceAttachment("attach", new AliCloud.Cen.InstanceAttachmentArgs
         {
-            ChildInstanceId = vpc.Id,
-            ChildInstanceRegionId = "cn-hangzhou",
             InstanceId = cen.Id,
+            ChildInstanceId = vpc.Id,
+            ChildInstanceType = "VPC",
+            ChildInstanceRegionId = "cn-hangzhou",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                defaultSwitch,
+            },
         });
         var route = new AliCloud.Vpc.RouteEntry("route", new AliCloud.Vpc.RouteEntryArgs
         {
-            DestinationCidrblock = "11.0.0.0/16",
-            NexthopId = defaultInstance.Id,
-            NexthopType = "Instance",
             RouteTableId = vpc.RouteTableId,
+            DestinationCidrblock = "11.0.0.0/16",
+            NexthopType = "Instance",
+            NexthopId = defaultInstance.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud.Hz,
         });
         var foo = new AliCloud.Cen.RouteEntry("foo", new AliCloud.Cen.RouteEntryArgs
         {
-            CidrBlock = route.DestinationCidrblock,
             InstanceId = cen.Id,
             RouteTableId = vpc.RouteTableId,
+            CidrBlock = route.DestinationCidrblock,
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud.Hz,
+            DependsOn = 
+            {
+                attach,
+            },
         });
     }
 
@@ -110,7 +140,139 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/providers"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providers.Newalicloud(ctx, "hz", &providers.alicloudArgs{
+			Region: pulumi.String("cn-hangzhou"),
+		})
+		if err != nil {
+			return err
+		}
+		cfg := config.New(ctx, "")
+		name := "tf-testAccCenRouteEntryConfig"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		opt0 := "cloud_efficiency"
+		opt1 := "VSwitch"
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableDiskCategory:     &opt0,
+			AvailableResourceCreation: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt2 := defaultZones.Zones[0].Id
+		opt3 := 1
+		opt4 := 2
+		defaultInstanceTypes, err := ecs.GetInstanceTypes(ctx, &ecs.GetInstanceTypesArgs{
+			AvailabilityZone: &opt2,
+			CpuCoreCount:     &opt3,
+			MemorySize:       &opt4,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt5 := "^ubuntu_18.*64"
+		opt6 := true
+		opt7 := "system"
+		defaultImages, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
+			NameRegex:  &opt5,
+			MostRecent: &opt6,
+			Owners:     &opt7,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		vpc, err := vpc.NewNetwork(ctx, "vpc", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		}, pulumi.Provider(alicloud.Hz))
+		if err != nil {
+			return err
+		}
+		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
+			VpcId:            vpc.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/21"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+		}, pulumi.Provider(alicloud.Hz))
+		if err != nil {
+			return err
+		}
+		defaultSecurityGroup, err := ecs.NewSecurityGroup(ctx, "defaultSecurityGroup", &ecs.SecurityGroupArgs{
+			Description: pulumi.String("foo"),
+			VpcId:       vpc.ID(),
+		}, pulumi.Provider(alicloud.Hz))
+		if err != nil {
+			return err
+		}
+		defaultInstance, err := ecs.NewInstance(ctx, "defaultInstance", &ecs.InstanceArgs{
+			VswitchId:               defaultSwitch.ID(),
+			ImageId:                 pulumi.String(defaultImages.Images[0].Id),
+			InstanceType:            pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
+			SystemDiskCategory:      pulumi.String("cloud_efficiency"),
+			InternetChargeType:      pulumi.String("PayByTraffic"),
+			InternetMaxBandwidthOut: pulumi.Int(5),
+			SecurityGroups: pulumi.StringArray{
+				defaultSecurityGroup.ID(),
+			},
+			InstanceName: pulumi.String(name),
+		}, pulumi.Provider(alicloud.Hz))
+		if err != nil {
+			return err
+		}
+		cen, err := cen.NewInstance(ctx, "cen", nil)
+		if err != nil {
+			return err
+		}
+		attach, err := cen.NewInstanceAttachment(ctx, "attach", &cen.InstanceAttachmentArgs{
+			InstanceId:            cen.ID(),
+			ChildInstanceId:       vpc.ID(),
+			ChildInstanceType:     pulumi.String("VPC"),
+			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			defaultSwitch,
+		}))
+		if err != nil {
+			return err
+		}
+		route, err := vpc.NewRouteEntry(ctx, "route", &vpc.RouteEntryArgs{
+			RouteTableId:         vpc.RouteTableId,
+			DestinationCidrblock: pulumi.String("11.0.0.0/16"),
+			NexthopType:          pulumi.String("Instance"),
+			NexthopId:            defaultInstance.ID(),
+		}, pulumi.Provider(alicloud.Hz))
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewRouteEntry(ctx, "foo", &cen.RouteEntryArgs{
+			InstanceId:   cen.ID(),
+			RouteTableId: vpc.RouteTableId,
+			CidrBlock:    route.DestinationCidrblock,
+		}, pulumi.Provider(alicloud.Hz), pulumi.DependsOn([]pulumi.Resource{
+			attach,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -119,6 +281,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 import pulumi_pulumi as pulumi
 
+# Create a cen_route_entry resource and use it to publish a route entry pointing to an ECS.
 hz = pulumi.providers.Alicloud("hz", region="cn-hangzhou")
 config = pulumi.Config()
 name = config.get("name")
@@ -126,43 +289,52 @@ if name is None:
     name = "tf-testAccCenRouteEntryConfig"
 default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
-default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
+default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0].id,
     cpu_core_count=1,
     memory_size=2)
-default_images = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
+default_images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
+    most_recent=True,
     owners="system")
-vpc = alicloud.vpc.Network("vpc", cidr_block="172.16.0.0/12")
+vpc = alicloud.vpc.Network("vpc", cidr_block="172.16.0.0/12",
+opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
+    vpc_id=vpc.id,
     cidr_block="172.16.0.0/21",
-    vpc_id=vpc.id)
+    availability_zone=default_zones.zones[0].id,
+    opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
 default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup",
     description="foo",
-    vpc_id=vpc.id)
+    vpc_id=vpc.id,
+    opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
 default_instance = alicloud.ecs.Instance("defaultInstance",
-    image_id=default_images.images[0]["id"],
-    instance_name=name,
-    instance_type=default_instance_types.instance_types[0]["id"],
+    vswitch_id=default_switch.id,
+    image_id=default_images.images[0].id,
+    instance_type=default_instance_types.instance_types[0].id,
+    system_disk_category="cloud_efficiency",
     internet_charge_type="PayByTraffic",
     internet_max_bandwidth_out=5,
     security_groups=[default_security_group.id],
-    system_disk_category="cloud_efficiency",
-    vswitch_id=default_switch.id)
+    instance_name=name,
+    opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
 cen = alicloud.cen.Instance("cen")
 attach = alicloud.cen.InstanceAttachment("attach",
-    child_instance_id=vpc.id,
-    child_instance_region_id="cn-hangzhou",
-    instance_id=cen.id)
-route = alicloud.vpc.RouteEntry("route",
-    destination_cidrblock="11.0.0.0/16",
-    nexthop_id=default_instance.id,
-    nexthop_type="Instance",
-    route_table_id=vpc.route_table_id)
-foo = alicloud.cen.RouteEntry("foo",
-    cidr_block=route.destination_cidrblock,
     instance_id=cen.id,
-    route_table_id=vpc.route_table_id)
+    child_instance_id=vpc.id,
+    child_instance_type="VPC",
+    child_instance_region_id="cn-hangzhou",
+    opts=pulumi.ResourceOptions(depends_on=[default_switch]))
+route = alicloud.vpc.RouteEntry("route",
+    route_table_id=vpc.route_table_id,
+    destination_cidrblock="11.0.0.0/16",
+    nexthop_type="Instance",
+    nexthop_id=default_instance.id,
+    opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
+foo = alicloud.cen.RouteEntry("foo",
+    instance_id=cen.id,
+    route_table_id=vpc.route_table_id,
+    cidr_block=route.destination_cidrblock,
+    opts=pulumi.ResourceOptions(provider=alicloud["hz"],
+        depends_on=[attach]))
 ```
 
 {{% /example %}}
@@ -173,65 +345,77 @@ foo = alicloud.cen.RouteEntry("foo",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
+// Create a cen_route_entry resource and use it to publish a route entry pointing to an ECS.
+const hz = new alicloud.Provider("hz", {region: "cn-hangzhou"});
 const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccCenRouteEntryConfig";
-
-const hz = new alicloud.Provider("hz", {
-    region: "cn-hangzhou",
-});
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, { provider: hz, async: true }));
-const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+});
+const defaultInstanceTypes = defaultZones.then(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     cpuCoreCount: 1,
     memorySize: 2,
-}, { provider: hz, async: true }));
-const defaultImages = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
+}));
+const defaultImages = alicloud.ecs.getImages({
     nameRegex: "^ubuntu_18.*64",
+    mostRecent: true,
     owners: "system",
-}, { provider: hz, async: true }));
-const vpc = new alicloud.vpc.Network("vpc", {
-    cidrBlock: "172.16.0.0/12",
-}, { provider: hz });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/21",
+});
+const vpc = new alicloud.vpc.Network("vpc", {cidrBlock: "172.16.0.0/12"}, {
+    provider: alicloud.hz,
+});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: vpc.id,
-}, { provider: hz });
-const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
+    cidrBlock: "172.16.0.0/21",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+}, {
+    provider: alicloud.hz,
+});
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("defaultSecurityGroup", {
     description: "foo",
     vpcId: vpc.id,
-}, { provider: hz });
-const defaultInstance = new alicloud.ecs.Instance("default", {
-    imageId: defaultImages.images[0].id,
-    instanceName: name,
-    instanceType: defaultInstanceTypes.instanceTypes[0].id,
+}, {
+    provider: alicloud.hz,
+});
+const defaultInstance = new alicloud.ecs.Instance("defaultInstance", {
+    vswitchId: defaultSwitch.id,
+    imageId: defaultImages.then(defaultImages => defaultImages.images[0].id),
+    instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.instanceTypes[0].id),
+    systemDiskCategory: "cloud_efficiency",
     internetChargeType: "PayByTraffic",
     internetMaxBandwidthOut: 5,
     securityGroups: [defaultSecurityGroup.id],
-    systemDiskCategory: "cloud_efficiency",
-    vswitchId: defaultSwitch.id,
-}, { provider: hz });
+    instanceName: name,
+}, {
+    provider: alicloud.hz,
+});
 const cen = new alicloud.cen.Instance("cen", {});
 const attach = new alicloud.cen.InstanceAttachment("attach", {
+    instanceId: cen.id,
     childInstanceId: vpc.id,
+    childInstanceType: "VPC",
     childInstanceRegionId: "cn-hangzhou",
-    instanceId: cen.id,
-}, { dependsOn: [defaultSwitch] });
+}, {
+    dependsOn: [defaultSwitch],
+});
 const route = new alicloud.vpc.RouteEntry("route", {
-    destinationCidrblock: "11.0.0.0/16",
-    nexthopId: defaultInstance.id,
-    nexthopType: "Instance",
     routeTableId: vpc.routeTableId,
-}, { provider: hz });
+    destinationCidrblock: "11.0.0.0/16",
+    nexthopType: "Instance",
+    nexthopId: defaultInstance.id,
+}, {
+    provider: alicloud.hz,
+});
 const foo = new alicloud.cen.RouteEntry("foo", {
-    cidrBlock: route.destinationCidrblock,
     instanceId: cen.id,
     routeTableId: vpc.routeTableId,
-}, { provider: hz, dependsOn: [attach] });
+    cidrBlock: route.destinationCidrblock,
+}, {
+    provider: alicloud.hz,
+    dependsOn: [attach],
+});
 ```
 
 {{% /example %}}
@@ -244,19 +428,19 @@ const foo = new alicloud.cen.RouteEntry("foo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#RouteEntry">RouteEntry</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#RouteEntryArgs">RouteEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#RouteEntry">RouteEntry</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#RouteEntryArgs">RouteEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.RouteEntry">RouteEntry</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cidr_block=None<span class="p">, </span>instance_id=None<span class="p">, </span>route_table_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.RouteEntry">RouteEntry</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#RouteEntry">NewRouteEntry</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#RouteEntryArgs">RouteEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#RouteEntry">RouteEntry</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#RouteEntry">NewRouteEntry</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#RouteEntryArgs">RouteEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#RouteEntry">RouteEntry</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteEntry.html">RouteEntry</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteEntryArgs.html">RouteEntryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteEntry.html">RouteEntry</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteEntryArgs.html">RouteEntryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -267,7 +451,7 @@ const foo = new alicloud.cen.RouteEntry("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -336,7 +520,7 @@ const foo = new alicloud.cen.RouteEntry("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -375,7 +559,7 @@ const foo = new alicloud.cen.RouteEntry("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -416,7 +600,6 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -424,38 +607,34 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR block of the route entry to publish.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="routetableid_csharp">
 <a href="#routetableid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route table of the attached VBR or VPC.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -464,38 +643,34 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR block of the route entry to publish.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="routetableid_go">
 <a href="#routetableid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route table of the attached VBR or VPC.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -504,38 +679,34 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR block of the route entry to publish.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="routetableid_nodejs">
 <a href="#routetableid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route table of the attached VBR or VPC.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -544,47 +715,39 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination CIDR block of the route entry to publish.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="route_table_id_python">
 <a href="#route_table_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The route table of the attached VBR or VPC.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the RouteEntry resource produces the following output properties:
-
 
 
 
@@ -595,15 +758,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -612,15 +773,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -629,15 +788,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -646,18 +803,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -667,19 +819,20 @@ Get an existing RouteEntry resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#RouteEntryState">RouteEntryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#RouteEntry">RouteEntry</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#RouteEntryState">RouteEntryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#RouteEntry">RouteEntry</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cidr_block=None<span class="p">, </span>instance_id=None<span class="p">, </span>route_table_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cidr_block</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_table_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RouteEntry</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouteEntry<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#RouteEntryState">RouteEntryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#RouteEntry">RouteEntry</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouteEntry<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#RouteEntryState">RouteEntryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#RouteEntry">RouteEntry</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteEntry.html">RouteEntry</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteEntryState.html">RouteEntryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteEntry.html">RouteEntry</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.RouteEntryState.html">RouteEntryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -781,7 +934,6 @@ Get an existing RouteEntry resource's state with the given name, ID, and optiona
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -789,38 +941,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cidrblock_csharp">
 <a href="#state_cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR block of the route entry to publish.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_csharp">
 <a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_routetableid_csharp">
 <a href="#state_routetableid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route table of the attached VBR or VPC.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -829,38 +977,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cidrblock_go">
 <a href="#state_cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR block of the route entry to publish.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
 <a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_routetableid_go">
 <a href="#state_routetableid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route table of the attached VBR or VPC.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -869,38 +1013,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cidrblock_nodejs">
 <a href="#state_cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR block of the route entry to publish.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_routetableid_nodejs">
 <a href="#state_routetableid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route table of the attached VBR or VPC.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -909,35 +1049,32 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cidr_block_python">
 <a href="#state_cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination CIDR block of the route entry to publish.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_route_table_id_python">
 <a href="#state_route_table_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The route table of the attached VBR or VPC.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -945,8 +1082,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+CEN instance can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cen/routeEntry:RouteEntry example cen-abc123456:vtb-abc123:192.168.0.0/24
+```
 
 
 
@@ -958,6 +1101,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Bucket"
-title_tag: "Resource Bucket | Module storage | Package GCP"
-meta_desc: "Explore the Bucket resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a new bucket in Google cloud storage service (GCS)."
+title_tag: "gcp.storage.Bucket"
+meta_desc: "Documentation for the gcp.storage.Bucket resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -39,13 +39,12 @@ class MyStack : Stack
     {
         var static_site = new Gcp.Storage.Bucket("static-site", new Gcp.Storage.BucketArgs
         {
-            BucketPolicyOnly = true,
             Cors = 
             {
                 new Gcp.Storage.Inputs.BucketCorArgs
                 {
                     MaxAgeSeconds = 3600,
-                    Method = 
+                    Methods = 
                     {
                         "GET",
                         "HEAD",
@@ -53,11 +52,11 @@ class MyStack : Stack
                         "POST",
                         "DELETE",
                     },
-                    Origin = 
+                    Origins = 
                     {
                         "http://image-store.com",
                     },
-                    ResponseHeader = 
+                    ResponseHeaders = 
                     {
                         "*",
                     },
@@ -65,6 +64,7 @@ class MyStack : Stack
             },
             ForceDestroy = true,
             Location = "EU",
+            UniformBucketLevelAccess = true,
             Website = new Gcp.Storage.Inputs.BucketWebsiteArgs
             {
                 MainPageSuffix = "index.html",
@@ -83,34 +83,34 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = storage.NewBucket(ctx, "static-site", &storage.BucketArgs{
-			BucketPolicyOnly: pulumi.Bool(true),
+		_, err := storage.NewBucket(ctx, "static_site", &storage.BucketArgs{
 			Cors: storage.BucketCorArray{
 				&storage.BucketCorArgs{
 					MaxAgeSeconds: pulumi.Int(3600),
-					Method: pulumi.StringArray{
+					Methods: pulumi.StringArray{
 						pulumi.String("GET"),
 						pulumi.String("HEAD"),
 						pulumi.String("PUT"),
 						pulumi.String("POST"),
 						pulumi.String("DELETE"),
 					},
-					Origin: pulumi.StringArray{
+					Origins: pulumi.StringArray{
 						pulumi.String("http://image-store.com"),
 					},
-					ResponseHeader: pulumi.StringArray{
+					ResponseHeaders: pulumi.StringArray{
 						pulumi.String("*"),
 					},
 				},
 			},
-			ForceDestroy: pulumi.Bool(true),
-			Location:     pulumi.String("EU"),
+			ForceDestroy:             pulumi.Bool(true),
+			Location:                 pulumi.String("EU"),
+			UniformBucketLevelAccess: pulumi.Bool(true),
 			Website: &storage.BucketWebsiteArgs{
 				MainPageSuffix: pulumi.String("index.html"),
 				NotFoundPage:   pulumi.String("404.html"),
@@ -132,25 +132,25 @@ import pulumi
 import pulumi_gcp as gcp
 
 static_site = gcp.storage.Bucket("static-site",
-    bucket_policy_only=True,
-    cors=[{
-        "maxAgeSeconds": 3600,
-        "method": [
+    cors=[gcp.storage.BucketCorArgs(
+        max_age_seconds=3600,
+        methods=[
             "GET",
             "HEAD",
             "PUT",
             "POST",
             "DELETE",
         ],
-        "origin": ["http://image-store.com"],
-        "responseHeader": ["*"],
-    }],
+        origins=["http://image-store.com"],
+        response_headers=["*"],
+    )],
     force_destroy=True,
     location="EU",
-    website={
-        "mainPageSuffix": "index.html",
-        "notFoundPage": "404.html",
-    })
+    uniform_bucket_level_access=True,
+    website=gcp.storage.BucketWebsiteArgs(
+        main_page_suffix="index.html",
+        not_found_page="404.html",
+    ))
 ```
 
 {{% /example %}}
@@ -162,7 +162,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const static_site = new gcp.storage.Bucket("static-site", {
-    bucketPolicyOnly: true,
     cors: [{
         maxAgeSeconds: 3600,
         methods: [
@@ -177,6 +176,7 @@ const static_site = new gcp.storage.Bucket("static-site", {
     }],
     forceDestroy: true,
     location: "EU",
+    uniformBucketLevelAccess: true,
     website: {
         mainPageSuffix: "index.html",
         notFoundPage: "404.html",
@@ -227,13 +227,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = storage.NewBucket(ctx, "auto-expire", &storage.BucketArgs{
+		_, err := storage.NewBucket(ctx, "auto_expire", &storage.BucketArgs{
 			ForceDestroy: pulumi.Bool(true),
 			LifecycleRules: storage.BucketLifecycleRuleArray{
 				&storage.BucketLifecycleRuleArgs{
@@ -264,14 +264,14 @@ import pulumi_gcp as gcp
 
 auto_expire = gcp.storage.Bucket("auto-expire",
     force_destroy=True,
-    lifecycle_rules=[{
-        "action": {
-            "type": "Delete",
-        },
-        "condition": {
-            "age": "3",
-        },
-    }],
+    lifecycle_rules=[gcp.storage.BucketLifecycleRuleArgs(
+        action=gcp.storage.BucketLifecycleRuleActionArgs(
+            type="Delete",
+        ),
+        condition=gcp.storage.BucketLifecycleRuleConditionArgs(
+            age=3,
+        ),
+    )],
     location="US")
 ```
 
@@ -307,19 +307,19 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#Bucket">Bucket</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#BucketArgs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/storage/#Bucket">Bucket</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket_policy_only=None<span class="p">, </span>cors=None<span class="p">, </span>default_event_based_hold=None<span class="p">, </span>encryption=None<span class="p">, </span>force_destroy=None<span class="p">, </span>labels=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>location=None<span class="p">, </span>logging=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>requester_pays=None<span class="p">, </span>retention_policy=None<span class="p">, </span>storage_class=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket_policy_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketCorArgs]]</span> = None<span class="p">, </span><span class="nx">default_event_based_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[BucketEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[BucketLoggingArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[BucketRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uniform_bucket_level_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#Bucket">NewBucket</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketArgs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#Bucket">Bucket</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Bucket.html">Bucket</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.BucketArgs.html">BucketArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -330,7 +330,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -340,7 +340,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#BucketArgs">BucketArgs</a></span>
+        <span class="property-type"><a href="#inputs">BucketArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -389,7 +389,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -399,7 +399,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -409,7 +409,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketArgs">BucketArgs</a></span>
+        <span class="property-type"><a href="#inputs">BucketArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -419,7 +419,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -438,7 +438,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -448,7 +448,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.BucketArgs.html">BucketArgs</a></span>
+        <span class="property-type"><a href="#inputs">BucketArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -471,763 +471,730 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
 
 ## Bucket Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Bucket resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Bucket resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="bucketpolicyonly_csharp">
 <a href="#bucketpolicyonly_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Policy<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the uniform_bucket_level_access as this field has been renamed by Google.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cors_csharp">
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcor">List&lt;Bucket<wbr>Cor<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaulteventbasedhold_csharp">
 <a href="#defaulteventbasedhold_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Event<wbr>Based<wbr>Hold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encryption_csharp">
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_csharp">
 <a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, the provider will fail that run.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifecyclerules_csharp">
 <a href="#lifecyclerules_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerule">List&lt;Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logging_csharp">
 <a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requesterpays_csharp">
 <a href="#requesterpays_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_csharp">
 <a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
+    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uniformbucketlevelaccess_csharp">
+<a href="#uniformbucketlevelaccess_csharp" style="color: inherit; text-decoration: inherit;">Uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="versioning_csharp">
 <a href="#versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="website_csharp">
 <a href="#website_csharp" style="color: inherit; text-decoration: inherit;">Website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="bucketpolicyonly_go">
 <a href="#bucketpolicyonly_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Policy<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the uniform_bucket_level_access as this field has been renamed by Google.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cors_go">
 <a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcor">[]Bucket<wbr>Cor</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaulteventbasedhold_go">
 <a href="#defaulteventbasedhold_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Event<wbr>Based<wbr>Hold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encryption_go">
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_go">
 <a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, the provider will fail that run.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifecyclerules_go">
 <a href="#lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerule">[]Bucket<wbr>Lifecycle<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logging_go">
 <a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requesterpays_go">
 <a href="#requesterpays_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_go">
 <a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
+    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uniformbucketlevelaccess_go">
+<a href="#uniformbucketlevelaccess_go" style="color: inherit; text-decoration: inherit;">Uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="versioning_go">
 <a href="#versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="website_go">
 <a href="#website_go" style="color: inherit; text-decoration: inherit;">Website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="bucketpolicyonly_nodejs">
 <a href="#bucketpolicyonly_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Policy<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the uniform_bucket_level_access as this field has been renamed by Google.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cors_nodejs">
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcor">Bucket<wbr>Cor[]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaulteventbasedhold_nodejs">
 <a href="#defaulteventbasedhold_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Event<wbr>Based<wbr>Hold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encryption_nodejs">
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_nodejs">
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, the provider will fail that run.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifecyclerules_nodejs">
 <a href="#lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logging_nodejs">
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requesterpays_nodejs">
 <a href="#requesterpays_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_nodejs">
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
+    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uniformbucketlevelaccess_nodejs">
+<a href="#uniformbucketlevelaccess_nodejs" style="color: inherit; text-decoration: inherit;">uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="versioning_nodejs">
 <a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="website_nodejs">
 <a href="#website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="bucket_policy_only_python">
 <a href="#bucket_policy_only_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>policy_<wbr>only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the uniform_bucket_level_access as this field has been renamed by Google.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cors_python">
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcor">List[Bucket<wbr>Cor]</a></span>
+        <span class="property-type"><a href="#bucketcor">Sequence[Bucket<wbr>Cor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_event_based_hold_python">
 <a href="#default_event_based_hold_python" style="color: inherit; text-decoration: inherit;">default_<wbr>event_<wbr>based_<wbr>hold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encryption_python">
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketencryption">Dict[Bucket<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_destroy_python">
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, the provider will fail that run.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifecycle_rules_python">
 <a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logging_python">
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">Dict[Bucket<wbr>Logging]</a></span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requester_pays_python">
 <a href="#requester_pays_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketretentionpolicy">Dict[Bucket<wbr>Retention<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_class_python">
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
+    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uniform_bucket_level_access_python">
+<a href="#uniform_bucket_level_access_python" style="color: inherit; text-decoration: inherit;">uniform_<wbr>bucket_<wbr>level_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="versioning_python">
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Dict[Bucket<wbr>Versioning]</a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="website_python">
 <a href="#website_python" style="color: inherit; text-decoration: inherit;">website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Dict[Bucket<wbr>Website]</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Bucket resource produces the following output properties:
-
 
 
 
@@ -1238,37 +1205,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL of the bucket, in the format `gs://<bucket-name>`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1277,37 +1240,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL of the bucket, in the format `gs://<bucket-name>`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1316,37 +1275,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL of the bucket, in the format `gs://<bucket-name>`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1355,40 +1310,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base URL of the bucket, in the format `gs://<bucket-name>`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1398,19 +1346,20 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#BucketState">BucketState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#Bucket">Bucket</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Bucket</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bucket_policy_only=None<span class="p">, </span>cors=None<span class="p">, </span>default_event_based_hold=None<span class="p">, </span>encryption=None<span class="p">, </span>force_destroy=None<span class="p">, </span>labels=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>location=None<span class="p">, </span>logging=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>requester_pays=None<span class="p">, </span>retention_policy=None<span class="p">, </span>self_link=None<span class="p">, </span>storage_class=None<span class="p">, </span>url=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket_policy_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketCorArgs]]</span> = None<span class="p">, </span><span class="nx">default_event_based_hold</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[BucketEncryptionArgs]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">logging</span><span class="p">:</span> <span class="nx">Optional[BucketLoggingArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">requester_pays</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retention_policy</span><span class="p">:</span> <span class="nx">Optional[BucketRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">uniform_bucket_level_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">) -&gt;</span> Bucket</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketState">BucketState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#Bucket">Bucket</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Bucket.html">Bucket</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.BucketState.html">BucketState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Bucket</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BucketState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1512,837 +1461,797 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_bucketpolicyonly_csharp">
 <a href="#state_bucketpolicyonly_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Policy<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the uniform_bucket_level_access as this field has been renamed by Google.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_cors_csharp">
 <a href="#state_cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcor">List&lt;Bucket<wbr>Cor<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaulteventbasedhold_csharp">
 <a href="#state_defaulteventbasedhold_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Event<wbr>Based<wbr>Hold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_encryption_csharp">
 <a href="#state_encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_csharp">
 <a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, the provider will fail that run.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lifecyclerules_csharp">
 <a href="#state_lifecyclerules_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerule">List&lt;Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logging_csharp">
 <a href="#state_logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requesterpays_csharp">
 <a href="#state_requesterpays_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_retentionpolicy_csharp">
 <a href="#state_retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageclass_csharp">
 <a href="#state_storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
+    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_uniformbucketlevelaccess_csharp">
+<a href="#state_uniformbucketlevelaccess_csharp" style="color: inherit; text-decoration: inherit;">Uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL of the bucket, in the format `gs://<bucket-name>`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_versioning_csharp">
 <a href="#state_versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_website_csharp">
 <a href="#state_website_csharp" style="color: inherit; text-decoration: inherit;">Website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_bucketpolicyonly_go">
 <a href="#state_bucketpolicyonly_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Policy<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the uniform_bucket_level_access as this field has been renamed by Google.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_cors_go">
 <a href="#state_cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcor">[]Bucket<wbr>Cor</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaulteventbasedhold_go">
 <a href="#state_defaulteventbasedhold_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Event<wbr>Based<wbr>Hold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_encryption_go">
 <a href="#state_encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_go">
 <a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, the provider will fail that run.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lifecyclerules_go">
 <a href="#state_lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerule">[]Bucket<wbr>Lifecycle<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logging_go">
 <a href="#state_logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requesterpays_go">
 <a href="#state_requesterpays_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_retentionpolicy_go">
 <a href="#state_retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageclass_go">
 <a href="#state_storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
+    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_uniformbucketlevelaccess_go">
+<a href="#state_uniformbucketlevelaccess_go" style="color: inherit; text-decoration: inherit;">Uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL of the bucket, in the format `gs://<bucket-name>`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_versioning_go">
 <a href="#state_versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_website_go">
 <a href="#state_website_go" style="color: inherit; text-decoration: inherit;">Website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_bucketpolicyonly_nodejs">
 <a href="#state_bucketpolicyonly_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Policy<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the uniform_bucket_level_access as this field has been renamed by Google.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_cors_nodejs">
 <a href="#state_cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcor">Bucket<wbr>Cor[]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaulteventbasedhold_nodejs">
 <a href="#state_defaulteventbasedhold_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Event<wbr>Based<wbr>Hold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_encryption_nodejs">
 <a href="#state_encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_nodejs">
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, the provider will fail that run.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lifecyclerules_nodejs">
 <a href="#state_lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logging_nodejs">
 <a href="#state_logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requesterpays_nodejs">
 <a href="#state_requesterpays_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_retentionpolicy_nodejs">
 <a href="#state_retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageclass_nodejs">
 <a href="#state_storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
+    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_uniformbucketlevelaccess_nodejs">
+<a href="#state_uniformbucketlevelaccess_nodejs" style="color: inherit; text-decoration: inherit;">uniform<wbr>Bucket<wbr>Level<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base URL of the bucket, in the format `gs://<bucket-name>`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_versioning_nodejs">
 <a href="#state_versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_website_nodejs">
 <a href="#state_website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_bucket_policy_only_python">
 <a href="#state_bucket_policy_only_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>policy_<wbr>only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enables [Bucket Policy Only](https://cloud.google.com/storage/docs/bucket-policy-only) access to a bucket. This field will be removed in the next major release of the provider.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use the uniform_bucket_level_access as this field has been renamed by Google.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_cors_python">
 <a href="#state_cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcor">List[Bucket<wbr>Cor]</a></span>
+        <span class="property-type"><a href="#bucketcor">Sequence[Bucket<wbr>Cor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_default_event_based_hold_python">
 <a href="#state_default_event_based_hold_python" style="color: inherit; text-decoration: inherit;">default_<wbr>event_<wbr>based_<wbr>hold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_encryption_python">
 <a href="#state_encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketencryption">Dict[Bucket<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#bucketencryption">Bucket<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's encryption configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_force_destroy_python">
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When deleting a bucket, this
 boolean option will delete all contained objects. If you try to delete a
 bucket that contains objects, the provider will fail that run.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the bucket.
+    <dd>{{% md %}}A map of key/value label pairs to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lifecycle_rules_python">
 <a href="#state_lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logging_python">
 <a href="#state_logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">Dict[Bucket<wbr>Logging]</a></span>
+        <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requester_pays_python">
 <a href="#state_requester_pays_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_retention_policy_python">
 <a href="#state_retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketretentionpolicy">Dict[Bucket<wbr>Retention<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storage_class_python">
 <a href="#state_storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
+    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_uniform_bucket_level_access_python">
+<a href="#state_uniform_bucket_level_access_python" style="color: inherit; text-decoration: inherit;">uniform_<wbr>bucket_<wbr>level_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base URL of the bucket, in the format `gs://<bucket-name>`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_versioning_python">
 <a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Dict[Bucket<wbr>Versioning]</a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_website_python">
 <a href="#state_website_python" style="color: inherit; text-decoration: inherit;">website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Dict[Bucket<wbr>Website]</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration if the bucket acts as a website. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2352,20 +2261,8 @@ is not provided, the provider project is used.
 ## Supporting Types
 
 
+
 <h4 id="bucketcor">Bucket<wbr>Cor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketCor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketCor">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketCorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketCorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.BucketCorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.BucketCor.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2374,49 +2271,44 @@ is not provided, the provider project is used.
             title="Optional">
         <span id="maxageseconds_csharp">
 <a href="#maxageseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="methods_csharp">
 <a href="#methods_csharp" style="color: inherit; text-decoration: inherit;">Methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="origins_csharp">
 <a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responseheaders_csharp">
 <a href="#responseheaders_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of HTTP headers other than the [simple response headers](https://www.w3.org/TR/cors/#simple-response-header) to give permission for the user-agent to share across domains.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2425,49 +2317,44 @@ is not provided, the provider project is used.
             title="Optional">
         <span id="maxageseconds_go">
 <a href="#maxageseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="methods_go">
 <a href="#methods_go" style="color: inherit; text-decoration: inherit;">Methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="origins_go">
 <a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responseheaders_go">
 <a href="#responseheaders_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of HTTP headers other than the [simple response headers](https://www.w3.org/TR/cors/#simple-response-header) to give permission for the user-agent to share across domains.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2476,118 +2363,92 @@ is not provided, the provider project is used.
             title="Optional">
         <span id="maxageseconds_nodejs">
 <a href="#maxageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="methods_nodejs">
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="origins_nodejs">
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responseheaders_nodejs">
 <a href="#responseheaders_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of HTTP headers other than the [simple response headers](https://www.w3.org/TR/cors/#simple-response-header) to give permission for the user-agent to share across domains.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxageseconds_python">
-<a href="#maxageseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
-</span> 
+        <span id="max_age_seconds_python">
+<a href="#max_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>seconds</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="methods_python">
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="origins_python">
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="responseheaders_python">
-<a href="#responseheaders_python" style="color: inherit; text-decoration: inherit;">response<wbr>Headers</a>
-</span> 
+        <span id="response_headers_python">
+<a href="#response_headers_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of HTTP headers other than the [simple response headers](https://www.w3.org/TR/cors/#simple-response-header) to give permission for the user-agent to share across domains.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketencryption">Bucket<wbr>Encryption</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketEncryption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketEncryption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketEncryptionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.BucketEncryptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.BucketEncryption.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2596,15 +2457,13 @@ is not provided, the provider project is used.
             title="Required">
         <span id="defaultkmskeyname_csharp">
 <a href="#defaultkmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2613,15 +2472,13 @@ is not provided, the provider project is used.
             title="Required">
         <span id="defaultkmskeyname_go">
 <a href="#defaultkmskeyname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2630,50 +2487,30 @@ is not provided, the provider project is used.
             title="Required">
         <span id="defaultkmskeyname_nodejs">
 <a href="#defaultkmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultkmskeyname_python">
-<a href="#defaultkmskeyname_python" style="color: inherit; text-decoration: inherit;">default<wbr>Kms<wbr>Key<wbr>Name</a>
-</span> 
+        <span id="default_kms_key_name_python">
+<a href="#default_kms_key_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>kms_<wbr>key_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLifecycleRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLifecycleRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketLifecycleRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketLifecycleRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.BucketLifecycleRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.BucketLifecycleRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2682,27 +2519,24 @@ is not provided, the provider project is used.
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2711,27 +2545,24 @@ is not provided, the provider project is used.
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2740,27 +2571,24 @@ is not provided, the provider project is used.
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2769,45 +2597,26 @@ is not provided, the provider project is used.
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleaction">Dict[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulecondition">Dict[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLifecycleRuleAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLifecycleRuleAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketLifecycleRuleActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketLifecycleRuleActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.BucketLifecycleRuleActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.BucketLifecycleRuleAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2816,27 +2625,24 @@ is not provided, the provider project is used.
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_csharp">
 <a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
+    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2845,27 +2651,24 @@ is not provided, the provider project is used.
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_go">
 <a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
+    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2874,27 +2677,24 @@ is not provided, the provider project is used.
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_nodejs">
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
+    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2903,45 +2703,26 @@ is not provided, the provider project is used.
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the action of this Lifecycle Rule. Supported values include: `Delete` and `SetStorageClass`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_class_python">
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`.
+    <dd>{{% md %}}The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLifecycleRuleCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLifecycleRuleCondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketLifecycleRuleConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketLifecycleRuleConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.BucketLifecycleRuleConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.BucketLifecycleRuleCondition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2950,60 +2731,94 @@ is not provided, the provider project is used.
             title="Optional">
         <span id="age_csharp">
 <a href="#age_csharp" style="color: inherit; text-decoration: inherit;">Age</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum age of an object in days to satisfy this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbefore_csharp">
 <a href="#createdbefore_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customtimebefore_csharp">
+<a href="#customtimebefore_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dayssincecustomtime_csharp">
+<a href="#dayssincecustomtime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Date in RFC 3339 (e.g. `2017-06-13`) when an object's Custom-Time metadata is earlier than the date specified in this condition.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dayssincenoncurrenttime_csharp">
+<a href="#dayssincenoncurrenttime_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="matchesstorageclasses_csharp">
 <a href="#matchesstorageclasses_csharp" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Classes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}[Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `STANDARD`, `DURABLE_REDUCED_AVAILABILITY`.
+    <dd>{{% md %}}[Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`, `STANDARD`, `DURABLE_REDUCED_AVAILABILITY`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="noncurrenttimebefore_csharp">
+<a href="#noncurrenttimebefore_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. The date in RFC 3339 (e.g. `2017-06-13`) when the object became nonconcurrent.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numnewerversions_csharp">
 <a href="#numnewerversions_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="withstate_csharp">
 <a href="#withstate_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `"LIVE"`, `"ARCHIVED"`, `"ANY"`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3012,60 +2827,94 @@ is not provided, the provider project is used.
             title="Optional">
         <span id="age_go">
 <a href="#age_go" style="color: inherit; text-decoration: inherit;">Age</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum age of an object in days to satisfy this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbefore_go">
 <a href="#createdbefore_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customtimebefore_go">
+<a href="#customtimebefore_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dayssincecustomtime_go">
+<a href="#dayssincecustomtime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Date in RFC 3339 (e.g. `2017-06-13`) when an object's Custom-Time metadata is earlier than the date specified in this condition.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dayssincenoncurrenttime_go">
+<a href="#dayssincenoncurrenttime_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="matchesstorageclasses_go">
 <a href="#matchesstorageclasses_go" style="color: inherit; text-decoration: inherit;">Matches<wbr>Storage<wbr>Classes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}[Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `STANDARD`, `DURABLE_REDUCED_AVAILABILITY`.
+    <dd>{{% md %}}[Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`, `STANDARD`, `DURABLE_REDUCED_AVAILABILITY`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="noncurrenttimebefore_go">
+<a href="#noncurrenttimebefore_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. The date in RFC 3339 (e.g. `2017-06-13`) when the object became nonconcurrent.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numnewerversions_go">
 <a href="#numnewerversions_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Newer<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="withstate_go">
 <a href="#withstate_go" style="color: inherit; text-decoration: inherit;">With<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `"LIVE"`, `"ARCHIVED"`, `"ANY"`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3074,60 +2923,94 @@ is not provided, the provider project is used.
             title="Optional">
         <span id="age_nodejs">
 <a href="#age_nodejs" style="color: inherit; text-decoration: inherit;">age</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum age of an object in days to satisfy this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbefore_nodejs">
 <a href="#createdbefore_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customtimebefore_nodejs">
+<a href="#customtimebefore_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dayssincecustomtime_nodejs">
+<a href="#dayssincecustomtime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Custom<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Date in RFC 3339 (e.g. `2017-06-13`) when an object's Custom-Time metadata is earlier than the date specified in this condition.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dayssincenoncurrenttime_nodejs">
+<a href="#dayssincenoncurrenttime_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Since<wbr>Noncurrent<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="matchesstorageclasses_nodejs">
 <a href="#matchesstorageclasses_nodejs" style="color: inherit; text-decoration: inherit;">matches<wbr>Storage<wbr>Classes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}[Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `STANDARD`, `DURABLE_REDUCED_AVAILABILITY`.
+    <dd>{{% md %}}[Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`, `STANDARD`, `DURABLE_REDUCED_AVAILABILITY`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="noncurrenttimebefore_nodejs">
+<a href="#noncurrenttimebefore_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Time<wbr>Before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. The date in RFC 3339 (e.g. `2017-06-13`) when the object became nonconcurrent.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numnewerversions_nodejs">
 <a href="#numnewerversions_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Newer<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="withstate_nodejs">
 <a href="#withstate_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `"LIVE"`, `"ARCHIVED"`, `"ANY"`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3136,78 +3019,96 @@ is not provided, the provider project is used.
             title="Optional">
         <span id="age_python">
 <a href="#age_python" style="color: inherit; text-decoration: inherit;">age</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum age of an object in days to satisfy this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="createdbefore_python">
-<a href="#createdbefore_python" style="color: inherit; text-decoration: inherit;">created<wbr>Before</a>
-</span> 
+        <span id="created_before_python">
+<a href="#created_before_python" style="color: inherit; text-decoration: inherit;">created_<wbr>before</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="matchesstorageclasses_python">
-<a href="#matchesstorageclasses_python" style="color: inherit; text-decoration: inherit;">matches<wbr>Storage<wbr>Classes</a>
-</span> 
+        <span id="custom_time_before_python">
+<a href="#custom_time_before_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>time_<wbr>before</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}[Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `STANDARD`, `DURABLE_REDUCED_AVAILABILITY`.
+    <dd>{{% md %}}Creation date of an object in RFC 3339 (e.g. `2017-06-13`) to satisfy this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="numnewerversions_python">
-<a href="#numnewerversions_python" style="color: inherit; text-decoration: inherit;">num<wbr>Newer<wbr>Versions</a>
-</span> 
+        <span id="days_since_custom_time_python">
+<a href="#days_since_custom_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>custom_<wbr>time</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Date in RFC 3339 (e.g. `2017-06-13`) when an object's Custom-Time metadata is earlier than the date specified in this condition.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="days_since_noncurrent_time_python">
+<a href="#days_since_noncurrent_time_python" style="color: inherit; text-decoration: inherit;">days_<wbr>since_<wbr>noncurrent_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. Number of days elapsed since the noncurrent timestamp of an object.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="matches_storage_classes_python">
+<a href="#matches_storage_classes_python" style="color: inherit; text-decoration: inherit;">matches_<wbr>storage_<wbr>classes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}[Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects to satisfy this condition. Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`, `STANDARD`, `DURABLE_REDUCED_AVAILABILITY`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="noncurrent_time_before_python">
+<a href="#noncurrent_time_before_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>time_<wbr>before</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Relevant only for versioned objects. The date in RFC 3339 (e.g. `2017-06-13`) when the object became nonconcurrent.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="num_newer_versions_python">
+<a href="#num_newer_versions_python" style="color: inherit; text-decoration: inherit;">num_<wbr>newer_<wbr>versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="withstate_python">
-<a href="#withstate_python" style="color: inherit; text-decoration: inherit;">with<wbr>State</a>
-</span> 
+        <span id="with_state_python">
+<a href="#with_state_python" style="color: inherit; text-decoration: inherit;">with_<wbr>state</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: `"LIVE"`, `"ARCHIVED"`, `"ANY"`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketlogging">Bucket<wbr>Logging</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLogging">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketLoggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketLoggingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.BucketLoggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.BucketLogging.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3216,28 +3117,25 @@ is not provided, the provider project is used.
             title="Required">
         <span id="logbucket_csharp">
 <a href="#logbucket_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket that will receive log objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logobjectprefix_csharp">
 <a href="#logobjectprefix_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Object<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object prefix for log objects. If it's not provided,
 by default GCS sets this to this bucket's name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3246,28 +3144,25 @@ by default GCS sets this to this bucket's name.
             title="Required">
         <span id="logbucket_go">
 <a href="#logbucket_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket that will receive log objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logobjectprefix_go">
 <a href="#logobjectprefix_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Object<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object prefix for log objects. If it's not provided,
 by default GCS sets this to this bucket's name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3276,76 +3171,54 @@ by default GCS sets this to this bucket's name.
             title="Required">
         <span id="logbucket_nodejs">
 <a href="#logbucket_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket that will receive log objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logobjectprefix_nodejs">
 <a href="#logobjectprefix_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Object<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object prefix for log objects. If it's not provided,
 by default GCS sets this to this bucket's name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="logbucket_python">
-<a href="#logbucket_python" style="color: inherit; text-decoration: inherit;">log<wbr>Bucket</a>
-</span> 
+        <span id="log_bucket_python">
+<a href="#log_bucket_python" style="color: inherit; text-decoration: inherit;">log_<wbr>bucket</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bucket that will receive log objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="logobjectprefix_python">
-<a href="#logobjectprefix_python" style="color: inherit; text-decoration: inherit;">log<wbr>Object<wbr>Prefix</a>
-</span> 
+        <span id="log_object_prefix_python">
+<a href="#log_object_prefix_python" style="color: inherit; text-decoration: inherit;">log_<wbr>object_<wbr>prefix</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object prefix for log objects. If it's not provided,
 by default GCS sets this to this bucket's name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketRetentionPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketRetentionPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketRetentionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketRetentionPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.BucketRetentionPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.BucketRetentionPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3354,27 +3227,24 @@ by default GCS sets this to this bucket's name.
             title="Required">
         <span id="retentionperiod_csharp">
 <a href="#retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="islocked_csharp">
 <a href="#islocked_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Locked</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3383,27 +3253,24 @@ by default GCS sets this to this bucket's name.
             title="Required">
         <span id="retentionperiod_go">
 <a href="#retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="islocked_go">
 <a href="#islocked_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Locked</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3412,74 +3279,52 @@ by default GCS sets this to this bucket's name.
             title="Required">
         <span id="retentionperiod_nodejs">
 <a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="islocked_nodejs">
 <a href="#islocked_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Locked</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="retentionperiod_python">
-<a href="#retentionperiod_python" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
-</span> 
+        <span id="retention_period_python">
+<a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="islocked_python">
-<a href="#islocked_python" style="color: inherit; text-decoration: inherit;">is<wbr>Locked</a>
-</span> 
+        <span id="is_locked_python">
+<a href="#is_locked_python" style="color: inherit; text-decoration: inherit;">is_<wbr>locked</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketversioning">Bucket<wbr>Versioning</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketVersioning">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketVersioning">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketVersioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketVersioningOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.BucketVersioningArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.BucketVersioning.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3488,16 +3333,14 @@ by default GCS sets this to this bucket's name.
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}While set to `true`, versioning is fully enabled for this bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3506,16 +3349,14 @@ by default GCS sets this to this bucket's name.
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}While set to `true`, versioning is fully enabled for this bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3524,16 +3365,14 @@ by default GCS sets this to this bucket's name.
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}While set to `true`, versioning is fully enabled for this bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3542,34 +3381,16 @@ by default GCS sets this to this bucket's name.
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}While set to `true`, versioning is fully enabled for this bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketwebsite">Bucket<wbr>Website</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketWebsite">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketWebsite">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketWebsiteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#BucketWebsiteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Inputs.BucketWebsiteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.Outputs.BucketWebsite.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3578,29 +3399,26 @@ by default GCS sets this to this bucket's name.
             title="Optional">
         <span id="mainpagesuffix_csharp">
 <a href="#mainpagesuffix_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Page<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Behaves as the bucket's directory index where
 missing objects are treated as potential directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notfoundpage_csharp">
 <a href="#notfoundpage_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Found<wbr>Page</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom object to return when a requested
 resource is not found.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3609,29 +3427,26 @@ resource is not found.
             title="Optional">
         <span id="mainpagesuffix_go">
 <a href="#mainpagesuffix_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Page<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Behaves as the bucket's directory index where
 missing objects are treated as potential directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notfoundpage_go">
 <a href="#notfoundpage_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Found<wbr>Page</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom object to return when a requested
 resource is not found.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3640,64 +3455,70 @@ resource is not found.
             title="Optional">
         <span id="mainpagesuffix_nodejs">
 <a href="#mainpagesuffix_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Page<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Behaves as the bucket's directory index where
 missing objects are treated as potential directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notfoundpage_nodejs">
 <a href="#notfoundpage_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Found<wbr>Page</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom object to return when a requested
 resource is not found.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="mainpagesuffix_python">
-<a href="#mainpagesuffix_python" style="color: inherit; text-decoration: inherit;">main<wbr>Page<wbr>Suffix</a>
-</span> 
+        <span id="main_page_suffix_python">
+<a href="#main_page_suffix_python" style="color: inherit; text-decoration: inherit;">main_<wbr>page_<wbr>suffix</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Behaves as the bucket's directory index where
 missing objects are treated as potential directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="notfoundpage_python">
-<a href="#notfoundpage_python" style="color: inherit; text-decoration: inherit;">not<wbr>Found<wbr>Page</a>
-</span> 
+        <span id="not_found_page_python">
+<a href="#not_found_page_python" style="color: inherit; text-decoration: inherit;">not_<wbr>found_<wbr>page</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom object to return when a requested
 resource is not found.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Storage buckets can be imported using the `name` or
 
+`project/name`. If the project is not passed to the import command it will be inferred from the provider block or environment variables. If it cannot be inferred it will be queried from the Compute API (this will fail if the API is not enabled). e.g.
 
+```sh
+ $ pulumi import gcp:storage/bucket:Bucket image-store image-store-bucket
+```
 
+```sh
+ $ pulumi import gcp:storage/bucket:Bucket image-store tf-test-project/image-store-bucket
+```
+
+ `false` in state. If you've set it to `true` in config, run `terraform apply` to update the value set in state. If you delete this resource before updating the value, objects in the bucket will not be destroyed.
 
 
 
@@ -3709,6 +3530,6 @@ resource is not found.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

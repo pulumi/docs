@@ -99,7 +99,7 @@ ecosystem.
 
 > Note: It is also possible to directly deploy existing Kubernetes YAML
 > objects, as a stepping stone. See the example
-> [here](https://github.com/pulumi/pulumi-kubernetes/blob/master/tests/examples/yaml-guestbook/index.ts).
+> [here](https://github.com/pulumi/pulumi-kubernetes/blob/master/tests/sdk/nodejs/examples/yaml-guestbook/index.ts).
 > This lets you reap all of the benefits of the deployment workflow
 > called out in this post without needing to rewrite all of your
 > Kubernetes YAML. It's easy to then rewrite it piecemeal, one step at a

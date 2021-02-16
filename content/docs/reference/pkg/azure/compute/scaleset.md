@@ -1,8 +1,8 @@
 
 ---
 title: "ScaleSet"
-title_tag: "Resource ScaleSet | Module compute | Package Azure"
-meta_desc: "Explore the ScaleSet resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a virtual machine scale set."
+title_tag: "azure.compute.ScaleSet"
+meta_desc: "Documentation for the azure.compute.ScaleSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -14,7 +14,7 @@ Manages a virtual machine scale set.
 
 ## Disclaimers
 
-> **Note:** The `azure.compute.ScaleSet` resource has been superseded by the `azure.compute.LinuxVirtualMachineScaleSet` and `azure.compute.WindowsVirtualMachineScaleSet` resources. The existing `azure.compute.ScaleSet` resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the `azure.compute.LinuxVirtualMachineScaleSet` and `azure.compute.WindowsVirtualMachineScaleSet` resources.
+> **Note:** The `azure.compute.ScaleSet` resource has been superseded by the `azure.compute.LinuxVirtualMachineScaleSet`](linux_virtual_machine_scale_set.html) and [`azure.compute.WindowsVirtualMachineScaleSet` resources. The existing `azure.compute.ScaleSet` resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the `azure.compute.LinuxVirtualMachineScaleSet` and `azure.compute.WindowsVirtualMachineScaleSet` resources.
 ## Example of storage_profile_image_reference with id
 
 ```typescript
@@ -34,9 +34,9 @@ import pulumi_azure as azure
 
 example_image = azure.compute.Image("exampleImage")
 # ...
-example_scale_set = azure.compute.ScaleSet("exampleScaleSet", storage_profile_image_reference={
-    "id": example_image.id,
-})
+example_scale_set = azure.compute.ScaleSet("exampleScaleSet", storage_profile_image_reference=azure.compute.ScaleSetStorageProfileImageReferenceArgs(
+    id=example_image.id,
+))
 # ...
 ```
 ```csharp
@@ -122,7 +122,10 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "10.0.2.0/24",
+            AddressPrefixes = 
+            {
+                "10.0.2.0/24",
+            },
         });
         var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
         {
@@ -286,7 +289,7 @@ example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
 example_subnet = azure.network.Subnet("exampleSubnet",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="10.0.2.0/24")
+    address_prefixes=["10.0.2.0/24"])
 example_public_ip = azure.network.PublicIp("examplePublicIp",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -298,10 +301,10 @@ example_public_ip = azure.network.PublicIp("examplePublicIp",
 example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    frontend_ip_configurations=[{
-        "name": "PublicIPAddress",
-        "public_ip_address_id": example_public_ip.id,
-    }])
+    frontend_ip_configurations=[azure.lb.LoadBalancerFrontendIpConfigurationArgs(
+        name="PublicIPAddress",
+        public_ip_address_id=example_public_ip.id,
+    )])
 bpepool = azure.lb.BackendAddressPool("bpepool",
     resource_group_name=example_resource_group.name,
     loadbalancer_id=example_load_balancer.id)
@@ -324,58 +327,58 @@ example_scale_set = azure.compute.ScaleSet("exampleScaleSet",
     resource_group_name=example_resource_group.name,
     automatic_os_upgrade=True,
     upgrade_policy_mode="Rolling",
-    rolling_upgrade_policy={
-        "maxBatchInstancePercent": 20,
-        "maxUnhealthyInstancePercent": 20,
-        "maxUnhealthyUpgradedInstancePercent": 5,
-        "pauseTimeBetweenBatches": "PT0S",
-    },
+    rolling_upgrade_policy=azure.compute.ScaleSetRollingUpgradePolicyArgs(
+        max_batch_instance_percent=20,
+        max_unhealthy_instance_percent=20,
+        max_unhealthy_upgraded_instance_percent=5,
+        pause_time_between_batches="PT0S",
+    ),
     health_probe_id=example_probe.id,
-    sku={
-        "name": "Standard_F2",
-        "tier": "Standard",
-        "capacity": 2,
-    },
-    storage_profile_image_reference={
-        "publisher": "Canonical",
-        "offer": "UbuntuServer",
-        "sku": "16.04-LTS",
-        "version": "latest",
-    },
-    storage_profile_os_disk={
-        "name": "",
-        "caching": "ReadWrite",
-        "create_option": "FromImage",
-        "managedDiskType": "Standard_LRS",
-    },
-    storage_profile_data_disks=[{
-        "lun": 0,
-        "caching": "ReadWrite",
-        "create_option": "Empty",
-        "disk_size_gb": 10,
-    }],
-    os_profile={
-        "computer_name_prefix": "testvm",
-        "admin_username": "myadmin",
-    },
-    os_profile_linux_config={
-        "disable_password_authentication": True,
-        "sshKeys": [{
-            "path": "/home/myadmin/.ssh/authorized_keys",
-            "keyData": (lambda path: open(path).read())("~/.ssh/demo_key.pub"),
-        }],
-    },
-    network_profiles=[{
-        "name": "mynetworkprofile",
-        "primary": True,
-        "ip_configurations": [{
+    sku=azure.compute.ScaleSetSkuArgs(
+        name="Standard_F2",
+        tier="Standard",
+        capacity=2,
+    ),
+    storage_profile_image_reference=azure.compute.ScaleSetStorageProfileImageReferenceArgs(
+        publisher="Canonical",
+        offer="UbuntuServer",
+        sku="16.04-LTS",
+        version="latest",
+    ),
+    storage_profile_os_disk=azure.compute.ScaleSetStorageProfileOsDiskArgs(
+        name="",
+        caching="ReadWrite",
+        create_option="FromImage",
+        managed_disk_type="Standard_LRS",
+    ),
+    storage_profile_data_disks=[azure.compute.ScaleSetStorageProfileDataDiskArgs(
+        lun=0,
+        caching="ReadWrite",
+        create_option="Empty",
+        disk_size_gb=10,
+    )],
+    os_profile=azure.compute.ScaleSetOsProfileArgs(
+        computer_name_prefix="testvm",
+        admin_username="myadmin",
+    ),
+    os_profile_linux_config=azure.compute.ScaleSetOsProfileLinuxConfigArgs(
+        disable_password_authentication=True,
+        ssh_keys=[azure.compute.ScaleSetOsProfileLinuxConfigSshKeyArgs(
+            path="/home/myadmin/.ssh/authorized_keys",
+            key_data=(lambda path: open(path).read())("~/.ssh/demo_key.pub"),
+        )],
+    ),
+    network_profiles=[azure.compute.ScaleSetNetworkProfileArgs(
+        name="mynetworkprofile",
+        primary=True,
+        ip_configurations=[{
             "name": "TestIPConfiguration",
             "primary": True,
             "subnet_id": example_subnet.id,
             "loadBalancerBackendAddressPoolIds": [bpepool.id],
             "loadBalancerInboundNatRulesIds": [lbnatpool.id],
         }],
-    }],
+    )],
     tags={
         "environment": "staging",
     })
@@ -399,7 +402,7 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
 const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.0.2.0/24",
+    addressPrefixes: ["10.0.2.0/24"],
 });
 const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
     location: exampleResourceGroup.location,
@@ -531,7 +534,10 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "10.0.2.0/24",
+            AddressPrefixes = 
+            {
+                "10.0.2.0/24",
+            },
         });
         var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
         {
@@ -641,7 +647,7 @@ example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
 example_subnet = azure.network.Subnet("exampleSubnet",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="10.0.2.0/24")
+    address_prefixes=["10.0.2.0/24"])
 example_account = azure.storage.Account("exampleAccount",
     resource_group_name=example_resource_group.name,
     location="westus",
@@ -657,43 +663,43 @@ example_scale_set = azure.compute.ScaleSet("exampleScaleSet",
     location="West US",
     resource_group_name=example_resource_group.name,
     upgrade_policy_mode="Manual",
-    sku={
-        "name": "Standard_F2",
-        "tier": "Standard",
-        "capacity": 2,
-    },
-    os_profile={
-        "computer_name_prefix": "testvm",
-        "admin_username": "myadmin",
-    },
-    os_profile_linux_config={
-        "disable_password_authentication": True,
-        "sshKeys": [{
-            "path": "/home/myadmin/.ssh/authorized_keys",
-            "keyData": (lambda path: open(path).read())("~/.ssh/demo_key.pub"),
-        }],
-    },
-    network_profiles=[{
-        "name": "TestNetworkProfile",
-        "primary": True,
-        "ip_configurations": [{
+    sku=azure.compute.ScaleSetSkuArgs(
+        name="Standard_F2",
+        tier="Standard",
+        capacity=2,
+    ),
+    os_profile=azure.compute.ScaleSetOsProfileArgs(
+        computer_name_prefix="testvm",
+        admin_username="myadmin",
+    ),
+    os_profile_linux_config=azure.compute.ScaleSetOsProfileLinuxConfigArgs(
+        disable_password_authentication=True,
+        ssh_keys=[azure.compute.ScaleSetOsProfileLinuxConfigSshKeyArgs(
+            path="/home/myadmin/.ssh/authorized_keys",
+            key_data=(lambda path: open(path).read())("~/.ssh/demo_key.pub"),
+        )],
+    ),
+    network_profiles=[azure.compute.ScaleSetNetworkProfileArgs(
+        name="TestNetworkProfile",
+        primary=True,
+        ip_configurations=[{
             "name": "TestIPConfiguration",
             "primary": True,
             "subnet_id": example_subnet.id,
         }],
-    }],
-    storage_profile_os_disk={
-        "name": "osDiskProfile",
-        "caching": "ReadWrite",
-        "create_option": "FromImage",
-        "vhdContainers": [pulumi.Output.all(example_account.primary_blob_endpoint, example_container.name).apply(lambda primary_blob_endpoint, name: f"{primary_blob_endpoint}{name}")],
-    },
-    storage_profile_image_reference={
-        "publisher": "Canonical",
-        "offer": "UbuntuServer",
-        "sku": "16.04-LTS",
-        "version": "latest",
-    })
+    )],
+    storage_profile_os_disk=azure.compute.ScaleSetStorageProfileOsDiskArgs(
+        name="osDiskProfile",
+        caching="ReadWrite",
+        create_option="FromImage",
+        vhd_containers=[pulumi.Output.all(example_account.primary_blob_endpoint, example_container.name).apply(lambda primary_blob_endpoint, name: f"{primary_blob_endpoint}{name}")],
+    ),
+    storage_profile_image_reference=azure.compute.ScaleSetStorageProfileImageReferenceArgs(
+        publisher="Canonical",
+        offer="UbuntuServer",
+        sku="16.04-LTS",
+        version="latest",
+    ))
 ```
 
 {{% /example %}}
@@ -714,7 +720,7 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
 const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.0.2.0/24",
+    addressPrefixes: ["10.0.2.0/24"],
 });
 const exampleAccount = new azure.storage.Account("exampleAccount", {
     resourceGroupName: exampleResourceGroup.name,
@@ -783,19 +789,19 @@ const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/compute/#ScaleSet">ScaleSet</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/compute/#ScaleSetArgs">ScaleSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/compute/#ScaleSet">ScaleSet</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/compute/#ScaleSetArgs">ScaleSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.ScaleSet">ScaleSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetBootDiagnostics]]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetExtension]]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetIdentity]]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profiles</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetNetworkProfile]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetOsProfile]]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetOsProfileLinuxConfig]]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetOsProfileSecret]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetOsProfileWindowsConfig]]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetPlan]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetRollingUpgradePolicy]]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetSku]]</span> = None<span class="p">, </span><span class="nx">storage_profile_data_disks</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetStorageProfileDataDisk]]</span> = None<span class="p">, </span><span class="nx">storage_profile_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetStorageProfileImageReference]]</span> = None<span class="p">, </span><span class="nx">storage_profile_os_disk</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetStorageProfileOsDisk]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_policy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/compute/#pulumi_azure.compute.ScaleSet">ScaleSet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[ScaleSetBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetExtensionArgs]]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ScaleSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetNetworkProfileArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileLinuxConfigArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetOsProfileSecretArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileWindowsConfigArgs]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ScaleSetPlanArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ScaleSetRollingUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ScaleSetSkuArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetStorageProfileDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">storage_profile_image_reference</span><span class="p">:</span> <span class="nx">Optional[ScaleSetStorageProfileImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile_os_disk</span><span class="p">:</span> <span class="nx">Optional[ScaleSetStorageProfileOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_policy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSet">NewScaleSet</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetArgs">ScaleSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSet">ScaleSet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSet">NewScaleSet</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetArgs">ScaleSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSet">ScaleSet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.ScaleSet.html">ScaleSet</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.ScaleSetArgs.html">ScaleSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.ScaleSet.html">ScaleSet</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.ScaleSetArgs.html">ScaleSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -806,7 +812,7 @@ const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -875,7 +881,7 @@ const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -914,7 +920,7 @@ const exampleScaleSet = new azure.compute.ScaleSet("exampleScaleSet", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -955,7 +961,6 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -963,312 +968,283 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="networkprofiles_csharp">
 <a href="#networkprofiles_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofile">List&lt;Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="osprofile_csharp">
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageprofileosdisk_csharp">
 <a href="#storageprofileosdisk_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Os<wbr>Disk</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="upgradepolicymode_csharp">
 <a href="#upgradepolicymode_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Policy<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="automaticosupgrade_csharp">
 <a href="#automaticosupgrade_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Os<wbr>Upgrade</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdiagnostics_csharp">
 <a href="#bootdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="evictionpolicy_csharp">
 <a href="#evictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extensions_csharp">
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetextension">List&lt;Scale<wbr>Set<wbr>Extension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthprobeid_csharp">
 <a href="#healthprobeid_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofilelinuxconfig_csharp">
 <a href="#osprofilelinuxconfig_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Linux<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofilesecrets_csharp">
 <a href="#osprofilesecrets_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilesecret">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofilewindowsconfig_csharp">
 <a href="#osprofilewindowsconfig_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Windows<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overprovision_csharp">
 <a href="#overprovision_csharp" style="color: inherit; text-decoration: inherit;">Overprovision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="proximityplacementgroupid_csharp">
 <a href="#proximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rollingupgradepolicy_csharp">
 <a href="#rollingupgradepolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="singleplacementgroup_csharp">
 <a href="#singleplacementgroup_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Placement<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageprofiledatadisks_csharp">
 <a href="#storageprofiledatadisks_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Data<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofiledatadisk">List&lt;Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageprofileimagereference_csharp">
 <a href="#storageprofileimagereference_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Image<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zones_csharp">
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Virtual Machines over.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1277,312 +1253,283 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="networkprofiles_go">
 <a href="#networkprofiles_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofile">[]Scale<wbr>Set<wbr>Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="osprofile_go">
 <a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageprofileosdisk_go">
 <a href="#storageprofileosdisk_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Os<wbr>Disk</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="upgradepolicymode_go">
 <a href="#upgradepolicymode_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Policy<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="automaticosupgrade_go">
 <a href="#automaticosupgrade_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Os<wbr>Upgrade</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdiagnostics_go">
 <a href="#bootdiagnostics_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="evictionpolicy_go">
 <a href="#evictionpolicy_go" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extensions_go">
 <a href="#extensions_go" style="color: inherit; text-decoration: inherit;">Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetextension">[]Scale<wbr>Set<wbr>Extension</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthprobeid_go">
 <a href="#healthprobeid_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofilelinuxconfig_go">
 <a href="#osprofilelinuxconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Linux<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofilesecrets_go">
 <a href="#osprofilesecrets_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilesecret">[]Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofilewindowsconfig_go">
 <a href="#osprofilewindowsconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Windows<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overprovision_go">
 <a href="#overprovision_go" style="color: inherit; text-decoration: inherit;">Overprovision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="proximityplacementgroupid_go">
 <a href="#proximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rollingupgradepolicy_go">
 <a href="#rollingupgradepolicy_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="singleplacementgroup_go">
 <a href="#singleplacementgroup_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Placement<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageprofiledatadisks_go">
 <a href="#storageprofiledatadisks_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Data<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofiledatadisk">[]Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageprofileimagereference_go">
 <a href="#storageprofileimagereference_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Image<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zones_go">
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Virtual Machines over.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1591,312 +1538,283 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="networkprofiles_nodejs">
 <a href="#networkprofiles_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofile">Scale<wbr>Set<wbr>Network<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="osprofile_nodejs">
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageprofileosdisk_nodejs">
 <a href="#storageprofileosdisk_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile<wbr>Os<wbr>Disk</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="upgradepolicymode_nodejs">
 <a href="#upgradepolicymode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Policy<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="automaticosupgrade_nodejs">
 <a href="#automaticosupgrade_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Os<wbr>Upgrade</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdiagnostics_nodejs">
 <a href="#bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="evictionpolicy_nodejs">
 <a href="#evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extensions_nodejs">
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetextension">Scale<wbr>Set<wbr>Extension[]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthprobeid_nodejs">
 <a href="#healthprobeid_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofilelinuxconfig_nodejs">
 <a href="#osprofilelinuxconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Linux<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofilesecrets_nodejs">
 <a href="#osprofilesecrets_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilesecret">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofilewindowsconfig_nodejs">
 <a href="#osprofilewindowsconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Windows<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overprovision_nodejs">
 <a href="#overprovision_nodejs" style="color: inherit; text-decoration: inherit;">overprovision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="proximityplacementgroupid_nodejs">
 <a href="#proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rollingupgradepolicy_nodejs">
 <a href="#rollingupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="singleplacementgroup_nodejs">
 <a href="#singleplacementgroup_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Placement<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageprofiledatadisks_nodejs">
 <a href="#storageprofiledatadisks_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile<wbr>Data<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofiledatadisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageprofileimagereference_nodejs">
 <a href="#storageprofileimagereference_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile<wbr>Image<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zones_nodejs">
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Virtual Machines over.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1905,321 +1823,288 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="network_profiles_python">
 <a href="#network_profiles_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofile">List[Scale<wbr>Set<wbr>Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofile">Sequence[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="os_profile_python">
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofile">Dict[Scale<wbr>Set<wbr>Os<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetsku">Dict[Scale<wbr>Set<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storage_profile_os_disk_python">
 <a href="#storage_profile_os_disk_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>os_<wbr>disk</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Dict[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="upgrade_policy_mode_python">
 <a href="#upgrade_policy_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>policy_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="automatic_os_upgrade_python">
 <a href="#automatic_os_upgrade_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>os_<wbr>upgrade</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_diagnostics_python">
 <a href="#boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetbootdiagnostics">Dict[Scale<wbr>Set<wbr>Boot<wbr>Diagnostics]</a></span>
+        <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eviction_policy_python">
 <a href="#eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extensions_python">
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetextension">List[Scale<wbr>Set<wbr>Extension]</a></span>
+        <span class="property-type"><a href="#scalesetextension">Sequence[Scale<wbr>Set<wbr>Extension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="health_probe_id_python">
 <a href="#health_probe_id_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetidentity">Dict[Scale<wbr>Set<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_profile_linux_config_python">
 <a href="#os_profile_linux_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>linux_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Dict[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_profile_secrets_python">
 <a href="#os_profile_secrets_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecret">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecret">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_profile_windows_config_python">
 <a href="#os_profile_windows_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>windows_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Dict[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overprovision_python">
 <a href="#overprovision_python" style="color: inherit; text-decoration: inherit;">overprovision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetplan">Dict[Scale<wbr>Set<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="proximity_placement_group_id_python">
 <a href="#proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolling_upgrade_policy_python">
 <a href="#rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Dict[Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="single_placement_group_python">
 <a href="#single_placement_group_python" style="color: inherit; text-decoration: inherit;">single_<wbr>placement_<wbr>group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_profile_data_disks_python">
 <a href="#storage_profile_data_disks_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>data_<wbr>disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">List[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">Sequence[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_profile_image_reference_python">
 <a href="#storage_profile_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>image_<wbr>reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Dict[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zones_python">
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Virtual Machines over.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ScaleSet resource produces the following output properties:
-
 
 
 
@@ -2230,15 +2115,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2247,15 +2130,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2264,15 +2145,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2281,18 +2160,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2302,20 +2176,20 @@ Get an existing ScaleSet resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/compute/#ScaleSetState">ScaleSetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/compute/#ScaleSet">ScaleSet</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/compute/#ScaleSetState">ScaleSetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/compute/#ScaleSet">ScaleSet</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetBootDiagnostics]]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetExtension]]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetIdentity]]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profiles</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetNetworkProfile]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetOsProfile]]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetOsProfileLinuxConfig]]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetOsProfileSecret]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetOsProfileWindowsConfig]]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetPlan]]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetRollingUpgradePolicy]]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetSku]]</span> = None<span class="p">, </span><span class="nx">storage_profile_data_disks</span><span class="p">:</span> <span class="nx">Optional[List[ScaleSetStorageProfileDataDisk]]</span> = None<span class="p">, </span><span class="nx">storage_profile_image_reference</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetStorageProfileImageReference]]</span> = None<span class="p">, </span><span class="nx">storage_profile_os_disk</span><span class="p">:</span> <span class="nx">Optional[Dict[ScaleSetStorageProfileOsDisk]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_policy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> ScaleSet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automatic_os_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">boot_diagnostics</span><span class="p">:</span> <span class="nx">Optional[ScaleSetBootDiagnosticsArgs]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetExtensionArgs]]</span> = None<span class="p">, </span><span class="nx">health_probe_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ScaleSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profiles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetNetworkProfileArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_linux_config</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileLinuxConfigArgs]</span> = None<span class="p">, </span><span class="nx">os_profile_secrets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetOsProfileSecretArgs]]</span> = None<span class="p">, </span><span class="nx">os_profile_windows_config</span><span class="p">:</span> <span class="nx">Optional[ScaleSetOsProfileWindowsConfigArgs]</span> = None<span class="p">, </span><span class="nx">overprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[ScaleSetPlanArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rolling_upgrade_policy</span><span class="p">:</span> <span class="nx">Optional[ScaleSetRollingUpgradePolicyArgs]</span> = None<span class="p">, </span><span class="nx">single_placement_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ScaleSetSkuArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile_data_disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScaleSetStorageProfileDataDiskArgs]]</span> = None<span class="p">, </span><span class="nx">storage_profile_image_reference</span><span class="p">:</span> <span class="nx">Optional[ScaleSetStorageProfileImageReferenceArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile_os_disk</span><span class="p">:</span> <span class="nx">Optional[ScaleSetStorageProfileOsDiskArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upgrade_policy_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> ScaleSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScaleSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetState">ScaleSetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSet">ScaleSet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScaleSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetState">ScaleSetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSet">ScaleSet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.ScaleSet.html">ScaleSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.ScaleSetState.html">ScaleSetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.ScaleSet.html">ScaleSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.ScaleSetState.html">ScaleSetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2417,7 +2291,6 @@ Get an existing ScaleSet resource's state with the given name, ID, and optional 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2425,312 +2298,283 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_automaticosupgrade_csharp">
 <a href="#state_automaticosupgrade_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Os<wbr>Upgrade</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootdiagnostics_csharp">
 <a href="#state_bootdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_evictionpolicy_csharp">
 <a href="#state_evictionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extensions_csharp">
 <a href="#state_extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetextension">List&lt;Scale<wbr>Set<wbr>Extension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthprobeid_csharp">
 <a href="#state_healthprobeid_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_identity_csharp">
 <a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_csharp">
 <a href="#state_licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkprofiles_csharp">
 <a href="#state_networkprofiles_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofile">List&lt;Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_osprofile_csharp">
 <a href="#state_osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_osprofilelinuxconfig_csharp">
 <a href="#state_osprofilelinuxconfig_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Linux<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_osprofilesecrets_csharp">
 <a href="#state_osprofilesecrets_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilesecret">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_osprofilewindowsconfig_csharp">
 <a href="#state_osprofilewindowsconfig_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Windows<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_overprovision_csharp">
 <a href="#state_overprovision_csharp" style="color: inherit; text-decoration: inherit;">Overprovision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
 <a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_proximityplacementgroupid_csharp">
 <a href="#state_proximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rollingupgradepolicy_csharp">
 <a href="#state_rollingupgradepolicy_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_singleplacementgroup_csharp">
 <a href="#state_singleplacementgroup_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Placement<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sku_csharp">
 <a href="#state_sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageprofiledatadisks_csharp">
 <a href="#state_storageprofiledatadisks_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Data<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofiledatadisk">List&lt;Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageprofileimagereference_csharp">
 <a href="#state_storageprofileimagereference_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Image<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageprofileosdisk_csharp">
 <a href="#state_storageprofileosdisk_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Os<wbr>Disk</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_upgradepolicymode_csharp">
 <a href="#state_upgradepolicymode_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Policy<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zones_csharp">
 <a href="#state_zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Virtual Machines over.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2739,312 +2583,283 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_automaticosupgrade_go">
 <a href="#state_automaticosupgrade_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Os<wbr>Upgrade</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootdiagnostics_go">
 <a href="#state_bootdiagnostics_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_evictionpolicy_go">
 <a href="#state_evictionpolicy_go" style="color: inherit; text-decoration: inherit;">Eviction<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extensions_go">
 <a href="#state_extensions_go" style="color: inherit; text-decoration: inherit;">Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetextension">[]Scale<wbr>Set<wbr>Extension</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthprobeid_go">
 <a href="#state_healthprobeid_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Probe<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_identity_go">
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_go">
 <a href="#state_licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkprofiles_go">
 <a href="#state_networkprofiles_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofile">[]Scale<wbr>Set<wbr>Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_osprofile_go">
 <a href="#state_osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_osprofilelinuxconfig_go">
 <a href="#state_osprofilelinuxconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Linux<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_osprofilesecrets_go">
 <a href="#state_osprofilesecrets_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilesecret">[]Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_osprofilewindowsconfig_go">
 <a href="#state_osprofilewindowsconfig_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile<wbr>Windows<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_overprovision_go">
 <a href="#state_overprovision_go" style="color: inherit; text-decoration: inherit;">Overprovision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_plan_go">
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_proximityplacementgroupid_go">
 <a href="#state_proximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rollingupgradepolicy_go">
 <a href="#state_rollingupgradepolicy_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Upgrade<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_singleplacementgroup_go">
 <a href="#state_singleplacementgroup_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Placement<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sku_go">
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageprofiledatadisks_go">
 <a href="#state_storageprofiledatadisks_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Data<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofiledatadisk">[]Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageprofileimagereference_go">
 <a href="#state_storageprofileimagereference_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Image<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageprofileosdisk_go">
 <a href="#state_storageprofileosdisk_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile<wbr>Os<wbr>Disk</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_upgradepolicymode_go">
 <a href="#state_upgradepolicymode_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Policy<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zones_go">
 <a href="#state_zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Virtual Machines over.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3053,312 +2868,283 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_automaticosupgrade_nodejs">
 <a href="#state_automaticosupgrade_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Os<wbr>Upgrade</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootdiagnostics_nodejs">
 <a href="#state_bootdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_evictionpolicy_nodejs">
 <a href="#state_evictionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">eviction<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extensions_nodejs">
 <a href="#state_extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetextension">Scale<wbr>Set<wbr>Extension[]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthprobeid_nodejs">
 <a href="#state_healthprobeid_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Probe<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_identity_nodejs">
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_nodejs">
 <a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkprofiles_nodejs">
 <a href="#state_networkprofiles_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofile">Scale<wbr>Set<wbr>Network<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_osprofile_nodejs">
 <a href="#state_osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_osprofilelinuxconfig_nodejs">
 <a href="#state_osprofilelinuxconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Linux<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_osprofilesecrets_nodejs">
 <a href="#state_osprofilesecrets_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilesecret">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_osprofilewindowsconfig_nodejs">
 <a href="#state_osprofilewindowsconfig_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile<wbr>Windows<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_overprovision_nodejs">
 <a href="#state_overprovision_nodejs" style="color: inherit; text-decoration: inherit;">overprovision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_plan_nodejs">
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_proximityplacementgroupid_nodejs">
 <a href="#state_proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rollingupgradepolicy_nodejs">
 <a href="#state_rollingupgradepolicy_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Upgrade<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_singleplacementgroup_nodejs">
 <a href="#state_singleplacementgroup_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Placement<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sku_nodejs">
 <a href="#state_sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageprofiledatadisks_nodejs">
 <a href="#state_storageprofiledatadisks_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile<wbr>Data<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofiledatadisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageprofileimagereference_nodejs">
 <a href="#state_storageprofileimagereference_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile<wbr>Image<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageprofileosdisk_nodejs">
 <a href="#state_storageprofileosdisk_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile<wbr>Os<wbr>Disk</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_upgradepolicymode_nodejs">
 <a href="#state_upgradepolicymode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Policy<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zones_nodejs">
 <a href="#state_zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Virtual Machines over.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3367,309 +3153,281 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_automatic_os_upgrade_python">
 <a href="#state_automatic_os_upgrade_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>os_<wbr>upgrade</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatic OS patches can be applied by Azure to your scaleset. This is particularly useful when `upgrade_policy_mode` is set to `Rolling`. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boot_diagnostics_python">
 <a href="#state_boot_diagnostics_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetbootdiagnostics">Dict[Scale<wbr>Set<wbr>Boot<wbr>Diagnostics]</a></span>
+        <span class="property-type"><a href="#scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boot diagnostics profile block as referenced below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_eviction_policy_python">
 <a href="#state_eviction_policy_python" style="color: inherit; text-decoration: inherit;">eviction_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the eviction policy for Virtual Machines in this Scale Set. Possible values are `Deallocate` and `Delete`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extensions_python">
 <a href="#state_extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetextension">List[Scale<wbr>Set<wbr>Extension]</a></span>
+        <span class="property-type"><a href="#scalesetextension">Sequence[Scale<wbr>Set<wbr>Extension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to add extension profiles to the scale set. Each `extension` block supports the fields documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_health_probe_id_python">
 <a href="#state_health_probe_id_python" style="color: inherit; text-decoration: inherit;">health_<wbr>probe_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the load balancer health probe. Required when using `Rolling` as your `upgrade_policy_mode`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_identity_python">
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetidentity">Dict[Scale<wbr>Set<wbr>Identity]</a></span>
+        <span class="property-type"><a href="#scalesetidentity">Scale<wbr>Set<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_license_type_python">
 <a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Windows OS license type. If supplied, the only allowed values are `Windows_Client` and `Windows_Server`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_profiles_python">
 <a href="#state_network_profiles_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofile">List[Scale<wbr>Set<wbr>Network<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofile">Sequence[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of network profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_os_profile_python">
 <a href="#state_os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofile">Dict[Scale<wbr>Set<wbr>Os<wbr>Profile]</a></span>
+        <span class="property-type"><a href="#scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Virtual Machine OS Profile block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_os_profile_linux_config_python">
 <a href="#state_os_profile_linux_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>linux_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Dict[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Linux config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_os_profile_secrets_python">
 <a href="#state_os_profile_secrets_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecret">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecret">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Secret blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_os_profile_windows_config_python">
 <a href="#state_os_profile_windows_config_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile_<wbr>windows_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Dict[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Windows config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_overprovision_python">
 <a href="#state_overprovision_python" style="color: inherit; text-decoration: inherit;">overprovision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the virtual machine scale set should be overprovisioned. Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetplan">Dict[Scale<wbr>Set<wbr>Plan]</a></span>
+        <span class="property-type"><a href="#scalesetplan">Scale<wbr>Set<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A plan block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the priority for the Virtual Machines in the Scale Set. Defaults to `Regular`. Possible values are `Low` and `Regular`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_proximity_placement_group_id_python">
 <a href="#state_proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Proximity Placement Group to which this Virtual Machine should be assigned. Changing this forces a new resource to be created
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rolling_upgrade_policy_python">
 <a href="#state_rolling_upgrade_policy_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>upgrade_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Dict[Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `rolling_upgrade_policy` block as defined below. This is only applicable when the `upgrade_policy_mode` is `Rolling`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_single_placement_group_python">
 <a href="#state_single_placement_group_python" style="color: inherit; text-decoration: inherit;">single_<wbr>placement_<wbr>group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See [documentation](http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups) for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sku_python">
 <a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetsku">Dict[Scale<wbr>Set<wbr>Sku]</a></span>
+        <span class="property-type"><a href="#scalesetsku">Scale<wbr>Set<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A sku block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storage_profile_data_disks_python">
 <a href="#state_storage_profile_data_disks_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>data_<wbr>disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">List[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofiledatadisk">Sequence[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A storage profile data disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storage_profile_image_reference_python">
 <a href="#state_storage_profile_image_reference_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>image_<wbr>reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Dict[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile image reference block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storage_profile_os_disk_python">
 <a href="#state_storage_profile_os_disk_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile_<wbr>os_<wbr>disk</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Dict[Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage profile os disk block as documented below
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_upgrade_policy_mode_python">
 <a href="#state_upgrade_policy_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>policy_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the mode of an upgrade to virtual machines in the scale set. Possible values, `Rolling`, `Manual`, or `Automatic`. When choosing `Rolling`, you will need to set a health probe.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zones_python">
 <a href="#state_zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A collection of availability zones to spread the Virtual Machines over.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -3678,11 +3436,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</h4>
@@ -3693,11 +3448,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetBootDiagnosticsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetBootDiagnosticsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetBootDiagnosticsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetBootDiagnostics.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3707,25 +3461,22 @@ The following state arguments are supported:
             title="Required">
         <span id="storageuri_csharp">
 <a href="#storageuri_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3734,25 +3485,22 @@ The following state arguments are supported:
             title="Required">
         <span id="storageuri_go">
 <a href="#storageuri_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3761,55 +3509,46 @@ The following state arguments are supported:
             title="Required">
         <span id="storageuri_nodejs">
 <a href="#storageuri_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="storageuri_python">
-<a href="#storageuri_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Uri</a>
-</span> 
+        <span id="storage_uri_python">
+<a href="#storage_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetextension">Scale<wbr>Set<wbr>Extension</h4>
 {{% choosable language nodejs %}}
@@ -3819,11 +3558,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetExtensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetExtensionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetExtensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetExtension.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3833,93 +3571,84 @@ The following state arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the extension.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can be found using the Azure CLI.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="typehandlerversion_csharp">
 <a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_csharp">
 <a href="#autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to use the latest minor version available.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_csharp">
 <a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protected_settings passed to the extension, like settings, these are specified as a JSON object in a string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisionafterextensions_csharp">
 <a href="#provisionafterextensions_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>After<wbr>Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a dependency array of extensions required to be executed before, the array stores the name of each extension.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are specified as a JSON object in a string.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3928,93 +3657,84 @@ The following state arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the extension.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can be found using the Azure CLI.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="typehandlerversion_go">
 <a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_go">
 <a href="#autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to use the latest minor version available.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_go">
 <a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protected_settings passed to the extension, like settings, these are specified as a JSON object in a string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisionafterextensions_go">
 <a href="#provisionafterextensions_go" style="color: inherit; text-decoration: inherit;">Provision<wbr>After<wbr>Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a dependency array of extensions required to be executed before, the array stores the name of each extension.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are specified as a JSON object in a string.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4023,93 +3743,84 @@ The following state arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the extension.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can be found using the Azure CLI.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="typehandlerversion_nodejs">
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_nodejs">
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to use the latest minor version available.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_nodejs">
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protected_settings passed to the extension, like settings, these are specified as a JSON object in a string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisionafterextensions_nodejs">
 <a href="#provisionafterextensions_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>After<wbr>Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a dependency array of extensions required to be executed before, the array stores the name of each extension.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are specified as a JSON object in a string.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4118,96 +3829,84 @@ The following state arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the extension.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The publisher of the extension, available publishers can be found by using the Azure CLI.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of extension, available types for a publisher can be found using the Azure CLI.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_handler_version_python">
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auto_upgrade_minor_version_python">
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to use the latest minor version available.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_settings_python">
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protected_settings passed to the extension, like settings, these are specified as a JSON object in a string.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provision_after_extensions_python">
 <a href="#provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a dependency array of extensions required to be executed before, the array stores the name of each extension.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The settings passed to the extension, these are specified as a JSON object in a string.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetidentity">Scale<wbr>Set<wbr>Identity</h4>
 {{% choosable language nodejs %}}
@@ -4217,11 +3916,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetIdentityOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetIdentityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetIdentity.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4231,37 +3929,33 @@ The following state arguments are supported:
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type to be assigned to the scale set. Allowable values are `SystemAssigned` and `UserAssigned`. For the `SystemAssigned` identity the scale set's Service Principal ID (SPN) can be retrieved after the scale set has been created. See [documentation](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityids_csharp">
 <a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned to the VMSS. Required if `type` is `UserAssigned`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4270,37 +3964,33 @@ The following state arguments are supported:
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type to be assigned to the scale set. Allowable values are `SystemAssigned` and `UserAssigned`. For the `SystemAssigned` identity the scale set's Service Principal ID (SPN) can be retrieved after the scale set has been created. See [documentation](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityids_go">
 <a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned to the VMSS. Required if `type` is `UserAssigned`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4309,37 +3999,33 @@ The following state arguments are supported:
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type to be assigned to the scale set. Allowable values are `SystemAssigned` and `UserAssigned`. For the `SystemAssigned` identity the scale set's Service Principal ID (SPN) can be retrieved after the scale set has been created. See [documentation](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityids_nodejs">
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned to the VMSS. Required if `type` is `UserAssigned`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4348,40 +4034,33 @@ The following state arguments are supported:
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type to be assigned to the scale set. Allowable values are `SystemAssigned` and `UserAssigned`. For the `SystemAssigned` identity the scale set's Service Principal ID (SPN) can be retrieved after the scale set has been created. See [documentation](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="identityids_python">
-<a href="#identityids_python" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
-</span> 
+        <span id="identity_ids_python">
+<a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of user managed identity ids to be assigned to the VMSS. Required if `type` is `UserAssigned`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetnetworkprofile">Scale<wbr>Set<wbr>Network<wbr>Profile</h4>
 {{% choosable language nodejs %}}
@@ -4391,11 +4070,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetNetworkProfileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetNetworkProfileOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetNetworkProfileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetNetworkProfile.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4405,82 +4083,74 @@ The following state arguments are supported:
             title="Required">
         <span id="ipconfigurations_csharp">
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">List&lt;Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An ip_configuration block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the network interface configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primary_csharp">
 <a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether network interfaces created from the network interface configuration will be the primary NIC of the VM.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="acceleratednetworking_csharp">
 <a href="#acceleratednetworking_csharp" style="color: inherit; text-decoration: inherit;">Accelerated<wbr>Networking</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable accelerated networking or not. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnssettings_csharp">
 <a href="#dnssettings_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A dns_settings block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipforwarding_csharp">
 <a href="#ipforwarding_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Forwarding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether IP forwarding is enabled on this NIC. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networksecuritygroupid_csharp">
 <a href="#networksecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the network security group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4489,82 +4159,74 @@ The following state arguments are supported:
             title="Required">
         <span id="ipconfigurations_go">
 <a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">[]Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An ip_configuration block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the network interface configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primary_go">
 <a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether network interfaces created from the network interface configuration will be the primary NIC of the VM.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="acceleratednetworking_go">
 <a href="#acceleratednetworking_go" style="color: inherit; text-decoration: inherit;">Accelerated<wbr>Networking</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable accelerated networking or not. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnssettings_go">
 <a href="#dnssettings_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A dns_settings block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipforwarding_go">
 <a href="#ipforwarding_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Forwarding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether IP forwarding is enabled on this NIC. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networksecuritygroupid_go">
 <a href="#networksecuritygroupid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the network security group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4573,82 +4235,74 @@ The following state arguments are supported:
             title="Required">
         <span id="ipconfigurations_nodejs">
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}An ip_configuration block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the network interface configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primary_nodejs">
 <a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether network interfaces created from the network interface configuration will be the primary NIC of the VM.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="acceleratednetworking_nodejs">
 <a href="#acceleratednetworking_nodejs" style="color: inherit; text-decoration: inherit;">accelerated<wbr>Networking</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable accelerated networking or not. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnssettings_nodejs">
 <a href="#dnssettings_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A dns_settings block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipforwarding_nodejs">
 <a href="#ipforwarding_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Forwarding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether IP forwarding is enabled on this NIC. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networksecuritygroupid_nodejs">
 <a href="#networksecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the network security group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4657,85 +4311,74 @@ The following state arguments are supported:
             title="Required">
         <span id="ip_configurations_python">
 <a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">List[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfiguration">Sequence[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ip_configuration block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the network interface configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primary_python">
 <a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether network interfaces created from the network interface configuration will be the primary NIC of the VM.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="acceleratednetworking_python">
-<a href="#acceleratednetworking_python" style="color: inherit; text-decoration: inherit;">accelerated<wbr>Networking</a>
-</span> 
+        <span id="accelerated_networking_python">
+<a href="#accelerated_networking_python" style="color: inherit; text-decoration: inherit;">accelerated_<wbr>networking</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable accelerated networking or not. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="dnssettings_python">
-<a href="#dnssettings_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Settings</a>
-</span> 
+        <span id="dns_settings_python">
+<a href="#dns_settings_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>settings</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Dict[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A dns_settings block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ipforwarding_python">
-<a href="#ipforwarding_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Forwarding</a>
-</span> 
+        <span id="ip_forwarding_python">
+<a href="#ip_forwarding_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>forwarding</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether IP forwarding is enabled on this NIC. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_security_group_id_python">
 <a href="#network_security_group_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier for the network security group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings</h4>
 {{% choosable language nodejs %}}
@@ -4745,11 +4388,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetNetworkProfileDnsSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetNetworkProfileDnsSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetNetworkProfileDnsSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetNetworkProfileDnsSettings.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4759,16 +4401,14 @@ The following state arguments are supported:
             title="Required">
         <span id="dnsservers_csharp">
 <a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of dns servers.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4777,16 +4417,14 @@ The following state arguments are supported:
             title="Required">
         <span id="dnsservers_go">
 <a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of dns servers.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4795,16 +4433,14 @@ The following state arguments are supported:
             title="Required">
         <span id="dnsservers_nodejs">
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of dns servers.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4813,19 +4449,14 @@ The following state arguments are supported:
             title="Required">
         <span id="dns_servers_python">
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of dns servers.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetnetworkprofileipconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
@@ -4835,11 +4466,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetNetworkProfileIpConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetNetworkProfileIpConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetNetworkProfileIpConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetNetworkProfileIpConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4849,93 +4479,84 @@ The following state arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies name of the IP configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primary_csharp">
 <a href="#primary_csharp" style="color: inherit; text-decoration: inherit;">Primary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if this ip_configuration is the primary one.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationgatewaybackendaddresspoolids_csharp">
 <a href="#applicationgatewaybackendaddresspoolids_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets can use the same application gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationsecuritygroupids_csharp">
 <a href="#applicationsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies up to `20` application security group IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loadbalancerbackendaddresspoolids_csharp">
 <a href="#loadbalancerbackendaddresspoolids_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loadbalancerinboundnatrulesids_csharp">
 <a href="#loadbalancerinboundnatrulesids_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddressconfiguration_csharp">
 <a href="#publicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration. The public_ip_address_configuration is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4944,93 +4565,84 @@ The following state arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies name of the IP configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primary_go">
 <a href="#primary_go" style="color: inherit; text-decoration: inherit;">Primary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if this ip_configuration is the primary one.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationgatewaybackendaddresspoolids_go">
 <a href="#applicationgatewaybackendaddresspoolids_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets can use the same application gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationsecuritygroupids_go">
 <a href="#applicationsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Security<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies up to `20` application security group IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loadbalancerbackendaddresspoolids_go">
 <a href="#loadbalancerbackendaddresspoolids_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loadbalancerinboundnatrulesids_go">
 <a href="#loadbalancerinboundnatrulesids_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddressconfiguration_go">
 <a href="#publicipaddressconfiguration_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration. The public_ip_address_configuration is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5039,93 +4651,84 @@ The following state arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies name of the IP configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primary_nodejs">
 <a href="#primary_nodejs" style="color: inherit; text-decoration: inherit;">primary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if this ip_configuration is the primary one.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationgatewaybackendaddresspoolids_nodejs">
 <a href="#applicationgatewaybackendaddresspoolids_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets can use the same application gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationsecuritygroupids_nodejs">
 <a href="#applicationsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies up to `20` application security group IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loadbalancerbackendaddresspoolids_nodejs">
 <a href="#loadbalancerbackendaddresspoolids_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loadbalancerinboundnatrulesids_nodejs">
 <a href="#loadbalancerinboundnatrulesids_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddressconfiguration_nodejs">
 <a href="#publicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration. The public_ip_address_configuration is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5134,96 +4737,84 @@ The following state arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies name of the IP configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primary_python">
 <a href="#primary_python" style="color: inherit; text-decoration: inherit;">primary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if this ip_configuration is the primary one.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the subnet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationgatewaybackendaddresspoolids_python">
-<a href="#applicationgatewaybackendaddresspoolids_python" style="color: inherit; text-decoration: inherit;">application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
-</span> 
+        <span id="application_gateway_backend_address_pool_ids_python">
+<a href="#application_gateway_backend_address_pool_ids_python" style="color: inherit; text-decoration: inherit;">application_<wbr>gateway_<wbr>backend_<wbr>address_<wbr>pool_<wbr>ids</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets can use the same application gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationsecuritygroupids_python">
-<a href="#applicationsecuritygroupids_python" style="color: inherit; text-decoration: inherit;">application<wbr>Security<wbr>Group<wbr>Ids</a>
-</span> 
+        <span id="application_security_group_ids_python">
+<a href="#application_security_group_ids_python" style="color: inherit; text-decoration: inherit;">application_<wbr>security_<wbr>group_<wbr>ids</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies up to `20` application security group IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerbackendaddresspoolids_python">
-<a href="#loadbalancerbackendaddresspoolids_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Ids</a>
-</span> 
+        <span id="load_balancer_backend_address_pool_ids_python">
+<a href="#load_balancer_backend_address_pool_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>backend_<wbr>address_<wbr>pool_<wbr>ids</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="loadbalancerinboundnatrulesids_python">
-<a href="#loadbalancerinboundnatrulesids_python" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Inbound<wbr>Nat<wbr>Rules<wbr>Ids</a>
-</span> 
+        <span id="load_balancer_inbound_nat_rules_ids_python">
+<a href="#load_balancer_inbound_nat_rules_ids_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>inbound_<wbr>nat_<wbr>rules_<wbr>ids</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="publicipaddressconfiguration_python">
-<a href="#publicipaddressconfiguration_python" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Configuration</a>
-</span> 
+        <span id="public_ip_address_configuration_python">
+<a href="#public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>configuration</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Dict[Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration. The public_ip_address_configuration is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
@@ -5233,11 +4824,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetNetworkProfileIpConfigurationPublicIpAddressConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetNetworkProfileIpConfigurationPublicIpAddressConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetNetworkProfileIpConfigurationPublicIpAddressConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetNetworkProfileIpConfigurationPublicIpAddressConfiguration.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5247,38 +4837,34 @@ The following state arguments are supported:
             title="Required">
         <span id="domainnamelabel_csharp">
 <a href="#domainnamelabel_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name label for the dns settings.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="idletimeout_csharp">
 <a href="#idletimeout_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The idle timeout in minutes. This value must be between 4 and 30.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the public ip address configuration
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5287,38 +4873,34 @@ The following state arguments are supported:
             title="Required">
         <span id="domainnamelabel_go">
 <a href="#domainnamelabel_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name<wbr>Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name label for the dns settings.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="idletimeout_go">
 <a href="#idletimeout_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The idle timeout in minutes. This value must be between 4 and 30.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the public ip address configuration
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5327,38 +4909,34 @@ The following state arguments are supported:
             title="Required">
         <span id="domainnamelabel_nodejs">
 <a href="#domainnamelabel_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name<wbr>Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name label for the dns settings.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="idletimeout_nodejs">
 <a href="#idletimeout_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The idle timeout in minutes. This value must be between 4 and 30.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the public ip address configuration
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5367,41 +4945,34 @@ The following state arguments are supported:
             title="Required">
         <span id="domain_name_label_python">
 <a href="#domain_name_label_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name_<wbr>label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain name label for the dns settings.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="idletimeout_python">
-<a href="#idletimeout_python" style="color: inherit; text-decoration: inherit;">idle<wbr>Timeout</a>
-</span> 
+        <span id="idle_timeout_python">
+<a href="#idle_timeout_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>timeout</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The idle timeout in minutes. This value must be between 4 and 30.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the public ip address configuration
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile</h4>
 {{% choosable language nodejs %}}
@@ -5411,11 +4982,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetOsProfileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetOsProfile.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5425,49 +4995,44 @@ The following state arguments are supported:
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the administrator account name to use for all the instances of virtual machines in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="computernameprefix_csharp">
 <a href="#computernameprefix_csharp" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the computer name prefix for all of the virtual machines in the scale set. Computer name prefixes must be 1 to 9 characters long for windows images and 1 - 58 for linux. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminpassword_csharp">
 <a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the administrator password to use for all the instances of virtual machines in a scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customdata_csharp">
 <a href="#customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies custom data to supply to the machine. On linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5476,49 +5041,44 @@ The following state arguments are supported:
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the administrator account name to use for all the instances of virtual machines in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="computernameprefix_go">
 <a href="#computernameprefix_go" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the computer name prefix for all of the virtual machines in the scale set. Computer name prefixes must be 1 to 9 characters long for windows images and 1 - 58 for linux. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminpassword_go">
 <a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the administrator password to use for all the instances of virtual machines in a scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customdata_go">
 <a href="#customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies custom data to supply to the machine. On linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5527,49 +5087,44 @@ The following state arguments are supported:
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the administrator account name to use for all the instances of virtual machines in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="computernameprefix_nodejs">
 <a href="#computernameprefix_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the computer name prefix for all of the virtual machines in the scale set. Computer name prefixes must be 1 to 9 characters long for windows images and 1 - 58 for linux. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminpassword_nodejs">
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the administrator password to use for all the instances of virtual machines in a scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customdata_nodejs">
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies custom data to supply to the machine. On linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5578,52 +5133,44 @@ The following state arguments are supported:
             title="Required">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the administrator account name to use for all the instances of virtual machines in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="computer_name_prefix_python">
 <a href="#computer_name_prefix_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the computer name prefix for all of the virtual machines in the scale set. Computer name prefixes must be 1 to 9 characters long for windows images and 1 - 58 for linux. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="admin_password_python">
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the administrator password to use for all the instances of virtual machines in a scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_data_python">
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies custom data to supply to the machine. On linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -5633,11 +5180,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileLinuxConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileLinuxConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetOsProfileLinuxConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileLinuxConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5647,27 +5193,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="disablepasswordauthentication_csharp">
 <a href="#disablepasswordauthentication_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Password<wbr>Authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkeys_csharp">
 <a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of `path` and `key_data` to be placed on the virtual machine.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5676,27 +5219,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="disablepasswordauthentication_go">
 <a href="#disablepasswordauthentication_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Password<wbr>Authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkeys_go">
 <a href="#sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">[]Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of `path` and `key_data` to be placed on the virtual machine.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5705,27 +5245,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="disablepasswordauthentication_nodejs">
 <a href="#disablepasswordauthentication_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Password<wbr>Authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkeys_nodejs">
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of `path` and `key_data` to be placed on the virtual machine.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5734,30 +5271,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="disable_password_authentication_python">
 <a href="#disable_password_authentication_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>password_<wbr>authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
-</span> 
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilelinuxconfigsshkey">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a collection of `path` and `key_data` to be placed on the virtual machine.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetosprofilelinuxconfigsshkey">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key</h4>
 {{% choosable language nodejs %}}
@@ -5767,11 +5298,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileLinuxConfigSshKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileLinuxConfigSshKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetOsProfileLinuxConfigSshKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileLinuxConfigSshKey.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5781,25 +5311,22 @@ The following state arguments are supported:
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keydata_csharp">
 <a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5808,25 +5335,22 @@ The following state arguments are supported:
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keydata_go">
 <a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5835,25 +5359,22 @@ The following state arguments are supported:
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keydata_nodejs">
 <a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5862,28 +5383,22 @@ The following state arguments are supported:
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="keydata_python">
-<a href="#keydata_python" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
-</span> 
+        <span id="key_data_python">
+<a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetosprofilesecret">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret</h4>
 {{% choosable language nodejs %}}
@@ -5893,11 +5408,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileSecretArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileSecretOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetOsProfileSecretArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileSecret.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5907,27 +5421,24 @@ The following state arguments are supported:
             title="Required">
         <span id="sourcevaultid_csharp">
 <a href="#sourcevaultid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the key vault to use.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultcertificates_csharp">
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of Vault Certificates as documented below
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5936,27 +5447,24 @@ The following state arguments are supported:
             title="Required">
         <span id="sourcevaultid_go">
 <a href="#sourcevaultid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the key vault to use.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultcertificates_go">
 <a href="#vaultcertificates_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">[]Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}A collection of Vault Certificates as documented below
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5965,59 +5473,50 @@ The following state arguments are supported:
             title="Required">
         <span id="sourcevaultid_nodejs">
 <a href="#sourcevaultid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the key vault to use.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultcertificates_nodejs">
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Vault Certificates as documented below
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcevaultid_python">
-<a href="#sourcevaultid_python" style="color: inherit; text-decoration: inherit;">source<wbr>Vault<wbr>Id</a>
-</span> 
+        <span id="source_vault_id_python">
+<a href="#source_vault_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the key vault to use.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="vaultcertificates_python">
-<a href="#vaultcertificates_python" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
-</span> 
+        <span id="vault_certificates_python">
+<a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilesecretvaultcertificate">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of Vault Certificates as documented below
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetosprofilesecretvaultcertificate">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
@@ -6027,11 +5526,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileSecretVaultCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileSecretVaultCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetOsProfileSecretVaultCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileSecretVaultCertificate.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6041,27 +5539,24 @@ The following state arguments are supported:
             title="Required">
         <span id="certificateurl_csharp">
 <a href="#certificateurl_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be `data`, `dataType` and `password`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificatestore_csharp">
 <a href="#certificatestore_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the certificate store on the Virtual Machine where the certificate should be added to.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6070,27 +5565,24 @@ The following state arguments are supported:
             title="Required">
         <span id="certificateurl_go">
 <a href="#certificateurl_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be `data`, `dataType` and `password`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificatestore_go">
 <a href="#certificatestore_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the certificate store on the Virtual Machine where the certificate should be added to.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6099,59 +5591,50 @@ The following state arguments are supported:
             title="Required">
         <span id="certificateurl_nodejs">
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be `data`, `dataType` and `password`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificatestore_nodejs">
 <a href="#certificatestore_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the certificate store on the Virtual Machine where the certificate should be added to.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
-</span> 
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be `data`, `dataType` and `password`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatestore_python">
-<a href="#certificatestore_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Store</a>
-</span> 
+        <span id="certificate_store_python">
+<a href="#certificate_store_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>store</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the certificate store on the Virtual Machine where the certificate should be added to.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -6161,11 +5644,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileWindowsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileWindowsConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetOsProfileWindowsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileWindowsConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6175,49 +5657,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="additionalunattendconfigs_csharp">
 <a href="#additionalunattendconfigs_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An Additional Unattended Config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableautomaticupgrades_csharp">
 <a href="#enableautomaticupgrades_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Upgrades</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether virtual machines in the scale set are enabled for automatic updates.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_csharp">
 <a href="#provisionvmagent_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>Vm<wbr>Agent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether virtual machine agent should be provisioned on the virtual machines in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="winrms_csharp">
 <a href="#winrms_csharp" style="color: inherit; text-decoration: inherit;">Winrms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">List&lt;Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of WinRM configuration blocks as documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6226,49 +5703,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="additionalunattendconfigs_go">
 <a href="#additionalunattendconfigs_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Unattend<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">[]Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}An Additional Unattended Config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableautomaticupgrades_go">
 <a href="#enableautomaticupgrades_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Upgrades</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether virtual machines in the scale set are enabled for automatic updates.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_go">
 <a href="#provisionvmagent_go" style="color: inherit; text-decoration: inherit;">Provision<wbr>Vm<wbr>Agent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether virtual machine agent should be provisioned on the virtual machines in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="winrms_go">
 <a href="#winrms_go" style="color: inherit; text-decoration: inherit;">Winrms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">[]Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm</a></span>
     </dt>
     <dd>{{% md %}}A collection of WinRM configuration blocks as documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6277,103 +5749,90 @@ The following state arguments are supported:
             title="Optional">
         <span id="additionalunattendconfigs_nodejs">
 <a href="#additionalunattendconfigs_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}An Additional Unattended Config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableautomaticupgrades_nodejs">
 <a href="#enableautomaticupgrades_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Upgrades</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether virtual machines in the scale set are enabled for automatic updates.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_nodejs">
 <a href="#provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>Vm<wbr>Agent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether virtual machine agent should be provisioned on the virtual machines in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="winrms_nodejs">
 <a href="#winrms_nodejs" style="color: inherit; text-decoration: inherit;">winrms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of WinRM configuration blocks as documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalunattendconfigs_python">
-<a href="#additionalunattendconfigs_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Unattend<wbr>Configs</a>
-</span> 
+        <span id="additional_unattend_configs_python">
+<a href="#additional_unattend_configs_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>unattend_<wbr>configs</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigadditionalunattendconfig">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An Additional Unattended Config block as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="enableautomaticupgrades_python">
-<a href="#enableautomaticupgrades_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Upgrades</a>
-</span> 
+        <span id="enable_automatic_upgrades_python">
+<a href="#enable_automatic_upgrades_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>upgrades</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether virtual machines in the scale set are enabled for automatic updates.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provision_vm_agent_python">
 <a href="#provision_vm_agent_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>vm_<wbr>agent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether virtual machine agent should be provisioned on the virtual machines in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="winrms_python">
 <a href="#winrms_python" style="color: inherit; text-decoration: inherit;">winrms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">List[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm]</a></span>
+        <span class="property-type"><a href="#scalesetosprofilewindowsconfigwinrm">Sequence[Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of WinRM configuration blocks as documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetosprofilewindowsconfigadditionalunattendconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -6383,11 +5842,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileWindowsConfigAdditionalUnattendConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileWindowsConfigAdditionalUnattendConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetOsProfileWindowsConfigAdditionalUnattendConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileWindowsConfigAdditionalUnattendConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6397,49 +5855,44 @@ The following state arguments are supported:
             title="Required">
         <span id="component_csharp">
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the component to configure with the added content. The only allowable value is `Microsoft-Windows-Shell-Setup`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pass_csharp">
 <a href="#pass_csharp" style="color: inherit; text-decoration: inherit;">Pass</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the pass that the content applies to. The only allowable value is `oobeSystem`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="settingname_csharp">
 <a href="#settingname_csharp" style="color: inherit; text-decoration: inherit;">Setting<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: `FirstLogonCommands` and `AutoLogon`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6448,49 +5901,44 @@ The following state arguments are supported:
             title="Required">
         <span id="component_go">
 <a href="#component_go" style="color: inherit; text-decoration: inherit;">Component</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the component to configure with the added content. The only allowable value is `Microsoft-Windows-Shell-Setup`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pass_go">
 <a href="#pass_go" style="color: inherit; text-decoration: inherit;">Pass</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the pass that the content applies to. The only allowable value is `oobeSystem`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="settingname_go">
 <a href="#settingname_go" style="color: inherit; text-decoration: inherit;">Setting<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: `FirstLogonCommands` and `AutoLogon`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6499,49 +5947,44 @@ The following state arguments are supported:
             title="Required">
         <span id="component_nodejs">
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the component to configure with the added content. The only allowable value is `Microsoft-Windows-Shell-Setup`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pass_nodejs">
 <a href="#pass_nodejs" style="color: inherit; text-decoration: inherit;">pass</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the pass that the content applies to. The only allowable value is `oobeSystem`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="settingname_nodejs">
 <a href="#settingname_nodejs" style="color: inherit; text-decoration: inherit;">setting<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: `FirstLogonCommands` and `AutoLogon`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6550,52 +5993,44 @@ The following state arguments are supported:
             title="Required">
         <span id="component_python">
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the component to configure with the added content. The only allowable value is `Microsoft-Windows-Shell-Setup`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="pass_python">
-<a href="#pass_python" style="color: inherit; text-decoration: inherit;">pass</a>
-</span> 
+        <span id="pass__python">
+<a href="#pass__python" style="color: inherit; text-decoration: inherit;">pass_</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the pass that the content applies to. The only allowable value is `oobeSystem`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="settingname_python">
-<a href="#settingname_python" style="color: inherit; text-decoration: inherit;">setting<wbr>Name</a>
-</span> 
+        <span id="setting_name_python">
+<a href="#setting_name_python" style="color: inherit; text-decoration: inherit;">setting_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the setting to which the content applies. Possible values are: `FirstLogonCommands` and `AutoLogon`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetosprofilewindowsconfigwinrm">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm</h4>
 {{% choosable language nodejs %}}
@@ -6605,11 +6040,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileWindowsConfigWinrmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetOsProfileWindowsConfigWinrmOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetOsProfileWindowsConfigWinrmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetOsProfileWindowsConfigWinrm.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6619,27 +6053,24 @@ The following state arguments are supported:
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of listener
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificateurl_csharp">
 <a href="#certificateurl_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies URL of the certificate with which new Virtual Machines is provisioned.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6648,27 +6079,24 @@ The following state arguments are supported:
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of listener
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificateurl_go">
 <a href="#certificateurl_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies URL of the certificate with which new Virtual Machines is provisioned.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6677,27 +6105,24 @@ The following state arguments are supported:
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of listener
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificateurl_nodejs">
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies URL of the certificate with which new Virtual Machines is provisioned.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6706,30 +6131,24 @@ The following state arguments are supported:
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol of listener
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="certificateurl_python">
-<a href="#certificateurl_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
-</span> 
+        <span id="certificate_url_python">
+<a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies URL of the certificate with which new Virtual Machines is provisioned.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetplan">Scale<wbr>Set<wbr>Plan</h4>
 {{% choosable language nodejs %}}
@@ -6739,11 +6158,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetPlanArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetPlanOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetPlanArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetPlan.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6753,38 +6171,34 @@ The following state arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the image from the marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="product_csharp">
 <a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6793,38 +6207,34 @@ The following state arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the image from the marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="product_go">
 <a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6833,38 +6243,34 @@ The following state arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the image from the marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="product_nodejs">
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6873,41 +6279,34 @@ The following state arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the image from the marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="product_python">
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the product of the image from the marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</h4>
 {{% choosable language nodejs %}}
@@ -6917,11 +6316,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetRollingUpgradePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetRollingUpgradePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetRollingUpgradePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetRollingUpgradePolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6931,49 +6329,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="maxbatchinstancepercent_csharp">
 <a href="#maxbatchinstancepercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Batch<wbr>Instance<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Defaults to `20`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxunhealthyinstancepercent_csharp">
 <a href="#maxunhealthyinstancepercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unhealthy<wbr>Instance<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Defaults to `20`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxunhealthyupgradedinstancepercent_csharp">
 <a href="#maxunhealthyupgradedinstancepercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Defaults to `20`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pausetimebetweenbatches_csharp">
 <a href="#pausetimebetweenbatches_csharp" style="color: inherit; text-decoration: inherit;">Pause<wbr>Time<wbr>Between<wbr>Batches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format for duration (https://en.wikipedia.org/wiki/ISO_8601#Durations). Defaults to `0` seconds represented as `PT0S`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6982,49 +6375,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="maxbatchinstancepercent_go">
 <a href="#maxbatchinstancepercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Batch<wbr>Instance<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Defaults to `20`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxunhealthyinstancepercent_go">
 <a href="#maxunhealthyinstancepercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unhealthy<wbr>Instance<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Defaults to `20`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxunhealthyupgradedinstancepercent_go">
 <a href="#maxunhealthyupgradedinstancepercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Defaults to `20`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pausetimebetweenbatches_go">
 <a href="#pausetimebetweenbatches_go" style="color: inherit; text-decoration: inherit;">Pause<wbr>Time<wbr>Between<wbr>Batches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format for duration (https://en.wikipedia.org/wiki/ISO_8601#Durations). Defaults to `0` seconds represented as `PT0S`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7033,103 +6421,90 @@ The following state arguments are supported:
             title="Optional">
         <span id="maxbatchinstancepercent_nodejs">
 <a href="#maxbatchinstancepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Batch<wbr>Instance<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Defaults to `20`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxunhealthyinstancepercent_nodejs">
 <a href="#maxunhealthyinstancepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Instance<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Defaults to `20`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxunhealthyupgradedinstancepercent_nodejs">
 <a href="#maxunhealthyupgradedinstancepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Defaults to `20`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pausetimebetweenbatches_nodejs">
 <a href="#pausetimebetweenbatches_nodejs" style="color: inherit; text-decoration: inherit;">pause<wbr>Time<wbr>Between<wbr>Batches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format for duration (https://en.wikipedia.org/wiki/ISO_8601#Durations). Defaults to `0` seconds represented as `PT0S`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxbatchinstancepercent_python">
-<a href="#maxbatchinstancepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Batch<wbr>Instance<wbr>Percent</a>
-</span> 
+        <span id="max_batch_instance_percent_python">
+<a href="#max_batch_instance_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>batch_<wbr>instance_<wbr>percent</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Defaults to `20`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxunhealthyinstancepercent_python">
-<a href="#maxunhealthyinstancepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Instance<wbr>Percent</a>
-</span> 
+        <span id="max_unhealthy_instance_percent_python">
+<a href="#max_unhealthy_instance_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unhealthy_<wbr>instance_<wbr>percent</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Defaults to `20`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxunhealthyupgradedinstancepercent_python">
-<a href="#maxunhealthyupgradedinstancepercent_python" style="color: inherit; text-decoration: inherit;">max<wbr>Unhealthy<wbr>Upgraded<wbr>Instance<wbr>Percent</a>
-</span> 
+        <span id="max_unhealthy_upgraded_instance_percent_python">
+<a href="#max_unhealthy_upgraded_instance_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unhealthy_<wbr>upgraded_<wbr>instance_<wbr>percent</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Defaults to `20`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="pausetimebetweenbatches_python">
-<a href="#pausetimebetweenbatches_python" style="color: inherit; text-decoration: inherit;">pause<wbr>Time<wbr>Between<wbr>Batches</a>
-</span> 
+        <span id="pause_time_between_batches_python">
+<a href="#pause_time_between_batches_python" style="color: inherit; text-decoration: inherit;">pause_<wbr>time_<wbr>between_<wbr>batches</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format for duration (https://en.wikipedia.org/wiki/ISO_8601#Durations). Defaults to `0` seconds represented as `PT0S`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetsku">Scale<wbr>Set<wbr>Sku</h4>
 {{% choosable language nodejs %}}
@@ -7139,11 +6514,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetSkuArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetSkuOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetSkuArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetSku.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7153,38 +6527,34 @@ The following state arguments are supported:
             title="Required">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of virtual machines in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the size of virtual machines in a scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of virtual machines in a scale set. Possible values, `standard` or `basic`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7193,38 +6563,34 @@ The following state arguments are supported:
             title="Required">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of virtual machines in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the size of virtual machines in a scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of virtual machines in a scale set. Possible values, `standard` or `basic`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7233,38 +6599,34 @@ The following state arguments are supported:
             title="Required">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of virtual machines in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the size of virtual machines in a scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of virtual machines in a scale set. Possible values, `standard` or `basic`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7273,41 +6635,34 @@ The following state arguments are supported:
             title="Required">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of virtual machines in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the size of virtual machines in a scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of virtual machines in a scale set. Possible values, `standard` or `basic`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetstorageprofiledatadisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk</h4>
 {{% choosable language nodejs %}}
@@ -7317,11 +6672,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetStorageProfileDataDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetStorageProfileDataDiskOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetStorageProfileDataDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileDataDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7331,60 +6685,54 @@ The following state arguments are supported:
             title="Required">
         <span id="createoption_csharp">
 <a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the data disk should be created. The only possible options are `FromImage` and `Empty`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the Logical Unit Number of the disk in each virtual machine in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="caching_csharp">
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. Possible values include: `None` (default), `ReadOnly`, `ReadWrite`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in GB. This element is required when creating an empty disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manageddisktype_csharp">
 <a href="#manageddisktype_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Value must be either `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7393,60 +6741,54 @@ The following state arguments are supported:
             title="Required">
         <span id="createoption_go">
 <a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the data disk should be created. The only possible options are `FromImage` and `Empty`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the Logical Unit Number of the disk in each virtual machine in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="caching_go">
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. Possible values include: `None` (default), `ReadOnly`, `ReadWrite`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in GB. This element is required when creating an empty disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manageddisktype_go">
 <a href="#manageddisktype_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Value must be either `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7455,60 +6797,54 @@ The following state arguments are supported:
             title="Required">
         <span id="createoption_nodejs">
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the data disk should be created. The only possible options are `FromImage` and `Empty`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the Logical Unit Number of the disk in each virtual machine in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="caching_nodejs">
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. Possible values include: `None` (default), `ReadOnly`, `ReadWrite`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in GB. This element is required when creating an empty disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manageddisktype_nodejs">
 <a href="#manageddisktype_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Value must be either `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7517,63 +6853,54 @@ The following state arguments are supported:
             title="Required">
         <span id="create_option_python">
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how the data disk should be created. The only possible options are `FromImage` and `Empty`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the Logical Unit Number of the disk in each virtual machine in the scale set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="caching_python">
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. Possible values include: `None` (default), `ReadOnly`, `ReadWrite`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the disk in GB. This element is required when creating an empty disk.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="manageddisktype_python">
-<a href="#manageddisktype_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
-</span> 
+        <span id="managed_disk_type_python">
+<a href="#managed_disk_type_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Value must be either `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference</h4>
 {{% choosable language nodejs %}}
@@ -7583,11 +6910,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetStorageProfileImageReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetStorageProfileImageReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetStorageProfileImageReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileImageReference.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7597,61 +6923,55 @@ The following state arguments are supported:
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the (custom) image to use to create the virtual
 machine scale set, as in the example below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7660,61 +6980,55 @@ machine scale set, as in the example below.
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the (custom) image to use to create the virtual
 machine scale set, as in the example below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7723,61 +7037,55 @@ machine scale set, as in the example below.
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the (custom) image to use to create the virtual
 machine scale set, as in the example below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7786,64 +7094,55 @@ machine scale set, as in the example below.
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the (custom) image to use to create the virtual
 machine scale set, as in the example below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the offer of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the publisher of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the image used to create the virtual machines.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk</h4>
 {{% choosable language nodejs %}}
@@ -7853,11 +7152,10 @@ machine scale set, as in the example below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetStorageProfileOsDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/compute?tab=doc#ScaleSetStorageProfileOsDiskOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Inputs.ScaleSetStorageProfileOsDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Compute.Outputs.ScaleSetStorageProfileOsDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7867,84 +7165,76 @@ machine scale set, as in the example below.
             title="Required">
         <span id="createoption_csharp">
 <a href="#createoption_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the virtual machine should be created. The only possible option is `FromImage`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="caching_csharp">
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. Possible values include: `None` (default), `ReadOnly`, `ReadWrite`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob uri for user image. A virtual machine scale set creates an os disk in the same container as the user image.
 Updating the osDisk image causes the existing disk to be deleted and a new one created with the new image. If the VM scale set is in Manual upgrade mode then the virtual machines are not updated until they have manualUpgrade applied to them.
 When setting this field `os_type` needs to be specified. Cannot be used when `vhd_containers`, `managed_disk_type` or `storage_profile_image_reference` are specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manageddisktype_csharp">
 <a href="#manageddisktype_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Value you must be either `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`. Cannot be used when `vhd_containers` or `image` is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk name. Must be specified when using unmanaged disk ('managed_disk_type' property not set).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the operating system Type, valid values are windows, linux.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vhdcontainers_csharp">
 <a href="#vhdcontainers_csharp" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Containers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the vhd uri. Cannot be used when `image` or `managed_disk_type` is specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7953,84 +7243,76 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
             title="Required">
         <span id="createoption_go">
 <a href="#createoption_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Option</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the virtual machine should be created. The only possible option is `FromImage`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="caching_go">
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. Possible values include: `None` (default), `ReadOnly`, `ReadWrite`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob uri for user image. A virtual machine scale set creates an os disk in the same container as the user image.
 Updating the osDisk image causes the existing disk to be deleted and a new one created with the new image. If the VM scale set is in Manual upgrade mode then the virtual machines are not updated until they have manualUpgrade applied to them.
 When setting this field `os_type` needs to be specified. Cannot be used when `vhd_containers`, `managed_disk_type` or `storage_profile_image_reference` are specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manageddisktype_go">
 <a href="#manageddisktype_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Value you must be either `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`. Cannot be used when `vhd_containers` or `image` is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk name. Must be specified when using unmanaged disk ('managed_disk_type' property not set).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the operating system Type, valid values are windows, linux.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vhdcontainers_go">
 <a href="#vhdcontainers_go" style="color: inherit; text-decoration: inherit;">Vhd<wbr>Containers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the vhd uri. Cannot be used when `image` or `managed_disk_type` is specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8039,84 +7321,76 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
             title="Required">
         <span id="createoption_nodejs">
 <a href="#createoption_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Option</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how the virtual machine should be created. The only possible option is `FromImage`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="caching_nodejs">
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. Possible values include: `None` (default), `ReadOnly`, `ReadWrite`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob uri for user image. A virtual machine scale set creates an os disk in the same container as the user image.
 Updating the osDisk image causes the existing disk to be deleted and a new one created with the new image. If the VM scale set is in Manual upgrade mode then the virtual machines are not updated until they have manualUpgrade applied to them.
 When setting this field `os_type` needs to be specified. Cannot be used when `vhd_containers`, `managed_disk_type` or `storage_profile_image_reference` are specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manageddisktype_nodejs">
 <a href="#manageddisktype_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Value you must be either `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`. Cannot be used when `vhd_containers` or `image` is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the disk name. Must be specified when using unmanaged disk ('managed_disk_type' property not set).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the operating system Type, valid values are windows, linux.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vhdcontainers_nodejs">
 <a href="#vhdcontainers_nodejs" style="color: inherit; text-decoration: inherit;">vhd<wbr>Containers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the vhd uri. Cannot be used when `image` or `managed_disk_type` is specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8125,88 +7399,84 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
             title="Required">
         <span id="create_option_python">
 <a href="#create_option_python" style="color: inherit; text-decoration: inherit;">create_<wbr>option</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how the virtual machine should be created. The only possible option is `FromImage`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="caching_python">
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. Possible values include: `None` (default), `ReadOnly`, `ReadWrite`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the blob uri for user image. A virtual machine scale set creates an os disk in the same container as the user image.
 Updating the osDisk image causes the existing disk to be deleted and a new one created with the new image. If the VM scale set is in Manual upgrade mode then the virtual machines are not updated until they have manualUpgrade applied to them.
 When setting this field `os_type` needs to be specified. Cannot be used when `vhd_containers`, `managed_disk_type` or `storage_profile_image_reference` are specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="manageddisktype_python">
-<a href="#manageddisktype_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Type</a>
-</span> 
+        <span id="managed_disk_type_python">
+<a href="#managed_disk_type_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Value you must be either `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`. Cannot be used when `vhd_containers` or `image` is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the disk name. Must be specified when using unmanaged disk ('managed_disk_type' property not set).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the operating system Type, valid values are windows, linux.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="vhdcontainers_python">
-<a href="#vhdcontainers_python" style="color: inherit; text-decoration: inherit;">vhd<wbr>Containers</a>
-</span> 
+        <span id="vhd_containers_python">
+<a href="#vhd_containers_python" style="color: inherit; text-decoration: inherit;">vhd_<wbr>containers</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the vhd uri. Cannot be used when `image` or `managed_disk_type` is specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Virtual Machine Scale Sets can be imported using the `resource id`, e.g.
 
-
-
+```sh
+ $ pulumi import azure:compute/scaleSet:ScaleSet scaleset1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Compute/virtualMachineScaleSets/scaleset1
+```
 
 
 

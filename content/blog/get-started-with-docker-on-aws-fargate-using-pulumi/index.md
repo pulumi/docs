@@ -157,7 +157,7 @@ Next up, let's deploy our published image as a containerized service,
 behind our load balanced network on port 80, using our [ECS Fargate](https://aws.amazon.com/fargate/) cluster. Fargate is a managed
 container orchestrator that lets us skip the messy details of installing
 and managing Swarm on our own. This effectively replaces
-[the **docker-compose.yml** from the Docker Getting Started tutorial](https://docs.docker.com/get-started/part3/), with a similarly
+[the **docker-compose.yml** from the Docker Getting Started tutorial](https://docs.docker.com/get-started/08_using_compose/), with a similarly
 simple sequence of code, and which gives us full access to the AWS
 platform:
 
@@ -216,10 +216,6 @@ Or open it in our web browser:
     $ open http://$(pulumi stack output url)
 
 ![DockerFargateBrowser](./docker-fargate-browser.png)
-
-For more details on how to enable Redis and other advanced options for this
-sample application, please
-[see the instructions on the Docker Getting Started guide](https://docs.docker.com/get-started/part6/).
 
 As an added bonus, the entire time we are doing these deployments, the
 Pulumi Service is keeping track of deployment state, to ensure

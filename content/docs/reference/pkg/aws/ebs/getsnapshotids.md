@@ -13,6 +13,7 @@ meta_desc: "Explore the GetSnapshotIds function of the ebs module, including exa
 Use this data source to get a list of EBS Snapshot IDs matching the specified
 criteria.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -106,14 +107,14 @@ import pulumi
 import pulumi_aws as aws
 
 ebs_volumes = aws.ebs.get_snapshot_ids(filters=[
-        {
-            "name": "volume-size",
-            "values": ["40"],
-        },
-        {
-            "name": "tag:Name",
-            "values": ["Example"],
-        },
+        aws.ebs.GetSnapshotIdsFilterArgs(
+            name="volume-size",
+            values=["40"],
+        ),
+        aws.ebs.GetSnapshotIdsFilterArgs(
+            name="tag:Name",
+            values=["Example"],
+        ),
     ],
     owners=["self"])
 ```
@@ -152,31 +153,30 @@ const ebsVolumes = pulumi.output(aws.ebs.getSnapshotIds({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSnapshotIds<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ebs/#GetSnapshotIdsArgs">GetSnapshotIdsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ebs/#GetSnapshotIdsResult">GetSnapshotIdsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSnapshotIds<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSnapshotIdsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSnapshotIdsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_snapshot_ids(</span>filters=None<span class="p">, </span>owners=None<span class="p">, </span>restorable_by_user_ids=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_snapshot_ids(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetSnapshotIdsFilterArgs]]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">restorable_by_user_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSnapshotIdsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshotIds<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs?tab=doc#GetSnapshotIdsArgs">GetSnapshotIdsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs?tab=doc#GetSnapshotIdsResult">GetSnapshotIdsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshotIds<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSnapshotIdsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSnapshotIdsResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSnapshotIds </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.GetSnapshotIdsResult.html">GetSnapshotIdsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.GetSnapshotIdsArgs.html">GetSnapshotIdsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSnapshotIdsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSnapshotIdsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -186,7 +186,7 @@ The following arguments are supported:
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsnapshotidsfilter">List&lt;Get<wbr>Snapshot<wbr>Ids<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
@@ -194,32 +194,28 @@ The following arguments are supported:
 several valid keys, for a full reference, check out
 [describe-volumes in the AWS CLI reference][1].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owners_csharp">
 <a href="#owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restorablebyuserids_csharp">
 <a href="#restorablebyuserids_csharp" style="color: inherit; text-decoration: inherit;">Restorable<wbr>By<wbr>User<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more AWS accounts IDs that can create volumes from the snapshot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -228,7 +224,7 @@ several valid keys, for a full reference, check out
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsnapshotidsfilter">[]Get<wbr>Snapshot<wbr>Ids<wbr>Filter</a></span>
     </dt>
@@ -236,32 +232,28 @@ several valid keys, for a full reference, check out
 several valid keys, for a full reference, check out
 [describe-volumes in the AWS CLI reference][1].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owners_go">
 <a href="#owners_go" style="color: inherit; text-decoration: inherit;">Owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restorablebyuserids_go">
 <a href="#restorablebyuserids_go" style="color: inherit; text-decoration: inherit;">Restorable<wbr>By<wbr>User<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more AWS accounts IDs that can create volumes from the snapshot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -270,7 +262,7 @@ several valid keys, for a full reference, check out
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsnapshotidsfilter">Get<wbr>Snapshot<wbr>Ids<wbr>Filter[]</a></span>
     </dt>
@@ -278,32 +270,28 @@ several valid keys, for a full reference, check out
 several valid keys, for a full reference, check out
 [describe-volumes in the AWS CLI reference][1].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owners_nodejs">
 <a href="#owners_nodejs" style="color: inherit; text-decoration: inherit;">owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restorablebyuserids_nodejs">
 <a href="#restorablebyuserids_nodejs" style="color: inherit; text-decoration: inherit;">restorable<wbr>By<wbr>User<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more AWS accounts IDs that can create volumes from the snapshot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -312,43 +300,36 @@ several valid keys, for a full reference, check out
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsnapshotidsfilter">List[Get<wbr>Snapshot<wbr>Ids<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getsnapshotidsfilter">Sequence[Get<wbr>Snapshot<wbr>Ids<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more name/value pairs to filter off of. There are
 several valid keys, for a full reference, check out
 [describe-volumes in the AWS CLI reference][1].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owners_python">
 <a href="#owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restorable_by_user_ids_python">
 <a href="#restorable_by_user_ids_python" style="color: inherit; text-decoration: inherit;">restorable_<wbr>by_<wbr>user_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more AWS accounts IDs that can create volumes from the snapshot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -359,7 +340,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -367,56 +347,51 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Set of EBS snapshot IDs, sorted by creation time in descending order.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsnapshotidsfilter">List&lt;Get<wbr>Snapshot<wbr>Ids<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owners_csharp">
 <a href="#owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="restorablebyuserids_csharp">
 <a href="#restorablebyuserids_csharp" style="color: inherit; text-decoration: inherit;">Restorable<wbr>By<wbr>User<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -425,56 +400,51 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Set of EBS snapshot IDs, sorted by creation time in descending order.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsnapshotidsfilter">[]Get<wbr>Snapshot<wbr>Ids<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owners_go">
 <a href="#owners_go" style="color: inherit; text-decoration: inherit;">Owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="restorablebyuserids_go">
 <a href="#restorablebyuserids_go" style="color: inherit; text-decoration: inherit;">Restorable<wbr>By<wbr>User<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -483,56 +453,51 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Set of EBS snapshot IDs, sorted by creation time in descending order.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsnapshotidsfilter">Get<wbr>Snapshot<wbr>Ids<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owners_nodejs">
 <a href="#owners_nodejs" style="color: inherit; text-decoration: inherit;">owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="restorablebyuserids_nodejs">
 <a href="#restorablebyuserids_nodejs" style="color: inherit; text-decoration: inherit;">restorable<wbr>By<wbr>User<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -541,59 +506,51 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Set of EBS snapshot IDs, sorted by creation time in descending order.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsnapshotidsfilter">List[Get<wbr>Snapshot<wbr>Ids<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getsnapshotidsfilter">Sequence[Get<wbr>Snapshot<wbr>Ids<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owners_python">
 <a href="#owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="restorable_by_user_ids_python">
 <a href="#restorable_by_user_ids_python" style="color: inherit; text-decoration: inherit;">restorable_<wbr>by_<wbr>user_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -602,17 +559,6 @@ The following output properties are available:
 
 
 <h4 id="getsnapshotidsfilter">Get<wbr>Snapshot<wbr>Ids<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSnapshotIdsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSnapshotIdsFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs?tab=doc#GetSnapshotIdsFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs?tab=doc#GetSnapshotIdsFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.Inputs.GetSnapshotIdsFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ebs.Outputs.GetSnapshotIdsFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -623,25 +569,22 @@ The following output properties are available:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -650,25 +593,22 @@ The following output properties are available:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -677,25 +617,22 @@ The following output properties are available:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -704,28 +641,22 @@ The following output properties are available:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

@@ -21,6 +21,11 @@ Explore the resources and functions of the spanner module in the GCP package.
     <li><a href="instanceiampolicy" title="InstanceIAMPolicy"><span class="symbol resource"></span>InstanceIAMPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -28,26 +33,8 @@ Explore the resources and functions of the spanner module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Spanner.html" title="Pulumi.Gcp.Spanner">Pulumi.Gcp.Spanner</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/spanner?tab=doc#" title="gcp/spanner">gcp/spanner</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/spanner/#" title="@pulumi/gcp/spanner">@pulumi/gcp/spanner</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/spanner" title="pulumi_gcp/spanner">pulumi_gcp/spanner</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

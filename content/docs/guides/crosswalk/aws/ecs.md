@@ -302,7 +302,7 @@ In addition to security and networking configuration:
   that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other
   network modes.
 
-For additional information about each of these settings, please [refer to the AWS documentation](
+For additional information about each of these settings, refer to the [AWS documentation](
 https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service_definition_parameters.html).
 
 ## Building and Publishing Docker Images Automatically

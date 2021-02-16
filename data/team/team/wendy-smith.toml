@@ -1,0 +1,10 @@
+id = "wendy-smith"
+name = "Wendy Smith"
+title = "Senior Director of Field Marketing"
+weight = 1
+
+status = "active"
+
+[social]
+twitter = "wamazonsmith"
+linkedin = "wendyamazonsmith"

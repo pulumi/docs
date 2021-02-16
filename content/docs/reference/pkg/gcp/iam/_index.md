@@ -9,10 +9,18 @@ meta_desc: "Explore the resources and functions of the iam module in the GCP pac
 
 Explore the resources and functions of the iam module in the GCP package.
 
+<h2 id="resources">Resources</h2>
+<ul class="api">
+    <li><a href="workloadidentitypool" title="WorkloadIdentityPool"><span class="symbol resource"></span>WorkloadIdentityPool</a></li>
+    <li><a href="workloadidentitypoolprovider" title="WorkloadIdentityPoolProvider"><span class="symbol resource"></span>WorkloadIdentityPoolProvider</a></li>
+</ul>
+
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getrule" title="GetRule"><span class="symbol function"></span>GetRule</a></li>
     <li><a href="gettestablepermissions" title="GetTestablePermissions"><span class="symbol function"></span>GetTestablePermissions</a></li>
+    <li><a href="getworkloadidentitypool" title="GetWorkloadIdentityPool"><span class="symbol function"></span>GetWorkloadIdentityPool</a></li>
+    <li><a href="getworkloadidentitypoolprovider" title="GetWorkloadIdentityPoolProvider"><span class="symbol function"></span>GetWorkloadIdentityPoolProvider</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -22,26 +30,8 @@ Explore the resources and functions of the iam module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.html" title="Pulumi.Gcp.Iam">Pulumi.Gcp.Iam</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iam?tab=doc#" title="gcp/iam">gcp/iam</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iam/#" title="@pulumi/gcp/iam">@pulumi/gcp/iam</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/iam" title="pulumi_gcp/iam">pulumi_gcp/iam</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetInstanceTypeOffering function of the ec2 module, incl
 
 Information about single EC2 Instance Type Offering.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -35,7 +36,6 @@ class MyStack : Stack
                     Name = "instance-type",
                     Values = 
                     {
-                        "t1.micro",
                         "t2.micro",
                         "t3.micro",
                     },
@@ -45,7 +45,6 @@ class MyStack : Stack
             {
                 "t3.micro",
                 "t2.micro",
-                "t1.micro",
             },
         }));
     }
@@ -71,7 +70,6 @@ func main() {
 				ec2.GetInstanceTypeOfferingFilter{
 					Name: "instance-type",
 					Values: []string{
-						"t1.micro",
 						"t2.micro",
 						"t3.micro",
 					},
@@ -80,7 +78,6 @@ func main() {
 			PreferredInstanceTypes: []string{
 				"t3.micro",
 				"t2.micro",
-				"t1.micro",
 			},
 		}, nil)
 		if err != nil {
@@ -98,18 +95,16 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.ec2.get_instance_type_offering(filters=[{
-        "name": "instance-type",
-        "values": [
-            "t1.micro",
+example = aws.ec2.get_instance_type_offering(filters=[aws.ec2.GetInstanceTypeOfferingFilterArgs(
+        name="instance-type",
+        values=[
             "t2.micro",
             "t3.micro",
         ],
-    }],
+    )],
     preferred_instance_types=[
         "t3.micro",
         "t2.micro",
-        "t1.micro",
     ])
 ```
 
@@ -125,7 +120,6 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOffering({
     filters: [{
         name: "instance-type",
         values: [
-            "t1.micro",
             "t2.micro",
             "t3.micro",
         ],
@@ -133,7 +127,6 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOffering({
     preferredInstanceTypes: [
         "t3.micro",
         "t2.micro",
-        "t1.micro",
     ],
 }, { async: true }));
 ```
@@ -149,31 +142,30 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOffering({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceTypeOffering<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetInstanceTypeOfferingArgs">GetInstanceTypeOfferingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetInstanceTypeOfferingResult">GetInstanceTypeOfferingResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceTypeOffering<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceTypeOfferingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceTypeOfferingResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance_type_offering(</span>filters=None<span class="p">, </span>location_type=None<span class="p">, </span>preferred_instance_types=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance_type_offering(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetInstanceTypeOfferingFilterArgs]]</span> = None<span class="p">, </span><span class="nx">location_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_instance_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceTypeOfferingResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceTypeOffering<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstanceTypeOfferingArgs">GetInstanceTypeOfferingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstanceTypeOfferingResult">GetInstanceTypeOfferingResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceTypeOffering<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceTypeOfferingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceTypeOfferingResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstanceTypeOffering </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInstanceTypeOfferingResult.html">GetInstanceTypeOfferingResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetInstanceTypeOfferingArgs.html">GetInstanceTypeOfferingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceTypeOfferingResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceTypeOfferingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -183,38 +175,34 @@ The following arguments are supported:
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeofferingfilter">List&lt;Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypeOfferings.html) for supported filters. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locationtype_csharp">
 <a href="#locationtype_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location type. Defaults to `region`. Valid values: `availability-zone`, `availability-zone-id`, and `region`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferredinstancetypes_csharp">
 <a href="#preferredinstancetypes_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Instance<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred EC2 Instance Types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -223,38 +211,34 @@ The following arguments are supported:
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeofferingfilter">[]Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypeOfferings.html) for supported filters. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locationtype_go">
 <a href="#locationtype_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location type. Defaults to `region`. Valid values: `availability-zone`, `availability-zone-id`, and `region`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferredinstancetypes_go">
 <a href="#preferredinstancetypes_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Instance<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred EC2 Instance Types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -263,38 +247,34 @@ The following arguments are supported:
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeofferingfilter">Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypeOfferings.html) for supported filters. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locationtype_nodejs">
 <a href="#locationtype_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location type. Defaults to `region`. Valid values: `availability-zone`, `availability-zone-id`, and `region`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferredinstancetypes_nodejs">
 <a href="#preferredinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Instance<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred EC2 Instance Types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -303,41 +283,34 @@ The following arguments are supported:
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeofferingfilter">List[Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getinstancetypeofferingfilter">Sequence[Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeInstanceTypeOfferings.html) for supported filters. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_type_python">
 <a href="#location_type_python" style="color: inherit; text-decoration: inherit;">location_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location type. Defaults to `region`. Valid values: `availability-zone`, `availability-zone-id`, and `region`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferred_instance_types_python">
 <a href="#preferred_instance_types_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>instance_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred EC2 Instance Types. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -348,7 +321,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -356,57 +328,51 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Instance Type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeofferingfilter">List&lt;Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="locationtype_csharp">
 <a href="#locationtype_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="preferredinstancetypes_csharp">
 <a href="#preferredinstancetypes_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Instance<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -415,57 +381,51 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Instance Type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeofferingfilter">[]Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="locationtype_go">
 <a href="#locationtype_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="preferredinstancetypes_go">
 <a href="#preferredinstancetypes_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Instance<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -474,57 +434,51 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Instance Type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypeofferingfilter">Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="locationtype_nodejs">
 <a href="#locationtype_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="preferredinstancetypes_nodejs">
 <a href="#preferredinstancetypes_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Instance<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -533,60 +487,51 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 Instance Type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypeofferingfilter">List[Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getinstancetypeofferingfilter">Sequence[Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_type_python">
 <a href="#location_type_python" style="color: inherit; text-decoration: inherit;">location_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="preferred_instance_types_python">
 <a href="#preferred_instance_types_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>instance_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -595,17 +540,6 @@ The following output properties are available:
 
 
 <h4 id="getinstancetypeofferingfilter">Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetInstanceTypeOfferingFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceTypeOfferingFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstanceTypeOfferingFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstanceTypeOfferingFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetInstanceTypeOfferingFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetInstanceTypeOfferingFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -616,27 +550,24 @@ The following output properties are available:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the filter. The `location` filter depends on the top-level `location_type` argument and if not specified, defaults to the current region.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -645,27 +576,24 @@ The following output properties are available:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the filter. The `location` filter depends on the top-level `location_type` argument and if not specified, defaults to the current region.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -674,27 +602,24 @@ The following output properties are available:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the filter. The `location` filter depends on the top-level `location_type` argument and if not specified, defaults to the current region.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -703,30 +628,24 @@ The following output properties are available:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the filter. The `location` filter depends on the top-level `location_type` argument and if not specified, defaults to the current region.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

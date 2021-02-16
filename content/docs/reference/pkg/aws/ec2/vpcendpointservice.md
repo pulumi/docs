@@ -1,8 +1,8 @@
 
 ---
 title: "VpcEndpointService"
-title_tag: "Resource VpcEndpointService | Module ec2 | Package AWS"
-meta_desc: "Explore the VpcEndpointService resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VPC Endpoint Service resource."
+title_tag: "aws.ec2.VpcEndpointService"
+meta_desc: "Documentation for the aws.ec2.VpcEndpointService resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -23,7 +23,7 @@ and will overwrite the association.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Basic
+### Network Load Balancers
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -49,30 +49,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ec2.NewVpcEndpointService(ctx, "example", &ec2.VpcEndpointServiceArgs{
-			AcceptanceRequired: pulumi.Bool(false),
-			NetworkLoadBalancerArns: pulumi.StringArray{
-				pulumi.Any(aws_lb.Example.Arn),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -101,7 +78,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
 
 {{% /example %}}
 
-### Basic w/ Tags
+### Gateway Load Balancers
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -114,13 +91,9 @@ class MyStack : Stack
         var example = new Aws.Ec2.VpcEndpointService("example", new Aws.Ec2.VpcEndpointServiceArgs
         {
             AcceptanceRequired = false,
-            NetworkLoadBalancerArns = 
+            GatewayLoadBalancerArns = 
             {
                 aws_lb.Example.Arn,
-            },
-            Tags = 
-            {
-                { "Environment", "test" },
             },
         });
     }
@@ -131,33 +104,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ec2.NewVpcEndpointService(ctx, "example", &ec2.VpcEndpointServiceArgs{
-			AcceptanceRequired: pulumi.Bool(false),
-			NetworkLoadBalancerArns: pulumi.StringArray{
-				pulumi.Any(aws_lb.Example.Arn),
-			},
-			Tags: pulumi.StringMap{
-				"Environment": pulumi.String("test"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -167,10 +114,7 @@ import pulumi_aws as aws
 
 example = aws.ec2.VpcEndpointService("example",
     acceptance_required=False,
-    network_load_balancer_arns=[aws_lb["example"]["arn"]],
-    tags={
-        "Environment": "test",
-    })
+    gateway_load_balancer_arns=[aws_lb["example"]["arn"]])
 ```
 
 {{% /example %}}
@@ -183,10 +127,7 @@ import * as aws from "@pulumi/aws";
 
 const example = new aws.ec2.VpcEndpointService("example", {
     acceptanceRequired: false,
-    networkLoadBalancerArns: [aws_lb.example.arn],
-    tags: {
-        Environment: "test",
-    },
+    gatewayLoadBalancerArns: [aws_lb.example.arn],
 });
 ```
 
@@ -200,19 +141,19 @@ const example = new aws.ec2.VpcEndpointService("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointService">VpcEndpointService</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointServiceArgs">VpcEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VpcEndpointService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VpcEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.VpcEndpointService">VpcEndpointService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acceptance_required=None<span class="p">, </span>allowed_principals=None<span class="p">, </span>network_load_balancer_arns=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpcEndpointService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceptance_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateway_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointService">NewVpcEndpointService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointServiceArgs">VpcEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointService">VpcEndpointService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVpcEndpointService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VpcEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpcEndpointService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.VpcEndpointService.html">VpcEndpointService</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.VpcEndpointServiceArgs.html">VpcEndpointServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VpcEndpointService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VpcEndpointServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -223,7 +164,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -233,7 +174,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointServiceArgs">VpcEndpointServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">VpcEndpointServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -292,7 +233,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -302,7 +243,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointServiceArgs">VpcEndpointServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">VpcEndpointServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -331,7 +272,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -341,7 +282,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.VpcEndpointServiceArgs.html">VpcEndpointServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">VpcEndpointServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -364,12 +305,11 @@ const example = new aws.ec2.VpcEndpointService("example", {
 
 ## VpcEndpointService Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VpcEndpointService resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The VpcEndpointService resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -380,49 +320,64 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="acceptancerequired_csharp">
 <a href="#acceptancerequired_csharp" style="color: inherit; text-decoration: inherit;">Acceptance<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="networkloadbalancerarns_csharp">
-<a href="#networkloadbalancerarns_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Load<wbr>Balancer<wbr>Arns</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedprincipals_csharp">
 <a href="#allowedprincipals_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatewayloadbalancerarns_csharp">
+<a href="#gatewayloadbalancerarns_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkloadbalancerarns_csharp">
+<a href="#networkloadbalancerarns_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Load<wbr>Balancer<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatednsname_csharp">
+<a href="#privatednsname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private DNS name for the service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -431,49 +386,64 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="acceptancerequired_go">
 <a href="#acceptancerequired_go" style="color: inherit; text-decoration: inherit;">Acceptance<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="networkloadbalancerarns_go">
-<a href="#networkloadbalancerarns_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Load<wbr>Balancer<wbr>Arns</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedprincipals_go">
 <a href="#allowedprincipals_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatewayloadbalancerarns_go">
+<a href="#gatewayloadbalancerarns_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkloadbalancerarns_go">
+<a href="#networkloadbalancerarns_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Load<wbr>Balancer<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatednsname_go">
+<a href="#privatednsname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private DNS name for the service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -482,49 +452,64 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="acceptancerequired_nodejs">
 <a href="#acceptancerequired_nodejs" style="color: inherit; text-decoration: inherit;">acceptance<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="networkloadbalancerarns_nodejs">
-<a href="#networkloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Load<wbr>Balancer<wbr>Arns</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedprincipals_nodejs">
 <a href="#allowedprincipals_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Principals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gatewayloadbalancerarns_nodejs">
+<a href="#gatewayloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkloadbalancerarns_nodejs">
+<a href="#networkloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Load<wbr>Balancer<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatednsname_nodejs">
+<a href="#privatednsname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private DNS name for the service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -533,58 +518,69 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="acceptance_required_python">
 <a href="#acceptance_required_python" style="color: inherit; text-decoration: inherit;">acceptance_<wbr>required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="network_load_balancer_arns_python">
-<a href="#network_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">network_<wbr>load_<wbr>balancer_<wbr>arns</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_principals_python">
 <a href="#allowed_principals_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>principals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gateway_load_balancer_arns_python">
+<a href="#gateway_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>load_<wbr>balancer_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_load_balancer_arns_python">
+<a href="#network_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">network_<wbr>load_<wbr>balancer_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_dns_name_python">
+<a href="#private_dns_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private DNS name for the service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the VpcEndpointService resource produces the following output properties:
-
 
 
 
@@ -595,103 +591,93 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="baseendpointdnsnames_csharp">
 <a href="#baseendpointdnsnames_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="managesvpcendpoints_csharp">
 <a href="#managesvpcendpoints_csharp" style="color: inherit; text-decoration: inherit;">Manages<wbr>Vpc<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="privatednsname_csharp">
-<a href="#privatednsname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
-</span> 
+        <span id="privatednsnameconfigurations_csharp">
+<a href="#privatednsnameconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">List&lt;Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The private DNS name for the service.
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="servicetype_csharp">
 <a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -700,103 +686,93 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="baseendpointdnsnames_go">
 <a href="#baseendpointdnsnames_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="managesvpcendpoints_go">
 <a href="#managesvpcendpoints_go" style="color: inherit; text-decoration: inherit;">Manages<wbr>Vpc<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="privatednsname_go">
-<a href="#privatednsname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
-</span> 
+        <span id="privatednsnameconfigurations_go">
+<a href="#privatednsnameconfigurations_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">[]Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}The private DNS name for the service.
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="servicetype_go">
 <a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -805,103 +781,93 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="baseendpointdnsnames_nodejs">
 <a href="#baseendpointdnsnames_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="managesvpcendpoints_nodejs">
 <a href="#managesvpcendpoints_nodejs" style="color: inherit; text-decoration: inherit;">manages<wbr>Vpc<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="privatednsname_nodejs">
-<a href="#privatednsname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name</a>
-</span> 
+        <span id="privatednsnameconfigurations_nodejs">
+<a href="#privatednsnameconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name<wbr>Configurations</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration[]</a></span>
     </dt>
-    <dd>{{% md %}}The private DNS name for the service.
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="servicetype_nodejs">
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -910,106 +876,93 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="base_endpoint_dns_names_python">
 <a href="#base_endpoint_dns_names_python" style="color: inherit; text-decoration: inherit;">base_<wbr>endpoint_<wbr>dns_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="manages_vpc_endpoints_python">
 <a href="#manages_vpc_endpoints_python" style="color: inherit; text-decoration: inherit;">manages_<wbr>vpc_<wbr>endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="private_dns_name_python">
-<a href="#private_dns_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name</a>
-</span> 
+        <span id="private_dns_name_configurations_python">
+<a href="#private_dns_name_configurations_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name_<wbr>configurations</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Sequence[Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration]</a></span>
     </dt>
-    <dd>{{% md %}}The private DNS name for the service.
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="service_type_python">
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1019,19 +972,20 @@ Get an existing VpcEndpointService resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointServiceState">VpcEndpointServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointService">VpcEndpointService</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VpcEndpointServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VpcEndpointService</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acceptance_required=None<span class="p">, </span>allowed_principals=None<span class="p">, </span>arn=None<span class="p">, </span>availability_zones=None<span class="p">, </span>base_endpoint_dns_names=None<span class="p">, </span>manages_vpc_endpoints=None<span class="p">, </span>network_load_balancer_arns=None<span class="p">, </span>private_dns_name=None<span class="p">, </span>service_name=None<span class="p">, </span>service_type=None<span class="p">, </span>state=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceptance_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allowed_principals</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">base_endpoint_dns_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">gateway_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">manages_vpc_endpoints</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_load_balancer_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_dns_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns_name_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpcEndpointServicePrivateDnsNameConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> VpcEndpointService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcEndpointService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointServiceState">VpcEndpointServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#VpcEndpointService">VpcEndpointService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcEndpointService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VpcEndpointServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VpcEndpointService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.VpcEndpointService.html">VpcEndpointService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.VpcEndpointServiceState.html">VpcEndpointServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VpcEndpointService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VpcEndpointServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1133,7 +1087,6 @@ Get an existing VpcEndpointService resource's state with the given name, ID, and
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1141,137 +1094,144 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_acceptancerequired_csharp">
 <a href="#state_acceptancerequired_csharp" style="color: inherit; text-decoration: inherit;">Acceptance<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowedprincipals_csharp">
 <a href="#state_allowedprincipals_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_csharp">
 <a href="#state_availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_baseendpointdnsnames_csharp">
 <a href="#state_baseendpointdnsnames_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gatewayloadbalancerarns_csharp">
+<a href="#state_gatewayloadbalancerarns_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_managesvpcendpoints_csharp">
 <a href="#state_managesvpcendpoints_csharp" style="color: inherit; text-decoration: inherit;">Manages<wbr>Vpc<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkloadbalancerarns_csharp">
 <a href="#state_networkloadbalancerarns_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Load<wbr>Balancer<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_privatednsname_csharp">
 <a href="#state_privatednsname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_privatednsnameconfigurations_csharp">
+<a href="#state_privatednsnameconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">List&lt;Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_csharp">
 <a href="#state_servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1280,137 +1240,144 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_acceptancerequired_go">
 <a href="#state_acceptancerequired_go" style="color: inherit; text-decoration: inherit;">Acceptance<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowedprincipals_go">
 <a href="#state_allowedprincipals_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Principals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_go">
 <a href="#state_availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_baseendpointdnsnames_go">
 <a href="#state_baseendpointdnsnames_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gatewayloadbalancerarns_go">
+<a href="#state_gatewayloadbalancerarns_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_managesvpcendpoints_go">
 <a href="#state_managesvpcendpoints_go" style="color: inherit; text-decoration: inherit;">Manages<wbr>Vpc<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkloadbalancerarns_go">
 <a href="#state_networkloadbalancerarns_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Load<wbr>Balancer<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_privatednsname_go">
 <a href="#state_privatednsname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_privatednsnameconfigurations_go">
+<a href="#state_privatednsnameconfigurations_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns<wbr>Name<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">[]Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_go">
 <a href="#state_servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1419,137 +1386,144 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_acceptancerequired_nodejs">
 <a href="#state_acceptancerequired_nodejs" style="color: inherit; text-decoration: inherit;">acceptance<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowedprincipals_nodejs">
 <a href="#state_allowedprincipals_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Principals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_nodejs">
 <a href="#state_availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_baseendpointdnsnames_nodejs">
 <a href="#state_baseendpointdnsnames_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Endpoint<wbr>Dns<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gatewayloadbalancerarns_nodejs">
+<a href="#state_gatewayloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Load<wbr>Balancer<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_managesvpcendpoints_nodejs">
 <a href="#state_managesvpcendpoints_nodejs" style="color: inherit; text-decoration: inherit;">manages<wbr>Vpc<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkloadbalancerarns_nodejs">
 <a href="#state_networkloadbalancerarns_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Load<wbr>Balancer<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_privatednsname_nodejs">
 <a href="#state_privatednsname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_privatednsnameconfigurations_nodejs">
+<a href="#state_privatednsnameconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns<wbr>Name<wbr>Configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_nodejs">
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1558,134 +1532,142 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_acceptance_required_python">
 <a href="#state_acceptance_required_python" style="color: inherit; text-decoration: inherit;">acceptance_<wbr>required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowed_principals_python">
 <a href="#state_allowed_principals_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>principals</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availability_zones_python">
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_base_endpoint_dns_names_python">
 <a href="#state_base_endpoint_dns_names_python" style="color: inherit; text-decoration: inherit;">base_<wbr>endpoint_<wbr>dns_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gateway_load_balancer_arns_python">
+<a href="#state_gateway_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>load_<wbr>balancer_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_manages_vpc_endpoints_python">
 <a href="#state_manages_vpc_endpoints_python" style="color: inherit; text-decoration: inherit;">manages_<wbr>vpc_<wbr>endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_load_balancer_arns_python">
 <a href="#state_network_load_balancer_arns_python" style="color: inherit; text-decoration: inherit;">network_<wbr>load_<wbr>balancer_<wbr>arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
+    <dd>{{% md %}}Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_private_dns_name_python">
 <a href="#state_private_dns_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_private_dns_name_configurations_python">
+<a href="#state_private_dns_name_configurations_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns_<wbr>name_<wbr>configurations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpcendpointserviceprivatednsnameconfiguration">Sequence[Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects containing information about the endpoint service private DNS name configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_type_python">
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the VPC endpoint service.
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1694,7 +1676,203 @@ The following state arguments are supported:
 
 
 
+## Supporting Types
 
+
+
+<h4 id="vpcendpointserviceprivatednsnameconfiguration">Vpc<wbr>Endpoint<wbr>Service<wbr>Private<wbr>Dns<wbr>Name<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the record subdomain the service provider needs to create.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Endpoint service verification type, for example `TXT`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Value the service provider adds to the private DNS name domain record before verification.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+## Import
+
+
+VPC Endpoint Services can be imported using the `VPC endpoint service id`, e.g.
+
+```sh
+ $ pulumi import aws:ec2/vpcEndpointService:VpcEndpointService foo vpce-svc-0f97a19d3fa8220bc
+```
 
 
 

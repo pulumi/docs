@@ -1,8 +1,8 @@
 
 ---
 title: "ResourcePolicy"
-title_tag: "Resource ResourcePolicy | Module compute | Package GCP"
-meta_desc: "Explore the ResourcePolicy resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A policy that can be attached to a resource to specify or schedule actions on that resource."
+title_tag: "gcp.compute.ResourcePolicy"
+meta_desc: "Documentation for the gcp.compute.ResourcePolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -53,13 +53,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewResourcePolicy(ctx, "foo", &compute.ResourcePolicyArgs{
+		_, err := compute.NewResourcePolicy(ctx, "foo", &compute.ResourcePolicyArgs{
 			Region: pulumi.String("us-central1"),
 			SnapshotSchedulePolicy: &compute.ResourcePolicySnapshotSchedulePolicyArgs{
 				Schedule: &compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs{
@@ -87,14 +87,14 @@ import pulumi_gcp as gcp
 
 foo = gcp.compute.ResourcePolicy("foo",
     region="us-central1",
-    snapshot_schedule_policy={
-        "schedule": {
-            "dailySchedule": {
-                "daysInCycle": 1,
-                "startTime": "04:00",
-            },
-        },
-    })
+    snapshot_schedule_policy=gcp.compute.ResourcePolicySnapshotSchedulePolicyArgs(
+        schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs(
+            daily_schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs(
+                days_in_cycle=1,
+                start_time="04:00",
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -171,13 +171,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewResourcePolicy(ctx, "bar", &compute.ResourcePolicyArgs{
+		_, err := compute.NewResourcePolicy(ctx, "bar", &compute.ResourcePolicyArgs{
 			Region: pulumi.String("us-central1"),
 			SnapshotSchedulePolicy: &compute.ResourcePolicySnapshotSchedulePolicyArgs{
 				RetentionPolicy: &compute.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs{
@@ -192,7 +192,7 @@ func main() {
 				},
 				SnapshotProperties: &compute.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs{
 					GuestFlush: pulumi.Bool(true),
-					Labels: pulumi.Map{
+					Labels: pulumi.StringMap{
 						"myLabel": pulumi.String("value"),
 					},
 					StorageLocations: pulumi.String("us"),
@@ -216,25 +216,25 @@ import pulumi_gcp as gcp
 
 bar = gcp.compute.ResourcePolicy("bar",
     region="us-central1",
-    snapshot_schedule_policy={
-        "retention_policy": {
+    snapshot_schedule_policy=gcp.compute.ResourcePolicySnapshotSchedulePolicyArgs(
+        retention_policy={
             "maxRetentionDays": 10,
             "onSourceDiskDelete": "KEEP_AUTO_SNAPSHOTS",
         },
-        "schedule": {
-            "hourlySchedule": {
-                "hoursInCycle": 20,
-                "startTime": "23:00",
-            },
-        },
-        "snapshotProperties": {
-            "guestFlush": True,
-            "labels": {
+        schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleArgs(
+            hourly_schedule=gcp.compute.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs(
+                hours_in_cycle=20,
+                start_time="23:00",
+            ),
+        ),
+        snapshot_properties=gcp.compute.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(
+            guest_flush=True,
+            labels={
                 "myLabel": "value",
             },
-            "storageLocations": "us",
-        },
-    })
+            storage_locations="us",
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -302,13 +302,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = compute.NewResourcePolicy(ctx, "baz", &compute.ResourcePolicyArgs{
+		_, err := compute.NewResourcePolicy(ctx, "baz", &compute.ResourcePolicyArgs{
 			GroupPlacementPolicy: &compute.ResourcePolicyGroupPlacementPolicyArgs{
 				Collocation: pulumi.String("COLLOCATED"),
 				VmCount:     pulumi.Int(2),
@@ -331,10 +331,10 @@ import pulumi
 import pulumi_gcp as gcp
 
 baz = gcp.compute.ResourcePolicy("baz",
-    group_placement_policy={
-        "collocation": "COLLOCATED",
-        "vmCount": 2,
-    },
+    group_placement_policy=gcp.compute.ResourcePolicyGroupPlacementPolicyArgs(
+        collocation="COLLOCATED",
+        vm_count=2,
+    ),
     region="us-central1")
 ```
 
@@ -365,19 +365,19 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicy">ResourcePolicy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicyArgs">ResourcePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ResourcePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#ResourcePolicy">ResourcePolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>group_placement_policy=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>snapshot_schedule_policy=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group_placement_policy</span><span class="p">:</span> <span class="nx">Optional[ResourcePolicyGroupPlacementPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_schedule_policy</span><span class="p">:</span> <span class="nx">Optional[ResourcePolicySnapshotSchedulePolicyArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicy">NewResourcePolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyArgs">ResourcePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicy">ResourcePolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewResourcePolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ResourcePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ResourcePolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicy.html">ResourcePolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicyArgs.html">ResourcePolicyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ResourcePolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ResourcePolicyArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -388,7 +388,7 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -398,7 +398,7 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicyArgs">ResourcePolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">ResourcePolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -447,7 +447,7 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -457,7 +457,7 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -467,7 +467,7 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyArgs">ResourcePolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">ResourcePolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -477,7 +477,7 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -496,7 +496,7 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -506,7 +506,7 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicyArgs.html">ResourcePolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">ResourcePolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -529,12 +529,11 @@ const baz = new gcp.compute.ResourcePolicy("baz", {
 
 ## ResourcePolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -545,20 +544,20 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
             title="Optional">
         <span id="groupplacementpolicy_csharp">
 <a href="#groupplacementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating
 the resource. The resource name must be 1-63 characters long, and comply
@@ -568,44 +567,40 @@ first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotschedulepolicy_csharp">
 <a href="#snapshotschedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -614,20 +609,20 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="groupplacementpolicy_go">
 <a href="#groupplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating
 the resource. The resource name must be 1-63 characters long, and comply
@@ -637,44 +632,40 @@ first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotschedulepolicy_go">
 <a href="#snapshotschedulepolicy_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -683,20 +674,20 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="groupplacementpolicy_nodejs">
 <a href="#groupplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Placement<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating
 the resource. The resource name must be 1-63 characters long, and comply
@@ -706,44 +697,40 @@ first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotschedulepolicy_nodejs">
 <a href="#snapshotschedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -752,20 +739,20 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="group_placement_policy_python">
 <a href="#group_placement_policy_python" style="color: inherit; text-decoration: inherit;">group_<wbr>placement_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Dict[Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating
 the resource. The resource name must be 1-63 characters long, and comply
@@ -775,53 +762,45 @@ first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_schedule_policy_python">
 <a href="#snapshot_schedule_policy_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>schedule_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ResourcePolicy resource produces the following output properties:
-
 
 
 
@@ -832,26 +811,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -860,26 +836,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -888,26 +861,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -916,29 +886,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -948,19 +912,20 @@ Get an existing ResourcePolicy resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicyState">ResourcePolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ResourcePolicy">ResourcePolicy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ResourcePolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ResourcePolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>group_placement_policy=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>self_link=None<span class="p">, </span>snapshot_schedule_policy=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group_placement_policy</span><span class="p">:</span> <span class="nx">Optional[ResourcePolicyGroupPlacementPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_schedule_policy</span><span class="p">:</span> <span class="nx">Optional[ResourcePolicySnapshotSchedulePolicyArgs]</span> = None<span class="p">) -&gt;</span> ResourcePolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourcePolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyState">ResourcePolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicy">ResourcePolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourcePolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ResourcePolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ResourcePolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicy.html">ResourcePolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ResourcePolicyState.html">ResourcePolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ResourcePolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ResourcePolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1062,7 +1027,6 @@ Get an existing ResourcePolicy resource's state with the given name, ID, and opt
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1070,20 +1034,20 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_groupplacementpolicy_csharp">
 <a href="#state_groupplacementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating
 the resource. The resource name must be 1-63 characters long, and comply
@@ -1093,55 +1057,50 @@ first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_snapshotschedulepolicy_csharp">
 <a href="#state_snapshotschedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1150,20 +1109,20 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_groupplacementpolicy_go">
 <a href="#state_groupplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating
 the resource. The resource name must be 1-63 characters long, and comply
@@ -1173,55 +1132,50 @@ first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_snapshotschedulepolicy_go">
 <a href="#state_snapshotschedulepolicy_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1230,20 +1184,20 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_groupplacementpolicy_nodejs">
 <a href="#state_groupplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Placement<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating
 the resource. The resource name must be 1-63 characters long, and comply
@@ -1253,55 +1207,50 @@ first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_snapshotschedulepolicy_nodejs">
 <a href="#state_snapshotschedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1310,20 +1259,20 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_group_placement_policy_python">
 <a href="#state_group_placement_policy_python" style="color: inherit; text-decoration: inherit;">group_<wbr>placement_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Dict[Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially creating
 the resource. The resource name must be 1-63 characters long, and comply
@@ -1333,58 +1282,50 @@ first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_schedule_policy_python">
 <a href="#state_snapshot_schedule_policy_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>schedule_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.  Structure is documented below.
+    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1394,20 +1335,8 @@ If it is not provided, the provider project is used.
 ## Supporting Types
 
 
+
 <h4 id="resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicyGroupPlacementPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicyGroupPlacementPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyGroupPlacementPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicyGroupPlacementPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicyGroupPlacementPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicyGroupPlacementPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1416,42 +1345,39 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="availabilitydomaincount_csharp">
 <a href="#availabilitydomaincount_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Domain<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
 availability domain, they will not be put in the same low latency network
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="collocation_csharp">
 <a href="#collocation_csharp" style="color: inherit; text-decoration: inherit;">Collocation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
 Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
 with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
 attached.
+Possible values are `COLLOCATED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmcount_csharp">
 <a href="#vmcount_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1460,42 +1386,39 @@ attached.
             title="Optional">
         <span id="availabilitydomaincount_go">
 <a href="#availabilitydomaincount_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Domain<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
 availability domain, they will not be put in the same low latency network
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="collocation_go">
 <a href="#collocation_go" style="color: inherit; text-decoration: inherit;">Collocation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
 Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
 with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
 attached.
+Possible values are `COLLOCATED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmcount_go">
 <a href="#vmcount_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1504,104 +1427,82 @@ attached.
             title="Optional">
         <span id="availabilitydomaincount_nodejs">
 <a href="#availabilitydomaincount_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Domain<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
 availability domain, they will not be put in the same low latency network
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="collocation_nodejs">
 <a href="#collocation_nodejs" style="color: inherit; text-decoration: inherit;">collocation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
 Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
 with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
 attached.
+Possible values are `COLLOCATED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmcount_nodejs">
 <a href="#vmcount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="availabilitydomaincount_python">
-<a href="#availabilitydomaincount_python" style="color: inherit; text-decoration: inherit;">availability<wbr>Domain<wbr>Count</a>
-</span> 
+        <span id="availability_domain_count_python">
+<a href="#availability_domain_count_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>domain_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
 availability domain, they will not be put in the same low latency network
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="collocation_python">
 <a href="#collocation_python" style="color: inherit; text-decoration: inherit;">collocation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network.
 Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count`. If compute instances are created
 with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
 attached.
+Possible values are `COLLOCATED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="vmcount_python">
-<a href="#vmcount_python" style="color: inherit; text-decoration: inherit;">vm<wbr>Count</a>
-</span> 
+        <span id="vm_count_python">
+<a href="#vm_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1610,38 +1511,37 @@ attached.
             title="Required">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.  Structure is documented below.
+    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.  Structure is documented below.
+    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotproperties_csharp">
 <a href="#snapshotproperties_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.  Structure is documented below.
+    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1650,38 +1550,37 @@ attached.
             title="Required">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.  Structure is documented below.
+    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.  Structure is documented below.
+    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotproperties_go">
 <a href="#snapshotproperties_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.  Structure is documented below.
+    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1690,38 +1589,37 @@ attached.
             title="Required">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.  Structure is documented below.
+    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.  Structure is documented below.
+    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotproperties_nodejs">
 <a href="#snapshotproperties_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.  Structure is documented below.
+    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1730,56 +1628,39 @@ attached.
             title="Required">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.  Structure is documented below.
+    <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.  Structure is documented below.
+    <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="snapshotproperties_python">
-<a href="#snapshotproperties_python" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Properties</a>
-</span> 
+        <span id="snapshot_properties_python">
+<a href="#snapshot_properties_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>properties</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.  Structure is documented below.
+    <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicyRetentionPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicyRetentionPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyRetentionPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1788,28 +1669,27 @@ attached.
             title="Required">
         <span id="maxretentiondays_csharp">
 <a href="#maxretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retention<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onsourcediskdelete_csharp">
 <a href="#onsourcediskdelete_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Source<wbr>Disk<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
+Default value is `KEEP_AUTO_SNAPSHOTS`.
+Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1818,28 +1698,27 @@ the source disk is deleted.
             title="Required">
         <span id="maxretentiondays_go">
 <a href="#maxretentiondays_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retention<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onsourcediskdelete_go">
 <a href="#onsourcediskdelete_go" style="color: inherit; text-decoration: inherit;">On<wbr>Source<wbr>Disk<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
+Default value is `KEEP_AUTO_SNAPSHOTS`.
+Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1848,76 +1727,58 @@ the source disk is deleted.
             title="Required">
         <span id="maxretentiondays_nodejs">
 <a href="#maxretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retention<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onsourcediskdelete_nodejs">
 <a href="#onsourcediskdelete_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Source<wbr>Disk<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
+Default value is `KEEP_AUTO_SNAPSHOTS`.
+Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="maxretentiondays_python">
-<a href="#maxretentiondays_python" style="color: inherit; text-decoration: inherit;">max<wbr>Retention<wbr>Days</a>
-</span> 
+        <span id="max_retention_days_python">
+<a href="#max_retention_days_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retention_<wbr>days</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="onsourcediskdelete_python">
-<a href="#onsourcediskdelete_python" style="color: inherit; text-decoration: inherit;">on<wbr>Source<wbr>Disk<wbr>Delete</a>
-</span> 
+        <span id="on_source_disk_delete_python">
+<a href="#on_source_disk_delete_python" style="color: inherit; text-decoration: inherit;">on_<wbr>source_<wbr>disk_<wbr>delete</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the behavior to apply to scheduled snapshots when
 the source disk is deleted.
+Default value is `KEEP_AUTO_SNAPSHOTS`.
+Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicySchedule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicySchedule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicySchedule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1926,38 +1787,37 @@ the source disk is deleted.
             title="Optional">
         <span id="dailyschedule_csharp">
 <a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth day at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth day at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hourlyschedule_csharp">
 <a href="#hourlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeklyschedule_csharp">
 <a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.  Structure is documented below.
+    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1966,38 +1826,37 @@ the source disk is deleted.
             title="Optional">
         <span id="dailyschedule_go">
 <a href="#dailyschedule_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth day at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth day at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hourlyschedule_go">
 <a href="#hourlyschedule_go" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeklyschedule_go">
 <a href="#weeklyschedule_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.  Structure is documented below.
+    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2006,96 +1865,78 @@ the source disk is deleted.
             title="Optional">
         <span id="dailyschedule_nodejs">
 <a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth day at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth day at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hourlyschedule_nodejs">
 <a href="#hourlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeklyschedule_nodejs">
 <a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.  Structure is documented below.
+    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="dailyschedule_python">
-<a href="#dailyschedule_python" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
-</span> 
+        <span id="daily_schedule_python">
+<a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth day at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth day at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="hourlyschedule_python">
-<a href="#hourlyschedule_python" style="color: inherit; text-decoration: inherit;">hourly<wbr>Schedule</a>
-</span> 
+        <span id="hourly_schedule_python">
+<a href="#hourly_schedule_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>schedule</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.  Structure is documented below.
+    <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="weeklyschedule_python">
-<a href="#weeklyschedule_python" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
-</span> 
+        <span id="weekly_schedule_python">
+<a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Dict[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.  Structure is documented below.
+    <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2104,28 +1945,25 @@ the source disk is deleted.
             title="Required">
         <span id="daysincycle_csharp">
 <a href="#daysincycle_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>In<wbr>Cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days between snapshots.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2134,28 +1972,25 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Required">
         <span id="daysincycle_go">
 <a href="#daysincycle_go" style="color: inherit; text-decoration: inherit;">Days<wbr>In<wbr>Cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days between snapshots.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2164,76 +1999,54 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Required">
         <span id="daysincycle_nodejs">
 <a href="#daysincycle_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>In<wbr>Cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days between snapshots.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="daysincycle_python">
-<a href="#daysincycle_python" style="color: inherit; text-decoration: inherit;">days<wbr>In<wbr>Cycle</a>
-</span> 
+        <span id="days_in_cycle_python">
+<a href="#days_in_cycle_python" style="color: inherit; text-decoration: inherit;">days_<wbr>in_<wbr>cycle</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days between snapshots.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="starttime_python">
-<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
-</span> 
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2242,28 +2055,25 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Required">
         <span id="hoursincycle_csharp">
 <a href="#hoursincycle_csharp" style="color: inherit; text-decoration: inherit;">Hours<wbr>In<wbr>Cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of hours between snapshots.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2272,28 +2082,25 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Required">
         <span id="hoursincycle_go">
 <a href="#hoursincycle_go" style="color: inherit; text-decoration: inherit;">Hours<wbr>In<wbr>Cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of hours between snapshots.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2302,76 +2109,54 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Required">
         <span id="hoursincycle_nodejs">
 <a href="#hoursincycle_nodejs" style="color: inherit; text-decoration: inherit;">hours<wbr>In<wbr>Cycle</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of hours between snapshots.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="hoursincycle_python">
-<a href="#hoursincycle_python" style="color: inherit; text-decoration: inherit;">hours<wbr>In<wbr>Cycle</a>
-</span> 
+        <span id="hours_in_cycle_python">
+<a href="#hours_in_cycle_python" style="color: inherit; text-decoration: inherit;">hours_<wbr>in_<wbr>cycle</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of hours between snapshots.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="starttime_python">
-<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
-</span> 
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2380,16 +2165,15 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Required">
         <span id="dayofweeks_csharp">
 <a href="#dayofweeks_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Weeks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List&lt;Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.  Structure is documented below.
+    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2398,16 +2182,15 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Required">
         <span id="dayofweeks_go">
 <a href="#dayofweeks_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Weeks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">[]Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
-    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.  Structure is documented below.
+    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2416,52 +2199,34 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Required">
         <span id="dayofweeks_nodejs">
 <a href="#dayofweeks_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Weeks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week[]</a></span>
     </dt>
-    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.  Structure is documented below.
+    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="dayofweeks_python">
-<a href="#dayofweeks_python" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Weeks</a>
-</span> 
+        <span id="day_of_weeks_python">
+<a href="#day_of_weeks_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>weeks</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">List[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week]</a></span>
+        <span class="property-type"><a href="#resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Sequence[Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.  Structure is documented below.
+    <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2470,28 +2235,26 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Required">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
+Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2500,28 +2263,26 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Required">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
+Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2530,28 +2291,26 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Required">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
+Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2560,46 +2319,28 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Required">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
+Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="starttime_python">
-<a href="#starttime_python" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
-</span> 
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ResourcePolicySnapshotSchedulePolicySnapshotProperties">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ResourcePolicySnapshotSchedulePolicySnapshotProperties">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ResourcePolicySnapshotSchedulePolicySnapshotPropertiesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ResourcePolicySnapshotSchedulePolicySnapshotProperties.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2608,39 +2349,35 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Optional">
         <span id="guestflush_csharp">
 <a href="#guestflush_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Flush</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to perform a 'guest aware' snapshot.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagelocations_csharp">
 <a href="#storagelocations_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket location to store the auto snapshot
 (regional or multi-regional)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2649,39 +2386,35 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Optional">
         <span id="guestflush_go">
 <a href="#guestflush_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Flush</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to perform a 'guest aware' snapshot.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagelocations_go">
 <a href="#storagelocations_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket location to store the auto snapshot
 (regional or multi-regional)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2690,84 +2423,92 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
             title="Optional">
         <span id="guestflush_nodejs">
 <a href="#guestflush_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Flush</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to perform a 'guest aware' snapshot.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagelocations_nodejs">
 <a href="#storagelocations_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket location to store the auto snapshot
 (regional or multi-regional)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="guestflush_python">
-<a href="#guestflush_python" style="color: inherit; text-decoration: inherit;">guest<wbr>Flush</a>
-</span> 
+        <span id="guest_flush_python">
+<a href="#guest_flush_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>flush</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to perform a 'guest aware' snapshot.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="storagelocations_python">
-<a href="#storagelocations_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
-</span> 
+        <span id="storage_locations_python">
+<a href="#storage_locations_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>locations</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Storage bucket location to store the auto snapshot
 (regional or multi-regional)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+ResourcePolicy can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:compute/resourcePolicy:ResourcePolicy default projects/{{project}}/regions/{{region}}/resourcePolicies/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:compute/resourcePolicy:ResourcePolicy default {{project}}/{{region}}/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:compute/resourcePolicy:ResourcePolicy default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/resourcePolicy:ResourcePolicy default {{name}}
+```
 
 
 
@@ -2779,6 +2520,6 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

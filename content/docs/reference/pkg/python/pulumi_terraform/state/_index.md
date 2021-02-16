@@ -5,6 +5,8 @@ linktitle: state
 notitle: true
 ---
 
+{{< resource-docs-alert "terraform" >}}
+
 <div class="section" id="state">
 <h1>state<a class="headerlink" href="#state" title="Permalink to this headline">¶</a></h1>
 <blockquote>

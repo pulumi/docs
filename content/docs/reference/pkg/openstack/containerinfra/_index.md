@@ -28,26 +28,8 @@ Explore the resources and functions of the containerinfra module in the Open Sta
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.ContainerInfra.html" title="Pulumi.OpenStack.ContainerInfra">Pulumi.OpenStack.ContainerInfra</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/containerinfra?tab=doc#" title="openstack/containerinfra">openstack/containerinfra</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/containerinfra/#" title="@pulumi/openstack/containerinfra">@pulumi/openstack/containerinfra</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/containerinfra" title="pulumi_openstack/containerinfra">pulumi_openstack/containerinfra</a></dd>
-
+	<dd>2.14.0</dd>
 </dl>
 

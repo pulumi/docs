@@ -12,6 +12,7 @@ meta_desc: ""
 <h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="v1alpha1/" title="v1alpha1"><span class="symbol module"></span>v1alpha1</a></li>
+    <li><a href="v1beta1/" title="v1beta1"><span class="symbol module"></span>v1beta1</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -21,21 +22,6 @@ meta_desc: ""
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.4.3</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/flowcontrol?tab=doc#" title="kubernetes/flowcontrol">kubernetes/flowcontrol</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/flowcontrol/#" title="@pulumi/kubernetes/flowcontrol">@pulumi/kubernetes/flowcontrol</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/flowcontrol" title="pulumi_kubernetes/flowcontrol">pulumi_kubernetes/flowcontrol</a></dd>
-
+	<dd>2.8.1</dd>
 </dl>
 

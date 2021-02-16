@@ -1,8 +1,8 @@
 
 ---
 title: "VbrHealthCheck"
-title_tag: "Resource VbrHealthCheck | Module cen | Package AliCloud"
-meta_desc: "Explore the VbrHealthCheck resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. This topic describes how to configure the health check feature for a Cloud Enterprise Network (CEN) instance. "
+title_tag: "alicloud.cen.VbrHealthCheck"
+meta_desc: "Documentation for the alicloud.cen.VbrHealthCheck resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -31,24 +31,33 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Create a cen vbr HealrhCheck resource and use it.
         var defaultInstance = new AliCloud.Cen.Instance("defaultInstance", new AliCloud.Cen.InstanceArgs
         {
+            CenInstanceName = "test_name",
         });
         var defaultInstanceAttachment = new AliCloud.Cen.InstanceAttachment("defaultInstanceAttachment", new AliCloud.Cen.InstanceAttachmentArgs
         {
-            ChildInstanceId = "vbr-xxxxx",
-            ChildInstanceRegionId = "cn-hangzhou",
             InstanceId = defaultInstance.Id,
+            ChildInstanceId = "vbr-xxxxx",
+            ChildInstanceType = "VBR",
+            ChildInstanceRegionId = "cn-hangzhou",
         });
         var defaultVbrHealthCheck = new AliCloud.Cen.VbrHealthCheck("defaultVbrHealthCheck", new AliCloud.Cen.VbrHealthCheckArgs
         {
             CenId = defaultInstance.Id,
-            HealthCheckInterval = 2,
             HealthCheckSourceIp = "192.168.1.2",
             HealthCheckTargetIp = "10.0.0.2",
-            HealthyThreshold = 8,
             VbrInstanceId = "vbr-xxxxx",
             VbrInstanceRegionId = "cn-hangzhou",
+            HealthCheckInterval = 2,
+            HealthyThreshold = 8,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                defaultInstanceAttachment,
+            },
         });
     }
 
@@ -58,7 +67,50 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultInstance, err := cen.NewInstance(ctx, "defaultInstance", &cen.InstanceArgs{
+			CenInstanceName: pulumi.String("test_name"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultInstanceAttachment, err := cen.NewInstanceAttachment(ctx, "defaultInstanceAttachment", &cen.InstanceAttachmentArgs{
+			InstanceId:            defaultInstance.ID(),
+			ChildInstanceId:       pulumi.String("vbr-xxxxx"),
+			ChildInstanceType:     pulumi.String("VBR"),
+			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewVbrHealthCheck(ctx, "defaultVbrHealthCheck", &cen.VbrHealthCheckArgs{
+			CenId:               defaultInstance.ID(),
+			HealthCheckSourceIp: pulumi.String("192.168.1.2"),
+			HealthCheckTargetIp: pulumi.String("10.0.0.2"),
+			VbrInstanceId:       pulumi.String("vbr-xxxxx"),
+			VbrInstanceRegionId: pulumi.String("cn-hangzhou"),
+			HealthCheckInterval: pulumi.Int(2),
+			HealthyThreshold:    pulumi.Int(8),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			defaultInstanceAttachment,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,19 +118,22 @@ Coming soon!
 import pulumi
 import pulumi_alicloud as alicloud
 
-default_instance = alicloud.cen.Instance("defaultInstance")
+# Create a cen vbr HealrhCheck resource and use it.
+default_instance = alicloud.cen.Instance("defaultInstance", cen_instance_name="test_name")
 default_instance_attachment = alicloud.cen.InstanceAttachment("defaultInstanceAttachment",
+    instance_id=default_instance.id,
     child_instance_id="vbr-xxxxx",
-    child_instance_region_id="cn-hangzhou",
-    instance_id=default_instance.id)
+    child_instance_type="VBR",
+    child_instance_region_id="cn-hangzhou")
 default_vbr_health_check = alicloud.cen.VbrHealthCheck("defaultVbrHealthCheck",
     cen_id=default_instance.id,
-    health_check_interval=2,
     health_check_source_ip="192.168.1.2",
     health_check_target_ip="10.0.0.2",
-    healthy_threshold=8,
     vbr_instance_id="vbr-xxxxx",
-    vbr_instance_region_id="cn-hangzhou")
+    vbr_instance_region_id="cn-hangzhou",
+    health_check_interval=2,
+    healthy_threshold=8,
+    opts=pulumi.ResourceOptions(depends_on=[default_instance_attachment]))
 ```
 
 {{% /example %}}
@@ -89,21 +144,25 @@ default_vbr_health_check = alicloud.cen.VbrHealthCheck("defaultVbrHealthCheck",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultInstance = new alicloud.cen.Instance("default", {});
-const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("default", {
-    childInstanceId: "vbr-xxxxx",
-    childInstanceRegionId: "cn-hangzhou",
+// Create a cen vbr HealrhCheck resource and use it.
+const defaultInstance = new alicloud.cen.Instance("defaultInstance", {cenInstanceName: "test_name"});
+const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("defaultInstanceAttachment", {
     instanceId: defaultInstance.id,
+    childInstanceId: "vbr-xxxxx",
+    childInstanceType: "VBR",
+    childInstanceRegionId: "cn-hangzhou",
 });
-const defaultVbrHealthCheck = new alicloud.cen.VbrHealthCheck("default", {
+const defaultVbrHealthCheck = new alicloud.cen.VbrHealthCheck("defaultVbrHealthCheck", {
     cenId: defaultInstance.id,
-    healthCheckInterval: 2,
     healthCheckSourceIp: "192.168.1.2",
     healthCheckTargetIp: "10.0.0.2",
-    healthyThreshold: 8,
     vbrInstanceId: "vbr-xxxxx",
     vbrInstanceRegionId: "cn-hangzhou",
-}, { dependsOn: [defaultInstanceAttachment] });
+    healthCheckInterval: 2,
+    healthyThreshold: 8,
+}, {
+    dependsOn: [defaultInstanceAttachment],
+});
 ```
 
 {{% /example %}}
@@ -116,19 +175,19 @@ const defaultVbrHealthCheck = new alicloud.cen.VbrHealthCheck("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#VbrHealthCheck">VbrHealthCheck</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#VbrHealthCheckArgs">VbrHealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#VbrHealthCheck">VbrHealthCheck</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#VbrHealthCheckArgs">VbrHealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.VbrHealthCheck">VbrHealthCheck</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cen_id=None<span class="p">, </span>health_check_interval=None<span class="p">, </span>health_check_source_ip=None<span class="p">, </span>health_check_target_ip=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>vbr_instance_id=None<span class="p">, </span>vbr_instance_owner_id=None<span class="p">, </span>vbr_instance_region_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.VbrHealthCheck">VbrHealthCheck</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_source_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_target_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vbr_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vbr_instance_owner_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vbr_instance_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#VbrHealthCheck">NewVbrHealthCheck</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#VbrHealthCheckArgs">VbrHealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#VbrHealthCheck">VbrHealthCheck</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#VbrHealthCheck">NewVbrHealthCheck</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#VbrHealthCheckArgs">VbrHealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#VbrHealthCheck">VbrHealthCheck</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.VbrHealthCheck.html">VbrHealthCheck</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.VbrHealthCheckArgs.html">VbrHealthCheckArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.VbrHealthCheck.html">VbrHealthCheck</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.VbrHealthCheckArgs.html">VbrHealthCheckArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -139,7 +198,7 @@ const defaultVbrHealthCheck = new alicloud.cen.VbrHealthCheck("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -208,7 +267,7 @@ const defaultVbrHealthCheck = new alicloud.cen.VbrHealthCheck("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -247,7 +306,7 @@ const defaultVbrHealthCheck = new alicloud.cen.VbrHealthCheck("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -288,7 +347,6 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -296,93 +354,84 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="cenid_csharp">
 <a href="#cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="healthchecktargetip_csharp">
 <a href="#healthchecktargetip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vbrinstanceid_csharp">
 <a href="#vbrinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vbrinstanceregionid_csharp">
 <a href="#vbrinstanceregionid_csharp" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckinterval_csharp">
 <a href="#healthcheckinterval_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecksourceip_csharp">
 <a href="#healthchecksourceip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_csharp">
 <a href="#healthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vbrinstanceownerid_csharp">
 <a href="#vbrinstanceownerid_csharp" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -391,93 +440,84 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="cenid_go">
 <a href="#cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="healthchecktargetip_go">
 <a href="#healthchecktargetip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vbrinstanceid_go">
 <a href="#vbrinstanceid_go" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vbrinstanceregionid_go">
 <a href="#vbrinstanceregionid_go" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckinterval_go">
 <a href="#healthcheckinterval_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecksourceip_go">
 <a href="#healthchecksourceip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_go">
 <a href="#healthythreshold_go" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vbrinstanceownerid_go">
 <a href="#vbrinstanceownerid_go" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -486,93 +526,84 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="cenid_nodejs">
 <a href="#cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="healthchecktargetip_nodejs">
 <a href="#healthchecktargetip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Target<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vbrinstanceid_nodejs">
 <a href="#vbrinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">vbr<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vbrinstanceregionid_nodejs">
 <a href="#vbrinstanceregionid_nodejs" style="color: inherit; text-decoration: inherit;">vbr<wbr>Instance<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckinterval_nodejs">
 <a href="#healthcheckinterval_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecksourceip_nodejs">
 <a href="#healthchecksourceip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Source<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_nodejs">
 <a href="#healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vbrinstanceownerid_nodejs">
 <a href="#vbrinstanceownerid_nodejs" style="color: inherit; text-decoration: inherit;">vbr<wbr>Instance<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -581,102 +612,89 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="cen_id_python">
 <a href="#cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="health_check_target_ip_python">
 <a href="#health_check_target_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>target_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vbr_instance_id_python">
 <a href="#vbr_instance_id_python" style="color: inherit; text-decoration: inherit;">vbr_<wbr>instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vbr_instance_region_id_python">
 <a href="#vbr_instance_region_id_python" style="color: inherit; text-decoration: inherit;">vbr_<wbr>instance_<wbr>region_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="health_check_interval_python">
 <a href="#health_check_interval_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="health_check_source_ip_python">
 <a href="#health_check_source_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>source_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthy_threshold_python">
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vbr_instance_owner_id_python">
 <a href="#vbr_instance_owner_id_python" style="color: inherit; text-decoration: inherit;">vbr_<wbr>instance_<wbr>owner_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the VbrHealthCheck resource produces the following output properties:
-
 
 
 
@@ -687,15 +705,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -704,15 +720,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -721,15 +735,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -738,18 +750,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -759,19 +766,20 @@ Get an existing VbrHealthCheck resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#VbrHealthCheckState">VbrHealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#VbrHealthCheck">VbrHealthCheck</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#VbrHealthCheckState">VbrHealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#VbrHealthCheck">VbrHealthCheck</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cen_id=None<span class="p">, </span>health_check_interval=None<span class="p">, </span>health_check_source_ip=None<span class="p">, </span>health_check_target_ip=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>vbr_instance_id=None<span class="p">, </span>vbr_instance_owner_id=None<span class="p">, </span>vbr_instance_region_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_source_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_target_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">healthy_threshold</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vbr_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vbr_instance_owner_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">vbr_instance_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VbrHealthCheck</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVbrHealthCheck<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#VbrHealthCheckState">VbrHealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#VbrHealthCheck">VbrHealthCheck</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVbrHealthCheck<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#VbrHealthCheckState">VbrHealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#VbrHealthCheck">VbrHealthCheck</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.VbrHealthCheck.html">VbrHealthCheck</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.VbrHealthCheckState.html">VbrHealthCheckState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.VbrHealthCheck.html">VbrHealthCheck</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.VbrHealthCheckState.html">VbrHealthCheckState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -873,7 +881,6 @@ Get an existing VbrHealthCheck resource's state with the given name, ID, and opt
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -881,93 +888,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cenid_csharp">
 <a href="#state_cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckinterval_csharp">
 <a href="#state_healthcheckinterval_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecksourceip_csharp">
 <a href="#state_healthchecksourceip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktargetip_csharp">
 <a href="#state_healthchecktargetip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthythreshold_csharp">
 <a href="#state_healthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceid_csharp">
 <a href="#state_vbrinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceownerid_csharp">
 <a href="#state_vbrinstanceownerid_csharp" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceregionid_csharp">
 <a href="#state_vbrinstanceregionid_csharp" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -976,93 +974,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cenid_go">
 <a href="#state_cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckinterval_go">
 <a href="#state_healthcheckinterval_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecksourceip_go">
 <a href="#state_healthchecksourceip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktargetip_go">
 <a href="#state_healthchecktargetip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthythreshold_go">
 <a href="#state_healthythreshold_go" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceid_go">
 <a href="#state_vbrinstanceid_go" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceownerid_go">
 <a href="#state_vbrinstanceownerid_go" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceregionid_go">
 <a href="#state_vbrinstanceregionid_go" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1071,93 +1060,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cenid_nodejs">
 <a href="#state_cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckinterval_nodejs">
 <a href="#state_healthcheckinterval_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecksourceip_nodejs">
 <a href="#state_healthchecksourceip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Source<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktargetip_nodejs">
 <a href="#state_healthchecktargetip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Target<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthythreshold_nodejs">
 <a href="#state_healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceid_nodejs">
 <a href="#state_vbrinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">vbr<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceownerid_nodejs">
 <a href="#state_vbrinstanceownerid_nodejs" style="color: inherit; text-decoration: inherit;">vbr<wbr>Instance<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceregionid_nodejs">
 <a href="#state_vbrinstanceregionid_nodejs" style="color: inherit; text-decoration: inherit;">vbr<wbr>Instance<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1166,90 +1146,82 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cen_id_python">
 <a href="#state_cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_health_check_interval_python">
 <a href="#state_health_check_interval_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_health_check_source_ip_python">
 <a href="#state_health_check_source_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>source_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_health_check_target_ip_python">
 <a href="#state_health_check_target_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>target_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthy_threshold_python">
 <a href="#state_healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vbr_instance_id_python">
 <a href="#state_vbr_instance_id_python" style="color: inherit; text-decoration: inherit;">vbr_<wbr>instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vbr_instance_owner_id_python">
 <a href="#state_vbr_instance_owner_id_python" style="color: inherit; text-decoration: inherit;">vbr_<wbr>instance_<wbr>owner_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vbr_instance_region_id_python">
 <a href="#state_vbr_instance_region_id_python" style="color: inherit; text-decoration: inherit;">vbr_<wbr>instance_<wbr>region_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1257,8 +1229,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+CEN VBR HealthCheck can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cen/vbrHealthCheck:VbrHealthCheck example vbr-xxxxx:cn-hangzhou
+```
 
 
 
@@ -1270,6 +1248,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module dataproc | Package GCP"
-meta_desc: "Explore the Cluster resource of the dataproc module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Cloud Dataproc cluster resource within GCP. For more information see"
+title_tag: "gcp.dataproc.Cluster"
+meta_desc: "Documentation for the gcp.dataproc.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -47,13 +47,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = dataproc.NewCluster(ctx, "simplecluster", &dataproc.ClusterArgs{
+		_, err := dataproc.NewCluster(ctx, "simplecluster", &dataproc.ClusterArgs{
 			Region: pulumi.String("us-central1"),
 		})
 		if err != nil {
@@ -99,42 +99,42 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var @default = new Gcp.ServiceAccount.Account("default", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "service-account-id",
+            DisplayName = "Service Account",
+        });
         var mycluster = new Gcp.Dataproc.Cluster("mycluster", new Gcp.Dataproc.ClusterArgs
         {
+            Region = "us-central1",
+            GracefulDecommissionTimeout = "120s",
+            Labels = 
+            {
+                { "foo", "bar" },
+            },
             ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
             {
-                GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
-                {
-                    ServiceAccountScopes = 
-                    {
-                        "https://www.googleapis.com/auth/monitoring",
-                        "useraccounts-ro",
-                        "storage-rw",
-                        "logging-write",
-                    },
-                    Tags = 
-                    {
-                        "foo",
-                        "bar",
-                    },
-                },
-                InitializationAction = 
-                {
-                    
-                    {
-                        { "script", "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh" },
-                        { "timeoutSec", 500 },
-                    },
-                },
+                StagingBucket = "dataproc-staging-bucket",
                 MasterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs
                 {
+                    NumInstances = 1,
+                    MachineType = "e2-medium",
                     DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs
                     {
-                        BootDiskSizeGb = 15,
                         BootDiskType = "pd-ssd",
+                        BootDiskSizeGb = 15,
                     },
-                    MachineType = "n1-standard-1",
-                    NumInstances = 1,
+                },
+                WorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs
+                {
+                    NumInstances = 2,
+                    MachineType = "e2-medium",
+                    MinCpuPlatform = "Intel Skylake",
+                    DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs
+                    {
+                        BootDiskSizeGb = 15,
+                        NumLocalSsds = 1,
+                    },
                 },
                 PreemptibleWorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigArgs
                 {
@@ -148,24 +148,28 @@ class MyStack : Stack
                         { "dataproc:dataproc.allow.zero.workers", "true" },
                     },
                 },
-                StagingBucket = "dataproc-staging-bucket",
-                WorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs
+                GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
                 {
-                    DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs
+                    Tags = 
                     {
-                        BootDiskSizeGb = 15,
-                        NumLocalSsds = 1,
+                        "foo",
+                        "bar",
                     },
-                    MachineType = "n1-standard-1",
-                    MinCpuPlatform = "Intel Skylake",
-                    NumInstances = 2,
+                    ServiceAccount = @default.Email,
+                    ServiceAccountScopes = 
+                    {
+                        "cloud-platform",
+                    },
+                },
+                InitializationActions = 
+                {
+                    new Gcp.Dataproc.Inputs.ClusterClusterConfigInitializationActionArgs
+                    {
+                        Script = "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+                        TimeoutSec = 500,
+                    },
                 },
             },
-            Labels = 
-            {
-                { "foo", "bar" },
-            },
-            Region = "us-central1",
         });
     }
 
@@ -179,64 +183,71 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := serviceAccount.NewAccount(ctx, "_default", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("service-account-id"),
+			DisplayName: pulumi.String("Service Account"),
+		})
+		if err != nil {
+			return err
+		}
 		_, err = dataproc.NewCluster(ctx, "mycluster", &dataproc.ClusterArgs{
+			Region:                      pulumi.String("us-central1"),
+			GracefulDecommissionTimeout: pulumi.String("120s"),
+			Labels: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
 			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
-				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
-					ServiceAccountScopes: pulumi.StringArray{
-						pulumi.String("https://www.googleapis.com/auth/monitoring"),
-						pulumi.String("useraccounts-ro"),
-						pulumi.String("storage-rw"),
-						pulumi.String("logging-write"),
-					},
-					Tags: pulumi.StringArray{
-						pulumi.String("foo"),
-						pulumi.String("bar"),
-					},
-				},
-				InitializationAction: pulumi.MapArray{
-					pulumi.Map{
-						"script":     pulumi.String("gs://dataproc-initialization-actions/stackdriver/stackdriver.sh"),
-						"timeoutSec": pulumi.Float64(500),
-					},
-				},
+				StagingBucket: pulumi.String("dataproc-staging-bucket"),
 				MasterConfig: &dataproc.ClusterClusterConfigMasterConfigArgs{
-					DiskConfig: &dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs{
-						BootDiskSizeGb: pulumi.Int(15),
-						BootDiskType:   pulumi.String("pd-ssd"),
-					},
-					MachineType:  pulumi.String("n1-standard-1"),
 					NumInstances: pulumi.Int(1),
+					MachineType:  pulumi.String("e2-medium"),
+					DiskConfig: &dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs{
+						BootDiskType:   pulumi.String("pd-ssd"),
+						BootDiskSizeGb: pulumi.Int(15),
+					},
+				},
+				WorkerConfig: &dataproc.ClusterClusterConfigWorkerConfigArgs{
+					NumInstances:   pulumi.Int(2),
+					MachineType:    pulumi.String("e2-medium"),
+					MinCpuPlatform: pulumi.String("Intel Skylake"),
+					DiskConfig: &dataproc.ClusterClusterConfigWorkerConfigDiskConfigArgs{
+						BootDiskSizeGb: pulumi.Int(15),
+						NumLocalSsds:   pulumi.Int(1),
+					},
 				},
 				PreemptibleWorkerConfig: &dataproc.ClusterClusterConfigPreemptibleWorkerConfigArgs{
 					NumInstances: pulumi.Int(0),
 				},
 				SoftwareConfig: &dataproc.ClusterClusterConfigSoftwareConfigArgs{
 					ImageVersion: pulumi.String("1.3.7-deb9"),
-					OverrideProperties: pulumi.Map{
+					OverrideProperties: pulumi.StringMap{
 						"dataproc:dataproc.allow.zero.workers": pulumi.String("true"),
 					},
 				},
-				StagingBucket: pulumi.String("dataproc-staging-bucket"),
-				WorkerConfig: &dataproc.ClusterClusterConfigWorkerConfigArgs{
-					DiskConfig: &dataproc.ClusterClusterConfigWorkerConfigDiskConfigArgs{
-						BootDiskSizeGb: pulumi.Int(15),
-						NumLocalSsds:   pulumi.Int(1),
+				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
+					Tags: pulumi.StringArray{
+						pulumi.String("foo"),
+						pulumi.String("bar"),
 					},
-					MachineType:    pulumi.String("n1-standard-1"),
-					MinCpuPlatform: pulumi.String("Intel Skylake"),
-					NumInstances:   pulumi.Int(2),
+					ServiceAccount: _default.Email,
+					ServiceAccountScopes: pulumi.StringArray{
+						pulumi.String("cloud-platform"),
+					},
+				},
+				InitializationActions: dataproc.ClusterClusterConfigInitializationActionArray{
+					&dataproc.ClusterClusterConfigInitializationActionArgs{
+						Script:     pulumi.String("gs://dataproc-initialization-actions/stackdriver/stackdriver.sh"),
+						TimeoutSec: pulumi.Int(500),
+					},
 				},
 			},
-			Labels: pulumi.Map{
-				"foo": pulumi.String("bar"),
-			},
-			Region: pulumi.String("us-central1"),
 		})
 		if err != nil {
 			return err
@@ -253,56 +264,56 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
+default = gcp.service_account.Account("default",
+    account_id="service-account-id",
+    display_name="Service Account")
 mycluster = gcp.dataproc.Cluster("mycluster",
-    cluster_config={
-        "gceClusterConfig": {
-            "serviceAccountScopes": [
-                "https://www.googleapis.com/auth/monitoring",
-                "useraccounts-ro",
-                "storage-rw",
-                "logging-write",
-            ],
-            "tags": [
-                "foo",
-                "bar",
-            ],
-        },
-        "initializationAction": [{
-            "script": "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
-            "timeout_sec": 500,
-        }],
-        "masterConfig": {
-            "diskConfig": {
-                "boot_disk_size_gb": 15,
-                "boot_disk_type": "pd-ssd",
-            },
-            "machine_type": "n1-standard-1",
-            "numInstances": 1,
-        },
-        "preemptibleWorkerConfig": {
-            "numInstances": 0,
-        },
-        "softwareConfig": {
-            "imageVersion": "1.3.7-deb9",
-            "overrideProperties": {
-                "dataproc:dataproc.allow.zero.workers": "true",
-            },
-        },
-        "stagingBucket": "dataproc-staging-bucket",
-        "worker_config": {
+    region="us-central1",
+    graceful_decommission_timeout="120s",
+    labels={
+        "foo": "bar",
+    },
+    cluster_config=gcp.dataproc.ClusterClusterConfigArgs(
+        staging_bucket="dataproc-staging-bucket",
+        master_config=gcp.dataproc.ClusterClusterConfigMasterConfigArgs(
+            num_instances=1,
+            machine_type="e2-medium",
+            disk_config=gcp.dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs(
+                boot_disk_type="pd-ssd",
+                boot_disk_size_gb=15,
+            ),
+        ),
+        worker_config={
+            "numInstances": 2,
+            "machine_type": "e2-medium",
+            "min_cpu_platform": "Intel Skylake",
             "diskConfig": {
                 "boot_disk_size_gb": 15,
                 "numLocalSsds": 1,
             },
-            "machine_type": "n1-standard-1",
-            "min_cpu_platform": "Intel Skylake",
-            "numInstances": 2,
         },
-    },
-    labels={
-        "foo": "bar",
-    },
-    region="us-central1")
+        preemptible_worker_config=gcp.dataproc.ClusterClusterConfigPreemptibleWorkerConfigArgs(
+            num_instances=0,
+        ),
+        software_config=gcp.dataproc.ClusterClusterConfigSoftwareConfigArgs(
+            image_version="1.3.7-deb9",
+            override_properties={
+                "dataproc:dataproc.allow.zero.workers": "true",
+            },
+        ),
+        gce_cluster_config=gcp.dataproc.ClusterClusterConfigGceClusterConfigArgs(
+            tags=[
+                "foo",
+                "bar",
+            ],
+            service_account=default.email,
+            service_account_scopes=["cloud-platform"],
+        ),
+        initialization_actions=[gcp.dataproc.ClusterClusterConfigInitializationActionArgs(
+            script="gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+            timeout_sec=500,
+        )],
+    ))
 ```
 
 {{% /example %}}
@@ -313,58 +324,57 @@ mycluster = gcp.dataproc.Cluster("mycluster",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
+const _default = new gcp.serviceAccount.Account("default", {
+    accountId: "service-account-id",
+    displayName: "Service Account",
+});
 const mycluster = new gcp.dataproc.Cluster("mycluster", {
+    region: "us-central1",
+    gracefulDecommissionTimeout: "120s",
+    labels: {
+        foo: "bar",
+    },
     clusterConfig: {
-        gceClusterConfig: {
-            serviceAccountScopes: [
-                "https://www.googleapis.com/auth/monitoring",
-                "useraccounts-ro",
-                "storage-rw",
-                "logging-write",
-            ],
-            tags: [
-                "foo",
-                "bar",
-            ],
-        },
-        // You can define multiple initialization_action blocks
-        initializationActions: [{
-            script: "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
-            timeoutSec: 500,
-        }],
+        stagingBucket: "dataproc-staging-bucket",
         masterConfig: {
+            numInstances: 1,
+            machineType: "e2-medium",
+            diskConfig: {
+                bootDiskType: "pd-ssd",
+                bootDiskSizeGb: 15,
+            },
+        },
+        workerConfig: {
+            numInstances: 2,
+            machineType: "e2-medium",
+            minCpuPlatform: "Intel Skylake",
             diskConfig: {
                 bootDiskSizeGb: 15,
-                bootDiskType: "pd-ssd",
+                numLocalSsds: 1,
             },
-            machineType: "n1-standard-1",
-            numInstances: 1,
         },
         preemptibleWorkerConfig: {
             numInstances: 0,
         },
-        // Override or set some custom properties
         softwareConfig: {
             imageVersion: "1.3.7-deb9",
             overrideProperties: {
                 "dataproc:dataproc.allow.zero.workers": "true",
             },
         },
-        stagingBucket: "dataproc-staging-bucket",
-        workerConfig: {
-            diskConfig: {
-                bootDiskSizeGb: 15,
-                numLocalSsds: 1,
-            },
-            machineType: "n1-standard-1",
-            minCpuPlatform: "Intel Skylake",
-            numInstances: 2,
+        gceClusterConfig: {
+            tags: [
+                "foo",
+                "bar",
+            ],
+            serviceAccount: _default.email,
+            serviceAccountScopes: ["cloud-platform"],
         },
+        initializationActions: [{
+            script: "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+            timeoutSec: 500,
+        }],
     },
-    labels: {
-        foo: "bar",
-    },
-    region: "us-central1",
 });
 ```
 
@@ -414,13 +424,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = dataproc.NewCluster(ctx, "acceleratedCluster", &dataproc.ClusterArgs{
+		_, err := dataproc.NewCluster(ctx, "acceleratedCluster", &dataproc.ClusterArgs{
 			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
 				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
 					Zone: pulumi.String("us-central1-a"),
@@ -452,17 +462,17 @@ import pulumi
 import pulumi_gcp as gcp
 
 accelerated_cluster = gcp.dataproc.Cluster("acceleratedCluster",
-    cluster_config={
-        "gceClusterConfig": {
-            "zone": "us-central1-a",
-        },
-        "masterConfig": {
-            "accelerators": [{
-                "acceleratorCount": "1",
-                "accelerator_type": "nvidia-tesla-k80",
-            }],
-        },
-    },
+    cluster_config=gcp.dataproc.ClusterClusterConfigArgs(
+        gce_cluster_config=gcp.dataproc.ClusterClusterConfigGceClusterConfigArgs(
+            zone="us-central1-a",
+        ),
+        master_config=gcp.dataproc.ClusterClusterConfigMasterConfigArgs(
+            accelerators=[gcp.dataproc.ClusterClusterConfigMasterConfigAcceleratorArgs(
+                accelerator_count=1,
+                accelerator_type="nvidia-tesla-k80",
+            )],
+        ),
+    ),
     region="us-central1")
 ```
 
@@ -500,19 +510,19 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dataproc/#Cluster">Cluster</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">graceful_decommission_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Cluster">NewCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.ClusterArgs.html">ClusterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -523,7 +533,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -533,7 +543,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#ClusterArgs">ClusterArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -582,7 +592,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -592,7 +602,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -602,7 +612,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterArgs">ClusterArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -612,7 +622,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -631,7 +641,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -641,7 +651,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.ClusterArgs.html">ClusterArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -664,12 +674,11 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
 
 ## Cluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Cluster resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Cluster resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -680,19 +689,29 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="clusterconfig_csharp">
 <a href="#clusterconfig_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gracefuldecommissiontimeout_csharp">
+<a href="#gracefuldecommissiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -700,46 +719,41 @@ Structure defined below.
 instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
 which is the name of the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the `cluster` will exist. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the cluster and associated nodes will be created in.
 Defaults to `global`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -748,19 +762,29 @@ Defaults to `global`.
             title="Optional">
         <span id="clusterconfig_go">
 <a href="#clusterconfig_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gracefuldecommissiontimeout_go">
+<a href="#gracefuldecommissiontimeout_go" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -768,46 +792,41 @@ Structure defined below.
 instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
 which is the name of the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the `cluster` will exist. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the cluster and associated nodes will be created in.
 Defaults to `global`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -816,19 +835,29 @@ Defaults to `global`.
             title="Optional">
         <span id="clusterconfig_nodejs">
 <a href="#clusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gracefuldecommissiontimeout_nodejs">
+<a href="#gracefuldecommissiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -836,46 +865,41 @@ Structure defined below.
 instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
 which is the name of the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the `cluster` will exist. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the cluster and associated nodes will be created in.
 Defaults to `global`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -884,75 +908,76 @@ Defaults to `global`.
             title="Optional">
         <span id="cluster_config_python">
 <a href="#cluster_config_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfig">Dict[Cluster<wbr>Cluster<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="graceful_decommission_timeout_python">
+<a href="#graceful_decommission_timeout_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>decommission_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to be applied to
 instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
 which is the name of the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the `cluster` will exist. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which the cluster and associated nodes will be created in.
 Defaults to `global`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Cluster resource produces the following output properties:
-
 
 
 
@@ -963,15 +988,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -980,15 +1003,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -997,15 +1018,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1014,18 +1033,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1035,19 +1049,20 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#Cluster">Cluster</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Cluster</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_config</span><span class="p">:</span> <span class="nx">Optional[ClusterClusterConfigArgs]</span> = None<span class="p">, </span><span class="nx">graceful_decommission_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Cluster</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1149,7 +1164,6 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1157,19 +1171,29 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_clusterconfig_csharp">
 <a href="#state_clusterconfig_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gracefuldecommissiontimeout_csharp">
+<a href="#state_gracefuldecommissiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1177,46 +1201,41 @@ Structure defined below.
 instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
 which is the name of the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the `cluster` will exist. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the cluster and associated nodes will be created in.
 Defaults to `global`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1225,19 +1244,29 @@ Defaults to `global`.
             title="Optional">
         <span id="state_clusterconfig_go">
 <a href="#state_clusterconfig_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gracefuldecommissiontimeout_go">
+<a href="#state_gracefuldecommissiontimeout_go" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1245,46 +1274,41 @@ Structure defined below.
 instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
 which is the name of the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the `cluster` will exist. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the cluster and associated nodes will be created in.
 Defaults to `global`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1293,19 +1317,29 @@ Defaults to `global`.
             title="Optional">
         <span id="state_clusterconfig_nodejs">
 <a href="#state_clusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gracefuldecommissiontimeout_nodejs">
+<a href="#state_gracefuldecommissiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1313,46 +1347,41 @@ Structure defined below.
 instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
 which is the name of the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the `cluster` will exist. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the cluster and associated nodes will be created in.
 Defaults to `global`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1361,69 +1390,71 @@ Defaults to `global`.
             title="Optional">
         <span id="state_cluster_config_python">
 <a href="#state_cluster_config_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfig">Dict[Cluster<wbr>Cluster<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows you to configure various aspects of the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_graceful_decommission_timeout_python">
+<a href="#state_graceful_decommission_timeout_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>decommission_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+terraform apply
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to be applied to
 instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
 which is the name of the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster, unique within the project and
 zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the `cluster` will exist. If it
 is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which the cluster and associated nodes will be created in.
 Defaults to `global`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1433,20 +1464,8 @@ Defaults to `global`.
 ## Supporting Types
 
 
+
 <h4 id="clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1455,41 +1474,40 @@ Defaults to `global`.
             title="Optional">
         <span id="autoscalingconfig_csharp">
 <a href="#autoscalingconfig_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling policy config associated with the cluster.
+Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
+only be removed by setting `policy_uri = ""`, rather than removing the whole block.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encryptionconfig_csharp">
 <a href="#encryptionconfig_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Customer managed encryption keys settings for the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointconfig_csharp">
 <a href="#endpointconfig_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1497,97 +1515,89 @@ Structure defined below.
 Structure defined below.
 - - -
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gceclusterconfig_csharp">
 <a href="#gceclusterconfig_csharp" style="color: inherit; text-decoration: inherit;">Gce<wbr>Cluster<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Common config settings for resources of Google Compute Engine cluster
 instances, applicable to all instances in the cluster. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="initializationactions_csharp">
 <a href="#initializationactions_csharp" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiginitializationaction">List&lt;Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Commands to execute on each node after config is completed.
 You can specify multiple versions of these. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifecycleconfig_csharp">
 <a href="#lifecycleconfig_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for auto deletion cluster schedule.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="masterconfig_csharp">
 <a href="#masterconfig_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
 in a cluster.. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preemptibleworkerconfig_csharp">
 <a href="#preemptibleworkerconfig_csharp" style="color: inherit; text-decoration: inherit;">Preemptible<wbr>Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the additional (aka
 preemptible) instances in a cluster. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securityconfig_csharp">
 <a href="#securityconfig_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Security related configuration. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="softwareconfig_csharp">
 <a href="#softwareconfig_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config settings for software inside the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stagingbucket_csharp">
 <a href="#stagingbucket_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage staging bucket used to stage files,
 such as Hadoop jars, between client machines and the cluster.
@@ -1597,22 +1607,31 @@ an auto generated bucket which is solely dedicated to your cluster; it may be sh
 with other clusters in the same region/zone also choosing to use the auto generation
 option.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tempbucket_csharp">
+<a href="#tempbucket_csharp" style="color: inherit; text-decoration: inherit;">Temp<wbr>Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Storage temp bucket used to store ephemeral cluster
+and jobs data, such as Spark and MapReduce history files.
+Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="workerconfig_csharp">
 <a href="#workerconfig_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the worker instances
 in a cluster.. Structure defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1621,41 +1640,40 @@ in a cluster.. Structure defined below.
             title="Optional">
         <span id="autoscalingconfig_go">
 <a href="#autoscalingconfig_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling policy config associated with the cluster.
+Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
+only be removed by setting `policy_uri = ""`, rather than removing the whole block.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encryptionconfig_go">
 <a href="#encryptionconfig_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Customer managed encryption keys settings for the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointconfig_go">
 <a href="#endpointconfig_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</a></span>
     </dt>
@@ -1663,97 +1681,89 @@ Structure defined below.
 Structure defined below.
 - - -
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gceclusterconfig_go">
 <a href="#gceclusterconfig_go" style="color: inherit; text-decoration: inherit;">Gce<wbr>Cluster<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Common config settings for resources of Google Compute Engine cluster
 instances, applicable to all instances in the cluster. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="initializationactions_go">
 <a href="#initializationactions_go" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiginitializationaction">[]Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Commands to execute on each node after config is completed.
 You can specify multiple versions of these. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifecycleconfig_go">
 <a href="#lifecycleconfig_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The settings for auto deletion cluster schedule.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="masterconfig_go">
 <a href="#masterconfig_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
 in a cluster.. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preemptibleworkerconfig_go">
 <a href="#preemptibleworkerconfig_go" style="color: inherit; text-decoration: inherit;">Preemptible<wbr>Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the additional (aka
 preemptible) instances in a cluster. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securityconfig_go">
 <a href="#securityconfig_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Security related configuration. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="softwareconfig_go">
 <a href="#softwareconfig_go" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config settings for software inside the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stagingbucket_go">
 <a href="#stagingbucket_go" style="color: inherit; text-decoration: inherit;">Staging<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage staging bucket used to stage files,
 such as Hadoop jars, between client machines and the cluster.
@@ -1763,22 +1773,31 @@ an auto generated bucket which is solely dedicated to your cluster; it may be sh
 with other clusters in the same region/zone also choosing to use the auto generation
 option.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tempbucket_go">
+<a href="#tempbucket_go" style="color: inherit; text-decoration: inherit;">Temp<wbr>Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Storage temp bucket used to store ephemeral cluster
+and jobs data, such as Spark and MapReduce history files.
+Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="workerconfig_go">
 <a href="#workerconfig_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the worker instances
 in a cluster.. Structure defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1787,41 +1806,40 @@ in a cluster.. Structure defined below.
             title="Optional">
         <span id="autoscalingconfig_nodejs">
 <a href="#autoscalingconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling policy config associated with the cluster.
+Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
+only be removed by setting `policy_uri = ""`, rather than removing the whole block.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encryptionconfig_nodejs">
 <a href="#encryptionconfig_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Customer managed encryption keys settings for the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointconfig_nodejs">
 <a href="#endpointconfig_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</a></span>
     </dt>
@@ -1829,97 +1847,89 @@ Structure defined below.
 Structure defined below.
 - - -
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gceclusterconfig_nodejs">
 <a href="#gceclusterconfig_nodejs" style="color: inherit; text-decoration: inherit;">gce<wbr>Cluster<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Common config settings for resources of Google Compute Engine cluster
 instances, applicable to all instances in the cluster. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="initializationactions_nodejs">
 <a href="#initializationactions_nodejs" style="color: inherit; text-decoration: inherit;">initialization<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiginitializationaction">Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}Commands to execute on each node after config is completed.
 You can specify multiple versions of these. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifecycleconfig_nodejs">
 <a href="#lifecycleconfig_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The settings for auto deletion cluster schedule.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="masterconfig_nodejs">
 <a href="#masterconfig_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
 in a cluster.. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preemptibleworkerconfig_nodejs">
 <a href="#preemptibleworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">preemptible<wbr>Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the additional (aka
 preemptible) instances in a cluster. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securityconfig_nodejs">
 <a href="#securityconfig_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Security related configuration. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="softwareconfig_nodejs">
 <a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config settings for software inside the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stagingbucket_nodejs">
 <a href="#stagingbucket_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage staging bucket used to stage files,
 such as Hadoop jars, between client machines and the cluster.
@@ -1929,163 +1939,163 @@ an auto generated bucket which is solely dedicated to your cluster; it may be sh
 with other clusters in the same region/zone also choosing to use the auto generation
 option.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tempbucket_nodejs">
+<a href="#tempbucket_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Storage temp bucket used to store ephemeral cluster
+and jobs data, such as Spark and MapReduce history files.
+Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="workerconfig_nodejs">
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the worker instances
 in a cluster.. Structure defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscalingconfig_python">
-<a href="#autoscalingconfig_python" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Config</a>
-</span> 
+        <span id="autoscaling_config_python">
+<a href="#autoscaling_config_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The autoscaling policy config associated with the cluster.
+Note that once set, if `autoscaling_config` is the only field set in `cluster_config`, it can
+only be removed by setting `policy_uri = ""`, rather than removing the whole block.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="encryptionconfig_python">
-<a href="#encryptionconfig_python" style="color: inherit; text-decoration: inherit;">encryption<wbr>Config</a>
-</span> 
+        <span id="encryption_config_python">
+<a href="#encryption_config_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Customer managed encryption keys settings for the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="endpointconfig_python">
-<a href="#endpointconfig_python" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Config</a>
-</span> 
+        <span id="endpoint_config_python">
+<a href="#endpoint_config_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config settings for port access on the cluster.
 Structure defined below.
 - - -
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="gceclusterconfig_python">
-<a href="#gceclusterconfig_python" style="color: inherit; text-decoration: inherit;">gce<wbr>Cluster<wbr>Config</a>
-</span> 
+        <span id="gce_cluster_config_python">
+<a href="#gce_cluster_config_python" style="color: inherit; text-decoration: inherit;">gce_<wbr>cluster_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Common config settings for resources of Google Compute Engine cluster
 instances, applicable to all instances in the cluster. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="initializationactions_python">
-<a href="#initializationactions_python" style="color: inherit; text-decoration: inherit;">initialization<wbr>Actions</a>
-</span> 
+        <span id="initialization_actions_python">
+<a href="#initialization_actions_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>actions</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiginitializationaction">List[Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiginitializationaction">Sequence[Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Commands to execute on each node after config is completed.
 You can specify multiple versions of these. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="lifecycleconfig_python">
-<a href="#lifecycleconfig_python" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Config</a>
-</span> 
+        <span id="lifecycle_config_python">
+<a href="#lifecycle_config_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings for auto deletion cluster schedule.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="masterconfig_python">
-<a href="#masterconfig_python" style="color: inherit; text-decoration: inherit;">master<wbr>Config</a>
-</span> 
+        <span id="master_config_python">
+<a href="#master_config_python" style="color: inherit; text-decoration: inherit;">master_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the master instances
 in a cluster.. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="preemptibleworkerconfig_python">
-<a href="#preemptibleworkerconfig_python" style="color: inherit; text-decoration: inherit;">preemptible<wbr>Worker<wbr>Config</a>
-</span> 
+        <span id="preemptible_worker_config_python">
+<a href="#preemptible_worker_config_python" style="color: inherit; text-decoration: inherit;">preemptible_<wbr>worker_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the additional (aka
 preemptible) instances in a cluster. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="securityconfig_python">
-<a href="#securityconfig_python" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
-</span> 
+        <span id="security_config_python">
+<a href="#security_config_python" style="color: inherit; text-decoration: inherit;">security_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Security related configuration. Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="softwareconfig_python">
-<a href="#softwareconfig_python" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
-</span> 
+        <span id="software_config_python">
+<a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config settings for software inside the cluster.
 Structure defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="stagingbucket_python">
-<a href="#stagingbucket_python" style="color: inherit; text-decoration: inherit;">staging<wbr>Bucket</a>
-</span> 
+        <span id="staging_bucket_python">
+<a href="#staging_bucket_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>bucket</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage staging bucket used to stage files,
 such as Hadoop jars, between client machines and the cluster.
@@ -2095,40 +2105,33 @@ an auto generated bucket which is solely dedicated to your cluster; it may be sh
 with other clusters in the same region/zone also choosing to use the auto generation
 option.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="temp_bucket_python">
+<a href="#temp_bucket_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>bucket</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Cloud Storage temp bucket used to store ephemeral cluster
+and jobs data, such as Spark and MapReduce history files.
+Note: If you don't explicitly specify a `temp_bucket` then GCP will auto create / assign one for you.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="worker_config_python">
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Google Compute Engine config settings for the worker instances
 in a cluster.. Structure defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigAutoscalingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigAutoscalingConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigAutoscalingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigAutoscalingConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigAutoscalingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigAutoscalingConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2137,16 +2140,14 @@ in a cluster.. Structure defined below.
             title="Required">
         <span id="policyuri_csharp">
 <a href="#policyuri_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The autoscaling policy used by the cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2155,16 +2156,14 @@ in a cluster.. Structure defined below.
             title="Required">
         <span id="policyuri_go">
 <a href="#policyuri_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The autoscaling policy used by the cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2173,52 +2172,32 @@ in a cluster.. Structure defined below.
             title="Required">
         <span id="policyuri_nodejs">
 <a href="#policyuri_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The autoscaling policy used by the cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="policyuri_python">
-<a href="#policyuri_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Uri</a>
-</span> 
+        <span id="policy_uri_python">
+<a href="#policy_uri_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The autoscaling policy used by the cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigEncryptionConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigEncryptionConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEncryptionConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEncryptionConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigEncryptionConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigEncryptionConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2227,17 +2206,15 @@ in a cluster.. Structure defined below.
             title="Required">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud KMS key name to use for PD disk encryption for
 all instances in the cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2246,17 +2223,15 @@ all instances in the cluster.
             title="Required">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud KMS key name to use for PD disk encryption for
 all instances in the cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2265,17 +2240,15 @@ all instances in the cluster.
             title="Required">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud KMS key name to use for PD disk encryption for
 all instances in the cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2284,35 +2257,17 @@ all instances in the cluster.
             title="Required">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud KMS key name to use for PD disk encryption for
 all instances in the cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigendpointconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Endpoint<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigEndpointConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigEndpointConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEndpointConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigEndpointConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigEndpointConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigEndpointConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2321,27 +2276,24 @@ all instances in the cluster.
             title="Required">
         <span id="enablehttpportaccess_csharp">
 <a href="#enablehttpportaccess_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Http<wbr>Port<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag to enable http access to specific ports
 on the cluster from external sources (aka Component Gateway). Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpports_csharp">
 <a href="#httpports_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2350,27 +2302,24 @@ on the cluster from external sources (aka Component Gateway). Defaults to false.
             title="Required">
         <span id="enablehttpportaccess_go">
 <a href="#enablehttpportaccess_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Http<wbr>Port<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag to enable http access to specific ports
 on the cluster from external sources (aka Component Gateway). Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpports_go">
 <a href="#httpports_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2379,74 +2328,52 @@ on the cluster from external sources (aka Component Gateway). Defaults to false.
             title="Required">
         <span id="enablehttpportaccess_nodejs">
 <a href="#enablehttpportaccess_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Http<wbr>Port<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag to enable http access to specific ports
 on the cluster from external sources (aka Component Gateway). Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpports_nodejs">
 <a href="#httpports_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="enablehttpportaccess_python">
-<a href="#enablehttpportaccess_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Http<wbr>Port<wbr>Access</a>
-</span> 
+        <span id="enable_http_port_access_python">
+<a href="#enable_http_port_access_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>http_<wbr>port_<wbr>access</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag to enable http access to specific ports
 on the cluster from external sources (aka Component Gateway). Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="httpports_python">
-<a href="#httpports_python" style="color: inherit; text-decoration: inherit;">http<wbr>Ports</a>
-</span> 
+        <span id="http_ports_python">
+<a href="#http_ports_python" style="color: inherit; text-decoration: inherit;">http_<wbr>ports</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigGceClusterConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigGceClusterConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigGceClusterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigGceClusterConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigGceClusterConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2455,100 +2382,93 @@ on the cluster from external sources (aka Component Gateway). Defaults to false.
             title="Optional">
         <span id="internaliponly_csharp">
 <a href="#internaliponly_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses, 
+    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses,
 and will have ephemeral external IP addresses assigned to each instance. If set to true, all
 instances in the cluster will only have internal IP addresses. Note: Private Google Access
 (also known as `privateIpGoogleAccess`) must be enabled on the subnetwork that the cluster
 will be launched in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of the Compute Engine metadata entries to add to all instances
 (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 network to the cluster will be part of. Conflicts with `subnetwork`.
 If neither is specified, this defaults to the "default" network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_csharp">
 <a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccountscopes_csharp">
 <a href="#serviceaccountscopes_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Scopes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes
 to be made available on all of the node VMs under the `service_account`
-specified. These can be	either FQDNs, or scope aliases. The following scopes
-must be set if any other scopes are set. They're necessary to ensure the
-correct functioning ofthe cluster, and are set automatically by the API:
+specified. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+`cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 subnetwork the cluster will be part of. Conflicts with `network`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to instances in the cluster.
 Tags are used to identify valid sources or targets for network firewalls.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP zone where your data is stored and used (i.e. where
 the master and the worker nodes will be created in). If `region` is set to 'global' (default)
@@ -2558,10 +2478,8 @@ Note: This setting additionally determines and restricts
 which computing resources are available for use with other configs such as
 `cluster_config.master_config.machine_type` and `cluster_config.worker_config.machine_type`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2570,100 +2488,93 @@ which computing resources are available for use with other configs such as
             title="Optional">
         <span id="internaliponly_go">
 <a href="#internaliponly_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Ip<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses, 
+    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses,
 and will have ephemeral external IP addresses assigned to each instance. If set to true, all
 instances in the cluster will only have internal IP addresses. Note: Private Google Access
 (also known as `privateIpGoogleAccess`) must be enabled on the subnetwork that the cluster
 will be launched in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of the Compute Engine metadata entries to add to all instances
 (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 network to the cluster will be part of. Conflicts with `subnetwork`.
 If neither is specified, this defaults to the "default" network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_go">
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccountscopes_go">
 <a href="#serviceaccountscopes_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Scopes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes
 to be made available on all of the node VMs under the `service_account`
-specified. These can be	either FQDNs, or scope aliases. The following scopes
-must be set if any other scopes are set. They're necessary to ensure the
-correct functioning ofthe cluster, and are set automatically by the API:
+specified. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+`cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 subnetwork the cluster will be part of. Conflicts with `network`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to instances in the cluster.
 Tags are used to identify valid sources or targets for network firewalls.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP zone where your data is stored and used (i.e. where
 the master and the worker nodes will be created in). If `region` is set to 'global' (default)
@@ -2673,10 +2584,8 @@ Note: This setting additionally determines and restricts
 which computing resources are available for use with other configs such as
 `cluster_config.master_config.machine_type` and `cluster_config.worker_config.machine_type`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2685,100 +2594,93 @@ which computing resources are available for use with other configs such as
             title="Optional">
         <span id="internaliponly_nodejs">
 <a href="#internaliponly_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses, 
+    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses,
 and will have ephemeral external IP addresses assigned to each instance. If set to true, all
 instances in the cluster will only have internal IP addresses. Note: Private Google Access
 (also known as `privateIpGoogleAccess`) must be enabled on the subnetwork that the cluster
 will be launched in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of the Compute Engine metadata entries to add to all instances
 (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 network to the cluster will be part of. Conflicts with `subnetwork`.
 If neither is specified, this defaults to the "default" network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_nodejs">
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccountscopes_nodejs">
 <a href="#serviceaccountscopes_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Scopes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of Google API scopes
 to be made available on all of the node VMs under the `service_account`
-specified. These can be	either FQDNs, or scope aliases. The following scopes
-must be set if any other scopes are set. They're necessary to ensure the
-correct functioning ofthe cluster, and are set automatically by the API:
+specified. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+`cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 subnetwork the cluster will be part of. Conflicts with `network`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to instances in the cluster.
 Tags are used to identify valid sources or targets for network firewalls.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP zone where your data is stored and used (i.e. where
 the master and the worker nodes will be created in). If `region` is set to 'global' (default)
@@ -2788,112 +2690,103 @@ Note: This setting additionally determines and restricts
 which computing resources are available for use with other configs such as
 `cluster_config.master_config.machine_type` and `cluster_config.worker_config.machine_type`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="internaliponly_python">
-<a href="#internaliponly_python" style="color: inherit; text-decoration: inherit;">internal<wbr>Ip<wbr>Only</a>
-</span> 
+        <span id="internal_ip_only_python">
+<a href="#internal_ip_only_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>ip_<wbr>only</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses, 
+    <dd>{{% md %}}By default, clusters are not restricted to internal IP addresses,
 and will have ephemeral external IP addresses assigned to each instance. If set to true, all
 instances in the cluster will only have internal IP addresses. Note: Private Google Access
 (also known as `privateIpGoogleAccess`) must be enabled on the subnetwork that the cluster
 will be launched in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of the Compute Engine metadata entries to add to all instances
 (see [Project and instance metadata](https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata)).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 network to the cluster will be part of. Conflicts with `subnetwork`.
 If neither is specified, this defaults to the "default" network.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="serviceaccountscopes_python">
-<a href="#serviceaccountscopes_python" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Scopes</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The set of Google API scopes
-to be made available on all of the node VMs under the `service_account`
-specified. These can be	either FQDNs, or scope aliases. The following scopes
-must be set if any other scopes are set. They're necessary to ensure the
-correct functioning ofthe cluster, and are set automatically by the API:
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_account_python">
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account to be used by the Node VMs.
 If not specified, the "default" service account is used.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_account_scopes_python">
+<a href="#service_account_scopes_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The set of Google API scopes
+to be made available on all of the node VMs under the `service_account`
+specified. Both OAuth2 URLs and gcloud
+short names are supported. To allow full access to all Cloud APIs, use the
+`cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the Google Compute Engine
 subnetwork the cluster will be part of. Conflicts with `network`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of instance tags applied to instances in the cluster.
 Tags are used to identify valid sources or targets for network firewalls.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP zone where your data is stored and used (i.e. where
 the master and the worker nodes will be created in). If `region` is set to 'global' (default)
@@ -2903,28 +2796,10 @@ Note: This setting additionally determines and restricts
 which computing resources are available for use with other configs such as
 `cluster_config.master_config.machine_type` and `cluster_config.worker_config.machine_type`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfiginitializationaction">Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigInitializationAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigInitializationAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigInitializationActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigInitializationActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigInitializationActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigInitializationAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2933,30 +2808,27 @@ which computing resources are available for use with other configs such as
             title="Required">
         <span id="script_csharp">
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to be executed during initialization of the cluster.
 The script must be a GCS file with a gs:// prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeoutsec_csharp">
 <a href="#timeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum duration (in seconds) which `script` is
 allowed to take to execute its action. GCP will default to a predetermined
 computed value if not set (currently 300).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2965,30 +2837,27 @@ computed value if not set (currently 300).
             title="Required">
         <span id="script_go">
 <a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to be executed during initialization of the cluster.
 The script must be a GCS file with a gs:// prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeoutsec_go">
 <a href="#timeoutsec_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum duration (in seconds) which `script` is
 allowed to take to execute its action. GCP will default to a predetermined
 computed value if not set (currently 300).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2997,30 +2866,27 @@ computed value if not set (currently 300).
             title="Required">
         <span id="script_nodejs">
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script to be executed during initialization of the cluster.
 The script must be a GCS file with a gs:// prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeoutsec_nodejs">
 <a href="#timeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum duration (in seconds) which `script` is
 allowed to take to execute its action. GCP will default to a predetermined
 computed value if not set (currently 300).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3029,48 +2895,29 @@ computed value if not set (currently 300).
             title="Required">
         <span id="script_python">
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script to be executed during initialization of the cluster.
 The script must be a GCS file with a gs:// prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_sec_python">
 <a href="#timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum duration (in seconds) which `script` is
 allowed to take to execute its action. GCP will default to a predetermined
 computed value if not set (currently 300).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigLifecycleConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigLifecycleConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigLifecycleConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigLifecycleConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigLifecycleConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigLifecycleConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3079,40 +2926,36 @@ computed value if not set (currently 300).
             title="Optional">
         <span id="autodeletetime_csharp">
 <a href="#autodeletetime_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when cluster will be auto-deleted.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="idledeletettl_csharp">
 <a href="#idledeletettl_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Delete<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration to keep the cluster alive while idling
 (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="idlestarttime_csharp">
 <a href="#idlestarttime_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3121,40 +2964,36 @@ Example: "2014-10-02T15:01:23.045123456Z".
             title="Optional">
         <span id="autodeletetime_go">
 <a href="#autodeletetime_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when cluster will be auto-deleted.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="idledeletettl_go">
 <a href="#idledeletettl_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Delete<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration to keep the cluster alive while idling
 (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="idlestarttime_go">
 <a href="#idlestarttime_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3163,100 +3002,76 @@ Example: "2014-10-02T15:01:23.045123456Z".
             title="Optional">
         <span id="autodeletetime_nodejs">
 <a href="#autodeletetime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when cluster will be auto-deleted.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="idledeletettl_nodejs">
 <a href="#idledeletettl_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Delete<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration to keep the cluster alive while idling
 (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="idlestarttime_nodejs">
 <a href="#idlestarttime_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autodeletetime_python">
-<a href="#autodeletetime_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>Time</a>
-</span> 
+        <span id="auto_delete_time_python">
+<a href="#auto_delete_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete_<wbr>time</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when cluster will be auto-deleted.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="idledeletettl_python">
-<a href="#idledeletettl_python" style="color: inherit; text-decoration: inherit;">idle<wbr>Delete<wbr>Ttl</a>
-</span> 
+        <span id="idle_delete_ttl_python">
+<a href="#idle_delete_ttl_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>delete_<wbr>ttl</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration to keep the cluster alive while idling
 (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="idlestarttime_python">
-<a href="#idlestarttime_python" style="color: inherit; text-decoration: inherit;">idle<wbr>Start<wbr>Time</a>
-</span> 
+        <span id="idle_start_time_python">
+<a href="#idle_start_time_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>start_<wbr>time</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigMasterConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigMasterConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigMasterConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3265,88 +3080,80 @@ Example: "2014-10-02T15:01:23.045123456Z".
             title="Optional">
         <span id="accelerators_csharp">
 <a href="#accelerators_csharp" style="color: inherit; text-decoration: inherit;">Accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">List&lt;Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskconfig_csharp">
 <a href="#diskconfig_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imageuri_csharp">
 <a href="#imageuri_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
 for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenames_csharp">
 <a href="#instancenames_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="machinetype_csharp">
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine machine type
 to create for the worker nodes. If not specified, GCP will default to a predetermined
 computed value (currently `n1-standard-4`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_csharp">
 <a href="#mincpuplatform_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a minimum generation of CPU family
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
 for details about which CPU families are available (and defaulted) for each zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numinstances_csharp">
 <a href="#numinstances_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3355,88 +3162,80 @@ Defaults to 0.
             title="Optional">
         <span id="accelerators_go">
 <a href="#accelerators_go" style="color: inherit; text-decoration: inherit;">Accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">[]Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskconfig_go">
 <a href="#diskconfig_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imageuri_go">
 <a href="#imageuri_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
 for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenames_go">
 <a href="#instancenames_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="machinetype_go">
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine machine type
 to create for the worker nodes. If not specified, GCP will default to a predetermined
 computed value (currently `n1-standard-4`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_go">
 <a href="#mincpuplatform_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a minimum generation of CPU family
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
 for details about which CPU families are available (and defaulted) for each zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numinstances_go">
 <a href="#numinstances_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3445,88 +3244,80 @@ Defaults to 0.
             title="Optional">
         <span id="accelerators_nodejs">
 <a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskconfig_nodejs">
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imageuri_nodejs">
 <a href="#imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
 for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenames_nodejs">
 <a href="#instancenames_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="machinetype_nodejs">
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine machine type
 to create for the worker nodes. If not specified, GCP will default to a predetermined
 computed value (currently `n1-standard-4`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_nodejs">
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a minimum generation of CPU family
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
 for details about which CPU families are available (and defaulted) for each zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numinstances_nodejs">
 <a href="#numinstances_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3535,106 +3326,82 @@ Defaults to 0.
             title="Optional">
         <span id="accelerators_python">
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">List[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfigaccelerator">Sequence[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="diskconfig_python">
-<a href="#diskconfig_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
-</span> 
+        <span id="disk_config_python">
+<a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="imageuri_python">
-<a href="#imageuri_python" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
-</span> 
+        <span id="image_uri_python">
+<a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
 for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="instancenames_python">
-<a href="#instancenames_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
-</span> 
+        <span id="instance_names_python">
+<a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="machine_type_python">
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine machine type
 to create for the worker nodes. If not specified, GCP will default to a predetermined
 computed value (currently `n1-standard-4`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="min_cpu_platform_python">
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a minimum generation of CPU family
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
 for details about which CPU families are available (and defaulted) for each zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="numinstances_python">
-<a href="#numinstances_python" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
-</span> 
+        <span id="num_instances_python">
+<a href="#num_instances_python" style="color: inherit; text-decoration: inherit;">num_<wbr>instances</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigmasterconfigaccelerator">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigMasterConfigAccelerator">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigMasterConfigAccelerator">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigAcceleratorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigMasterConfigAccelerator.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3643,27 +3410,24 @@ Defaults to 0.
             title="Required">
         <span id="acceleratorcount_csharp">
 <a href="#acceleratorcount_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratortype_csharp">
 <a href="#acceleratortype_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3672,27 +3436,24 @@ Defaults to 0.
             title="Required">
         <span id="acceleratorcount_go">
 <a href="#acceleratorcount_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratortype_go">
 <a href="#acceleratortype_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3701,74 +3462,52 @@ Defaults to 0.
             title="Required">
         <span id="acceleratorcount_nodejs">
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratortype_nodejs">
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="acceleratorcount_python">
-<a href="#acceleratorcount_python" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
-</span> 
+        <span id="accelerator_count_python">
+<a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accelerator_type_python">
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigMasterConfigDiskConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigMasterConfigDiskConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigDiskConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigMasterConfigDiskConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigMasterConfigDiskConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3777,43 +3516,39 @@ Defaults to 0.
             title="Optional">
         <span id="bootdisksizegb_csharp">
 <a href="#bootdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
 computed value if not set (currently 500GB). Note: If SSDs are not
 attached, it also contains the HDFS data blocks and Hadoop working directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisktype_csharp">
 <a href="#bootdisktype_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk type of the primary disk attached to each preemptible worker node.
 One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numlocalssds_csharp">
 <a href="#numlocalssds_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Local<wbr>Ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3822,43 +3557,39 @@ attached to each preemptible worker node. Defaults to 0.
             title="Optional">
         <span id="bootdisksizegb_go">
 <a href="#bootdisksizegb_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
 computed value if not set (currently 500GB). Note: If SSDs are not
 attached, it also contains the HDFS data blocks and Hadoop working directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisktype_go">
 <a href="#bootdisktype_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk type of the primary disk attached to each preemptible worker node.
 One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numlocalssds_go">
 <a href="#numlocalssds_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Local<wbr>Ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3867,43 +3598,39 @@ attached to each preemptible worker node. Defaults to 0.
             title="Optional">
         <span id="bootdisksizegb_nodejs">
 <a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
 computed value if not set (currently 500GB). Note: If SSDs are not
 attached, it also contains the HDFS data blocks and Hadoop working directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisktype_nodejs">
 <a href="#bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk type of the primary disk attached to each preemptible worker node.
 One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numlocalssds_nodejs">
 <a href="#numlocalssds_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3912,61 +3639,41 @@ attached to each preemptible worker node. Defaults to 0.
             title="Optional">
         <span id="boot_disk_size_gb_python">
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
 computed value if not set (currently 500GB). Note: If SSDs are not
 attached, it also contains the HDFS data blocks and Hadoop working directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_disk_type_python">
 <a href="#boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The disk type of the primary disk attached to each preemptible worker node.
 One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="numlocalssds_python">
-<a href="#numlocalssds_python" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
-</span> 
+        <span id="num_local_ssds_python">
+<a href="#num_local_ssds_python" style="color: inherit; text-decoration: inherit;">num_<wbr>local_<wbr>ssds</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigPreemptibleWorkerConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigPreemptibleWorkerConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigPreemptibleWorkerConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3975,38 +3682,34 @@ attached to each preemptible worker node. Defaults to 0.
             title="Optional">
         <span id="diskconfig_csharp">
 <a href="#diskconfig_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenames_csharp">
 <a href="#instancenames_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numinstances_csharp">
 <a href="#numinstances_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4015,38 +3718,34 @@ Defaults to 0.
             title="Optional">
         <span id="diskconfig_go">
 <a href="#diskconfig_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenames_go">
 <a href="#instancenames_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numinstances_go">
 <a href="#numinstances_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4055,96 +3754,72 @@ Defaults to 0.
             title="Optional">
         <span id="diskconfig_nodejs">
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenames_nodejs">
 <a href="#instancenames_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numinstances_nodejs">
 <a href="#numinstances_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="diskconfig_python">
-<a href="#diskconfig_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
-</span> 
+        <span id="disk_config_python">
+<a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="instancenames_python">
-<a href="#instancenames_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
-</span> 
+        <span id="instance_names_python">
+<a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="numinstances_python">
-<a href="#numinstances_python" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
-</span> 
+        <span id="num_instances_python">
+<a href="#num_instances_python" style="color: inherit; text-decoration: inherit;">num_<wbr>instances</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigPreemptibleWorkerConfigDiskConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigPreemptibleWorkerConfigDiskConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigPreemptibleWorkerConfigDiskConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4153,43 +3828,39 @@ Defaults to 0.
             title="Optional">
         <span id="bootdisksizegb_csharp">
 <a href="#bootdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
 computed value if not set (currently 500GB). Note: If SSDs are not
 attached, it also contains the HDFS data blocks and Hadoop working directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisktype_csharp">
 <a href="#bootdisktype_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk type of the primary disk attached to each preemptible worker node.
 One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numlocalssds_csharp">
 <a href="#numlocalssds_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Local<wbr>Ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4198,43 +3869,39 @@ attached to each preemptible worker node. Defaults to 0.
             title="Optional">
         <span id="bootdisksizegb_go">
 <a href="#bootdisksizegb_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
 computed value if not set (currently 500GB). Note: If SSDs are not
 attached, it also contains the HDFS data blocks and Hadoop working directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisktype_go">
 <a href="#bootdisktype_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk type of the primary disk attached to each preemptible worker node.
 One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numlocalssds_go">
 <a href="#numlocalssds_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Local<wbr>Ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4243,43 +3910,39 @@ attached to each preemptible worker node. Defaults to 0.
             title="Optional">
         <span id="bootdisksizegb_nodejs">
 <a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
 computed value if not set (currently 500GB). Note: If SSDs are not
 attached, it also contains the HDFS data blocks and Hadoop working directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisktype_nodejs">
 <a href="#bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk type of the primary disk attached to each preemptible worker node.
 One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numlocalssds_nodejs">
 <a href="#numlocalssds_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4288,61 +3951,41 @@ attached to each preemptible worker node. Defaults to 0.
             title="Optional">
         <span id="boot_disk_size_gb_python">
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
 computed value if not set (currently 500GB). Note: If SSDs are not
 attached, it also contains the HDFS data blocks and Hadoop working directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_disk_type_python">
 <a href="#boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The disk type of the primary disk attached to each preemptible worker node.
 One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="numlocalssds_python">
-<a href="#numlocalssds_python" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
-</span> 
+        <span id="num_local_ssds_python">
+<a href="#num_local_ssds_python" style="color: inherit; text-decoration: inherit;">num_<wbr>local_<wbr>ssds</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigSecurityConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigSecurityConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigSecurityConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigSecurityConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4351,16 +3994,14 @@ attached to each preemptible worker node. Defaults to 0.
             title="Required">
         <span id="kerberosconfig_csharp">
 <a href="#kerberosconfig_csharp" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos Configuration
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4369,16 +4010,14 @@ attached to each preemptible worker node. Defaults to 0.
             title="Required">
         <span id="kerberosconfig_go">
 <a href="#kerberosconfig_go" style="color: inherit; text-decoration: inherit;">Kerberos<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kerberos Configuration
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4387,52 +4026,32 @@ attached to each preemptible worker node. Defaults to 0.
             title="Required">
         <span id="kerberosconfig_nodejs">
 <a href="#kerberosconfig_nodejs" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kerberos Configuration
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="kerberosconfig_python">
-<a href="#kerberosconfig_python" style="color: inherit; text-decoration: inherit;">kerberos<wbr>Config</a>
-</span> 
+        <span id="kerberos_config_python">
+<a href="#kerberos_config_python" style="color: inherit; text-decoration: inherit;">kerberos_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos Configuration
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigSecurityConfigKerberosConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigSecurityConfigKerberosConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigKerberosConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSecurityConfigKerberosConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigSecurityConfigKerberosConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigSecurityConfigKerberosConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4441,186 +4060,170 @@ attached to each preemptible worker node. Defaults to 0.
             title="Required">
         <span id="kmskeyuri_csharp">
 <a href="#kmskeyuri_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the KMS key used to encrypt various sensitive files.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rootprincipalpassworduri_csharp">
 <a href="#rootprincipalpassworduri_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Principal<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file
 containing the root principal password.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossrealmtrustadminserver_csharp">
 <a href="#crossrealmtrustadminserver_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The admin server (IP or hostname) for the
 remote trusted realm in a cross realm trust relationship.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossrealmtrustkdc_csharp">
 <a href="#crossrealmtrustkdc_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Kdc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KDC (IP or hostname) for the
 remote trusted realm in a cross realm trust relationship.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossrealmtrustrealm_csharp">
 <a href="#crossrealmtrustrealm_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Realm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote realm the Dataproc on-cluster KDC will
 trust, should the user enable cross realm trust.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossrealmtrustsharedpassworduri_csharp">
 <a href="#crossrealmtrustsharedpassworduri_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS
 encrypted file containing the shared password between the on-cluster Kerberos realm
 and the remote trusted realm, in a cross realm trust relationship.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablekerberos_csharp">
 <a href="#enablekerberos_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kerberos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether to Kerberize the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kdcdbkeyuri_csharp">
 <a href="#kdcdbkeyuri_csharp" style="color: inherit; text-decoration: inherit;">Kdc<wbr>Db<wbr>Key<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file containing
 the master key of the KDC database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keypassworduri_csharp">
 <a href="#keypassworduri_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file containing
 the password to the user provided key. For the self-signed certificate, this password
 is generated by Dataproc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keystorepassworduri_csharp">
 <a href="#keystorepassworduri_csharp" style="color: inherit; text-decoration: inherit;">Keystore<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file containing
 the password to the user provided keystore. For the self-signed certificated, the password
 is generated by Dataproc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keystoreuri_csharp">
 <a href="#keystoreuri_csharp" style="color: inherit; text-decoration: inherit;">Keystore<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of the keystore file used for SSL encryption.
 If not provided, Dataproc will provide a self-signed certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="realm_csharp">
 <a href="#realm_csharp" style="color: inherit; text-decoration: inherit;">Realm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the on-cluster Kerberos realm. If not specified, the
 uppercased domain of hostnames will be the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tgtlifetimehours_csharp">
 <a href="#tgtlifetimehours_csharp" style="color: inherit; text-decoration: inherit;">Tgt<wbr>Lifetime<wbr>Hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lifetime of the ticket granting ticket, in hours.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="truststorepassworduri_csharp">
 <a href="#truststorepassworduri_csharp" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file
 containing the password to the user provided truststore. For the self-signed
 certificate, this password is generated by Dataproc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="truststoreuri_csharp">
 <a href="#truststoreuri_csharp" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of the truststore file used for
 SSL encryption. If not provided, Dataproc will provide a self-signed certificate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4629,186 +4232,170 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
             title="Required">
         <span id="kmskeyuri_go">
 <a href="#kmskeyuri_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the KMS key used to encrypt various sensitive files.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rootprincipalpassworduri_go">
 <a href="#rootprincipalpassworduri_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Principal<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file
 containing the root principal password.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossrealmtrustadminserver_go">
 <a href="#crossrealmtrustadminserver_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The admin server (IP or hostname) for the
 remote trusted realm in a cross realm trust relationship.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossrealmtrustkdc_go">
 <a href="#crossrealmtrustkdc_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Kdc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KDC (IP or hostname) for the
 remote trusted realm in a cross realm trust relationship.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossrealmtrustrealm_go">
 <a href="#crossrealmtrustrealm_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Realm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote realm the Dataproc on-cluster KDC will
 trust, should the user enable cross realm trust.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossrealmtrustsharedpassworduri_go">
 <a href="#crossrealmtrustsharedpassworduri_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS
 encrypted file containing the shared password between the on-cluster Kerberos realm
 and the remote trusted realm, in a cross realm trust relationship.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablekerberos_go">
 <a href="#enablekerberos_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Kerberos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether to Kerberize the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kdcdbkeyuri_go">
 <a href="#kdcdbkeyuri_go" style="color: inherit; text-decoration: inherit;">Kdc<wbr>Db<wbr>Key<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file containing
 the master key of the KDC database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keypassworduri_go">
 <a href="#keypassworduri_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file containing
 the password to the user provided key. For the self-signed certificate, this password
 is generated by Dataproc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keystorepassworduri_go">
 <a href="#keystorepassworduri_go" style="color: inherit; text-decoration: inherit;">Keystore<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file containing
 the password to the user provided keystore. For the self-signed certificated, the password
 is generated by Dataproc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keystoreuri_go">
 <a href="#keystoreuri_go" style="color: inherit; text-decoration: inherit;">Keystore<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of the keystore file used for SSL encryption.
 If not provided, Dataproc will provide a self-signed certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="realm_go">
 <a href="#realm_go" style="color: inherit; text-decoration: inherit;">Realm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the on-cluster Kerberos realm. If not specified, the
 uppercased domain of hostnames will be the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tgtlifetimehours_go">
 <a href="#tgtlifetimehours_go" style="color: inherit; text-decoration: inherit;">Tgt<wbr>Lifetime<wbr>Hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lifetime of the ticket granting ticket, in hours.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="truststorepassworduri_go">
 <a href="#truststorepassworduri_go" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file
 containing the password to the user provided truststore. For the self-signed
 certificate, this password is generated by Dataproc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="truststoreuri_go">
 <a href="#truststoreuri_go" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of the truststore file used for
 SSL encryption. If not provided, Dataproc will provide a self-signed certificate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4817,392 +4404,344 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
             title="Required">
         <span id="kmskeyuri_nodejs">
 <a href="#kmskeyuri_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the KMS key used to encrypt various sensitive files.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rootprincipalpassworduri_nodejs">
 <a href="#rootprincipalpassworduri_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Principal<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file
 containing the root principal password.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossrealmtrustadminserver_nodejs">
 <a href="#crossrealmtrustadminserver_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The admin server (IP or hostname) for the
 remote trusted realm in a cross realm trust relationship.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossrealmtrustkdc_nodejs">
 <a href="#crossrealmtrustkdc_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Kdc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KDC (IP or hostname) for the
 remote trusted realm in a cross realm trust relationship.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossrealmtrustrealm_nodejs">
 <a href="#crossrealmtrustrealm_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Realm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote realm the Dataproc on-cluster KDC will
 trust, should the user enable cross realm trust.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossrealmtrustsharedpassworduri_nodejs">
 <a href="#crossrealmtrustsharedpassworduri_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS
 encrypted file containing the shared password between the on-cluster Kerberos realm
 and the remote trusted realm, in a cross realm trust relationship.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablekerberos_nodejs">
 <a href="#enablekerberos_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Kerberos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether to Kerberize the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kdcdbkeyuri_nodejs">
 <a href="#kdcdbkeyuri_nodejs" style="color: inherit; text-decoration: inherit;">kdc<wbr>Db<wbr>Key<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file containing
 the master key of the KDC database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keypassworduri_nodejs">
 <a href="#keypassworduri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file containing
 the password to the user provided key. For the self-signed certificate, this password
 is generated by Dataproc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keystorepassworduri_nodejs">
 <a href="#keystorepassworduri_nodejs" style="color: inherit; text-decoration: inherit;">keystore<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file containing
 the password to the user provided keystore. For the self-signed certificated, the password
 is generated by Dataproc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keystoreuri_nodejs">
 <a href="#keystoreuri_nodejs" style="color: inherit; text-decoration: inherit;">keystore<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of the keystore file used for SSL encryption.
 If not provided, Dataproc will provide a self-signed certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="realm_nodejs">
 <a href="#realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the on-cluster Kerberos realm. If not specified, the
 uppercased domain of hostnames will be the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tgtlifetimehours_nodejs">
 <a href="#tgtlifetimehours_nodejs" style="color: inherit; text-decoration: inherit;">tgt<wbr>Lifetime<wbr>Hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The lifetime of the ticket granting ticket, in hours.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="truststorepassworduri_nodejs">
 <a href="#truststorepassworduri_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Password<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file
 containing the password to the user provided truststore. For the self-signed
 certificate, this password is generated by Dataproc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="truststoreuri_nodejs">
 <a href="#truststoreuri_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of the truststore file used for
 SSL encryption. If not provided, Dataproc will provide a self-signed certificate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="kmskeyuri_python">
-<a href="#kmskeyuri_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Uri</a>
-</span> 
+        <span id="kms_key_uri_python">
+<a href="#kms_key_uri_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the KMS key used to encrypt various sensitive files.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="rootprincipalpassworduri_python">
-<a href="#rootprincipalpassworduri_python" style="color: inherit; text-decoration: inherit;">root<wbr>Principal<wbr>Password<wbr>Uri</a>
-</span> 
+        <span id="root_principal_password_uri_python">
+<a href="#root_principal_password_uri_python" style="color: inherit; text-decoration: inherit;">root_<wbr>principal_<wbr>password_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file
 containing the root principal password.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="crossrealmtrustadminserver_python">
-<a href="#crossrealmtrustadminserver_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Admin<wbr>Server</a>
-</span> 
+        <span id="cross_realm_trust_admin_server_python">
+<a href="#cross_realm_trust_admin_server_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>admin_<wbr>server</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The admin server (IP or hostname) for the
 remote trusted realm in a cross realm trust relationship.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="crossrealmtrustkdc_python">
-<a href="#crossrealmtrustkdc_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Kdc</a>
-</span> 
+        <span id="cross_realm_trust_kdc_python">
+<a href="#cross_realm_trust_kdc_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>kdc</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The KDC (IP or hostname) for the
 remote trusted realm in a cross realm trust relationship.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="crossrealmtrustrealm_python">
-<a href="#crossrealmtrustrealm_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Realm</a>
-</span> 
+        <span id="cross_realm_trust_realm_python">
+<a href="#cross_realm_trust_realm_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>realm</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The remote realm the Dataproc on-cluster KDC will
 trust, should the user enable cross realm trust.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="crossrealmtrustsharedpassworduri_python">
-<a href="#crossrealmtrustsharedpassworduri_python" style="color: inherit; text-decoration: inherit;">cross<wbr>Realm<wbr>Trust<wbr>Shared<wbr>Password<wbr>Uri</a>
-</span> 
+        <span id="cross_realm_trust_shared_password_uri_python">
+<a href="#cross_realm_trust_shared_password_uri_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>realm_<wbr>trust_<wbr>shared_<wbr>password_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS
 encrypted file containing the shared password between the on-cluster Kerberos realm
 and the remote trusted realm, in a cross realm trust relationship.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="enablekerberos_python">
-<a href="#enablekerberos_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Kerberos</a>
-</span> 
+        <span id="enable_kerberos_python">
+<a href="#enable_kerberos_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>kerberos</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether to Kerberize the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="kdcdbkeyuri_python">
-<a href="#kdcdbkeyuri_python" style="color: inherit; text-decoration: inherit;">kdc<wbr>Db<wbr>Key<wbr>Uri</a>
-</span> 
+        <span id="kdc_db_key_uri_python">
+<a href="#kdc_db_key_uri_python" style="color: inherit; text-decoration: inherit;">kdc_<wbr>db_<wbr>key_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file containing
 the master key of the KDC database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="keypassworduri_python">
-<a href="#keypassworduri_python" style="color: inherit; text-decoration: inherit;">key<wbr>Password<wbr>Uri</a>
-</span> 
+        <span id="key_password_uri_python">
+<a href="#key_password_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>password_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file containing
 the password to the user provided key. For the self-signed certificate, this password
 is generated by Dataproc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="keystorepassworduri_python">
-<a href="#keystorepassworduri_python" style="color: inherit; text-decoration: inherit;">keystore<wbr>Password<wbr>Uri</a>
-</span> 
+        <span id="keystore_password_uri_python">
+<a href="#keystore_password_uri_python" style="color: inherit; text-decoration: inherit;">keystore_<wbr>password_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file containing
 the password to the user provided keystore. For the self-signed certificated, the password
 is generated by Dataproc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="keystoreuri_python">
-<a href="#keystoreuri_python" style="color: inherit; text-decoration: inherit;">keystore<wbr>Uri</a>
-</span> 
+        <span id="keystore_uri_python">
+<a href="#keystore_uri_python" style="color: inherit; text-decoration: inherit;">keystore_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of the keystore file used for SSL encryption.
 If not provided, Dataproc will provide a self-signed certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="realm_python">
 <a href="#realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the on-cluster Kerberos realm. If not specified, the
 uppercased domain of hostnames will be the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="tgtlifetimehours_python">
-<a href="#tgtlifetimehours_python" style="color: inherit; text-decoration: inherit;">tgt<wbr>Lifetime<wbr>Hours</a>
-</span> 
+        <span id="tgt_lifetime_hours_python">
+<a href="#tgt_lifetime_hours_python" style="color: inherit; text-decoration: inherit;">tgt_<wbr>lifetime_<wbr>hours</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lifetime of the ticket granting ticket, in hours.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="truststorepassworduri_python">
-<a href="#truststorepassworduri_python" style="color: inherit; text-decoration: inherit;">truststore<wbr>Password<wbr>Uri</a>
-</span> 
+        <span id="truststore_password_uri_python">
+<a href="#truststore_password_uri_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>password_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of a KMS encrypted file
 containing the password to the user provided truststore. For the self-signed
 certificate, this password is generated by Dataproc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="truststoreuri_python">
-<a href="#truststoreuri_python" style="color: inherit; text-decoration: inherit;">truststore<wbr>Uri</a>
-</span> 
+        <span id="truststore_uri_python">
+<a href="#truststore_uri_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage URI of the truststore file used for
 SSL encryption. If not provided, Dataproc will provide a self-signed certificate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigSoftwareConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigSoftwareConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSoftwareConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigSoftwareConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigSoftwareConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigSoftwareConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5211,9 +4750,9 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
             title="Optional">
         <span id="imageversion_csharp">
 <a href="#imageversion_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataproc image version to use
 for the cluster - this controls the sets of software versions
@@ -5221,16 +4760,15 @@ installed onto the nodes when you create clusters. If not specified, defaults to
 latest version. For a list of valid versions see
 [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optionalcomponents_csharp">
 <a href="#optionalcomponents_csharp" style="color: inherit; text-decoration: inherit;">Optional<wbr>Components</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The set of optional components to activate on the cluster. 
+    <dd>{{% md %}}The set of optional components to activate on the cluster.
 Accepted values are:
 * ANACONDA
 * DRUID
@@ -5244,12 +4782,11 @@ Accepted values are:
 * ZEPPELIN
 * ZOOKEEPER
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overrideproperties_csharp">
 <a href="#overrideproperties_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -5258,20 +4795,17 @@ used to modify various aspects of the common configuration files used when creat
 a cluster. For a list of valid properties please see
 [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5280,9 +4814,9 @@ a cluster. For a list of valid properties please see
             title="Optional">
         <span id="imageversion_go">
 <a href="#imageversion_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataproc image version to use
 for the cluster - this controls the sets of software versions
@@ -5290,16 +4824,15 @@ installed onto the nodes when you create clusters. If not specified, defaults to
 latest version. For a list of valid versions see
 [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optionalcomponents_go">
 <a href="#optionalcomponents_go" style="color: inherit; text-decoration: inherit;">Optional<wbr>Components</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The set of optional components to activate on the cluster. 
+    <dd>{{% md %}}The set of optional components to activate on the cluster.
 Accepted values are:
 * ANACONDA
 * DRUID
@@ -5313,12 +4846,11 @@ Accepted values are:
 * ZEPPELIN
 * ZOOKEEPER
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overrideproperties_go">
 <a href="#overrideproperties_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -5327,20 +4859,17 @@ used to modify various aspects of the common configuration files used when creat
 a cluster. For a list of valid properties please see
 [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5349,9 +4878,9 @@ a cluster. For a list of valid properties please see
             title="Optional">
         <span id="imageversion_nodejs">
 <a href="#imageversion_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataproc image version to use
 for the cluster - this controls the sets of software versions
@@ -5359,16 +4888,15 @@ installed onto the nodes when you create clusters. If not specified, defaults to
 latest version. For a list of valid versions see
 [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optionalcomponents_nodejs">
 <a href="#optionalcomponents_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Components</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The set of optional components to activate on the cluster. 
+    <dd>{{% md %}}The set of optional components to activate on the cluster.
 Accepted values are:
 * ANACONDA
 * DRUID
@@ -5382,12 +4910,11 @@ Accepted values are:
 * ZEPPELIN
 * ZOOKEEPER
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="overrideproperties_nodejs">
 <a href="#overrideproperties_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -5396,31 +4923,28 @@ used to modify various aspects of the common configuration files used when creat
 a cluster. For a list of valid properties please see
 [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="imageversion_python">
-<a href="#imageversion_python" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
-</span> 
+        <span id="image_version_python">
+<a href="#image_version_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Dataproc image version to use
 for the cluster - this controls the sets of software versions
@@ -5428,16 +4952,15 @@ installed onto the nodes when you create clusters. If not specified, defaults to
 latest version. For a list of valid versions see
 [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="optionalcomponents_python">
-<a href="#optionalcomponents_python" style="color: inherit; text-decoration: inherit;">optional<wbr>Components</a>
-</span> 
+        <span id="optional_components_python">
+<a href="#optional_components_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>components</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The set of optional components to activate on the cluster. 
+    <dd>{{% md %}}The set of optional components to activate on the cluster.
 Accepted values are:
 * ANACONDA
 * DRUID
@@ -5451,52 +4974,32 @@ Accepted values are:
 * ZEPPELIN
 * ZOOKEEPER
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="overrideproperties_python">
-<a href="#overrideproperties_python" style="color: inherit; text-decoration: inherit;">override<wbr>Properties</a>
-</span> 
+        <span id="override_properties_python">
+<a href="#override_properties_python" style="color: inherit; text-decoration: inherit;">override_<wbr>properties</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of override and additional properties (key/value pairs)
 used to modify various aspects of the common configuration files used when creating
 a cluster. For a list of valid properties please see
 [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigWorkerConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigWorkerConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5505,88 +5008,80 @@ a cluster. For a list of valid properties please see
             title="Optional">
         <span id="accelerators_csharp">
 <a href="#accelerators_csharp" style="color: inherit; text-decoration: inherit;">Accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">List&lt;Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskconfig_csharp">
 <a href="#diskconfig_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imageuri_csharp">
 <a href="#imageuri_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
 for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenames_csharp">
 <a href="#instancenames_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="machinetype_csharp">
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine machine type
 to create for the worker nodes. If not specified, GCP will default to a predetermined
 computed value (currently `n1-standard-4`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_csharp">
 <a href="#mincpuplatform_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a minimum generation of CPU family
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
 for details about which CPU families are available (and defaulted) for each zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numinstances_csharp">
 <a href="#numinstances_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5595,88 +5090,80 @@ Defaults to 0.
             title="Optional">
         <span id="accelerators_go">
 <a href="#accelerators_go" style="color: inherit; text-decoration: inherit;">Accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">[]Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskconfig_go">
 <a href="#diskconfig_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imageuri_go">
 <a href="#imageuri_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
 for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenames_go">
 <a href="#instancenames_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="machinetype_go">
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine machine type
 to create for the worker nodes. If not specified, GCP will default to a predetermined
 computed value (currently `n1-standard-4`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_go">
 <a href="#mincpuplatform_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a minimum generation of CPU family
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
 for details about which CPU families are available (and defaulted) for each zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numinstances_go">
 <a href="#numinstances_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5685,88 +5172,80 @@ Defaults to 0.
             title="Optional">
         <span id="accelerators_nodejs">
 <a href="#accelerators_nodejs" style="color: inherit; text-decoration: inherit;">accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskconfig_nodejs">
 <a href="#diskconfig_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imageuri_nodejs">
 <a href="#imageuri_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
 for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenames_nodejs">
 <a href="#instancenames_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="machinetype_nodejs">
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine machine type
 to create for the worker nodes. If not specified, GCP will default to a predetermined
 computed value (currently `n1-standard-4`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_nodejs">
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a minimum generation of CPU family
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
 for details about which CPU families are available (and defaulted) for each zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numinstances_nodejs">
 <a href="#numinstances_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5775,106 +5254,82 @@ Defaults to 0.
             title="Optional">
         <span id="accelerators_python">
 <a href="#accelerators_python" style="color: inherit; text-decoration: inherit;">accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">List[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfigaccelerator">Sequence[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="diskconfig_python">
-<a href="#diskconfig_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Config</a>
-</span> 
+        <span id="disk_config_python">
+<a href="#disk_config_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Dict[Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config]</a></span>
+        <span class="property-type"><a href="#clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Disk Config
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="imageuri_python">
-<a href="#imageuri_python" style="color: inherit; text-decoration: inherit;">image<wbr>Uri</a>
-</span> 
+        <span id="image_uri_python">
+<a href="#image_uri_python" style="color: inherit; text-decoration: inherit;">image_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI for the image to use for this worker.  See [the guide](https://cloud.google.com/dataproc/docs/guides/dataproc-images)
 for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="instancenames_python">
-<a href="#instancenames_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Names</a>
-</span> 
+        <span id="instance_names_python">
+<a href="#instance_names_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>names</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="machine_type_python">
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Google Compute Engine machine type
 to create for the worker nodes. If not specified, GCP will default to a predetermined
 computed value (currently `n1-standard-4`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="min_cpu_platform_python">
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a minimum generation of CPU family
 for the master. If not specified, GCP will default to a predetermined computed value
 for each zone. See [the guide](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
 for details about which CPU families are available (and defaulted) for each zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="numinstances_python">
-<a href="#numinstances_python" style="color: inherit; text-decoration: inherit;">num<wbr>Instances</a>
-</span> 
+        <span id="num_instances_python">
+<a href="#num_instances_python" style="color: inherit; text-decoration: inherit;">num_<wbr>instances</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of preemptible nodes to create.
 Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigworkerconfigaccelerator">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigWorkerConfigAccelerator">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigWorkerConfigAccelerator">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigAcceleratorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfigAccelerator.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5883,27 +5338,24 @@ Defaults to 0.
             title="Required">
         <span id="acceleratorcount_csharp">
 <a href="#acceleratorcount_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratortype_csharp">
 <a href="#acceleratortype_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5912,27 +5364,24 @@ Defaults to 0.
             title="Required">
         <span id="acceleratorcount_go">
 <a href="#acceleratorcount_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratortype_go">
 <a href="#acceleratortype_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5941,74 +5390,52 @@ Defaults to 0.
             title="Required">
         <span id="acceleratorcount_nodejs">
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratortype_nodejs">
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="acceleratorcount_python">
-<a href="#acceleratorcount_python" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
-</span> 
+        <span id="accelerator_count_python">
+<a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accelerator_type_python">
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The short name of the accelerator type to expose to this instance. For example, `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigWorkerConfigDiskConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigWorkerConfigDiskConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigDiskConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#ClusterClusterConfigWorkerConfigDiskConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.ClusterClusterConfigWorkerConfigDiskConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6017,43 +5444,39 @@ Defaults to 0.
             title="Optional">
         <span id="bootdisksizegb_csharp">
 <a href="#bootdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
 computed value if not set (currently 500GB). Note: If SSDs are not
 attached, it also contains the HDFS data blocks and Hadoop working directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisktype_csharp">
 <a href="#bootdisktype_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk type of the primary disk attached to each preemptible worker node.
 One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numlocalssds_csharp">
 <a href="#numlocalssds_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Local<wbr>Ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6062,43 +5485,39 @@ attached to each preemptible worker node. Defaults to 0.
             title="Optional">
         <span id="bootdisksizegb_go">
 <a href="#bootdisksizegb_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
 computed value if not set (currently 500GB). Note: If SSDs are not
 attached, it also contains the HDFS data blocks and Hadoop working directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisktype_go">
 <a href="#bootdisktype_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk type of the primary disk attached to each preemptible worker node.
 One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numlocalssds_go">
 <a href="#numlocalssds_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Local<wbr>Ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6107,43 +5526,39 @@ attached to each preemptible worker node. Defaults to 0.
             title="Optional">
         <span id="bootdisksizegb_nodejs">
 <a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
 computed value if not set (currently 500GB). Note: If SSDs are not
 attached, it also contains the HDFS data blocks and Hadoop working directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisktype_nodejs">
 <a href="#bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk type of the primary disk attached to each preemptible worker node.
 One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numlocalssds_nodejs">
 <a href="#numlocalssds_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6152,47 +5567,43 @@ attached to each preemptible worker node. Defaults to 0.
             title="Optional">
         <span id="boot_disk_size_gb_python">
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the primary disk attached to each preemptible worker node, specified
 in GB. The smallest allowed disk size is 10GB. GCP will default to a predetermined
 computed value if not set (currently 500GB). Note: If SSDs are not
 attached, it also contains the HDFS data blocks and Hadoop working directories.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_disk_type_python">
 <a href="#boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The disk type of the primary disk attached to each preemptible worker node.
 One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="numlocalssds_python">
-<a href="#numlocalssds_python" style="color: inherit; text-decoration: inherit;">num<wbr>Local<wbr>Ssds</a>
-</span> 
+        <span id="num_local_ssds_python">
+<a href="#num_local_ssds_python" style="color: inherit; text-decoration: inherit;">num_<wbr>local_<wbr>ssds</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of local SSD disks that will be
 attached to each preemptible worker node. Defaults to 0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
-
-
-
+This resource does not support import.
 
 
 
@@ -6204,6 +5615,6 @@ attached to each preemptible worker node. Defaults to 0.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

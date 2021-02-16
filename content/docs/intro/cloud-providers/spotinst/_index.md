@@ -53,10 +53,20 @@ deployment = spotinst.multai.Deployment("my_deployment")
 
 ```go
 import (
-  multai "github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/multai"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	multai "github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/multai"
 )
 
-deployment, _ := multai.NewDeployment(ctx, "example", &multai.DeploymentArgs{})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		deployment, err := multai.NewDeployment(ctx, "example", &multai.DeploymentArgs{})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}

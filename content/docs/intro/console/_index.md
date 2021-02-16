@@ -4,7 +4,7 @@ meta_desc: An overview of the Pulumi Console web application.
 menu:
   intro:
     identifier: console
-    weight: 3
+    weight: 5
 no_on_this_page: true
 aliases: [/docs/reference/service]
 ---
@@ -50,6 +50,7 @@ The [Pulumi Console](https://app.pulumi.com) web application automatically manag
         <h3 class="no-anchor pt-4"><a href="{{< relref "/docs/intro/console/extensions" >}}"><i class="fab fa-connectdevelop pr-2"></i> Integrations and Extensions</a></h3>
         <p>Integrate Pulumi with your current continuous delivery pipeline. Build your own extensions, and create reusable templates.
         <ul class="p2">
+            <li><a href="{{< relref "/docs/intro/console/extensions/ci-cd-integration-assistant" >}}">CI/CD Integration Assistant</a></li>
             <li><a href="{{< relref "/docs/guides/continuous-delivery" >}}">Continuous Delivery</a></li>
             <li><a href="{{< relref "/docs/intro/console/extensions/webhooks" >}}">Webhooks</a></li>
             <li><a href="{{< relref "/docs/intro/console/extensions/pulumi-button" >}}">"Deploy with Pulumi" Button</a></li>

@@ -12,185 +12,7 @@ meta_desc: "Explore the GetEntity function of the New Relic package, including e
 
 Use this data source to get information about a specific entity in New Relic One that already exists.
 
-{{% examples %}}
-## Example Usage
 
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using NewRelic = Pulumi.NewRelic;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var app = Output.Create(NewRelic.GetEntity.InvokeAsync(new NewRelic.GetEntityArgs
-        {
-            Name = "my-app",
-            Domain = "APM",
-            Type = "APPLICATION",
-            Tag = new NewRelic.Inputs.GetEntityTagArgs
-            {
-                Key = "my-tag",
-                Value = "my-tag-value",
-            },
-        }));
-        var fooAlertPolicy = new NewRelic.AlertPolicy("fooAlertPolicy", new NewRelic.AlertPolicyArgs
-        {
-        });
-        var fooAlertCondition = new NewRelic.AlertCondition("fooAlertCondition", new NewRelic.AlertConditionArgs
-        {
-            PolicyId = fooAlertPolicy.Id,
-            Type = "apm_app_metric",
-            Entities = 
-            {
-                data.Newrelic_application.App.Application_id,
-            },
-            Metric = "apdex",
-            RunbookUrl = "https://www.example.com",
-            Terms = 
-            {
-                new NewRelic.Inputs.AlertConditionTermArgs
-                {
-                    Duration = 5,
-                    Operator = "below",
-                    Priority = "critical",
-                    Threshold = 0.75,
-                    TimeFunction = "all",
-                },
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "APM"
-		opt1 := "APPLICATION"
-		_, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
-			Name:   "my-app",
-			Domain: &opt0,
-			Type:   &opt1,
-			Tag: newrelic.GetEntityTag{
-				Key:   "my-tag",
-				Value: "my-tag-value",
-			},
-		}, nil)
-		if err != nil {
-			return err
-		}
-		fooAlertPolicy, err := newrelic.NewAlertPolicy(ctx, "fooAlertPolicy", nil)
-		if err != nil {
-			return err
-		}
-		_, err = newrelic.NewAlertCondition(ctx, "fooAlertCondition", &newrelic.AlertConditionArgs{
-			PolicyId: fooAlertPolicy.ID(),
-			Type:     pulumi.String("apm_app_metric"),
-			Entities: pulumi.IntArray{
-				pulumi.Any(data.Newrelic_application.App.Application_id),
-			},
-			Metric:     pulumi.String("apdex"),
-			RunbookUrl: pulumi.String("https://www.example.com"),
-			Terms: newrelic.AlertConditionTermArray{
-				&newrelic.AlertConditionTermArgs{
-					Duration:     pulumi.Int(5),
-					Operator:     pulumi.String("below"),
-					Priority:     pulumi.String("critical"),
-					Threshold:    pulumi.Float64(0.75),
-					TimeFunction: pulumi.String("all"),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_newrelic as newrelic
-
-app = newrelic.get_entity(name="my-app",
-    domain="APM",
-    type="APPLICATION",
-    tag={
-        "key": "my-tag",
-        "value": "my-tag-value",
-    })
-foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
-foo_alert_condition = newrelic.AlertCondition("fooAlertCondition",
-    policy_id=foo_alert_policy.id,
-    type="apm_app_metric",
-    entities=[data["newrelic_application"]["app"]["application_id"]],
-    metric="apdex",
-    runbook_url="https://www.example.com",
-    terms=[{
-        "duration": 5,
-        "operator": "below",
-        "priority": "critical",
-        "threshold": "0.75",
-        "timeFunction": "all",
-    }])
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as newrelic from "@pulumi/newrelic";
-
-const app = newrelic.getEntity({
-    name: "my-app",
-    domain: "APM",
-    type: "APPLICATION",
-    tag: {
-        key: "my-tag",
-        value: "my-tag-value",
-    },
-});
-const fooAlertPolicy = new newrelic.AlertPolicy("fooAlertPolicy", {});
-const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
-    policyId: fooAlertPolicy.id,
-    type: "apm_app_metric",
-    entities: [data.newrelic_application.app.application_id],
-    metric: "apdex",
-    runbookUrl: "https://www.example.com",
-    terms: [{
-        duration: 5,
-        operator: "below",
-        priority: "critical",
-        threshold: "0.75",
-        timeFunction: "all",
-    }],
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Using GetEntity {#using}
@@ -199,31 +21,30 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEntity<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#GetEntityArgs">GetEntityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#GetEntityResult">GetEntityResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEntity<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEntityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEntityResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_entity(</span>domain=None<span class="p">, </span>name=None<span class="p">, </span>tag=None<span class="p">, </span>type=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_entity(</span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[GetEntityTagArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEntityResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEntity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#GetEntityArgs">GetEntityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#GetEntityResult">GetEntityResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEntity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEntityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEntityResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEntity </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.GetEntityResult.html">GetEntityResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.GetEntityArgs.html">GetEntityArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEntityResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEntityArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -233,48 +54,43 @@ The following arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the entity in New Relic One.  The first entity matching this name for the given search parameters will be returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The entity's domain. Valid values are APM, BROWSER, INFRA, MOBILE, and SYNTH.
+    <dd>{{% md %}}The entity's domain. Valid values are APM, BROWSER, INFRA, MOBILE, SYNTH, and VIZ. If not specified, all domains are searched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getentitytag">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Get<wbr>Entity<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The entity's type. Valid values are APPLICATION, DASHBOARD, HOST, MONITOR, and WORRKLOAD.
+    <dd>{{% md %}}The entity's type. Valid values are APPLICATION, DASHBOARD, HOST, MONITOR, and WORKLOAD.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -283,48 +99,43 @@ The following arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the entity in New Relic One.  The first entity matching this name for the given search parameters will be returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The entity's domain. Valid values are APM, BROWSER, INFRA, MOBILE, and SYNTH.
+    <dd>{{% md %}}The entity's domain. Valid values are APM, BROWSER, INFRA, MOBILE, SYNTH, and VIZ. If not specified, all domains are searched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getentitytag">Get<wbr>Entity<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The entity's type. Valid values are APPLICATION, DASHBOARD, HOST, MONITOR, and WORRKLOAD.
+    <dd>{{% md %}}The entity's type. Valid values are APPLICATION, DASHBOARD, HOST, MONITOR, and WORKLOAD.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -333,48 +144,43 @@ The following arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the entity in New Relic One.  The first entity matching this name for the given search parameters will be returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The entity's domain. Valid values are APM, BROWSER, INFRA, MOBILE, and SYNTH.
+    <dd>{{% md %}}The entity's domain. Valid values are APM, BROWSER, INFRA, MOBILE, SYNTH, and VIZ. If not specified, all domains are searched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getentitytag">Get<wbr>Entity<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The entity's type. Valid values are APPLICATION, DASHBOARD, HOST, MONITOR, and WORRKLOAD.
+    <dd>{{% md %}}The entity's type. Valid values are APPLICATION, DASHBOARD, HOST, MONITOR, and WORKLOAD.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -383,51 +189,43 @@ The following arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the entity in New Relic One.  The first entity matching this name for the given search parameters will be returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The entity's domain. Valid values are APM, BROWSER, INFRA, MOBILE, and SYNTH.
+    <dd>{{% md %}}The entity's domain. Valid values are APM, BROWSER, INFRA, MOBILE, SYNTH, and VIZ. If not specified, all domains are searched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getentitytag">Dict[Get<wbr>Entity<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#getentitytag">Get<wbr>Entity<wbr>Tag<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The entity's type. Valid values are APPLICATION, DASHBOARD, HOST, MONITOR, and WORRKLOAD.
+    <dd>{{% md %}}The entity's type. Valid values are APPLICATION, DASHBOARD, HOST, MONITOR, and WORKLOAD.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -438,7 +236,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -446,89 +243,89 @@ The following output properties are available:
             title="">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID associated with this entity.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The domain-specific application ID of the entity. Only returned for APM and Browser applications.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="guid_csharp">
 <a href="#guid_csharp" style="color: inherit; text-decoration: inherit;">Guid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique GUID of the entity.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="servingapmapplicationid_csharp">
+<a href="#servingapmapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Serving<wbr>Apm<wbr>Application<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getentitytag">Pulumi.<wbr>New<wbr>Relic.<wbr>Outputs.<wbr>Get<wbr>Entity<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -537,89 +334,89 @@ The following output properties are available:
             title="">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID associated with this entity.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The domain-specific application ID of the entity. Only returned for APM and Browser applications.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="guid_go">
 <a href="#guid_go" style="color: inherit; text-decoration: inherit;">Guid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique GUID of the entity.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="servingapmapplicationid_go">
+<a href="#servingapmapplicationid_go" style="color: inherit; text-decoration: inherit;">Serving<wbr>Apm<wbr>Application<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getentitytag">Get<wbr>Entity<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -628,89 +425,89 @@ The following output properties are available:
             title="">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID associated with this entity.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The domain-specific application ID of the entity. Only returned for APM and Browser applications.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="guid_nodejs">
 <a href="#guid_nodejs" style="color: inherit; text-decoration: inherit;">guid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique GUID of the entity.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="servingapmapplicationid_nodejs">
+<a href="#servingapmapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Apm<wbr>Application<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getentitytag">Get<wbr>Entity<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -719,92 +516,89 @@ The following output properties are available:
             title="">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID associated with this entity.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The domain-specific application ID of the entity. Only returned for APM and Browser applications.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="guid_python">
 <a href="#guid_python" style="color: inherit; text-decoration: inherit;">guid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique GUID of the entity.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="serving_apm_application_id_python">
+<a href="#serving_apm_application_id_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>apm_<wbr>application_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getentitytag">Dict[Get<wbr>Entity<wbr>Tag]</a></span>
+        <span class="property-type"><a href="#getentitytag">Get<wbr>Entity<wbr>Tag</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -813,17 +607,6 @@ The following output properties are available:
 
 
 <h4 id="getentitytag">Get<wbr>Entity<wbr>Tag</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#GetEntityTag">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#GetEntityTag">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#GetEntityTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#GetEntityTag">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.GetEntityTagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.GetEntityTag.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -834,25 +617,22 @@ The following output properties are available:
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -861,25 +641,22 @@ The following output properties are available:
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -888,25 +665,22 @@ The following output properties are available:
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -915,28 +689,22 @@ The following output properties are available:
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

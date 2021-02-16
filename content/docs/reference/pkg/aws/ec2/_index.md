@@ -17,7 +17,9 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="amilaunchpermission" title="AmiLaunchPermission"><span class="symbol resource"></span>AmiLaunchPermission</a></li>
     <li><a href="availabilityzonegroup" title="AvailabilityZoneGroup"><span class="symbol resource"></span>AvailabilityZoneGroup</a></li>
     <li><a href="capacityreservation" title="CapacityReservation"><span class="symbol resource"></span>CapacityReservation</a></li>
+    <li><a href="carriergateway" title="CarrierGateway"><span class="symbol resource"></span>CarrierGateway</a></li>
     <li><a href="customergateway" title="CustomerGateway"><span class="symbol resource"></span>CustomerGateway</a></li>
+    <li><a href="dedicatedhost" title="DedicatedHost"><span class="symbol resource"></span>DedicatedHost</a></li>
     <li><a href="defaultnetworkacl" title="DefaultNetworkAcl"><span class="symbol resource"></span>DefaultNetworkAcl</a></li>
     <li><a href="defaultroutetable" title="DefaultRouteTable"><span class="symbol resource"></span>DefaultRouteTable</a></li>
     <li><a href="defaultsecuritygroup" title="DefaultSecurityGroup"><span class="symbol resource"></span>DefaultSecurityGroup</a></li>
@@ -37,6 +39,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="localgatewayroute" title="LocalGatewayRoute"><span class="symbol resource"></span>LocalGatewayRoute</a></li>
     <li><a href="localgatewayroutetablevpcassociation" title="LocalGatewayRouteTableVpcAssociation"><span class="symbol resource"></span>LocalGatewayRouteTableVpcAssociation</a></li>
     <li><a href="mainroutetableassociation" title="MainRouteTableAssociation"><span class="symbol resource"></span>MainRouteTableAssociation</a></li>
+    <li><a href="managedprefixlist" title="ManagedPrefixList"><span class="symbol resource"></span>ManagedPrefixList</a></li>
     <li><a href="natgateway" title="NatGateway"><span class="symbol resource"></span>NatGateway</a></li>
     <li><a href="networkacl" title="NetworkAcl"><span class="symbol resource"></span>NetworkAcl</a></li>
     <li><a href="networkaclrule" title="NetworkAclRule"><span class="symbol resource"></span>NetworkAclRule</a></li>
@@ -87,7 +90,9 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="getcoippool" title="GetCoipPool"><span class="symbol function"></span>GetCoipPool</a></li>
     <li><a href="getcoippools" title="GetCoipPools"><span class="symbol function"></span>GetCoipPools</a></li>
     <li><a href="getcustomergateway" title="GetCustomerGateway"><span class="symbol function"></span>GetCustomerGateway</a></li>
+    <li><a href="getdedicatedhost" title="GetDedicatedHost"><span class="symbol function"></span>GetDedicatedHost</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getinstancetype" title="GetInstanceType"><span class="symbol function"></span>GetInstanceType</a></li>
     <li><a href="getinstancetypeoffering" title="GetInstanceTypeOffering"><span class="symbol function"></span>GetInstanceTypeOffering</a></li>
     <li><a href="getinstancetypeofferings" title="GetInstanceTypeOfferings"><span class="symbol function"></span>GetInstanceTypeOfferings</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
@@ -101,6 +106,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="getlocalgatewayvirtualinterfacegroup" title="GetLocalGatewayVirtualInterfaceGroup"><span class="symbol function"></span>GetLocalGatewayVirtualInterfaceGroup</a></li>
     <li><a href="getlocalgatewayvirtualinterfacegroups" title="GetLocalGatewayVirtualInterfaceGroups"><span class="symbol function"></span>GetLocalGatewayVirtualInterfaceGroups</a></li>
     <li><a href="getlocalgateways" title="GetLocalGateways"><span class="symbol function"></span>GetLocalGateways</a></li>
+    <li><a href="getmanagedprefixlist" title="GetManagedPrefixList"><span class="symbol function"></span>GetManagedPrefixList</a></li>
     <li><a href="getnatgateway" title="GetNatGateway"><span class="symbol function"></span>GetNatGateway</a></li>
     <li><a href="getnetworkacls" title="GetNetworkAcls"><span class="symbol function"></span>GetNetworkAcls</a></li>
     <li><a href="getnetworkinterface" title="GetNetworkInterface"><span class="symbol function"></span>GetNetworkInterface</a></li>
@@ -118,6 +124,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="getvpcendpoint" title="GetVpcEndpoint"><span class="symbol function"></span>GetVpcEndpoint</a></li>
     <li><a href="getvpcendpointservice" title="GetVpcEndpointService"><span class="symbol function"></span>GetVpcEndpointService</a></li>
     <li><a href="getvpcpeeringconnection" title="GetVpcPeeringConnection"><span class="symbol function"></span>GetVpcPeeringConnection</a></li>
+    <li><a href="getvpcpeeringconnections" title="GetVpcPeeringConnections"><span class="symbol function"></span>GetVpcPeeringConnections</a></li>
     <li><a href="getvpcs" title="GetVpcs"><span class="symbol function"></span>GetVpcs</a></li>
     <li><a href="getvpngateway" title="GetVpnGateway"><span class="symbol function"></span>GetVpnGateway</a></li>
 </ul>
@@ -131,24 +138,6 @@ Explore the resources and functions of the ec2 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.html" title="Pulumi.Aws.Ec2">Pulumi.Aws.Ec2</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#" title="aws/ec2">aws/ec2</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#" title="@pulumi/aws/ec2">@pulumi/aws/ec2</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/ec2" title="pulumi_aws/ec2">pulumi_aws/ec2</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

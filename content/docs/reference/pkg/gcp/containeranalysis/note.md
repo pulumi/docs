@@ -1,8 +1,8 @@
 
 ---
 title: "Note"
-title_tag: "Resource Note | Module containeranalysis | Package GCP"
-meta_desc: "Explore the Note resource of the containeranalysis module, including examples, input properties, output properties, lookup functions, and supporting types. A Container Analysis note is a high-level piece of metadata that"
+title_tag: "gcp.containeranalysis.Note"
+meta_desc: "Documentation for the gcp.containeranalysis.Note resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -56,13 +56,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/containeranalysis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
+		_, err := containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
 			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
 				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
 					HumanReadableName: pulumi.String("Attestor Note"),
@@ -84,11 +84,11 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-note = gcp.containeranalysis.Note("note", attestation_authority={
-    "hint": {
-        "humanReadableName": "Attestor Note",
-    },
-})
+note = gcp.containeranalysis.Note("note", attestation_authority=gcp.containeranalysis.NoteAttestationAuthorityArgs(
+    hint=gcp.containeranalysis.NoteAttestationAuthorityHintArgs(
+        human_readable_name="Attestor Note",
+    ),
+))
 ```
 
 {{% /example %}}
@@ -157,13 +157,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/containeranalysis"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
+		_, err := containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
 			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
 				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
 					HumanReadableName: pulumi.String("Attestor Note"),
@@ -198,21 +198,21 @@ import pulumi
 import pulumi_gcp as gcp
 
 note = gcp.containeranalysis.Note("note",
-    attestation_authority={
-        "hint": {
-            "humanReadableName": "Attestor Note",
-        },
-    },
+    attestation_authority=gcp.containeranalysis.NoteAttestationAuthorityArgs(
+        hint=gcp.containeranalysis.NoteAttestationAuthorityHintArgs(
+            human_readable_name="Attestor Note",
+        ),
+    ),
     expiration_time="2120-10-02T15:01:23.045123456Z",
     long_description="a longer description of test note",
     related_urls=[
-        {
-            "label": "foo",
-            "url": "some.url",
-        },
-        {
-            "url": "google.com",
-        },
+        gcp.containeranalysis.NoteRelatedUrlArgs(
+            label="foo",
+            url="some.url",
+        ),
+        gcp.containeranalysis.NoteRelatedUrlArgs(
+            url="google.com",
+        ),
     ],
     short_description="test note")
 ```
@@ -256,19 +256,19 @@ const note = new gcp.containeranalysis.Note("note", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/containeranalysis/#Note">Note</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/containeranalysis/#NoteArgs">NoteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Note</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NoteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/containeranalysis/#Note">Note</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attestation_authority=None<span class="p">, </span>expiration_time=None<span class="p">, </span>long_description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>related_note_names=None<span class="p">, </span>related_urls=None<span class="p">, </span>short_description=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Note</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority</span><span class="p">:</span> <span class="nx">Optional[NoteAttestationAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">related_note_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">related_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[NoteRelatedUrlArgs]]</span> = None<span class="p">, </span><span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#Note">NewNote</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteArgs">NoteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#Note">Note</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNote</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NoteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Note</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Note.html">Note</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.NoteArgs.html">NoteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Note</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NoteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -279,7 +279,7 @@ const note = new gcp.containeranalysis.Note("note", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -289,7 +289,7 @@ const note = new gcp.containeranalysis.Note("note", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/containeranalysis/#NoteArgs">NoteArgs</a></span>
+        <span class="property-type"><a href="#inputs">NoteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -338,7 +338,7 @@ const note = new gcp.containeranalysis.Note("note", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -348,7 +348,7 @@ const note = new gcp.containeranalysis.Note("note", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -358,7 +358,7 @@ const note = new gcp.containeranalysis.Note("note", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteArgs">NoteArgs</a></span>
+        <span class="property-type"><a href="#inputs">NoteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -368,7 +368,7 @@ const note = new gcp.containeranalysis.Note("note", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -387,7 +387,7 @@ const note = new gcp.containeranalysis.Note("note", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -397,7 +397,7 @@ const note = new gcp.containeranalysis.Note("note", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.NoteArgs.html">NoteArgs</a></span>
+        <span class="property-type"><a href="#inputs">NoteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -420,12 +420,11 @@ const note = new gcp.containeranalysis.Note("note", {
 
 ## Note Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Note resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Note resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -436,7 +435,7 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
             title="Required">
         <span id="attestationauthority_csharp">
 <a href="#attestationauthority_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority<wbr>Args</a></span>
     </dt>
@@ -448,90 +447,83 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="longdescription_csharp">
 <a href="#longdescription_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relatednotenames_csharp">
 <a href="#relatednotenames_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Note<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relatedurls_csharp">
 <a href="#relatedurls_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noterelatedurl">List&lt;Note<wbr>Related<wbr>Url<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shortdescription_csharp">
 <a href="#shortdescription_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -540,7 +532,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="attestationauthority_go">
 <a href="#attestationauthority_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority</a></span>
     </dt>
@@ -552,90 +544,83 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="longdescription_go">
 <a href="#longdescription_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relatednotenames_go">
 <a href="#relatednotenames_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Note<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relatedurls_go">
 <a href="#relatedurls_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noterelatedurl">[]Note<wbr>Related<wbr>Url</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shortdescription_go">
 <a href="#shortdescription_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -644,7 +629,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="attestationauthority_nodejs">
 <a href="#attestationauthority_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority</a></span>
     </dt>
@@ -656,90 +641,83 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="longdescription_nodejs">
 <a href="#longdescription_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relatednotenames_nodejs">
 <a href="#relatednotenames_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Note<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relatedurls_nodejs">
 <a href="#relatedurls_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noterelatedurl">Note<wbr>Related<wbr>Url[]</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shortdescription_nodejs">
 <a href="#shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -748,9 +726,9 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="attestation_authority_python">
 <a href="#attestation_authority_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthority">Dict[Note<wbr>Attestation<wbr>Authority]</a></span>
+        <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
 For example, an organization might have one AttestationAuthority for
@@ -760,99 +738,88 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="long_description_python">
 <a href="#long_description_python" style="color: inherit; text-decoration: inherit;">long_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="related_note_names_python">
 <a href="#related_note_names_python" style="color: inherit; text-decoration: inherit;">related_<wbr>note_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="related_urls_python">
 <a href="#related_urls_python" style="color: inherit; text-decoration: inherit;">related_<wbr>urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noterelatedurl">List[Note<wbr>Related<wbr>Url]</a></span>
+        <span class="property-type"><a href="#noterelatedurl">Sequence[Note<wbr>Related<wbr>Url<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="short_description_python">
 <a href="#short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Note resource produces the following output properties:
-
 
 
 
@@ -863,48 +830,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -913,48 +875,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -963,48 +920,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1013,51 +965,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1067,19 +1011,20 @@ Get an existing Note resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/containeranalysis/#NoteState">NoteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/containeranalysis/#Note">Note</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NoteState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Note</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attestation_authority=None<span class="p">, </span>create_time=None<span class="p">, </span>expiration_time=None<span class="p">, </span>kind=None<span class="p">, </span>long_description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>related_note_names=None<span class="p">, </span>related_urls=None<span class="p">, </span>short_description=None<span class="p">, </span>update_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority</span><span class="p">:</span> <span class="nx">Optional[NoteAttestationAuthorityArgs]</span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">related_note_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">related_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[NoteRelatedUrlArgs]]</span> = None<span class="p">, </span><span class="nx">short_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Note</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNote<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteState">NoteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#Note">Note</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNote<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NoteState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Note</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Note.html">Note</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.NoteState.html">NoteState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Note</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NoteState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1181,7 +1126,6 @@ Get an existing Note resource's state with the given name, ID, and optional extr
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1189,7 +1133,7 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_attestationauthority_csharp">
 <a href="#state_attestationauthority_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority<wbr>Args</a></span>
     </dt>
@@ -1201,123 +1145,113 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_expirationtime_csharp">
 <a href="#state_expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kind_csharp">
 <a href="#state_kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_longdescription_csharp">
 <a href="#state_longdescription_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_relatednotenames_csharp">
 <a href="#state_relatednotenames_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Note<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_relatedurls_csharp">
 <a href="#state_relatedurls_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noterelatedurl">List&lt;Note<wbr>Related<wbr>Url<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shortdescription_csharp">
 <a href="#state_shortdescription_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1326,7 +1260,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_attestationauthority_go">
 <a href="#state_attestationauthority_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority</a></span>
     </dt>
@@ -1338,123 +1272,113 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_expirationtime_go">
 <a href="#state_expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kind_go">
 <a href="#state_kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_longdescription_go">
 <a href="#state_longdescription_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_relatednotenames_go">
 <a href="#state_relatednotenames_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Note<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_relatedurls_go">
 <a href="#state_relatedurls_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noterelatedurl">[]Note<wbr>Related<wbr>Url</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shortdescription_go">
 <a href="#state_shortdescription_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1463,7 +1387,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_attestationauthority_nodejs">
 <a href="#state_attestationauthority_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority</a></span>
     </dt>
@@ -1475,123 +1399,113 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_expirationtime_nodejs">
 <a href="#state_expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kind_nodejs">
 <a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_longdescription_nodejs">
 <a href="#state_longdescription_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_relatednotenames_nodejs">
 <a href="#state_relatednotenames_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Note<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_relatedurls_nodejs">
 <a href="#state_relatedurls_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noterelatedurl">Note<wbr>Related<wbr>Url[]</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shortdescription_nodejs">
 <a href="#state_shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1600,9 +1514,9 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_attestation_authority_python">
 <a href="#state_attestation_authority_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthority">Dict[Note<wbr>Attestation<wbr>Authority]</a></span>
+        <span class="property-type"><a href="#noteattestationauthority">Note<wbr>Attestation<wbr>Authority<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Note kind that represents a logical attestation "role" or "authority".
 For example, an organization might have one AttestationAuthority for
@@ -1612,126 +1526,113 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
-project.  Structure is documented below.
+project.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_expiration_time_python">
 <a href="#state_expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kind_python">
 <a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_long_description_python">
 <a href="#state_long_description_python" style="color: inherit; text-decoration: inherit;">long_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_related_note_names_python">
 <a href="#state_related_note_names_python" style="color: inherit; text-decoration: inherit;">related_<wbr>note_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_related_urls_python">
 <a href="#state_related_urls_python" style="color: inherit; text-decoration: inherit;">related_<wbr>urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noterelatedurl">List[Note<wbr>Related<wbr>Url]</a></span>
+        <span class="property-type"><a href="#noterelatedurl">Sequence[Note<wbr>Related<wbr>Url<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}URLs associated with this note and related metadata.  Structure is documented below.
+    <dd>{{% md %}}URLs associated with this note and related metadata.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_short_description_python">
 <a href="#state_short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1741,20 +1642,8 @@ If it is not provided, the provider project is used.
 ## Supporting Types
 
 
+
 <h4 id="noteattestationauthority">Note<wbr>Attestation<wbr>Authority</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NoteAttestationAuthority">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NoteAttestationAuthority">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteAttestationAuthorityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteAttestationAuthorityOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Outputs.NoteAttestationAuthority.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1763,7 +1652,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="hint_csharp">
 <a href="#hint_csharp" style="color: inherit; text-decoration: inherit;">Hint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint<wbr>Args</a></span>
     </dt>
@@ -1774,12 +1663,11 @@ name of the Note (which might be a UUID for security purposes)
 from "readable" names more suitable for debug output. Note that
 these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
-Attestations to verify.  Structure is documented below.
+Attestations to verify.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1788,7 +1676,7 @@ Attestations to verify.  Structure is documented below.
             title="Required">
         <span id="hint_go">
 <a href="#hint_go" style="color: inherit; text-decoration: inherit;">Hint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint</a></span>
     </dt>
@@ -1799,12 +1687,11 @@ name of the Note (which might be a UUID for security purposes)
 from "readable" names more suitable for debug output. Note that
 these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
-Attestations to verify.  Structure is documented below.
+Attestations to verify.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1813,7 +1700,7 @@ Attestations to verify.  Structure is documented below.
             title="Required">
         <span id="hint_nodejs">
 <a href="#hint_nodejs" style="color: inherit; text-decoration: inherit;">hint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint</a></span>
     </dt>
@@ -1824,12 +1711,11 @@ name of the Note (which might be a UUID for security purposes)
 from "readable" names more suitable for debug output. Note that
 these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
-Attestations to verify.  Structure is documented below.
+Attestations to verify.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1838,9 +1724,9 @@ Attestations to verify.  Structure is documented below.
             title="Required">
         <span id="hint_python">
 <a href="#hint_python" style="color: inherit; text-decoration: inherit;">hint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#noteattestationauthorityhint">Dict[Note<wbr>Attestation<wbr>Authority<wbr>Hint]</a></span>
+        <span class="property-type"><a href="#noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}This submessage provides human-readable hints about the purpose of
 the AttestationAuthority. Because the name of a Note acts as its
@@ -1849,30 +1735,13 @@ name of the Note (which might be a UUID for security purposes)
 from "readable" names more suitable for debug output. Note that
 these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
-Attestations to verify.  Structure is documented below.
+Attestations to verify.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NoteAttestationAuthorityHint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NoteAttestationAuthorityHint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteAttestationAuthorityHintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteAttestationAuthorityHintOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Outputs.NoteAttestationAuthorityHint.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1881,17 +1750,15 @@ Attestations to verify.  Structure is documented below.
             title="Required">
         <span id="humanreadablename_csharp">
 <a href="#humanreadablename_csharp" style="color: inherit; text-decoration: inherit;">Human<wbr>Readable<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human readable name of this Attestation Authority, for
 example "qa".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1900,17 +1767,15 @@ example "qa".
             title="Required">
         <span id="humanreadablename_go">
 <a href="#humanreadablename_go" style="color: inherit; text-decoration: inherit;">Human<wbr>Readable<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human readable name of this Attestation Authority, for
 example "qa".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1919,54 +1784,34 @@ example "qa".
             title="Required">
         <span id="humanreadablename_nodejs">
 <a href="#humanreadablename_nodejs" style="color: inherit; text-decoration: inherit;">human<wbr>Readable<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human readable name of this Attestation Authority, for
 example "qa".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="humanreadablename_python">
-<a href="#humanreadablename_python" style="color: inherit; text-decoration: inherit;">human<wbr>Readable<wbr>Name</a>
-</span> 
+        <span id="human_readable_name_python">
+<a href="#human_readable_name_python" style="color: inherit; text-decoration: inherit;">human_<wbr>readable_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human readable name of this Attestation Authority, for
 example "qa".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="noterelatedurl">Note<wbr>Related<wbr>Url</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NoteRelatedUrl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NoteRelatedUrl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteRelatedUrlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/containeranalysis?tab=doc#NoteRelatedUrlOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Inputs.NoteRelatedUrlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ContainerAnalysis.Outputs.NoteRelatedUrl.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1975,27 +1820,24 @@ example "qa".
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specific URL associated with the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label to describe usage of the URL
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2004,27 +1846,24 @@ example "qa".
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specific URL associated with the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label to describe usage of the URL
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2033,27 +1872,24 @@ example "qa".
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specific URL associated with the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label to describe usage of the URL
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2062,31 +1898,40 @@ example "qa".
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specific URL associated with the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label to describe usage of the URL
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Note can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:containeranalysis/note:Note default projects/{{project}}/notes/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:containeranalysis/note:Note default {{project}}/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:containeranalysis/note:Note default {{name}}
+```
 
 
 
@@ -2098,6 +1943,6 @@ example "qa".
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

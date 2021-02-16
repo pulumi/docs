@@ -1,8 +1,8 @@
 
 ---
 title: "FirewallApplicationRuleCollection"
-title_tag: "Resource FirewallApplicationRuleCollection | Module network | Package Azure"
-meta_desc: "Explore the FirewallApplicationRuleCollection resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Application Rule Collection within an Azure Firewall."
+title_tag: "azure.network.FirewallApplicationRuleCollection"
+meta_desc: "Documentation for the azure.network.FirewallApplicationRuleCollection resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -43,7 +43,10 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "10.0.1.0/24",
+            AddressPrefixes = 
+            {
+                "10.0.1.0/24",
+            },
         });
         var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
         {
@@ -134,7 +137,9 @@ func main() {
 		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
 			ResourceGroupName:  exampleResourceGroup.Name,
 			VirtualNetworkName: exampleVirtualNetwork.Name,
-			AddressPrefix:      pulumi.String("10.0.1.0/24"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.1.0/24"),
+			},
 		})
 		if err != nil {
 			return err
@@ -208,7 +213,7 @@ example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
 example_subnet = azure.network.Subnet("exampleSubnet",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="10.0.1.0/24")
+    address_prefixes=["10.0.1.0/24"])
 example_public_ip = azure.network.PublicIp("examplePublicIp",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -217,25 +222,25 @@ example_public_ip = azure.network.PublicIp("examplePublicIp",
 example_firewall = azure.network.Firewall("exampleFirewall",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    ip_configurations=[{
-        "name": "configuration",
-        "subnet_id": example_subnet.id,
-        "public_ip_address_id": example_public_ip.id,
-    }])
+    ip_configurations=[azure.network.FirewallIpConfigurationArgs(
+        name="configuration",
+        subnet_id=example_subnet.id,
+        public_ip_address_id=example_public_ip.id,
+    )])
 example_firewall_application_rule_collection = azure.network.FirewallApplicationRuleCollection("exampleFirewallApplicationRuleCollection",
     azure_firewall_name=example_firewall.name,
     resource_group_name=example_resource_group.name,
     priority=100,
     action="Allow",
-    rules=[{
-        "name": "testrule",
-        "sourceAddresses": ["10.0.0.0/16"],
-        "targetFqdns": ["*.google.com"],
-        "protocols": [{
-            "port": "443",
-            "type": "Https",
-        }],
-    }])
+    rules=[azure.network.FirewallApplicationRuleCollectionRuleArgs(
+        name="testrule",
+        source_addresses=["10.0.0.0/16"],
+        target_fqdns=["*.google.com"],
+        protocols=[azure.network.FirewallApplicationRuleCollectionRuleProtocolArgs(
+            port=443,
+            type="Https",
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -255,7 +260,7 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
 const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.0.1.0/24",
+    addressPrefixes: ["10.0.1.0/24"],
 });
 const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
     location: exampleResourceGroup.location,
@@ -299,19 +304,19 @@ const exampleFirewallApplicationRuleCollection = new azure.network.FirewallAppli
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#FirewallApplicationRuleCollection">FirewallApplicationRuleCollection</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#FirewallApplicationRuleCollectionArgs">FirewallApplicationRuleCollectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#FirewallApplicationRuleCollection">FirewallApplicationRuleCollection</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#FirewallApplicationRuleCollectionArgs">FirewallApplicationRuleCollectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.FirewallApplicationRuleCollection">FirewallApplicationRuleCollection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallApplicationRuleCollectionRule]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.FirewallApplicationRuleCollection">FirewallApplicationRuleCollection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallApplicationRuleCollectionRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollection">NewFirewallApplicationRuleCollection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollectionArgs">FirewallApplicationRuleCollectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollection">FirewallApplicationRuleCollection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollection">NewFirewallApplicationRuleCollection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollectionArgs">FirewallApplicationRuleCollectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollection">FirewallApplicationRuleCollection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.FirewallApplicationRuleCollection.html">FirewallApplicationRuleCollection</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.FirewallApplicationRuleCollectionArgs.html">FirewallApplicationRuleCollectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.FirewallApplicationRuleCollection.html">FirewallApplicationRuleCollection</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.FirewallApplicationRuleCollectionArgs.html">FirewallApplicationRuleCollectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -322,7 +327,7 @@ const exampleFirewallApplicationRuleCollection = new azure.network.FirewallAppli
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -391,7 +396,7 @@ const exampleFirewallApplicationRuleCollection = new azure.network.FirewallAppli
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -430,7 +435,7 @@ const exampleFirewallApplicationRuleCollection = new azure.network.FirewallAppli
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -471,7 +476,6 @@ The FirewallApplicationRuleCollection resource accepts the following [input]({{<
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -479,71 +483,64 @@ The FirewallApplicationRuleCollection resource accepts the following [input]({{<
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action the rule will apply to matching traffic. Possible values are `Allow` and `Deny`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurefirewallname_csharp">
 <a href="#azurefirewallname_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Firewall<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Firewall in which the Application Rule Collection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the priority of the rule collection. Possible values are between `100` - `65000`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Firewall exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallapplicationrulecollectionrule">List&lt;Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -552,71 +549,64 @@ The FirewallApplicationRuleCollection resource accepts the following [input]({{<
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action the rule will apply to matching traffic. Possible values are `Allow` and `Deny`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurefirewallname_go">
 <a href="#azurefirewallname_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Firewall<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Firewall in which the Application Rule Collection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the priority of the rule collection. Possible values are between `100` - `65000`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Firewall exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallapplicationrulecollectionrule">[]Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -625,71 +615,64 @@ The FirewallApplicationRuleCollection resource accepts the following [input]({{<
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action the rule will apply to matching traffic. Possible values are `Allow` and `Deny`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azurefirewallname_nodejs">
 <a href="#azurefirewallname_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Firewall<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Firewall in which the Application Rule Collection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the priority of the rule collection. Possible values are between `100` - `65000`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Firewall exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallapplicationrulecollectionrule">Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -698,80 +681,69 @@ The FirewallApplicationRuleCollection resource accepts the following [input]({{<
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the action the rule will apply to matching traffic. Possible values are `Allow` and `Deny`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="azure_firewall_name_python">
 <a href="#azure_firewall_name_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>firewall_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Firewall in which the Application Rule Collection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the priority of the rule collection. Possible values are between `100` - `65000`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Firewall exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallapplicationrulecollectionrule">List[Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewallapplicationrulecollectionrule">Sequence[Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the FirewallApplicationRuleCollection resource produces the following output properties:
-
 
 
 
@@ -782,15 +754,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -799,15 +769,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -816,15 +784,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -833,18 +799,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -854,20 +815,20 @@ Get an existing FirewallApplicationRuleCollection resource's state with the give
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#FirewallApplicationRuleCollectionState">FirewallApplicationRuleCollectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#FirewallApplicationRuleCollection">FirewallApplicationRuleCollection</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#FirewallApplicationRuleCollectionState">FirewallApplicationRuleCollectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#FirewallApplicationRuleCollection">FirewallApplicationRuleCollection</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[List[FirewallApplicationRuleCollectionRule]]</span> = None<span class="p">) -&gt;</span> FirewallApplicationRuleCollection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_firewall_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallApplicationRuleCollectionRuleArgs]]</span> = None<span class="p">) -&gt;</span> FirewallApplicationRuleCollection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewallApplicationRuleCollection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollectionState">FirewallApplicationRuleCollectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollection">FirewallApplicationRuleCollection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewallApplicationRuleCollection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollectionState">FirewallApplicationRuleCollectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollection">FirewallApplicationRuleCollection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.FirewallApplicationRuleCollection.html">FirewallApplicationRuleCollection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.FirewallApplicationRuleCollectionState.html">FirewallApplicationRuleCollectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.FirewallApplicationRuleCollection.html">FirewallApplicationRuleCollection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.FirewallApplicationRuleCollectionState.html">FirewallApplicationRuleCollectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -969,7 +930,6 @@ Get an existing FirewallApplicationRuleCollection resource's state with the give
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -977,71 +937,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_action_csharp">
 <a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action the rule will apply to matching traffic. Possible values are `Allow` and `Deny`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_azurefirewallname_csharp">
 <a href="#state_azurefirewallname_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Firewall<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Firewall in which the Application Rule Collection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the priority of the rule collection. Possible values are between `100` - `65000`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Firewall exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
 <a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallapplicationrulecollectionrule">List&lt;Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1050,71 +1003,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_action_go">
 <a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action the rule will apply to matching traffic. Possible values are `Allow` and `Deny`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_azurefirewallname_go">
 <a href="#state_azurefirewallname_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Firewall<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Firewall in which the Application Rule Collection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the priority of the rule collection. Possible values are between `100` - `65000`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Firewall exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallapplicationrulecollectionrule">[]Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1123,71 +1069,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_action_nodejs">
 <a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action the rule will apply to matching traffic. Possible values are `Allow` and `Deny`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_azurefirewallname_nodejs">
 <a href="#state_azurefirewallname_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Firewall<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Firewall in which the Application Rule Collection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the priority of the rule collection. Possible values are between `100` - `65000`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Firewall exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallapplicationrulecollectionrule">Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1196,68 +1135,62 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_action_python">
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the action the rule will apply to matching traffic. Possible values are `Allow` and `Deny`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_azure_firewall_name_python">
 <a href="#state_azure_firewall_name_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>firewall_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Firewall in which the Application Rule Collection should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the priority of the rule collection. Possible values are between `100` - `65000`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which the Firewall exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallapplicationrulecollectionrule">List[Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#firewallapplicationrulecollectionrule">Sequence[Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `rule` blocks as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1266,11 +1199,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="firewallapplicationrulecollectionrule">Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule</h4>
@@ -1281,11 +1211,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollectionRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollectionRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.FirewallApplicationRuleCollectionRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.FirewallApplicationRuleCollectionRule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1295,71 +1224,74 @@ The following state arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the rule.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceaddresses_csharp">
-<a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of source IP addresses and/or IP ranges.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a description for the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdntags_csharp">
 <a href="#fqdntags_csharp" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of FQDN tags. Possible values are `AppServiceEnvironment`, `AzureBackup`, `AzureKubernetesService`, `HDInsight`, `MicrosoftActiveProtectionService`, `WindowsDiagnostics`, `WindowsUpdate` and `WindowsVirtualDesktop`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_csharp">
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallapplicationrulecollectionruleprotocol">List&lt;Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `protocol` blocks as defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceaddresses_csharp">
+<a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of source IP addresses and/or IP ranges.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceipgroups_csharp">
+<a href="#sourceipgroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of source IP Group IDs for the rule.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetfqdns_csharp">
 <a href="#targetfqdns_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of FQDNs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1368,71 +1300,74 @@ The following state arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the rule.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceaddresses_go">
-<a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}A list of source IP addresses and/or IP ranges.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a description for the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdntags_go">
 <a href="#fqdntags_go" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of FQDN tags. Possible values are `AppServiceEnvironment`, `AzureBackup`, `AzureKubernetesService`, `HDInsight`, `MicrosoftActiveProtectionService`, `WindowsDiagnostics`, `WindowsUpdate` and `WindowsVirtualDesktop`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_go">
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallapplicationrulecollectionruleprotocol">[]Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}One or more `protocol` blocks as defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceaddresses_go">
+<a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of source IP addresses and/or IP ranges.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceipgroups_go">
+<a href="#sourceipgroups_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of source IP Group IDs for the rule.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetfqdns_go">
 <a href="#targetfqdns_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of FQDNs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1441,71 +1376,74 @@ The following state arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the rule.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceaddresses_nodejs">
-<a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of source IP addresses and/or IP ranges.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a description for the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdntags_nodejs">
 <a href="#fqdntags_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of FQDN tags. Possible values are `AppServiceEnvironment`, `AzureBackup`, `AzureKubernetesService`, `HDInsight`, `MicrosoftActiveProtectionService`, `WindowsDiagnostics`, `WindowsUpdate` and `WindowsVirtualDesktop`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_nodejs">
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallapplicationrulecollectionruleprotocol">Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `protocol` blocks as defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceaddresses_nodejs">
+<a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of source IP addresses and/or IP ranges.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceipgroups_nodejs">
+<a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of source IP Group IDs for the rule.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetfqdns_nodejs">
 <a href="#targetfqdns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of FQDNs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1514,74 +1452,74 @@ The following state arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the rule.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceaddresses_python">
-<a href="#sourceaddresses_python" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of source IP addresses and/or IP ranges.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a description for the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="fqdntags_python">
-<a href="#fqdntags_python" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Tags</a>
-</span> 
+        <span id="fqdn_tags_python">
+<a href="#fqdn_tags_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>tags</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of FQDN tags. Possible values are `AppServiceEnvironment`, `AzureBackup`, `AzureKubernetesService`, `HDInsight`, `MicrosoftActiveProtectionService`, `WindowsDiagnostics`, `WindowsUpdate` and `WindowsVirtualDesktop`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_python">
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallapplicationrulecollectionruleprotocol">List[Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol]</a></span>
+        <span class="property-type"><a href="#firewallapplicationrulecollectionruleprotocol">Sequence[Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `protocol` blocks as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="targetfqdns_python">
-<a href="#targetfqdns_python" style="color: inherit; text-decoration: inherit;">target<wbr>Fqdns</a>
-</span> 
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of source IP addresses and/or IP ranges.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of source IP Group IDs for the rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_fqdns_python">
+<a href="#target_fqdns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of FQDNs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="firewallapplicationrulecollectionruleprotocol">Firewall<wbr>Application<wbr>Rule<wbr>Collection<wbr>Rule<wbr>Protocol</h4>
 {{% choosable language nodejs %}}
@@ -1591,11 +1529,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollectionRuleProtocolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallApplicationRuleCollectionRuleProtocolOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.FirewallApplicationRuleCollectionRuleProtocolArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.FirewallApplicationRuleCollectionRuleProtocol.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1605,27 +1542,24 @@ The following state arguments are supported:
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of connection. Possible values are `Http`, `Https` and `Mssql`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify a port for the connection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1634,27 +1568,24 @@ The following state arguments are supported:
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of connection. Possible values are `Http`, `Https` and `Mssql`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify a port for the connection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1663,27 +1594,24 @@ The following state arguments are supported:
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of connection. Possible values are `Http`, `Https` and `Mssql`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify a port for the connection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1692,31 +1620,32 @@ The following state arguments are supported:
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of connection. Possible values are `Http`, `Https` and `Mssql`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify a port for the connection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Firewall Application Rule Collections can be imported using the `resource id`, e.g.
 
-
-
+```sh
+ $ pulumi import azure:network/firewallApplicationRuleCollection:FirewallApplicationRuleCollection example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/azureFirewalls/myfirewall/applicationRuleCollections/mycollection
+```
 
 
 

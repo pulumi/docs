@@ -1,8 +1,8 @@
 
 ---
 title: "AppProfile"
-title_tag: "Resource AppProfile | Module bigquery | Package GCP"
-meta_desc: "Explore the AppProfile resource of the bigquery module, including examples, input properties, output properties, lookup functions, and supporting types. App profile is a configuration object describing how Cloud Bigtable should treat traffic from a particular end user application."
+title_tag: "gcp.bigquery.AppProfile"
+meta_desc: "Documentation for the gcp.bigquery.AppProfile resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -12,6 +12,282 @@ meta_desc: "Explore the AppProfile resource of the bigquery module, including ex
 
 App profile is a configuration object describing how Cloud Bigtable should treat traffic from a particular end user application.
 
+To get more information about AppProfile, see:
+
+* [API documentation](https://cloud.google.com/bigtable/docs/reference/admin/rest/v2/projects.instances.appProfiles)
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Bigtable App Profile Multicluster
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.BigTable.Instance("instance", new Gcp.BigTable.InstanceArgs
+        {
+            Clusters = 
+            {
+                new Gcp.BigTable.Inputs.InstanceClusterArgs
+                {
+                    ClusterId = "bt-instance",
+                    Zone = "us-central1-b",
+                    NumNodes = 3,
+                    StorageType = "HDD",
+                },
+            },
+            DeletionProtection = true,
+        });
+        var ap = new Gcp.BigQuery.AppProfile("ap", new Gcp.BigQuery.AppProfileArgs
+        {
+            Instance = instance.Name,
+            AppProfileId = "bt-profile",
+            MultiClusterRoutingUseAny = true,
+            IgnoreWarnings = true,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigtable"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := bigtable.NewInstance(ctx, "instance", &bigtable.InstanceArgs{
+			Clusters: bigtable.InstanceClusterArray{
+				&bigtable.InstanceClusterArgs{
+					ClusterId:   pulumi.String("bt-instance"),
+					Zone:        pulumi.String("us-central1-b"),
+					NumNodes:    pulumi.Int(3),
+					StorageType: pulumi.String("HDD"),
+				},
+			},
+			DeletionProtection: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewAppProfile(ctx, "ap", &bigquery.AppProfileArgs{
+			Instance:                  instance.Name,
+			AppProfileId:              pulumi.String("bt-profile"),
+			MultiClusterRoutingUseAny: pulumi.Bool(true),
+			IgnoreWarnings:            pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.bigtable.Instance("instance",
+    clusters=[gcp.bigtable.InstanceClusterArgs(
+        cluster_id="bt-instance",
+        zone="us-central1-b",
+        num_nodes=3,
+        storage_type="HDD",
+    )],
+    deletion_protection=True)
+ap = gcp.bigquery.AppProfile("ap",
+    instance=instance.name,
+    app_profile_id="bt-profile",
+    multi_cluster_routing_use_any=True,
+    ignore_warnings=True)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.bigtable.Instance("instance", {
+    clusters: [{
+        clusterId: "bt-instance",
+        zone: "us-central1-b",
+        numNodes: 3,
+        storageType: "HDD",
+    }],
+    deletionProtection: "true",
+});
+const ap = new gcp.bigquery.AppProfile("ap", {
+    instance: instance.name,
+    appProfileId: "bt-profile",
+    multiClusterRoutingUseAny: true,
+    ignoreWarnings: true,
+});
+```
+
+{{% /example %}}
+
+### Bigtable App Profile Singlecluster
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.BigTable.Instance("instance", new Gcp.BigTable.InstanceArgs
+        {
+            Clusters = 
+            {
+                new Gcp.BigTable.Inputs.InstanceClusterArgs
+                {
+                    ClusterId = "bt-instance",
+                    Zone = "us-central1-b",
+                    NumNodes = 3,
+                    StorageType = "HDD",
+                },
+            },
+            DeletionProtection = true,
+        });
+        var ap = new Gcp.BigQuery.AppProfile("ap", new Gcp.BigQuery.AppProfileArgs
+        {
+            Instance = instance.Name,
+            AppProfileId = "bt-profile",
+            SingleClusterRouting = new Gcp.BigQuery.Inputs.AppProfileSingleClusterRoutingArgs
+            {
+                ClusterId = "bt-instance",
+                AllowTransactionalWrites = true,
+            },
+            IgnoreWarnings = true,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigtable"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := bigtable.NewInstance(ctx, "instance", &bigtable.InstanceArgs{
+			Clusters: bigtable.InstanceClusterArray{
+				&bigtable.InstanceClusterArgs{
+					ClusterId:   pulumi.String("bt-instance"),
+					Zone:        pulumi.String("us-central1-b"),
+					NumNodes:    pulumi.Int(3),
+					StorageType: pulumi.String("HDD"),
+				},
+			},
+			DeletionProtection: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewAppProfile(ctx, "ap", &bigquery.AppProfileArgs{
+			Instance:     instance.Name,
+			AppProfileId: pulumi.String("bt-profile"),
+			SingleClusterRouting: &bigquery.AppProfileSingleClusterRoutingArgs{
+				ClusterId:                pulumi.String("bt-instance"),
+				AllowTransactionalWrites: pulumi.Bool(true),
+			},
+			IgnoreWarnings: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.bigtable.Instance("instance",
+    clusters=[gcp.bigtable.InstanceClusterArgs(
+        cluster_id="bt-instance",
+        zone="us-central1-b",
+        num_nodes=3,
+        storage_type="HDD",
+    )],
+    deletion_protection=True)
+ap = gcp.bigquery.AppProfile("ap",
+    instance=instance.name,
+    app_profile_id="bt-profile",
+    single_cluster_routing=gcp.bigquery.AppProfileSingleClusterRoutingArgs(
+        cluster_id="bt-instance",
+        allow_transactional_writes=True,
+    ),
+    ignore_warnings=True)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.bigtable.Instance("instance", {
+    clusters: [{
+        clusterId: "bt-instance",
+        zone: "us-central1-b",
+        numNodes: 3,
+        storageType: "HDD",
+    }],
+    deletionProtection: "true",
+});
+const ap = new gcp.bigquery.AppProfile("ap", {
+    instance: instance.name,
+    appProfileId: "bt-profile",
+    singleClusterRouting: {
+        clusterId: "bt-instance",
+        allowTransactionalWrites: true,
+    },
+    ignoreWarnings: true,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AppProfile Resource {#create}
@@ -19,19 +295,19 @@ App profile is a configuration object describing how Cloud Bigtable should treat
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#AppProfile">AppProfile</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#AppProfileArgs">AppProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AppProfile</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AppProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#AppProfile">AppProfile</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_profile_id=None<span class="p">, </span>description=None<span class="p">, </span>ignore_warnings=None<span class="p">, </span>instance=None<span class="p">, </span>multi_cluster_routing_use_any=None<span class="p">, </span>project=None<span class="p">, </span>single_cluster_routing=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AppProfile</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_profile_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ignore_warnings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multi_cluster_routing_use_any</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_cluster_routing</span><span class="p">:</span> <span class="nx">Optional[AppProfileSingleClusterRoutingArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#AppProfile">NewAppProfile</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#AppProfileArgs">AppProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#AppProfile">AppProfile</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAppProfile</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AppProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AppProfile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.AppProfile.html">AppProfile</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.AppProfileArgs.html">AppProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AppProfile</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AppProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -42,7 +318,7 @@ App profile is a configuration object describing how Cloud Bigtable should treat
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -52,7 +328,7 @@ App profile is a configuration object describing how Cloud Bigtable should treat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#AppProfileArgs">AppProfileArgs</a></span>
+        <span class="property-type"><a href="#inputs">AppProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -101,7 +377,7 @@ App profile is a configuration object describing how Cloud Bigtable should treat
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -111,7 +387,7 @@ App profile is a configuration object describing how Cloud Bigtable should treat
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -121,7 +397,7 @@ App profile is a configuration object describing how Cloud Bigtable should treat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#AppProfileArgs">AppProfileArgs</a></span>
+        <span class="property-type"><a href="#inputs">AppProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -131,7 +407,7 @@ App profile is a configuration object describing how Cloud Bigtable should treat
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -150,7 +426,7 @@ App profile is a configuration object describing how Cloud Bigtable should treat
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -160,7 +436,7 @@ App profile is a configuration object describing how Cloud Bigtable should treat
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.AppProfileArgs.html">AppProfileArgs</a></span>
+        <span class="property-type"><a href="#inputs">AppProfileArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -183,12 +459,11 @@ App profile is a configuration object describing how Cloud Bigtable should treat
 
 ## AppProfile Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AppProfile resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The AppProfile resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -199,85 +474,78 @@ The AppProfile resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="appprofileid_csharp">
 <a href="#appprofileid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Profile<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignorewarnings_csharp">
 <a href="#ignorewarnings_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Warnings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="multiclusterroutinguseany_csharp">
 <a href="#multiclusterroutinguseany_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="singleclusterrouting_csharp">
 <a href="#singleclusterrouting_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Cluster<wbr>Routing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
+    <dd>{{% md %}}Use a single-cluster routing policy.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -286,85 +554,78 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="appprofileid_go">
 <a href="#appprofileid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Profile<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignorewarnings_go">
 <a href="#ignorewarnings_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Warnings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="multiclusterroutinguseany_go">
 <a href="#multiclusterroutinguseany_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="singleclusterrouting_go">
 <a href="#singleclusterrouting_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Cluster<wbr>Routing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
+    <dd>{{% md %}}Use a single-cluster routing policy.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -373,85 +634,78 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="appprofileid_nodejs">
 <a href="#appprofileid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Profile<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignorewarnings_nodejs">
 <a href="#ignorewarnings_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Warnings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="multiclusterroutinguseany_nodejs">
 <a href="#multiclusterroutinguseany_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="singleclusterrouting_nodejs">
 <a href="#singleclusterrouting_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Cluster<wbr>Routing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
+    <dd>{{% md %}}Use a single-cluster routing policy.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -460,94 +714,83 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="app_profile_id_python">
 <a href="#app_profile_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>profile_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignore_warnings_python">
 <a href="#ignore_warnings_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>warnings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="multi_cluster_routing_use_any_python">
 <a href="#multi_cluster_routing_use_any_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>cluster_<wbr>routing_<wbr>use_<wbr>any</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="single_cluster_routing_python">
 <a href="#single_cluster_routing_python" style="color: inherit; text-decoration: inherit;">single_<wbr>cluster_<wbr>routing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appprofilesingleclusterrouting">Dict[App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing]</a></span>
+        <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
+    <dd>{{% md %}}Use a single-cluster routing policy.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the AppProfile resource produces the following output properties:
-
 
 
 
@@ -558,27 +801,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -587,27 +827,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -616,27 +853,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -645,30 +879,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -678,19 +906,20 @@ Get an existing AppProfile resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#AppProfileState">AppProfileState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#AppProfile">AppProfile</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AppProfileState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AppProfile</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_profile_id=None<span class="p">, </span>description=None<span class="p">, </span>ignore_warnings=None<span class="p">, </span>instance=None<span class="p">, </span>multi_cluster_routing_use_any=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>single_cluster_routing=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_profile_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ignore_warnings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multi_cluster_routing_use_any</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">single_cluster_routing</span><span class="p">:</span> <span class="nx">Optional[AppProfileSingleClusterRoutingArgs]</span> = None<span class="p">) -&gt;</span> AppProfile</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAppProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#AppProfileState">AppProfileState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#AppProfile">AppProfile</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAppProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AppProfileState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AppProfile</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.AppProfile.html">AppProfile</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.AppProfileState.html">AppProfileState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AppProfile</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AppProfileState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -792,7 +1021,6 @@ Get an existing AppProfile resource's state with the given name, ID, and optiona
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -800,97 +1028,89 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_appprofileid_csharp">
 <a href="#state_appprofileid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Profile<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignorewarnings_csharp">
 <a href="#state_ignorewarnings_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Warnings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_csharp">
 <a href="#state_instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_multiclusterroutinguseany_csharp">
 <a href="#state_multiclusterroutinguseany_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_singleclusterrouting_csharp">
 <a href="#state_singleclusterrouting_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Cluster<wbr>Routing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
+    <dd>{{% md %}}Use a single-cluster routing policy.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -899,97 +1119,89 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_appprofileid_go">
 <a href="#state_appprofileid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Profile<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignorewarnings_go">
 <a href="#state_ignorewarnings_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Warnings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_go">
 <a href="#state_instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_multiclusterroutinguseany_go">
 <a href="#state_multiclusterroutinguseany_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_singleclusterrouting_go">
 <a href="#state_singleclusterrouting_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Cluster<wbr>Routing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
+    <dd>{{% md %}}Use a single-cluster routing policy.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -998,97 +1210,89 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_appprofileid_nodejs">
 <a href="#state_appprofileid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Profile<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignorewarnings_nodejs">
 <a href="#state_ignorewarnings_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Warnings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_nodejs">
 <a href="#state_instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_multiclusterroutinguseany_nodejs">
 <a href="#state_multiclusterroutinguseany_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_singleclusterrouting_nodejs">
 <a href="#state_singleclusterrouting_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Cluster<wbr>Routing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
+    <dd>{{% md %}}Use a single-cluster routing policy.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1097,100 +1301,89 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_app_profile_id_python">
 <a href="#state_app_profile_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>profile_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ignore_warnings_python">
 <a href="#state_ignore_warnings_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>warnings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_python">
 <a href="#state_instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_multi_cluster_routing_use_any_python">
 <a href="#state_multi_cluster_routing_use_any_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>cluster_<wbr>routing_<wbr>use_<wbr>any</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_single_cluster_routing_python">
 <a href="#state_single_cluster_routing_python" style="color: inherit; text-decoration: inherit;">single_<wbr>cluster_<wbr>routing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appprofilesingleclusterrouting">Dict[App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing]</a></span>
+        <span class="property-type"><a href="#appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Use a single-cluster routing policy.  Structure is documented below.
+    <dd>{{% md %}}Use a single-cluster routing policy.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1200,20 +1393,8 @@ If it is not provided, the provider project is used.
 ## Supporting Types
 
 
+
 <h4 id="appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AppProfileSingleClusterRouting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AppProfileSingleClusterRouting">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#AppProfileSingleClusterRoutingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#AppProfileSingleClusterRoutingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.AppProfileSingleClusterRoutingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.AppProfileSingleClusterRouting.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1222,28 +1403,25 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster to which read/write requests should be routed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowtransactionalwrites_csharp">
 <a href="#allowtransactionalwrites_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Transactional<wbr>Writes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
 It is unsafe to send these requests to the same table/row/column in multiple clusters.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1252,28 +1430,25 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster to which read/write requests should be routed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowtransactionalwrites_go">
 <a href="#allowtransactionalwrites_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Transactional<wbr>Writes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
 It is unsafe to send these requests to the same table/row/column in multiple clusters.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1282,28 +1457,25 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster to which read/write requests should be routed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowtransactionalwrites_nodejs">
 <a href="#allowtransactionalwrites_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Transactional<wbr>Writes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
 It is unsafe to send these requests to the same table/row/column in multiple clusters.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1312,32 +1484,41 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster to which read/write requests should be routed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="allowtransactionalwrites_python">
-<a href="#allowtransactionalwrites_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Transactional<wbr>Writes</a>
-</span> 
+        <span id="allow_transactional_writes_python">
+<a href="#allow_transactional_writes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>transactional_<wbr>writes</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
 It is unsafe to send these requests to the same table/row/column in multiple clusters.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+AppProfile can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:bigquery/appProfile:AppProfile default projects/{{project}}/instances/{{instance}}/appProfiles/{{app_profile_id}}
+```
 
+```sh
+ $ pulumi import gcp:bigquery/appProfile:AppProfile default {{project}}/{{instance}}/{{app_profile_id}}
+```
 
+```sh
+ $ pulumi import gcp:bigquery/appProfile:AppProfile default {{instance}}/{{app_profile_id}}
+```
 
 
 
@@ -1349,6 +1530,6 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

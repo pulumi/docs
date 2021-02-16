@@ -12,9 +12,11 @@ Explore the resources and functions of the mssql module in the Azure package.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
+    <li><a href="databaseextendedauditingpolicy" title="DatabaseExtendedAuditingPolicy"><span class="symbol resource"></span>DatabaseExtendedAuditingPolicy</a></li>
     <li><a href="databasevulnerabilityassessmentrulebaseline" title="DatabaseVulnerabilityAssessmentRuleBaseline"><span class="symbol resource"></span>DatabaseVulnerabilityAssessmentRuleBaseline</a></li>
     <li><a href="elasticpool" title="ElasticPool"><span class="symbol resource"></span>ElasticPool</a></li>
     <li><a href="server" title="Server"><span class="symbol resource"></span>Server</a></li>
+    <li><a href="serverextendedauditingpolicy" title="ServerExtendedAuditingPolicy"><span class="symbol resource"></span>ServerExtendedAuditingPolicy</a></li>
     <li><a href="serversecurityalertpolicy" title="ServerSecurityAlertPolicy"><span class="symbol resource"></span>ServerSecurityAlertPolicy</a></li>
     <li><a href="servervulnerabilityassessment" title="ServerVulnerabilityAssessment"><span class="symbol resource"></span>ServerVulnerabilityAssessment</a></li>
     <li><a href="virtualmachine" title="VirtualMachine"><span class="symbol resource"></span>VirtualMachine</a></li>
@@ -24,6 +26,7 @@ Explore the resources and functions of the mssql module in the Azure package.
 <ul class="api">
     <li><a href="getdatabase" title="GetDatabase"><span class="symbol function"></span>GetDatabase</a></li>
     <li><a href="getelasticpool" title="GetElasticPool"><span class="symbol function"></span>GetElasticPool</a></li>
+    <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -35,7 +38,7 @@ Explore the resources and functions of the mssql module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.17.0</dd>
+	<dd>3.46.0</dd>
 </dl>
 
 

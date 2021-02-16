@@ -46,6 +46,7 @@ class MyStack : Stack
                 },
             },
             AvailableToOtherTenants = false,
+            DisplayName = "example",
             Homepage = "https://homepage",
             IdentifierUris = 
             {
@@ -159,7 +160,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -179,6 +180,7 @@ func main() {
 				},
 			},
 			AvailableToOtherTenants: pulumi.Bool(false),
+			DisplayName:             pulumi.String("example"),
 			Homepage:                pulumi.String("https://homepage"),
 			IdentifierUris: pulumi.StringArray{
 				pulumi.String("https://uri"),
@@ -274,81 +276,82 @@ import pulumi
 import pulumi_azuread as azuread
 
 example = azuread.Application("example",
-    app_roles=[{
-        "allowedMemberTypes": [
+    app_roles=[azuread.ApplicationAppRoleArgs(
+        allowed_member_types=[
             "User",
             "Application",
         ],
-        "description": "Admins can manage roles and perform all task actions",
-        "display_name": "Admin",
-        "isEnabled": True,
-        "value": "Admin",
-    }],
+        description="Admins can manage roles and perform all task actions",
+        display_name="Admin",
+        is_enabled=True,
+        value="Admin",
+    )],
     available_to_other_tenants=False,
+    display_name="example",
     homepage="https://homepage",
     identifier_uris=["https://uri"],
     oauth2_allow_implicit_flow=True,
     oauth2_permissions=[
-        {
-            "adminConsentDescription": "Allow the application to access example on behalf of the signed-in user.",
-            "adminConsentDisplayName": "Access example",
-            "isEnabled": True,
-            "type": "User",
-            "userConsentDescription": "Allow the application to access example on your behalf.",
-            "userConsentDisplayName": "Access example",
-            "value": "user_impersonation",
-        },
-        {
-            "adminConsentDescription": "Administer the example application",
-            "adminConsentDisplayName": "Administer",
-            "isEnabled": True,
-            "type": "Admin",
-            "value": "administer",
-        },
+        azuread.ApplicationOauth2PermissionArgs(
+            admin_consent_description="Allow the application to access example on behalf of the signed-in user.",
+            admin_consent_display_name="Access example",
+            is_enabled=True,
+            type="User",
+            user_consent_description="Allow the application to access example on your behalf.",
+            user_consent_display_name="Access example",
+            value="user_impersonation",
+        ),
+        azuread.ApplicationOauth2PermissionArgs(
+            admin_consent_description="Administer the example application",
+            admin_consent_display_name="Administer",
+            is_enabled=True,
+            type="Admin",
+            value="administer",
+        ),
     ],
-    optional_claims={
-        "accessTokens": [
-            {
-                "name": "myclaim",
-            },
-            {
-                "name": "otherclaim",
-            },
+    optional_claims=azuread.ApplicationOptionalClaimsArgs(
+        access_tokens=[
+            azuread.ApplicationOptionalClaimsAccessTokenArgs(
+                name="myclaim",
+            ),
+            azuread.ApplicationOptionalClaimsAccessTokenArgs(
+                name="otherclaim",
+            ),
         ],
-        "idTokens": [{
-            "additionalProperties": ["emit_as_roles"],
-            "essential": True,
-            "name": "userclaim",
-            "source": "user",
-        }],
-    },
+        id_tokens=[azuread.ApplicationOptionalClaimsIdTokenArgs(
+            additional_properties=["emit_as_roles"],
+            essential=True,
+            name="userclaim",
+            source="user",
+        )],
+    ),
     owners=["00000004-0000-0000-c000-000000000000"],
     reply_urls=["https://replyurl"],
     required_resource_accesses=[
-        {
-            "resourceAccesses": [
-                {
-                    "id": "...",
-                    "type": "Role",
-                },
-                {
-                    "id": "...",
-                    "type": "Scope",
-                },
-                {
-                    "id": "...",
-                    "type": "Scope",
-                },
+        azuread.ApplicationRequiredResourceAccessArgs(
+            resource_accesses=[
+                azuread.ApplicationRequiredResourceAccessResourceAccessArgs(
+                    id="...",
+                    type="Role",
+                ),
+                azuread.ApplicationRequiredResourceAccessResourceAccessArgs(
+                    id="...",
+                    type="Scope",
+                ),
+                azuread.ApplicationRequiredResourceAccessResourceAccessArgs(
+                    id="...",
+                    type="Scope",
+                ),
             ],
-            "resourceAppId": "00000003-0000-0000-c000-000000000000",
-        },
-        {
-            "resourceAccesses": [{
-                "id": "...",
-                "type": "Scope",
-            }],
-            "resourceAppId": "00000002-0000-0000-c000-000000000000",
-        },
+            resource_app_id="00000003-0000-0000-c000-000000000000",
+        ),
+        azuread.ApplicationRequiredResourceAccessArgs(
+            resource_accesses=[azuread.ApplicationRequiredResourceAccessResourceAccessArgs(
+                id="...",
+                type="Scope",
+            )],
+            resource_app_id="00000002-0000-0000-c000-000000000000",
+        ),
     ],
     type="webapp/api")
 ```
@@ -373,6 +376,7 @@ const example = new azuread.Application("example", {
         value: "Admin",
     }],
     availableToOtherTenants: false,
+    displayName: "example",
     homepage: "https://homepage",
     identifierUris: ["https://uri"],
     oauth2AllowImplicitFlow: true,
@@ -452,19 +456,19 @@ const example = new azuread.Application("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#Application">Application</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.Application">Application</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_roles=None<span class="p">, </span>available_to_other_tenants=None<span class="p">, </span>group_membership_claims=None<span class="p">, </span>homepage=None<span class="p">, </span>identifier_uris=None<span class="p">, </span>logout_url=None<span class="p">, </span>name=None<span class="p">, </span>oauth2_allow_implicit_flow=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>optional_claims=None<span class="p">, </span>owners=None<span class="p">, </span>prevent_duplicate_names=None<span class="p">, </span>public_client=None<span class="p">, </span>reply_urls=None<span class="p">, </span>required_resource_accesses=None<span class="p">, </span>type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationAppRoleArgs]]</span> = None<span class="p">, </span><span class="nx">available_to_other_tenants</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_membership_claims</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">homepage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_allow_implicit_flow</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">optional_claims</span><span class="p">:</span> <span class="nx">Optional[ApplicationOptionalClaimsArgs]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">prevent_duplicate_names</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">public_client</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reply_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">required_resource_accesses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationRequiredResourceAccessArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#Application">NewApplication</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Application.html">Application</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.ApplicationArgs.html">ApplicationArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -475,7 +479,7 @@ const example = new azuread.Application("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -485,7 +489,7 @@ const example = new azuread.Application("example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ApplicationArgs">ApplicationArgs</a></span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -534,7 +538,7 @@ const example = new azuread.Application("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -544,7 +548,7 @@ const example = new azuread.Application("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -554,7 +558,7 @@ const example = new azuread.Application("example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationArgs">ApplicationArgs</a></span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -564,7 +568,7 @@ const example = new azuread.Application("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -583,7 +587,7 @@ const example = new azuread.Application("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -593,7 +597,7 @@ const example = new azuread.Application("example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.ApplicationArgs.html">ApplicationArgs</a></span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -616,12 +620,11 @@ const example = new azuread.Application("example", {
 
 ## Application Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Application resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Application resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -632,181 +635,174 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
             title="Optional">
         <span id="approles_csharp">
 <a href="#approles_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapprole">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>App<wbr>Role<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="availabletoothertenants_csharp">
 <a href="#availabletoothertenants_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>To<wbr>Other<wbr>Tenants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name for the application.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="groupmembershipclaims_csharp">
 <a href="#groupmembershipclaims_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Membership<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="homepage_csharp">
 <a href="#homepage_csharp" style="color: inherit; text-decoration: inherit;">Homepage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
+    <dd>{{% md %}}The URL to the application's home page.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identifieruris_csharp">
 <a href="#identifieruris_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logouturl_csharp">
 <a href="#logouturl_csharp" style="color: inherit; text-decoration: inherit;">Logout<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the application.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="oauth2allowimplicitflow_csharp">
 <a href="#oauth2allowimplicitflow_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Allow<wbr>Implicit<wbr>Flow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oauth2permissions_csharp">
 <a href="#oauth2permissions_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Oauth2Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optionalclaims_csharp">
 <a href="#optionalclaims_csharp" style="color: inherit; text-decoration: inherit;">Optional<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoptionalclaims">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Optional<wbr>Claims<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owners_csharp">
 <a href="#owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preventduplicatenames_csharp">
 <a href="#preventduplicatenames_csharp" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Duplicate<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicclient_csharp">
 <a href="#publicclient_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Client</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replyurls_csharp">
 <a href="#replyurls_csharp" style="color: inherit; text-decoration: inherit;">Reply<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requiredresourceaccesses_csharp">
 <a href="#requiredresourceaccesses_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Resource<wbr>Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationrequiredresourceaccess">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
-{{% /md %}}</dd>
-
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is deprecated and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -815,181 +811,174 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
             title="Optional">
         <span id="approles_go">
 <a href="#approles_go" style="color: inherit; text-decoration: inherit;">App<wbr>Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapprole">[]Application<wbr>App<wbr>Role</a></span>
+        <span class="property-type"><a href="#applicationapprole">[]Application<wbr>App<wbr>Role<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="availabletoothertenants_go">
 <a href="#availabletoothertenants_go" style="color: inherit; text-decoration: inherit;">Available<wbr>To<wbr>Other<wbr>Tenants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name for the application.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="groupmembershipclaims_go">
 <a href="#groupmembershipclaims_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Membership<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="homepage_go">
 <a href="#homepage_go" style="color: inherit; text-decoration: inherit;">Homepage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
+    <dd>{{% md %}}The URL to the application's home page.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identifieruris_go">
 <a href="#identifieruris_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logouturl_go">
 <a href="#logouturl_go" style="color: inherit; text-decoration: inherit;">Logout<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the application.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="oauth2allowimplicitflow_go">
 <a href="#oauth2allowimplicitflow_go" style="color: inherit; text-decoration: inherit;">Oauth2Allow<wbr>Implicit<wbr>Flow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oauth2permissions_go">
 <a href="#oauth2permissions_go" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoauth2permission">[]Application<wbr>Oauth2Permission</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optionalclaims_go">
 <a href="#optionalclaims_go" style="color: inherit; text-decoration: inherit;">Optional<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoptionalclaims">Application<wbr>Optional<wbr>Claims</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owners_go">
 <a href="#owners_go" style="color: inherit; text-decoration: inherit;">Owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preventduplicatenames_go">
 <a href="#preventduplicatenames_go" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Duplicate<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicclient_go">
 <a href="#publicclient_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Client</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replyurls_go">
 <a href="#replyurls_go" style="color: inherit; text-decoration: inherit;">Reply<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requiredresourceaccesses_go">
 <a href="#requiredresourceaccesses_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Resource<wbr>Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationrequiredresourceaccess">[]Application<wbr>Required<wbr>Resource<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
-{{% /md %}}</dd>
-
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is deprecated and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -998,181 +987,174 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
             title="Optional">
         <span id="approles_nodejs">
 <a href="#approles_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapprole">Application<wbr>App<wbr>Role[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="availabletoothertenants_nodejs">
 <a href="#availabletoothertenants_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>To<wbr>Other<wbr>Tenants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name for the application.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="groupmembershipclaims_nodejs">
 <a href="#groupmembershipclaims_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Membership<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="homepage_nodejs">
 <a href="#homepage_nodejs" style="color: inherit; text-decoration: inherit;">homepage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
+    <dd>{{% md %}}The URL to the application's home page.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identifieruris_nodejs">
 <a href="#identifieruris_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logouturl_nodejs">
 <a href="#logouturl_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the application.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="oauth2allowimplicitflow_nodejs">
 <a href="#oauth2allowimplicitflow_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Allow<wbr>Implicit<wbr>Flow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oauth2permissions_nodejs">
 <a href="#oauth2permissions_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoauth2permission">Application<wbr>Oauth2Permission[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optionalclaims_nodejs">
 <a href="#optionalclaims_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoptionalclaims">Application<wbr>Optional<wbr>Claims</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owners_nodejs">
 <a href="#owners_nodejs" style="color: inherit; text-decoration: inherit;">owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preventduplicatenames_nodejs">
 <a href="#preventduplicatenames_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>Duplicate<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicclient_nodejs">
 <a href="#publicclient_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Client</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replyurls_nodejs">
 <a href="#replyurls_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requiredresourceaccesses_nodejs">
 <a href="#requiredresourceaccesses_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Resource<wbr>Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationrequiredresourceaccess">Application<wbr>Required<wbr>Resource<wbr>Access[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
-{{% /md %}}</dd>
-
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is deprecated and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1181,190 +1163,179 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
             title="Optional">
         <span id="app_roles_python">
 <a href="#app_roles_python" style="color: inherit; text-decoration: inherit;">app_<wbr>roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapprole">List[Application<wbr>App<wbr>Role]</a></span>
+        <span class="property-type"><a href="#applicationapprole">Sequence[Application<wbr>App<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="available_to_other_tenants_python">
 <a href="#available_to_other_tenants_python" style="color: inherit; text-decoration: inherit;">available_<wbr>to_<wbr>other_<wbr>tenants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The display name for the application.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="group_membership_claims_python">
 <a href="#group_membership_claims_python" style="color: inherit; text-decoration: inherit;">group_<wbr>membership_<wbr>claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="homepage_python">
 <a href="#homepage_python" style="color: inherit; text-decoration: inherit;">homepage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
+    <dd>{{% md %}}The URL to the application's home page.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identifier_uris_python">
 <a href="#identifier_uris_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logout_url_python">
 <a href="#logout_url_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name for the application.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="oauth2_allow_implicit_flow_python">
 <a href="#oauth2_allow_implicit_flow_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>allow_<wbr>implicit_<wbr>flow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oauth2_permissions_python">
 <a href="#oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoauth2permission">List[Application<wbr>Oauth2Permission]</a></span>
+        <span class="property-type"><a href="#applicationoauth2permission">Sequence[Application<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optional_claims_python">
 <a href="#optional_claims_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaims">Dict[Application<wbr>Optional<wbr>Claims]</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaims">Application<wbr>Optional<wbr>Claims<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owners_python">
 <a href="#owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prevent_duplicate_names_python">
 <a href="#prevent_duplicate_names_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>duplicate_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="public_client_python">
 <a href="#public_client_python" style="color: inherit; text-decoration: inherit;">public_<wbr>client</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reply_urls_python">
 <a href="#reply_urls_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="required_resource_accesses_python">
 <a href="#required_resource_accesses_python" style="color: inherit; text-decoration: inherit;">required_<wbr>resource_<wbr>accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccess">List[Application<wbr>Required<wbr>Resource<wbr>Access]</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccess">Sequence[Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
-{{% /md %}}</dd>
-
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is deprecated and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Application resource produces the following output properties:
-
 
 
 
@@ -1375,37 +1346,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1414,37 +1381,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1453,37 +1416,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1492,40 +1451,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1535,19 +1487,20 @@ Get an existing Application resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ApplicationState">ApplicationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#Application">Application</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Application</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_roles=None<span class="p">, </span>application_id=None<span class="p">, </span>available_to_other_tenants=None<span class="p">, </span>group_membership_claims=None<span class="p">, </span>homepage=None<span class="p">, </span>identifier_uris=None<span class="p">, </span>logout_url=None<span class="p">, </span>name=None<span class="p">, </span>oauth2_allow_implicit_flow=None<span class="p">, </span>oauth2_permissions=None<span class="p">, </span>object_id=None<span class="p">, </span>optional_claims=None<span class="p">, </span>owners=None<span class="p">, </span>prevent_duplicate_names=None<span class="p">, </span>public_client=None<span class="p">, </span>reply_urls=None<span class="p">, </span>required_resource_accesses=None<span class="p">, </span>type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationAppRoleArgs]]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">available_to_other_tenants</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_membership_claims</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">homepage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">logout_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_allow_implicit_flow</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optional_claims</span><span class="p">:</span> <span class="nx">Optional[ApplicationOptionalClaimsArgs]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">prevent_duplicate_names</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">public_client</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">reply_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">required_resource_accesses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationRequiredResourceAccessArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Application</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationState">ApplicationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD..ApplicationState.html">ApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Application</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ApplicationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1649,7 +1602,6 @@ Get an existing Application resource's state with the given name, ID, and option
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1657,203 +1609,194 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_approles_csharp">
 <a href="#state_approles_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapprole">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>App<wbr>Role<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_csharp">
 <a href="#state_applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availabletoothertenants_csharp">
 <a href="#state_availabletoothertenants_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>To<wbr>Other<wbr>Tenants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_displayname_csharp">
+<a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name for the application.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupmembershipclaims_csharp">
 <a href="#state_groupmembershipclaims_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Membership<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_homepage_csharp">
 <a href="#state_homepage_csharp" style="color: inherit; text-decoration: inherit;">Homepage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
+    <dd>{{% md %}}The URL to the application's home page.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_identifieruris_csharp">
 <a href="#state_identifieruris_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logouturl_csharp">
 <a href="#state_logouturl_csharp" style="color: inherit; text-decoration: inherit;">Logout<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the application.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_oauth2allowimplicitflow_csharp">
 <a href="#state_oauth2allowimplicitflow_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Allow<wbr>Implicit<wbr>Flow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oauth2permissions_csharp">
 <a href="#state_oauth2permissions_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Oauth2Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_objectid_csharp">
 <a href="#state_objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_optionalclaims_csharp">
 <a href="#state_optionalclaims_csharp" style="color: inherit; text-decoration: inherit;">Optional<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoptionalclaims">Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Optional<wbr>Claims<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_owners_csharp">
 <a href="#state_owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preventduplicatenames_csharp">
 <a href="#state_preventduplicatenames_csharp" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Duplicate<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_publicclient_csharp">
 <a href="#state_publicclient_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Client</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_replyurls_csharp">
 <a href="#state_replyurls_csharp" style="color: inherit; text-decoration: inherit;">Reply<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requiredresourceaccesses_csharp">
 <a href="#state_requiredresourceaccesses_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Resource<wbr>Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationrequiredresourceaccess">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
-{{% /md %}}</dd>
-
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is deprecated and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1862,203 +1805,194 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_approles_go">
 <a href="#state_approles_go" style="color: inherit; text-decoration: inherit;">App<wbr>Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapprole">[]Application<wbr>App<wbr>Role</a></span>
+        <span class="property-type"><a href="#applicationapprole">[]Application<wbr>App<wbr>Role<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_go">
 <a href="#state_applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availabletoothertenants_go">
 <a href="#state_availabletoothertenants_go" style="color: inherit; text-decoration: inherit;">Available<wbr>To<wbr>Other<wbr>Tenants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_displayname_go">
+<a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name for the application.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupmembershipclaims_go">
 <a href="#state_groupmembershipclaims_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Membership<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_homepage_go">
 <a href="#state_homepage_go" style="color: inherit; text-decoration: inherit;">Homepage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
+    <dd>{{% md %}}The URL to the application's home page.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_identifieruris_go">
 <a href="#state_identifieruris_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logouturl_go">
 <a href="#state_logouturl_go" style="color: inherit; text-decoration: inherit;">Logout<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the application.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_oauth2allowimplicitflow_go">
 <a href="#state_oauth2allowimplicitflow_go" style="color: inherit; text-decoration: inherit;">Oauth2Allow<wbr>Implicit<wbr>Flow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oauth2permissions_go">
 <a href="#state_oauth2permissions_go" style="color: inherit; text-decoration: inherit;">Oauth2Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoauth2permission">[]Application<wbr>Oauth2Permission</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_objectid_go">
 <a href="#state_objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_optionalclaims_go">
 <a href="#state_optionalclaims_go" style="color: inherit; text-decoration: inherit;">Optional<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoptionalclaims">Application<wbr>Optional<wbr>Claims</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_owners_go">
 <a href="#state_owners_go" style="color: inherit; text-decoration: inherit;">Owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preventduplicatenames_go">
 <a href="#state_preventduplicatenames_go" style="color: inherit; text-decoration: inherit;">Prevent<wbr>Duplicate<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_publicclient_go">
 <a href="#state_publicclient_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Client</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_replyurls_go">
 <a href="#state_replyurls_go" style="color: inherit; text-decoration: inherit;">Reply<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requiredresourceaccesses_go">
 <a href="#state_requiredresourceaccesses_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Resource<wbr>Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationrequiredresourceaccess">[]Application<wbr>Required<wbr>Resource<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
-{{% /md %}}</dd>
-
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is deprecated and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2067,203 +2001,194 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_approles_nodejs">
 <a href="#state_approles_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationapprole">Application<wbr>App<wbr>Role[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_nodejs">
 <a href="#state_applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availabletoothertenants_nodejs">
 <a href="#state_availabletoothertenants_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>To<wbr>Other<wbr>Tenants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_displayname_nodejs">
+<a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name for the application.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupmembershipclaims_nodejs">
 <a href="#state_groupmembershipclaims_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Membership<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_homepage_nodejs">
 <a href="#state_homepage_nodejs" style="color: inherit; text-decoration: inherit;">homepage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
+    <dd>{{% md %}}The URL to the application's home page.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_identifieruris_nodejs">
 <a href="#state_identifieruris_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logouturl_nodejs">
 <a href="#state_logouturl_nodejs" style="color: inherit; text-decoration: inherit;">logout<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the application.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_oauth2allowimplicitflow_nodejs">
 <a href="#state_oauth2allowimplicitflow_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Allow<wbr>Implicit<wbr>Flow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oauth2permissions_nodejs">
 <a href="#state_oauth2permissions_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoauth2permission">Application<wbr>Oauth2Permission[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_objectid_nodejs">
 <a href="#state_objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_optionalclaims_nodejs">
 <a href="#state_optionalclaims_nodejs" style="color: inherit; text-decoration: inherit;">optional<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoptionalclaims">Application<wbr>Optional<wbr>Claims</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_owners_nodejs">
 <a href="#state_owners_nodejs" style="color: inherit; text-decoration: inherit;">owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preventduplicatenames_nodejs">
 <a href="#state_preventduplicatenames_nodejs" style="color: inherit; text-decoration: inherit;">prevent<wbr>Duplicate<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_publicclient_nodejs">
 <a href="#state_publicclient_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Client</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_replyurls_nodejs">
 <a href="#state_replyurls_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requiredresourceaccesses_nodejs">
 <a href="#state_requiredresourceaccesses_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Resource<wbr>Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationrequiredresourceaccess">Application<wbr>Required<wbr>Resource<wbr>Access[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
-{{% /md %}}</dd>
-
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is deprecated and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2272,206 +2197,194 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_app_roles_python">
 <a href="#state_app_roles_python" style="color: inherit; text-decoration: inherit;">app_<wbr>roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationapprole">List[Application<wbr>App<wbr>Role]</a></span>
+        <span class="property-type"><a href="#applicationapprole">Sequence[Application<wbr>App<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `app_role` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_application_id_python">
 <a href="#state_application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Application ID.
+    <dd>{{% md %}}The Application ID (Client ID).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_available_to_other_tenants_python">
 <a href="#state_available_to_other_tenants_python" style="color: inherit; text-decoration: inherit;">available_<wbr>to_<wbr>other_<wbr>tenants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_display_name_python">
+<a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The display name for the application.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_group_membership_claims_python">
 <a href="#state_group_membership_claims_python" style="color: inherit; text-decoration: inherit;">group_<wbr>membership_<wbr>claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup`, `DirectoryRole`, `ApplicationGroup` or `All`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_homepage_python">
 <a href="#state_homepage_python" style="color: inherit; text-decoration: inherit;">homepage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
+    <dd>{{% md %}}The URL to the application's home page.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_identifier_uris_python">
 <a href="#state_identifier_uris_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logout_url_python">
 <a href="#state_logout_url_python" style="color: inherit; text-decoration: inherit;">logout_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name for the application.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}The name of the optional claim.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `display_name` and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_oauth2_allow_implicit_flow_python">
 <a href="#state_oauth2_allow_implicit_flow_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>allow_<wbr>implicit_<wbr>flow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oauth2_permissions_python">
 <a href="#state_oauth2_permissions_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoauth2permission">List[Application<wbr>Oauth2Permission]</a></span>
+        <span class="property-type"><a href="#applicationoauth2permission">Sequence[Application<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by `oauth2_permissions` blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_object_id_python">
 <a href="#state_object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_optional_claims_python">
 <a href="#state_optional_claims_python" style="color: inherit; text-decoration: inherit;">optional_<wbr>claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaims">Dict[Application<wbr>Optional<wbr>Claims]</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaims">Application<wbr>Optional<wbr>Claims<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of `access_token` or `id_token` blocks as documented below which list the optional claims configured for each token type. For more information see https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_owners_python">
 <a href="#state_owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_prevent_duplicate_names_python">
 <a href="#state_prevent_duplicate_names_python" style="color: inherit; text-decoration: inherit;">prevent_<wbr>duplicate_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, will return an error when an existing Application is found with the same name. Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_public_client_python">
 <a href="#state_public_client_python" style="color: inherit; text-decoration: inherit;">public_<wbr>client</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reply_urls_python">
 <a href="#state_reply_urls_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_required_resource_accesses_python">
 <a href="#state_required_resource_accesses_python" style="color: inherit; text-decoration: inherit;">required_<wbr>resource_<wbr>accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccess">List[Application<wbr>Required<wbr>Resource<wbr>Access]</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccess">Sequence[Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `required_resource_access` blocks as documented below.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
-{{% /md %}}</dd>
-
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is deprecated and will be removed in version 2.0 of this provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2481,20 +2394,8 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="applicationapprole">Application<wbr>App<wbr>Role</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationAppRole">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationAppRole">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationAppRoleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationAppRoleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.ApplicationAppRoleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.ApplicationAppRole.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2503,71 +2404,64 @@ The following state arguments are supported:
             title="Required">
         <span id="allowedmembertypes_csharp">
 <a href="#allowedmembertypes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Member<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in daemon service scenarios) by setting to `Application`, or to both.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the admin app assignment and consent experiences.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier of the permision. This attribute is computed and cannot be specified manually in this block. If you need to specify a custom `id`, it's recommended to use the azuread.ApplicationOAuth2Permission resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the permission is enabled: defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2576,71 +2470,64 @@ The following state arguments are supported:
             title="Required">
         <span id="allowedmembertypes_go">
 <a href="#allowedmembertypes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Member<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in daemon service scenarios) by setting to `Application`, or to both.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the admin app assignment and consent experiences.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier of the permision. This attribute is computed and cannot be specified manually in this block. If you need to specify a custom `id`, it's recommended to use the azuread.ApplicationOAuth2Permission resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the permission is enabled: defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2649,162 +2536,132 @@ The following state arguments are supported:
             title="Required">
         <span id="allowedmembertypes_nodejs">
 <a href="#allowedmembertypes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Member<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in daemon service scenarios) by setting to `Application`, or to both.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the admin app assignment and consent experiences.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier of the permision. This attribute is computed and cannot be specified manually in this block. If you need to specify a custom `id`, it's recommended to use the azuread.ApplicationOAuth2Permission resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the permission is enabled: defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedmembertypes_python">
-<a href="#allowedmembertypes_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Member<wbr>Types</a>
-</span> 
+        <span id="allowed_member_types_python">
+<a href="#allowed_member_types_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>member_<wbr>types</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in daemon service scenarios) by setting to `Application`, or to both.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the admin app assignment and consent experiences.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier of the permision. This attribute is computed and cannot be specified manually in this block. If you need to specify a custom `id`, it's recommended to use the azuread.ApplicationOAuth2Permission resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
-</span> 
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the permission is enabled: defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="applicationoauth2permission">Application<wbr>Oauth2Permission</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationOauth2Permission">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationOauth2Permission">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationOauth2PermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationOauth2PermissionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.ApplicationOauth2PermissionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.ApplicationOauth2Permission.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2813,93 +2670,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="adminconsentdescription_csharp">
 <a href="#adminconsentdescription_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Consent<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminconsentdisplayname_csharp">
 <a href="#adminconsentdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Consent<wbr>Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+    <dd>{{% md %}}The unique identifier of the app role. This attribute is computed and cannot be specified manually in this block. If you need to specify a custom `id`, it's recommended to use the azuread.ApplicationAppRole resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userconsentdescription_csharp">
 <a href="#userconsentdescription_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Consent<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the end user consent experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userconsentdisplayname_csharp">
 <a href="#userconsentdisplayname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Consent<wbr>Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the end user consent experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2908,93 +2756,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="adminconsentdescription_go">
 <a href="#adminconsentdescription_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Consent<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminconsentdisplayname_go">
 <a href="#adminconsentdisplayname_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Consent<wbr>Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+    <dd>{{% md %}}The unique identifier of the app role. This attribute is computed and cannot be specified manually in this block. If you need to specify a custom `id`, it's recommended to use the azuread.ApplicationAppRole resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userconsentdescription_go">
 <a href="#userconsentdescription_go" style="color: inherit; text-decoration: inherit;">User<wbr>Consent<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the end user consent experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userconsentdisplayname_go">
 <a href="#userconsentdisplayname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Consent<wbr>Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the end user consent experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3003,206 +2842,172 @@ The following state arguments are supported:
             title="Optional">
         <span id="adminconsentdescription_nodejs">
 <a href="#adminconsentdescription_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminconsentdisplayname_nodejs">
 <a href="#adminconsentdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+    <dd>{{% md %}}The unique identifier of the app role. This attribute is computed and cannot be specified manually in this block. If you need to specify a custom `id`, it's recommended to use the azuread.ApplicationAppRole resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userconsentdescription_nodejs">
 <a href="#userconsentdescription_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the end user consent experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userconsentdisplayname_nodejs">
 <a href="#userconsentdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the end user consent experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="adminconsentdescription_python">
-<a href="#adminconsentdescription_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Description</a>
-</span> 
+        <span id="admin_consent_description_python">
+<a href="#admin_consent_description_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>consent_<wbr>description</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="adminconsentdisplayname_python">
-<a href="#adminconsentdisplayname_python" style="color: inherit; text-decoration: inherit;">admin<wbr>Consent<wbr>Display<wbr>Name</a>
-</span> 
+        <span id="admin_consent_display_name_python">
+<a href="#admin_consent_display_name_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>consent_<wbr>display_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
+    <dd>{{% md %}}The unique identifier of the app role. This attribute is computed and cannot be specified manually in this block. If you need to specify a custom `id`, it's recommended to use the azuread.ApplicationAppRole resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
-</span> 
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="userconsentdescription_python">
-<a href="#userconsentdescription_python" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Description</a>
-</span> 
+        <span id="user_consent_description_python">
+<a href="#user_consent_description_python" style="color: inherit; text-decoration: inherit;">user_<wbr>consent_<wbr>description</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the end user consent experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="userconsentdisplayname_python">
-<a href="#userconsentdisplayname_python" style="color: inherit; text-decoration: inherit;">user<wbr>Consent<wbr>Display<wbr>Name</a>
-</span> 
+        <span id="user_consent_display_name_python">
+<a href="#user_consent_display_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>consent_<wbr>display_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the end user consent experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="applicationoptionalclaims">Application<wbr>Optional<wbr>Claims</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationOptionalClaims">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationOptionalClaims">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationOptionalClaimsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationOptionalClaimsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.ApplicationOptionalClaimsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.ApplicationOptionalClaims.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3211,25 +3016,22 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesstokens_csharp">
 <a href="#accesstokens_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tokens</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="idtokens_csharp">
 <a href="#idtokens_csharp" style="color: inherit; text-decoration: inherit;">Id<wbr>Tokens</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoptionalclaimsidtoken">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3238,25 +3040,22 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesstokens_go">
 <a href="#accesstokens_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tokens</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">[]Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="idtokens_go">
 <a href="#idtokens_go" style="color: inherit; text-decoration: inherit;">Id<wbr>Tokens</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoptionalclaimsidtoken">[]Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3265,70 +3064,48 @@ The following state arguments are supported:
             title="Optional">
         <span id="accesstokens_nodejs">
 <a href="#accesstokens_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tokens</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="idtokens_nodejs">
 <a href="#idtokens_nodejs" style="color: inherit; text-decoration: inherit;">id<wbr>Tokens</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationoptionalclaimsidtoken">Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesstokens_python">
-<a href="#accesstokens_python" style="color: inherit; text-decoration: inherit;">access<wbr>Tokens</a>
-</span> 
+        <span id="access_tokens_python">
+<a href="#access_tokens_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tokens</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">List[Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token]</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaimsaccesstoken">Sequence[Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="idtokens_python">
-<a href="#idtokens_python" style="color: inherit; text-decoration: inherit;">id<wbr>Tokens</a>
-</span> 
+        <span id="id_tokens_python">
+<a href="#id_tokens_python" style="color: inherit; text-decoration: inherit;">id_<wbr>tokens</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationoptionalclaimsidtoken">List[Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token]</a></span>
+        <span class="property-type"><a href="#applicationoptionalclaimsidtoken">Sequence[Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="applicationoptionalclaimsaccesstoken">Application<wbr>Optional<wbr>Claims<wbr>Access<wbr>Token</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationOptionalClaimsAccessToken">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationOptionalClaimsAccessToken">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationOptionalClaimsAccessTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationOptionalClaimsAccessTokenOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.ApplicationOptionalClaimsAccessTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.ApplicationOptionalClaimsAccessToken.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3337,49 +3114,44 @@ The following state arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_csharp">
 <a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="essential_csharp">
 <a href="#essential_csharp" style="color: inherit; text-decoration: inherit;">Essential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3388,49 +3160,44 @@ The following state arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_go">
 <a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="essential_go">
 <a href="#essential_go" style="color: inherit; text-decoration: inherit;">Essential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3439,49 +3206,44 @@ The following state arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_nodejs">
 <a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="essential_nodejs">
 <a href="#essential_nodejs" style="color: inherit; text-decoration: inherit;">essential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3490,67 +3252,46 @@ The following state arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalproperties_python">
-<a href="#additionalproperties_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
-</span> 
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="essential_python">
 <a href="#essential_python" style="color: inherit; text-decoration: inherit;">essential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="applicationoptionalclaimsidtoken">Application<wbr>Optional<wbr>Claims<wbr>Id<wbr>Token</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationOptionalClaimsIdToken">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationOptionalClaimsIdToken">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationOptionalClaimsIdTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationOptionalClaimsIdTokenOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.ApplicationOptionalClaimsIdTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.ApplicationOptionalClaimsIdToken.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3559,49 +3300,44 @@ The following state arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the application.
+    <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_csharp">
 <a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="essential_csharp">
 <a href="#essential_csharp" style="color: inherit; text-decoration: inherit;">Essential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3610,49 +3346,44 @@ The following state arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the application.
+    <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_go">
 <a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="essential_go">
 <a href="#essential_go" style="color: inherit; text-decoration: inherit;">Essential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3661,49 +3392,44 @@ The following state arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the application.
+    <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_nodejs">
 <a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="essential_nodejs">
 <a href="#essential_nodejs" style="color: inherit; text-decoration: inherit;">essential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3712,67 +3438,46 @@ The following state arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name for the application.
+    <dd>{{% md %}}The name of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="additionalproperties_python">
-<a href="#additionalproperties_python" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
-</span> 
+        <span id="additional_properties_python">
+<a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Additional Properties of the claim. If a property exists in this list, it modifies the behaviour of the optional claim.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="essential_python">
 <a href="#essential_python" style="color: inherit; text-decoration: inherit;">essential</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the claim specified by the client is necessary to ensure a smooth authorization experience.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source of the claim. If `source` is absent, the claim is a predefined optional claim. If `source` is `user`, the value of `name` is the extension property from the user object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="applicationrequiredresourceaccess">Application<wbr>Required<wbr>Resource<wbr>Access</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationRequiredResourceAccess">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationRequiredResourceAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationRequiredResourceAccessOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.ApplicationRequiredResourceAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.ApplicationRequiredResourceAccess.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3781,27 +3486,24 @@ The following state arguments are supported:
             title="Required">
         <span id="resourceaccesses_csharp">
 <a href="#resourceaccesses_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourceappid_csharp">
 <a href="#resourceappid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3810,27 +3512,24 @@ The following state arguments are supported:
             title="Required">
         <span id="resourceaccesses_go">
 <a href="#resourceaccesses_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">[]Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourceappid_go">
 <a href="#resourceappid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3839,74 +3538,52 @@ The following state arguments are supported:
             title="Required">
         <span id="resourceaccesses_nodejs">
 <a href="#resourceaccesses_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Accesses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourceappid_nodejs">
 <a href="#resourceappid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="resourceaccesses_python">
-<a href="#resourceaccesses_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Accesses</a>
-</span> 
+        <span id="resource_accesses_python">
+<a href="#resource_accesses_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>accesses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">List[Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access]</a></span>
+        <span class="property-type"><a href="#applicationrequiredresourceaccessresourceaccess">Sequence[Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of `resource_access` blocks as documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="resourceappid_python">
-<a href="#resourceappid_python" style="color: inherit; text-decoration: inherit;">resource<wbr>App<wbr>Id</a>
-</span> 
+        <span id="resource_app_id_python">
+<a href="#resource_app_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>app_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="applicationrequiredresourceaccessresourceaccess">Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccessResourceAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationRequiredResourceAccessResourceAccess">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationRequiredResourceAccessResourceAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationRequiredResourceAccessResourceAccessOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.ApplicationRequiredResourceAccessResourceAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.ApplicationRequiredResourceAccessResourceAccess.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3915,27 +3592,24 @@ The following state arguments are supported:
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3944,27 +3618,24 @@ The following state arguments are supported:
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3973,27 +3644,24 @@ The following state arguments are supported:
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4002,31 +3670,32 @@ The following state arguments are supported:
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Azure Active Directory Applications can be imported using the `object id`, e.g.
 
-
-
+```sh
+ $ pulumi import azuread:index/application:Application test 00000000-0000-0000-0000-000000000000
+```
 
 
 

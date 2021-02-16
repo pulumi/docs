@@ -1,8 +1,8 @@
 
 ---
 title: "PacketMirroring"
-title_tag: "Resource PacketMirroring | Module compute | Package GCP"
-meta_desc: "Explore the PacketMirroring resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Packet Mirroring mirrors traffic to and from particular VM instances."
+title_tag: "gcp.compute.PacketMirroring"
+meta_desc: "Documentation for the gcp.compute.PacketMirroring resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -20,6 +20,368 @@ To get more information about PacketMirroring, see:
 * How-to Guides
     * [Using Packet Mirroring](https://cloud.google.com/vpc/docs/using-packet-mirroring#creating)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Compute Packet Mirroring Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+        });
+        var mirror = new Gcp.Compute.Instance("mirror", new Gcp.Compute.InstanceArgs
+        {
+            MachineType = "e2-medium",
+            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+            {
+                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+                {
+                    Image = "debian-cloud/debian-9",
+                },
+            },
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+                {
+                    Network = defaultNetwork.Id,
+                    AccessConfigs = 
+                    {
+                        ,
+                    },
+                },
+            },
+        });
+        var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            Network = defaultNetwork.Id,
+            IpCidrRange = "10.2.0.0/16",
+        });
+        var defaultHealthCheck = new Gcp.Compute.HealthCheck("defaultHealthCheck", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+            TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        });
+        var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            HealthChecks = 
+            {
+                defaultHealthCheck.Id,
+            },
+        });
+        var defaultForwardingRule = new Gcp.Compute.ForwardingRule("defaultForwardingRule", new Gcp.Compute.ForwardingRuleArgs
+        {
+            IsMirroringCollector = true,
+            IpProtocol = "TCP",
+            LoadBalancingScheme = "INTERNAL",
+            BackendService = defaultRegionBackendService.Id,
+            AllPorts = true,
+            Network = defaultNetwork.Id,
+            Subnetwork = defaultSubnetwork.Id,
+            NetworkTier = "PREMIUM",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                defaultSubnetwork,
+            },
+        });
+        var foobar = new Gcp.Compute.PacketMirroring("foobar", new Gcp.Compute.PacketMirroringArgs
+        {
+            Description = "bar",
+            Network = new Gcp.Compute.Inputs.PacketMirroringNetworkArgs
+            {
+                Url = defaultNetwork.Id,
+            },
+            CollectorIlb = new Gcp.Compute.Inputs.PacketMirroringCollectorIlbArgs
+            {
+                Url = defaultForwardingRule.Id,
+            },
+            MirroredResources = new Gcp.Compute.Inputs.PacketMirroringMirroredResourcesArgs
+            {
+                Tags = 
+                {
+                    "foo",
+                },
+                Instances = 
+                {
+                    new Gcp.Compute.Inputs.PacketMirroringMirroredResourcesInstanceArgs
+                    {
+                        Url = mirror.Id,
+                    },
+                },
+            },
+            Filter = new Gcp.Compute.Inputs.PacketMirroringFilterArgs
+            {
+                IpProtocols = 
+                {
+                    "tcp",
+                },
+                CidrRanges = 
+                {
+                    "0.0.0.0/0",
+                },
+                Direction = "BOTH",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", nil)
+		if err != nil {
+			return err
+		}
+		mirror, err := compute.NewInstance(ctx, "mirror", &compute.InstanceArgs{
+			MachineType: pulumi.String("e2-medium"),
+			BootDisk: &compute.InstanceBootDiskArgs{
+				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+					Image: pulumi.String("debian-cloud/debian-9"),
+				},
+			},
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					Network: defaultNetwork.ID(),
+					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
+						nil,
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
+			Network:     defaultNetwork.ID(),
+			IpCidrRange: pulumi.String("10.2.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultHealthCheck, err := compute.NewHealthCheck(ctx, "defaultHealthCheck", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultRegionBackendService, err := compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
+			HealthChecks: pulumi.String(pulumi.String{
+				defaultHealthCheck.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		defaultForwardingRule, err := compute.NewForwardingRule(ctx, "defaultForwardingRule", &compute.ForwardingRuleArgs{
+			IsMirroringCollector: pulumi.Bool(true),
+			IpProtocol:           pulumi.String("TCP"),
+			LoadBalancingScheme:  pulumi.String("INTERNAL"),
+			BackendService:       defaultRegionBackendService.ID(),
+			AllPorts:             pulumi.Bool(true),
+			Network:              defaultNetwork.ID(),
+			Subnetwork:           defaultSubnetwork.ID(),
+			NetworkTier:          pulumi.String("PREMIUM"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			defaultSubnetwork,
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewPacketMirroring(ctx, "foobar", &compute.PacketMirroringArgs{
+			Description: pulumi.String("bar"),
+			Network: &compute.PacketMirroringNetworkArgs{
+				Url: defaultNetwork.ID(),
+			},
+			CollectorIlb: &compute.PacketMirroringCollectorIlbArgs{
+				Url: defaultForwardingRule.ID(),
+			},
+			MirroredResources: &compute.PacketMirroringMirroredResourcesArgs{
+				Tags: pulumi.StringArray{
+					pulumi.String("foo"),
+				},
+				Instances: compute.PacketMirroringMirroredResourcesInstanceArray{
+					&compute.PacketMirroringMirroredResourcesInstanceArgs{
+						Url: mirror.ID(),
+					},
+				},
+			},
+			Filter: &compute.PacketMirroringFilterArgs{
+				IpProtocols: pulumi.StringArray{
+					pulumi.String("tcp"),
+				},
+				CidrRanges: pulumi.StringArray{
+					pulumi.String("0.0.0.0/0"),
+				},
+				Direction: pulumi.String("BOTH"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork")
+mirror = gcp.compute.Instance("mirror",
+    machine_type="e2-medium",
+    boot_disk=gcp.compute.InstanceBootDiskArgs(
+        initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+            image="debian-cloud/debian-9",
+        ),
+    ),
+    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+        network=default_network.id,
+        access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs()],
+    )])
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    network=default_network.id,
+    ip_cidr_range="10.2.0.0/16")
+default_health_check = gcp.compute.HealthCheck("defaultHealthCheck",
+    check_interval_sec=1,
+    timeout_sec=1,
+    tcp_health_check=gcp.compute.HealthCheckTcpHealthCheckArgs(
+        port=80,
+    ))
+default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService", health_checks=[default_health_check.id])
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    is_mirroring_collector=True,
+    ip_protocol="TCP",
+    load_balancing_scheme="INTERNAL",
+    backend_service=default_region_backend_service.id,
+    all_ports=True,
+    network=default_network.id,
+    subnetwork=default_subnetwork.id,
+    network_tier="PREMIUM",
+    opts=pulumi.ResourceOptions(depends_on=[default_subnetwork]))
+foobar = gcp.compute.PacketMirroring("foobar",
+    description="bar",
+    network=gcp.compute.PacketMirroringNetworkArgs(
+        url=default_network.id,
+    ),
+    collector_ilb=gcp.compute.PacketMirroringCollectorIlbArgs(
+        url=default_forwarding_rule.id,
+    ),
+    mirrored_resources=gcp.compute.PacketMirroringMirroredResourcesArgs(
+        tags=["foo"],
+        instances=[gcp.compute.PacketMirroringMirroredResourcesInstanceArgs(
+            url=mirror.id,
+        )],
+    ),
+    filter=gcp.compute.PacketMirroringFilterArgs(
+        ip_protocols=["tcp"],
+        cidr_ranges=["0.0.0.0/0"],
+        direction="BOTH",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
+const mirror = new gcp.compute.Instance("mirror", {
+    machineType: "e2-medium",
+    bootDisk: {
+        initializeParams: {
+            image: "debian-cloud/debian-9",
+        },
+    },
+    networkInterfaces: [{
+        network: defaultNetwork.id,
+        accessConfigs: [{}],
+    }],
+});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    network: defaultNetwork.id,
+    ipCidrRange: "10.2.0.0/16",
+});
+const defaultHealthCheck = new gcp.compute.HealthCheck("defaultHealthCheck", {
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    tcpHealthCheck: {
+        port: "80",
+    },
+});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {healthChecks: [defaultHealthCheck.id]});
+const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+    isMirroringCollector: true,
+    ipProtocol: "TCP",
+    loadBalancingScheme: "INTERNAL",
+    backendService: defaultRegionBackendService.id,
+    allPorts: true,
+    network: defaultNetwork.id,
+    subnetwork: defaultSubnetwork.id,
+    networkTier: "PREMIUM",
+}, {
+    dependsOn: [defaultSubnetwork],
+});
+const foobar = new gcp.compute.PacketMirroring("foobar", {
+    description: "bar",
+    network: {
+        url: defaultNetwork.id,
+    },
+    collectorIlb: {
+        url: defaultForwardingRule.id,
+    },
+    mirroredResources: {
+        tags: ["foo"],
+        instances: [{
+            url: mirror.id,
+        }],
+    },
+    filter: {
+        ipProtocols: ["tcp"],
+        cidrRanges: ["0.0.0.0/0"],
+        direction: "BOTH",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a PacketMirroring Resource {#create}
@@ -27,19 +389,19 @@ To get more information about PacketMirroring, see:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PacketMirroring">PacketMirroring</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PacketMirroringArgs">PacketMirroringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PacketMirroring</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PacketMirroringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#PacketMirroring">PacketMirroring</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>collector_ilb=None<span class="p">, </span>description=None<span class="p">, </span>filter=None<span class="p">, </span>mirrored_resources=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PacketMirroring</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collector_ilb</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringCollectorIlbArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringFilterArgs]</span> = None<span class="p">, </span><span class="nx">mirrored_resources</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringMirroredResourcesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringNetworkArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroring">NewPacketMirroring</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringArgs">PacketMirroringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroring">PacketMirroring</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPacketMirroring</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PacketMirroringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PacketMirroring</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PacketMirroring.html">PacketMirroring</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PacketMirroringArgs.html">PacketMirroringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PacketMirroring</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PacketMirroringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -50,7 +412,7 @@ To get more information about PacketMirroring, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -60,7 +422,7 @@ To get more information about PacketMirroring, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PacketMirroringArgs">PacketMirroringArgs</a></span>
+        <span class="property-type"><a href="#inputs">PacketMirroringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -109,7 +471,7 @@ To get more information about PacketMirroring, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -119,7 +481,7 @@ To get more information about PacketMirroring, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -129,7 +491,7 @@ To get more information about PacketMirroring, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringArgs">PacketMirroringArgs</a></span>
+        <span class="property-type"><a href="#inputs">PacketMirroringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -139,7 +501,7 @@ To get more information about PacketMirroring, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -158,7 +520,7 @@ To get more information about PacketMirroring, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -168,7 +530,7 @@ To get more information about PacketMirroring, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PacketMirroringArgs.html">PacketMirroringArgs</a></span>
+        <span class="property-type"><a href="#inputs">PacketMirroringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -191,12 +553,11 @@ To get more information about PacketMirroring, see:
 
 ## PacketMirroring Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PacketMirroring resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The PacketMirroring resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -207,113 +568,107 @@ The PacketMirroring resource accepts the following [input]({{< relref "/docs/int
             title="Required">
         <span id="collectorilb_csharp">
 <a href="#collectorilb_csharp" style="color: inherit; text-decoration: inherit;">Collector<wbr>Ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mirroredresources_csharp">
 <a href="#mirroredresources_csharp" style="color: inherit; text-decoration: inherit;">Mirrored<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -322,113 +677,107 @@ If it is not provided, the provider region is used.
             title="Required">
         <span id="collectorilb_go">
 <a href="#collectorilb_go" style="color: inherit; text-decoration: inherit;">Collector<wbr>Ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mirroredresources_go">
 <a href="#mirroredresources_go" style="color: inherit; text-decoration: inherit;">Mirrored<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -437,113 +786,107 @@ If it is not provided, the provider region is used.
             title="Required">
         <span id="collectorilb_nodejs">
 <a href="#collectorilb_nodejs" style="color: inherit; text-decoration: inherit;">collector<wbr>Ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mirroredresources_nodejs">
 <a href="#mirroredresources_nodejs" style="color: inherit; text-decoration: inherit;">mirrored<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -552,122 +895,112 @@ If it is not provided, the provider region is used.
             title="Required">
         <span id="collector_ilb_python">
 <a href="#collector_ilb_python" style="color: inherit; text-decoration: inherit;">collector_<wbr>ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringcollectorilb">Dict[Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb]</a></span>
+        <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mirrored_resources_python">
 <a href="#mirrored_resources_python" style="color: inherit; text-decoration: inherit;">mirrored_<wbr>resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresources">Dict[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringnetwork">Dict[Packet<wbr>Mirroring<wbr>Network]</a></span>
+        <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringfilter">Dict[Packet<wbr>Mirroring<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the PacketMirroring resource produces the following output properties:
-
 
 
 
@@ -678,15 +1011,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -695,15 +1026,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -712,15 +1041,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -729,18 +1056,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -750,19 +1072,20 @@ Get an existing PacketMirroring resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PacketMirroringState">PacketMirroringState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PacketMirroring">PacketMirroring</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PacketMirroringState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PacketMirroring</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>collector_ilb=None<span class="p">, </span>description=None<span class="p">, </span>filter=None<span class="p">, </span>mirrored_resources=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">collector_ilb</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringCollectorIlbArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringFilterArgs]</span> = None<span class="p">, </span><span class="nx">mirrored_resources</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringMirroredResourcesArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[PacketMirroringNetworkArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PacketMirroring</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPacketMirroring<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringState">PacketMirroringState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroring">PacketMirroring</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPacketMirroring<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PacketMirroringState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PacketMirroring</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PacketMirroring.html">PacketMirroring</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PacketMirroringState.html">PacketMirroringState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PacketMirroring</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PacketMirroringState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -864,7 +1187,6 @@ Get an existing PacketMirroring resource's state with the given name, ID, and op
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -872,113 +1194,107 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_collectorilb_csharp">
 <a href="#state_collectorilb_csharp" style="color: inherit; text-decoration: inherit;">Collector<wbr>Ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filter_csharp">
 <a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mirroredresources_csharp">
 <a href="#state_mirroredresources_csharp" style="color: inherit; text-decoration: inherit;">Mirrored<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -987,113 +1303,107 @@ If it is not provided, the provider region is used.
             title="Optional">
         <span id="state_collectorilb_go">
 <a href="#state_collectorilb_go" style="color: inherit; text-decoration: inherit;">Collector<wbr>Ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filter_go">
 <a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mirroredresources_go">
 <a href="#state_mirroredresources_go" style="color: inherit; text-decoration: inherit;">Mirrored<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1102,113 +1412,107 @@ If it is not provided, the provider region is used.
             title="Optional">
         <span id="state_collectorilb_nodejs">
 <a href="#state_collectorilb_nodejs" style="color: inherit; text-decoration: inherit;">collector<wbr>Ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filter_nodejs">
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mirroredresources_nodejs">
 <a href="#state_mirroredresources_nodejs" style="color: inherit; text-decoration: inherit;">mirrored<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1217,116 +1521,107 @@ If it is not provided, the provider region is used.
             title="Optional">
         <span id="state_collector_ilb_python">
 <a href="#state_collector_ilb_python" style="color: inherit; text-decoration: inherit;">collector_<wbr>ilb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringcollectorilb">Dict[Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb]</a></span>
+        <span class="property-type"><a href="#packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true.  Structure is documented below.
+set to true.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filter_python">
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringfilter">Dict[Packet<wbr>Mirroring<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.  Structure is documented below.
+    <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mirrored_resources_python">
 <a href="#state_mirrored_resources_python" style="color: inherit; text-decoration: inherit;">mirrored_<wbr>resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresources">Dict[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A means of specifying which resources to mirror.  Structure is documented below.
+    <dd>{{% md %}}A means of specifying which resources to mirror.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringnetwork">Dict[Packet<wbr>Mirroring<wbr>Network]</a></span>
+        <span class="property-type"><a href="#packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network.  Structure is documented below.
+network. All mirrored subnetworks should belong to the given network.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1336,20 +1631,8 @@ If it is not provided, the provider region is used.
 ## Supporting Types
 
 
+
 <h4 id="packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PacketMirroringCollectorIlb">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PacketMirroringCollectorIlb">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringCollectorIlbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringCollectorIlbOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.PacketMirroringCollectorIlbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.PacketMirroringCollectorIlb.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1358,16 +1641,14 @@ If it is not provided, the provider region is used.
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1376,16 +1657,14 @@ If it is not provided, the provider region is used.
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1394,16 +1673,14 @@ If it is not provided, the provider region is used.
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1412,34 +1689,16 @@ If it is not provided, the provider region is used.
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PacketMirroringFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PacketMirroringFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.PacketMirroringFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.PacketMirroringFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1448,28 +1707,38 @@ If it is not provided, the provider region is used.
             title="Optional">
         <span id="cidrranges_csharp">
 <a href="#cidrranges_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
 destination (egress) IP in the IP header. Only IPv4 is supported.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="direction_csharp">
+<a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Direction of traffic to mirror.
+Default value is `BOTH`.
+Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_csharp">
 <a href="#ipprotocols_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
+Each value may be one of `tcp`, `udp`, and `icmp`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1478,28 +1747,38 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Optional">
         <span id="cidrranges_go">
 <a href="#cidrranges_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
 destination (egress) IP in the IP header. Only IPv4 is supported.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="direction_go">
+<a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Direction of traffic to mirror.
+Default value is `BOTH`.
+Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_go">
 <a href="#ipprotocols_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
+Each value may be one of `tcp`, `udp`, and `icmp`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1508,76 +1787,80 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Optional">
         <span id="cidrranges_nodejs">
 <a href="#cidrranges_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
 destination (egress) IP in the IP header. Only IPv4 is supported.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="direction_nodejs">
+<a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Direction of traffic to mirror.
+Default value is `BOTH`.
+Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_nodejs">
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
+Each value may be one of `tcp`, `udp`, and `icmp`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cidrranges_python">
-<a href="#cidrranges_python" style="color: inherit; text-decoration: inherit;">cidr<wbr>Ranges</a>
-</span> 
+        <span id="cidr_ranges_python">
+<a href="#cidr_ranges_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>ranges</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
 destination (egress) IP in the IP header. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ipprotocols_python">
-<a href="#ipprotocols_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
-</span> 
+        <span id="direction_python">
+<a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Direction of traffic to mirror.
+Default value is `BOTH`.
+Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_protocols_python">
+<a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
+Each value may be one of `tcp`, `udp`, and `icmp`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PacketMirroringMirroredResources">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PacketMirroringMirroredResources">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringMirroredResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringMirroredResourcesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.PacketMirroringMirroredResourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.PacketMirroringMirroredResources.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1586,38 +1869,36 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Optional">
         <span id="instances_csharp">
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">List&lt;Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.  Structure is documented below.
+    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetworks_csharp">
 <a href="#subnetworks_csharp" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">List&lt;Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.  Structure is documented below.
+    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}All instances with these tags will be mirrored.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1626,38 +1907,36 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Optional">
         <span id="instances_go">
 <a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">[]Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance</a></span>
     </dt>
-    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.  Structure is documented below.
+    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetworks_go">
 <a href="#subnetworks_go" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">[]Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork</a></span>
     </dt>
-    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.  Structure is documented below.
+    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}All instances with these tags will be mirrored.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1666,38 +1945,36 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Optional">
         <span id="instances_nodejs">
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance[]</a></span>
     </dt>
-    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.  Structure is documented below.
+    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetworks_nodejs">
 <a href="#subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork[]</a></span>
     </dt>
-    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.  Structure is documented below.
+    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}All instances with these tags will be mirrored.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1706,56 +1983,38 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Optional">
         <span id="instances_python">
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">List[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourcesinstance">Sequence[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.  Structure is documented below.
+    <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetworks_python">
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">List[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork]</a></span>
+        <span class="property-type"><a href="#packetmirroringmirroredresourcessubnetwork">Sequence[Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.  Structure is documented below.
+    <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}All instances with these tags will be mirrored.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="packetmirroringmirroredresourcesinstance">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PacketMirroringMirroredResourcesInstance">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PacketMirroringMirroredResourcesInstance">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringMirroredResourcesInstanceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringMirroredResourcesInstanceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.PacketMirroringMirroredResourcesInstanceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.PacketMirroringMirroredResourcesInstance.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1764,16 +2023,14 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1782,16 +2039,14 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1800,16 +2055,14 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1818,34 +2071,16 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="packetmirroringmirroredresourcessubnetwork">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PacketMirroringMirroredResourcesSubnetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PacketMirroringMirroredResourcesSubnetwork">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringMirroredResourcesSubnetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringMirroredResourcesSubnetworkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.PacketMirroringMirroredResourcesSubnetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.PacketMirroringMirroredResourcesSubnetwork.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1854,16 +2089,14 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1872,16 +2105,14 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1890,16 +2121,14 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1908,34 +2137,16 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PacketMirroringNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PacketMirroringNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#PacketMirroringNetworkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.PacketMirroringNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.PacketMirroringNetwork.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1944,16 +2155,14 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1962,16 +2171,14 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1980,16 +2187,14 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1998,20 +2203,34 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+PacketMirroring can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:compute/packetMirroring:PacketMirroring default projects/{{project}}/regions/{{region}}/packetMirrorings/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:compute/packetMirroring:PacketMirroring default {{project}}/{{region}}/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:compute/packetMirroring:PacketMirroring default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/packetMirroring:PacketMirroring default {{name}}
+```
 
 
 
@@ -2023,6 +2242,6 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

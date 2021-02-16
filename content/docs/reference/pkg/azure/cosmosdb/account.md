@@ -1,8 +1,8 @@
 
 ---
 title: "Account"
-title_tag: "Resource Account | Module cosmosdb | Package Azure"
-meta_desc: "Explore the Account resource of the cosmosdb module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a CosmosDB (formally DocumentDB) Account."
+title_tag: "azure.cosmosdb.Account"
+meta_desc: "Documentation for the azure.cosmosdb.Account resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -29,7 +29,7 @@ class MyStack : Stack
     {
         var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
         {
-            Location = @var.Resource_group_location,
+            Location = "westus",
         });
         var ri = new Random.RandomInteger("ri", new Random.RandomIntegerArgs
         {
@@ -43,6 +43,21 @@ class MyStack : Stack
             OfferType = "Standard",
             Kind = "GlobalDocumentDB",
             EnableAutomaticFailover = true,
+            Capabilities = 
+            {
+                new Azure.CosmosDB.Inputs.AccountCapabilityArgs
+                {
+                    Name = "EnableAggregationPipeline",
+                },
+                new Azure.CosmosDB.Inputs.AccountCapabilityArgs
+                {
+                    Name = "mongoEnableDocLevelTTL",
+                },
+                new Azure.CosmosDB.Inputs.AccountCapabilityArgs
+                {
+                    Name = "MongoDBv3.4",
+                },
+            },
             ConsistencyPolicy = new Azure.CosmosDB.Inputs.AccountConsistencyPolicyArgs
             {
                 ConsistencyLevel = "BoundedStaleness",
@@ -58,7 +73,6 @@ class MyStack : Stack
                 },
                 new Azure.CosmosDB.Inputs.AccountGeoLocationArgs
                 {
-                    Prefix = ri.Result.Apply(result => $"tfex-cosmos-db-{result}-customid"),
                     Location = rg.Location,
                     FailoverPriority = 0,
                 },
@@ -76,8 +90,6 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
-
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb"
 	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
@@ -87,12 +99,12 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
-			Location: pulumi.String(_var.Resource_group_location),
+			Location: pulumi.String("westus"),
 		})
 		if err != nil {
 			return err
 		}
-		ri, err := random.NewRandomInteger(ctx, "ri", &random.RandomIntegerArgs{
+		_, err = random.NewRandomInteger(ctx, "ri", &random.RandomIntegerArgs{
 			Min: pulumi.Int(10000),
 			Max: pulumi.Int(99999),
 		})
@@ -105,6 +117,17 @@ func main() {
 			OfferType:               pulumi.String("Standard"),
 			Kind:                    pulumi.String("GlobalDocumentDB"),
 			EnableAutomaticFailover: pulumi.Bool(true),
+			Capabilities: cosmosdb.AccountCapabilityArray{
+				&cosmosdb.AccountCapabilityArgs{
+					Name: pulumi.String("EnableAggregationPipeline"),
+				},
+				&cosmosdb.AccountCapabilityArgs{
+					Name: pulumi.String("mongoEnableDocLevelTTL"),
+				},
+				&cosmosdb.AccountCapabilityArgs{
+					Name: pulumi.String("MongoDBv3.4"),
+				},
+			},
 			ConsistencyPolicy: &cosmosdb.AccountConsistencyPolicyArgs{
 				ConsistencyLevel:     pulumi.String("BoundedStaleness"),
 				MaxIntervalInSeconds: pulumi.Int(10),
@@ -112,13 +135,10 @@ func main() {
 			},
 			GeoLocations: cosmosdb.AccountGeoLocationArray{
 				&cosmosdb.AccountGeoLocationArgs{
-					Location:         pulumi.String(_var.Failover_location),
+					Location:         pulumi.Any(_var.Failover_location),
 					FailoverPriority: pulumi.Int(1),
 				},
 				&cosmosdb.AccountGeoLocationArgs{
-					Prefix: ri.Result.ApplyT(func(result int) (string, error) {
-						return fmt.Sprintf("%v%v%v", "tfex-cosmos-db-", result, "-customid"), nil
-					}).(pulumi.StringOutput),
 					Location:         rg.Location,
 					FailoverPriority: pulumi.Int(0),
 				},
@@ -140,7 +160,7 @@ import pulumi
 import pulumi_azure as azure
 import pulumi_random as random
 
-rg = azure.core.ResourceGroup("rg", location=var["resource_group_location"])
+rg = azure.core.ResourceGroup("rg", location="westus")
 ri = random.RandomInteger("ri",
     min=10000,
     max=99999)
@@ -150,21 +170,31 @@ db = azure.cosmosdb.Account("db",
     offer_type="Standard",
     kind="GlobalDocumentDB",
     enable_automatic_failover=True,
-    consistency_policy={
-        "consistencyLevel": "BoundedStaleness",
-        "maxIntervalInSeconds": 10,
-        "maxStalenessPrefix": 200,
-    },
+    capabilities=[
+        azure.cosmosdb.AccountCapabilityArgs(
+            name="EnableAggregationPipeline",
+        ),
+        azure.cosmosdb.AccountCapabilityArgs(
+            name="mongoEnableDocLevelTTL",
+        ),
+        azure.cosmosdb.AccountCapabilityArgs(
+            name="MongoDBv3.4",
+        ),
+    ],
+    consistency_policy=azure.cosmosdb.AccountConsistencyPolicyArgs(
+        consistency_level="BoundedStaleness",
+        max_interval_in_seconds=10,
+        max_staleness_prefix=200,
+    ),
     geo_locations=[
-        {
-            "location": var["failover_location"],
-            "failoverPriority": 1,
-        },
-        {
-            "prefix": ri.result.apply(lambda result: f"tfex-cosmos-db-{result}-customid"),
-            "location": rg.location,
-            "failoverPriority": 0,
-        },
+        azure.cosmosdb.AccountGeoLocationArgs(
+            location=var["failover_location"],
+            failover_priority=1,
+        ),
+        azure.cosmosdb.AccountGeoLocationArgs(
+            location=rg.location,
+            failover_priority=0,
+        ),
     ])
 ```
 
@@ -177,7 +207,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 import * as random from "@pulumi/random";
 
-const rg = new azure.core.ResourceGroup("rg", {location: _var.resource_group_location});
+const rg = new azure.core.ResourceGroup("rg", {location: "westus"});
 const ri = new random.RandomInteger("ri", {
     min: 10000,
     max: 99999,
@@ -188,6 +218,17 @@ const db = new azure.cosmosdb.Account("db", {
     offerType: "Standard",
     kind: "GlobalDocumentDB",
     enableAutomaticFailover: true,
+    capabilities: [
+        {
+            name: "EnableAggregationPipeline",
+        },
+        {
+            name: "mongoEnableDocLevelTTL",
+        },
+        {
+            name: "MongoDBv3.4",
+        },
+    ],
     consistencyPolicy: {
         consistencyLevel: "BoundedStaleness",
         maxIntervalInSeconds: 10,
@@ -199,7 +240,6 @@ const db = new azure.cosmosdb.Account("db", {
             failoverPriority: 1,
         },
         {
-            prefix: pulumi.interpolate`tfex-cosmos-db-${ri.result}-customid`,
             location: rg.location,
             failoverPriority: 0,
         },
@@ -217,19 +257,19 @@ const db = new azure.cosmosdb.Account("db", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/cosmosdb/#Account">Account</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/cosmosdb/#AccountArgs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/cosmosdb/#Account">Account</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/cosmosdb/#AccountArgs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.Account">Account</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[List[AccountCapability]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountConsistencyPolicy]]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[List[AccountGeoLocation]]</span> = None<span class="p">, </span><span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[List[AccountVirtualNetworkRule]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/cosmosdb/#pulumi_azure.cosmosdb.Account">Account</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">analytical_storage_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountCapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[AccountConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountGeoLocationArgs]]</span> = None<span class="p">, </span><span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountVirtualNetworkRuleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#Account">NewAccount</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#AccountArgs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#Account">Account</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#Account">NewAccount</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#AccountArgs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#Account">Account</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Account.html">Account</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.AccountArgs.html">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Account.html">Account</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.AccountArgs.html">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -240,7 +280,7 @@ const db = new azure.cosmosdb.Account("db", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -309,7 +349,7 @@ const db = new azure.cosmosdb.Account("db", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -348,7 +388,7 @@ const db = new azure.cosmosdb.Account("db", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -389,7 +429,6 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -397,170 +436,184 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="consistencypolicy_csharp">
 <a href="#consistencypolicy_csharp" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="geolocations_csharp">
 <a href="#geolocations_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">List&lt;Account<wbr>Geo<wbr>Location<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="offertype_csharp">
 <a href="#offertype_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="analyticalstorageenabled_csharp">
+<a href="#analyticalstorageenabled_csharp" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="capabilities_csharp">
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">List&lt;Account<wbr>Capability<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableautomaticfailover_csharp">
 <a href="#enableautomaticfailover_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablefreetier_csharp">
 <a href="#enablefreetier_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Free<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablemultiplewritelocations_csharp">
 <a href="#enablemultiplewritelocations_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iprangefilter_csharp">
 <a href="#iprangefilter_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isvirtualnetworkfilterenabled_csharp">
 <a href="#isvirtualnetworkfilterenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Virtual<wbr>Network<wbr>Filter<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultkeyid_csharp">
+<a href="#keyvaultkeyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccessenabled_csharp">
+<a href="#publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this CosmosDB account.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkrules_csharp">
 <a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountvirtualnetworkrule">List&lt;Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -569,170 +622,184 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="consistencypolicy_go">
 <a href="#consistencypolicy_go" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="geolocations_go">
 <a href="#geolocations_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">[]Account<wbr>Geo<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="offertype_go">
 <a href="#offertype_go" style="color: inherit; text-decoration: inherit;">Offer<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="analyticalstorageenabled_go">
+<a href="#analyticalstorageenabled_go" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="capabilities_go">
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">[]Account<wbr>Capability</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableautomaticfailover_go">
 <a href="#enableautomaticfailover_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablefreetier_go">
 <a href="#enablefreetier_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Free<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablemultiplewritelocations_go">
 <a href="#enablemultiplewritelocations_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iprangefilter_go">
 <a href="#iprangefilter_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isvirtualnetworkfilterenabled_go">
 <a href="#isvirtualnetworkfilterenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Virtual<wbr>Network<wbr>Filter<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultkeyid_go">
+<a href="#keyvaultkeyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccessenabled_go">
+<a href="#publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this CosmosDB account.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkrules_go">
 <a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountvirtualnetworkrule">[]Account<wbr>Virtual<wbr>Network<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -741,170 +808,184 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="consistencypolicy_nodejs">
 <a href="#consistencypolicy_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="geolocations_nodejs">
 <a href="#geolocations_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">Account<wbr>Geo<wbr>Location[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="offertype_nodejs">
 <a href="#offertype_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="analyticalstorageenabled_nodejs">
+<a href="#analyticalstorageenabled_nodejs" style="color: inherit; text-decoration: inherit;">analytical<wbr>Storage<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">Account<wbr>Capability[]</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableautomaticfailover_nodejs">
 <a href="#enableautomaticfailover_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablefreetier_nodejs">
 <a href="#enablefreetier_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Free<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablemultiplewritelocations_nodejs">
 <a href="#enablemultiplewritelocations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iprangefilter_nodejs">
 <a href="#iprangefilter_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isvirtualnetworkfilterenabled_nodejs">
 <a href="#isvirtualnetworkfilterenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Virtual<wbr>Network<wbr>Filter<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultkeyid_nodejs">
+<a href="#keyvaultkeyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicnetworkaccessenabled_nodejs">
+<a href="#publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this CosmosDB account.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkrules_nodejs">
 <a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountvirtualnetworkrule">Account<wbr>Virtual<wbr>Network<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -913,179 +994,189 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="consistency_policy_python">
 <a href="#consistency_policy_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountconsistencypolicy">Dict[Account<wbr>Consistency<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="geo_locations_python">
 <a href="#geo_locations_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountgeolocation">List[Account<wbr>Geo<wbr>Location]</a></span>
+        <span class="property-type"><a href="#accountgeolocation">Sequence[Account<wbr>Geo<wbr>Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="offer_type_python">
 <a href="#offer_type_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="analytical_storage_enabled_python">
+<a href="#analytical_storage_enabled_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="capabilities_python">
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcapability">List[Account<wbr>Capability]</a></span>
+        <span class="property-type"><a href="#accountcapability">Sequence[Account<wbr>Capability<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_automatic_failover_python">
 <a href="#enable_automatic_failover_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_free_tier_python">
 <a href="#enable_free_tier_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>free_<wbr>tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_multiple_write_locations_python">
 <a href="#enable_multiple_write_locations_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>multiple_<wbr>write_<wbr>locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_range_filter_python">
 <a href="#ip_range_filter_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range_<wbr>filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_virtual_network_filter_enabled_python">
 <a href="#is_virtual_network_filter_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>virtual_<wbr>network_<wbr>filter_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_key_id_python">
+<a href="#key_vault_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_network_access_enabled_python">
+<a href="#public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this CosmosDB account.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_network_rules_python">
 <a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountvirtualnetworkrule">List[Account<wbr>Virtual<wbr>Network<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#accountvirtualnetworkrule">Sequence[Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Account resource produces the following output properties:
-
 
 
 
@@ -1096,103 +1187,129 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="connectionstrings_csharp">
 <a href="#connectionstrings_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of connection strings available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="primarymasterkey_csharp">
-<a href="#primarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="primarykey_csharp">
+<a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primarymasterkey_csharp">
+<a href="#primarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
-        <span id="primaryreadonlymasterkey_csharp">
-<a href="#primaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="primaryreadonlykey_csharp">
+<a href="#primaryreadonlykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primaryreadonlymasterkey_csharp">
+<a href="#primaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="readendpoints_csharp">
 <a href="#readendpoints_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="secondarymasterkey_csharp">
-<a href="#secondarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="secondarykey_csharp">
+<a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondarymasterkey_csharp">
+<a href="#secondarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
-        <span id="secondaryreadonlymasterkey_csharp">
-<a href="#secondaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="secondaryreadonlykey_csharp">
+<a href="#secondaryreadonlykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondaryreadonlymasterkey_csharp">
+<a href="#secondaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="writeendpoints_csharp">
 <a href="#writeendpoints_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1201,103 +1318,129 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="connectionstrings_go">
 <a href="#connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of connection strings available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="primarymasterkey_go">
-<a href="#primarymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="primarykey_go">
+<a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primarymasterkey_go">
+<a href="#primarymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
-        <span id="primaryreadonlymasterkey_go">
-<a href="#primaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="primaryreadonlykey_go">
+<a href="#primaryreadonlykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primaryreadonlymasterkey_go">
+<a href="#primaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="readendpoints_go">
 <a href="#readendpoints_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="secondarymasterkey_go">
-<a href="#secondarymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="secondarykey_go">
+<a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondarymasterkey_go">
+<a href="#secondarymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
-        <span id="secondaryreadonlymasterkey_go">
-<a href="#secondaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="secondaryreadonlykey_go">
+<a href="#secondaryreadonlykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondaryreadonlymasterkey_go">
+<a href="#secondaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="writeendpoints_go">
 <a href="#writeendpoints_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1306,103 +1449,129 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="connectionstrings_nodejs">
 <a href="#connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of connection strings available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="primarymasterkey_nodejs">
-<a href="#primarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="primarykey_nodejs">
+<a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primarymasterkey_nodejs">
+<a href="#primarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
-        <span id="primaryreadonlymasterkey_nodejs">
-<a href="#primaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="primaryreadonlykey_nodejs">
+<a href="#primaryreadonlykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primaryreadonlymasterkey_nodejs">
+<a href="#primaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="readendpoints_nodejs">
 <a href="#readendpoints_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="secondarymasterkey_nodejs">
-<a href="#secondarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="secondarykey_nodejs">
+<a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondarymasterkey_nodejs">
+<a href="#secondarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
-        <span id="secondaryreadonlymasterkey_nodejs">
-<a href="#secondaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="secondaryreadonlykey_nodejs">
+<a href="#secondaryreadonlykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondaryreadonlymasterkey_nodejs">
+<a href="#secondaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="writeendpoints_nodejs">
 <a href="#writeendpoints_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1411,106 +1580,129 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="connection_strings_python">
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of connection strings available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="primary_master_key_python">
-<a href="#primary_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>master_<wbr>key</a>
-</span> 
+        <span id="primary_key_python">
+<a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primary_master_key_python">
+<a href="#primary_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>master_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
-        <span id="primary_readonly_master_key_python">
-<a href="#primary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>master_<wbr>key</a>
-</span> 
+        <span id="primary_readonly_key_python">
+<a href="#primary_readonly_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="primary_readonly_master_key_python">
+<a href="#primary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>master_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="read_endpoints_python">
 <a href="#read_endpoints_python" style="color: inherit; text-decoration: inherit;">read_<wbr>endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="secondary_master_key_python">
-<a href="#secondary_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>master_<wbr>key</a>
-</span> 
+        <span id="secondary_key_python">
+<a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondary_master_key_python">
+<a href="#secondary_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>master_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
-        <span id="secondary_readonly_master_key_python">
-<a href="#secondary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>master_<wbr>key</a>
-</span> 
+        <span id="secondary_readonly_key_python">
+<a href="#secondary_readonly_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span id="secondary_readonly_master_key_python">
+<a href="#secondary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>master_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="write_endpoints_python">
 <a href="#write_endpoints_python" style="color: inherit; text-decoration: inherit;">write_<wbr>endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1520,20 +1712,20 @@ Get an existing Account resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/cosmosdb/#AccountState">AccountState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/cosmosdb/#Account">Account</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/cosmosdb/#AccountState">AccountState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/cosmosdb/#Account">Account</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[List[AccountCapability]]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[Dict[AccountConsistencyPolicy]]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[List[AccountGeoLocation]]</span> = None<span class="p">, </span><span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_readonly_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_readonly_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[List[AccountVirtualNetworkRule]]</span> = None<span class="p">, </span><span class="nx">write_endpoints</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">analytical_storage_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountCapabilityArgs]]</span> = None<span class="p">, </span><span class="nx">connection_strings</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">consistency_policy</span><span class="p">:</span> <span class="nx">Optional[AccountConsistencyPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_automatic_failover</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_free_tier</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_multiple_write_locations</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountGeoLocationArgs]]</span> = None<span class="p">, </span><span class="nx">ip_range_filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_virtual_network_filter_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_vault_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">offer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_readonly_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_readonly_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_readonly_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_readonly_master_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[AccountVirtualNetworkRuleArgs]]</span> = None<span class="p">, </span><span class="nx">write_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Account</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#AccountState">AccountState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#Account">Account</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#AccountState">AccountState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#Account">Account</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Account.html">Account</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.AccountState.html">AccountState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Account.html">Account</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.AccountState.html">AccountState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1635,1049 +1827,1213 @@ Get an existing Account resource's state with the given name, ID, and optional e
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_analyticalstorageenabled_csharp">
+<a href="#state_analyticalstorageenabled_csharp" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_capabilities_csharp">
 <a href="#state_capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">List&lt;Account<wbr>Capability<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_csharp">
 <a href="#state_connectionstrings_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of connection strings available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_consistencypolicy_csharp">
 <a href="#state_consistencypolicy_csharp" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enableautomaticfailover_csharp">
 <a href="#state_enableautomaticfailover_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablefreetier_csharp">
 <a href="#state_enablefreetier_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Free<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablemultiplewritelocations_csharp">
 <a href="#state_enablemultiplewritelocations_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_csharp">
 <a href="#state_endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_geolocations_csharp">
 <a href="#state_geolocations_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">List&lt;Account<wbr>Geo<wbr>Location<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iprangefilter_csharp">
 <a href="#state_iprangefilter_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_isvirtualnetworkfilterenabled_csharp">
 <a href="#state_isvirtualnetworkfilterenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Virtual<wbr>Network<wbr>Filter<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultkeyid_csharp">
+<a href="#state_keyvaultkeyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_kind_csharp">
 <a href="#state_kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_offertype_csharp">
 <a href="#state_offertype_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_primarymasterkey_csharp">
-<a href="#state_primarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="state_primarykey_csharp">
+<a href="#state_primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_primarymasterkey_csharp">
+<a href="#state_primarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_primaryreadonlymasterkey_csharp">
-<a href="#state_primaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="state_primaryreadonlykey_csharp">
+<a href="#state_primaryreadonlykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_primaryreadonlymasterkey_csharp">
+<a href="#state_primaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_publicnetworkaccessenabled_csharp">
+<a href="#state_publicnetworkaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this CosmosDB account.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_readendpoints_csharp">
 <a href="#state_readendpoints_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_secondarymasterkey_csharp">
-<a href="#state_secondarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="state_secondarykey_csharp">
+<a href="#state_secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_secondarymasterkey_csharp">
+<a href="#state_secondarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_secondaryreadonlymasterkey_csharp">
-<a href="#state_secondaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="state_secondaryreadonlykey_csharp">
+<a href="#state_secondaryreadonlykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_secondaryreadonlymasterkey_csharp">
+<a href="#state_secondaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworkrules_csharp">
 <a href="#state_virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountvirtualnetworkrule">List&lt;Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_writeendpoints_csharp">
 <a href="#state_writeendpoints_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_analyticalstorageenabled_go">
+<a href="#state_analyticalstorageenabled_go" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_capabilities_go">
 <a href="#state_capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">[]Account<wbr>Capability</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_go">
 <a href="#state_connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of connection strings available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_consistencypolicy_go">
 <a href="#state_consistencypolicy_go" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enableautomaticfailover_go">
 <a href="#state_enableautomaticfailover_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablefreetier_go">
 <a href="#state_enablefreetier_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Free<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablemultiplewritelocations_go">
 <a href="#state_enablemultiplewritelocations_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_go">
 <a href="#state_endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_geolocations_go">
 <a href="#state_geolocations_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">[]Account<wbr>Geo<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iprangefilter_go">
 <a href="#state_iprangefilter_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_isvirtualnetworkfilterenabled_go">
 <a href="#state_isvirtualnetworkfilterenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Virtual<wbr>Network<wbr>Filter<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultkeyid_go">
+<a href="#state_keyvaultkeyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_kind_go">
 <a href="#state_kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_offertype_go">
 <a href="#state_offertype_go" style="color: inherit; text-decoration: inherit;">Offer<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_primarymasterkey_go">
-<a href="#state_primarymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="state_primarykey_go">
+<a href="#state_primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_primarymasterkey_go">
+<a href="#state_primarymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_primaryreadonlymasterkey_go">
-<a href="#state_primaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="state_primaryreadonlykey_go">
+<a href="#state_primaryreadonlykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_primaryreadonlymasterkey_go">
+<a href="#state_primaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_publicnetworkaccessenabled_go">
+<a href="#state_publicnetworkaccessenabled_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this CosmosDB account.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_readendpoints_go">
 <a href="#state_readendpoints_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_secondarymasterkey_go">
-<a href="#state_secondarymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="state_secondarykey_go">
+<a href="#state_secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_secondarymasterkey_go">
+<a href="#state_secondarymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_secondaryreadonlymasterkey_go">
-<a href="#state_secondaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="state_secondaryreadonlykey_go">
+<a href="#state_secondaryreadonlykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_secondaryreadonlymasterkey_go">
+<a href="#state_secondaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworkrules_go">
 <a href="#state_virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountvirtualnetworkrule">[]Account<wbr>Virtual<wbr>Network<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_writeendpoints_go">
 <a href="#state_writeendpoints_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_analyticalstorageenabled_nodejs">
+<a href="#state_analyticalstorageenabled_nodejs" style="color: inherit; text-decoration: inherit;">analytical<wbr>Storage<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_capabilities_nodejs">
 <a href="#state_capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">Account<wbr>Capability[]</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_nodejs">
 <a href="#state_connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of connection strings available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_consistencypolicy_nodejs">
 <a href="#state_consistencypolicy_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enableautomaticfailover_nodejs">
 <a href="#state_enableautomaticfailover_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablefreetier_nodejs">
 <a href="#state_enablefreetier_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Free<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablemultiplewritelocations_nodejs">
 <a href="#state_enablemultiplewritelocations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Multiple<wbr>Write<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_nodejs">
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_geolocations_nodejs">
 <a href="#state_geolocations_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">Account<wbr>Geo<wbr>Location[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iprangefilter_nodejs">
 <a href="#state_iprangefilter_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_isvirtualnetworkfilterenabled_nodejs">
 <a href="#state_isvirtualnetworkfilterenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Virtual<wbr>Network<wbr>Filter<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_keyvaultkeyid_nodejs">
+<a href="#state_keyvaultkeyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_kind_nodejs">
 <a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_offertype_nodejs">
 <a href="#state_offertype_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_primarymasterkey_nodejs">
-<a href="#state_primarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="state_primarykey_nodejs">
+<a href="#state_primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_primarymasterkey_nodejs">
+<a href="#state_primarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_primaryreadonlymasterkey_nodejs">
-<a href="#state_primaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="state_primaryreadonlykey_nodejs">
+<a href="#state_primaryreadonlykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_primaryreadonlymasterkey_nodejs">
+<a href="#state_primaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_publicnetworkaccessenabled_nodejs">
+<a href="#state_publicnetworkaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this CosmosDB account.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_readendpoints_nodejs">
 <a href="#state_readendpoints_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_secondarymasterkey_nodejs">
-<a href="#state_secondarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="state_secondarykey_nodejs">
+<a href="#state_secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_secondarymasterkey_nodejs">
+<a href="#state_secondarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_secondaryreadonlymasterkey_nodejs">
-<a href="#state_secondaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
-</span> 
+        <span id="state_secondaryreadonlykey_nodejs">
+<a href="#state_secondaryreadonlykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_secondaryreadonlymasterkey_nodejs">
+<a href="#state_secondaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworkrules_nodejs">
 <a href="#state_virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountvirtualnetworkrule">Account<wbr>Virtual<wbr>Network<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_writeendpoints_nodejs">
 <a href="#state_writeendpoints_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_analytical_storage_enabled_python">
+<a href="#state_analytical_storage_enabled_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable Analytical Storage option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_capabilities_python">
 <a href="#state_capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountcapability">List[Account<wbr>Capability]</a></span>
+        <span class="property-type"><a href="#accountcapability">Sequence[Account<wbr>Capability<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connection_strings_python">
 <a href="#state_connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of connection strings available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_consistency_policy_python">
 <a href="#state_consistency_policy_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountconsistencypolicy">Dict[Account<wbr>Consistency<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `consistency_policy` resource, used to define the consistency policy for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enable_automatic_failover_python">
 <a href="#state_enable_automatic_failover_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable automatic fail over for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enable_free_tier_python">
 <a href="#state_enable_free_tier_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>free_<wbr>tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Free Tier pricing option for this Cosmos DB account. Defaults to `false`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enable_multiple_write_locations_python">
 <a href="#state_enable_multiple_write_locations_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>multiple_<wbr>write_<wbr>locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable multi-master support for this Cosmos DB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_python">
 <a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint used to connect to the CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_geo_locations_python">
 <a href="#state_geo_locations_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountgeolocation">List[Account<wbr>Geo<wbr>Location]</a></span>
+        <span class="property-type"><a href="#accountgeolocation">Sequence[Account<wbr>Geo<wbr>Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ip_range_filter_python">
 <a href="#state_ip_range_filter_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range_<wbr>filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP's for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_is_virtual_network_filter_enabled_python">
 <a href="#state_is_virtual_network_filter_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>virtual_<wbr>network_<wbr>filter_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables virtual network filtering for this Cosmos DB account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_key_vault_key_id_python">
+<a href="#state_key_vault_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A Key Vault Key ID for CMK encryption. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_kind_python">
 <a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Kind of CosmosDB to create - possible values are `GlobalDocumentDB` and `MongoDB`. Defaults to `GlobalDocumentDB`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_offer_type_python">
 <a href="#state_offer_type_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to `Standard`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_primary_master_key_python">
-<a href="#state_primary_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>master_<wbr>key</a>
-</span> 
+        <span id="state_primary_key_python">
+<a href="#state_primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_primary_master_key_python">
+<a href="#state_primary_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>master_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_primary_readonly_master_key_python">
-<a href="#state_primary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>master_<wbr>key</a>
-</span> 
+        <span id="state_primary_readonly_key_python">
+<a href="#state_primary_readonly_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary read-only master Key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_primary_readonly_master_key_python">
+<a href="#state_primary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>master_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `primary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_public_network_access_enabled_python">
+<a href="#state_public_network_access_enabled_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not public network access is allowed for this CosmosDB account.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_read_endpoints_python">
 <a href="#state_read_endpoints_python" style="color: inherit; text-decoration: inherit;">read_<wbr>endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of read endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_secondary_master_key_python">
-<a href="#state_secondary_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>master_<wbr>key</a>
-</span> 
+        <span id="state_secondary_key_python">
+<a href="#state_secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_secondary_master_key_python">
+<a href="#state_secondary_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>master_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_secondary_readonly_master_key_python">
-<a href="#state_secondary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>master_<wbr>key</a>
-</span> 
+        <span id="state_secondary_readonly_key_python">
+<a href="#state_secondary_readonly_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary read-only master key for the CosmosDB Account.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="state_secondary_readonly_master_key_python">
+<a href="#state_secondary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>master_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been renamed to `secondary_readonly_key` and will be removed in v3.0 of the provider in support of HashiCorp&#39;s inclusive language policy which can be found here: https://discuss.hashicorp.com/t/inclusive-language-changes{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtual_network_rules_python">
 <a href="#state_virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accountvirtualnetworkrule">List[Account<wbr>Virtual<wbr>Network<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#accountvirtualnetworkrule">Sequence[Account<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `virtual_network_rules` resource, used to define which subnets are allowed to access this CosmosDB account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_write_endpoints_python">
 <a href="#state_write_endpoints_python" style="color: inherit; text-decoration: inherit;">write_<wbr>endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of write endpoints available for this CosmosDB account.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2685,6 +3041,7 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
 
 
 <h4 id="accountcapability">Account<wbr>Capability</h4>
@@ -2695,11 +3052,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#AccountCapabilityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#AccountCapabilityOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.AccountCapabilityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Outputs.AccountCapability.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2709,16 +3065,14 @@ The following state arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2727,16 +3081,14 @@ The following state arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2745,16 +3097,14 @@ The following state arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2763,19 +3113,14 @@ The following state arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="accountconsistencypolicy">Account<wbr>Consistency<wbr>Policy</h4>
 {{% choosable language nodejs %}}
@@ -2785,11 +3130,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#AccountConsistencyPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#AccountConsistencyPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.AccountConsistencyPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Outputs.AccountConsistencyPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2799,38 +3143,34 @@ The following state arguments are supported:
             title="Required">
         <span id="consistencylevel_csharp">
 <a href="#consistencylevel_csharp" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consistency Level to use for this CosmosDB Account - can be either `BoundedStaleness`, `Eventual`, `Session`, `Strong` or `ConsistentPrefix`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxintervalinseconds_csharp">
 <a href="#maxintervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Interval<wbr>In<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is `5` - `86400` (1 day). Defaults to `5`. Required when `consistency_level` is set to `BoundedStaleness`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxstalenessprefix_csharp">
 <a href="#maxstalenessprefix_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Staleness<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is `10` – `2147483647`. Defaults to `100`. Required when `consistency_level` is set to `BoundedStaleness`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2839,38 +3179,34 @@ The following state arguments are supported:
             title="Required">
         <span id="consistencylevel_go">
 <a href="#consistencylevel_go" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consistency Level to use for this CosmosDB Account - can be either `BoundedStaleness`, `Eventual`, `Session`, `Strong` or `ConsistentPrefix`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxintervalinseconds_go">
 <a href="#maxintervalinseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Interval<wbr>In<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is `5` - `86400` (1 day). Defaults to `5`. Required when `consistency_level` is set to `BoundedStaleness`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxstalenessprefix_go">
 <a href="#maxstalenessprefix_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Staleness<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is `10` – `2147483647`. Defaults to `100`. Required when `consistency_level` is set to `BoundedStaleness`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2879,81 +3215,70 @@ The following state arguments are supported:
             title="Required">
         <span id="consistencylevel_nodejs">
 <a href="#consistencylevel_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consistency Level to use for this CosmosDB Account - can be either `BoundedStaleness`, `Eventual`, `Session`, `Strong` or `ConsistentPrefix`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxintervalinseconds_nodejs">
 <a href="#maxintervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Interval<wbr>In<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is `5` - `86400` (1 day). Defaults to `5`. Required when `consistency_level` is set to `BoundedStaleness`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxstalenessprefix_nodejs">
 <a href="#maxstalenessprefix_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Staleness<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is `10` – `2147483647`. Defaults to `100`. Required when `consistency_level` is set to `BoundedStaleness`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="consistencylevel_python">
-<a href="#consistencylevel_python" style="color: inherit; text-decoration: inherit;">consistency<wbr>Level</a>
-</span> 
+        <span id="consistency_level_python">
+<a href="#consistency_level_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>level</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Consistency Level to use for this CosmosDB Account - can be either `BoundedStaleness`, `Eventual`, `Session`, `Strong` or `ConsistentPrefix`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxintervalinseconds_python">
-<a href="#maxintervalinseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Interval<wbr>In<wbr>Seconds</a>
-</span> 
+        <span id="max_interval_in_seconds_python">
+<a href="#max_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>interval_<wbr>in_<wbr>seconds</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is `5` - `86400` (1 day). Defaults to `5`. Required when `consistency_level` is set to `BoundedStaleness`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxstalenessprefix_python">
-<a href="#maxstalenessprefix_python" style="color: inherit; text-decoration: inherit;">max<wbr>Staleness<wbr>Prefix</a>
-</span> 
+        <span id="max_staleness_prefix_python">
+<a href="#max_staleness_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>staleness_<wbr>prefix</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is `10` – `2147483647`. Defaults to `100`. Required when `consistency_level` is set to `BoundedStaleness`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="accountgeolocation">Account<wbr>Geo<wbr>Location</h4>
 {{% choosable language nodejs %}}
@@ -2963,11 +3288,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#AccountGeoLocationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#AccountGeoLocationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.AccountGeoLocationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Outputs.AccountGeoLocation.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2977,49 +3301,54 @@ The following state arguments are supported:
             title="Required">
         <span id="failoverpriority_csharp">
 <a href="#failoverpriority_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of `0` indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. Changing this causes the location to be re-provisioned and cannot be changed for the location with failover priority `0`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region to host replicated data.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string used to generate the document endpoints for this region. If not specified it defaults to `${cosmosdb_account.name}-${location}`. Changing this causes the location to be deleted and re-provisioned and cannot be changed for the location with failover priority `0`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated because the service no longer accepts this as an input since Apr 25, 2019{{% /md %}}</p></dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundant_csharp">
+<a href="#zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should zone redundancy be enabled for this region? Defaults to `false`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3028,49 +3357,54 @@ The following state arguments are supported:
             title="Required">
         <span id="failoverpriority_go">
 <a href="#failoverpriority_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of `0` indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. Changing this causes the location to be re-provisioned and cannot be changed for the location with failover priority `0`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region to host replicated data.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string used to generate the document endpoints for this region. If not specified it defaults to `${cosmosdb_account.name}-${location}`. Changing this causes the location to be deleted and re-provisioned and cannot be changed for the location with failover priority `0`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated because the service no longer accepts this as an input since Apr 25, 2019{{% /md %}}</p></dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundant_go">
+<a href="#zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should zone redundancy be enabled for this region? Defaults to `false`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3079,103 +3413,110 @@ The following state arguments are supported:
             title="Required">
         <span id="failoverpriority_nodejs">
 <a href="#failoverpriority_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of `0` indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. Changing this causes the location to be re-provisioned and cannot be changed for the location with failover priority `0`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region to host replicated data.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string used to generate the document endpoints for this region. If not specified it defaults to `${cosmosdb_account.name}-${location}`. Changing this causes the location to be deleted and re-provisioned and cannot be changed for the location with failover priority `0`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated because the service no longer accepts this as an input since Apr 25, 2019{{% /md %}}</p></dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zoneredundant_nodejs">
+<a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should zone redundancy be enabled for this region? Defaults to `false`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="failoverpriority_python">
-<a href="#failoverpriority_python" style="color: inherit; text-decoration: inherit;">failover<wbr>Priority</a>
-</span> 
+        <span id="failover_priority_python">
+<a href="#failover_priority_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>priority</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The failover priority of the region. A failover priority of `0` indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. Changing this causes the location to be re-provisioned and cannot be changed for the location with failover priority `0`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure region to host replicated data.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string used to generate the document endpoints for this region. If not specified it defaults to `${cosmosdb_account.name}-${location}`. Changing this causes the location to be deleted and re-provisioned and cannot be changed for the location with failover priority `0`.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This is deprecated because the service no longer accepts this as an input since Apr 25, 2019{{% /md %}}</p></dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_redundant_python">
+<a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should zone redundancy be enabled for this region? Defaults to `false`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="accountvirtualnetworkrule">Account<wbr>Virtual<wbr>Network<wbr>Rule</h4>
 {{% choosable language nodejs %}}
@@ -3185,11 +3526,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#AccountVirtualNetworkRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/cosmosdb?tab=doc#AccountVirtualNetworkRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Inputs.AccountVirtualNetworkRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.CosmosDB.Outputs.AccountVirtualNetworkRule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3199,27 +3539,24 @@ The following state arguments are supported:
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_csharp">
 <a href="#ignoremissingvnetserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified subnet will be added as a virtual network rule even if its CosmosDB service endpoint is not active. Defaults to `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3228,27 +3565,24 @@ The following state arguments are supported:
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_go">
 <a href="#ignoremissingvnetserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified subnet will be added as a virtual network rule even if its CosmosDB service endpoint is not active. Defaults to `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3257,27 +3591,24 @@ The following state arguments are supported:
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignoremissingvnetserviceendpoint_nodejs">
 <a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified subnet will be added as a virtual network rule even if its CosmosDB service endpoint is not active. Defaults to `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3286,31 +3617,32 @@ The following state arguments are supported:
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the virtual network subnet.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignore_missing_vnet_service_endpoint_python">
 <a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified subnet will be added as a virtual network rule even if its CosmosDB service endpoint is not active. Defaults to `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+CosmosDB Accounts can be imported using the `resource id`, e.g.
 
-
-
+```sh
+ $ pulumi import azure:cosmosdb/account:Account account1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DocumentDB/databaseAccounts/account1
+```
 
 
 

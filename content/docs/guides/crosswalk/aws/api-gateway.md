@@ -203,9 +203,7 @@ const api = new awsx.apigateway.API("example", {
 export const url = api.url;
 ```
 
-For more complete information about creating Lambda Functions, please
-[see the Pulumi Crosswalk for AWS Lambda documentation]({{< relref "lambda" >}}). Any of the techniques described may be used
-in combination with the `awsx.apigateway.API` class.
+For more complete information about creating Lambda Functions, [see the Pulumi Crosswalk for AWS Lambda documentation]({{< relref "lambda" >}}). Any of the techniques described may be used in combination with the `awsx.apigateway.API` class.
 
 ### Defining a Static Route Served by S3
 
@@ -244,8 +242,7 @@ $ curl $(pulumi stack output url)
 <h1>Hello, AWS API Gateway + S3!</h1>
 ```
 
-By default, any index documents will be automatically served by S3 when directories are retrieved over HTTP (in the
-manner [described here](https://docs.aws.amazon.com/AmazonS3/latest/dev/IndexDocumentSupport.html)). To suppress this
+By default, any index documents will be automatically served by S3 when directories are retrieved over HTTP. (See [AWS: Configuring an Index Document](https://docs.aws.amazon.com/AmazonS3/latest/dev/IndexDocumentSupport.html).) To suppress this
 behavior, simply pass `index: false` as part of configuring your static route:
 
 ```typescript
@@ -397,7 +394,7 @@ Gateway features not yet supported by the easier abstractions in Pulumi Crosswal
 provide permission for any route targets to be invoked by API Gateway when using this option.
 
 For more information about AWS API Gateway's support for OpenAPI, including exporting specifications from existing
-APIs for consumption from other tools, please see [Documenting a REST API in API Gateway](
+APIs for consumption from other tools, see [Documenting a REST API in API Gateway](
 https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api.html)
 
 ### Defining an OpenAPI Specification for a Single Route
@@ -440,7 +437,7 @@ const api = new awsx.apigateway.API("example", {
 export const url = api.url;
 ```
 
-For full details on what the OpenAPI integration object may contain, please refer to the full
+For full details on what the OpenAPI integration object may contain, refer to the full
 [x-amazon-apigateway-integration Object documentation](
 https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration.html).
 
@@ -510,13 +507,13 @@ const api = new awsx.apigateway.API("example", {
 })
 ```
 
-For additional information about request validation, please refer to [Enable Request Validation in AWS API Gateway](
+For additional information about request validation, refer to [Enable Request Validation in AWS API Gateway](
 https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html#api-gateway-request-validation-basic-definitions).
 
 ### Request Body Validation
 
-> Request body validation is currently not supported. If you have a need for it, we would love to hear from you. Please
-> comment on [this open issue](https://github.com/pulumi/pulumi-awsx/issues/198) with details about your use case.
+> Request body validation is currently not supported. If you have a need for it, we would love to hear from you.
+> Comment on [this open issue](https://github.com/pulumi/pulumi-awsx/issues/198) with details about your use case.
 
 ## Controlling and Managing Access to APIs
 
@@ -653,7 +650,7 @@ const api = new awsx.apigateway.API("myapi", {
 
 If you wish to reuse an Authorizer across multiple routes, you can declare it in a variable.
 
-For additional information about request-based AWS API Gateway Lambda Authorizers, please see the
+For additional information about request-based AWS API Gateway Lambda Authorizers, see the
 [AWS documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html).
 
 #### Creating a Lambda-based Request Authorizer with an Existing Lambda
@@ -686,7 +683,7 @@ const apiWithAuthorizer = new awsx.apigateway.API("authorizer-api", {
 });
 ```
 
-A complete example of defining the Lambda Authorizer elsewhere can be found [here](
+Complete [example of defining the Lambda Authorizer](
 https://github.com/pulumi/pulumi-awsx/blob/61d2996b8bdb20ea625e66e17ebbaa7b62f9c163/nodejs/awsx/examples/api/index.ts#L94-L152).
 
 #### Creating a Lambda-based Token Authorizer
@@ -759,7 +756,7 @@ const api = new awsx.apigateway.API("myapi", {
 });
 ```
 
-For additional information about token-based AWS API Gateway Lambda Authorizers, please see the
+For additional information about token-based AWS API Gateway Lambda Authorizers, see the
 [AWS documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html).
 
 #### Specifying Your Authorizer's IAM Role
@@ -806,7 +803,7 @@ const api = new awsx.apigateway.API("myapi", {
 });
 ```
 
-For more information about creating and managing IAM Roles, please refer to the
+For more information about creating and managing IAM Roles, refer to the
 [Pulumi Crosswalk for AWS IAM]({{< relref "iam" >}}) documentation.
 
 #### Generating Authorizer Responses Easily
@@ -1033,7 +1030,7 @@ const webDnsRecord = new aws.route53.Record("webDnsRecord", {
 ```
 
 For more information about the options and levels of customizability available for edge-optimized AWS API Gateways
-and custom domains, please refer to [Set up Custom Domain Name for an API in API Gateway](
+and custom domains, refer to [Set up Custom Domain Name for an API in API Gateway](
 https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html).
 
 ## Additional API Gateway Resources

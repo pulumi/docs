@@ -20,6 +20,9 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="backendservice" title="BackendService"><span class="symbol resource"></span>BackendService</a></li>
     <li><a href="backendservicesignedurlkey" title="BackendServiceSignedUrlKey"><span class="symbol resource"></span>BackendServiceSignedUrlKey</a></li>
     <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
+    <li><a href="diskiambinding" title="DiskIamBinding"><span class="symbol resource"></span>DiskIamBinding</a></li>
+    <li><a href="diskiammember" title="DiskIamMember"><span class="symbol resource"></span>DiskIamMember</a></li>
+    <li><a href="diskiampolicy" title="DiskIamPolicy"><span class="symbol resource"></span>DiskIamPolicy</a></li>
     <li><a href="diskresourcepolicyattachment" title="DiskResourcePolicyAttachment"><span class="symbol resource"></span>DiskResourcePolicyAttachment</a></li>
     <li><a href="externalvpngateway" title="ExternalVpnGateway"><span class="symbol resource"></span>ExternalVpnGateway</a></li>
     <li><a href="firewall" title="Firewall"><span class="symbol resource"></span>Firewall</a></li>
@@ -33,7 +36,11 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="httphealthcheck" title="HttpHealthCheck"><span class="symbol resource"></span>HttpHealthCheck</a></li>
     <li><a href="httpshealthcheck" title="HttpsHealthCheck"><span class="symbol resource"></span>HttpsHealthCheck</a></li>
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
+    <li><a href="imageiambinding" title="ImageIamBinding"><span class="symbol resource"></span>ImageIamBinding</a></li>
+    <li><a href="imageiammember" title="ImageIamMember"><span class="symbol resource"></span>ImageIamMember</a></li>
+    <li><a href="imageiampolicy" title="ImageIamPolicy"><span class="symbol resource"></span>ImageIamPolicy</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="instancefrommachineimage" title="InstanceFromMachineImage"><span class="symbol resource"></span>InstanceFromMachineImage</a></li>
     <li><a href="instancefromtemplate" title="InstanceFromTemplate"><span class="symbol resource"></span>InstanceFromTemplate</a></li>
     <li><a href="instancegroup" title="InstanceGroup"><span class="symbol resource"></span>InstanceGroup</a></li>
     <li><a href="instancegroupmanager" title="InstanceGroupManager"><span class="symbol resource"></span>InstanceGroupManager</a></li>
@@ -44,6 +51,9 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="instancetemplate" title="InstanceTemplate"><span class="symbol resource"></span>InstanceTemplate</a></li>
     <li><a href="interconnectattachment" title="InterconnectAttachment"><span class="symbol resource"></span>InterconnectAttachment</a></li>
     <li><a href="machineimage" title="MachineImage"><span class="symbol resource"></span>MachineImage</a></li>
+    <li><a href="machineimageiambinding" title="MachineImageIamBinding"><span class="symbol resource"></span>MachineImageIamBinding</a></li>
+    <li><a href="machineimageiammember" title="MachineImageIamMember"><span class="symbol resource"></span>MachineImageIamMember</a></li>
+    <li><a href="machineimageiampolicy" title="MachineImageIamPolicy"><span class="symbol resource"></span>MachineImageIamPolicy</a></li>
     <li><a href="managedsslcertificate" title="ManagedSslCertificate"><span class="symbol resource"></span>ManagedSslCertificate</a></li>
     <li><a href="mangedsslcertificate" title="MangedSslCertificate"><span class="symbol resource"></span>MangedSslCertificate</a></li>
     <li><a href="network" title="Network"><span class="symbol resource"></span>Network</a></li>
@@ -53,6 +63,9 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="networkpeeringroutesconfig" title="NetworkPeeringRoutesConfig"><span class="symbol resource"></span>NetworkPeeringRoutesConfig</a></li>
     <li><a href="nodegroup" title="NodeGroup"><span class="symbol resource"></span>NodeGroup</a></li>
     <li><a href="nodetemplate" title="NodeTemplate"><span class="symbol resource"></span>NodeTemplate</a></li>
+    <li><a href="organizationsecuritypolicy" title="OrganizationSecurityPolicy"><span class="symbol resource"></span>OrganizationSecurityPolicy</a></li>
+    <li><a href="organizationsecuritypolicyassociation" title="OrganizationSecurityPolicyAssociation"><span class="symbol resource"></span>OrganizationSecurityPolicyAssociation</a></li>
+    <li><a href="organizationsecuritypolicyrule" title="OrganizationSecurityPolicyRule"><span class="symbol resource"></span>OrganizationSecurityPolicyRule</a></li>
     <li><a href="packetmirroring" title="PacketMirroring"><span class="symbol resource"></span>PacketMirroring</a></li>
     <li><a href="perinstanceconfig" title="PerInstanceConfig"><span class="symbol resource"></span>PerInstanceConfig</a></li>
     <li><a href="projectdefaultnetworktier" title="ProjectDefaultNetworkTier"><span class="symbol resource"></span>ProjectDefaultNetworkTier</a></li>
@@ -61,9 +74,13 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="regionautoscaler" title="RegionAutoscaler"><span class="symbol resource"></span>RegionAutoscaler</a></li>
     <li><a href="regionbackendservice" title="RegionBackendService"><span class="symbol resource"></span>RegionBackendService</a></li>
     <li><a href="regiondisk" title="RegionDisk"><span class="symbol resource"></span>RegionDisk</a></li>
+    <li><a href="regiondiskiambinding" title="RegionDiskIamBinding"><span class="symbol resource"></span>RegionDiskIamBinding</a></li>
+    <li><a href="regiondiskiammember" title="RegionDiskIamMember"><span class="symbol resource"></span>RegionDiskIamMember</a></li>
+    <li><a href="regiondiskiampolicy" title="RegionDiskIamPolicy"><span class="symbol resource"></span>RegionDiskIamPolicy</a></li>
     <li><a href="regiondiskresourcepolicyattachment" title="RegionDiskResourcePolicyAttachment"><span class="symbol resource"></span>RegionDiskResourcePolicyAttachment</a></li>
     <li><a href="regionhealthcheck" title="RegionHealthCheck"><span class="symbol resource"></span>RegionHealthCheck</a></li>
     <li><a href="regioninstancegroupmanager" title="RegionInstanceGroupManager"><span class="symbol resource"></span>RegionInstanceGroupManager</a></li>
+    <li><a href="regionnetworkendpointgroup" title="RegionNetworkEndpointGroup"><span class="symbol resource"></span>RegionNetworkEndpointGroup</a></li>
     <li><a href="regionperinstanceconfig" title="RegionPerInstanceConfig"><span class="symbol resource"></span>RegionPerInstanceConfig</a></li>
     <li><a href="regionsslcertificate" title="RegionSslCertificate"><span class="symbol resource"></span>RegionSslCertificate</a></li>
     <li><a href="regiontargethttpproxy" title="RegionTargetHttpProxy"><span class="symbol resource"></span>RegionTargetHttpProxy</a></li>
@@ -87,6 +104,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="subnetworkiambinding" title="SubnetworkIAMBinding"><span class="symbol resource"></span>SubnetworkIAMBinding</a></li>
     <li><a href="subnetworkiammember" title="SubnetworkIAMMember"><span class="symbol resource"></span>SubnetworkIAMMember</a></li>
     <li><a href="subnetworkiampolicy" title="SubnetworkIAMPolicy"><span class="symbol resource"></span>SubnetworkIAMPolicy</a></li>
+    <li><a href="targetgrpcproxy" title="TargetGrpcProxy"><span class="symbol resource"></span>TargetGrpcProxy</a></li>
     <li><a href="targethttpproxy" title="TargetHttpProxy"><span class="symbol resource"></span>TargetHttpProxy</a></li>
     <li><a href="targethttpsproxy" title="TargetHttpsProxy"><span class="symbol resource"></span>TargetHttpsProxy</a></li>
     <li><a href="targetinstance" title="TargetInstance"><span class="symbol resource"></span>TargetInstance</a></li>
@@ -107,16 +125,19 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="getdefaultserviceaccount" title="GetDefaultServiceAccount"><span class="symbol function"></span>GetDefaultServiceAccount</a></li>
     <li><a href="getforwardingrule" title="GetForwardingRule"><span class="symbol function"></span>GetForwardingRule</a></li>
     <li><a href="getglobaladdress" title="GetGlobalAddress"><span class="symbol function"></span>GetGlobalAddress</a></li>
+    <li><a href="getglobalforwardingrule" title="GetGlobalForwardingRule"><span class="symbol function"></span>GetGlobalForwardingRule</a></li>
     <li><a href="getimage" title="GetImage"><span class="symbol function"></span>GetImage</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
     <li><a href="getinstancegroup" title="GetInstanceGroup"><span class="symbol function"></span>GetInstanceGroup</a></li>
     <li><a href="getinstanceserialport" title="GetInstanceSerialPort"><span class="symbol function"></span>GetInstanceSerialPort</a></li>
+    <li><a href="getinstancetemplate" title="GetInstanceTemplate"><span class="symbol function"></span>GetInstanceTemplate</a></li>
     <li><a href="getlbipranges" title="GetLBIPRanges"><span class="symbol function"></span>GetLBIPRanges</a></li>
     <li><a href="getnetblockipranges" title="GetNetblockIPRanges"><span class="symbol function"></span>GetNetblockIPRanges</a></li>
     <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
     <li><a href="getnetworkendpointgroup" title="GetNetworkEndpointGroup"><span class="symbol function"></span>GetNetworkEndpointGroup</a></li>
     <li><a href="getnodetypes" title="GetNodeTypes"><span class="symbol function"></span>GetNodeTypes</a></li>
     <li><a href="getregioninstancegroup" title="GetRegionInstanceGroup"><span class="symbol function"></span>GetRegionInstanceGroup</a></li>
+    <li><a href="getregionsslcertificate" title="GetRegionSslCertificate"><span class="symbol function"></span>GetRegionSslCertificate</a></li>
     <li><a href="getregions" title="GetRegions"><span class="symbol function"></span>GetRegions</a></li>
     <li><a href="getresourcepolicy" title="GetResourcePolicy"><span class="symbol function"></span>GetResourcePolicy</a></li>
     <li><a href="getrouter" title="GetRouter"><span class="symbol function"></span>GetRouter</a></li>
@@ -133,26 +154,8 @@ Explore the resources and functions of the compute module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.html" title="Pulumi.Gcp.Compute">Pulumi.Gcp.Compute</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#" title="gcp/compute">gcp/compute</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#" title="@pulumi/gcp/compute">@pulumi/gcp/compute</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/compute" title="pulumi_gcp/compute">pulumi_gcp/compute</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

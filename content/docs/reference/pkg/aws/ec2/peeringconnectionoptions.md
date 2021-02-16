@@ -1,8 +1,8 @@
 
 ---
 title: "PeeringConnectionOptions"
-title_tag: "Resource PeeringConnectionOptions | Module ec2 | Package AWS"
-meta_desc: "Explore the PeeringConnectionOptions resource of the ec2 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource to manage VPC peering connection options."
+title_tag: "aws.ec2.PeeringConnectionOptions"
+meta_desc: "Documentation for the aws.ec2.PeeringConnectionOptions resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -57,13 +57,13 @@ foo_vpc_peering_connection = aws.ec2.VpcPeeringConnection("fooVpcPeeringConnecti
     auto_accept=True)
 foo_peering_connection_options = aws.ec2.PeeringConnectionOptions("fooPeeringConnectionOptions",
     vpc_peering_connection_id=foo_vpc_peering_connection.id,
-    accepter={
-        "allowRemoteVpcDnsResolution": True,
-    },
-    requester={
-        "allowVpcToRemoteClassicLink": True,
-        "allowClassicLinkToRemoteVpc": True,
-    })
+    accepter=aws.ec2.PeeringConnectionOptionsAccepterArgs(
+        allow_remote_vpc_dns_resolution=True,
+    ),
+    requester=aws.ec2.PeeringConnectionOptionsRequesterArgs(
+        allow_vpc_to_remote_classic_link=True,
+        allow_classic_link_to_remote_vpc=True,
+    ))
 ```
 ```csharp
 using Pulumi;
@@ -227,12 +227,12 @@ main = aws.ec2.Vpc("main",
     cidr_block="10.0.0.0/16",
     enable_dns_support=True,
     enable_dns_hostnames=True,
-    opts=ResourceOptions(provider=aws["requester"]))
+    opts=pulumi.ResourceOptions(provider=aws["requester"]))
 peer_vpc = aws.ec2.Vpc("peerVpc",
     cidr_block="10.1.0.0/16",
     enable_dns_support=True,
     enable_dns_hostnames=True,
-    opts=ResourceOptions(provider=aws["accepter"]))
+    opts=pulumi.ResourceOptions(provider=aws["accepter"]))
 peer_caller_identity = aws.get_caller_identity()
 peer_vpc_peering_connection = aws.ec2.VpcPeeringConnection("peerVpcPeeringConnection",
     vpc_id=main.id,
@@ -242,26 +242,26 @@ peer_vpc_peering_connection = aws.ec2.VpcPeeringConnection("peerVpcPeeringConnec
     tags={
         "Side": "Requester",
     },
-    opts=ResourceOptions(provider=aws["requester"]))
+    opts=pulumi.ResourceOptions(provider=aws["requester"]))
 peer_vpc_peering_connection_accepter = aws.ec2.VpcPeeringConnectionAccepter("peerVpcPeeringConnectionAccepter",
     vpc_peering_connection_id=peer_vpc_peering_connection.id,
     auto_accept=True,
     tags={
         "Side": "Accepter",
     },
-    opts=ResourceOptions(provider=aws["accepter"]))
+    opts=pulumi.ResourceOptions(provider=aws["accepter"]))
 requester_peering_connection_options = aws.ec2.PeeringConnectionOptions("requesterPeeringConnectionOptions",
     vpc_peering_connection_id=peer_vpc_peering_connection_accepter.id,
-    requester={
-        "allowRemoteVpcDnsResolution": True,
-    },
-    opts=ResourceOptions(provider=aws["requester"]))
+    requester=aws.ec2.PeeringConnectionOptionsRequesterArgs(
+        allow_remote_vpc_dns_resolution=True,
+    ),
+    opts=pulumi.ResourceOptions(provider=aws["requester"]))
 accepter_peering_connection_options = aws.ec2.PeeringConnectionOptions("accepterPeeringConnectionOptions",
     vpc_peering_connection_id=peer_vpc_peering_connection_accepter.id,
-    accepter={
-        "allowRemoteVpcDnsResolution": True,
-    },
-    opts=ResourceOptions(provider=aws["accepter"]))
+    accepter=aws.ec2.PeeringConnectionOptionsAccepterArgs(
+        allow_remote_vpc_dns_resolution=True,
+    ),
+    opts=pulumi.ResourceOptions(provider=aws["accepter"]))
 ```
 ```csharp
 using Pulumi;
@@ -442,19 +442,19 @@ func main() {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#PeeringConnectionOptions">PeeringConnectionOptions</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#PeeringConnectionOptionsArgs">PeeringConnectionOptionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PeeringConnectionOptions</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PeeringConnectionOptionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.PeeringConnectionOptions">PeeringConnectionOptions</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>accepter=None<span class="p">, </span>requester=None<span class="p">, </span>vpc_peering_connection_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PeeringConnectionOptions</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accepter</span><span class="p">:</span> <span class="nx">Optional[PeeringConnectionOptionsAccepterArgs]</span> = None<span class="p">, </span><span class="nx">requester</span><span class="p">:</span> <span class="nx">Optional[PeeringConnectionOptionsRequesterArgs]</span> = None<span class="p">, </span><span class="nx">vpc_peering_connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptions">NewPeeringConnectionOptions</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsArgs">PeeringConnectionOptionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptions">PeeringConnectionOptions</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPeeringConnectionOptions</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PeeringConnectionOptionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PeeringConnectionOptions</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.PeeringConnectionOptions.html">PeeringConnectionOptions</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.PeeringConnectionOptionsArgs.html">PeeringConnectionOptionsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PeeringConnectionOptions</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PeeringConnectionOptionsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -465,7 +465,7 @@ func main() {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -475,7 +475,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#PeeringConnectionOptionsArgs">PeeringConnectionOptionsArgs</a></span>
+        <span class="property-type"><a href="#inputs">PeeringConnectionOptionsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -534,7 +534,7 @@ func main() {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -544,7 +544,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsArgs">PeeringConnectionOptionsArgs</a></span>
+        <span class="property-type"><a href="#inputs">PeeringConnectionOptionsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -573,7 +573,7 @@ func main() {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -583,7 +583,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.PeeringConnectionOptionsArgs.html">PeeringConnectionOptionsArgs</a></span>
+        <span class="property-type"><a href="#inputs">PeeringConnectionOptionsArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -606,12 +606,11 @@ func main() {
 
 ## PeeringConnectionOptions Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PeeringConnectionOptions resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The PeeringConnectionOptions resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -622,18 +621,17 @@ The PeeringConnectionOptions resource accepts the following [input]({{< relref "
             title="Required">
         <span id="vpcpeeringconnectionid_csharp">
 <a href="#vpcpeeringconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Peering<wbr>Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accepter_csharp">
 <a href="#accepter_csharp" style="color: inherit; text-decoration: inherit;">Accepter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter<wbr>Args</a></span>
     </dt>
@@ -641,12 +639,11 @@ The PeeringConnectionOptions resource accepts the following [input]({{< relref "
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requester_csharp">
 <a href="#requester_csharp" style="color: inherit; text-decoration: inherit;">Requester</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester<wbr>Args</a></span>
     </dt>
@@ -654,10 +651,8 @@ the peering connection (a maximum of one).
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -666,18 +661,17 @@ the peering connection (a maximum of one).
             title="Required">
         <span id="vpcpeeringconnectionid_go">
 <a href="#vpcpeeringconnectionid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Peering<wbr>Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accepter_go">
 <a href="#accepter_go" style="color: inherit; text-decoration: inherit;">Accepter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
     </dt>
@@ -685,12 +679,11 @@ the peering connection (a maximum of one).
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requester_go">
 <a href="#requester_go" style="color: inherit; text-decoration: inherit;">Requester</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
     </dt>
@@ -698,10 +691,8 @@ the peering connection (a maximum of one).
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -710,18 +701,17 @@ the peering connection (a maximum of one).
             title="Required">
         <span id="vpcpeeringconnectionid_nodejs">
 <a href="#vpcpeeringconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Peering<wbr>Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accepter_nodejs">
 <a href="#accepter_nodejs" style="color: inherit; text-decoration: inherit;">accepter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
     </dt>
@@ -729,12 +719,11 @@ the peering connection (a maximum of one).
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requester_nodejs">
 <a href="#requester_nodejs" style="color: inherit; text-decoration: inherit;">requester</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
     </dt>
@@ -742,10 +731,8 @@ the peering connection (a maximum of one).
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -754,51 +741,43 @@ the peering connection (a maximum of one).
             title="Required">
         <span id="vpc_peering_connection_id_python">
 <a href="#vpc_peering_connection_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>peering_<wbr>connection_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accepter_python">
 <a href="#accepter_python" style="color: inherit; text-decoration: inherit;">accepter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Dict[Peering<wbr>Connection<wbr>Options<wbr>Accepter]</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requester_python">
 <a href="#requester_python" style="color: inherit; text-decoration: inherit;">requester</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Dict[Peering<wbr>Connection<wbr>Options<wbr>Requester]</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the PeeringConnectionOptions resource produces the following output properties:
-
 
 
 
@@ -809,15 +788,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -826,15 +803,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -843,15 +818,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -860,18 +833,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -881,19 +849,20 @@ Get an existing PeeringConnectionOptions resource's state with the given name, I
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#PeeringConnectionOptionsState">PeeringConnectionOptionsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#PeeringConnectionOptions">PeeringConnectionOptions</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PeeringConnectionOptionsState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PeeringConnectionOptions</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accepter=None<span class="p">, </span>requester=None<span class="p">, </span>vpc_peering_connection_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accepter</span><span class="p">:</span> <span class="nx">Optional[PeeringConnectionOptionsAccepterArgs]</span> = None<span class="p">, </span><span class="nx">requester</span><span class="p">:</span> <span class="nx">Optional[PeeringConnectionOptionsRequesterArgs]</span> = None<span class="p">, </span><span class="nx">vpc_peering_connection_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PeeringConnectionOptions</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPeeringConnectionOptions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsState">PeeringConnectionOptionsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptions">PeeringConnectionOptions</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPeeringConnectionOptions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PeeringConnectionOptionsState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PeeringConnectionOptions</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.PeeringConnectionOptions.html">PeeringConnectionOptions</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.PeeringConnectionOptionsState.html">PeeringConnectionOptionsState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PeeringConnectionOptions</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PeeringConnectionOptionsState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -995,7 +964,6 @@ Get an existing PeeringConnectionOptions resource's state with the given name, I
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1003,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accepter_csharp">
 <a href="#state_accepter_csharp" style="color: inherit; text-decoration: inherit;">Accepter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter<wbr>Args</a></span>
     </dt>
@@ -1011,12 +979,11 @@ The following state arguments are supported:
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requester_csharp">
 <a href="#state_requester_csharp" style="color: inherit; text-decoration: inherit;">Requester</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester<wbr>Args</a></span>
     </dt>
@@ -1024,21 +991,18 @@ the peering connection (a maximum of one).
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vpcpeeringconnectionid_csharp">
 <a href="#state_vpcpeeringconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Peering<wbr>Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1047,7 +1011,7 @@ the peering connection (a maximum of one).
             title="Optional">
         <span id="state_accepter_go">
 <a href="#state_accepter_go" style="color: inherit; text-decoration: inherit;">Accepter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
     </dt>
@@ -1055,12 +1019,11 @@ the peering connection (a maximum of one).
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requester_go">
 <a href="#state_requester_go" style="color: inherit; text-decoration: inherit;">Requester</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
     </dt>
@@ -1068,21 +1031,18 @@ the peering connection (a maximum of one).
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vpcpeeringconnectionid_go">
 <a href="#state_vpcpeeringconnectionid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Peering<wbr>Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1091,7 +1051,7 @@ the peering connection (a maximum of one).
             title="Optional">
         <span id="state_accepter_nodejs">
 <a href="#state_accepter_nodejs" style="color: inherit; text-decoration: inherit;">accepter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
     </dt>
@@ -1099,12 +1059,11 @@ the peering connection (a maximum of one).
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requester_nodejs">
 <a href="#state_requester_nodejs" style="color: inherit; text-decoration: inherit;">requester</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
     </dt>
@@ -1112,21 +1071,18 @@ the peering connection (a maximum of one).
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vpcpeeringconnectionid_nodejs">
 <a href="#state_vpcpeeringconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Peering<wbr>Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1135,45 +1091,38 @@ the peering connection (a maximum of one).
             title="Optional">
         <span id="state_accepter_python">
 <a href="#state_accepter_python" style="color: inherit; text-decoration: inherit;">accepter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Dict[Peering<wbr>Connection<wbr>Options<wbr>Accepter]</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requester_python">
 <a href="#state_requester_python" style="color: inherit; text-decoration: inherit;">requester</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Dict[Peering<wbr>Connection<wbr>Options<wbr>Requester]</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vpc_peering_connection_id_python">
 <a href="#state_vpc_peering_connection_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>peering_<wbr>connection_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1183,20 +1132,8 @@ the peering connection (a maximum of one).
 ## Supporting Types
 
 
+
 <h4 id="peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PeeringConnectionOptionsAccepter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PeeringConnectionOptionsAccepter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsAccepterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsAccepterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.PeeringConnectionOptionsAccepterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.PeeringConnectionOptionsAccepter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1205,43 +1142,39 @@ the peering connection (a maximum of one).
             title="Optional">
         <span id="allowclassiclinktoremotevpc_csharp">
 <a href="#allowclassiclinktoremotevpc_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowremotevpcdnsresolution_csharp">
 <a href="#allowremotevpcdnsresolution_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_csharp">
 <a href="#allowvpctoremoteclassiclink_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1250,43 +1183,39 @@ connection. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span id="allowclassiclinktoremotevpc_go">
 <a href="#allowclassiclinktoremotevpc_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowremotevpcdnsresolution_go">
 <a href="#allowremotevpcdnsresolution_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_go">
 <a href="#allowvpctoremoteclassiclink_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1295,106 +1224,82 @@ connection. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span id="allowclassiclinktoremotevpc_nodejs">
 <a href="#allowclassiclinktoremotevpc_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowremotevpcdnsresolution_nodejs">
 <a href="#allowremotevpcdnsresolution_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_nodejs">
 <a href="#allowvpctoremoteclassiclink_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowclassiclinktoremotevpc_python">
-<a href="#allowclassiclinktoremotevpc_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
-</span> 
+        <span id="allow_classic_link_to_remote_vpc_python">
+<a href="#allow_classic_link_to_remote_vpc_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>classic_<wbr>link_<wbr>to_<wbr>remote_<wbr>vpc</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="allowremotevpcdnsresolution_python">
-<a href="#allowremotevpcdnsresolution_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
-</span> 
+        <span id="allow_remote_vpc_dns_resolution_python">
+<a href="#allow_remote_vpc_dns_resolution_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>remote_<wbr>vpc_<wbr>dns_<wbr>resolution</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="allowvpctoremoteclassiclink_python">
-<a href="#allowvpctoremoteclassiclink_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
-</span> 
+        <span id="allow_vpc_to_remote_classic_link_python">
+<a href="#allow_vpc_to_remote_classic_link_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>vpc_<wbr>to_<wbr>remote_<wbr>classic_<wbr>link</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PeeringConnectionOptionsRequester">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PeeringConnectionOptionsRequester">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsRequesterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#PeeringConnectionOptionsRequesterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.PeeringConnectionOptionsRequesterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.PeeringConnectionOptionsRequester.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1403,43 +1308,39 @@ connection. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span id="allowclassiclinktoremotevpc_csharp">
 <a href="#allowclassiclinktoremotevpc_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowremotevpcdnsresolution_csharp">
 <a href="#allowremotevpcdnsresolution_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_csharp">
 <a href="#allowvpctoremoteclassiclink_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1448,43 +1349,39 @@ connection. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span id="allowclassiclinktoremotevpc_go">
 <a href="#allowclassiclinktoremotevpc_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowremotevpcdnsresolution_go">
 <a href="#allowremotevpcdnsresolution_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_go">
 <a href="#allowvpctoremoteclassiclink_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1493,92 +1390,88 @@ connection. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span id="allowclassiclinktoremotevpc_nodejs">
 <a href="#allowclassiclinktoremotevpc_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowremotevpcdnsresolution_nodejs">
 <a href="#allowremotevpcdnsresolution_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_nodejs">
 <a href="#allowvpctoremoteclassiclink_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowclassiclinktoremotevpc_python">
-<a href="#allowclassiclinktoremotevpc_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
-</span> 
+        <span id="allow_classic_link_to_remote_vpc_python">
+<a href="#allow_classic_link_to_remote_vpc_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>classic_<wbr>link_<wbr>to_<wbr>remote_<wbr>vpc</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="allowremotevpcdnsresolution_python">
-<a href="#allowremotevpcdnsresolution_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
-</span> 
+        <span id="allow_remote_vpc_dns_resolution_python">
+<a href="#allow_remote_vpc_dns_resolution_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>remote_<wbr>vpc_<wbr>dns_<wbr>resolution</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="allowvpctoremoteclassiclink_python">
-<a href="#allowvpctoremoteclassiclink_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
-</span> 
+        <span id="allow_vpc_to_remote_classic_link_python">
+<a href="#allow_vpc_to_remote_classic_link_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>vpc_<wbr>to_<wbr>remote_<wbr>classic_<wbr>link</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection. This option is not supported for inter-region VPC peering.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+VPC Peering Connection Options can be imported using the `vpc peering id`, e.g.
 
-
-
+```sh
+ $ pulumi import aws:ec2/peeringConnectionOptions:PeeringConnectionOptions foo pcx-111aaa111
+```
 
 
 

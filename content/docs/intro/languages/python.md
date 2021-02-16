@@ -5,7 +5,7 @@ meta_desc: An overview of how to use Python for infrastructure as code
 menu:
   intro:
     parent: languages
-    weight: 4
+    weight: 2
 
 aliases: ["/docs/reference/python/"]
 ---
@@ -34,6 +34,10 @@ Although the template uses a very simple package structure, by placing `__main__
 {{% notes %}}
 Pulumi looks for a `python3` executable to use on `PATH`. If not found, it looks for a `python` executable. It expects the executable it finds to refer to Python 3.6 or above. This can be overridden by explicitly setting the `PULUMI_PYTHON_CMD` environment variable to the name of the Python executable to use.
 {{% /notes %}}
+
+## Pulumi Programming Model
+
+The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with Python and Pulumi, and the [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
 
 ## Using Pulumi PyPI Packages {#pypi-packages}
 
@@ -97,7 +101,7 @@ When managing the virtual environment on your own, you'll need to run any `pulum
 
 ### Adding a new dependency {#packages}
 
-There are many available Pulumi Python [packages]({{< relref "/docs/reference/pkg" >}}).
+There are many [Pulumi Python packages]({{< relref "/docs/reference/pkg" >}}) available.
 
 To install a new dependency in the virtual environment, add an entry to `requirements.txt`, and run the following in your project directory:
 

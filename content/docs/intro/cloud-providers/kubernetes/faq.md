@@ -65,7 +65,7 @@ The differences between the two are:
    Kubernetes v1.12, `kubectl` can also wait for resource initialization, though it only supports
    applying all resource configuration at one time.
 
-* Pulumi makes it easy to deploy the same app workload multiple times with default [auto-naming]({{< relref "/docs/intro/concepts/programming-model#autonaming" >}}).
+* Pulumi makes it easy to deploy the same app workload multiple times with default [auto-naming]({{< relref "/docs/intro/concepts/resources#autonaming" >}}).
 
 ## How does Pulumi compare to Helm?
 
@@ -116,7 +116,7 @@ const myapp = new k8s.yaml.ConfigFile("app", {file: "app.yaml"});
 import * as k8s as "@pulumi/kubernetes";
 
 // Deploy a version of the stable/wordpress chart.
-const wordpress = new k8s.helm.v2.Chart("wpdev", {
+const wordpress = new k8s.helm.v3.Chart("wpdev", {
     repo: "stable",
     version: "2.1.3",
     chart: "wordpress"

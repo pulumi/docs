@@ -1,8 +1,8 @@
 
 ---
 title: "IntegrationResponse"
-title_tag: "Resource IntegrationResponse | Module apigateway | Package AWS"
-meta_desc: "Explore the IntegrationResponse resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an HTTP Method Integration Response for an API Gateway Resource."
+title_tag: "aws.apigateway.IntegrationResponse"
+meta_desc: "Documentation for the aws.apigateway.IntegrationResponse resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -254,19 +254,19 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#IntegrationResponse">IntegrationResponse</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#IntegrationResponseArgs">IntegrationResponseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IntegrationResponse</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">IntegrationResponseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.IntegrationResponse">IntegrationResponse</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>content_handling=None<span class="p">, </span>http_method=None<span class="p">, </span>resource_id=None<span class="p">, </span>response_parameters=None<span class="p">, </span>response_templates=None<span class="p">, </span>rest_api=None<span class="p">, </span>selection_pattern=None<span class="p">, </span>status_code=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IntegrationResponse</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_handling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">response_templates</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">selection_pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#IntegrationResponse">NewIntegrationResponse</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#IntegrationResponseArgs">IntegrationResponseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#IntegrationResponse">IntegrationResponse</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIntegrationResponse</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">IntegrationResponseArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationResponse</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.IntegrationResponse.html">IntegrationResponse</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.IntegrationResponseArgs.html">IntegrationResponseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IntegrationResponse</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">IntegrationResponseArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -277,7 +277,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -287,7 +287,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#IntegrationResponseArgs">IntegrationResponseArgs</a></span>
+        <span class="property-type"><a href="#inputs">IntegrationResponseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -346,7 +346,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -356,7 +356,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#IntegrationResponseArgs">IntegrationResponseArgs</a></span>
+        <span class="property-type"><a href="#inputs">IntegrationResponseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -385,7 +385,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -395,7 +395,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.IntegrationResponseArgs.html">IntegrationResponseArgs</a></span>
+        <span class="property-type"><a href="#inputs">IntegrationResponseArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -418,12 +418,11 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
 
 ## IntegrationResponse Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The IntegrationResponse resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The IntegrationResponse resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -434,97 +433,88 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="httpmethod_csharp">
 <a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="restapi_csharp">
 <a href="#restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="statuscode_csharp">
 <a href="#statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contenthandling_csharp">
 <a href="#contenthandling_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responseparameters_csharp">
 <a href="#responseparameters_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsetemplates_csharp">
 <a href="#responsetemplates_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selectionpattern_csharp">
 <a href="#selectionpattern_csharp" style="color: inherit; text-decoration: inherit;">Selection<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression pattern used to choose
-an integration response based on the response from the backend. Setting this to `-` makes the integration the default one.
+an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -533,97 +523,88 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
             title="Required">
         <span id="httpmethod_go">
 <a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="restapi_go">
 <a href="#restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="statuscode_go">
 <a href="#statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contenthandling_go">
 <a href="#contenthandling_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responseparameters_go">
 <a href="#responseparameters_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsetemplates_go">
 <a href="#responsetemplates_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selectionpattern_go">
 <a href="#selectionpattern_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression pattern used to choose
-an integration response based on the response from the backend. Setting this to `-` makes the integration the default one.
+an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -632,97 +613,88 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
             title="Required">
         <span id="httpmethod_nodejs">
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="restapi_nodejs">
 <a href="#restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="statuscode_nodejs">
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contenthandling_nodejs">
 <a href="#contenthandling_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Handling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responseparameters_nodejs">
 <a href="#responseparameters_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responsetemplates_nodejs">
 <a href="#responsetemplates_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selectionpattern_nodejs">
 <a href="#selectionpattern_nodejs" style="color: inherit; text-decoration: inherit;">selection<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression pattern used to choose
-an integration response based on the response from the backend. Setting this to `-` makes the integration the default one.
+an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -731,106 +703,93 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
             title="Required">
         <span id="http_method_python">
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API resource ID
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rest_api_python">
 <a href="#rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_code_python">
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_handling_python">
 <a href="#content_handling_python" style="color: inherit; text-decoration: inherit;">content_<wbr>handling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="response_parameters_python">
 <a href="#response_parameters_python" style="color: inherit; text-decoration: inherit;">response_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="response_templates_python">
 <a href="#response_templates_python" style="color: inherit; text-decoration: inherit;">response_<wbr>templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selection_pattern_python">
 <a href="#selection_pattern_python" style="color: inherit; text-decoration: inherit;">selection_<wbr>pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression pattern used to choose
-an integration response based on the response from the backend. Setting this to `-` makes the integration the default one.
+an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the IntegrationResponse resource produces the following output properties:
-
 
 
 
@@ -841,15 +800,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -858,15 +815,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -875,15 +830,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -892,18 +845,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -913,19 +861,20 @@ Get an existing IntegrationResponse resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#IntegrationResponseState">IntegrationResponseState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#IntegrationResponse">IntegrationResponse</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">IntegrationResponseState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">IntegrationResponse</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>content_handling=None<span class="p">, </span>http_method=None<span class="p">, </span>resource_id=None<span class="p">, </span>response_parameters=None<span class="p">, </span>response_templates=None<span class="p">, </span>rest_api=None<span class="p">, </span>selection_pattern=None<span class="p">, </span>status_code=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_handling</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">http_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">response_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">response_templates</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">rest_api</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">selection_pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IntegrationResponse</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationResponse<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#IntegrationResponseState">IntegrationResponseState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#IntegrationResponse">IntegrationResponse</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegrationResponse<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">IntegrationResponseState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IntegrationResponse</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.IntegrationResponse.html">IntegrationResponse</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.IntegrationResponseState.html">IntegrationResponseState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">IntegrationResponse</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">IntegrationResponseState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1027,7 +976,6 @@ Get an existing IntegrationResponse resource's state with the given name, ID, an
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1035,97 +983,88 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_contenthandling_csharp">
 <a href="#state_contenthandling_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_csharp">
 <a href="#state_httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_csharp">
 <a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_responseparameters_csharp">
 <a href="#state_responseparameters_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_responsetemplates_csharp">
 <a href="#state_responsetemplates_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restapi_csharp">
 <a href="#state_restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selectionpattern_csharp">
 <a href="#state_selectionpattern_csharp" style="color: inherit; text-decoration: inherit;">Selection<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression pattern used to choose
-an integration response based on the response from the backend. Setting this to `-` makes the integration the default one.
+an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_statuscode_csharp">
 <a href="#state_statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1134,97 +1073,88 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
             title="Optional">
         <span id="state_contenthandling_go">
 <a href="#state_contenthandling_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_go">
 <a href="#state_httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_go">
 <a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_responseparameters_go">
 <a href="#state_responseparameters_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_responsetemplates_go">
 <a href="#state_responsetemplates_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restapi_go">
 <a href="#state_restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selectionpattern_go">
 <a href="#state_selectionpattern_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression pattern used to choose
-an integration response based on the response from the backend. Setting this to `-` makes the integration the default one.
+an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_statuscode_go">
 <a href="#state_statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1233,97 +1163,88 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
             title="Optional">
         <span id="state_contenthandling_nodejs">
 <a href="#state_contenthandling_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Handling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_nodejs">
 <a href="#state_httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_nodejs">
 <a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_responseparameters_nodejs">
 <a href="#state_responseparameters_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_responsetemplates_nodejs">
 <a href="#state_responsetemplates_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restapi_nodejs">
 <a href="#state_restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selectionpattern_nodejs">
 <a href="#state_selectionpattern_nodejs" style="color: inherit; text-decoration: inherit;">selection<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression pattern used to choose
-an integration response based on the response from the backend. Setting this to `-` makes the integration the default one.
+an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_statuscode_nodejs">
 <a href="#state_statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1332,94 +1253,86 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
             title="Optional">
         <span id="state_content_handling_python">
 <a href="#state_content_handling_python" style="color: inherit; text-decoration: inherit;">content_<wbr>handling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_http_method_python">
 <a href="#state_http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resource_id_python">
 <a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API resource ID
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_response_parameters_python">
 <a href="#state_response_parameters_python" style="color: inherit; text-decoration: inherit;">response_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_response_templates_python">
 <a href="#state_response_templates_python" style="color: inherit; text-decoration: inherit;">response_<wbr>templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rest_api_python">
 <a href="#state_rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selection_pattern_python">
 <a href="#state_selection_pattern_python" style="color: inherit; text-decoration: inherit;">selection_<wbr>pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the regular expression pattern used to choose
-an integration response based on the response from the backend. Setting this to `-` makes the integration the default one.
+an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_code_python">
 <a href="#state_status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1427,8 +1340,14 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 
 
 
+## Import
 
 
+`aws_api_gateway_integration_response` can be imported using `REST-API-ID/RESOURCE-ID/HTTP-METHOD/STATUS-CODE`, e.g.
+
+```sh
+ $ pulumi import aws:apigateway/integrationResponse:IntegrationResponse example 12345abcde/67890fghij/GET/200
+```
 
 
 

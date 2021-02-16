@@ -20,13 +20,17 @@ aliases: [
 ]
 ---
 
-Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.
+Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is set up correctly.
 
 ### Install Pulumi
 
 {{< install-pulumi >}}
+{{% notes "info" %}}
+All Windows examples in this tutorial assume you are running in PowerShell.
+{{% /notes %}}
+{{< /install-pulumi >}}
 
-Next, we'll install the required language runtime.
+Next, install the required language runtime, if you have not already.
 
 ### Install Language Runtime
 
@@ -50,17 +54,47 @@ Next, we'll install the required language runtime.
 {{< install-dotnet >}}
 {{% /choosable %}}
 
-Next, we'll configure AWS.
+Finally, configure Pulumi with AWS.
 
-### Configure AWS
+### Configure Pulumi to access your AWS account
 
-<a href="{{< relref "/docs/intro/cloud-providers/aws/setup" >}}" target="_blank">Configure AWS</a> so the Pulumi CLI can connect to AWS. If you have previously configured the <a href="https://aws.amazon.com/cli/" target="_blank">AWS CLI</a>, `aws`, Pulumi will respect and use your configuration settings.
+Pulumi requires cloud credentials to manage and provision resources. You must use an IAM user account that has **Programmatic access** with rights to deploy and manage resources handled through Pulumi. In this guide, your IAM user must have the `s3:CreateBucket` IAM policy action granted.
 
-If you have multiple AWS profiles set up, specify a different profile using one of the following ways:
+If you have previously <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html" target="_blank">installed</a> and <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html" target="_blank">configured</a> the AWS CLI, Pulumi will respect and use your configuration settings.
 
-* Set `AWS_PROFILE`as an <a href="{{< relref "/docs/intro/cloud-providers/aws/setup#environment-variables" >}}" target="_blank">environment variable</a>, or
-* After creating your project in the next step, run `pulumi config set aws:profile <profilename>`. See <a href="{{< relref "/docs/intro/cloud-providers/aws#configuration" >}}" target="_blank">AWS Configuration</a> for more configuration options.
+If you do not have the AWS CLI installed or plan on using Pulumi from within a CI/CD pipeline, <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" target="_blank">retrieve your access key ID and secret access key</a> and then set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables on your workstation.
 
-Next, we'll create a new project.
+{{< chooser os "linux,macos,windows" >}}
+{{% choosable os linux %}}
+
+```bash
+$ export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
+$ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
+```
+
+{{% /choosable %}}
+
+{{% choosable os macos %}}
+
+```bash
+$ export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
+$ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
+```
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
+
+```powershell
+> $env:AWS_ACCESS_KEY_ID = "<YOUR_ACCESS_KEY_ID>"
+> $env:AWS_SECRET_ACCESS_KEY = "<YOUR_SECRET_ACCESS_KEY>"
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
+For additional information on setting and using AWS credentials, see [AWS Setup]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}).
+
+Next, you'll create a new project.
 
 {{< get-started-stepper >}}

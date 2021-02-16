@@ -11,6 +11,8 @@ Explore the resources and functions of the pubsub module in the GCP package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="litesubscription" title="LiteSubscription"><span class="symbol resource"></span>LiteSubscription</a></li>
+    <li><a href="litetopic" title="LiteTopic"><span class="symbol resource"></span>LiteTopic</a></li>
     <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
     <li><a href="subscriptioniambinding" title="SubscriptionIAMBinding"><span class="symbol resource"></span>SubscriptionIAMBinding</a></li>
     <li><a href="subscriptioniammember" title="SubscriptionIAMMember"><span class="symbol resource"></span>SubscriptionIAMMember</a></li>
@@ -21,6 +23,11 @@ Explore the resources and functions of the pubsub module in the GCP package.
     <li><a href="topiciampolicy" title="TopicIAMPolicy"><span class="symbol resource"></span>TopicIAMPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="gettopic" title="GetTopic"><span class="symbol function"></span>GetTopic</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -28,26 +35,8 @@ Explore the resources and functions of the pubsub module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.html" title="Pulumi.Gcp.PubSub">Pulumi.Gcp.PubSub</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#" title="gcp/pubsub">gcp/pubsub</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#" title="@pulumi/gcp/pubsub">@pulumi/gcp/pubsub</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/pubsub" title="pulumi_gcp/pubsub">pulumi_gcp/pubsub</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

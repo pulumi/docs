@@ -1,8 +1,8 @@
 
 ---
 title: "BandwidthPackage"
-title_tag: "Resource BandwidthPackage | Module cen | Package AliCloud"
-meta_desc: "Explore the BandwidthPackage resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN bandwidth package resource. The CEN bandwidth package is an abstracted object that includes an interconnection bandwidth and interconnection areas. To buy a bandwidth package, you must specify the areas to connect. An area consists of one or more Alibaba Cloud regions. The areas in CEN include Mainland China, Asia Pacific, North America, and Europe."
+title_tag: "alicloud.cen.BandwidthPackage"
+meta_desc: "Documentation for the alicloud.cen.BandwidthPackage resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -28,14 +28,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var foo = new AliCloud.Cen.BandwidthPackage("foo", new AliCloud.Cen.BandwidthPackageArgs
+        var example = new AliCloud.Cen.BandwidthPackage("example", new AliCloud.Cen.BandwidthPackageArgs
         {
             Bandwidth = 5,
-            GeographicRegionIds = 
-            {
-                "China",
-                "Asia-Pacific",
-            },
+            CenBandwidthPackageName = "tf-testAccCenBandwidthPackageConfig",
+            GeographicRegionAId = "China",
+            GeographicRegionBId = "China",
         });
     }
 
@@ -45,7 +43,30 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cen.NewBandwidthPackage(ctx, "example", &cen.BandwidthPackageArgs{
+			Bandwidth:               pulumi.Int(5),
+			CenBandwidthPackageName: pulumi.String("tf-testAccCenBandwidthPackageConfig"),
+			GeographicRegionAId:     pulumi.String("China"),
+			GeographicRegionBId:     pulumi.String("China"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -53,12 +74,11 @@ Coming soon!
 import pulumi
 import pulumi_alicloud as alicloud
 
-foo = alicloud.cen.BandwidthPackage("foo",
+example = alicloud.cen.BandwidthPackage("example",
     bandwidth=5,
-    geographic_region_ids=[
-        "China",
-        "Asia-Pacific",
-    ])
+    cen_bandwidth_package_name="tf-testAccCenBandwidthPackageConfig",
+    geographic_region_a_id="China",
+    geographic_region_b_id="China")
 ```
 
 {{% /example %}}
@@ -69,12 +89,11 @@ foo = alicloud.cen.BandwidthPackage("foo",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const foo = new alicloud.cen.BandwidthPackage("foo", {
+const example = new alicloud.cen.BandwidthPackage("example", {
     bandwidth: 5,
-    geographicRegionIds: [
-        "China",
-        "Asia-Pacific",
-    ],
+    cenBandwidthPackageName: "tf-testAccCenBandwidthPackageConfig",
+    geographicRegionAId: "China",
+    geographicRegionBId: "China",
 });
 ```
 
@@ -88,19 +107,19 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthPackage">BandwidthPackage</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthPackageArgs">BandwidthPackageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthPackage">BandwidthPackage</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthPackageArgs">BandwidthPackageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.BandwidthPackage">BandwidthPackage</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bandwidth=None<span class="p">, </span>charge_type=None<span class="p">, </span>description=None<span class="p">, </span>geographic_region_ids=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.BandwidthPackage">BandwidthPackage</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cen_bandwidth_package_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geographic_region_a_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geographic_region_b_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geographic_region_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthPackage">NewBandwidthPackage</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthPackageArgs">BandwidthPackageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthPackage">BandwidthPackage</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthPackage">NewBandwidthPackage</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthPackageArgs">BandwidthPackageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthPackage">BandwidthPackage</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthPackage.html">BandwidthPackage</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthPackageArgs.html">BandwidthPackageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthPackage.html">BandwidthPackage</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthPackageArgs.html">BandwidthPackageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -111,7 +130,7 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -180,7 +199,7 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -219,7 +238,7 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -260,7 +279,6 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -268,71 +286,104 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="bandwidth_csharp">
 <a href="#bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="geographicregionids_csharp">
-<a href="#geographicregionids_csharp" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="cenbandwidthpackagename_csharp">
+<a href="#cenbandwidthpackagename_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="chargetype_csharp">
 <a href="#chargetype_csharp" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Field `charge_type` has been deprecated from version 1.97.0. Use `payment_type` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;charge_type&#39; has been deprecated from version 1.98.0. Use &#39;payment_type&#39; and instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="geographicregionaid_csharp">
+<a href="#geographicregionaid_csharp" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>AId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The area A to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geographicregionbid_csharp">
+<a href="#geographicregionbid_csharp" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>BId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The area B to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="geographicregionids_csharp">
+<a href="#geographicregionids_csharp" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Field `geographic_region_ids` has been deprecated from version 1.97.0. Use `geographic_region_a_id` and `geographic_region_b_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;geographic_region_ids&#39; has been deprecated from version 1.98.0. Use &#39;geographic_region_a_id&#39; and &#39;geographic_region_b_id&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+    <dd>{{% md %}}Field 'name' has been deprecated from version 1.97.0. Use `cen_bandwidth_package_name` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.98.0. Use &#39;cen_bandwidth_package_name&#39; and instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="paymenttype_csharp">
+<a href="#paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method. Valid value: `PostPaid` | `PrePaid`. Default to `PostPaid`. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
+    <dd>{{% md %}}The purchase period in month. Valid value: `1`, `2`, `3`, `6`, `12`. Default to `1`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -341,71 +392,104 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="bandwidth_go">
 <a href="#bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="geographicregionids_go">
-<a href="#geographicregionids_go" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="cenbandwidthpackagename_go">
+<a href="#cenbandwidthpackagename_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="chargetype_go">
 <a href="#chargetype_go" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Field `charge_type` has been deprecated from version 1.97.0. Use `payment_type` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;charge_type&#39; has been deprecated from version 1.98.0. Use &#39;payment_type&#39; and instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="geographicregionaid_go">
+<a href="#geographicregionaid_go" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>AId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The area A to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geographicregionbid_go">
+<a href="#geographicregionbid_go" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>BId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The area B to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="geographicregionids_go">
+<a href="#geographicregionids_go" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Field `geographic_region_ids` has been deprecated from version 1.97.0. Use `geographic_region_a_id` and `geographic_region_b_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;geographic_region_ids&#39; has been deprecated from version 1.98.0. Use &#39;geographic_region_a_id&#39; and &#39;geographic_region_b_id&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+    <dd>{{% md %}}Field 'name' has been deprecated from version 1.97.0. Use `cen_bandwidth_package_name` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.98.0. Use &#39;cen_bandwidth_package_name&#39; and instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="paymenttype_go">
+<a href="#paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method. Valid value: `PostPaid` | `PrePaid`. Default to `PostPaid`. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
+    <dd>{{% md %}}The purchase period in month. Valid value: `1`, `2`, `3`, `6`, `12`. Default to `1`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -414,71 +498,104 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="bandwidth_nodejs">
 <a href="#bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="geographicregionids_nodejs">
-<a href="#geographicregionids_nodejs" style="color: inherit; text-decoration: inherit;">geographic<wbr>Region<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="cenbandwidthpackagename_nodejs">
+<a href="#cenbandwidthpackagename_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="chargetype_nodejs">
 <a href="#chargetype_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Field `charge_type` has been deprecated from version 1.97.0. Use `payment_type` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;charge_type&#39; has been deprecated from version 1.98.0. Use &#39;payment_type&#39; and instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="geographicregionaid_nodejs">
+<a href="#geographicregionaid_nodejs" style="color: inherit; text-decoration: inherit;">geographic<wbr>Region<wbr>AId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The area A to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geographicregionbid_nodejs">
+<a href="#geographicregionbid_nodejs" style="color: inherit; text-decoration: inherit;">geographic<wbr>Region<wbr>BId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The area B to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="geographicregionids_nodejs">
+<a href="#geographicregionids_nodejs" style="color: inherit; text-decoration: inherit;">geographic<wbr>Region<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Field `geographic_region_ids` has been deprecated from version 1.97.0. Use `geographic_region_a_id` and `geographic_region_b_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;geographic_region_ids&#39; has been deprecated from version 1.98.0. Use &#39;geographic_region_a_id&#39; and &#39;geographic_region_b_id&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+    <dd>{{% md %}}Field 'name' has been deprecated from version 1.97.0. Use `cen_bandwidth_package_name` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.98.0. Use &#39;cen_bandwidth_package_name&#39; and instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="paymenttype_nodejs">
+<a href="#paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method. Valid value: `PostPaid` | `PrePaid`. Default to `PostPaid`. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
+    <dd>{{% md %}}The purchase period in month. Valid value: `1`, `2`, `3`, `6`, `12`. Default to `1`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -487,80 +604,109 @@ The BandwidthPackage resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="bandwidth_python">
 <a href="#bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="geographic_region_ids_python">
-<a href="#geographic_region_ids_python" style="color: inherit; text-decoration: inherit;">geographic_<wbr>region_<wbr>ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="cen_bandwidth_package_name_python">
+<a href="#cen_bandwidth_package_name_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>bandwidth_<wbr>package_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="charge_type_python">
 <a href="#charge_type_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Field `charge_type` has been deprecated from version 1.97.0. Use `payment_type` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;charge_type&#39; has been deprecated from version 1.98.0. Use &#39;payment_type&#39; and instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="geographic_region_a_id_python">
+<a href="#geographic_region_a_id_python" style="color: inherit; text-decoration: inherit;">geographic_<wbr>region_<wbr>a_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The area A to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="geographic_region_b_id_python">
+<a href="#geographic_region_b_id_python" style="color: inherit; text-decoration: inherit;">geographic_<wbr>region_<wbr>b_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The area B to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="geographic_region_ids_python">
+<a href="#geographic_region_ids_python" style="color: inherit; text-decoration: inherit;">geographic_<wbr>region_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Field `geographic_region_ids` has been deprecated from version 1.97.0. Use `geographic_region_a_id` and `geographic_region_b_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;geographic_region_ids&#39; has been deprecated from version 1.98.0. Use &#39;geographic_region_a_id&#39; and &#39;geographic_region_b_id&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+    <dd>{{% md %}}Field 'name' has been deprecated from version 1.97.0. Use `cen_bandwidth_package_name` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.98.0. Use &#39;cen_bandwidth_package_name&#39; and instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="payment_type_python">
+<a href="#payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The billing method. Valid value: `PostPaid` | `PrePaid`. Default to `PostPaid`. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
+    <dd>{{% md %}}The purchase period in month. Valid value: `1`, `2`, `3`, `6`, `12`. Default to `1`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the BandwidthPackage resource produces the following output properties:
-
 
 
 
@@ -571,37 +717,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="expiredtime_csharp">
 <a href="#expiredtime_csharp" style="color: inherit; text-decoration: inherit;">Expired<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the bandwidth, including "InUse" and "Idle".
+    <dd>{{% md %}}The association status of the bandwidth package.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -610,37 +752,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="expiredtime_go">
 <a href="#expiredtime_go" style="color: inherit; text-decoration: inherit;">Expired<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the bandwidth, including "InUse" and "Idle".
+    <dd>{{% md %}}The association status of the bandwidth package.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -649,37 +787,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="expiredtime_nodejs">
 <a href="#expiredtime_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the bandwidth, including "InUse" and "Idle".
+    <dd>{{% md %}}The association status of the bandwidth package.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -688,40 +822,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="expired_time_python">
 <a href="#expired_time_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the bandwidth, including "InUse" and "Idle".
+    <dd>{{% md %}}The association status of the bandwidth package.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -731,19 +858,20 @@ Get an existing BandwidthPackage resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthPackageState">BandwidthPackageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthPackage">BandwidthPackage</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthPackageState">BandwidthPackageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthPackage">BandwidthPackage</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bandwidth=None<span class="p">, </span>charge_type=None<span class="p">, </span>description=None<span class="p">, </span>expired_time=None<span class="p">, </span>geographic_region_ids=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>status=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cen_bandwidth_package_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">charge_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expired_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geographic_region_a_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geographic_region_b_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geographic_region_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">payment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> BandwidthPackage</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBandwidthPackage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthPackageState">BandwidthPackageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthPackage">BandwidthPackage</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBandwidthPackage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthPackageState">BandwidthPackageState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthPackage">BandwidthPackage</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthPackage.html">BandwidthPackage</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthPackageState.html">BandwidthPackageState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthPackage.html">BandwidthPackage</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthPackageState.html">BandwidthPackageState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -845,7 +973,6 @@ Get an existing BandwidthPackage resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -853,93 +980,124 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bandwidth_csharp">
 <a href="#state_bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cenbandwidthpackagename_csharp">
+<a href="#state_cenbandwidthpackagename_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_chargetype_csharp">
 <a href="#state_chargetype_csharp" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Field `charge_type` has been deprecated from version 1.97.0. Use `payment_type` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;charge_type&#39; has been deprecated from version 1.98.0. Use &#39;payment_type&#39; and instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_expiredtime_csharp">
 <a href="#state_expiredtime_csharp" style="color: inherit; text-decoration: inherit;">Expired<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="state_geographicregionaid_csharp">
+<a href="#state_geographicregionaid_csharp" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>AId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The area A to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_geographicregionbid_csharp">
+<a href="#state_geographicregionbid_csharp" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>BId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The area B to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_geographicregionids_csharp">
 <a href="#state_geographicregionids_csharp" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Field `geographic_region_ids` has been deprecated from version 1.97.0. Use `geographic_region_a_id` and `geographic_region_b_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;geographic_region_ids&#39; has been deprecated from version 1.98.0. Use &#39;geographic_region_a_id&#39; and &#39;geographic_region_b_id&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+    <dd>{{% md %}}Field 'name' has been deprecated from version 1.97.0. Use `cen_bandwidth_package_name` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.98.0. Use &#39;cen_bandwidth_package_name&#39; and instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_paymenttype_csharp">
+<a href="#state_paymenttype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method. Valid value: `PostPaid` | `PrePaid`. Default to `PostPaid`. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
+    <dd>{{% md %}}The purchase period in month. Valid value: `1`, `2`, `3`, `6`, `12`. Default to `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the bandwidth, including "InUse" and "Idle".
+    <dd>{{% md %}}The association status of the bandwidth package.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -948,93 +1106,124 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bandwidth_go">
 <a href="#state_bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cenbandwidthpackagename_go">
+<a href="#state_cenbandwidthpackagename_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_chargetype_go">
 <a href="#state_chargetype_go" style="color: inherit; text-decoration: inherit;">Charge<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Field `charge_type` has been deprecated from version 1.97.0. Use `payment_type` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;charge_type&#39; has been deprecated from version 1.98.0. Use &#39;payment_type&#39; and instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_expiredtime_go">
 <a href="#state_expiredtime_go" style="color: inherit; text-decoration: inherit;">Expired<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="state_geographicregionaid_go">
+<a href="#state_geographicregionaid_go" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>AId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The area A to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_geographicregionbid_go">
+<a href="#state_geographicregionbid_go" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>BId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The area B to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_geographicregionids_go">
 <a href="#state_geographicregionids_go" style="color: inherit; text-decoration: inherit;">Geographic<wbr>Region<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Field `geographic_region_ids` has been deprecated from version 1.97.0. Use `geographic_region_a_id` and `geographic_region_b_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;geographic_region_ids&#39; has been deprecated from version 1.98.0. Use &#39;geographic_region_a_id&#39; and &#39;geographic_region_b_id&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+    <dd>{{% md %}}Field 'name' has been deprecated from version 1.97.0. Use `cen_bandwidth_package_name` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.98.0. Use &#39;cen_bandwidth_package_name&#39; and instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_paymenttype_go">
+<a href="#state_paymenttype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method. Valid value: `PostPaid` | `PrePaid`. Default to `PostPaid`. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_period_go">
 <a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
+    <dd>{{% md %}}The purchase period in month. Valid value: `1`, `2`, `3`, `6`, `12`. Default to `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the bandwidth, including "InUse" and "Idle".
+    <dd>{{% md %}}The association status of the bandwidth package.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1043,93 +1232,124 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bandwidth_nodejs">
 <a href="#state_bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cenbandwidthpackagename_nodejs">
+<a href="#state_cenbandwidthpackagename_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Bandwidth<wbr>Package<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_chargetype_nodejs">
 <a href="#state_chargetype_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Field `charge_type` has been deprecated from version 1.97.0. Use `payment_type` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;charge_type&#39; has been deprecated from version 1.98.0. Use &#39;payment_type&#39; and instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_expiredtime_nodejs">
 <a href="#state_expiredtime_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="state_geographicregionaid_nodejs">
+<a href="#state_geographicregionaid_nodejs" style="color: inherit; text-decoration: inherit;">geographic<wbr>Region<wbr>AId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The area A to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_geographicregionbid_nodejs">
+<a href="#state_geographicregionbid_nodejs" style="color: inherit; text-decoration: inherit;">geographic<wbr>Region<wbr>BId</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The area B to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_geographicregionids_nodejs">
 <a href="#state_geographicregionids_nodejs" style="color: inherit; text-decoration: inherit;">geographic<wbr>Region<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Field `geographic_region_ids` has been deprecated from version 1.97.0. Use `geographic_region_a_id` and `geographic_region_b_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;geographic_region_ids&#39; has been deprecated from version 1.98.0. Use &#39;geographic_region_a_id&#39; and &#39;geographic_region_b_id&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+    <dd>{{% md %}}Field 'name' has been deprecated from version 1.97.0. Use `cen_bandwidth_package_name` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.98.0. Use &#39;cen_bandwidth_package_name&#39; and instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_paymenttype_nodejs">
+<a href="#state_paymenttype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method. Valid value: `PostPaid` | `PrePaid`. Default to `PostPaid`. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
+    <dd>{{% md %}}The purchase period in month. Valid value: `1`, `2`, `3`, `6`, `12`. Default to `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the bandwidth, including "InUse" and "Idle".
+    <dd>{{% md %}}The association status of the bandwidth package.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1138,90 +1358,122 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bandwidth_python">
 <a href="#state_bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cen_bandwidth_package_name_python">
+<a href="#state_cen_bandwidth_package_name_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>bandwidth_<wbr>package_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_charge_type_python">
 <a href="#state_charge_type_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}Field `charge_type` has been deprecated from version 1.97.0. Use `payment_type` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;charge_type&#39; has been deprecated from version 1.98.0. Use &#39;payment_type&#39; and instead.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_expired_time_python">
 <a href="#state_expired_time_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="state_geographic_region_a_id_python">
+<a href="#state_geographic_region_a_id_python" style="color: inherit; text-decoration: inherit;">geographic_<wbr>region_<wbr>a_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The area A to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_geographic_region_b_id_python">
+<a href="#state_geographic_region_b_id_python" style="color: inherit; text-decoration: inherit;">geographic_<wbr>region_<wbr>b_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The area B to which the network instance belongs. Valid values: `China` | `North-America` | `Asia-Pacific` | `Europe` | `Australia`.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_geographic_region_ids_python">
 <a href="#state_geographic_region_ids_python" style="color: inherit; text-decoration: inherit;">geographic_<wbr>region_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East | Australia.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}Field `geographic_region_ids` has been deprecated from version 1.97.0. Use `geographic_region_a_id` and `geographic_region_b_id` instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;geographic_region_ids&#39; has been deprecated from version 1.98.0. Use &#39;geographic_region_a_id&#39; and &#39;geographic_region_b_id&#39; instead.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
+    <dd>{{% md %}}Field 'name' has been deprecated from version 1.97.0. Use `cen_bandwidth_package_name` and instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.98.0. Use &#39;cen_bandwidth_package_name&#39; and instead.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_payment_type_python">
+<a href="#state_payment_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The billing method. Valid value: `PostPaid` | `PrePaid`. Default to `PostPaid`. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_period_python">
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
+    <dd>{{% md %}}The purchase period in month. Valid value: `1`, `2`, `3`, `6`, `12`. Default to `1`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the bandwidth, including "InUse" and "Idle".
+    <dd>{{% md %}}The association status of the bandwidth package.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1229,8 +1481,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+CEN bandwidth package can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cen/bandwidthPackage:BandwidthPackage example cenbwp-abc123456
+```
 
 
 
@@ -1242,6 +1500,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

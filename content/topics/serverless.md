@@ -71,7 +71,7 @@ examples:
               routes: [{
                   path: "/{route+}",
                   method: "GET",
-                  eventHandler: (req, res) => {
+                  eventHandler: async (event) => {
                       let route = event.pathParameters!["route"];
                       let client = new aws.sdk.DynamoDB.DocumentClient();
 

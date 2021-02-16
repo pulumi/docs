@@ -14,14 +14,14 @@ This page details how to use [JetBrains TeamCity](https://www.jetbrains.com/team
 
 - A working installation of TeamCity
 - An account on the [Pulumi Console](https://app.pulumi.com).
-- The latest version of Pulumi. Installation instructions are [here]({{< relref "/docs/get-started/install" >}}).
+- [Latest version of Pulumi]({{< relref "/docs/get-started/install" >}}).
 - Setup a new project and [stack]({{< relref "/docs/intro/concepts/stack" >}}) using one of our
 [Get Started]({{< relref "/docs/get-started" >}}) guides or by running [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new.md" >}})
 and choosing one of the many templates that are available.
 
 ## Sample Project
 
-The example we are going to deploy is located [here](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate).
+[Example Repository](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate).
 You may download the project and upload it to your own repo to avoid having to clone the entire Pulumi Examples repo onto
 your TeamCity server.
 

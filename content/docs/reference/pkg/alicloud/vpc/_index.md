@@ -36,6 +36,7 @@ Explore the resources and functions of the vpc module in the AliCloud package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getcommonbandwidthpackages" title="GetCommonBandwidthPackages"><span class="symbol function"></span>GetCommonBandwidthPackages</a></li>
+    <li><a href="getenhancednatavailablezones" title="GetEnhancedNatAvailableZones"><span class="symbol function"></span>GetEnhancedNatAvailableZones</a></li>
     <li><a href="getforwardentries" title="GetForwardEntries"><span class="symbol function"></span>GetForwardEntries</a></li>
     <li><a href="getnatgateways" title="GetNatGateways"><span class="symbol function"></span>GetNatGateways</a></li>
     <li><a href="getnetworks" title="GetNetworks"><span class="symbol function"></span>GetNetworks</a></li>
@@ -55,26 +56,8 @@ Explore the resources and functions of the vpc module in the AliCloud package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.html" title="Pulumi.AliCloud.Vpc">Pulumi.AliCloud.Vpc</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#" title="alicloud/vpc">alicloud/vpc</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#" title="@pulumi/alicloud/vpc">@pulumi/alicloud/vpc</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc" title="pulumi_alicloud/vpc">pulumi_alicloud/vpc</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

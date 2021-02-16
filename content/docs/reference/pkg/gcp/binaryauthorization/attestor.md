@@ -1,8 +1,8 @@
 
 ---
 title: "Attestor"
-title_tag: "Resource Attestor | Module binaryauthorization | Package GCP"
-meta_desc: "Explore the Attestor resource of the binaryauthorization module, including examples, input properties, output properties, lookup functions, and supporting types. An attestor that attests to container image artifacts."
+title_tag: "gcp.binaryauthorization.Attestor"
+meta_desc: "Documentation for the gcp.binaryauthorization.Attestor resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -18,6 +18,382 @@ To get more information about Attestor, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/binary-authorization/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Binary Authorization Attestor Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var note = new Gcp.ContainerAnalysis.Note("note", new Gcp.ContainerAnalysis.NoteArgs
+        {
+            AttestationAuthority = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs
+            {
+                Hint = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs
+                {
+                    HumanReadableName = "Attestor Note",
+                },
+            },
+        });
+        var attestor = new Gcp.BinaryAuthorization.Attestor("attestor", new Gcp.BinaryAuthorization.AttestorArgs
+        {
+            AttestationAuthorityNote = new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNoteArgs
+            {
+                NoteReference = note.Name,
+                PublicKeys = 
+                {
+                    new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNotePublicKeyArgs
+                    {
+                        AsciiArmoredPgpPublicKey = @"mQENBFtP0doBCADF+joTiXWKVuP8kJt3fgpBSjT9h8ezMfKA4aXZctYLx5wslWQl
+bB7Iu2ezkECNzoEeU7WxUe8a61pMCh9cisS9H5mB2K2uM4Jnf8tgFeXn3akJDVo0
+oR1IC+Dp9mXbRSK3MAvKkOwWlG99sx3uEdvmeBRHBOO+grchLx24EThXFOyP9Fk6
+V39j6xMjw4aggLD15B4V0v9JqBDdJiIYFzszZDL6pJwZrzcP0z8JO4rTZd+f64bD
+Mpj52j/pQfA8lZHOaAgb1OrthLdMrBAjoDjArV4Ek7vSbrcgYWcI6BhsQrFoxKdX
+83TZKai55ZCfCLIskwUIzA1NLVwyzCS+fSN/ABEBAAG0KCJUZXN0IEF0dGVzdG9y
+IiA8ZGFuYWhvZmZtYW5AZ29vZ2xlLmNvbT6JAU4EEwEIADgWIQRfWkqHt6hpTA1L
+uY060eeM4dc66AUCW0/R2gIbLwULCQgHAgYVCgkICwIEFgIDAQIeAQIXgAAKCRA6
+0eeM4dc66HdpCAC4ot3b0OyxPb0Ip+WT2U0PbpTBPJklesuwpIrM4Lh0N+1nVRLC
+51WSmVbM8BiAFhLbN9LpdHhds1kUrHF7+wWAjdR8sqAj9otc6HGRM/3qfa2qgh+U
+WTEk/3us/rYSi7T7TkMuutRMIa1IkR13uKiW56csEMnbOQpn9rDqwIr5R8nlZP5h
+MAU9vdm1DIv567meMqTaVZgR3w7bck2P49AO8lO5ERFpVkErtu/98y+rUy9d789l
++OPuS1NGnxI1YKsNaWJF4uJVuvQuZ1twrhCbGNtVorO2U12+cEq+YtUxj7kmdOC1
+qoIRW6y0+UlAc+MbqfL0ziHDOAmcqz1GnROg
+=6Bvm
+",
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/binaryauthorization"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		note, err := containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
+			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
+				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
+					HumanReadableName: pulumi.String("Attestor Note"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = binaryauthorization.NewAttestor(ctx, "attestor", &binaryauthorization.AttestorArgs{
+			AttestationAuthorityNote: &binaryauthorization.AttestorAttestationAuthorityNoteArgs{
+				NoteReference: note.Name,
+				PublicKeys: binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArray{
+					&binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArgs{
+						AsciiArmoredPgpPublicKey: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "mQENBFtP0doBCADF+joTiXWKVuP8kJt3fgpBSjT9h8ezMfKA4aXZctYLx5wslWQl\n", "bB7Iu2ezkECNzoEeU7WxUe8a61pMCh9cisS9H5mB2K2uM4Jnf8tgFeXn3akJDVo0\n", "oR1IC+Dp9mXbRSK3MAvKkOwWlG99sx3uEdvmeBRHBOO+grchLx24EThXFOyP9Fk6\n", "V39j6xMjw4aggLD15B4V0v9JqBDdJiIYFzszZDL6pJwZrzcP0z8JO4rTZd+f64bD\n", "Mpj52j/pQfA8lZHOaAgb1OrthLdMrBAjoDjArV4Ek7vSbrcgYWcI6BhsQrFoxKdX\n", "83TZKai55ZCfCLIskwUIzA1NLVwyzCS+fSN/ABEBAAG0KCJUZXN0IEF0dGVzdG9y\n", "IiA8ZGFuYWhvZmZtYW5AZ29vZ2xlLmNvbT6JAU4EEwEIADgWIQRfWkqHt6hpTA1L\n", "uY060eeM4dc66AUCW0/R2gIbLwULCQgHAgYVCgkICwIEFgIDAQIeAQIXgAAKCRA6\n", "0eeM4dc66HdpCAC4ot3b0OyxPb0Ip+WT2U0PbpTBPJklesuwpIrM4Lh0N+1nVRLC\n", "51WSmVbM8BiAFhLbN9LpdHhds1kUrHF7+wWAjdR8sqAj9otc6HGRM/3qfa2qgh+U\n", "WTEk/3us/rYSi7T7TkMuutRMIa1IkR13uKiW56csEMnbOQpn9rDqwIr5R8nlZP5h\n", "MAU9vdm1DIv567meMqTaVZgR3w7bck2P49AO8lO5ERFpVkErtu/98y+rUy9d789l\n", "+OPuS1NGnxI1YKsNaWJF4uJVuvQuZ1twrhCbGNtVorO2U12+cEq+YtUxj7kmdOC1\n", "qoIRW6y0+UlAc+MbqfL0ziHDOAmcqz1GnROg\n", "=6Bvm\n")),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+note = gcp.containeranalysis.Note("note", attestation_authority=gcp.containeranalysis.NoteAttestationAuthorityArgs(
+    hint=gcp.containeranalysis.NoteAttestationAuthorityHintArgs(
+        human_readable_name="Attestor Note",
+    ),
+))
+attestor = gcp.binaryauthorization.Attestor("attestor", attestation_authority_note=gcp.binaryauthorization.AttestorAttestationAuthorityNoteArgs(
+    note_reference=note.name,
+    public_keys=[{
+        "asciiArmoredPgpPublicKey": """mQENBFtP0doBCADF+joTiXWKVuP8kJt3fgpBSjT9h8ezMfKA4aXZctYLx5wslWQl
+bB7Iu2ezkECNzoEeU7WxUe8a61pMCh9cisS9H5mB2K2uM4Jnf8tgFeXn3akJDVo0
+oR1IC+Dp9mXbRSK3MAvKkOwWlG99sx3uEdvmeBRHBOO+grchLx24EThXFOyP9Fk6
+V39j6xMjw4aggLD15B4V0v9JqBDdJiIYFzszZDL6pJwZrzcP0z8JO4rTZd+f64bD
+Mpj52j/pQfA8lZHOaAgb1OrthLdMrBAjoDjArV4Ek7vSbrcgYWcI6BhsQrFoxKdX
+83TZKai55ZCfCLIskwUIzA1NLVwyzCS+fSN/ABEBAAG0KCJUZXN0IEF0dGVzdG9y
+IiA8ZGFuYWhvZmZtYW5AZ29vZ2xlLmNvbT6JAU4EEwEIADgWIQRfWkqHt6hpTA1L
+uY060eeM4dc66AUCW0/R2gIbLwULCQgHAgYVCgkICwIEFgIDAQIeAQIXgAAKCRA6
+0eeM4dc66HdpCAC4ot3b0OyxPb0Ip+WT2U0PbpTBPJklesuwpIrM4Lh0N+1nVRLC
+51WSmVbM8BiAFhLbN9LpdHhds1kUrHF7+wWAjdR8sqAj9otc6HGRM/3qfa2qgh+U
+WTEk/3us/rYSi7T7TkMuutRMIa1IkR13uKiW56csEMnbOQpn9rDqwIr5R8nlZP5h
+MAU9vdm1DIv567meMqTaVZgR3w7bck2P49AO8lO5ERFpVkErtu/98y+rUy9d789l
++OPuS1NGnxI1YKsNaWJF4uJVuvQuZ1twrhCbGNtVorO2U12+cEq+YtUxj7kmdOC1
+qoIRW6y0+UlAc+MbqfL0ziHDOAmcqz1GnROg
+=6Bvm
+""",
+    }],
+))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const note = new gcp.containeranalysis.Note("note", {attestationAuthority: {
+    hint: {
+        humanReadableName: "Attestor Note",
+    },
+}});
+const attestor = new gcp.binaryauthorization.Attestor("attestor", {attestationAuthorityNote: {
+    noteReference: note.name,
+    publicKeys: [{
+        asciiArmoredPgpPublicKey: `mQENBFtP0doBCADF+joTiXWKVuP8kJt3fgpBSjT9h8ezMfKA4aXZctYLx5wslWQl
+bB7Iu2ezkECNzoEeU7WxUe8a61pMCh9cisS9H5mB2K2uM4Jnf8tgFeXn3akJDVo0
+oR1IC+Dp9mXbRSK3MAvKkOwWlG99sx3uEdvmeBRHBOO+grchLx24EThXFOyP9Fk6
+V39j6xMjw4aggLD15B4V0v9JqBDdJiIYFzszZDL6pJwZrzcP0z8JO4rTZd+f64bD
+Mpj52j/pQfA8lZHOaAgb1OrthLdMrBAjoDjArV4Ek7vSbrcgYWcI6BhsQrFoxKdX
+83TZKai55ZCfCLIskwUIzA1NLVwyzCS+fSN/ABEBAAG0KCJUZXN0IEF0dGVzdG9y
+IiA8ZGFuYWhvZmZtYW5AZ29vZ2xlLmNvbT6JAU4EEwEIADgWIQRfWkqHt6hpTA1L
+uY060eeM4dc66AUCW0/R2gIbLwULCQgHAgYVCgkICwIEFgIDAQIeAQIXgAAKCRA6
+0eeM4dc66HdpCAC4ot3b0OyxPb0Ip+WT2U0PbpTBPJklesuwpIrM4Lh0N+1nVRLC
+51WSmVbM8BiAFhLbN9LpdHhds1kUrHF7+wWAjdR8sqAj9otc6HGRM/3qfa2qgh+U
+WTEk/3us/rYSi7T7TkMuutRMIa1IkR13uKiW56csEMnbOQpn9rDqwIr5R8nlZP5h
+MAU9vdm1DIv567meMqTaVZgR3w7bck2P49AO8lO5ERFpVkErtu/98y+rUy9d789l
++OPuS1NGnxI1YKsNaWJF4uJVuvQuZ1twrhCbGNtVorO2U12+cEq+YtUxj7kmdOC1
+qoIRW6y0+UlAc+MbqfL0ziHDOAmcqz1GnROg
+=6Bvm
+`,
+    }],
+}});
+```
+
+{{% /example %}}
+
+### Binary Authorization Attestor Kms
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
+        {
+            Location = "global",
+        });
+        var crypto_key = new Gcp.Kms.CryptoKey("crypto-key", new Gcp.Kms.CryptoKeyArgs
+        {
+            KeyRing = keyring.Id,
+            Purpose = "ASYMMETRIC_SIGN",
+            VersionTemplate = new Gcp.Kms.Inputs.CryptoKeyVersionTemplateArgs
+            {
+                Algorithm = "RSA_SIGN_PKCS1_4096_SHA512",
+            },
+        });
+        var version = crypto_key.Id.Apply(id => Gcp.Kms.GetKMSCryptoKeyVersion.InvokeAsync(new Gcp.Kms.GetKMSCryptoKeyVersionArgs
+        {
+            CryptoKey = id,
+        }));
+        var note = new Gcp.ContainerAnalysis.Note("note", new Gcp.ContainerAnalysis.NoteArgs
+        {
+            AttestationAuthority = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs
+            {
+                Hint = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs
+                {
+                    HumanReadableName = "Attestor Note",
+                },
+            },
+        });
+        var attestor = new Gcp.BinaryAuthorization.Attestor("attestor", new Gcp.BinaryAuthorization.AttestorArgs
+        {
+            AttestationAuthorityNote = new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNoteArgs
+            {
+                NoteReference = note.Name,
+                PublicKeys = 
+                {
+                    new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNotePublicKeyArgs
+                    {
+                        Id = version.Apply(version => version.Id),
+                        PkixPublicKey = new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs
+                        {
+                            PublicKeyPem = version.Apply(version => version.PublicKeys[0].Pem),
+                            SignatureAlgorithm = version.Apply(version => version.PublicKeys[0].Algorithm),
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/binaryauthorization"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		keyring, err := kms.NewKeyRing(ctx, "keyring", &kms.KeyRingArgs{
+			Location: pulumi.String("global"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = kms.NewCryptoKey(ctx, "crypto_key", &kms.CryptoKeyArgs{
+			KeyRing: keyring.ID(),
+			Purpose: pulumi.String("ASYMMETRIC_SIGN"),
+			VersionTemplate: &kms.CryptoKeyVersionTemplateArgs{
+				Algorithm: pulumi.String("RSA_SIGN_PKCS1_4096_SHA512"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		note, err := containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
+			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
+				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
+					HumanReadableName: pulumi.String("Attestor Note"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = binaryauthorization.NewAttestor(ctx, "attestor", &binaryauthorization.AttestorArgs{
+			AttestationAuthorityNote: &binaryauthorization.AttestorAttestationAuthorityNoteArgs{
+				NoteReference: note.Name,
+				PublicKeys: binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArray{
+					&binaryauthorization.AttestorAttestationAuthorityNotePublicKeyArgs{
+						Id: version.ApplyT(func(version kms.GetKMSCryptoKeyVersionResult) (string, error) {
+							return version.Id, nil
+						}).(pulumi.StringOutput),
+						PkixPublicKey: &binaryauthorization.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs{
+							PublicKeyPem: version.ApplyT(func(version kms.GetKMSCryptoKeyVersionResult) (string, error) {
+								return version.PublicKeys[0].Pem, nil
+							}).(pulumi.StringOutput),
+							SignatureAlgorithm: version.ApplyT(func(version kms.GetKMSCryptoKeyVersionResult) (string, error) {
+								return version.PublicKeys[0].Algorithm, nil
+							}).(pulumi.StringOutput),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+crypto_key = gcp.kms.CryptoKey("crypto-key",
+    key_ring=keyring.id,
+    purpose="ASYMMETRIC_SIGN",
+    version_template=gcp.kms.CryptoKeyVersionTemplateArgs(
+        algorithm="RSA_SIGN_PKCS1_4096_SHA512",
+    ))
+version = crypto_key.id.apply(lambda id: gcp.kms.get_kms_crypto_key_version(crypto_key=id))
+note = gcp.containeranalysis.Note("note", attestation_authority=gcp.containeranalysis.NoteAttestationAuthorityArgs(
+    hint=gcp.containeranalysis.NoteAttestationAuthorityHintArgs(
+        human_readable_name="Attestor Note",
+    ),
+))
+attestor = gcp.binaryauthorization.Attestor("attestor", attestation_authority_note=gcp.binaryauthorization.AttestorAttestationAuthorityNoteArgs(
+    note_reference=note.name,
+    public_keys=[{
+        "id": version.id,
+        "pkixPublicKey": {
+            "publicKeyPem": version.public_keys[0].pem,
+            "signatureAlgorithm": version.public_keys[0].algorithm,
+        },
+    }],
+))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const crypto_key = new gcp.kms.CryptoKey("crypto-key", {
+    keyRing: keyring.id,
+    purpose: "ASYMMETRIC_SIGN",
+    versionTemplate: {
+        algorithm: "RSA_SIGN_PKCS1_4096_SHA512",
+    },
+});
+const version = crypto_key.id.apply(id => gcp.kms.getKMSCryptoKeyVersion({
+    cryptoKey: id,
+}));
+const note = new gcp.containeranalysis.Note("note", {attestationAuthority: {
+    hint: {
+        humanReadableName: "Attestor Note",
+    },
+}});
+const attestor = new gcp.binaryauthorization.Attestor("attestor", {attestationAuthorityNote: {
+    noteReference: note.name,
+    publicKeys: [{
+        id: version.id,
+        pkixPublicKey: {
+            publicKeyPem: version.publicKeys[0].pem,
+            signatureAlgorithm: version.publicKeys[0].algorithm,
+        },
+    }],
+}});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Attestor Resource {#create}
@@ -25,19 +401,19 @@ To get more information about Attestor, see:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#Attestor">Attestor</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#AttestorArgs">AttestorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Attestor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AttestorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/binaryauthorization/#Attestor">Attestor</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>attestation_authority_note=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Attestor</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority_note</span><span class="p">:</span> <span class="nx">Optional[AttestorAttestationAuthorityNoteArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#Attestor">NewAttestor</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorArgs">AttestorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#Attestor">Attestor</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAttestor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AttestorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Attestor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Attestor.html">Attestor</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.AttestorArgs.html">AttestorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Attestor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AttestorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -48,7 +424,7 @@ To get more information about Attestor, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -58,7 +434,7 @@ To get more information about Attestor, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#AttestorArgs">AttestorArgs</a></span>
+        <span class="property-type"><a href="#inputs">AttestorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -107,7 +483,7 @@ To get more information about Attestor, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -117,7 +493,7 @@ To get more information about Attestor, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -127,7 +503,7 @@ To get more information about Attestor, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorArgs">AttestorArgs</a></span>
+        <span class="property-type"><a href="#inputs">AttestorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -137,7 +513,7 @@ To get more information about Attestor, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -156,7 +532,7 @@ To get more information about Attestor, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -166,7 +542,7 @@ To get more information about Attestor, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.AttestorArgs.html">AttestorArgs</a></span>
+        <span class="property-type"><a href="#inputs">AttestorArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -189,12 +565,11 @@ To get more information about Attestor, see:
 
 ## Attestor Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Attestor resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Attestor resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -205,51 +580,47 @@ The Attestor resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="attestationauthoritynote_csharp">
 <a href="#attestationauthoritynote_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -258,51 +629,47 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="attestationauthoritynote_go">
 <a href="#attestationauthoritynote_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -311,51 +678,47 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="attestationauthoritynote_nodejs">
 <a href="#attestationauthoritynote_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Authority<wbr>Note</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -364,60 +727,52 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="attestation_authority_note_python">
 <a href="#attestation_authority_note_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority_<wbr>note</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynote">Dict[Attestor<wbr>Attestation<wbr>Authority<wbr>Note]</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Attestor resource produces the following output properties:
-
 
 
 
@@ -428,15 +783,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -445,15 +798,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -462,15 +813,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -479,18 +828,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -500,19 +844,20 @@ Get an existing Attestor resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#AttestorState">AttestorState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#Attestor">Attestor</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AttestorState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Attestor</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>attestation_authority_note=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attestation_authority_note</span><span class="p">:</span> <span class="nx">Optional[AttestorAttestationAuthorityNoteArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Attestor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAttestor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorState">AttestorState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#Attestor">Attestor</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAttestor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AttestorState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Attestor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Attestor.html">Attestor</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.AttestorState.html">AttestorState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Attestor</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AttestorState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -614,7 +959,6 @@ Get an existing Attestor resource's state with the given name, ID, and optional 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -622,51 +966,47 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_attestationauthoritynote_csharp">
 <a href="#state_attestationauthoritynote_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -675,51 +1015,47 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_attestationauthoritynote_go">
 <a href="#state_attestationauthoritynote_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority<wbr>Note</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -728,51 +1064,47 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_attestationauthoritynote_nodejs">
 <a href="#state_attestationauthoritynote_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Authority<wbr>Note</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -781,54 +1113,47 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_attestation_authority_note_python">
 <a href="#state_attestation_authority_note_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority_<wbr>note</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynote">Dict[Attestor<wbr>Attestation<wbr>Authority<wbr>Note]</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.  Structure is documented below.
+    <dd>{{% md %}}A Container Analysis ATTESTATION_AUTHORITY Note, created by the user.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated. The field may be
 displayed in chooser dialogs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -838,20 +1163,8 @@ If it is not provided, the provider project is used.
 ## Supporting Types
 
 
+
 <h4 id="attestorattestationauthoritynote">Attestor<wbr>Attestation<wbr>Authority<wbr>Note</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorAttestationAuthorityNote">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorAttestationAuthorityNote">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorAttestationAuthorityNoteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorAttestationAuthorityNoteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNoteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.AttestorAttestationAuthorityNote.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -860,9 +1173,9 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="notereference_csharp">
 <a href="#notereference_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of a ATTESTATION_AUTHORITY Note, created by the
 user. If the Note is in a different project from the Attestor, it
@@ -872,14 +1185,13 @@ An attestation by this attestor is stored as a Container Analysis
 ATTESTATION_AUTHORITY Occurrence that names a container image
 and that links to this Note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="delegationserviceaccountemail_csharp">
 <a href="#delegationserviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Delegation<wbr>Service<wbr>Account<wbr>Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 This field will contain the service account email address that
@@ -892,12 +1204,11 @@ callers should not make any other assumptions about the service
 account email; future versions may use an email based on a
 different naming pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publickeys_csharp">
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">List&lt;Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
@@ -907,12 +1218,11 @@ If this field is non-empty, one of the specified public keys must
 verify that an attestation was signed by this attestor for the
 image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
-attestations exist.  Structure is documented below.
+attestations exist.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -921,9 +1231,9 @@ attestations exist.  Structure is documented below.
             title="Required">
         <span id="notereference_go">
 <a href="#notereference_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of a ATTESTATION_AUTHORITY Note, created by the
 user. If the Note is in a different project from the Attestor, it
@@ -933,14 +1243,13 @@ An attestation by this attestor is stored as a Container Analysis
 ATTESTATION_AUTHORITY Occurrence that names a container image
 and that links to this Note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="delegationserviceaccountemail_go">
 <a href="#delegationserviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Delegation<wbr>Service<wbr>Account<wbr>Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 This field will contain the service account email address that
@@ -953,12 +1262,11 @@ callers should not make any other assumptions about the service
 account email; future versions may use an email based on a
 different naming pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publickeys_go">
 <a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">[]Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key</a></span>
     </dt>
@@ -968,12 +1276,11 @@ If this field is non-empty, one of the specified public keys must
 verify that an attestation was signed by this attestor for the
 image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
-attestations exist.  Structure is documented below.
+attestations exist.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -982,9 +1289,9 @@ attestations exist.  Structure is documented below.
             title="Required">
         <span id="notereference_nodejs">
 <a href="#notereference_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of a ATTESTATION_AUTHORITY Note, created by the
 user. If the Note is in a different project from the Attestor, it
@@ -994,14 +1301,13 @@ An attestation by this attestor is stored as a Container Analysis
 ATTESTATION_AUTHORITY Occurrence that names a container image
 and that links to this Note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="delegationserviceaccountemail_nodejs">
 <a href="#delegationserviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">delegation<wbr>Service<wbr>Account<wbr>Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 This field will contain the service account email address that
@@ -1014,12 +1320,11 @@ callers should not make any other assumptions about the service
 account email; future versions may use an email based on a
 different naming pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publickeys_nodejs">
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key[]</a></span>
     </dt>
@@ -1029,23 +1334,22 @@ If this field is non-empty, one of the specified public keys must
 verify that an attestation was signed by this attestor for the
 image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
-attestations exist.  Structure is documented below.
+attestations exist.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="notereference_python">
-<a href="#notereference_python" style="color: inherit; text-decoration: inherit;">note<wbr>Reference</a>
-</span> 
+        <span id="note_reference_python">
+<a href="#note_reference_python" style="color: inherit; text-decoration: inherit;">note_<wbr>reference</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of a ATTESTATION_AUTHORITY Note, created by the
 user. If the Note is in a different project from the Attestor, it
@@ -1055,14 +1359,13 @@ An attestation by this attestor is stored as a Container Analysis
 ATTESTATION_AUTHORITY Occurrence that names a container image
 and that links to this Note.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="delegationserviceaccountemail_python">
-<a href="#delegationserviceaccountemail_python" style="color: inherit; text-decoration: inherit;">delegation<wbr>Service<wbr>Account<wbr>Email</a>
-</span> 
+        <span id="delegation_service_account_email_python">
+<a href="#delegation_service_account_email_python" style="color: inherit; text-decoration: inherit;">delegation_<wbr>service_<wbr>account_<wbr>email</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 This field will contain the service account email address that
@@ -1075,14 +1378,13 @@ callers should not make any other assumptions about the service
 account email; future versions may use an email based on a
 different naming pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="publickeys_python">
-<a href="#publickeys_python" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
-</span> 
+        <span id="public_keys_python">
+<a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">List[Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key]</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynotepublickey">Sequence[Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Public keys that verify attestations signed by this attestor. This
 field may be updated.
@@ -1090,30 +1392,13 @@ If this field is non-empty, one of the specified public keys must
 verify that an attestation was signed by this attestor for the
 image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
-attestations exist.  Structure is documented below.
+attestations exist.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="attestorattestationauthoritynotepublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorAttestationAuthorityNotePublicKey">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorAttestationAuthorityNotePublicKey">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorAttestationAuthorityNotePublicKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorAttestationAuthorityNotePublicKeyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNotePublicKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.AttestorAttestationAuthorityNotePublicKey.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1122,9 +1407,9 @@ attestations exist.  Structure is documented below.
             title="Optional">
         <span id="asciiarmoredpgppublickey_csharp">
 <a href="#asciiarmoredpgppublickey_csharp" style="color: inherit; text-decoration: inherit;">Ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ASCII-armored representation of a PGP public key, as the
 entire output by the command
@@ -1136,25 +1421,23 @@ as the OpenPGP RFC4880 V4 fingerprint, represented as
 upper-case hex. If id is provided by the caller, it will
 be overwritten by the API-calculated ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this public key. Signatures verified by BinAuthz
 must include the ID of the public key that can be used to
@@ -1163,12 +1446,11 @@ field exactly. Additional restrictions on this field can
 be imposed based on which public key type is encapsulated.
 See the documentation on publicKey cases below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pkixpublickey_csharp">
 <a href="#pkixpublickey_csharp" style="color: inherit; text-decoration: inherit;">Pkix<wbr>Public<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key<wbr>Args</a></span>
     </dt>
@@ -1176,12 +1458,11 @@ See the documentation on publicKey cases below for details.
 NOTE: id may be explicitly provided by the caller when using this
 type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
-encoding of the public key.  Structure is documented below.
+encoding of the public key.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1190,9 +1471,9 @@ encoding of the public key.  Structure is documented below.
             title="Optional">
         <span id="asciiarmoredpgppublickey_go">
 <a href="#asciiarmoredpgppublickey_go" style="color: inherit; text-decoration: inherit;">Ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ASCII-armored representation of a PGP public key, as the
 entire output by the command
@@ -1204,25 +1485,23 @@ as the OpenPGP RFC4880 V4 fingerprint, represented as
 upper-case hex. If id is provided by the caller, it will
 be overwritten by the API-calculated ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this public key. Signatures verified by BinAuthz
 must include the ID of the public key that can be used to
@@ -1231,12 +1510,11 @@ field exactly. Additional restrictions on this field can
 be imposed based on which public key type is encapsulated.
 See the documentation on publicKey cases below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pkixpublickey_go">
 <a href="#pkixpublickey_go" style="color: inherit; text-decoration: inherit;">Pkix<wbr>Public<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key</a></span>
     </dt>
@@ -1244,12 +1522,11 @@ See the documentation on publicKey cases below for details.
 NOTE: id may be explicitly provided by the caller when using this
 type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
-encoding of the public key.  Structure is documented below.
+encoding of the public key.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1258,9 +1535,9 @@ encoding of the public key.  Structure is documented below.
             title="Optional">
         <span id="asciiarmoredpgppublickey_nodejs">
 <a href="#asciiarmoredpgppublickey_nodejs" style="color: inherit; text-decoration: inherit;">ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ASCII-armored representation of a PGP public key, as the
 entire output by the command
@@ -1272,25 +1549,23 @@ as the OpenPGP RFC4880 V4 fingerprint, represented as
 upper-case hex. If id is provided by the caller, it will
 be overwritten by the API-calculated ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of this public key. Signatures verified by BinAuthz
 must include the ID of the public key that can be used to
@@ -1299,12 +1574,11 @@ field exactly. Additional restrictions on this field can
 be imposed based on which public key type is encapsulated.
 See the documentation on publicKey cases below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pkixpublickey_nodejs">
 <a href="#pkixpublickey_nodejs" style="color: inherit; text-decoration: inherit;">pkix<wbr>Public<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key</a></span>
     </dt>
@@ -1312,23 +1586,22 @@ See the documentation on publicKey cases below for details.
 NOTE: id may be explicitly provided by the caller when using this
 type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
-encoding of the public key.  Structure is documented below.
+encoding of the public key.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="asciiarmoredpgppublickey_python">
-<a href="#asciiarmoredpgppublickey_python" style="color: inherit; text-decoration: inherit;">ascii<wbr>Armored<wbr>Pgp<wbr>Public<wbr>Key</a>
-</span> 
+        <span id="ascii_armored_pgp_public_key_python">
+<a href="#ascii_armored_pgp_public_key_python" style="color: inherit; text-decoration: inherit;">ascii_<wbr>armored_<wbr>pgp_<wbr>public_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ASCII-armored representation of a PGP public key, as the
 entire output by the command
@@ -1340,25 +1613,23 @@ as the OpenPGP RFC4880 V4 fingerprint, represented as
 upper-case hex. If id is provided by the caller, it will
 be overwritten by the API-calculated ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive comment. This field may be updated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of this public key. Signatures verified by BinAuthz
 must include the ID of the public key that can be used to
@@ -1367,43 +1638,25 @@ field exactly. Additional restrictions on this field can
 be imposed based on which public key type is encapsulated.
 See the documentation on publicKey cases below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="pkixpublickey_python">
-<a href="#pkixpublickey_python" style="color: inherit; text-decoration: inherit;">pkix<wbr>Public<wbr>Key</a>
-</span> 
+        <span id="pkix_public_key_python">
+<a href="#pkix_public_key_python" style="color: inherit; text-decoration: inherit;">pkix_<wbr>public_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Dict[Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key]</a></span>
+        <span class="property-type"><a href="#attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A raw PKIX SubjectPublicKeyInfo format public key.
 NOTE: id may be explicitly provided by the caller when using this
 type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
-encoding of the public key.  Structure is documented below.
+encoding of the public key.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="attestorattestationauthoritynotepublickeypkixpublickey">Attestor<wbr>Attestation<wbr>Authority<wbr>Note<wbr>Public<wbr>Key<wbr>Pkix<wbr>Public<wbr>Key</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AttestorAttestationAuthorityNotePublicKeyPkixPublicKey">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AttestorAttestationAuthorityNotePublicKeyPkixPublicKey">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.AttestorAttestationAuthorityNotePublicKeyPkixPublicKey.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1412,21 +1665,20 @@ encoding of the public key.  Structure is documented below.
             title="Optional">
         <span id="publickeypem_csharp">
 <a href="#publickeypem_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A PEM-encoded public key, as described in
 `https://tools.ietf.org/html/rfc7468#section-13`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_csharp">
 <a href="#signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against
 a signature using this key. These signature algorithm must
@@ -1434,10 +1686,8 @@ match the structure and any object identifiers encoded in
 publicKeyPem (i.e. this algorithm must match that of the
 public key).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1446,21 +1696,20 @@ public key).
             title="Optional">
         <span id="publickeypem_go">
 <a href="#publickeypem_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A PEM-encoded public key, as described in
 `https://tools.ietf.org/html/rfc7468#section-13`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_go">
 <a href="#signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against
 a signature using this key. These signature algorithm must
@@ -1468,10 +1717,8 @@ match the structure and any object identifiers encoded in
 publicKeyPem (i.e. this algorithm must match that of the
 public key).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1480,21 +1727,20 @@ public key).
             title="Optional">
         <span id="publickeypem_nodejs">
 <a href="#publickeypem_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A PEM-encoded public key, as described in
 `https://tools.ietf.org/html/rfc7468#section-13`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_nodejs">
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against
 a signature using this key. These signature algorithm must
@@ -1502,33 +1748,30 @@ match the structure and any object identifiers encoded in
 publicKeyPem (i.e. this algorithm must match that of the
 public key).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="publickeypem_python">
-<a href="#publickeypem_python" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
-</span> 
+        <span id="public_key_pem_python">
+<a href="#public_key_pem_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>pem</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A PEM-encoded public key, as described in
 `https://tools.ietf.org/html/rfc7468#section-13`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="signaturealgorithm_python">
-<a href="#signaturealgorithm_python" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
-</span> 
+        <span id="signature_algorithm_python">
+<a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The signature algorithm used to verify a message against
 a signature using this key. These signature algorithm must
@@ -1536,14 +1779,24 @@ match the structure and any object identifiers encoded in
 publicKeyPem (i.e. this algorithm must match that of the
 public key).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Attestor can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:binaryauthorization/attestor:Attestor default projects/{{project}}/attestors/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:binaryauthorization/attestor:Attestor default {{project}}/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:binaryauthorization/attestor:Attestor default {{name}}
+```
 
 
 
@@ -1555,6 +1808,6 @@ public key).
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

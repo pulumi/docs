@@ -1,8 +1,8 @@
 
 ---
 title: "Elastigroup"
-title_tag: "Resource Elastigroup | Module gcp | Package Spotinst"
-meta_desc: "Explore the Elastigroup resource of the gcp module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Spotinst elastigroup GCP resource."
+title_tag: "spotinst.gcp.Elastigroup"
+meta_desc: "Documentation for the spotinst.gcp.Elastigroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,323 +11,7 @@ meta_desc: "Explore the Elastigroup resource of the gcp module, including exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst elastigroup GCP resource.
-## GPU
 
-* `gpu` - (Optional) Defines the GPU configuration.
-    * `type` - (Required) The type of GPU instance. Valid values: `nvidia-tesla-v100`, `nvidia-tesla-p100`, `nvidia-tesla-k80`.
-    * `count` - (Required) The number of GPUs. Must be 0, 2, 4, 6, 8.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="health-check"></a>
-## Backend Services
-
-* `backend_services` - (Optional) Describes the backend service configurations.
-    * `service_name` - (Required) The name of the backend service.
-    * `location_type` - (Optional) Sets which location the backend services will be active. Valid values: `regional`, `global`.
-    * `scheme` - (Optional) Use when `location_type` is "regional". Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
-    * `named_port` - (Optional) Describes a named port and a list of ports.
-        * `port_name` - (Required) The name of the port.
-        * `ports` - (Required) A list of ports.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="disks"></a>
-## Disks
-
-* `disks` - (Optional) Array of disks associated with this instance. Persistent disks must be created before you can assign them.
-    * `auto_delete` - (Optional) Specifies whether the disk will be auto-deleted when the instance is deleted.
-    * `boot` - (Optional) Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
-    * `device_name` - (Optional) Specifies a unique device name of your choice.
-    * `interface` - (Optional, Default: `SCSI`) Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
-    * `mode` - (Optional, Default: `READ_WRITE`) The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
-    * `source` - (Optional) Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
-    * `type` - (Optional, Default: `PERSISTENT`) Specifies the type of disk, either SCRATCH or PERSISTENT.
-    * `initialize_params` - (Optional) Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
-        * `disk_size_gb` - (Optional) Specifies disk size in gigabytes. Must be in increments of 2.
-        * `disk_type` - (Optional, Default" `pd-standard`) Specifies the disk type to use to create the instance. Valid values: pd-ssd, local-ssd.
-        * `source_image` - (Optional) A source image used to create the disk. You can provide a private (custom) image, and Compute Engine will use the corresponding image from your project.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="network-interface"></a>
-## Network Interfaces
-
-Each of the `network_interface` attributes controls a portion of the GCP
-Instance's "Network Interfaces". It's a good idea to familiarize yourself with [GCP's Network
-Interfaces docs](https://cloud.google.com/vpc/docs/multiple-interfaces-concepts)
-to understand the implications of using these attributes.
-
-* `network_interface` - (Required, minimum 1) Array of objects representing the network configuration for the elastigroup.
-    * `network` - (Required) Network resource for this group.
-    * `access_configs` - (Optional) Array of configurations.
-        * `name` - (Optional) Name of this access configuration.
-        * `type` - (Optional) Array of configurations for this interface. Currently, only ONE_TO_ONE_NAT is supported.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="scaling-policy"></a>
-## Scaling Policies
-
-* `scaling_up_policy` - (Optional) Contains scaling policies for scaling the Elastigroup up.
-* `scaling_down_policy` - (Optional) Contains scaling policies for scaling the Elastigroup down.
-
-Each `scaling_*_policy` supports the following:
-
-* `policy_name` - (Optional) Name of scaling policy.
-* `metric_name` - (Optional) Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
-* `statistic` - (Optional) Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
-* `threshold` - (Optional) The value at which the scaling action is triggered.
-* `period` - (Optional) Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
-* `evaluation_periods` - (Optional) Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
-* `cooldown` - (Optional) Time (seconds) to wait after a scaling action before resuming monitoring.
-* `operator` - (Optional) The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
-* `action` - (Optional) Scaling action to take when the policy is triggered.
-    * `type` - (Optional) Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
-    * `adjustment` - (Optional) Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
-* `dimensions` - (Optional) A list of dimensions describing qualities of the metric.
-    * `name` - (Required) The dimension name.
-    * `value` - (Required) The dimension value.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="third-party-integrations"></a>
-## Third-Party Integrations
-
-* `integration_docker_swarm` - (Optional) Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
-    * `master_host` - (Required) IP or FQDN of one of your swarm managers.
-    * `master_port` - (Required) Network port used by your swarm.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="scheduled-task"></a>
-## Scheduled Tasks
-
-Each `scheduled_task` supports the following:
-
-* `task_type` - (Required) The task type to run. Valid values: `"setCapacity"`.
-* `cron_expression` - (Optional) A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
-* `is_enabled` - (Optional, Default: `true`) Setting the task to being enabled or disabled.
-* `target_capacity` - (Optional) The desired number of instances the group should have.
-* `min_capacity` - (Optional) The minimum number of instances the group should have.
-* `max_capacity` - (Optional) The maximum number of instances the group should have.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
 
 {{% examples %}}
 ## Example Usage
@@ -343,96 +27,7 @@ Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_spotinst as spotinst
-
-example = spotinst.gcp.Elastigroup("example",
-    availability_zones=[
-        "asia-east1-c",
-        "us-central1-a",
-    ],
-    backend_services_config=[{
-        "ports": [{
-            "portName": "port-name",
-            "ports": [
-                8000,
-                6000,
-            ],
-        }],
-        "serviceName": "spotinst-elb-backend-service",
-    }],
-    description="spotinst gcp group",
-    desired_capacity=1,
-    disks=[{
-        "autoDelete": True,
-        "boot": True,
-        "deviceName": "device",
-        "initializeParams": [{
-            "diskSizeGb": 10,
-            "diskType": "pd-standard",
-            "source_image": "",
-        }],
-        "interface": "SCSI",
-        "mode": "READ_WRITE",
-        "type": "PERSISTENT",
-    }],
-    draining_timeout=180,
-    fallback_to_ondemand=True,
-    instance_types_customs=[{
-        "memoryGiB": 7.5,
-        "vCPU": 2,
-    }],
-    instance_types_ondemand=["n1-standard-1"],
-    instance_types_preemptibles=[
-        "n1-standard-1",
-        "n1-standard-2",
-    ],
-    labels=[{
-        "key": "test_key",
-        "value": "test_value",
-    }],
-    max_size=1,
-    min_size=0,
-    network_interfaces=[{
-        "network": "spot-network",
-    }],
-    preemptible_percentage=50,
-    scaling=[{
-        "up": [{
-            "action": [{
-                "adjustment": 1,
-                "type": "adjustment",
-            }],
-            "cooldown": 300,
-            "dimensions": [{
-                "name": "storage_type",
-                "value": "pd-ssd",
-            }],
-            "evaluationPeriods": 1,
-            "metricName": "instance/disk/read_ops_count",
-            "namespace": "compute",
-            "operator": "gte",
-            "period": 300,
-            "policyName": "scale_up_1",
-            "source": "stackdriver",
-            "statistic": "average",
-            "threshold": 10000,
-            "unit": "percent",
-        }],
-    }],
-    service_account="example@myProject.iam.gservicecct.com",
-    startup_script="",
-    subnets=[{
-        "region": "asia-east1",
-        "subnetNames": "",
-    }],
-    tags=[
-        "http",
-        "https",
-    ])
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}
@@ -539,19 +134,19 @@ const example = new spotinst.gcp.Elastigroup("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gcp/#Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gcp/#ElastigroupArgs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gcp/#Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gcp/#ElastigroupArgs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/gcp/#pulumi_spotinst.gcp.Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backend_services</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupBackendService]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupDisk]]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gpu</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupGpu]]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_customs</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupInstanceTypesCustom]]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preemptibles</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationDockerSwarm]]</span> = None<span class="p">, </span><span class="nx">integration_gke</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationGke]]</span> = None<span class="p">, </span><span class="nx">ip_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupLabel]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupMetadata]]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupNetworkInterface]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">preemptible_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingDownPolicy]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingUpPolicy]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScheduledTask]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupSubnet]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">unhealthy_duration</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/gcp/#pulumi_spotinst.gcp.Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupBackendServiceArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupDiskArgs]]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gpu</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupGpuArgs]]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_customs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesCustomArgs]]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preemptibles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_gke</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGkeArgs]</span> = None<span class="p">, </span><span class="nx">ip_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupLabelArgs]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preemptible_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSubnetArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">unhealthy_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#Elastigroup">NewElastigroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupArgs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#Elastigroup">Elastigroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#Elastigroup">NewElastigroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupArgs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#Elastigroup">Elastigroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Elastigroup.html">Elastigroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.ElastigroupArgs.html">ElastigroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Elastigroup.html">Elastigroup</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.ElastigroupArgs.html">ElastigroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -562,7 +157,7 @@ const example = new spotinst.gcp.Elastigroup("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -631,7 +226,7 @@ const example = new spotinst.gcp.Elastigroup("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -670,7 +265,7 @@ const example = new spotinst.gcp.Elastigroup("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -711,7 +306,6 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -719,364 +313,339 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="desiredcapacity_csharp">
 <a href="#desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autohealing_csharp">
 <a href="#autohealing_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of availability zones for the group.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will soon be handled by Region in Subnets{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backendservices_csharp">
 <a href="#backendservices_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region your GCP group will be created in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disks_csharp">
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdisk">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drainingtimeout_csharp">
 <a href="#drainingtimeout_csharp" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) the instance is allowed to run after it is detached from the group. This is to allow the instance time to drain all the current TCP connections before terminating it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fallbacktoondemand_csharp">
 <a href="#fallbacktoondemand_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>To<wbr>Ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible market is available, fallback-to-on-demand will provision an On-Demand instance to maintain the group capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpu_csharp">
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Gpu<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_csharp">
 <a href="#healthcheckgraceperiod_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_csharp">
 <a href="#healthchecktype_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instancetypescustoms_csharp">
 <a href="#instancetypescustoms_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Customs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupinstancetypescustom">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Instance<wbr>Types<wbr>Custom<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines a set of custom instance types. Required if instance_types_preemptible and instance_types_ondemand are not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancetypesondemand_csharp">
 <a href="#instancetypesondemand_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regular VM instance type to use for mixed-type groups and when falling back to on-demand. Required if instance_types_preemptible is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancetypespreemptibles_csharp">
 <a href="#instancetypespreemptibles_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Preemptibles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The preemptible VMs instance type. To maximize cost savings and market availability, select as many types as possible. Required if instance_types_ondemand is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="integrationdockerswarm_csharp">
 <a href="#integrationdockerswarm_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Docker<wbr>Swarm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integrationgke_csharp">
 <a href="#integrationgke_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Gke</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gke<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipforwarding_csharp">
 <a href="#ipforwarding_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Forwarding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplabel">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxsize_csharp">
 <a href="#maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadatas_csharp">
 <a href="#metadatas_csharp" style="color: inherit; text-decoration: inherit;">Metadatas</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupmetadata">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Metadata<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minsize_csharp">
 <a href="#minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ondemandcount_csharp">
 <a href="#ondemandcount_csharp" style="color: inherit; text-decoration: inherit;">Ondemand<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preemptiblepercentage_csharp">
 <a href="#preemptiblepercentage_csharp" style="color: inherit; text-decoration: inherit;">Preemptible<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scalingdownpolicies_csharp">
 <a href="#scalingdownpolicies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Down<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalinguppolicies_csharp">
 <a href="#scalinguppolicies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Up<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_csharp">
 <a href="#scheduledtasks_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_csharp">
 <a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the service account in which the group instances will be launched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shutdownscript_csharp">
 <a href="#shutdownscript_csharp" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="startupscript_csharp">
 <a href="#startupscript_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create and run your own startup scripts on your virtual machines to perform automated tasks every time your instance boots up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnets_csharp">
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsubnet">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Subnet<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of regions and subnets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags to mark created instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unhealthyduration_csharp">
 <a href="#unhealthyduration_csharp" style="color: inherit; text-decoration: inherit;">Unhealthy<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1085,364 +654,339 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="desiredcapacity_go">
 <a href="#desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autohealing_go">
 <a href="#autohealing_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of availability zones for the group.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will soon be handled by Region in Subnets{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backendservices_go">
 <a href="#backendservices_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">[]Elastigroup<wbr>Backend<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region your GCP group will be created in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disks_go">
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdisk">[]Elastigroup<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drainingtimeout_go">
 <a href="#drainingtimeout_go" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) the instance is allowed to run after it is detached from the group. This is to allow the instance time to drain all the current TCP connections before terminating it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fallbacktoondemand_go">
 <a href="#fallbacktoondemand_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>To<wbr>Ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible market is available, fallback-to-on-demand will provision an On-Demand instance to maintain the group capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpu_go">
 <a href="#gpu_go" style="color: inherit; text-decoration: inherit;">Gpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">[]Elastigroup<wbr>Gpu</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_go">
 <a href="#healthcheckgraceperiod_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_go">
 <a href="#healthchecktype_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instancetypescustoms_go">
 <a href="#instancetypescustoms_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Customs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupinstancetypescustom">[]Elastigroup<wbr>Instance<wbr>Types<wbr>Custom</a></span>
     </dt>
     <dd>{{% md %}}Defines a set of custom instance types. Required if instance_types_preemptible and instance_types_ondemand are not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancetypesondemand_go">
 <a href="#instancetypesondemand_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regular VM instance type to use for mixed-type groups and when falling back to on-demand. Required if instance_types_preemptible is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancetypespreemptibles_go">
 <a href="#instancetypespreemptibles_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Preemptibles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The preemptible VMs instance type. To maximize cost savings and market availability, select as many types as possible. Required if instance_types_ondemand is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="integrationdockerswarm_go">
 <a href="#integrationdockerswarm_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Docker<wbr>Swarm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integrationgke_go">
 <a href="#integrationgke_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Gke</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipforwarding_go">
 <a href="#ipforwarding_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Forwarding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplabel">[]Elastigroup<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxsize_go">
 <a href="#maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadatas_go">
 <a href="#metadatas_go" style="color: inherit; text-decoration: inherit;">Metadatas</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupmetadata">[]Elastigroup<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minsize_go">
 <a href="#minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_go">
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">[]Elastigroup<wbr>Network<wbr>Interface</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ondemandcount_go">
 <a href="#ondemandcount_go" style="color: inherit; text-decoration: inherit;">Ondemand<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preemptiblepercentage_go">
 <a href="#preemptiblepercentage_go" style="color: inherit; text-decoration: inherit;">Preemptible<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scalingdownpolicies_go">
 <a href="#scalingdownpolicies_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Down<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">[]Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalinguppolicies_go">
 <a href="#scalinguppolicies_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Up<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">[]Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_go">
 <a href="#scheduledtasks_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">[]Elastigroup<wbr>Scheduled<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_go">
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the service account in which the group instances will be launched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shutdownscript_go">
 <a href="#shutdownscript_go" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="startupscript_go">
 <a href="#startupscript_go" style="color: inherit; text-decoration: inherit;">Startup<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create and run your own startup scripts on your virtual machines to perform automated tasks every time your instance boots up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnets_go">
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsubnet">[]Elastigroup<wbr>Subnet</a></span>
     </dt>
     <dd>{{% md %}}A list of regions and subnets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Tags to mark created instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unhealthyduration_go">
 <a href="#unhealthyduration_go" style="color: inherit; text-decoration: inherit;">Unhealthy<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1451,364 +995,339 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="desiredcapacity_nodejs">
 <a href="#desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autohealing_nodejs">
 <a href="#autohealing_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of availability zones for the group.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will soon be handled by Region in Subnets{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backendservices_nodejs">
 <a href="#backendservices_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">Elastigroup<wbr>Backend<wbr>Service[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region your GCP group will be created in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disks_nodejs">
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdisk">Elastigroup<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drainingtimeout_nodejs">
 <a href="#drainingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">draining<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time (seconds) the instance is allowed to run after it is detached from the group. This is to allow the instance time to drain all the current TCP connections before terminating it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fallbacktoondemand_nodejs">
 <a href="#fallbacktoondemand_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>To<wbr>Ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible market is available, fallback-to-on-demand will provision an On-Demand instance to maintain the group capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpu_nodejs">
 <a href="#gpu_nodejs" style="color: inherit; text-decoration: inherit;">gpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">Elastigroup<wbr>Gpu[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_nodejs">
 <a href="#healthcheckgraceperiod_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Grace<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_nodejs">
 <a href="#healthchecktype_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instancetypescustoms_nodejs">
 <a href="#instancetypescustoms_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Customs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupinstancetypescustom">Elastigroup<wbr>Instance<wbr>Types<wbr>Custom[]</a></span>
     </dt>
     <dd>{{% md %}}Defines a set of custom instance types. Required if instance_types_preemptible and instance_types_ondemand are not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancetypesondemand_nodejs">
 <a href="#instancetypesondemand_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regular VM instance type to use for mixed-type groups and when falling back to on-demand. Required if instance_types_preemptible is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancetypespreemptibles_nodejs">
 <a href="#instancetypespreemptibles_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Preemptibles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The preemptible VMs instance type. To maximize cost savings and market availability, select as many types as possible. Required if instance_types_ondemand is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="integrationdockerswarm_nodejs">
 <a href="#integrationdockerswarm_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Docker<wbr>Swarm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integrationgke_nodejs">
 <a href="#integrationgke_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Gke</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipforwarding_nodejs">
 <a href="#ipforwarding_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Forwarding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplabel">Elastigroup<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxsize_nodejs">
 <a href="#maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadatas_nodejs">
 <a href="#metadatas_nodejs" style="color: inherit; text-decoration: inherit;">metadatas</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupmetadata">Elastigroup<wbr>Metadata[]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minsize_nodejs">
 <a href="#minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ondemandcount_nodejs">
 <a href="#ondemandcount_nodejs" style="color: inherit; text-decoration: inherit;">ondemand<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preemptiblepercentage_nodejs">
 <a href="#preemptiblepercentage_nodejs" style="color: inherit; text-decoration: inherit;">preemptible<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scalingdownpolicies_nodejs">
 <a href="#scalingdownpolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Down<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalinguppolicies_nodejs">
 <a href="#scalinguppolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Up<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_nodejs">
 <a href="#scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_nodejs">
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the service account in which the group instances will be launched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shutdownscript_nodejs">
 <a href="#shutdownscript_nodejs" style="color: inherit; text-decoration: inherit;">shutdown<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="startupscript_nodejs">
 <a href="#startupscript_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create and run your own startup scripts on your virtual machines to perform automated tasks every time your instance boots up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnets_nodejs">
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsubnet">Elastigroup<wbr>Subnet[]</a></span>
     </dt>
     <dd>{{% md %}}A list of regions and subnets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags to mark created instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unhealthyduration_nodejs">
 <a href="#unhealthyduration_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1817,373 +1336,344 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="desired_capacity_python">
 <a href="#desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auto_healing_python">
 <a href="#auto_healing_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of availability zones for the group.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will soon be handled by Region in Subnets{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_services_python">
 <a href="#backend_services_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupbackendservice">List[Elastigroup<wbr>Backend<wbr>Service]</a></span>
+        <span class="property-type"><a href="#elastigroupbackendservice">Sequence[Elastigroup<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region your GCP group will be created in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disks_python">
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupdisk">List[Elastigroup<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#elastigroupdisk">Sequence[Elastigroup<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="draining_timeout_python">
 <a href="#draining_timeout_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) the instance is allowed to run after it is detached from the group. This is to allow the instance time to drain all the current TCP connections before terminating it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fallback_to_ondemand_python">
 <a href="#fallback_to_ondemand_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>to_<wbr>ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible market is available, fallback-to-on-demand will provision an On-Demand instance to maintain the group capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gpu_python">
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupgpu">List[Elastigroup<wbr>Gpu]</a></span>
+        <span class="property-type"><a href="#elastigroupgpu">Sequence[Elastigroup<wbr>Gpu<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="health_check_grace_period_python">
 <a href="#health_check_grace_period_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="health_check_type_python">
 <a href="#health_check_type_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instance_types_customs_python">
 <a href="#instance_types_customs_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>customs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupinstancetypescustom">List[Elastigroup<wbr>Instance<wbr>Types<wbr>Custom]</a></span>
+        <span class="property-type"><a href="#elastigroupinstancetypescustom">Sequence[Elastigroup<wbr>Instance<wbr>Types<wbr>Custom<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines a set of custom instance types. Required if instance_types_preemptible and instance_types_ondemand are not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_types_ondemand_python">
 <a href="#instance_types_ondemand_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The regular VM instance type to use for mixed-type groups and when falling back to on-demand. Required if instance_types_preemptible is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_types_preemptibles_python">
 <a href="#instance_types_preemptibles_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>preemptibles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The preemptible VMs instance type. To maximize cost savings and market availability, select as many types as possible. Required if instance_types_ondemand is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="integration_docker_swarm_python">
 <a href="#integration_docker_swarm_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>docker_<wbr>swarm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Dict[Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integration_gke_python">
 <a href="#integration_gke_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>gke</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationgke">Dict[Elastigroup<wbr>Integration<wbr>Gke]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_forwarding_python">
 <a href="#ip_forwarding_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>forwarding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplabel">List[Elastigroup<wbr>Label]</a></span>
+        <span class="property-type"><a href="#elastigrouplabel">Sequence[Elastigroup<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_size_python">
 <a href="#max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadatas_python">
 <a href="#metadatas_python" style="color: inherit; text-decoration: inherit;">metadatas</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmetadata">List[Elastigroup<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#elastigroupmetadata">Sequence[Elastigroup<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="min_size_python">
 <a href="#min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_interfaces_python">
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterface">List[Elastigroup<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterface">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ondemand_count_python">
 <a href="#ondemand_count_python" style="color: inherit; text-decoration: inherit;">ondemand_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preemptible_percentage_python">
 <a href="#preemptible_percentage_python" style="color: inherit; text-decoration: inherit;">preemptible_<wbr>percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaling_down_policies_python">
 <a href="#scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>down_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scaling_up_policies_python">
 <a href="#scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>up_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scheduled_tasks_python">
 <a href="#scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">List[Elastigroup<wbr>Scheduled<wbr>Task]</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">Sequence[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_account_python">
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of the service account in which the group instances will be launched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shutdown_script_python">
 <a href="#shutdown_script_python" style="color: inherit; text-decoration: inherit;">shutdown_<wbr>script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="startup_script_python">
 <a href="#startup_script_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Create and run your own startup scripts on your virtual machines to perform automated tasks every time your instance boots up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnets_python">
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupsubnet">List[Elastigroup<wbr>Subnet]</a></span>
+        <span class="property-type"><a href="#elastigroupsubnet">Sequence[Elastigroup<wbr>Subnet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of regions and subnets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags to mark created instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unhealthy_duration_python">
 <a href="#unhealthy_duration_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Elastigroup resource produces the following output properties:
-
 
 
 
@@ -2194,15 +1684,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2211,15 +1699,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2228,15 +1714,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2245,18 +1729,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2266,20 +1745,20 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gcp/#ElastigroupState">ElastigroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gcp/#Elastigroup">Elastigroup</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gcp/#ElastigroupState">ElastigroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gcp/#Elastigroup">Elastigroup</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">backend_services</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupBackendService]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupDisk]]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gpu</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupGpu]]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_customs</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupInstanceTypesCustom]]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preemptibles</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationDockerSwarm]]</span> = None<span class="p">, </span><span class="nx">integration_gke</span><span class="p">:</span> <span class="nx">Optional[Dict[ElastigroupIntegrationGke]]</span> = None<span class="p">, </span><span class="nx">ip_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupLabel]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupMetadata]]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupNetworkInterface]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">preemptible_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingDownPolicy]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScalingUpPolicy]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupScheduledTask]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[List[ElastigroupSubnet]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">unhealthy_duration</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">) -&gt;</span> Elastigroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_healing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backend_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupBackendServiceArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">disks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupDiskArgs]]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">gpu</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupGpuArgs]]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_customs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesCustomArgs]]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preemptibles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_gke</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGkeArgs]</span> = None<span class="p">, </span><span class="nx">ip_forwarding</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupLabelArgs]]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preemptible_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">service_account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">startup_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSubnetArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">unhealthy_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Elastigroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetElastigroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupState">ElastigroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#Elastigroup">Elastigroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetElastigroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupState">ElastigroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#Elastigroup">Elastigroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Elastigroup.html">Elastigroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.ElastigroupState.html">ElastigroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Elastigroup.html">Elastigroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.ElastigroupState.html">ElastigroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2381,7 +1860,6 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2389,364 +1867,339 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_autohealing_csharp">
 <a href="#state_autohealing_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_availabilityzones_csharp">
 <a href="#state_availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of availability zones for the group.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will soon be handled by Region in Subnets{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backendservices_csharp">
 <a href="#state_backendservices_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region your GCP group will be created in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_csharp">
 <a href="#state_desiredcapacity_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disks_csharp">
 <a href="#state_disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdisk">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_drainingtimeout_csharp">
 <a href="#state_drainingtimeout_csharp" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) the instance is allowed to run after it is detached from the group. This is to allow the instance time to drain all the current TCP connections before terminating it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fallbacktoondemand_csharp">
 <a href="#state_fallbacktoondemand_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>To<wbr>Ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible market is available, fallback-to-on-demand will provision an On-Demand instance to maintain the group capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gpu_csharp">
 <a href="#state_gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Gpu<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_csharp">
 <a href="#state_healthcheckgraceperiod_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktype_csharp">
 <a href="#state_healthchecktype_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetypescustoms_csharp">
 <a href="#state_instancetypescustoms_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Customs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupinstancetypescustom">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Instance<wbr>Types<wbr>Custom<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines a set of custom instance types. Required if instance_types_preemptible and instance_types_ondemand are not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetypesondemand_csharp">
 <a href="#state_instancetypesondemand_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regular VM instance type to use for mixed-type groups and when falling back to on-demand. Required if instance_types_preemptible is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetypespreemptibles_csharp">
 <a href="#state_instancetypespreemptibles_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Preemptibles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The preemptible VMs instance type. To maximize cost savings and market availability, select as many types as possible. Required if instance_types_ondemand is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationdockerswarm_csharp">
 <a href="#state_integrationdockerswarm_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Docker<wbr>Swarm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationgke_csharp">
 <a href="#state_integrationgke_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Gke</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gke<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipforwarding_csharp">
 <a href="#state_ipforwarding_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Forwarding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplabel">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_csharp">
 <a href="#state_maxsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadatas_csharp">
 <a href="#state_metadatas_csharp" style="color: inherit; text-decoration: inherit;">Metadatas</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupmetadata">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Metadata<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minsize_csharp">
 <a href="#state_minsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaces_csharp">
 <a href="#state_networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ondemandcount_csharp">
 <a href="#state_ondemandcount_csharp" style="color: inherit; text-decoration: inherit;">Ondemand<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preemptiblepercentage_csharp">
 <a href="#state_preemptiblepercentage_csharp" style="color: inherit; text-decoration: inherit;">Preemptible<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalingdownpolicies_csharp">
 <a href="#state_scalingdownpolicies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Down<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalinguppolicies_csharp">
 <a href="#state_scalinguppolicies_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Up<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_csharp">
 <a href="#state_scheduledtasks_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_csharp">
 <a href="#state_serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the service account in which the group instances will be launched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shutdownscript_csharp">
 <a href="#state_shutdownscript_csharp" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_startupscript_csharp">
 <a href="#state_startupscript_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create and run your own startup scripts on your virtual machines to perform automated tasks every time your instance boots up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_subnets_csharp">
 <a href="#state_subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsubnet">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Subnet<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of regions and subnets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags to mark created instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_unhealthyduration_csharp">
 <a href="#state_unhealthyduration_csharp" style="color: inherit; text-decoration: inherit;">Unhealthy<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2755,364 +2208,339 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_autohealing_go">
 <a href="#state_autohealing_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_availabilityzones_go">
 <a href="#state_availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of availability zones for the group.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will soon be handled by Region in Subnets{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backendservices_go">
 <a href="#state_backendservices_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">[]Elastigroup<wbr>Backend<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region your GCP group will be created in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_go">
 <a href="#state_desiredcapacity_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disks_go">
 <a href="#state_disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdisk">[]Elastigroup<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_drainingtimeout_go">
 <a href="#state_drainingtimeout_go" style="color: inherit; text-decoration: inherit;">Draining<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) the instance is allowed to run after it is detached from the group. This is to allow the instance time to drain all the current TCP connections before terminating it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fallbacktoondemand_go">
 <a href="#state_fallbacktoondemand_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>To<wbr>Ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible market is available, fallback-to-on-demand will provision an On-Demand instance to maintain the group capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gpu_go">
 <a href="#state_gpu_go" style="color: inherit; text-decoration: inherit;">Gpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">[]Elastigroup<wbr>Gpu</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_go">
 <a href="#state_healthcheckgraceperiod_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Grace<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktype_go">
 <a href="#state_healthchecktype_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetypescustoms_go">
 <a href="#state_instancetypescustoms_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Customs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupinstancetypescustom">[]Elastigroup<wbr>Instance<wbr>Types<wbr>Custom</a></span>
     </dt>
     <dd>{{% md %}}Defines a set of custom instance types. Required if instance_types_preemptible and instance_types_ondemand are not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetypesondemand_go">
 <a href="#state_instancetypesondemand_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regular VM instance type to use for mixed-type groups and when falling back to on-demand. Required if instance_types_preemptible is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetypespreemptibles_go">
 <a href="#state_instancetypespreemptibles_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Types<wbr>Preemptibles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The preemptible VMs instance type. To maximize cost savings and market availability, select as many types as possible. Required if instance_types_ondemand is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationdockerswarm_go">
 <a href="#state_integrationdockerswarm_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Docker<wbr>Swarm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationgke_go">
 <a href="#state_integrationgke_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Gke</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipforwarding_go">
 <a href="#state_ipforwarding_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Forwarding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplabel">[]Elastigroup<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_go">
 <a href="#state_maxsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadatas_go">
 <a href="#state_metadatas_go" style="color: inherit; text-decoration: inherit;">Metadatas</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupmetadata">[]Elastigroup<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minsize_go">
 <a href="#state_minsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaces_go">
 <a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">[]Elastigroup<wbr>Network<wbr>Interface</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ondemandcount_go">
 <a href="#state_ondemandcount_go" style="color: inherit; text-decoration: inherit;">Ondemand<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preemptiblepercentage_go">
 <a href="#state_preemptiblepercentage_go" style="color: inherit; text-decoration: inherit;">Preemptible<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalingdownpolicies_go">
 <a href="#state_scalingdownpolicies_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Down<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">[]Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalinguppolicies_go">
 <a href="#state_scalinguppolicies_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Up<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">[]Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_go">
 <a href="#state_scheduledtasks_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">[]Elastigroup<wbr>Scheduled<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_go">
 <a href="#state_serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the service account in which the group instances will be launched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shutdownscript_go">
 <a href="#state_shutdownscript_go" style="color: inherit; text-decoration: inherit;">Shutdown<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_startupscript_go">
 <a href="#state_startupscript_go" style="color: inherit; text-decoration: inherit;">Startup<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create and run your own startup scripts on your virtual machines to perform automated tasks every time your instance boots up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_subnets_go">
 <a href="#state_subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsubnet">[]Elastigroup<wbr>Subnet</a></span>
     </dt>
     <dd>{{% md %}}A list of regions and subnets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Tags to mark created instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_unhealthyduration_go">
 <a href="#state_unhealthyduration_go" style="color: inherit; text-decoration: inherit;">Unhealthy<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3121,364 +2549,339 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_autohealing_nodejs">
 <a href="#state_autohealing_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_availabilityzones_nodejs">
 <a href="#state_availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of availability zones for the group.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will soon be handled by Region in Subnets{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backendservices_nodejs">
 <a href="#state_backendservices_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">Elastigroup<wbr>Backend<wbr>Service[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region your GCP group will be created in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_desiredcapacity_nodejs">
 <a href="#state_desiredcapacity_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disks_nodejs">
 <a href="#state_disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdisk">Elastigroup<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_drainingtimeout_nodejs">
 <a href="#state_drainingtimeout_nodejs" style="color: inherit; text-decoration: inherit;">draining<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time (seconds) the instance is allowed to run after it is detached from the group. This is to allow the instance time to drain all the current TCP connections before terminating it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fallbacktoondemand_nodejs">
 <a href="#state_fallbacktoondemand_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>To<wbr>Ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible market is available, fallback-to-on-demand will provision an On-Demand instance to maintain the group capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gpu_nodejs">
 <a href="#state_gpu_nodejs" style="color: inherit; text-decoration: inherit;">gpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">Elastigroup<wbr>Gpu[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_nodejs">
 <a href="#state_healthcheckgraceperiod_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Grace<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktype_nodejs">
 <a href="#state_healthchecktype_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetypescustoms_nodejs">
 <a href="#state_instancetypescustoms_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Customs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupinstancetypescustom">Elastigroup<wbr>Instance<wbr>Types<wbr>Custom[]</a></span>
     </dt>
     <dd>{{% md %}}Defines a set of custom instance types. Required if instance_types_preemptible and instance_types_ondemand are not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetypesondemand_nodejs">
 <a href="#state_instancetypesondemand_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regular VM instance type to use for mixed-type groups and when falling back to on-demand. Required if instance_types_preemptible is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetypespreemptibles_nodejs">
 <a href="#state_instancetypespreemptibles_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Types<wbr>Preemptibles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The preemptible VMs instance type. To maximize cost savings and market availability, select as many types as possible. Required if instance_types_ondemand is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationdockerswarm_nodejs">
 <a href="#state_integrationdockerswarm_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Docker<wbr>Swarm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationgke_nodejs">
 <a href="#state_integrationgke_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Gke</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipforwarding_nodejs">
 <a href="#state_ipforwarding_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Forwarding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplabel">Elastigroup<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxsize_nodejs">
 <a href="#state_maxsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadatas_nodejs">
 <a href="#state_metadatas_nodejs" style="color: inherit; text-decoration: inherit;">metadatas</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupmetadata">Elastigroup<wbr>Metadata[]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minsize_nodejs">
 <a href="#state_minsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaces_nodejs">
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ondemandcount_nodejs">
 <a href="#state_ondemandcount_nodejs" style="color: inherit; text-decoration: inherit;">ondemand<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preemptiblepercentage_nodejs">
 <a href="#state_preemptiblepercentage_nodejs" style="color: inherit; text-decoration: inherit;">preemptible<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalingdownpolicies_nodejs">
 <a href="#state_scalingdownpolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Down<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalinguppolicies_nodejs">
 <a href="#state_scalinguppolicies_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Up<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_nodejs">
 <a href="#state_scheduledtasks_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_nodejs">
 <a href="#state_serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the service account in which the group instances will be launched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shutdownscript_nodejs">
 <a href="#state_shutdownscript_nodejs" style="color: inherit; text-decoration: inherit;">shutdown<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_startupscript_nodejs">
 <a href="#state_startupscript_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create and run your own startup scripts on your virtual machines to perform automated tasks every time your instance boots up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_subnets_nodejs">
 <a href="#state_subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupsubnet">Elastigroup<wbr>Subnet[]</a></span>
     </dt>
     <dd>{{% md %}}A list of regions and subnets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags to mark created instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_unhealthyduration_nodejs">
 <a href="#state_unhealthyduration_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3487,361 +2890,337 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_auto_healing_python">
 <a href="#state_auto_healing_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_availability_zones_python">
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of availability zones for the group.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field will soon be handled by Region in Subnets{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_services_python">
 <a href="#state_backend_services_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupbackendservice">List[Elastigroup<wbr>Backend<wbr>Service]</a></span>
+        <span class="property-type"><a href="#elastigroupbackendservice">Sequence[Elastigroup<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region your GCP group will be created in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_desired_capacity_python">
 <a href="#state_desired_capacity_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disks_python">
 <a href="#state_disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupdisk">List[Elastigroup<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#elastigroupdisk">Sequence[Elastigroup<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_draining_timeout_python">
 <a href="#state_draining_timeout_python" style="color: inherit; text-decoration: inherit;">draining_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time (seconds) the instance is allowed to run after it is detached from the group. This is to allow the instance time to drain all the current TCP connections before terminating it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fallback_to_ondemand_python">
 <a href="#state_fallback_to_ondemand_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>to_<wbr>ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Activate fallback-to-on-demand. When provisioning an instance, if no Preemptible market is available, fallback-to-on-demand will provision an On-Demand instance to maintain the group capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gpu_python">
 <a href="#state_gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupgpu">List[Elastigroup<wbr>Gpu]</a></span>
+        <span class="property-type"><a href="#elastigroupgpu">Sequence[Elastigroup<wbr>Gpu<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_health_check_grace_period_python">
 <a href="#state_health_check_grace_period_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>grace_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_health_check_type_python">
 <a href="#state_health_check_type_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_types_customs_python">
 <a href="#state_instance_types_customs_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>customs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupinstancetypescustom">List[Elastigroup<wbr>Instance<wbr>Types<wbr>Custom]</a></span>
+        <span class="property-type"><a href="#elastigroupinstancetypescustom">Sequence[Elastigroup<wbr>Instance<wbr>Types<wbr>Custom<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines a set of custom instance types. Required if instance_types_preemptible and instance_types_ondemand are not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_types_ondemand_python">
 <a href="#state_instance_types_ondemand_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>ondemand</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The regular VM instance type to use for mixed-type groups and when falling back to on-demand. Required if instance_types_preemptible is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_types_preemptibles_python">
 <a href="#state_instance_types_preemptibles_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>types_<wbr>preemptibles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The preemptible VMs instance type. To maximize cost savings and market availability, select as many types as possible. Required if instance_types_ondemand is not set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_integration_docker_swarm_python">
 <a href="#state_integration_docker_swarm_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>docker_<wbr>swarm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Dict[Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integration_gke_python">
 <a href="#state_integration_gke_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>gke</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationgke">Dict[Elastigroup<wbr>Integration<wbr>Gke]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ip_forwarding_python">
 <a href="#state_ip_forwarding_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>forwarding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigrouplabel">List[Elastigroup<wbr>Label]</a></span>
+        <span class="property-type"><a href="#elastigrouplabel">Sequence[Elastigroup<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_max_size_python">
 <a href="#state_max_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadatas_python">
 <a href="#state_metadatas_python" style="color: inherit; text-decoration: inherit;">metadatas</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupmetadata">List[Elastigroup<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#elastigroupmetadata">Sequence[Elastigroup<wbr>Metadata<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects with key-value pairs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_min_size_python">
 <a href="#state_min_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_interfaces_python">
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterface">List[Elastigroup<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterface">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ondemand_count_python">
 <a href="#state_ondemand_count_python" style="color: inherit; text-decoration: inherit;">ondemand_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preemptible_percentage_python">
 <a href="#state_preemptible_percentage_python" style="color: inherit; text-decoration: inherit;">preemptible_<wbr>percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of Preemptible VMs to spin up from the "desired_capacity".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scaling_down_policies_python">
 <a href="#state_scaling_down_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>down_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicy">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scaling_up_policies_python">
 <a href="#state_scaling_up_policies_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>up_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicy">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scheduled_tasks_python">
 <a href="#state_scheduled_tasks_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscheduledtask">List[Elastigroup<wbr>Scheduled<wbr>Task]</a></span>
+        <span class="property-type"><a href="#elastigroupscheduledtask">Sequence[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_account_python">
 <a href="#state_service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of the service account in which the group instances will be launched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_shutdown_script_python">
 <a href="#state_shutdown_script_python" style="color: inherit; text-decoration: inherit;">shutdown_<wbr>script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded shutdown script that executes prior to instance termination, for more information please see: [Shutdown Script](https://api.spotinst.com/integration-docs/elastigroup/concepts/compute-concepts/shutdown-scripts/)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_startup_script_python">
 <a href="#state_startup_script_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Create and run your own startup scripts on your virtual machines to perform automated tasks every time your instance boots up.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_subnets_python">
 <a href="#state_subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupsubnet">List[Elastigroup<wbr>Subnet]</a></span>
+        <span class="property-type"><a href="#elastigroupsubnet">Sequence[Elastigroup<wbr>Subnet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of regions and subnets.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags to mark created instances.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_unhealthy_duration_python">
 <a href="#state_unhealthy_duration_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3850,11 +3229,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="elastigroupbackendservice">Elastigroup<wbr>Backend<wbr>Service</h4>
@@ -3865,11 +3241,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupBackendServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupBackendServiceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupBackendServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupBackendService.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3879,45 +3254,43 @@ The following state arguments are supported:
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The name of the backend service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="locationtype_csharp">
 <a href="#locationtype_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Sets which location the backend services will be active. Valid values: `regional`, `global`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namedports_csharp">
 <a href="#namedports_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservicenamedport">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Backend<wbr>Service<wbr>Named<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheme_csharp">
 <a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Use when `location_type` is "regional". Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3926,45 +3299,43 @@ The following state arguments are supported:
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The name of the backend service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="locationtype_go">
 <a href="#locationtype_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Sets which location the backend services will be active. Valid values: `regional`, `global`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namedports_go">
 <a href="#namedports_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservicenamedport">[]Elastigroup<wbr>Backend<wbr>Service<wbr>Named<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheme_go">
 <a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Use when `location_type` is "regional". Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3973,95 +3344,88 @@ The following state arguments are supported:
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The name of the backend service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="locationtype_nodejs">
 <a href="#locationtype_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Sets which location the backend services will be active. Valid values: `regional`, `global`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namedports_nodejs">
 <a href="#namedports_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservicenamedport">Elastigroup<wbr>Backend<wbr>Service<wbr>Named<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheme_nodejs">
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Use when `location_type` is "regional". Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="servicename_python">
-<a href="#servicename_python" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
-</span> 
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The name of the backend service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="locationtype_python">
-<a href="#locationtype_python" style="color: inherit; text-decoration: inherit;">location<wbr>Type</a>
-</span> 
+        <span id="location_type_python">
+<a href="#location_type_python" style="color: inherit; text-decoration: inherit;">location_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Sets which location the backend services will be active. Valid values: `regional`, `global`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="namedports_python">
-<a href="#namedports_python" style="color: inherit; text-decoration: inherit;">named<wbr>Ports</a>
-</span> 
+        <span id="named_ports_python">
+<a href="#named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupbackendservicenamedport">List[Elastigroup<wbr>Backend<wbr>Service<wbr>Named<wbr>Port]</a></span>
+        <span class="property-type"><a href="#elastigroupbackendservicenamedport">Sequence[Elastigroup<wbr>Backend<wbr>Service<wbr>Named<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheme_python">
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Use when `location_type` is "regional". Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupbackendservicenamedport">Elastigroup<wbr>Backend<wbr>Service<wbr>Named<wbr>Port</h4>
 {{% choosable language nodejs %}}
@@ -4071,11 +3435,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupBackendServiceNamedPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupBackendServiceNamedPortOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupBackendServiceNamedPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupBackendServiceNamedPort.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4085,26 +3448,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A list of ports.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4113,26 +3474,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A list of ports.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4141,26 +3500,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A list of ports.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4169,29 +3526,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A list of ports.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupdisk">Elastigroup<wbr>Disk</h4>
 {{% choosable language nodejs %}}
@@ -4201,11 +3553,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupDiskOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4215,85 +3566,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="autodelete_csharp">
 <a href="#autodelete_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="boot_csharp">
 <a href="#boot_csharp" style="color: inherit; text-decoration: inherit;">Boot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a unique device name of your choice.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="initializeparams_csharp">
 <a href="#initializeparams_csharp" style="color: inherit; text-decoration: inherit;">Initialize<wbr>Params</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdiskinitializeparam">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="interface_csharp">
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4302,85 +3652,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="autodelete_go">
 <a href="#autodelete_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="boot_go">
 <a href="#boot_go" style="color: inherit; text-decoration: inherit;">Boot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a unique device name of your choice.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="initializeparams_go">
 <a href="#initializeparams_go" style="color: inherit; text-decoration: inherit;">Initialize<wbr>Params</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdiskinitializeparam">[]Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="interface_go">
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4389,175 +3738,170 @@ The following state arguments are supported:
             title="Optional">
         <span id="autodelete_nodejs">
 <a href="#autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="boot_nodejs">
 <a href="#boot_nodejs" style="color: inherit; text-decoration: inherit;">boot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a unique device name of your choice.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="initializeparams_nodejs">
 <a href="#initializeparams_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdiskinitializeparam">Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="interface_nodejs">
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autodelete_python">
-<a href="#autodelete_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
-</span> 
+        <span id="auto_delete_python">
+<a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="boot_python">
 <a href="#boot_python" style="color: inherit; text-decoration: inherit;">boot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="devicename_python">
-<a href="#devicename_python" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
-</span> 
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a unique device name of your choice.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="initializeparams_python">
-<a href="#initializeparams_python" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
-</span> 
+        <span id="initialize_params_python">
+<a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupdiskinitializeparam">List[Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param]</a></span>
+        <span class="property-type"><a href="#elastigroupdiskinitializeparam">Sequence[Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="interface_python">
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupdiskinitializeparam">Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param</h4>
 {{% choosable language nodejs %}}
@@ -4567,11 +3911,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupDiskInitializeParamArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupDiskInitializeParamOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupDiskInitializeParamArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupDiskInitializeParam.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4581,35 +3924,34 @@ The following state arguments are supported:
             title="Required">
         <span id="sourceimage_csharp">
 <a href="#sourceimage_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A source image used to create the disk. You can provide a private (custom) image, and Compute Engine will use the corresponding image from your project.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies disk size in gigabytes. Must be in increments of 2.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disktype_csharp">
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies the disk type to use to create the instance. Valid values: pd-ssd, local-ssd.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4618,35 +3960,34 @@ The following state arguments are supported:
             title="Required">
         <span id="sourceimage_go">
 <a href="#sourceimage_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A source image used to create the disk. You can provide a private (custom) image, and Compute Engine will use the corresponding image from your project.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies disk size in gigabytes. Must be in increments of 2.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disktype_go">
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies the disk type to use to create the instance. Valid values: pd-ssd, local-ssd.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4655,35 +3996,34 @@ The following state arguments are supported:
             title="Required">
         <span id="sourceimage_nodejs">
 <a href="#sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A source image used to create the disk. You can provide a private (custom) image, and Compute Engine will use the corresponding image from your project.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies disk size in gigabytes. Must be in increments of 2.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disktype_nodejs">
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies the disk type to use to create the instance. Valid values: pd-ssd, local-ssd.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4692,38 +4032,34 @@ The following state arguments are supported:
             title="Required">
         <span id="source_image_python">
 <a href="#source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A source image used to create the disk. You can provide a private (custom) image, and Compute Engine will use the corresponding image from your project.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="disksizegb_python">
-<a href="#disksizegb_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
-</span> 
+        <span id="disk_size_gb_python">
+<a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies disk size in gigabytes. Must be in increments of 2.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="disktype_python">
-<a href="#disktype_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
-</span> 
+        <span id="disk_type_python">
+<a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies the disk type to use to create the instance. Valid values: pd-ssd, local-ssd.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupgpu">Elastigroup<wbr>Gpu</h4>
 {{% choosable language nodejs %}}
@@ -4733,11 +4069,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupGpuArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupGpuOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupGpuArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupGpu.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4747,25 +4082,24 @@ The following state arguments are supported:
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The number of GPUs. Must be 0, 2, 4, 6, 8.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4774,25 +4108,24 @@ The following state arguments are supported:
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The number of GPUs. Must be 0, 2, 4, 6, 8.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4801,25 +4134,24 @@ The following state arguments are supported:
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The number of GPUs. Must be 0, 2, 4, 6, 8.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4828,28 +4160,24 @@ The following state arguments are supported:
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The number of GPUs. Must be 0, 2, 4, 6, 8.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupinstancetypescustom">Elastigroup<wbr>Instance<wbr>Types<wbr>Custom</h4>
 {{% choosable language nodejs %}}
@@ -4859,11 +4187,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupInstanceTypesCustomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupInstanceTypesCustomOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupInstanceTypesCustomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupInstanceTypesCustom.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4873,26 +4200,23 @@ The following state arguments are supported:
             title="Required">
         <span id="memorygib_csharp">
 <a href="#memorygib_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gib</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory (in GiB) in the custom instance types. GCP has a number of limitations on accepted memory values.For more information, see the GCP documentation (here.)[https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications]
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vcpu_csharp">
 <a href="#vcpu_csharp" style="color: inherit; text-decoration: inherit;">Vcpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4901,26 +4225,23 @@ The following state arguments are supported:
             title="Required">
         <span id="memorygib_go">
 <a href="#memorygib_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gib</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory (in GiB) in the custom instance types. GCP has a number of limitations on accepted memory values.For more information, see the GCP documentation (here.)[https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications]
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vcpu_go">
 <a href="#vcpu_go" style="color: inherit; text-decoration: inherit;">Vcpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4929,57 +4250,48 @@ The following state arguments are supported:
             title="Required">
         <span id="memorygib_nodejs">
 <a href="#memorygib_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Gib</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The memory (in GiB) in the custom instance types. GCP has a number of limitations on accepted memory values.For more information, see the GCP documentation (here.)[https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications]
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vcpu_nodejs">
 <a href="#vcpu_nodejs" style="color: inherit; text-decoration: inherit;">vcpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="memorygib_python">
-<a href="#memorygib_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Gib</a>
-</span> 
+        <span id="memory_gib_python">
+<a href="#memory_gib_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>gib</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The memory (in GiB) in the custom instance types. GCP has a number of limitations on accepted memory values.For more information, see the GCP documentation (here.)[https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#specifications]
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vcpu_python">
 <a href="#vcpu_python" style="color: inherit; text-decoration: inherit;">vcpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</h4>
 {{% choosable language nodejs %}}
@@ -4989,11 +4301,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupIntegrationDockerSwarmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupIntegrationDockerSwarmOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupIntegrationDockerSwarmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupIntegrationDockerSwarm.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5003,25 +4314,24 @@ The following state arguments are supported:
             title="Required">
         <span id="masterhost_csharp">
 <a href="#masterhost_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}IP or FQDN of one of your swarm managers.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="masterport_csharp">
 <a href="#masterport_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Network port used by your swarm.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5030,25 +4340,24 @@ The following state arguments are supported:
             title="Required">
         <span id="masterhost_go">
 <a href="#masterhost_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}IP or FQDN of one of your swarm managers.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="masterport_go">
 <a href="#masterport_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Network port used by your swarm.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5057,55 +4366,50 @@ The following state arguments are supported:
             title="Required">
         <span id="masterhost_nodejs">
 <a href="#masterhost_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}IP or FQDN of one of your swarm managers.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="masterport_nodejs">
 <a href="#masterport_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Network port used by your swarm.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="masterhost_python">
-<a href="#masterhost_python" style="color: inherit; text-decoration: inherit;">master<wbr>Host</a>
-</span> 
+        <span id="master_host_python">
+<a href="#master_host_python" style="color: inherit; text-decoration: inherit;">master_<wbr>host</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}IP or FQDN of one of your swarm managers.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="masterport_python">
-<a href="#masterport_python" style="color: inherit; text-decoration: inherit;">master<wbr>Port</a>
-</span> 
+        <span id="master_port_python">
+<a href="#master_port_python" style="color: inherit; text-decoration: inherit;">master_<wbr>port</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Network port used by your swarm.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke</h4>
 {{% choosable language nodejs %}}
@@ -5115,11 +4419,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupIntegrationGkeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupIntegrationGkeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupIntegrationGkeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupIntegrationGke.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5129,95 +4432,85 @@ The following state arguments are supported:
             title="Optional">
         <span id="autoupdate_csharp">
 <a href="#autoupdate_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_csharp">
 <a href="#autoscalecooldown_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_csharp">
 <a href="#autoscaledown_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Down</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaledown">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_csharp">
 <a href="#autoscaleheadroom_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headroom</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaleheadroom">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_csharp">
 <a href="#autoscaleisautoconfig_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_csharp">
 <a href="#autoscaleisenabled_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscalelabels_csharp">
 <a href="#autoscalelabels_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscalelabel">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5226,95 +4519,85 @@ The following state arguments are supported:
             title="Optional">
         <span id="autoupdate_go">
 <a href="#autoupdate_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_go">
 <a href="#autoscalecooldown_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_go">
 <a href="#autoscaledown_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Down</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaledown">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_go">
 <a href="#autoscaleheadroom_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Headroom</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_go">
 <a href="#autoscaleisautoconfig_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_go">
 <a href="#autoscaleisenabled_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Is<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscalelabels_go">
 <a href="#autoscalelabels_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscalelabel">[]Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5323,195 +4606,172 @@ The following state arguments are supported:
             title="Optional">
         <span id="autoupdate_nodejs">
 <a href="#autoupdate_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscalecooldown_nodejs">
 <a href="#autoscalecooldown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_nodejs">
 <a href="#autoscaledown_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaledown">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_nodejs">
 <a href="#autoscaleheadroom_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_nodejs">
 <a href="#autoscaleisautoconfig_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleisenabled_nodejs">
 <a href="#autoscaleisenabled_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscalelabels_nodejs">
 <a href="#autoscalelabels_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscalelabel">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="autoupdate_python">
-<a href="#autoupdate_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Update</a>
-</span> 
+        <span id="auto_update_python">
+<a href="#auto_update_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>update</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscalecooldown_python">
-<a href="#autoscalecooldown_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Cooldown</a>
-</span> 
+        <span id="autoscale_cooldown_python">
+<a href="#autoscale_cooldown_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>cooldown</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaledown_python">
-<a href="#autoscaledown_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Down</a>
-</span> 
+        <span id="autoscale_down_python">
+<a href="#autoscale_down_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>down</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationgkeautoscaledown">Dict[Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Down]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationgkeautoscaledown">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleheadroom_python">
-<a href="#autoscaleheadroom_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Headroom</a>
-</span> 
+        <span id="autoscale_headroom_python">
+<a href="#autoscale_headroom_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>headroom</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationgkeautoscaleheadroom">Dict[Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Headroom]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationgkeautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleisautoconfig_python">
-<a href="#autoscaleisautoconfig_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Auto<wbr>Config</a>
-</span> 
+        <span id="autoscale_is_auto_config_python">
+<a href="#autoscale_is_auto_config_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>auto_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscaleisenabled_python">
-<a href="#autoscaleisenabled_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Is<wbr>Enabled</a>
-</span> 
+        <span id="autoscale_is_enabled_python">
+<a href="#autoscale_is_enabled_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>is_<wbr>enabled</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="autoscalelabels_python">
-<a href="#autoscalelabels_python" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Labels</a>
-</span> 
+        <span id="autoscale_labels_python">
+<a href="#autoscale_labels_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>labels</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupintegrationgkeautoscalelabel">List[Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label]</a></span>
+        <span class="property-type"><a href="#elastigroupintegrationgkeautoscalelabel">Sequence[Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupintegrationgkeautoscaledown">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Down</h4>
 {{% choosable language nodejs %}}
@@ -5521,11 +4781,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupIntegrationGkeAutoscaleDownArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupIntegrationGkeAutoscaleDownOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupIntegrationGkeAutoscaleDownArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupIntegrationGkeAutoscaleDown.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5535,15 +4794,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="evaluationperiods_csharp">
 <a href="#evaluationperiods_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5552,15 +4810,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="evaluationperiods_go">
 <a href="#evaluationperiods_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5569,35 +4826,30 @@ The following state arguments are supported:
             title="Optional">
         <span id="evaluationperiods_nodejs">
 <a href="#evaluationperiods_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
-</span> 
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupintegrationgkeautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Headroom</h4>
 {{% choosable language nodejs %}}
@@ -5607,11 +4859,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupIntegrationGkeAutoscaleHeadroomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupIntegrationGkeAutoscaleHeadroomOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupIntegrationGkeAutoscaleHeadroomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupIntegrationGkeAutoscaleHeadroom.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5621,35 +4872,31 @@ The following state arguments are supported:
             title="Optional">
         <span id="cpuperunit_csharp">
 <a href="#cpuperunit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_csharp">
 <a href="#memoryperunit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numofunits_csharp">
 <a href="#numofunits_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5658,35 +4905,31 @@ The following state arguments are supported:
             title="Optional">
         <span id="cpuperunit_go">
 <a href="#cpuperunit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Per<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_go">
 <a href="#memoryperunit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Per<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numofunits_go">
 <a href="#numofunits_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Of<wbr>Units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5695,75 +4938,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="cpuperunit_nodejs">
 <a href="#cpuperunit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_nodejs">
 <a href="#memoryperunit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numofunits_nodejs">
 <a href="#numofunits_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cpuperunit_python">
-<a href="#cpuperunit_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Per<wbr>Unit</a>
-</span> 
+        <span id="cpu_per_unit_python">
+<a href="#cpu_per_unit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>per_<wbr>unit</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="memoryperunit_python">
-<a href="#memoryperunit_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Per<wbr>Unit</a>
-</span> 
+        <span id="memory_per_unit_python">
+<a href="#memory_per_unit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>per_<wbr>unit</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="numofunits_python">
-<a href="#numofunits_python" style="color: inherit; text-decoration: inherit;">num<wbr>Of<wbr>Units</a>
-</span> 
+        <span id="num_of_units_python">
+<a href="#num_of_units_python" style="color: inherit; text-decoration: inherit;">num_<wbr>of_<wbr>units</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupintegrationgkeautoscalelabel">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label</h4>
 {{% choosable language nodejs %}}
@@ -5773,11 +5005,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupIntegrationGkeAutoscaleLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupIntegrationGkeAutoscaleLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupIntegrationGkeAutoscaleLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupIntegrationGkeAutoscaleLabel.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5787,27 +5018,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Labels key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5816,27 +5044,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Labels key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5845,27 +5070,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Labels key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5874,30 +5096,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Labels key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigrouplabel">Elastigroup<wbr>Label</h4>
 {{% choosable language nodejs %}}
@@ -5907,11 +5123,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupLabel.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5921,27 +5136,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Labels key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5950,27 +5162,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Labels key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5979,27 +5188,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Labels key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6008,30 +5214,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Labels key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupmetadata">Elastigroup<wbr>Metadata</h4>
 {{% choosable language nodejs %}}
@@ -6041,11 +5241,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupMetadataOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupMetadata.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6055,27 +5254,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Labels key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6084,27 +5280,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Labels key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6113,27 +5306,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Labels key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6142,30 +5332,24 @@ The following state arguments are supported:
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Labels key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
@@ -6175,11 +5359,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupNetworkInterfaceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupNetworkInterface.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6189,35 +5372,33 @@ The following state arguments are supported:
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Network resource for this group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="accessconfigs_csharp">
 <a href="#accessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterfaceaccessconfig">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Array of configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="aliasipranges_csharp">
 <a href="#aliasipranges_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterfacealiasiprange">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6226,35 +5407,33 @@ The following state arguments are supported:
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Network resource for this group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="accessconfigs_go">
 <a href="#accessconfigs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterfaceaccessconfig">[]Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Array of configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="aliasipranges_go">
 <a href="#aliasipranges_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterfacealiasiprange">[]Elastigroup<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6263,35 +5442,33 @@ The following state arguments are supported:
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Network resource for this group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="accessconfigs_nodejs">
 <a href="#accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterfaceaccessconfig">Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Array of configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="aliasipranges_nodejs">
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterfacealiasiprange">Elastigroup<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6300,38 +5477,33 @@ The following state arguments are supported:
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Network resource for this group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="accessconfigs_python">
-<a href="#accessconfigs_python" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
-</span> 
+        <span id="access_configs_python">
+<a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterfaceaccessconfig">List[Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterfaceaccessconfig">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Array of configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="aliasipranges_python">
-<a href="#aliasipranges_python" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
-</span> 
+        <span id="alias_ip_ranges_python">
+<a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupnetworkinterfacealiasiprange">List[Elastigroup<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range]</a></span>
+        <span class="property-type"><a href="#elastigroupnetworkinterfacealiasiprange">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupnetworkinterfaceaccessconfig">Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -6341,11 +5513,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupNetworkInterfaceAccessConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupNetworkInterfaceAccessConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupNetworkInterfaceAccessConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupNetworkInterfaceAccessConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6355,26 +5526,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6383,26 +5552,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6411,26 +5578,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6439,29 +5604,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupnetworkinterfacealiasiprange">Elastigroup<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
 {{% choosable language nodejs %}}
@@ -6471,11 +5631,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupNetworkInterfaceAliasIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupNetworkInterfaceAliasIpRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupNetworkInterfaceAliasIpRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupNetworkInterfaceAliasIpRange.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6485,25 +5644,22 @@ The following state arguments are supported:
             title="Required">
         <span id="ipcidrrange_csharp">
 <a href="#ipcidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetworkrangename_csharp">
 <a href="#subnetworkrangename_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Range<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6512,25 +5668,22 @@ The following state arguments are supported:
             title="Required">
         <span id="ipcidrrange_go">
 <a href="#ipcidrrange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetworkrangename_go">
 <a href="#subnetworkrangename_go" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Range<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6539,55 +5692,46 @@ The following state arguments are supported:
             title="Required">
         <span id="ipcidrrange_nodejs">
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetworkrangename_nodejs">
 <a href="#subnetworkrangename_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Range<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="ipcidrrange_python">
-<a href="#ipcidrrange_python" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
-</span> 
+        <span id="ip_cidr_range_python">
+<a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="subnetworkrangename_python">
-<a href="#subnetworkrangename_python" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Range<wbr>Name</a>
-</span> 
+        <span id="subnetwork_range_name_python">
+<a href="#subnetwork_range_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>range_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</h4>
 {{% choosable language nodejs %}}
@@ -6597,11 +5741,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupScalingDownPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupScalingDownPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupScalingDownPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupScalingDownPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6611,145 +5754,141 @@ The following state arguments are supported:
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_csharp">
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="actiontype_csharp">
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
 <a href="#adjustment_csharp" style="color: inherit; text-decoration: inherit;">Adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
 <a href="#cooldown_csharp" style="color: inherit; text-decoration: inherit;">Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
 <a href="#evaluationperiods_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_csharp">
 <a href="#statistic_csharp" style="color: inherit; text-decoration: inherit;">Statistic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6758,145 +5897,141 @@ The following state arguments are supported:
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_go">
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="actiontype_go">
 <a href="#actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
 <a href="#adjustment_go" style="color: inherit; text-decoration: inherit;">Adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
 <a href="#cooldown_go" style="color: inherit; text-decoration: inherit;">Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">[]Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
 <a href="#evaluationperiods_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_go">
 <a href="#statistic_go" style="color: inherit; text-decoration: inherit;">Statistic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6905,295 +6040,284 @@ The following state arguments are supported:
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_nodejs">
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="actiontype_nodejs">
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
 <a href="#adjustment_nodejs" style="color: inherit; text-decoration: inherit;">adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
 <a href="#cooldown_nodejs" style="color: inherit; text-decoration: inherit;">cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
 <a href="#evaluationperiods_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_nodejs">
 <a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
-</span> 
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="policyname_python">
-<a href="#policyname_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
-</span> 
+        <span id="policy_name_python">
+<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_python">
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="actiontype_python">
-<a href="#actiontype_python" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
-</span> 
+        <span id="action_type_python">
+<a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
 <a href="#adjustment_python" style="color: inherit; text-decoration: inherit;">adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">List[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
-</span> 
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_python">
 <a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension</h4>
 {{% choosable language nodejs %}}
@@ -7203,11 +6327,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupScalingDownPolicyDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupScalingDownPolicyDimensionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupScalingDownPolicyDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupScalingDownPolicyDimension.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7217,27 +6340,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7246,27 +6366,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7275,27 +6392,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7304,30 +6418,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</h4>
 {{% choosable language nodejs %}}
@@ -7337,11 +6445,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupScalingUpPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupScalingUpPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupScalingUpPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupScalingUpPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7351,145 +6458,141 @@ The following state arguments are supported:
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_csharp">
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="actiontype_csharp">
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
 <a href="#adjustment_csharp" style="color: inherit; text-decoration: inherit;">Adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
 <a href="#cooldown_csharp" style="color: inherit; text-decoration: inherit;">Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
 <a href="#evaluationperiods_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_csharp">
 <a href="#statistic_csharp" style="color: inherit; text-decoration: inherit;">Statistic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7498,145 +6601,141 @@ The following state arguments are supported:
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_go">
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="actiontype_go">
 <a href="#actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
 <a href="#adjustment_go" style="color: inherit; text-decoration: inherit;">Adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
 <a href="#cooldown_go" style="color: inherit; text-decoration: inherit;">Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">[]Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
 <a href="#evaluationperiods_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_go">
 <a href="#statistic_go" style="color: inherit; text-decoration: inherit;">Statistic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7645,295 +6744,284 @@ The following state arguments are supported:
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_nodejs">
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="actiontype_nodejs">
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
 <a href="#adjustment_nodejs" style="color: inherit; text-decoration: inherit;">adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
 <a href="#cooldown_nodejs" style="color: inherit; text-decoration: inherit;">cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
 <a href="#evaluationperiods_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_nodejs">
 <a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="metricname_python">
-<a href="#metricname_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
-</span> 
+        <span id="metric_name_python">
+<a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="policyname_python">
-<a href="#policyname_python" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
-</span> 
+        <span id="policy_name_python">
+<a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_python">
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="actiontype_python">
-<a href="#actiontype_python" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
-</span> 
+        <span id="action_type_python">
+<a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
 <a href="#adjustment_python" style="color: inherit; text-decoration: inherit;">adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">List[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="evaluationperiods_python">
-<a href="#evaluationperiods_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Periods</a>
-</span> 
+        <span id="evaluation_periods_python">
+<a href="#evaluation_periods_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>periods</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_python">
 <a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension</h4>
 {{% choosable language nodejs %}}
@@ -7943,11 +7031,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupScalingUpPolicyDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupScalingUpPolicyDimensionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupScalingUpPolicyDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupScalingUpPolicyDimension.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7957,27 +7044,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7986,27 +7070,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8015,27 +7096,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8044,30 +7122,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task</h4>
 {{% choosable language nodejs %}}
@@ -8077,11 +7149,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupScheduledTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupScheduledTaskOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupScheduledTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupScheduledTask.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -8091,65 +7162,64 @@ The following state arguments are supported:
             title="Required">
         <span id="tasktype_csharp">
 <a href="#tasktype_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The task type to run. Valid values: `"setCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cronexpression_csharp">
 <a href="#cronexpression_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Expression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Setting the task to being enabled or disabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_csharp">
 <a href="#maxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mincapacity_csharp">
 <a href="#mincapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetcapacity_csharp">
 <a href="#targetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8158,65 +7228,64 @@ The following state arguments are supported:
             title="Required">
         <span id="tasktype_go">
 <a href="#tasktype_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The task type to run. Valid values: `"setCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cronexpression_go">
 <a href="#cronexpression_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Expression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Setting the task to being enabled or disabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_go">
 <a href="#maxcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mincapacity_go">
 <a href="#mincapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetcapacity_go">
 <a href="#targetcapacity_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8225,135 +7294,130 @@ The following state arguments are supported:
             title="Required">
         <span id="tasktype_nodejs">
 <a href="#tasktype_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The task type to run. Valid values: `"setCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cronexpression_nodejs">
 <a href="#cronexpression_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Expression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Setting the task to being enabled or disabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_nodejs">
 <a href="#maxcapacity_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mincapacity_nodejs">
 <a href="#mincapacity_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetcapacity_nodejs">
 <a href="#targetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="tasktype_python">
-<a href="#tasktype_python" style="color: inherit; text-decoration: inherit;">task<wbr>Type</a>
-</span> 
+        <span id="task_type_python">
+<a href="#task_type_python" style="color: inherit; text-decoration: inherit;">task_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The task type to run. Valid values: `"setCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="cronexpression_python">
-<a href="#cronexpression_python" style="color: inherit; text-decoration: inherit;">cron<wbr>Expression</a>
-</span> 
+        <span id="cron_expression_python">
+<a href="#cron_expression_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>expression</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="isenabled_python">
-<a href="#isenabled_python" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
-</span> 
+        <span id="is_enabled_python">
+<a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Setting the task to being enabled or disabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="maxcapacity_python">
-<a href="#maxcapacity_python" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity</a>
-</span> 
+        <span id="max_capacity_python">
+<a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="mincapacity_python">
-<a href="#mincapacity_python" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity</a>
-</span> 
+        <span id="min_capacity_python">
+<a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="targetcapacity_python">
-<a href="#targetcapacity_python" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity</a>
-</span> 
+        <span id="target_capacity_python">
+<a href="#target_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="elastigroupsubnet">Elastigroup<wbr>Subnet</h4>
 {{% choosable language nodejs %}}
@@ -8363,11 +7427,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupSubnetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gcp?tab=doc#ElastigroupSubnetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Inputs.ElastigroupSubnetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gcp.Outputs.ElastigroupSubnet.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -8377,27 +7440,24 @@ The following state arguments are supported:
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region for the group of subnets.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetnames_csharp">
 <a href="#subnetnames_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The names of the subnets in the region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8406,27 +7466,24 @@ The following state arguments are supported:
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region for the group of subnets.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetnames_go">
 <a href="#subnetnames_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The names of the subnets in the region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8435,27 +7492,24 @@ The following state arguments are supported:
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region for the group of subnets.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetnames_nodejs">
 <a href="#subnetnames_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of the subnets in the region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8464,33 +7518,24 @@ The following state arguments are supported:
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region for the group of subnets.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="subnetnames_python">
-<a href="#subnetnames_python" style="color: inherit; text-decoration: inherit;">subnet<wbr>Names</a>
-</span> 
+        <span id="subnet_names_python">
+<a href="#subnet_names_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>names</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of the subnets in the region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
@@ -8500,6 +7545,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/terraform-providers/terraform-provider-spotinst).</dd>
+	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/spotinst/terraform-provider-spotinst).</dd>
 </dl>
 

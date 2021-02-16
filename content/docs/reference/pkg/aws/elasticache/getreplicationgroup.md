@@ -12,6 +12,7 @@ meta_desc: "Explore the GetReplicationGroup function of the elasticache module, 
 
 Use this data source to get information about an Elasticache Replication Group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -93,17 +94,17 @@ const bar = pulumi.output(aws.elasticache.getReplicationGroup({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#GetReplicationGroupArgs">GetReplicationGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticache/#GetReplicationGroupResult">GetReplicationGroupResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReplicationGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_replication_group(</span>replication_group_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_replication_group(</span><span class="nx">replication_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetReplicationGroupResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache?tab=doc#LookupReplicationGroupArgs">LookupReplicationGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticache?tab=doc#LookupReplicationGroupResult">LookupReplicationGroupResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReplicationGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupReplicationGroup` in the Go SDK.
 
@@ -112,14 +113,13 @@ const bar = pulumi.output(aws.elasticache.getReplicationGroup({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetReplicationGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticache.GetReplicationGroupResult.html">GetReplicationGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElastiCache.GetReplicationGroupArgs.html">GetReplicationGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetReplicationGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -129,16 +129,14 @@ The following arguments are supported:
             title="Required">
         <span id="replicationgroupid_csharp">
 <a href="#replicationgroupid_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the replication group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -147,16 +145,14 @@ The following arguments are supported:
             title="Required">
         <span id="replicationgroupid_go">
 <a href="#replicationgroupid_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the replication group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -165,16 +161,14 @@ The following arguments are supported:
             title="Required">
         <span id="replicationgroupid_nodejs">
 <a href="#replicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the replication group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -183,19 +177,14 @@ The following arguments are supported:
             title="Required">
         <span id="replication_group_id_python">
 <a href="#replication_group_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for the replication group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -206,609 +195,665 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="authtokenenabled_csharp">
 <a href="#authtokenenabled_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag that enables using an AuthToken (password) when issuing Redis commands.
+    <dd>{{% md %}}Specifies whether an AuthToken (password) is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="automaticfailoverenabled_csharp">
 <a href="#automaticfailoverenabled_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Failover<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="configurationendpointaddress_csharp">
 <a href="#configurationendpointaddress_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration endpoint address to allow host discovery.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="memberclusters_csharp">
 <a href="#memberclusters_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Clusters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of all the nodes that are part of this replication group.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="multiazenabled_csharp">
+<a href="#multiazenabled_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether Multi-AZ Support is enabled for the replication group.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="nodetype_csharp">
 <a href="#nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster node type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="numbercacheclusters_csharp">
 <a href="#numbercacheclusters_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Cache<wbr>Clusters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cache clusters that the replication group has.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which the configuration endpoint will accept connections.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="primaryendpointaddress_csharp">
 <a href="#primaryendpointaddress_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Endpoint<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the primary node in this node group (shard).
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="readerendpointaddress_csharp">
+<a href="#readerendpointaddress_csharp" style="color: inherit; text-decoration: inherit;">Reader<wbr>Endpoint<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint of the reader node in this node group (shard).
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="replicationgroupdescription_csharp">
 <a href="#replicationgroupdescription_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Group<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the replication group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="replicationgroupid_csharp">
 <a href="#replicationgroupid_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier for the replication group.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="snapshotretentionlimit_csharp">
 <a href="#snapshotretentionlimit_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Retention<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="snapshotwindow_csharp">
 <a href="#snapshotwindow_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Window</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
     <dt class="property-"
             title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="authtokenenabled_go">
 <a href="#authtokenenabled_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag that enables using an AuthToken (password) when issuing Redis commands.
+    <dd>{{% md %}}Specifies whether an AuthToken (password) is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="automaticfailoverenabled_go">
 <a href="#automaticfailoverenabled_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Failover<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="configurationendpointaddress_go">
 <a href="#configurationendpointaddress_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration endpoint address to allow host discovery.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="memberclusters_go">
 <a href="#memberclusters_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Clusters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The identifiers of all the nodes that are part of this replication group.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="multiazenabled_go">
+<a href="#multiazenabled_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether Multi-AZ Support is enabled for the replication group.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="nodetype_go">
 <a href="#nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster node type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="numbercacheclusters_go">
 <a href="#numbercacheclusters_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Cache<wbr>Clusters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cache clusters that the replication group has.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which the configuration endpoint will accept connections.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="primaryendpointaddress_go">
 <a href="#primaryendpointaddress_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Endpoint<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the primary node in this node group (shard).
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="readerendpointaddress_go">
+<a href="#readerendpointaddress_go" style="color: inherit; text-decoration: inherit;">Reader<wbr>Endpoint<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint of the reader node in this node group (shard).
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="replicationgroupdescription_go">
 <a href="#replicationgroupdescription_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Group<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the replication group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="replicationgroupid_go">
 <a href="#replicationgroupid_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier for the replication group.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="snapshotretentionlimit_go">
 <a href="#snapshotretentionlimit_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Retention<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="snapshotwindow_go">
 <a href="#snapshotwindow_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Window</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="authtokenenabled_nodejs">
 <a href="#authtokenenabled_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Token<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A flag that enables using an AuthToken (password) when issuing Redis commands.
+    <dd>{{% md %}}Specifies whether an AuthToken (password) is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="automaticfailoverenabled_nodejs">
 <a href="#automaticfailoverenabled_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Failover<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="configurationendpointaddress_nodejs">
 <a href="#configurationendpointaddress_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Endpoint<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration endpoint address to allow host discovery.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="memberclusters_nodejs">
 <a href="#memberclusters_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Clusters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identifiers of all the nodes that are part of this replication group.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="multiazenabled_nodejs">
+<a href="#multiazenabled_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Az<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether Multi-AZ Support is enabled for the replication group.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="nodetype_nodejs">
 <a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster node type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="numbercacheclusters_nodejs">
 <a href="#numbercacheclusters_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Cache<wbr>Clusters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of cache clusters that the replication group has.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number on which the configuration endpoint will accept connections.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="primaryendpointaddress_nodejs">
 <a href="#primaryendpointaddress_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Endpoint<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the primary node in this node group (shard).
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="readerendpointaddress_nodejs">
+<a href="#readerendpointaddress_nodejs" style="color: inherit; text-decoration: inherit;">reader<wbr>Endpoint<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint of the reader node in this node group (shard).
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="replicationgroupdescription_nodejs">
 <a href="#replicationgroupdescription_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Group<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the replication group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="replicationgroupid_nodejs">
 <a href="#replicationgroupid_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier for the replication group.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="snapshotretentionlimit_nodejs">
 <a href="#snapshotretentionlimit_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Retention<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="snapshotwindow_nodejs">
 <a href="#snapshotwindow_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Window</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-"
             title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="auth_token_enabled_python">
 <a href="#auth_token_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag that enables using an AuthToken (password) when issuing Redis commands.
+    <dd>{{% md %}}Specifies whether an AuthToken (password) is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="automatic_failover_enabled_python">
 <a href="#automatic_failover_enabled_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>failover_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="configuration_endpoint_address_python">
 <a href="#configuration_endpoint_address_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>endpoint_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configuration endpoint address to allow host discovery.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="member_clusters_python">
 <a href="#member_clusters_python" style="color: inherit; text-decoration: inherit;">member_<wbr>clusters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identifiers of all the nodes that are part of this replication group.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="multi_az_enabled_python">
+<a href="#multi_az_enabled_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>az_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether Multi-AZ Support is enabled for the replication group.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="node_type_python">
 <a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster node type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="number_cache_clusters_python">
 <a href="#number_cache_clusters_python" style="color: inherit; text-decoration: inherit;">number_<wbr>cache_<wbr>clusters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of cache clusters that the replication group has.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number on which the configuration endpoint will accept connections.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="primary_endpoint_address_python">
 <a href="#primary_endpoint_address_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>endpoint_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint of the primary node in this node group (shard).
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="reader_endpoint_address_python">
+<a href="#reader_endpoint_address_python" style="color: inherit; text-decoration: inherit;">reader_<wbr>endpoint_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The endpoint of the reader node in this node group (shard).
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="replication_group_description_python">
 <a href="#replication_group_description_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>group_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the replication group.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="replication_group_id_python">
 <a href="#replication_group_id_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier for the replication group.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="snapshot_retention_limit_python">
 <a href="#snapshot_retention_limit_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>retention_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days for which ElastiCache retains automatic cache cluster snapshots before deleting them.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="snapshot_window_python">
 <a href="#snapshot_window_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>window</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The daily time range (in UTC) during which ElastiCache begins taking a daily snapshot of your node group (shard).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

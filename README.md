@@ -23,7 +23,6 @@ just check the resulting files directly into the repo under `./content/reference
 - [Yarn](https://yarnpkg.com/en/docs/install) for installing dependencies in package.json
 - [Hugo](#hugo)
 - [Go](https://golang.org/dl/)
-- [DocFX](https://dotnet.github.io/docfx/)
 
 #### Hugo
 
@@ -46,13 +45,7 @@ brew uninstall hugo
 Install Hugo v0.55.4:
 
 ```bash
-brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/cf3219506fd28f7133041b74761e8025418435a3/Formula/hugo.rb
-```
-
-To prevent brew from upgrading Hugo:
-
-```bash
-brew pin hugo
+brew install pulumi/tap/hugo@0.55.4
 ```
 
 ##### Install Go
@@ -93,19 +86,11 @@ go get -u github.com/pkg/errors
 go get -u gopkg.in/russross/blackfriday.v2
 ```
 
-#### DocFX
-
-[DocFX](https://dotnet.github.io/docfx/) is used to generate .NET API Reference docs. Install it with
-
-```bash
-brew install docfx
-```
-
 ### Makefile
 
 `make ensure` will run `yarn install` which resolves project dependencies.
 
-`make lint_markdown` will run `yarn lint-markdown` which lints the markdown in the `content` directory.
+`make lint` will run `yarn lint-markdown` which lints the markdown in the `content` directory.
 
 `make build` will generate the website (published to `./public`).
 
@@ -168,7 +153,6 @@ However, there may be times when you need to generate docs for all providers out
  do that, ensure that the following files have all of the providers listed:
 * For NodeJS API docs: `scripts/run_typedoc.sh`
 * For Python API docs: `scripts/generate_python_docs.sh` and `tools/pydocgen/pulumi-docs.json`
-* For .NET API docs: `docfx/docfx.json`
 * For Resource docs: `scripts/generate_all_resource_docs.sh`
 
 See each script for its usage, and the optional arguments they may accept.

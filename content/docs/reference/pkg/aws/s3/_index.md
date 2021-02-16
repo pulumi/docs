@@ -18,6 +18,7 @@ Explore the resources and functions of the s3 module in the AWS package.
     <li><a href="bucketmetric" title="BucketMetric"><span class="symbol resource"></span>BucketMetric</a></li>
     <li><a href="bucketnotification" title="BucketNotification"><span class="symbol resource"></span>BucketNotification</a></li>
     <li><a href="bucketobject" title="BucketObject"><span class="symbol resource"></span>BucketObject</a></li>
+    <li><a href="bucketownershipcontrols" title="BucketOwnershipControls"><span class="symbol resource"></span>BucketOwnershipControls</a></li>
     <li><a href="bucketpolicy" title="BucketPolicy"><span class="symbol resource"></span>BucketPolicy</a></li>
     <li><a href="bucketpublicaccessblock" title="BucketPublicAccessBlock"><span class="symbol resource"></span>BucketPublicAccessBlock</a></li>
     <li><a href="inventory" title="Inventory"><span class="symbol resource"></span>Inventory</a></li>
@@ -39,24 +40,6 @@ Explore the resources and functions of the s3 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.html" title="Pulumi.Aws.S3">Pulumi.Aws.S3</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#" title="aws/s3">aws/s3</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#" title="@pulumi/aws/s3">@pulumi/aws/s3</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/s3" title="pulumi_aws/s3">pulumi_aws/s3</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

@@ -15,14 +15,20 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 <h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="accesscontextmanager/" title="accesscontextmanager"><span class="symbol module"></span>accesscontextmanager</a></li>
+    <li><a href="activedirectory/" title="activedirectory"><span class="symbol module"></span>activedirectory</a></li>
+    <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
+    <li><a href="apigee/" title="apigee"><span class="symbol module"></span>apigee</a></li>
     <li><a href="appengine/" title="appengine"><span class="symbol module"></span>appengine</a></li>
     <li><a href="artifactregistry/" title="artifactregistry"><span class="symbol module"></span>artifactregistry</a></li>
     <li><a href="bigquery/" title="bigquery"><span class="symbol module"></span>bigquery</a></li>
     <li><a href="bigtable/" title="bigtable"><span class="symbol module"></span>bigtable</a></li>
     <li><a href="billing/" title="billing"><span class="symbol module"></span>billing</a></li>
     <li><a href="binaryauthorization/" title="binaryauthorization"><span class="symbol module"></span>binaryauthorization</a></li>
+    <li><a href="certificateauthority/" title="certificateauthority"><span class="symbol module"></span>certificateauthority</a></li>
+    <li><a href="cloudasset/" title="cloudasset"><span class="symbol module"></span>cloudasset</a></li>
     <li><a href="cloudbuild/" title="cloudbuild"><span class="symbol module"></span>cloudbuild</a></li>
     <li><a href="cloudfunctions/" title="cloudfunctions"><span class="symbol module"></span>cloudfunctions</a></li>
+    <li><a href="cloudidentity/" title="cloudidentity"><span class="symbol module"></span>cloudidentity</a></li>
     <li><a href="cloudrun/" title="cloudrun"><span class="symbol module"></span>cloudrun</a></li>
     <li><a href="cloudscheduler/" title="cloudscheduler"><span class="symbol module"></span>cloudscheduler</a></li>
     <li><a href="cloudtasks/" title="cloudtasks"><span class="symbol module"></span>cloudtasks</a></li>
@@ -33,6 +39,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="datacatalog/" title="datacatalog"><span class="symbol module"></span>datacatalog</a></li>
     <li><a href="dataflow/" title="dataflow"><span class="symbol module"></span>dataflow</a></li>
     <li><a href="datafusion/" title="datafusion"><span class="symbol module"></span>datafusion</a></li>
+    <li><a href="dataloss/" title="dataloss"><span class="symbol module"></span>dataloss</a></li>
     <li><a href="dataproc/" title="dataproc"><span class="symbol module"></span>dataproc</a></li>
     <li><a href="datastore/" title="datastore"><span class="symbol module"></span>datastore</a></li>
     <li><a href="deploymentmanager/" title="deploymentmanager"><span class="symbol module"></span>deploymentmanager</a></li>
@@ -57,6 +64,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="networkmanagement/" title="networkmanagement"><span class="symbol module"></span>networkmanagement</a></li>
     <li><a href="notebooks/" title="notebooks"><span class="symbol module"></span>notebooks</a></li>
     <li><a href="organizations/" title="organizations"><span class="symbol module"></span>organizations</a></li>
+    <li><a href="osconfig/" title="osconfig"><span class="symbol module"></span>osconfig</a></li>
     <li><a href="oslogin/" title="oslogin"><span class="symbol module"></span>oslogin</a></li>
     <li><a href="projects/" title="projects"><span class="symbol module"></span>projects</a></li>
     <li><a href="pubsub/" title="pubsub"><span class="symbol module"></span>pubsub</a></li>
@@ -89,26 +97,8 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.html" title="Pulumi.Gcp">Pulumi.Gcp</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/?tab=doc#" title="gcp">gcp</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/#" title="@pulumi/gcp">@pulumi/gcp</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp" title="pulumi_gcp">pulumi_gcp</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

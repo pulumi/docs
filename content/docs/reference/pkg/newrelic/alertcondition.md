@@ -11,6 +11,8 @@ meta_desc: "Explore the AlertCondition resource of the New Relic package, includ
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this resource to create and manage alert conditions for APM, Browser, and Mobile in New Relic.
+
+> **NOTE:** The newrelic.NrqlAlertCondition resource is preferred for configuring alerts conditions. In most cases feature parity can be achieved with a NRQL query. Other condition types may be deprecated in the future and receive fewer product updates.
 ## Terms
 
 The `term` mapping supports the following arguments:
@@ -50,7 +52,7 @@ class MyStack : Stack
             Type = "apm_app_metric",
             Entities = 
             {
-                data.Newrelic_application.App.Application_id,
+                app.Apply(app => app.ApplicationId),
             },
             Metric = "apdex",
             RunbookUrl = "https://www.example.com",
@@ -80,6 +82,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,7 +90,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := "APPLICATION"
 		opt1 := "APM"
-		_, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
+		app, err := newrelic.GetEntity(ctx, &newrelic.GetEntityArgs{
 			Name:   "my-app",
 			Type:   &opt0,
 			Domain: &opt1,
@@ -103,7 +106,7 @@ func main() {
 			PolicyId: fooAlertPolicy.ID(),
 			Type:     pulumi.String("apm_app_metric"),
 			Entities: pulumi.IntArray{
-				pulumi.Any(data.Newrelic_application.App.Application_id),
+				pulumi.Int(app.ApplicationId),
 			},
 			Metric:         pulumi.String("apdex"),
 			RunbookUrl:     pulumi.String("https://www.example.com"),
@@ -140,17 +143,17 @@ foo_alert_policy = newrelic.AlertPolicy("fooAlertPolicy")
 foo_alert_condition = newrelic.AlertCondition("fooAlertCondition",
     policy_id=foo_alert_policy.id,
     type="apm_app_metric",
-    entities=[data["newrelic_application"]["app"]["application_id"]],
+    entities=[app.application_id],
     metric="apdex",
     runbook_url="https://www.example.com",
     condition_scope="application",
-    terms=[{
-        "duration": 5,
-        "operator": "below",
-        "priority": "critical",
-        "threshold": "0.75",
-        "timeFunction": "all",
-    }])
+    terms=[newrelic.AlertConditionTermArgs(
+        duration=5,
+        operator="below",
+        priority="critical",
+        threshold=0.75,
+        time_function="all",
+    )])
 ```
 
 {{% /example %}}
@@ -170,7 +173,7 @@ const fooAlertPolicy = new newrelic.AlertPolicy("fooAlertPolicy", {});
 const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
     policyId: fooAlertPolicy.id,
     type: "apm_app_metric",
-    entities: [data.newrelic_application.app.application_id],
+    entities: [app.then(app => app.applicationId)],
     metric: "apdex",
     runbookUrl: "https://www.example.com",
     conditionScope: "application",
@@ -194,19 +197,19 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#AlertCondition">AlertCondition</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#AlertConditionArgs">AlertConditionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AlertCondition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AlertConditionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.AlertCondition">AlertCondition</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>condition_scope=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>gc_metric=None<span class="p">, </span>metric=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>user_defined_metric=None<span class="p">, </span>user_defined_value_function=None<span class="p">, </span>violation_close_timer=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AlertCondition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">entities</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">gc_metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertConditionTermArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_value_function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_close_timer</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertCondition">NewAlertCondition</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertConditionArgs">AlertConditionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertCondition">AlertCondition</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAlertCondition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AlertConditionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertCondition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.AlertCondition.html">AlertCondition</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.AlertConditionArgs.html">AlertConditionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AlertCondition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AlertConditionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -217,7 +220,7 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -227,7 +230,7 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#AlertConditionArgs">AlertConditionArgs</a></span>
+        <span class="property-type"><a href="#inputs">AlertConditionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -286,7 +289,7 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -296,7 +299,7 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertConditionArgs">AlertConditionArgs</a></span>
+        <span class="property-type"><a href="#inputs">AlertConditionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -325,7 +328,7 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -335,7 +338,7 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.AlertConditionArgs.html">AlertConditionArgs</a></span>
+        <span class="property-type"><a href="#inputs">AlertConditionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -358,12 +361,11 @@ const fooAlertCondition = new newrelic.AlertCondition("fooAlertCondition", {
 
 ## AlertCondition Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AlertCondition resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The AlertCondition resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -374,20 +376,19 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="entities_csharp">
 <a href="#entities_csharp" style="color: inherit; text-decoration: inherit;">Entities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}The instance IDs associated with this condition.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="metric_csharp">
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric field accepts parameters based on the `type` set. One of these metrics based on `type`:
 * `apm_app_metric`
@@ -398,6 +399,11 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -428,131 +434,118 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 * `user_defined`
 * `view_loading`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="terms_csharp">
 <a href="#terms_csharp" style="color: inherit; text-decoration: inherit;">Terms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertconditionterm">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Alert<wbr>Condition<wbr>Term<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of terms for this condition. See Terms below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conditionscope_csharp">
 <a href="#conditionscope_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`application` or `instance`.  Choose `application` for most scenarios.  If you are using the JVM plugin in New Relic, the `instance` setting allows your condition to trigger [for specific app instances](https://docs.newrelic.com/docs/alerts/new-relic-alerts/defining-conditions/scope-alert-thresholds-specific-instances).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the condition is enabled or not. Defaults to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcmetric_csharp">
 <a href="#gcmetric_csharp" style="color: inherit; text-decoration: inherit;">Gc<wbr>Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid Garbage Collection metric e.g. `GC/G1 Young Generation`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition. Must be between 1 and 64 characters, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runbookurl_csharp">
 <a href="#runbookurl_csharp" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdefinedmetric_csharp">
 <a href="#userdefinedmetric_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom metric to be evaluated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdefinedvaluefunction_csharp">
 <a href="#userdefinedvaluefunction_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Value<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `average`, `min`, `max`, `total`, or `sample_size`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="violationclosetimer_csharp">
 <a href="#violationclosetimer_csharp" style="color: inherit; text-decoration: inherit;">Violation<wbr>Close<wbr>Timer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: `1`, `2`, `4`, `8`, `12` or `24`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -561,20 +554,19 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="entities_go">
 <a href="#entities_go" style="color: inherit; text-decoration: inherit;">Entities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}The instance IDs associated with this condition.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="metric_go">
 <a href="#metric_go" style="color: inherit; text-decoration: inherit;">Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric field accepts parameters based on the `type` set. One of these metrics based on `type`:
 * `apm_app_metric`
@@ -585,6 +577,11 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -615,131 +612,118 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 * `user_defined`
 * `view_loading`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="terms_go">
 <a href="#terms_go" style="color: inherit; text-decoration: inherit;">Terms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertconditionterm">[]Alert<wbr>Condition<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A list of terms for this condition. See Terms below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conditionscope_go">
 <a href="#conditionscope_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`application` or `instance`.  Choose `application` for most scenarios.  If you are using the JVM plugin in New Relic, the `instance` setting allows your condition to trigger [for specific app instances](https://docs.newrelic.com/docs/alerts/new-relic-alerts/defining-conditions/scope-alert-thresholds-specific-instances).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the condition is enabled or not. Defaults to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcmetric_go">
 <a href="#gcmetric_go" style="color: inherit; text-decoration: inherit;">Gc<wbr>Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid Garbage Collection metric e.g. `GC/G1 Young Generation`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition. Must be between 1 and 64 characters, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runbookurl_go">
 <a href="#runbookurl_go" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdefinedmetric_go">
 <a href="#userdefinedmetric_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom metric to be evaluated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdefinedvaluefunction_go">
 <a href="#userdefinedvaluefunction_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Value<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `average`, `min`, `max`, `total`, or `sample_size`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="violationclosetimer_go">
 <a href="#violationclosetimer_go" style="color: inherit; text-decoration: inherit;">Violation<wbr>Close<wbr>Timer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: `1`, `2`, `4`, `8`, `12` or `24`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -748,20 +732,19 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="entities_nodejs">
 <a href="#entities_nodejs" style="color: inherit; text-decoration: inherit;">entities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The instance IDs associated with this condition.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="metric_nodejs">
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric field accepts parameters based on the `type` set. One of these metrics based on `type`:
 * `apm_app_metric`
@@ -772,6 +755,11 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -802,131 +790,118 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 * `user_defined`
 * `view_loading`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="terms_nodejs">
 <a href="#terms_nodejs" style="color: inherit; text-decoration: inherit;">terms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertconditionterm">Alert<wbr>Condition<wbr>Term[]</a></span>
     </dt>
     <dd>{{% md %}}A list of terms for this condition. See Terms below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conditionscope_nodejs">
 <a href="#conditionscope_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`application` or `instance`.  Choose `application` for most scenarios.  If you are using the JVM plugin in New Relic, the `instance` setting allows your condition to trigger [for specific app instances](https://docs.newrelic.com/docs/alerts/new-relic-alerts/defining-conditions/scope-alert-thresholds-specific-instances).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the condition is enabled or not. Defaults to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcmetric_nodejs">
 <a href="#gcmetric_nodejs" style="color: inherit; text-decoration: inherit;">gc<wbr>Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid Garbage Collection metric e.g. `GC/G1 Young Generation`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition. Must be between 1 and 64 characters, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runbookurl_nodejs">
 <a href="#runbookurl_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdefinedmetric_nodejs">
 <a href="#userdefinedmetric_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom metric to be evaluated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdefinedvaluefunction_nodejs">
 <a href="#userdefinedvaluefunction_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Value<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `average`, `min`, `max`, `total`, or `sample_size`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="violationclosetimer_nodejs">
 <a href="#violationclosetimer_nodejs" style="color: inherit; text-decoration: inherit;">violation<wbr>Close<wbr>Timer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: `1`, `2`, `4`, `8`, `12` or `24`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -935,20 +910,19 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="entities_python">
 <a href="#entities_python" style="color: inherit; text-decoration: inherit;">entities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The instance IDs associated with this condition.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="metric_python">
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric field accepts parameters based on the `type` set. One of these metrics based on `type`:
 * `apm_app_metric`
@@ -959,6 +933,11 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -989,140 +968,123 @@ The AlertCondition resource accepts the following [input]({{< relref "/docs/intr
 * `user_defined`
 * `view_loading`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="terms_python">
 <a href="#terms_python" style="color: inherit; text-decoration: inherit;">terms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconditionterm">List[Alert<wbr>Condition<wbr>Term]</a></span>
+        <span class="property-type"><a href="#alertconditionterm">Sequence[Alert<wbr>Condition<wbr>Term<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of terms for this condition. See Terms below for details.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="condition_scope_python">
 <a href="#condition_scope_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`application` or `instance`.  Choose `application` for most scenarios.  If you are using the JVM plugin in New Relic, the `instance` setting allows your condition to trigger [for specific app instances](https://docs.newrelic.com/docs/alerts/new-relic-alerts/defining-conditions/scope-alert-thresholds-specific-instances).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the condition is enabled or not. Defaults to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gc_metric_python">
 <a href="#gc_metric_python" style="color: inherit; text-decoration: inherit;">gc_<wbr>metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A valid Garbage Collection metric e.g. `GC/G1 Young Generation`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of the condition. Must be between 1 and 64 characters, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runbook_url_python">
 <a href="#runbook_url_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_defined_metric_python">
 <a href="#user_defined_metric_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A custom metric to be evaluated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_defined_value_function_python">
 <a href="#user_defined_value_function_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>value_<wbr>function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of: `average`, `min`, `max`, `total`, or `sample_size`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="violation_close_timer_python">
 <a href="#violation_close_timer_python" style="color: inherit; text-decoration: inherit;">violation_<wbr>close_<wbr>timer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: `1`, `2`, `4`, `8`, `12` or `24`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the AlertCondition resource produces the following output properties:
-
 
 
 
@@ -1133,15 +1095,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1150,15 +1110,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1167,15 +1125,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1184,18 +1140,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1205,19 +1156,20 @@ Get an existing AlertCondition resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#AlertConditionState">AlertConditionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#AlertCondition">AlertCondition</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AlertConditionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AlertCondition</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>condition_scope=None<span class="p">, </span>enabled=None<span class="p">, </span>entities=None<span class="p">, </span>gc_metric=None<span class="p">, </span>metric=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>runbook_url=None<span class="p">, </span>terms=None<span class="p">, </span>type=None<span class="p">, </span>user_defined_metric=None<span class="p">, </span>user_defined_value_function=None<span class="p">, </span>violation_close_timer=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">condition_scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">entities</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">gc_metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[Sequence[AlertConditionTermArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_metric</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_defined_value_function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_close_timer</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> AlertCondition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertCondition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertConditionState">AlertConditionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertCondition">AlertCondition</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertCondition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AlertConditionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AlertCondition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.AlertCondition.html">AlertCondition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic..AlertConditionState.html">AlertConditionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AlertCondition</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AlertConditionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1319,7 +1271,6 @@ Get an existing AlertCondition resource's state with the given name, ID, and opt
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1327,53 +1278,49 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_conditionscope_csharp">
 <a href="#state_conditionscope_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`application` or `instance`.  Choose `application` for most scenarios.  If you are using the JVM plugin in New Relic, the `instance` setting allows your condition to trigger [for specific app instances](https://docs.newrelic.com/docs/alerts/new-relic-alerts/defining-conditions/scope-alert-thresholds-specific-instances).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the condition is enabled or not. Defaults to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_entities_csharp">
 <a href="#state_entities_csharp" style="color: inherit; text-decoration: inherit;">Entities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}The instance IDs associated with this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gcmetric_csharp">
 <a href="#state_gcmetric_csharp" style="color: inherit; text-decoration: inherit;">Gc<wbr>Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid Garbage Collection metric e.g. `GC/G1 Young Generation`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metric_csharp">
 <a href="#state_metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric field accepts parameters based on the `type` set. One of these metrics based on `type`:
 * `apm_app_metric`
@@ -1384,6 +1331,11 @@ The following state arguments are supported:
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -1414,98 +1366,88 @@ The following state arguments are supported:
 * `user_defined`
 * `view_loading`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition. Must be between 1 and 64 characters, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runbookurl_csharp">
 <a href="#state_runbookurl_csharp" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_terms_csharp">
 <a href="#state_terms_csharp" style="color: inherit; text-decoration: inherit;">Terms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertconditionterm">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Alert<wbr>Condition<wbr>Term<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of terms for this condition. See Terms below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdefinedmetric_csharp">
 <a href="#state_userdefinedmetric_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom metric to be evaluated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdefinedvaluefunction_csharp">
 <a href="#state_userdefinedvaluefunction_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Value<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `average`, `min`, `max`, `total`, or `sample_size`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_violationclosetimer_csharp">
 <a href="#state_violationclosetimer_csharp" style="color: inherit; text-decoration: inherit;">Violation<wbr>Close<wbr>Timer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: `1`, `2`, `4`, `8`, `12` or `24`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1514,53 +1456,49 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_conditionscope_go">
 <a href="#state_conditionscope_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`application` or `instance`.  Choose `application` for most scenarios.  If you are using the JVM plugin in New Relic, the `instance` setting allows your condition to trigger [for specific app instances](https://docs.newrelic.com/docs/alerts/new-relic-alerts/defining-conditions/scope-alert-thresholds-specific-instances).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the condition is enabled or not. Defaults to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_entities_go">
 <a href="#state_entities_go" style="color: inherit; text-decoration: inherit;">Entities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}The instance IDs associated with this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gcmetric_go">
 <a href="#state_gcmetric_go" style="color: inherit; text-decoration: inherit;">Gc<wbr>Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid Garbage Collection metric e.g. `GC/G1 Young Generation`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metric_go">
 <a href="#state_metric_go" style="color: inherit; text-decoration: inherit;">Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric field accepts parameters based on the `type` set. One of these metrics based on `type`:
 * `apm_app_metric`
@@ -1571,6 +1509,11 @@ The following state arguments are supported:
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -1601,98 +1544,88 @@ The following state arguments are supported:
 * `user_defined`
 * `view_loading`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition. Must be between 1 and 64 characters, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runbookurl_go">
 <a href="#state_runbookurl_go" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_terms_go">
 <a href="#state_terms_go" style="color: inherit; text-decoration: inherit;">Terms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertconditionterm">[]Alert<wbr>Condition<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}A list of terms for this condition. See Terms below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdefinedmetric_go">
 <a href="#state_userdefinedmetric_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom metric to be evaluated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdefinedvaluefunction_go">
 <a href="#state_userdefinedvaluefunction_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Value<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `average`, `min`, `max`, `total`, or `sample_size`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_violationclosetimer_go">
 <a href="#state_violationclosetimer_go" style="color: inherit; text-decoration: inherit;">Violation<wbr>Close<wbr>Timer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: `1`, `2`, `4`, `8`, `12` or `24`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1701,53 +1634,49 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_conditionscope_nodejs">
 <a href="#state_conditionscope_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`application` or `instance`.  Choose `application` for most scenarios.  If you are using the JVM plugin in New Relic, the `instance` setting allows your condition to trigger [for specific app instances](https://docs.newrelic.com/docs/alerts/new-relic-alerts/defining-conditions/scope-alert-thresholds-specific-instances).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the condition is enabled or not. Defaults to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_entities_nodejs">
 <a href="#state_entities_nodejs" style="color: inherit; text-decoration: inherit;">entities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The instance IDs associated with this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gcmetric_nodejs">
 <a href="#state_gcmetric_nodejs" style="color: inherit; text-decoration: inherit;">gc<wbr>Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid Garbage Collection metric e.g. `GC/G1 Young Generation`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metric_nodejs">
 <a href="#state_metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric field accepts parameters based on the `type` set. One of these metrics based on `type`:
 * `apm_app_metric`
@@ -1758,6 +1687,11 @@ The following state arguments are supported:
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -1788,98 +1722,88 @@ The following state arguments are supported:
 * `user_defined`
 * `view_loading`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition. Must be between 1 and 64 characters, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runbookurl_nodejs">
 <a href="#state_runbookurl_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_terms_nodejs">
 <a href="#state_terms_nodejs" style="color: inherit; text-decoration: inherit;">terms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertconditionterm">Alert<wbr>Condition<wbr>Term[]</a></span>
     </dt>
     <dd>{{% md %}}A list of terms for this condition. See Terms below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdefinedmetric_nodejs">
 <a href="#state_userdefinedmetric_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom metric to be evaluated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdefinedvaluefunction_nodejs">
 <a href="#state_userdefinedvaluefunction_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Value<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `average`, `min`, `max`, `total`, or `sample_size`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_violationclosetimer_nodejs">
 <a href="#state_violationclosetimer_nodejs" style="color: inherit; text-decoration: inherit;">violation<wbr>Close<wbr>Timer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: `1`, `2`, `4`, `8`, `12` or `24`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1888,53 +1812,49 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_condition_scope_python">
 <a href="#state_condition_scope_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`application` or `instance`.  Choose `application` for most scenarios.  If you are using the JVM plugin in New Relic, the `instance` setting allows your condition to trigger [for specific app instances](https://docs.newrelic.com/docs/alerts/new-relic-alerts/defining-conditions/scope-alert-thresholds-specific-instances).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the condition is enabled or not. Defaults to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_entities_python">
 <a href="#state_entities_python" style="color: inherit; text-decoration: inherit;">entities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The instance IDs associated with this condition.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gc_metric_python">
 <a href="#state_gc_metric_python" style="color: inherit; text-decoration: inherit;">gc_<wbr>metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A valid Garbage Collection metric e.g. `GC/G1 Young Generation`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metric_python">
 <a href="#state_metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric field accepts parameters based on the `type` set. One of these metrics based on `type`:
 * `apm_app_metric`
@@ -1945,6 +1865,11 @@ The following state arguments are supported:
 * `throughput_background`
 * `throughput_web`
 * `user_defined`
+* `apm_jvm_metric`
+* `cpu_utilization_time`
+* `deadlocked_threads`
+* `gc_cpu_time`
+* `heap_memory_usage`
 * `apm_kt_metric`
 * `apdex`
 * `error_count`
@@ -1975,101 +1900,88 @@ The following state arguments are supported:
 * `user_defined`
 * `view_loading`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of the condition. Must be between 1 and 64 characters, inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_id_python">
 <a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runbook_url_python">
 <a href="#state_runbook_url_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_terms_python">
 <a href="#state_terms_python" style="color: inherit; text-decoration: inherit;">terms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertconditionterm">List[Alert<wbr>Condition<wbr>Term]</a></span>
+        <span class="property-type"><a href="#alertconditionterm">Sequence[Alert<wbr>Condition<wbr>Term<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of terms for this condition. See Terms below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
+    <dd>{{% md %}}The type of condition. One of: `apm_app_metric`, `apm_jvm_metric`, `apm_kt_metric`, `browser_metric`, `mobile_metric`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_user_defined_metric_python">
 <a href="#state_user_defined_metric_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>metric</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A custom metric to be evaluated.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_user_defined_value_function_python">
 <a href="#state_user_defined_value_function_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>value_<wbr>function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of: `average`, `min`, `max`, `total`, or `sample_size`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_violation_close_timer_python">
 <a href="#state_violation_close_timer_python" style="color: inherit; text-decoration: inherit;">violation_<wbr>close_<wbr>timer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Automatically close instance-based violations, including JVM health metric violations, after the number of hours specified. Must be: `1`, `2`, `4`, `8`, `12` or `24`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2079,20 +1991,8 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="alertconditionterm">Alert<wbr>Condition<wbr>Term</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#AlertConditionTerm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#AlertConditionTerm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertConditionTermArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#AlertConditionTermOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.AlertConditionTermArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.AlertConditionTerm.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2101,55 +2001,49 @@ The following state arguments are supported:
             title="Required">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timefunction_csharp">
 <a href="#timefunction_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2158,55 +2052,49 @@ The following state arguments are supported:
             title="Required">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timefunction_go">
 <a href="#timefunction_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2215,55 +2103,49 @@ The following state arguments are supported:
             title="Required">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timefunction_nodejs">
 <a href="#timefunction_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2272,59 +2154,57 @@ The following state arguments are supported:
             title="Required">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="timefunction_python">
-<a href="#timefunction_python" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
-</span> 
+        <span id="time_function_python">
+<a href="#time_function_python" style="color: inherit; text-decoration: inherit;">time_<wbr>function</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Alert conditions can be imported using notation `alert_policy_id:alert_condition_id`, e.g.
 
-
-
+```sh
+ $ pulumi import newrelic:index/alertCondition:AlertCondition main 123456:6789012345
+```
 
 
 

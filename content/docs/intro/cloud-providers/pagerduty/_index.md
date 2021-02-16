@@ -59,13 +59,22 @@ demo_team = pagerduty.Team("demo-team",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  pagerduty "github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	pagerduty "github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty"
 )
 
-demoTeam, _ := pagerduty.NewTeam(ctx, "demo-team", &pagerduty.TeamArgs{
-  Description: pulumi.String("Demo team generated from examples"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		demoTeam, err := pagerduty.NewTeam(ctx, "demo-team", &pagerduty.TeamArgs{
+			Description: pulumi.String("Demo team generated from examples"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}

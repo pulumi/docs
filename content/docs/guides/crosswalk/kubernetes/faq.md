@@ -43,7 +43,7 @@ linktitle: FAQ
 1. **Does Crosswalk support on-prem or other cloud providers?**
 
     Support for on-prem environments, and other clouds is an area we'd love
-    to build out. Please open an issue in [`pulumi/docs`][pulumi-docs] to describe your
+    to build out. Open an issue in [`pulumi/docs`][pulumi-docs] to describe your
     Crosswalk use case.
 
     * **Digital Ocean**: Check out [Managing DigitalOcean and Kubernetes with Pulumi][k8s-do] for more details.

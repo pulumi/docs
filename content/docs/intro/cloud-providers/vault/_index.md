@@ -59,13 +59,22 @@ be = vault.AuthBackend("example",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  vault "github.com/pulumi/pulumi-vault/sdk/v2/go/vault"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	vault "github.com/pulumi/pulumi-vault/sdk/v2/go/vault"
 )
 
-be, _ := vault.NewAuthBackend(ctx, "example", &vault.AuthBackendArgs{
-  Type: pulumi.String("github"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		be, err := vault.NewAuthBackend(ctx, "example", &vault.AuthBackendArgs{
+			Type: pulumi.String("github"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}

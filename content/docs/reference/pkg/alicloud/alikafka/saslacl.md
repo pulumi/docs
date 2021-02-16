@@ -1,8 +1,8 @@
 
 ---
 title: "SaslAcl"
-title_tag: "Resource SaslAcl | Module alikafka | Package AliCloud"
-meta_desc: "Explore the SaslAcl resource of the alikafka module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an ALIKAFKA sasl acl resource."
+title_tag: "alicloud.alikafka.SaslAcl"
+meta_desc: "Documentation for the alicloud.alikafka.SaslAcl resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -44,39 +44,39 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultInstance = new AliCloud.AliKafka.Instance("defaultInstance", new AliCloud.AliKafka.InstanceArgs
         {
-            DeployType = 5,
-            DiskSize = 500,
-            DiskType = 1,
-            IoMax = 20,
             TopicQuota = 50,
+            DiskType = 1,
+            DiskSize = 500,
+            DeployType = 5,
+            IoMax = 20,
             VswitchId = defaultSwitch.Id,
         });
         var defaultTopic = new AliCloud.AliKafka.Topic("defaultTopic", new AliCloud.AliKafka.TopicArgs
         {
             InstanceId = defaultInstance.Id,
-            Remark = "topic-remark",
             Topic = "test-topic",
+            Remark = "topic-remark",
         });
         var defaultSaslUser = new AliCloud.AliKafka.SaslUser("defaultSaslUser", new AliCloud.AliKafka.SaslUserArgs
         {
             InstanceId = defaultInstance.Id,
-            Password = password,
             Username = username,
+            Password = password,
         });
         var defaultSaslAcl = new AliCloud.AliKafka.SaslAcl("defaultSaslAcl", new AliCloud.AliKafka.SaslAclArgs
         {
-            AclOperationType = "Write",
-            AclResourceName = defaultTopic.TopicName,
-            AclResourcePatternType = "LITERAL",
-            AclResourceType = "Topic",
             InstanceId = defaultInstance.Id,
             Username = defaultSaslUser.Username,
+            AclResourceType = "Topic",
+            AclResourceName = defaultTopic.TopicName,
+            AclResourcePatternType = "LITERAL",
+            AclOperationType = "Write",
         });
     }
 
@@ -86,7 +86,93 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		username := "testusername"
+		if param := cfg.Get("username"); param != "" {
+			username = param
+		}
+		password := "testpassword"
+		if param := cfg.Get("password"); param != "" {
+			password = param
+		}
+		opt0 := "VSwitch"
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableResourceCreation: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
+			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		defaultInstance, err := alikafka.NewInstance(ctx, "defaultInstance", &alikafka.InstanceArgs{
+			TopicQuota: pulumi.Int(50),
+			DiskType:   pulumi.Int(1),
+			DiskSize:   pulumi.Int(500),
+			DeployType: pulumi.Int(5),
+			IoMax:      pulumi.Int(20),
+			VswitchId:  defaultSwitch.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		defaultTopic, err := alikafka.NewTopic(ctx, "defaultTopic", &alikafka.TopicArgs{
+			InstanceId: defaultInstance.ID(),
+			Topic:      pulumi.String("test-topic"),
+			Remark:     pulumi.String("topic-remark"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSaslUser, err := alikafka.NewSaslUser(ctx, "defaultSaslUser", &alikafka.SaslUserArgs{
+			InstanceId: defaultInstance.ID(),
+			Username:   pulumi.String(username),
+			Password:   pulumi.String(password),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = alikafka.NewSaslAcl(ctx, "defaultSaslAcl", &alikafka.SaslAclArgs{
+			InstanceId:             defaultInstance.ID(),
+			Username:               defaultSaslUser.Username,
+			AclResourceType:        pulumi.String("Topic"),
+			AclResourceName:        defaultTopic.Topic,
+			AclResourcePatternType: pulumi.String("LITERAL"),
+			AclOperationType:       pulumi.String("Write"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -104,31 +190,31 @@ if password is None:
 default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_instance = alicloud.alikafka.Instance("defaultInstance",
-    deploy_type="5",
-    disk_size="500",
-    disk_type="1",
-    io_max="20",
-    topic_quota="50",
+    topic_quota=50,
+    disk_type=1,
+    disk_size=500,
+    deploy_type=5,
+    io_max=20,
     vswitch_id=default_switch.id)
 default_topic = alicloud.alikafka.Topic("defaultTopic",
     instance_id=default_instance.id,
-    remark="topic-remark",
-    topic="test-topic")
+    topic="test-topic",
+    remark="topic-remark")
 default_sasl_user = alicloud.alikafka.SaslUser("defaultSaslUser",
     instance_id=default_instance.id,
-    password=password,
-    username=username)
+    username=username,
+    password=password)
 default_sasl_acl = alicloud.alikafka.SaslAcl("defaultSaslAcl",
-    acl_operation_type="Write",
+    instance_id=default_instance.id,
+    username=default_sasl_user.username,
+    acl_resource_type="Topic",
     acl_resource_name=default_topic.topic,
     acl_resource_pattern_type="LITERAL",
-    acl_resource_type="Topic",
-    instance_id=default_instance.id,
-    username=default_sasl_user.username)
+    acl_operation_type="Write")
 ```
 
 {{% /example %}}
@@ -142,43 +228,40 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const username = config.get("username") || "testusername";
 const password = config.get("password") || "testpassword";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/12",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultInstance = new alicloud.alikafka.Instance("default", {
-    deployType: 5,
-    diskSize: 500,
-    diskType: 1,
-    ioMax: 20,
-    topicQuota: 50,
+const defaultInstance = new alicloud.alikafka.Instance("defaultInstance", {
+    topicQuota: "50",
+    diskType: "1",
+    diskSize: "500",
+    deployType: "5",
+    ioMax: "20",
     vswitchId: defaultSwitch.id,
 });
-const defaultTopic = new alicloud.alikafka.Topic("default", {
+const defaultTopic = new alicloud.alikafka.Topic("defaultTopic", {
     instanceId: defaultInstance.id,
-    remark: "topic-remark",
     topic: "test-topic",
+    remark: "topic-remark",
 });
-const defaultSaslUser = new alicloud.alikafka.SaslUser("default", {
+const defaultSaslUser = new alicloud.alikafka.SaslUser("defaultSaslUser", {
     instanceId: defaultInstance.id,
-    password: password,
     username: username,
+    password: password,
 });
-const defaultSaslAcl = new alicloud.alikafka.SaslAcl("default", {
-    aclOperationType: "Write",
-    aclResourceName: defaultTopic.topic,
-    aclResourcePatternType: "LITERAL",
-    aclResourceType: "Topic",
+const defaultSaslAcl = new alicloud.alikafka.SaslAcl("defaultSaslAcl", {
     instanceId: defaultInstance.id,
     username: defaultSaslUser.username,
+    aclResourceType: "Topic",
+    aclResourceName: defaultTopic.topic,
+    aclResourcePatternType: "LITERAL",
+    aclOperationType: "Write",
 });
 ```
 
@@ -192,19 +275,19 @@ const defaultSaslAcl = new alicloud.alikafka.SaslAcl("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#SaslAcl">SaslAcl</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#SaslAclArgs">SaslAclArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#SaslAcl">SaslAcl</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#SaslAclArgs">SaslAclArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/alikafka/#pulumi_alicloud.alikafka.SaslAcl">SaslAcl</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acl_operation_type=None<span class="p">, </span>acl_resource_name=None<span class="p">, </span>acl_resource_pattern_type=None<span class="p">, </span>acl_resource_type=None<span class="p">, </span>instance_id=None<span class="p">, </span>username=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/alikafka/#pulumi_alicloud.alikafka.SaslAcl">SaslAcl</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl_operation_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acl_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acl_resource_pattern_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acl_resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka?tab=doc#SaslAcl">NewSaslAcl</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka?tab=doc#SaslAclArgs">SaslAclArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka?tab=doc#SaslAcl">SaslAcl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka?tab=doc#SaslAcl">NewSaslAcl</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka?tab=doc#SaslAclArgs">SaslAclArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka?tab=doc#SaslAcl">SaslAcl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.AliKafka.SaslAcl.html">SaslAcl</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.AliKafka.SaslAclArgs.html">SaslAclArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.AliKafka.SaslAcl.html">SaslAcl</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.AliKafka.SaslAclArgs.html">SaslAclArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -215,7 +298,7 @@ const defaultSaslAcl = new alicloud.alikafka.SaslAcl("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -284,7 +367,7 @@ const defaultSaslAcl = new alicloud.alikafka.SaslAcl("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -323,7 +406,7 @@ const defaultSaslAcl = new alicloud.alikafka.SaslAcl("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -364,7 +447,6 @@ The SaslAcl resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -372,71 +454,64 @@ The SaslAcl resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="acloperationtype_csharp">
 <a href="#acloperationtype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Operation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation type for this acl. The operation type can only be "Write" and "Read".
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="aclresourcename_csharp">
 <a href="#aclresourcename_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for this acl. The resource name should be a topic or consumer group name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="aclresourcepatterntype_csharp">
 <a href="#aclresourcepatterntype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Pattern<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource pattern type for this acl. The resource pattern support two types "LITERAL" and "PREFIXED". "LITERAL": A literal name defines the full name of a resource. The special wildcard character "*" can be used to represent a resource with any name. "PREFIXED": A prefixed name defines a prefix for a resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="aclresourcetype_csharp">
 <a href="#aclresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type for this acl. The resource type can only be "Topic" and "Group".
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the ALIKAFKA Instance that owns the groups.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the sasl user. The length should between 1 to 64 characters. The user should be an existed sasl user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -445,71 +520,64 @@ The SaslAcl resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="acloperationtype_go">
 <a href="#acloperationtype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Operation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation type for this acl. The operation type can only be "Write" and "Read".
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="aclresourcename_go">
 <a href="#aclresourcename_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for this acl. The resource name should be a topic or consumer group name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="aclresourcepatterntype_go">
 <a href="#aclresourcepatterntype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Pattern<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource pattern type for this acl. The resource pattern support two types "LITERAL" and "PREFIXED". "LITERAL": A literal name defines the full name of a resource. The special wildcard character "*" can be used to represent a resource with any name. "PREFIXED": A prefixed name defines a prefix for a resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="aclresourcetype_go">
 <a href="#aclresourcetype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type for this acl. The resource type can only be "Topic" and "Group".
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the ALIKAFKA Instance that owns the groups.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the sasl user. The length should between 1 to 64 characters. The user should be an existed sasl user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -518,71 +586,64 @@ The SaslAcl resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="acloperationtype_nodejs">
 <a href="#acloperationtype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Operation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation type for this acl. The operation type can only be "Write" and "Read".
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="aclresourcename_nodejs">
 <a href="#aclresourcename_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for this acl. The resource name should be a topic or consumer group name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="aclresourcepatterntype_nodejs">
 <a href="#aclresourcepatterntype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Resource<wbr>Pattern<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource pattern type for this acl. The resource pattern support two types "LITERAL" and "PREFIXED". "LITERAL": A literal name defines the full name of a resource. The special wildcard character "*" can be used to represent a resource with any name. "PREFIXED": A prefixed name defines a prefix for a resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="aclresourcetype_nodejs">
 <a href="#aclresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Resource<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type for this acl. The resource type can only be "Topic" and "Group".
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the ALIKAFKA Instance that owns the groups.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the sasl user. The length should between 1 to 64 characters. The user should be an existed sasl user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -591,80 +652,69 @@ The SaslAcl resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="acl_operation_type_python">
 <a href="#acl_operation_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>operation_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation type for this acl. The operation type can only be "Write" and "Read".
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="acl_resource_name_python">
 <a href="#acl_resource_name_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>resource_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name for this acl. The resource name should be a topic or consumer group name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="acl_resource_pattern_type_python">
 <a href="#acl_resource_pattern_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>resource_<wbr>pattern_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource pattern type for this acl. The resource pattern support two types "LITERAL" and "PREFIXED". "LITERAL": A literal name defines the full name of a resource. The special wildcard character "*" can be used to represent a resource with any name. "PREFIXED": A prefixed name defines a prefix for a resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="acl_resource_type_python">
 <a href="#acl_resource_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>resource_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type for this acl. The resource type can only be "Topic" and "Group".
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the ALIKAFKA Instance that owns the groups.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for the sasl user. The length should between 1 to 64 characters. The user should be an existed sasl user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the SaslAcl resource produces the following output properties:
-
 
 
 
@@ -675,26 +725,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host of the acl.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -703,26 +750,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host of the acl.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -731,26 +775,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host of the acl.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -759,29 +800,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host of the acl.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -791,19 +826,20 @@ Get an existing SaslAcl resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#SaslAclState">SaslAclState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#SaslAcl">SaslAcl</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#SaslAclState">SaslAclState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#SaslAcl">SaslAcl</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl_operation_type=None<span class="p">, </span>acl_resource_name=None<span class="p">, </span>acl_resource_pattern_type=None<span class="p">, </span>acl_resource_type=None<span class="p">, </span>host=None<span class="p">, </span>instance_id=None<span class="p">, </span>username=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acl_operation_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acl_resource_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acl_resource_pattern_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acl_resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SaslAcl</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSaslAcl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka?tab=doc#SaslAclState">SaslAclState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka?tab=doc#SaslAcl">SaslAcl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSaslAcl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka?tab=doc#SaslAclState">SaslAclState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka?tab=doc#SaslAcl">SaslAcl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.AliKafka.SaslAcl.html">SaslAcl</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.AliKafka.SaslAclState.html">SaslAclState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.AliKafka.SaslAcl.html">SaslAcl</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.AliKafka.SaslAclState.html">SaslAclState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -905,7 +941,6 @@ Get an existing SaslAcl resource's state with the given name, ID, and optional e
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -913,82 +948,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_acloperationtype_csharp">
 <a href="#state_acloperationtype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Operation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation type for this acl. The operation type can only be "Write" and "Read".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcename_csharp">
 <a href="#state_aclresourcename_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for this acl. The resource name should be a topic or consumer group name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcepatterntype_csharp">
 <a href="#state_aclresourcepatterntype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Pattern<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource pattern type for this acl. The resource pattern support two types "LITERAL" and "PREFIXED". "LITERAL": A literal name defines the full name of a resource. The special wildcard character "*" can be used to represent a resource with any name. "PREFIXED": A prefixed name defines a prefix for a resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcetype_csharp">
 <a href="#state_aclresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type for this acl. The resource type can only be "Topic" and "Group".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_host_csharp">
 <a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host of the acl.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_csharp">
 <a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the ALIKAFKA Instance that owns the groups.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the sasl user. The length should between 1 to 64 characters. The user should be an existed sasl user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -997,82 +1024,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_acloperationtype_go">
 <a href="#state_acloperationtype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Operation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation type for this acl. The operation type can only be "Write" and "Read".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcename_go">
 <a href="#state_aclresourcename_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for this acl. The resource name should be a topic or consumer group name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcepatterntype_go">
 <a href="#state_aclresourcepatterntype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Pattern<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource pattern type for this acl. The resource pattern support two types "LITERAL" and "PREFIXED". "LITERAL": A literal name defines the full name of a resource. The special wildcard character "*" can be used to represent a resource with any name. "PREFIXED": A prefixed name defines a prefix for a resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcetype_go">
 <a href="#state_aclresourcetype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type for this acl. The resource type can only be "Topic" and "Group".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_host_go">
 <a href="#state_host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host of the acl.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
 <a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the ALIKAFKA Instance that owns the groups.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the sasl user. The length should between 1 to 64 characters. The user should be an existed sasl user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1081,82 +1100,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_acloperationtype_nodejs">
 <a href="#state_acloperationtype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Operation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operation type for this acl. The operation type can only be "Write" and "Read".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcename_nodejs">
 <a href="#state_aclresourcename_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for this acl. The resource name should be a topic or consumer group name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcepatterntype_nodejs">
 <a href="#state_aclresourcepatterntype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Resource<wbr>Pattern<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource pattern type for this acl. The resource pattern support two types "LITERAL" and "PREFIXED". "LITERAL": A literal name defines the full name of a resource. The special wildcard character "*" can be used to represent a resource with any name. "PREFIXED": A prefixed name defines a prefix for a resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcetype_nodejs">
 <a href="#state_aclresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Resource<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type for this acl. The resource type can only be "Topic" and "Group".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_host_nodejs">
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host of the acl.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the ALIKAFKA Instance that owns the groups.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the sasl user. The length should between 1 to 64 characters. The user should be an existed sasl user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1165,79 +1176,72 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_acl_operation_type_python">
 <a href="#state_acl_operation_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>operation_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operation type for this acl. The operation type can only be "Write" and "Read".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_acl_resource_name_python">
 <a href="#state_acl_resource_name_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>resource_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name for this acl. The resource name should be a topic or consumer group name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_acl_resource_pattern_type_python">
 <a href="#state_acl_resource_pattern_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>resource_<wbr>pattern_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource pattern type for this acl. The resource pattern support two types "LITERAL" and "PREFIXED". "LITERAL": A literal name defines the full name of a resource. The special wildcard character "*" can be used to represent a resource with any name. "PREFIXED": A prefixed name defines a prefix for a resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_acl_resource_type_python">
 <a href="#state_acl_resource_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>resource_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type for this acl. The resource type can only be "Topic" and "Group".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_host_python">
 <a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host of the acl.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the ALIKAFKA Instance that owns the groups.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for the sasl user. The length should between 1 to 64 characters. The user should be an existed sasl user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1245,8 +1249,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+ALIKAFKA GROUP can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:alikafka/saslAcl:SaslAcl acl alikafka_post-cn-123455abc:username:Topic:test-topic:LITERAL:Write
+```
 
 
 
@@ -1258,6 +1268,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

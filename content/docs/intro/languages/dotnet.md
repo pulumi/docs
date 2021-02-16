@@ -5,7 +5,7 @@ meta_desc: An overview of how to use .NET languages like C# and F# for infrastru
 menu:
   intro:
     parent: languages
-    weight: 1
+    weight: 3
 
 aliases: ["/dotnet/"]
 ---
@@ -43,8 +43,8 @@ The fastest way to get up and running is to choose from one of the following Get
     </div>
 </div>
 
-> The Getting Started guides currently only demonstrate C#. For F# and Visual Basic, please refer to the
-> documentation below. They will work just fine &mdash; the guides simply aren't ready for them yet.
+> The Getting Started guides currently only demonstrate C#. For F# and Visual Basic,
+> they will work just fine &mdash; the guides simply aren't ready for them yet.
 
 ## Prerequisites
 
@@ -236,6 +236,10 @@ Although you can use any editor, [Visual Studio Code](https://code.visualstudio.
 
 ![VSCode](/images/docs/quickstart/vscode-dotnet.png)
 
+## Pulumi Programming Model
+
+The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with .NET and Pulumi, and the [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
+
 ## Continuous Delivery
 
 In addition to the CLI-driven workflows shown above, you can continuously deploy your infrastructure using .NET by integrating with your CI/CD provider of choice. This ensures automated deployments triggered by events such as commits to your Git repo.
@@ -254,8 +258,8 @@ To learn more, [see the Pulumi Azure DevOps user guide]({{< relref "/docs/guides
 
 Pulumi can deploy infrastructure using GitHub Actions, making Git-driven deployments of your infrastructure as code straightforward. To learn more, [see the Pulumi GitHub Actions user guide]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}).
 
-There is also a Pulumi GitHub App that integrates with Pull Requests so that you get previews of deployments before they are merged inline in your PRs where it's easy to comment and collaborate. [Read more here about how to install this app into your organization]({{< relref "/docs/guides/continuous-delivery/github-app" >}}).
+There is also a [Pulumi GitHub App]({{< relref "/docs/guides/continuous-delivery/github-app" >}}) that integrates with Pull Requests so that you get previews of deployments before they are merged inline in your PRs where it's easy to comment and collaborate.
 
 ### Other CI/CD Integrations
 
-If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number of other CI/CD integrations. For a complete list, [go here]({{< relref "/docs/guides/continuous-delivery" >}}).
+If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number of other [CI/CD integrations]({{< relref "/docs/guides/continuous-delivery" >}}).

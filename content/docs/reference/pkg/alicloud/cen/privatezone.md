@@ -1,8 +1,8 @@
 
 ---
 title: "PrivateZone"
-title_tag: "Resource PrivateZone | Module cen | Package AliCloud"
-meta_desc: "Explore the PrivateZone resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. This topic describes how to configure PrivateZone access. "
+title_tag: "alicloud.cen.PrivateZone"
+meta_desc: "Documentation for the alicloud.cen.PrivateZone resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -32,6 +32,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        // Create a cen Private Zone resource and use it.
         var defaultInstance = new AliCloud.Cen.Instance("defaultInstance", new AliCloud.Cen.InstanceArgs
         {
         });
@@ -41,9 +42,17 @@ class MyStack : Stack
         });
         var defaultInstanceAttachment = new AliCloud.Cen.InstanceAttachment("defaultInstanceAttachment", new AliCloud.Cen.InstanceAttachmentArgs
         {
-            ChildInstanceId = defaultNetwork.Id,
-            ChildInstanceRegionId = "cn-hangzhou",
             InstanceId = defaultInstance.Id,
+            ChildInstanceId = defaultNetwork.Id,
+            ChildInstanceType = "VPC",
+            ChildInstanceRegionId = "cn-hangzhou",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                defaultInstance,
+                defaultNetwork,
+            },
         });
         var defaultPrivateZone = new AliCloud.Cen.PrivateZone("defaultPrivateZone", new AliCloud.Cen.PrivateZoneArgs
         {
@@ -51,6 +60,12 @@ class MyStack : Stack
             CenId = defaultInstance.Id,
             HostRegionId = "cn-hangzhou",
             HostVpcId = defaultNetwork.Id,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                defaultInstanceAttachment,
+            },
         });
     }
 
@@ -60,7 +75,55 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultInstance, err := cen.NewInstance(ctx, "defaultInstance", nil)
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultInstanceAttachment, err := cen.NewInstanceAttachment(ctx, "defaultInstanceAttachment", &cen.InstanceAttachmentArgs{
+			InstanceId:            defaultInstance.ID(),
+			ChildInstanceId:       defaultNetwork.ID(),
+			ChildInstanceType:     pulumi.String("VPC"),
+			ChildInstanceRegionId: pulumi.String("cn-hangzhou"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			defaultInstance,
+			defaultNetwork,
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewPrivateZone(ctx, "defaultPrivateZone", &cen.PrivateZoneArgs{
+			AccessRegionId: pulumi.String("cn-hangzhou"),
+			CenId:          defaultInstance.ID(),
+			HostRegionId:   pulumi.String("cn-hangzhou"),
+			HostVpcId:      defaultNetwork.ID(),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			defaultInstanceAttachment,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -68,17 +131,24 @@ Coming soon!
 import pulumi
 import pulumi_alicloud as alicloud
 
+# Create a cen Private Zone resource and use it.
 default_instance = alicloud.cen.Instance("defaultInstance")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
 default_instance_attachment = alicloud.cen.InstanceAttachment("defaultInstanceAttachment",
+    instance_id=default_instance.id,
     child_instance_id=default_network.id,
+    child_instance_type="VPC",
     child_instance_region_id="cn-hangzhou",
-    instance_id=default_instance.id)
+    opts=pulumi.ResourceOptions(depends_on=[
+            default_instance,
+            default_network,
+        ]))
 default_private_zone = alicloud.cen.PrivateZone("defaultPrivateZone",
     access_region_id="cn-hangzhou",
     cen_id=default_instance.id,
     host_region_id="cn-hangzhou",
-    host_vpc_id=default_network.id)
+    host_vpc_id=default_network.id,
+    opts=pulumi.ResourceOptions(depends_on=[default_instance_attachment]))
 ```
 
 {{% /example %}}
@@ -89,21 +159,28 @@ default_private_zone = alicloud.cen.PrivateZone("defaultPrivateZone",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultInstance = new alicloud.cen.Instance("default", {});
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/12",
-});
-const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("default", {
-    childInstanceId: defaultNetwork.id,
-    childInstanceRegionId: "cn-hangzhou",
+// Create a cen Private Zone resource and use it.
+const defaultInstance = new alicloud.cen.Instance("defaultInstance", {});
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultInstanceAttachment = new alicloud.cen.InstanceAttachment("defaultInstanceAttachment", {
     instanceId: defaultInstance.id,
-}, { dependsOn: [defaultInstance, defaultNetwork] });
-const defaultPrivateZone = new alicloud.cen.PrivateZone("default", {
+    childInstanceId: defaultNetwork.id,
+    childInstanceType: "VPC",
+    childInstanceRegionId: "cn-hangzhou",
+}, {
+    dependsOn: [
+        defaultInstance,
+        defaultNetwork,
+    ],
+});
+const defaultPrivateZone = new alicloud.cen.PrivateZone("defaultPrivateZone", {
     accessRegionId: "cn-hangzhou",
     cenId: defaultInstance.id,
     hostRegionId: "cn-hangzhou",
     hostVpcId: defaultNetwork.id,
-}, { dependsOn: [defaultInstanceAttachment] });
+}, {
+    dependsOn: [defaultInstanceAttachment],
+});
 ```
 
 {{% /example %}}
@@ -116,19 +193,19 @@ const defaultPrivateZone = new alicloud.cen.PrivateZone("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#PrivateZone">PrivateZone</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#PrivateZoneArgs">PrivateZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#PrivateZone">PrivateZone</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#PrivateZoneArgs">PrivateZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.PrivateZone">PrivateZone</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>access_region_id=None<span class="p">, </span>cen_id=None<span class="p">, </span>host_region_id=None<span class="p">, </span>host_vpc_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.PrivateZone">PrivateZone</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#PrivateZone">NewPrivateZone</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#PrivateZoneArgs">PrivateZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#PrivateZone">PrivateZone</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#PrivateZone">NewPrivateZone</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#PrivateZoneArgs">PrivateZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#PrivateZone">PrivateZone</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.PrivateZone.html">PrivateZone</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.PrivateZoneArgs.html">PrivateZoneArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.PrivateZone.html">PrivateZone</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.PrivateZoneArgs.html">PrivateZoneArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -139,7 +216,7 @@ const defaultPrivateZone = new alicloud.cen.PrivateZone("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -208,7 +285,7 @@ const defaultPrivateZone = new alicloud.cen.PrivateZone("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -247,7 +324,7 @@ const defaultPrivateZone = new alicloud.cen.PrivateZone("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -288,7 +365,6 @@ The PrivateZone resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -296,49 +372,44 @@ The PrivateZone resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="accessregionid_csharp">
 <a href="#accessregionid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cenid_csharp">
 <a href="#cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostregionid_csharp">
 <a href="#hostregionid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN. 
+    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostvpcid_csharp">
 <a href="#hostvpcid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Vpc<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC that belongs to the service region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -347,49 +418,44 @@ The PrivateZone resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="accessregionid_go">
 <a href="#accessregionid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cenid_go">
 <a href="#cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostregionid_go">
 <a href="#hostregionid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN. 
+    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostvpcid_go">
 <a href="#hostvpcid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Vpc<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC that belongs to the service region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -398,49 +464,44 @@ The PrivateZone resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="accessregionid_nodejs">
 <a href="#accessregionid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cenid_nodejs">
 <a href="#cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostregionid_nodejs">
 <a href="#hostregionid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN. 
+    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hostvpcid_nodejs">
 <a href="#hostvpcid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Vpc<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC that belongs to the service region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -449,58 +510,49 @@ The PrivateZone resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="access_region_id_python">
 <a href="#access_region_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>region_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cen_id_python">
 <a href="#cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="host_region_id_python">
 <a href="#host_region_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>region_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN. 
+    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="host_vpc_id_python">
 <a href="#host_vpc_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>vpc_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC that belongs to the service region.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the PrivateZone resource produces the following output properties:
-
 
 
 
@@ -511,26 +563,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the PrivateZone service. Valid values: ["Creating", "Active", "Deleting"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -539,26 +588,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the PrivateZone service. Valid values: ["Creating", "Active", "Deleting"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -567,26 +613,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the PrivateZone service. Valid values: ["Creating", "Active", "Deleting"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -595,29 +638,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the PrivateZone service. Valid values: ["Creating", "Active", "Deleting"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -627,19 +664,20 @@ Get an existing PrivateZone resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#PrivateZoneState">PrivateZoneState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#PrivateZone">PrivateZone</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#PrivateZoneState">PrivateZoneState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#PrivateZone">PrivateZone</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_region_id=None<span class="p">, </span>cen_id=None<span class="p">, </span>host_region_id=None<span class="p">, </span>host_vpc_id=None<span class="p">, </span>status=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PrivateZone</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPrivateZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#PrivateZoneState">PrivateZoneState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#PrivateZone">PrivateZone</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPrivateZone<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#PrivateZoneState">PrivateZoneState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#PrivateZone">PrivateZone</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.PrivateZone.html">PrivateZone</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.PrivateZoneState.html">PrivateZoneState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.PrivateZone.html">PrivateZone</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.PrivateZoneState.html">PrivateZoneState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -741,7 +779,6 @@ Get an existing PrivateZone resource's state with the given name, ID, and option
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -749,60 +786,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accessregionid_csharp">
 <a href="#state_accessregionid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cenid_csharp">
 <a href="#state_cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostregionid_csharp">
 <a href="#state_hostregionid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN. 
+    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostvpcid_csharp">
 <a href="#state_hostvpcid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Vpc<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC that belongs to the service region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the PrivateZone service. Valid values: ["Creating", "Active", "Deleting"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -811,60 +842,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accessregionid_go">
 <a href="#state_accessregionid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cenid_go">
 <a href="#state_cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostregionid_go">
 <a href="#state_hostregionid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN. 
+    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostvpcid_go">
 <a href="#state_hostvpcid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Vpc<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC that belongs to the service region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the PrivateZone service. Valid values: ["Creating", "Active", "Deleting"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -873,60 +898,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accessregionid_nodejs">
 <a href="#state_accessregionid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cenid_nodejs">
 <a href="#state_cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostregionid_nodejs">
 <a href="#state_hostregionid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN. 
+    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostvpcid_nodejs">
 <a href="#state_hostvpcid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Vpc<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC that belongs to the service region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the PrivateZone service. Valid values: ["Creating", "Active", "Deleting"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -935,57 +954,52 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_access_region_id_python">
 <a href="#state_access_region_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>region_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The access region. The access region is the region of the cloud resource that accesses the PrivateZone service through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cen_id_python">
 <a href="#state_cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_host_region_id_python">
 <a href="#state_host_region_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>region_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN. 
+    <dd>{{% md %}}The service region. The service region is the target region of the PrivateZone service to be accessed through CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_host_vpc_id_python">
 <a href="#state_host_vpc_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>vpc_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC that belongs to the service region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the PrivateZone service. Valid values: ["Creating", "Active", "Deleting"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -993,8 +1007,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+CEN Private Zone can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cen/privateZone:PrivateZone example cen-abc123456:cn-hangzhou
+```
 
 
 
@@ -1006,6 +1026,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

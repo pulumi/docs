@@ -30,6 +30,7 @@ Explore the resources and functions of the apigateway module in the AWS package.
     <li><a href="resource" title="Resource"><span class="symbol resource"></span>Resource</a></li>
     <li><a href="response" title="Response"><span class="symbol resource"></span>Response</a></li>
     <li><a href="restapi" title="RestApi"><span class="symbol resource"></span>RestApi</a></li>
+    <li><a href="restapipolicy" title="RestApiPolicy"><span class="symbol resource"></span>RestApiPolicy</a></li>
     <li><a href="stage" title="Stage"><span class="symbol resource"></span>Stage</a></li>
     <li><a href="usageplan" title="UsagePlan"><span class="symbol resource"></span>UsagePlan</a></li>
     <li><a href="usageplankey" title="UsagePlanKey"><span class="symbol resource"></span>UsagePlanKey</a></li>
@@ -38,6 +39,7 @@ Explore the resources and functions of the apigateway module in the AWS package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getdomainname" title="GetDomainName"><span class="symbol function"></span>GetDomainName</a></li>
     <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
     <li><a href="getresource" title="GetResource"><span class="symbol function"></span>GetResource</a></li>
     <li><a href="getrestapi" title="GetRestApi"><span class="symbol function"></span>GetRestApi</a></li>
@@ -53,24 +55,6 @@ Explore the resources and functions of the apigateway module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.html" title="Pulumi.Aws.ApiGateway">Pulumi.Aws.ApiGateway</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#" title="aws/apigateway">aws/apigateway</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#" title="@pulumi/aws/apigateway">@pulumi/aws/apigateway</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/apigateway" title="pulumi_aws/apigateway">pulumi_aws/apigateway</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

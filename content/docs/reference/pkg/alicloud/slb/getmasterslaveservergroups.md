@@ -14,6 +14,7 @@ This data source provides the master slave server groups related to a server loa
 
 > **NOTE:** Available in 1.54.0+
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -21,6 +22,7 @@ This data source provides the master slave server groups related to a server loa
 
 {{% example csharp %}}
 ```csharp
+using System.Collections.Generic;
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
 
@@ -28,9 +30,89 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sampleDs = Output.Create(AliCloud.Slb.GetMasterSlaveServerGroups.InvokeAsync(new AliCloud.Slb.GetMasterSlaveServerGroupsArgs
+        var defaultZones = Output.Create(AliCloud.GetZones.InvokeAsync(new AliCloud.GetZonesArgs
         {
-            LoadBalancerId = alicloud_slb.Sample_slb.Id,
+            AvailableDiskCategory = "cloud_efficiency",
+            AvailableResourceCreation = "VSwitch",
+        }));
+        var defaultInstanceTypes = defaultZones.Apply(defaultZones => Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+        {
+            AvailabilityZone = defaultZones.Zones[0].Id,
+            EniAmount = 2,
+        })));
+        var image = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
+        {
+            NameRegex = "^ubuntu_18.*64",
+            MostRecent = true,
+            Owners = "system",
+        }));
+        var config = new Config();
+        var name = config.Get("name") ?? "tf-testAccSlbMasterSlaveServerGroupVpc";
+        var number = config.Get("number") ?? "1";
+        var mainNetwork = new AliCloud.Vpc.Network("mainNetwork", new AliCloud.Vpc.NetworkArgs
+        {
+            CidrBlock = "172.16.0.0/16",
+        });
+        var mainSwitch = new AliCloud.Vpc.Switch("mainSwitch", new AliCloud.Vpc.SwitchArgs
+        {
+            VpcId = mainNetwork.Id,
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+            CidrBlock = "172.16.0.0/16",
+        });
+        var groupSecurityGroup = new AliCloud.Ecs.SecurityGroup("groupSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
+        {
+            VpcId = mainNetwork.Id,
+        });
+        var instanceInstance = new List<AliCloud.Ecs.Instance>();
+        for (var rangeIndex = 0; rangeIndex < "2"; rangeIndex++)
+        {
+            var range = new { Value = rangeIndex };
+            instanceInstance.Add(new AliCloud.Ecs.Instance($"instanceInstance-{range.Value}", new AliCloud.Ecs.InstanceArgs
+            {
+                ImageId = image.Apply(image => image.Images[0].Id),
+                InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
+                InstanceName = name,
+                SecurityGroups = 
+                {
+                    groupSecurityGroup.Id,
+                },
+                InternetChargeType = "PayByTraffic",
+                InternetMaxBandwidthOut = 10,
+                AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+                InstanceChargeType = "PostPaid",
+                SystemDiskCategory = "cloud_efficiency",
+                VswitchId = mainSwitch.Id,
+            }));
+        }
+        var instanceLoadBalancer = new AliCloud.Slb.LoadBalancer("instanceLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
+        {
+            VswitchId = mainSwitch.Id,
+            Specification = "slb.s2.small",
+        });
+        var groupMasterSlaveServerGroup = new AliCloud.Slb.MasterSlaveServerGroup("groupMasterSlaveServerGroup", new AliCloud.Slb.MasterSlaveServerGroupArgs
+        {
+            LoadBalancerId = instanceLoadBalancer.Id,
+            Servers = 
+            {
+                new AliCloud.Slb.Inputs.MasterSlaveServerGroupServerArgs
+                {
+                    ServerId = instanceInstance[0].Id,
+                    Port = 100,
+                    Weight = 100,
+                    ServerType = "Master",
+                },
+                new AliCloud.Slb.Inputs.MasterSlaveServerGroupServerArgs
+                {
+                    ServerId = instanceInstance[1].Id,
+                    Port = 100,
+                    Weight = 100,
+                    ServerType = "Slave",
+                },
+            },
+        });
+        var sampleDs = instanceLoadBalancer.Id.Apply(id => AliCloud.Slb.GetMasterSlaveServerGroups.InvokeAsync(new AliCloud.Slb.GetMasterSlaveServerGroupsArgs
+        {
+            LoadBalancerId = id,
         }));
         this.FirstSlbServerGroupId = sampleDs.Apply(sampleDs => sampleDs.Groups[0].Id);
     }
@@ -43,7 +125,135 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "cloud_efficiency"
+		opt1 := "VSwitch"
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableDiskCategory:     &opt0,
+			AvailableResourceCreation: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt2 := defaultZones.Zones[0].Id
+		opt3 := 2
+		defaultInstanceTypes, err := ecs.GetInstanceTypes(ctx, &ecs.GetInstanceTypesArgs{
+			AvailabilityZone: &opt2,
+			EniAmount:        &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt4 := "^ubuntu_18.*64"
+		opt5 := true
+		opt6 := "system"
+		image, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
+			NameRegex:  &opt4,
+			MostRecent: &opt5,
+			Owners:     &opt6,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		cfg := config.New(ctx, "")
+		name := "tf-testAccSlbMasterSlaveServerGroupVpc"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		number := "1"
+		if param := cfg.Get("number"); param != "" {
+			number = param
+		}
+		mainNetwork, err := vpc.NewNetwork(ctx, "mainNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		mainSwitch, err := vpc.NewSwitch(ctx, "mainSwitch", &vpc.SwitchArgs{
+			VpcId:            mainNetwork.ID(),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+			CidrBlock:        pulumi.String("172.16.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		groupSecurityGroup, err := ecs.NewSecurityGroup(ctx, "groupSecurityGroup", &ecs.SecurityGroupArgs{
+			VpcId: mainNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		var instanceInstance []*ecs.Instance
+		for key0, _ := range "2" {
+			__res, err := ecs.NewInstance(ctx, fmt.Sprintf("instanceInstance-%v", key0), &ecs.InstanceArgs{
+				ImageId:      pulumi.String(image.Images[0].Id),
+				InstanceType: pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
+				InstanceName: pulumi.String(name),
+				SecurityGroups: pulumi.StringArray{
+					groupSecurityGroup.ID(),
+				},
+				InternetChargeType:      pulumi.String("PayByTraffic"),
+				InternetMaxBandwidthOut: pulumi.Int(10),
+				AvailabilityZone:        pulumi.String(defaultZones.Zones[0].Id),
+				InstanceChargeType:      pulumi.String("PostPaid"),
+				SystemDiskCategory:      pulumi.String("cloud_efficiency"),
+				VswitchId:               mainSwitch.ID(),
+			})
+			if err != nil {
+				return err
+			}
+			instanceInstance = append(instanceInstance, __res)
+		}
+		instanceLoadBalancer, err := slb.NewLoadBalancer(ctx, "instanceLoadBalancer", &slb.LoadBalancerArgs{
+			VswitchId:     mainSwitch.ID(),
+			Specification: pulumi.String("slb.s2.small"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = slb.NewMasterSlaveServerGroup(ctx, "groupMasterSlaveServerGroup", &slb.MasterSlaveServerGroupArgs{
+			LoadBalancerId: instanceLoadBalancer.ID(),
+			Servers: slb.MasterSlaveServerGroupServerArray{
+				&slb.MasterSlaveServerGroupServerArgs{
+					ServerId:   instanceInstance[0].ID(),
+					Port:       pulumi.Int(100),
+					Weight:     pulumi.Int(100),
+					ServerType: pulumi.String("Master"),
+				},
+				&slb.MasterSlaveServerGroupServerArgs{
+					ServerId:   instanceInstance[1].ID(),
+					Port:       pulumi.Int(100),
+					Weight:     pulumi.Int(100),
+					ServerType: pulumi.String("Slave"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstSlbServerGroupId", sampleDs.ApplyT(func(sampleDs slb.GetMasterSlaveServerGroupsResult) (string, error) {
+			return sampleDs.Groups[0].Id, nil
+		}).(pulumi.StringOutput))
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -51,8 +261,60 @@ Coming soon!
 import pulumi
 import pulumi_alicloud as alicloud
 
-sample_ds = alicloud.slb.get_master_slave_server_groups(load_balancer_id=alicloud_slb["sample_slb"]["id"])
-pulumi.export("firstSlbServerGroupId", sample_ds.groups[0]["id"])
+default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
+    available_resource_creation="VSwitch")
+default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0].id,
+    eni_amount=2)
+image = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
+    most_recent=True,
+    owners="system")
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "tf-testAccSlbMasterSlaveServerGroupVpc"
+number = config.get("number")
+if number is None:
+    number = "1"
+main_network = alicloud.vpc.Network("mainNetwork", cidr_block="172.16.0.0/16")
+main_switch = alicloud.vpc.Switch("mainSwitch",
+    vpc_id=main_network.id,
+    availability_zone=default_zones.zones[0].id,
+    cidr_block="172.16.0.0/16")
+group_security_group = alicloud.ecs.SecurityGroup("groupSecurityGroup", vpc_id=main_network.id)
+instance_instance = []
+for range in [{"value": i} for i in range(0, 2)]:
+    instance_instance.append(alicloud.ecs.Instance(f"instanceInstance-{range['value']}",
+        image_id=image.images[0].id,
+        instance_type=default_instance_types.instance_types[0].id,
+        instance_name=name,
+        security_groups=[group_security_group.id],
+        internet_charge_type="PayByTraffic",
+        internet_max_bandwidth_out=10,
+        availability_zone=default_zones.zones[0].id,
+        instance_charge_type="PostPaid",
+        system_disk_category="cloud_efficiency",
+        vswitch_id=main_switch.id))
+instance_load_balancer = alicloud.slb.LoadBalancer("instanceLoadBalancer",
+    vswitch_id=main_switch.id,
+    specification="slb.s2.small")
+group_master_slave_server_group = alicloud.slb.MasterSlaveServerGroup("groupMasterSlaveServerGroup",
+    load_balancer_id=instance_load_balancer.id,
+    servers=[
+        alicloud.slb.MasterSlaveServerGroupServerArgs(
+            server_id=instance_instance[0].id,
+            port=100,
+            weight=100,
+            server_type="Master",
+        ),
+        alicloud.slb.MasterSlaveServerGroupServerArgs(
+            server_id=instance_instance[1].id,
+            port=100,
+            weight=100,
+            server_type="Slave",
+        ),
+    ])
+sample_ds = instance_load_balancer.id.apply(lambda id: alicloud.slb.get_master_slave_server_groups(load_balancer_id=id))
+pulumi.export("firstSlbServerGroupId", sample_ds.groups[0].id)
 ```
 
 {{% /example %}}
@@ -63,10 +325,68 @@ pulumi.export("firstSlbServerGroupId", sample_ds.groups[0]["id"])
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getMasterSlaveServerGroups({
+const defaultZones = alicloud.getZones({
+    availableDiskCategory: "cloud_efficiency",
+    availableResourceCreation: "VSwitch",
+});
+const defaultInstanceTypes = defaultZones.then(defaultZones => alicloud.ecs.getInstanceTypes({
+    availabilityZone: defaultZones.zones[0].id,
+    eniAmount: 2,
+}));
+const image = alicloud.ecs.getImages({
+    nameRegex: "^ubuntu_18.*64",
+    mostRecent: true,
+    owners: "system",
+});
+const config = new pulumi.Config();
+const name = config.get("name") || "tf-testAccSlbMasterSlaveServerGroupVpc";
+const number = config.get("number") || "1";
+const mainNetwork = new alicloud.vpc.Network("mainNetwork", {cidrBlock: "172.16.0.0/16"});
+const mainSwitch = new alicloud.vpc.Switch("mainSwitch", {
+    vpcId: mainNetwork.id,
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+    cidrBlock: "172.16.0.0/16",
+});
+const groupSecurityGroup = new alicloud.ecs.SecurityGroup("groupSecurityGroup", {vpcId: mainNetwork.id});
+const instanceInstance: alicloud.ecs.Instance[];
+for (const range = {value: 0}; range.value < "2"; range.value++) {
+    instanceInstance.push(new alicloud.ecs.Instance(`instanceInstance-${range.value}`, {
+        imageId: image.then(image => image.images[0].id),
+        instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.instanceTypes[0].id),
+        instanceName: name,
+        securityGroups: [groupSecurityGroup.id],
+        internetChargeType: "PayByTraffic",
+        internetMaxBandwidthOut: "10",
+        availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+        instanceChargeType: "PostPaid",
+        systemDiskCategory: "cloud_efficiency",
+        vswitchId: mainSwitch.id,
+    }));
+}
+const instanceLoadBalancer = new alicloud.slb.LoadBalancer("instanceLoadBalancer", {
+    vswitchId: mainSwitch.id,
+    specification: "slb.s2.small",
+});
+const groupMasterSlaveServerGroup = new alicloud.slb.MasterSlaveServerGroup("groupMasterSlaveServerGroup", {
+    loadBalancerId: instanceLoadBalancer.id,
+    servers: [
+        {
+            serverId: instanceInstance[0].id,
+            port: 100,
+            weight: 100,
+            serverType: "Master",
+        },
+        {
+            serverId: instanceInstance[1].id,
+            port: 100,
+            weight: 100,
+            serverType: "Slave",
+        },
+    ],
+});
+const sampleDs = instanceLoadBalancer.id.apply(id => alicloud.slb.getMasterSlaveServerGroups({
     loadBalancerId: id,
-}, { async: true }));
-
+}));
 export const firstSlbServerGroupId = sampleDs.groups[0].id;
 ```
 
@@ -86,7 +406,7 @@ export const firstSlbServerGroupId = sampleDs.groups[0].id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_master_slave_server_groups(</span>ids=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_master_slave_server_groups(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetMasterSlaveServerGroupsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -107,7 +427,6 @@ export const firstSlbServerGroupId = sampleDs.groups[0].id;
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -115,48 +434,43 @@ The following arguments are supported:
             title="Required">
         <span id="loadbalancerid_csharp">
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the SLB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of master slave server group IDs to filter results.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by master slave server group name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -165,48 +479,43 @@ The following arguments are supported:
             title="Required">
         <span id="loadbalancerid_go">
 <a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the SLB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of master slave server group IDs to filter results.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by master slave server group name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -215,48 +524,43 @@ The following arguments are supported:
             title="Required">
         <span id="loadbalancerid_nodejs">
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the SLB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of master slave server group IDs to filter results.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by master slave server group name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -265,51 +569,43 @@ The following arguments are supported:
             title="Required">
         <span id="load_balancer_id_python">
 <a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the SLB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of master slave server group IDs to filter results.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by master slave server group name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -320,7 +616,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -328,79 +623,71 @@ The following output properties are available:
             title="">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmasterslaveservergroupsgroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Outputs.<wbr>Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of SLB master slave server groups. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of SLB master slave server groups IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="loadbalancerid_csharp">
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of SLB master slave server groups names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -409,79 +696,71 @@ The following output properties are available:
             title="">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmasterslaveservergroupsgroup">[]Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}A list of SLB master slave server groups. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of SLB master slave server groups IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="loadbalancerid_go">
 <a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of SLB master slave server groups names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -490,79 +769,71 @@ The following output properties are available:
             title="">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmasterslaveservergroupsgroup">Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A list of SLB master slave server groups. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of SLB master slave server groups IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="loadbalancerid_nodejs">
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of SLB master slave server groups names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -571,82 +842,71 @@ The following output properties are available:
             title="">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmasterslaveservergroupsgroup">List[Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group]</a></span>
+        <span class="property-type"><a href="#getmasterslaveservergroupsgroup">Sequence[Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}A list of SLB master slave server groups. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of SLB master slave server groups IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="load_balancer_id_python">
 <a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of SLB master slave server groups names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -668,7 +928,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -676,38 +935,34 @@ The following output properties are available:
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}master slave server group ID.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}master slave server group name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servers_csharp">
 <a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmasterslaveservergroupsgroupserver">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Inputs.<wbr>Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}ECS instances associated to the group. Each element contains the following attributes:
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -716,38 +971,34 @@ The following output properties are available:
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}master slave server group ID.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}master slave server group name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servers_go">
 <a href="#servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmasterslaveservergroupsgroupserver">[]Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}ECS instances associated to the group. Each element contains the following attributes:
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -756,38 +1007,34 @@ The following output properties are available:
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}master slave server group ID.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}master slave server group name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servers_nodejs">
 <a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmasterslaveservergroupsgroupserver">Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server[]</a></span>
     </dt>
     <dd>{{% md %}}ECS instances associated to the group. Each element contains the following attributes:
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -796,41 +1043,34 @@ The following output properties are available:
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}master slave server group ID.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}master slave server group name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servers_python">
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmasterslaveservergroupsgroupserver">List[Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server]</a></span>
+        <span class="property-type"><a href="#getmasterslaveservergroupsgroupserver">Sequence[Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ECS instances associated to the group. Each element contains the following attributes:
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getmasterslaveservergroupsgroupserver">Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server</h4>
 {{% choosable language nodejs %}}
@@ -846,7 +1086,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -854,49 +1093,54 @@ The following output properties are available:
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the attached ECS instance.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="isbackup_csharp">
+<a href="#isbackup_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Removed from v1.63.0) Determine if the server is executing.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servertype_csharp">
 <a href="#servertype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server type of the attached ECS instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight associated to the ECS instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -905,49 +1149,54 @@ The following output properties are available:
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the attached ECS instance.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="isbackup_go">
+<a href="#isbackup_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Removed from v1.63.0) Determine if the server is executing.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servertype_go">
 <a href="#servertype_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server type of the attached ECS instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight associated to the ECS instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -956,49 +1205,54 @@ The following output properties are available:
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the attached ECS instance.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="isbackup_nodejs">
+<a href="#isbackup_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}(Removed from v1.63.0) Determine if the server is executing.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port used by the master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servertype_nodejs">
 <a href="#servertype_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server type of the attached ECS instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight associated to the ECS instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1007,52 +1261,54 @@ The following output properties are available:
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the attached ECS instance.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="is_backup_python">
+<a href="#is_backup_python" style="color: inherit; text-decoration: inherit;">is_<wbr>backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}(Removed from v1.63.0) Determine if the server is executing.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_type_python">
 <a href="#server_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server type of the attached ECS instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight associated to the ECS instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1065,6 +1321,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

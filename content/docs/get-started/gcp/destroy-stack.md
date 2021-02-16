@@ -12,7 +12,7 @@ menu:
 aliases: ["/docs/quickstart/gcp/destroy-stack/"]
 ---
 
-Now that we've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of our stack.
+Now that you've seen how to deploy changes to our program, let's clean up and tear down the resources that are part of your stack.
 
 To destroy resources, run the following:
 
@@ -20,38 +20,52 @@ To destroy resources, run the following:
 $ pulumi destroy
 ```
 
-You'll be prompted to make sure you really want to delete these resources.
+You'll be prompted to make sure you really want to delete these resources. This can take a minute or two; Pulumi waits until all resources are shut down and deleted before it considers the destroy operation complete.
 
 ```
 Previewing destroy (dev):
-     Type                   Name       Plan
- -   pulumi:pulumi:Stack    quickstart-dev  delete
- -   └─ gcp:storage:Bucket  my-bucket  delete
+
+ -   pulumi:pulumi:Stack              quickstart-dev         delete
+ -   ├─ gcp:storage:BucketIAMBinding  my-bucket-IAMBinding   delete
+ -   ├─ gcp:storage:BucketObject      index.html             delete
+ -   └─ gcp:storage:Bucket            my-bucket              delete
 
 Outputs:
-  - BucketName: "gs://my-bucket-b93323e"
+  - BucketEndpoint: "http://storage.googleapis.com/my-bucket-0167228/index.html-50b2ce9"
+  - BucketName    : "gs://my-bucket-0167228"
 
 Resources:
-    - 2 to delete
+    - 4 to delete
 
 Do you want to perform this destroy? yes
 Destroying (dev):
-     Type                   Name       Status
- -   pulumi:pulumi:Stack    quickstart-dev  deleted
- -   └─ gcp:storage:Bucket  my-bucket  deleted
+
+ -   pulumi:pulumi:Stack              quickstart-dev         deleted
+ -   ├─ gcp:storage:BucketIAMBinding  my-bucket-IAMBinding   deleted
+ -   ├─ gcp:storage:BucketObject      index.html             deleted
+ -   └─ gcp:storage:Bucket            my-bucket              deleted
 
 Outputs:
-  - BucketName: "gs://my-bucket-b93323e"
+  - BucketEndpoint: "http://storage.googleapis.com/my-bucket-0167228/index.html-50b2ce9"
+  - BucketName    : "gs://my-bucket-0167228"
 
 Resources:
-    - 2 deleted
+    - 4 deleted
 
-Duration: 2s
+Duration: 7s
 ```
 
-To delete the stack itself, run [`pulumi stack rm`]({{< relref "/docs/reference/cli/pulumi_stack_rm" >}}).
+> To delete the stack itself, run [`pulumi stack rm`]({{< relref "/docs/reference/cli/pulumi_stack_rm" >}}).
 Note that this removes the stack entirely from the Pulumi Service, along with all of its update history.
 
-Next, we'll look at some next steps.
+Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
+
+- Created a Pulumi new project.
+- Provisioned a new storage bucket.
+- Added an `index.html` file to your bucket.
+- Served the `index.html` as a static website.
+- Destroyed the resources you've provisioned.
+
+On the next page, we have a collection of examples and tutorials that you can deploy as they are or use them as a foundation for your own applications and infrastructure projects.
 
 {{< get-started-stepper >}}

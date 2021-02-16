@@ -380,7 +380,7 @@ To illustrate provisioning a Helm Chart using Pulumi, we will deploy the `stable
 let k8s = require("@pulumi/kubernetes");
 
 // Deploy the latest version of the stable/wordpress chart.
-let wordpress = new k8s.helm.v2.Chart("wpdev", {
+let wordpress = new k8s.helm.v3.Chart("wpdev", {
     repo: "stable",
     chart: "wordpress",
     version: "9.0.3",
@@ -400,7 +400,7 @@ module.exports = {
 import * as k8s from "@pulumi/kubernetes";
 
 // Deploy the latest version of the stable/wordpress chart.
-const wordpress = new k8s.helm.v2.Chart("wpdev", {
+const wordpress = new k8s.helm.v3.Chart("wpdev", {
     repo: "stable",
     chart: "wordpress",
     version: "9.0.3",
@@ -416,7 +416,7 @@ export const frontendIp = frontend.status.loadBalancer.ingress[0].ip;
 
 ```python
 import pulumi
-from pulumi_kubernetes.helm.v2 import Chart, ChartOpts
+from pulumi_kubernetes.helm.v3 import Chart, ChartOpts
 
 # Deploy the latest version of the stable/wordpress chart.
 wordpress = Chart('wpdev', config=ChartOpts(
@@ -546,11 +546,16 @@ $ curl http://$(pulumi stack output frontendIp)
 ...
 ```
 
+## Converting Kubernetes YAML
+
+In addition to deploying Kubernetes YAML via the methods above, you can also convert Kubernetes YAML to Pulumi program code using `kube2pulumi`. `kube2pulumi` will take your YAML manifest and
+convert it into the language of your choice. You can get started using `kube2pulumi` either by [installing the binary](https://github.com/pulumi/kube2pulumi#building-and-installation) or via the [web interface]({{< relref "/kube2pulumi" >}}).
+
 ## Rendering Kubernetes YAML
 
 While Pulumi has excellent support for deploying and updating Kubernetes resources on a cluster, Pulumi also offers the ability to render YAML to make it easier to integrate into existing workflows. This gives you the ability to author Kubernetes configuration using general-purpose programming languages, consume libraries, and easily mix in infrastructure configuration (e.g., managed database endpoints, object storage, etc.), all in the same program.
 
-To render YAML during a `pulumi up` rather than have Pulumi perform the deployment against your cluster as it does by default, set the `renderYamlToDirectory` property on [an explicit Kubernetes provider]({{< relref "/docs/intro/concepts/programming-model#explicit-provider-configuration" >}}) object.
+To render YAML during a `pulumi up` rather than have Pulumi perform the deployment against your cluster as it does by default, set the `renderYamlToDirectory` property on [an explicit Kubernetes provider]({{< relref "/docs/intro/concepts/resources#explicit-provider-configuration" >}}) object.
 
 This example provisions a simple load-balanced NGINX service using a general purpose language but renders the output to YAML:
 

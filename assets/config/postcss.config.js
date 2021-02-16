@@ -61,10 +61,14 @@ module.exports = {
             ],
 
             // Whitelist specific classes that were being removed.
-            whitelist: ["supported-cicd-platforms", ":not", ":target", "md:max-w-lg", "blink", "typing", "char", "resource-deprecated", "btn-scroll-top"],
+            whitelist: [
+                "supported-cicd-platforms", ":not", ":target", "md:max-w-lg", "blink", "typing",
+                "char", "resource-deprecated", "btn-scroll-top", "lg:btn-purple-transparent", "section-docs",
+                "supporting-types"
+            ],
 
             // Whitelist custom parent selectors and their children.
-            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/],
+            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/, /^bg-/, /BambooHR-/],
             whitelistPatternsChildren: [
                 /^hs-/,
                 /^highlight$/,
@@ -75,7 +79,10 @@ module.exports = {
 
                 // Whitelist our web components along with any of their descendent selectors.
                 /^pulumi-chooser/,
-                /^pulumi-tooltip/
+                /^pulumi-tooltip/,
+                /^pulumi-banner/,
+                /^pulumi-convert/,
+                /^pulumi-greenhouse-jobs-list/,
             ],
 
             // We need to extract the Tailwind screen size selectors (e.g. sm, md, lg)

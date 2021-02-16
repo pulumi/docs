@@ -1,8 +1,8 @@
 
 ---
 title: "Subscription"
-title_tag: "Resource Subscription | Module pubsub | Package GCP"
-meta_desc: "Explore the Subscription resource of the pubsub module, including examples, input properties, output properties, lookup functions, and supporting types. A named resource representing the stream of messages from a single,"
+title_tag: "gcp.pubsub.Subscription"
+meta_desc: "Documentation for the gcp.pubsub.Subscription resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -19,10 +19,267 @@ To get more information about Subscription, see:
 * How-to Guides
     * [Managing Subscriptions](https://cloud.google.com/pubsub/docs/admin#managing_subscriptions)
 
+> **Note:** You can retrieve the email of the Google Managed Pub/Sub Service Account used for forwarding
+by using the `gcp.projects.ServiceIdentity` resource.
+
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Pubsub Subscription Push
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleTopic = new Gcp.PubSub.Topic("exampleTopic", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var exampleSubscription = new Gcp.PubSub.Subscription("exampleSubscription", new Gcp.PubSub.SubscriptionArgs
+        {
+            Topic = exampleTopic.Name,
+            AckDeadlineSeconds = 20,
+            Labels = 
+            {
+                { "foo", "bar" },
+            },
+            PushConfig = new Gcp.PubSub.Inputs.SubscriptionPushConfigArgs
+            {
+                PushEndpoint = "https://example.com/push",
+                Attributes = 
+                {
+                    { "x-goog-version", "v1" },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleTopic, err := pubsub.NewTopic(ctx, "exampleTopic", nil)
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewSubscription(ctx, "exampleSubscription", &pubsub.SubscriptionArgs{
+			Topic:              exampleTopic.Name,
+			AckDeadlineSeconds: pulumi.Int(20),
+			Labels: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+			PushConfig: &pubsub.SubscriptionPushConfigArgs{
+				PushEndpoint: pulumi.String("https://example.com/push"),
+				Attributes: pulumi.StringMap{
+					"x-goog-version": pulumi.String("v1"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    topic=example_topic.name,
+    ack_deadline_seconds=20,
+    labels={
+        "foo": "bar",
+    },
+    push_config=gcp.pubsub.SubscriptionPushConfigArgs(
+        push_endpoint="https://example.com/push",
+        attributes={
+            "x-goog-version": "v1",
+        },
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    topic: exampleTopic.name,
+    ackDeadlineSeconds: 20,
+    labels: {
+        foo: "bar",
+    },
+    pushConfig: {
+        pushEndpoint: "https://example.com/push",
+        attributes: {
+            "x-goog-version": "v1",
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+### Pubsub Subscription Pull
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleTopic = new Gcp.PubSub.Topic("exampleTopic", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var exampleSubscription = new Gcp.PubSub.Subscription("exampleSubscription", new Gcp.PubSub.SubscriptionArgs
+        {
+            Topic = exampleTopic.Name,
+            Labels = 
+            {
+                { "foo", "bar" },
+            },
+            MessageRetentionDuration = "1200s",
+            RetainAckedMessages = true,
+            AckDeadlineSeconds = 20,
+            ExpirationPolicy = new Gcp.PubSub.Inputs.SubscriptionExpirationPolicyArgs
+            {
+                Ttl = "300000.5s",
+            },
+            RetryPolicy = new Gcp.PubSub.Inputs.SubscriptionRetryPolicyArgs
+            {
+                MinimumBackoff = "10s",
+            },
+            EnableMessageOrdering = false,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleTopic, err := pubsub.NewTopic(ctx, "exampleTopic", nil)
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewSubscription(ctx, "exampleSubscription", &pubsub.SubscriptionArgs{
+			Topic: exampleTopic.Name,
+			Labels: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+			MessageRetentionDuration: pulumi.String("1200s"),
+			RetainAckedMessages:      pulumi.Bool(true),
+			AckDeadlineSeconds:       pulumi.Int(20),
+			ExpirationPolicy: &pubsub.SubscriptionExpirationPolicyArgs{
+				Ttl: pulumi.String("300000.5s"),
+			},
+			RetryPolicy: &pubsub.SubscriptionRetryPolicyArgs{
+				MinimumBackoff: pulumi.String("10s"),
+			},
+			EnableMessageOrdering: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    topic=example_topic.name,
+    labels={
+        "foo": "bar",
+    },
+    message_retention_duration="1200s",
+    retain_acked_messages=True,
+    ack_deadline_seconds=20,
+    expiration_policy=gcp.pubsub.SubscriptionExpirationPolicyArgs(
+        ttl="300000.5s",
+    ),
+    retry_policy=gcp.pubsub.SubscriptionRetryPolicyArgs(
+        minimum_backoff="10s",
+    ),
+    enable_message_ordering=False)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    topic: exampleTopic.name,
+    labels: {
+        foo: "bar",
+    },
+    messageRetentionDuration: "1200s",
+    retainAckedMessages: true,
+    ackDeadlineSeconds: 20,
+    expirationPolicy: {
+        ttl: "300000.5s",
+    },
+    retryPolicy: {
+        minimumBackoff: "10s",
+    },
+    enableMessageOrdering: false,
+});
+```
+
+{{% /example %}}
+
 ### Pubsub Subscription Different Project
 {{% example csharp %}}
 ```csharp
@@ -54,7 +311,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -108,6 +365,110 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
 
 {{% /example %}}
 
+### Pubsub Subscription Dead Letter
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleTopic = new Gcp.PubSub.Topic("exampleTopic", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var exampleDeadLetter = new Gcp.PubSub.Topic("exampleDeadLetter", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var exampleSubscription = new Gcp.PubSub.Subscription("exampleSubscription", new Gcp.PubSub.SubscriptionArgs
+        {
+            Topic = exampleTopic.Name,
+            DeadLetterPolicy = new Gcp.PubSub.Inputs.SubscriptionDeadLetterPolicyArgs
+            {
+                DeadLetterTopic = exampleDeadLetter.Id,
+                MaxDeliveryAttempts = 10,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleTopic, err := pubsub.NewTopic(ctx, "exampleTopic", nil)
+		if err != nil {
+			return err
+		}
+		exampleDeadLetter, err := pubsub.NewTopic(ctx, "exampleDeadLetter", nil)
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewSubscription(ctx, "exampleSubscription", &pubsub.SubscriptionArgs{
+			Topic: exampleTopic.Name,
+			DeadLetterPolicy: &pubsub.SubscriptionDeadLetterPolicyArgs{
+				DeadLetterTopic:     exampleDeadLetter.ID(),
+				MaxDeliveryAttempts: pulumi.Int(10),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example_topic = gcp.pubsub.Topic("exampleTopic")
+example_dead_letter = gcp.pubsub.Topic("exampleDeadLetter")
+example_subscription = gcp.pubsub.Subscription("exampleSubscription",
+    topic=example_topic.name,
+    dead_letter_policy=gcp.pubsub.SubscriptionDeadLetterPolicyArgs(
+        dead_letter_topic=example_dead_letter.id,
+        max_delivery_attempts=10,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const exampleTopic = new gcp.pubsub.Topic("exampleTopic", {});
+const exampleDeadLetter = new gcp.pubsub.Topic("exampleDeadLetter", {});
+const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
+    topic: exampleTopic.name,
+    deadLetterPolicy: {
+        deadLetterTopic: exampleDeadLetter.id,
+        maxDeliveryAttempts: 10,
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -116,19 +477,19 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#Subscription">Subscription</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#SubscriptionArgs">SubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Subscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/pubsub/#Subscription">Subscription</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>ack_deadline_seconds=None<span class="p">, </span>dead_letter_policy=None<span class="p">, </span>expiration_policy=None<span class="p">, </span>labels=None<span class="p">, </span>message_retention_duration=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>push_config=None<span class="p">, </span>retain_acked_messages=None<span class="p">, </span>topic=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Subscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ack_deadline_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dead_letter_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionDeadLetterPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_message_ordering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expiration_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionExpirationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_config</span><span class="p">:</span> <span class="nx">Optional[SubscriptionPushConfigArgs]</span> = None<span class="p">, </span><span class="nx">retain_acked_messages</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#Subscription">NewSubscription</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionArgs">SubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#Subscription">Subscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Subscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Subscription.html">Subscription</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.SubscriptionArgs.html">SubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Subscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -139,7 +500,7 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -149,7 +510,7 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#SubscriptionArgs">SubscriptionArgs</a></span>
+        <span class="property-type"><a href="#inputs">SubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -198,7 +559,7 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -208,7 +569,7 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -218,7 +579,7 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionArgs">SubscriptionArgs</a></span>
+        <span class="property-type"><a href="#inputs">SubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -228,7 +589,7 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -247,7 +608,7 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -257,7 +618,7 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.SubscriptionArgs.html">SubscriptionArgs</a></span>
+        <span class="property-type"><a href="#inputs">SubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -280,12 +641,11 @@ const exampleSubscription = new gcp.pubsub.Subscription("exampleSubscription", {
 
 ## Subscription Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Subscription resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Subscription resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -296,20 +656,19 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="topic_csharp">
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a Topic resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ackdeadlineseconds_csharp">
 <a href="#ackdeadlineseconds_csharp" style="color: inherit; text-decoration: inherit;">Ack<wbr>Deadline<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -327,29 +686,40 @@ for the call to the push endpoint.
 If the subscriber never acknowledges the message, the Pub/Sub system
 will eventually redeliver the message.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deadletterpolicy_csharp">
 <a href="#deadletterpolicy_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
 is disabled.
-The Cloud Pub/Sub service account associated with this subscriptions's
+The Cloud Pub/Sub service account associated with this subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablemessageordering_csharp">
+<a href="#enablemessageordering_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Message<wbr>Ordering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
+the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
+may be delivered in any order.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expirationpolicy_csharp">
 <a href="#expirationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -359,27 +729,39 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="messageretentionduration_csharp">
 <a href="#messageretentionduration_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -390,60 +772,68 @@ than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
 A duration in seconds with up to nine fractional digits, terminated
 by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pushconfig_csharp">
 <a href="#pushconfig_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retainackedmessages_csharp">
 <a href="#retainackedmessages_csharp" style="color: inherit; text-decoration: inherit;">Retain<wbr>Acked<wbr>Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
 messages are not expunged from the subscription's backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_csharp">
+<a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -452,20 +842,19 @@ messageRetentionDuration window.
             title="Required">
         <span id="topic_go">
 <a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a Topic resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ackdeadlineseconds_go">
 <a href="#ackdeadlineseconds_go" style="color: inherit; text-decoration: inherit;">Ack<wbr>Deadline<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -483,29 +872,40 @@ for the call to the push endpoint.
 If the subscriber never acknowledges the message, the Pub/Sub system
 will eventually redeliver the message.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deadletterpolicy_go">
 <a href="#deadletterpolicy_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
 is disabled.
-The Cloud Pub/Sub service account associated with this subscriptions's
+The Cloud Pub/Sub service account associated with this subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablemessageordering_go">
+<a href="#enablemessageordering_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Message<wbr>Ordering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
+the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
+may be delivered in any order.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expirationpolicy_go">
 <a href="#expirationpolicy_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
     </dt>
@@ -515,27 +915,39 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="messageretentionduration_go">
 <a href="#messageretentionduration_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -546,60 +958,68 @@ than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
 A duration in seconds with up to nine fractional digits, terminated
 by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pushconfig_go">
 <a href="#pushconfig_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retainackedmessages_go">
 <a href="#retainackedmessages_go" style="color: inherit; text-decoration: inherit;">Retain<wbr>Acked<wbr>Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
 messages are not expunged from the subscription's backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_go">
+<a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -608,20 +1028,19 @@ messageRetentionDuration window.
             title="Required">
         <span id="topic_nodejs">
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a Topic resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ackdeadlineseconds_nodejs">
 <a href="#ackdeadlineseconds_nodejs" style="color: inherit; text-decoration: inherit;">ack<wbr>Deadline<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -639,29 +1058,40 @@ for the call to the push endpoint.
 If the subscriber never acknowledges the message, the Pub/Sub system
 will eventually redeliver the message.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deadletterpolicy_nodejs">
 <a href="#deadletterpolicy_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
 is disabled.
-The Cloud Pub/Sub service account associated with this subscriptions's
+The Cloud Pub/Sub service account associated with this subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablemessageordering_nodejs">
+<a href="#enablemessageordering_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Message<wbr>Ordering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
+the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
+may be delivered in any order.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expirationpolicy_nodejs">
 <a href="#expirationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
     </dt>
@@ -671,27 +1101,39 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="messageretentionduration_nodejs">
 <a href="#messageretentionduration_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -702,60 +1144,68 @@ than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
 A duration in seconds with up to nine fractional digits, terminated
 by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pushconfig_nodejs">
 <a href="#pushconfig_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retainackedmessages_nodejs">
 <a href="#retainackedmessages_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>Acked<wbr>Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
 messages are not expunged from the subscription's backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_nodejs">
+<a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -764,20 +1214,19 @@ messageRetentionDuration window.
             title="Required">
         <span id="topic_python">
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to a Topic resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ack_deadline_seconds_python">
 <a href="#ack_deadline_seconds_python" style="color: inherit; text-decoration: inherit;">ack_<wbr>deadline_<wbr>seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -795,31 +1244,42 @@ for the call to the push endpoint.
 If the subscriber never acknowledges the message, the Pub/Sub system
 will eventually redeliver the message.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dead_letter_policy_python">
 <a href="#dead_letter_policy_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Dict[Subscription<wbr>Dead<wbr>Letter<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
 is disabled.
-The Cloud Pub/Sub service account associated with this subscriptions's
+The Cloud Pub/Sub service account associated with this subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_message_ordering_python">
+<a href="#enable_message_ordering_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>message_<wbr>ordering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
+the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
+may be delivered in any order.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expiration_policy_python">
 <a href="#expiration_policy_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Dict[Subscription<wbr>Expiration<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
 A subscription is considered active as long as any connected subscriber
@@ -827,27 +1287,39 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="message_retention_duration_python">
 <a href="#message_retention_duration_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -858,69 +1330,73 @@ than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
 A duration in seconds with up to nine fractional digits, terminated
 by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="push_config_python">
 <a href="#push_config_python" style="color: inherit; text-decoration: inherit;">push_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Dict[Subscription<wbr>Push<wbr>Config]</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retain_acked_messages_python">
 <a href="#retain_acked_messages_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>acked_<wbr>messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
 messages are not expunged from the subscription's backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retry_policy_python">
+<a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Subscription resource produces the following output properties:
-
 
 
 
@@ -931,25 +1407,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -958,25 +1431,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -985,25 +1455,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1012,28 +1479,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1043,19 +1504,20 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#SubscriptionState">SubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/pubsub/#Subscription">Subscription</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SubscriptionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Subscription</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>ack_deadline_seconds=None<span class="p">, </span>dead_letter_policy=None<span class="p">, </span>expiration_policy=None<span class="p">, </span>labels=None<span class="p">, </span>message_retention_duration=None<span class="p">, </span>name=None<span class="p">, </span>path=None<span class="p">, </span>project=None<span class="p">, </span>push_config=None<span class="p">, </span>retain_acked_messages=None<span class="p">, </span>topic=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ack_deadline_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dead_letter_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionDeadLetterPolicyArgs]</span> = None<span class="p">, </span><span class="nx">enable_message_ordering</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expiration_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionExpirationPolicyArgs]</span> = None<span class="p">, </span><span class="nx">filter</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">message_retention_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_config</span><span class="p">:</span> <span class="nx">Optional[SubscriptionPushConfigArgs]</span> = None<span class="p">, </span><span class="nx">retain_acked_messages</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[SubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subscription</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionState">SubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#Subscription">Subscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SubscriptionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Subscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Subscription.html">Subscription</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.SubscriptionState.html">SubscriptionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Subscription</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SubscriptionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1157,7 +1619,6 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1165,9 +1626,9 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_ackdeadlineseconds_csharp">
 <a href="#state_ackdeadlineseconds_csharp" style="color: inherit; text-decoration: inherit;">Ack<wbr>Deadline<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -1185,29 +1646,40 @@ for the call to the push endpoint.
 If the subscriber never acknowledges the message, the Pub/Sub system
 will eventually redeliver the message.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deadletterpolicy_csharp">
 <a href="#state_deadletterpolicy_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
 is disabled.
-The Cloud Pub/Sub service account associated with this subscriptions's
+The Cloud Pub/Sub service account associated with this subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablemessageordering_csharp">
+<a href="#state_enablemessageordering_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Message<wbr>Ordering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
+the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
+may be delivered in any order.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_expirationpolicy_csharp">
 <a href="#state_expirationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args</a></span>
     </dt>
@@ -1217,27 +1689,39 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filter_csharp">
+<a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_messageretentionduration_csharp">
 <a href="#state_messageretentionduration_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -1248,81 +1732,87 @@ than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
 A duration in seconds with up to nine fractional digits, terminated
 by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_path_csharp">
 <a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pushconfig_csharp">
 <a href="#state_pushconfig_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_retainackedmessages_csharp">
 <a href="#state_retainackedmessages_csharp" style="color: inherit; text-decoration: inherit;">Retain<wbr>Acked<wbr>Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
 messages are not expunged from the subscription's backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_retrypolicy_csharp">
+<a href="#state_retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_topic_csharp">
 <a href="#state_topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a Topic resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1331,9 +1821,9 @@ messageRetentionDuration window.
             title="Optional">
         <span id="state_ackdeadlineseconds_go">
 <a href="#state_ackdeadlineseconds_go" style="color: inherit; text-decoration: inherit;">Ack<wbr>Deadline<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -1351,29 +1841,40 @@ for the call to the push endpoint.
 If the subscriber never acknowledges the message, the Pub/Sub system
 will eventually redeliver the message.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deadletterpolicy_go">
 <a href="#state_deadletterpolicy_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
 is disabled.
-The Cloud Pub/Sub service account associated with this subscriptions's
+The Cloud Pub/Sub service account associated with this subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablemessageordering_go">
+<a href="#state_enablemessageordering_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Message<wbr>Ordering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
+the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
+may be delivered in any order.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_expirationpolicy_go">
 <a href="#state_expirationpolicy_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
     </dt>
@@ -1383,27 +1884,39 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filter_go">
+<a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_messageretentionduration_go">
 <a href="#state_messageretentionduration_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -1414,81 +1927,87 @@ than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
 A duration in seconds with up to nine fractional digits, terminated
 by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pushconfig_go">
 <a href="#state_pushconfig_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_retainackedmessages_go">
 <a href="#state_retainackedmessages_go" style="color: inherit; text-decoration: inherit;">Retain<wbr>Acked<wbr>Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
 messages are not expunged from the subscription's backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_retrypolicy_go">
+<a href="#state_retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_topic_go">
 <a href="#state_topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a Topic resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1497,9 +2016,9 @@ messageRetentionDuration window.
             title="Optional">
         <span id="state_ackdeadlineseconds_nodejs">
 <a href="#state_ackdeadlineseconds_nodejs" style="color: inherit; text-decoration: inherit;">ack<wbr>Deadline<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -1517,29 +2036,40 @@ for the call to the push endpoint.
 If the subscriber never acknowledges the message, the Pub/Sub system
 will eventually redeliver the message.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deadletterpolicy_nodejs">
 <a href="#state_deadletterpolicy_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
 is disabled.
-The Cloud Pub/Sub service account associated with this subscriptions's
+The Cloud Pub/Sub service account associated with this subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablemessageordering_nodejs">
+<a href="#state_enablemessageordering_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Message<wbr>Ordering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
+the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
+may be delivered in any order.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_expirationpolicy_nodejs">
 <a href="#state_expirationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</a></span>
     </dt>
@@ -1549,27 +2079,39 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filter_nodejs">
+<a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_messageretentionduration_nodejs">
 <a href="#state_messageretentionduration_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -1580,81 +2122,87 @@ than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
 A duration in seconds with up to nine fractional digits, terminated
 by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pushconfig_nodejs">
 <a href="#state_pushconfig_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_retainackedmessages_nodejs">
 <a href="#state_retainackedmessages_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>Acked<wbr>Messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
 messages are not expunged from the subscription's backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_retrypolicy_nodejs">
+<a href="#state_retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_topic_nodejs">
 <a href="#state_topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a Topic resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1663,9 +2211,9 @@ messageRetentionDuration window.
             title="Optional">
         <span id="state_ack_deadline_seconds_python">
 <a href="#state_ack_deadline_seconds_python" style="color: inherit; text-decoration: inherit;">ack_<wbr>deadline_<wbr>seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -1683,31 +2231,42 @@ for the call to the push endpoint.
 If the subscriber never acknowledges the message, the Pub/Sub system
 will eventually redeliver the message.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dead_letter_policy_python">
 <a href="#state_dead_letter_policy_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Dict[Subscription<wbr>Dead<wbr>Letter<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
 is disabled.
-The Cloud Pub/Sub service account associated with this subscriptions's
+The Cloud Pub/Sub service account associated with this subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription.  Structure is documented below.
+permission to Acknowledge() messages on this subscription.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_message_ordering_python">
+<a href="#state_enable_message_ordering_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>message_<wbr>ordering</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true`, messages published with the same orderingKey in PubsubMessage will be delivered to
+the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
+may be delivered in any order.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_expiration_policy_python">
 <a href="#state_expiration_policy_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionexpirationpolicy">Dict[Subscription<wbr>Expiration<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that specifies the conditions for this subscription's expiration.
 A subscription is considered active as long as any connected subscriber
@@ -1715,27 +2274,39 @@ is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is "", the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day.  Structure is documented below.
+is 1 day.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_filter_python">
+<a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The subscription only delivers the messages that match the filter.
+Pub/Sub automatically acknowledges the messages that don't match the filter. You can filter messages
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
+you can't modify the filter.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to this Subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_message_retention_duration_python">
 <a href="#state_message_retention_duration_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How long to retain unacknowledged messages in the subscription's
 backlog, from the moment a message is published. If
@@ -1746,84 +2317,87 @@ than 7 days (`"604800s"`) or less than 10 minutes (`"600s"`).
 A duration in seconds with up to nine fractional digits, terminated
 by 's'. Example: `"600.5s"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the subscription.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_path_python">
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_push_config_python">
 <a href="#state_push_config_python" style="color: inherit; text-decoration: inherit;">push_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfig">Dict[Subscription<wbr>Push<wbr>Config]</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfig">Subscription<wbr>Push<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods.  Structure is documented below.
+pull and ack messages using API methods.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_retain_acked_messages_python">
 <a href="#state_retain_acked_messages_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>acked_<wbr>messages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to retain acknowledged messages. If `true`, then
 messages are not expunged from the subscription's backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_retry_policy_python">
+<a href="#state_retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A policy that specifies how Pub/Sub retries message delivery for this subscription.
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_topic_python">
 <a href="#state_topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to a Topic resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1833,20 +2407,8 @@ messageRetentionDuration window.
 ## Supporting Types
 
 
+
 <h4 id="subscriptiondeadletterpolicy">Subscription<wbr>Dead<wbr>Letter<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionDeadLetterPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionDeadLetterPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionDeadLetterPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionDeadLetterPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionDeadLetterPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionDeadLetterPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1855,13 +2417,13 @@ messageRetentionDuration window.
             title="Optional">
         <span id="deadlettertopic_csharp">
 <a href="#deadlettertopic_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
 Format is `projects/{project}/topics/{topic}`.
-The Cloud Pub/Sub service\naccount associated with the enclosing subscription's
+The Cloud Pub/Sub service account associated with the enclosing subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
 permission to Publish() to this topic.
@@ -1869,14 +2431,13 @@ The operation will fail if the topic does not exist.
 Users should ensure that there is a subscription attached to this topic
 since messages published to a topic with no subscriptions are lost.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdeliveryattempts_csharp">
 <a href="#maxdeliveryattempts_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of delivery attempts for any message. The value must be
 between 5 and 100.
@@ -1887,10 +2448,8 @@ client libraries may automatically extend ack_deadlines.
 This field will be honored on a best effort basis.
 If this parameter is 0, a default value of 5 is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1899,13 +2458,13 @@ If this parameter is 0, a default value of 5 is used.
             title="Optional">
         <span id="deadlettertopic_go">
 <a href="#deadlettertopic_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
 Format is `projects/{project}/topics/{topic}`.
-The Cloud Pub/Sub service\naccount associated with the enclosing subscription's
+The Cloud Pub/Sub service account associated with the enclosing subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
 permission to Publish() to this topic.
@@ -1913,14 +2472,13 @@ The operation will fail if the topic does not exist.
 Users should ensure that there is a subscription attached to this topic
 since messages published to a topic with no subscriptions are lost.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdeliveryattempts_go">
 <a href="#maxdeliveryattempts_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of delivery attempts for any message. The value must be
 between 5 and 100.
@@ -1931,10 +2489,8 @@ client libraries may automatically extend ack_deadlines.
 This field will be honored on a best effort basis.
 If this parameter is 0, a default value of 5 is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1943,13 +2499,13 @@ If this parameter is 0, a default value of 5 is used.
             title="Optional">
         <span id="deadlettertopic_nodejs">
 <a href="#deadlettertopic_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
 Format is `projects/{project}/topics/{topic}`.
-The Cloud Pub/Sub service\naccount associated with the enclosing subscription's
+The Cloud Pub/Sub service account associated with the enclosing subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
 permission to Publish() to this topic.
@@ -1957,14 +2513,13 @@ The operation will fail if the topic does not exist.
 Users should ensure that there is a subscription attached to this topic
 since messages published to a topic with no subscriptions are lost.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdeliveryattempts_nodejs">
 <a href="#maxdeliveryattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of delivery attempts for any message. The value must be
 between 5 and 100.
@@ -1975,25 +2530,23 @@ client libraries may automatically extend ack_deadlines.
 This field will be honored on a best effort basis.
 If this parameter is 0, a default value of 5 is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="deadlettertopic_python">
-<a href="#deadlettertopic_python" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Topic</a>
-</span> 
+        <span id="dead_letter_topic_python">
+<a href="#dead_letter_topic_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>topic</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the topic to which dead letter messages should be published.
 Format is `projects/{project}/topics/{topic}`.
-The Cloud Pub/Sub service\naccount associated with the enclosing subscription's
+The Cloud Pub/Sub service account associated with the enclosing subscription's
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
 permission to Publish() to this topic.
@@ -2001,14 +2554,13 @@ The operation will fail if the topic does not exist.
 Users should ensure that there is a subscription attached to this topic
 since messages published to a topic with no subscriptions are lost.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxdeliveryattempts_python">
-<a href="#maxdeliveryattempts_python" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Attempts</a>
-</span> 
+        <span id="max_delivery_attempts_python">
+<a href="#max_delivery_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>attempts</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of delivery attempts for any message. The value must be
 between 5 and 100.
@@ -2019,28 +2571,10 @@ client libraries may automatically extend ack_deadlines.
 This field will be honored on a best effort basis.
 If this parameter is 0, a default value of 5 is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="subscriptionexpirationpolicy">Subscription<wbr>Expiration<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionExpirationPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionExpirationPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionExpirationPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionExpirationPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionExpirationPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionExpirationPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2049,9 +2583,9 @@ If this parameter is 0, a default value of 5 is used.
             title="Required">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the "time-to-live" duration for an associated resource. The
 resource expires if it is not active for a period of ttl.
@@ -2059,10 +2593,8 @@ If ttl is not set, the associated resource never expires.
 A duration in seconds with up to nine fractional digits, terminated by 's'.
 Example - "3.5s".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2071,9 +2603,9 @@ Example - "3.5s".
             title="Required">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the "time-to-live" duration for an associated resource. The
 resource expires if it is not active for a period of ttl.
@@ -2081,10 +2613,8 @@ If ttl is not set, the associated resource never expires.
 A duration in seconds with up to nine fractional digits, terminated by 's'.
 Example - "3.5s".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2093,9 +2623,9 @@ Example - "3.5s".
             title="Required">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the "time-to-live" duration for an associated resource. The
 resource expires if it is not active for a period of ttl.
@@ -2103,10 +2633,8 @@ If ttl is not set, the associated resource never expires.
 A duration in seconds with up to nine fractional digits, terminated by 's'.
 Example - "3.5s".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2115,9 +2643,9 @@ Example - "3.5s".
             title="Required">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the "time-to-live" duration for an associated resource. The
 resource expires if it is not active for a period of ttl.
@@ -2125,28 +2653,10 @@ If ttl is not set, the associated resource never expires.
 A duration in seconds with up to nine fractional digits, terminated by 's'.
 Example - "3.5s".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="subscriptionpushconfig">Subscription<wbr>Push<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionPushConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionPushConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionPushConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionPushConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionPushConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionPushConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2155,20 +2665,19 @@ Example - "3.5s".
             title="Required">
         <span id="pushendpoint_csharp">
 <a href="#pushendpoint_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URL locating the endpoint to which messages should be pushed.
 For example, a Webhook endpoint might use
 "https://example.com/push".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2191,22 +2700,20 @@ The possible values for this attribute are:
 - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
 - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oidctoken_csharp">
 <a href="#oidctoken_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
-an Authorization header in the HTTP request for every pushed message.  Structure is documented below.
+an Authorization header in the HTTP request for every pushed message.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2215,20 +2722,19 @@ an Authorization header in the HTTP request for every pushed message.  Structure
             title="Required">
         <span id="pushendpoint_go">
 <a href="#pushendpoint_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URL locating the endpoint to which messages should be pushed.
 For example, a Webhook endpoint might use
 "https://example.com/push".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2251,22 +2757,20 @@ The possible values for this attribute are:
 - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
 - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oidctoken_go">
 <a href="#oidctoken_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
-an Authorization header in the HTTP request for every pushed message.  Structure is documented below.
+an Authorization header in the HTTP request for every pushed message.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2275,20 +2779,19 @@ an Authorization header in the HTTP request for every pushed message.  Structure
             title="Required">
         <span id="pushendpoint_nodejs">
 <a href="#pushendpoint_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URL locating the endpoint to which messages should be pushed.
 For example, a Webhook endpoint might use
 "https://example.com/push".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2311,46 +2814,43 @@ The possible values for this attribute are:
 - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
 - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oidctoken_nodejs">
 <a href="#oidctoken_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
-an Authorization header in the HTTP request for every pushed message.  Structure is documented below.
+an Authorization header in the HTTP request for every pushed message.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="pushendpoint_python">
-<a href="#pushendpoint_python" style="color: inherit; text-decoration: inherit;">push<wbr>Endpoint</a>
-</span> 
+        <span id="push_endpoint_python">
+<a href="#push_endpoint_python" style="color: inherit; text-decoration: inherit;">push_<wbr>endpoint</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A URL locating the endpoint to which messages should be pushed.
 For example, a Webhook endpoint might use
 "https://example.com/push".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Endpoint configuration attributes.
 Every endpoint has a set of API supported attributes that can
@@ -2371,40 +2871,22 @@ The possible values for this attribute are:
 - v1beta1: uses the push format defined in the v1beta1 Pub/Sub API.
 - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="oidctoken_python">
-<a href="#oidctoken_python" style="color: inherit; text-decoration: inherit;">oidc<wbr>Token</a>
-</span> 
+        <span id="oidc_token_python">
+<a href="#oidc_token_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>token</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Dict[Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token]</a></span>
+        <span class="property-type"><a href="#subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If specified, Pub/Sub will generate and attach an OIDC JWT token as
-an Authorization header in the HTTP request for every pushed message.  Structure is documented below.
+an Authorization header in the HTTP request for every pushed message.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="subscriptionpushconfigoidctoken">Subscription<wbr>Push<wbr>Config<wbr>Oidc<wbr>Token</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionPushConfigOidcToken">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionPushConfigOidcToken">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionPushConfigOidcTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/pubsub?tab=doc#SubscriptionPushConfigOidcTokenOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Inputs.SubscriptionPushConfigOidcTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.PubSub.Outputs.SubscriptionPushConfigOidcToken.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2413,23 +2895,22 @@ an Authorization header in the HTTP request for every pushed message.  Structure
             title="Required">
         <span id="serviceaccountemail_csharp">
 <a href="#serviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account email to be used for generating the OIDC token.
 The caller (for subscriptions.create, subscriptions.patch, and
 subscriptions.modifyPushConfig RPCs) must have the
 iam.serviceAccounts.actAs permission for the service account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="audience_csharp">
 <a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Audience to be used when generating OIDC token. The audience claim
 identifies the recipients that the JWT is intended for. The audience
@@ -2438,10 +2919,8 @@ for the audience field is not supported. More info about the OIDC JWT
 token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
 Note: if not specified, the Push endpoint URL will be used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2450,23 +2929,22 @@ Note: if not specified, the Push endpoint URL will be used.
             title="Required">
         <span id="serviceaccountemail_go">
 <a href="#serviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account email to be used for generating the OIDC token.
 The caller (for subscriptions.create, subscriptions.patch, and
 subscriptions.modifyPushConfig RPCs) must have the
 iam.serviceAccounts.actAs permission for the service account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="audience_go">
 <a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Audience to be used when generating OIDC token. The audience claim
 identifies the recipients that the JWT is intended for. The audience
@@ -2475,10 +2953,8 @@ for the audience field is not supported. More info about the OIDC JWT
 token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
 Note: if not specified, the Push endpoint URL will be used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2487,23 +2963,22 @@ Note: if not specified, the Push endpoint URL will be used.
             title="Required">
         <span id="serviceaccountemail_nodejs">
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account email to be used for generating the OIDC token.
 The caller (for subscriptions.create, subscriptions.patch, and
 subscriptions.modifyPushConfig RPCs) must have the
 iam.serviceAccounts.actAs permission for the service account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="audience_nodejs">
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Audience to be used when generating OIDC token. The audience claim
 identifies the recipients that the JWT is intended for. The audience
@@ -2512,10 +2987,8 @@ for the audience field is not supported. More info about the OIDC JWT
 token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
 Note: if not specified, the Push endpoint URL will be used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2524,23 +2997,22 @@ Note: if not specified, the Push endpoint URL will be used.
             title="Required">
         <span id="service_account_email_python">
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service account email to be used for generating the OIDC token.
 The caller (for subscriptions.create, subscriptions.patch, and
 subscriptions.modifyPushConfig RPCs) must have the
 iam.serviceAccounts.actAs permission for the service account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="audience_python">
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Audience to be used when generating OIDC token. The audience claim
 identifies the recipients that the JWT is intended for. The audience
@@ -2549,14 +3021,138 @@ for the audience field is not supported. More info about the OIDC JWT
 token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
 Note: if not specified, the Push endpoint URL will be used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="subscriptionretrypolicy">Subscription<wbr>Retry<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximumbackoff_csharp">
+<a href="#maximumbackoff_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Backoff</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimumbackoff_csharp">
+<a href="#minimumbackoff_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Backoff</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximumbackoff_go">
+<a href="#maximumbackoff_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Backoff</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimumbackoff_go">
+<a href="#minimumbackoff_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Backoff</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximumbackoff_nodejs">
+<a href="#maximumbackoff_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Backoff</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimumbackoff_nodejs">
+<a href="#minimumbackoff_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Backoff</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximum_backoff_python">
+<a href="#maximum_backoff_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>backoff</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimum_backoff_python">
+<a href="#minimum_backoff_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>backoff</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
+A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+## Import
 
 
+Subscription can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:pubsub/subscription:Subscription default projects/{{project}}/subscriptions/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:pubsub/subscription:Subscription default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:pubsub/subscription:Subscription default {{name}}
+```
 
 
 
@@ -2568,6 +3164,6 @@ Note: if not specified, the Push endpoint URL will be used.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

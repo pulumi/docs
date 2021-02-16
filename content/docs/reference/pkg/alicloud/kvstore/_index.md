@@ -13,11 +13,14 @@ Explore the resources and functions of the kvstore module in the AliCloud packag
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
     <li><a href="backuppolicy" title="BackupPolicy"><span class="symbol resource"></span>BackupPolicy</a></li>
+    <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getaccounts" title="GetAccounts"><span class="symbol function"></span>GetAccounts</a></li>
+    <li><a href="getconnections" title="GetConnections"><span class="symbol function"></span>GetConnections</a></li>
     <li><a href="getinstanceclasses" title="GetInstanceClasses"><span class="symbol function"></span>GetInstanceClasses</a></li>
     <li><a href="getinstanceengines" title="GetInstanceEngines"><span class="symbol function"></span>GetInstanceEngines</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
@@ -31,26 +34,8 @@ Explore the resources and functions of the kvstore module in the AliCloud packag
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.KVStore.html" title="Pulumi.AliCloud.KVStore">Pulumi.AliCloud.KVStore</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/kvstore?tab=doc#" title="alicloud/kvstore">alicloud/kvstore</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/kvstore/#" title="@pulumi/alicloud/kvstore">@pulumi/alicloud/kvstore</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/kvstore" title="pulumi_alicloud/kvstore">pulumi_alicloud/kvstore</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

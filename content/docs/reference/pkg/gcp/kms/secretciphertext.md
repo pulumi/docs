@@ -1,8 +1,8 @@
 
 ---
 title: "SecretCiphertext"
-title_tag: "Resource SecretCiphertext | Module kms | Package GCP"
-meta_desc: "Explore the SecretCiphertext resource of the kms module, including examples, input properties, output properties, lookup functions, and supporting types. Encrypts secret data with Google Cloud KMS and provides access to the ciphertext."
+title_tag: "gcp.kms.SecretCiphertext"
+meta_desc: "Documentation for the gcp.kms.SecretCiphertext resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -12,7 +12,7 @@ meta_desc: "Explore the SecretCiphertext resource of the kms module, including e
 
 Encrypts secret data with Google Cloud KMS and provides access to the ciphertext.
 
-> **NOTE**: Using this resource will allow you to conceal secret data within your
+> **NOTE:** Using this resource will allow you to conceal secret data within your
 resource definitions, but it does not take care of protecting that data in the
 logging output, plan output, or state output.  Please take care to secure your secret
 data outside of resource definitions.
@@ -26,6 +26,197 @@ To get more information about SecretCiphertext, see:
 > **Warning:** All arguments including `plaintext` and `additional_authenticated_data` will be stored in the raw
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Kms Secret Ciphertext Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var keyring = new Gcp.Kms.KeyRing("keyring", new Gcp.Kms.KeyRingArgs
+        {
+            Location = "global",
+        });
+        var cryptokey = new Gcp.Kms.CryptoKey("cryptokey", new Gcp.Kms.CryptoKeyArgs
+        {
+            KeyRing = keyring.Id,
+            RotationPeriod = "100000s",
+        });
+        var myPassword = new Gcp.Kms.SecretCiphertext("myPassword", new Gcp.Kms.SecretCiphertextArgs
+        {
+            CryptoKey = cryptokey.Id,
+            Plaintext = "my-secret-password",
+        });
+        var instance = new Gcp.Compute.Instance("instance", new Gcp.Compute.InstanceArgs
+        {
+            MachineType = "e2-medium",
+            Zone = "us-central1-a",
+            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+            {
+                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+                {
+                    Image = "debian-cloud/debian-9",
+                },
+            },
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+                {
+                    Network = "default",
+                    AccessConfigs = 
+                    {
+                        ,
+                    },
+                },
+            },
+            Metadata = 
+            {
+                { "password", myPassword.Ciphertext },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		keyring, err := kms.NewKeyRing(ctx, "keyring", &kms.KeyRingArgs{
+			Location: pulumi.String("global"),
+		})
+		if err != nil {
+			return err
+		}
+		cryptokey, err := kms.NewCryptoKey(ctx, "cryptokey", &kms.CryptoKeyArgs{
+			KeyRing:        keyring.ID(),
+			RotationPeriod: pulumi.String("100000s"),
+		})
+		if err != nil {
+			return err
+		}
+		myPassword, err := kms.NewSecretCiphertext(ctx, "myPassword", &kms.SecretCiphertextArgs{
+			CryptoKey: cryptokey.ID(),
+			Plaintext: pulumi.String("my-secret-password"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewInstance(ctx, "instance", &compute.InstanceArgs{
+			MachineType: pulumi.String("e2-medium"),
+			Zone:        pulumi.String("us-central1-a"),
+			BootDisk: &compute.InstanceBootDiskArgs{
+				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+					Image: pulumi.String("debian-cloud/debian-9"),
+				},
+			},
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					Network: pulumi.String("default"),
+					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
+						nil,
+					},
+				},
+			},
+			Metadata: pulumi.StringMap{
+				"password": myPassword.Ciphertext,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+keyring = gcp.kms.KeyRing("keyring", location="global")
+cryptokey = gcp.kms.CryptoKey("cryptokey",
+    key_ring=keyring.id,
+    rotation_period="100000s")
+my_password = gcp.kms.SecretCiphertext("myPassword",
+    crypto_key=cryptokey.id,
+    plaintext="my-secret-password")
+instance = gcp.compute.Instance("instance",
+    machine_type="e2-medium",
+    zone="us-central1-a",
+    boot_disk=gcp.compute.InstanceBootDiskArgs(
+        initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+            image="debian-cloud/debian-9",
+        ),
+    ),
+    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+        network="default",
+        access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs()],
+    )],
+    metadata={
+        "password": my_password.ciphertext,
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const cryptokey = new gcp.kms.CryptoKey("cryptokey", {
+    keyRing: keyring.id,
+    rotationPeriod: "100000s",
+});
+const myPassword = new gcp.kms.SecretCiphertext("myPassword", {
+    cryptoKey: cryptokey.id,
+    plaintext: "my-secret-password",
+});
+const instance = new gcp.compute.Instance("instance", {
+    machineType: "e2-medium",
+    zone: "us-central1-a",
+    bootDisk: {
+        initializeParams: {
+            image: "debian-cloud/debian-9",
+        },
+    },
+    networkInterfaces: [{
+        network: "default",
+        accessConfigs: [{}],
+    }],
+    metadata: {
+        password: myPassword.ciphertext,
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecretCiphertext Resource {#create}
@@ -33,19 +224,19 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#SecretCiphertext">SecretCiphertext</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#SecretCiphertextArgs">SecretCiphertextArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretCiphertext</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretCiphertextArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/kms/#SecretCiphertext">SecretCiphertext</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>additional_authenticated_data=None<span class="p">, </span>crypto_key=None<span class="p">, </span>plaintext=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecretCiphertext</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_authenticated_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">crypto_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plaintext</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#SecretCiphertext">NewSecretCiphertext</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#SecretCiphertextArgs">SecretCiphertextArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#SecretCiphertext">SecretCiphertext</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretCiphertext</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretCiphertextArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretCiphertext</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.SecretCiphertext.html">SecretCiphertext</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.SecretCiphertextArgs.html">SecretCiphertextArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretCiphertext</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecretCiphertextArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -56,7 +247,7 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -66,7 +257,7 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#SecretCiphertextArgs">SecretCiphertextArgs</a></span>
+        <span class="property-type"><a href="#inputs">SecretCiphertextArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -115,7 +306,7 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -125,7 +316,7 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -135,7 +326,7 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#SecretCiphertextArgs">SecretCiphertextArgs</a></span>
+        <span class="property-type"><a href="#inputs">SecretCiphertextArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -145,7 +336,7 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -164,7 +355,7 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -174,7 +365,7 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.SecretCiphertextArgs.html">SecretCiphertextArgs</a></span>
+        <span class="property-type"><a href="#inputs">SecretCiphertextArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -197,12 +388,11 @@ state as plain-text. [Read more about secrets in state](https://www.pulumi.com/d
 
 ## SecretCiphertext Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SecretCiphertext resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The SecretCiphertext resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -213,39 +403,37 @@ The SecretCiphertext resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="cryptokey_csharp">
 <a href="#cryptokey_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="plaintext_csharp">
 <a href="#plaintext_csharp" style="color: inherit; text-decoration: inherit;">Plaintext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plaintext to be encrypted.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The plaintext to be encrypted.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="additionalauthenticateddata_csharp">
 <a href="#additionalauthenticateddata_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Authenticated<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -254,39 +442,37 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/crypt
             title="Required">
         <span id="cryptokey_go">
 <a href="#cryptokey_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="plaintext_go">
 <a href="#plaintext_go" style="color: inherit; text-decoration: inherit;">Plaintext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plaintext to be encrypted.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The plaintext to be encrypted.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="additionalauthenticateddata_go">
 <a href="#additionalauthenticateddata_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Authenticated<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -295,39 +481,37 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/crypt
             title="Required">
         <span id="cryptokey_nodejs">
 <a href="#cryptokey_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="plaintext_nodejs">
 <a href="#plaintext_nodejs" style="color: inherit; text-decoration: inherit;">plaintext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plaintext to be encrypted.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The plaintext to be encrypted.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="additionalauthenticateddata_nodejs">
 <a href="#additionalauthenticateddata_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Authenticated<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -336,48 +520,42 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/crypt
             title="Required">
         <span id="crypto_key_python">
 <a href="#crypto_key_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="plaintext_python">
 <a href="#plaintext_python" style="color: inherit; text-decoration: inherit;">plaintext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The plaintext to be encrypted.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The plaintext to be encrypted.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="additional_authenticated_data_python">
 <a href="#additional_authenticated_data_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>authenticated_<wbr>data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the SecretCiphertext resource produces the following output properties:
-
 
 
 
@@ -388,26 +566,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="ciphertext_csharp">
 <a href="#ciphertext_csharp" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the result of encrypting the provided plaintext, encoded in base64.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -416,26 +591,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="ciphertext_go">
 <a href="#ciphertext_go" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the result of encrypting the provided plaintext, encoded in base64.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -444,26 +616,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="ciphertext_nodejs">
 <a href="#ciphertext_nodejs" style="color: inherit; text-decoration: inherit;">ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the result of encrypting the provided plaintext, encoded in base64.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -472,29 +641,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="ciphertext_python">
 <a href="#ciphertext_python" style="color: inherit; text-decoration: inherit;">ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains the result of encrypting the provided plaintext, encoded in base64.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -504,19 +667,20 @@ Get an existing SecretCiphertext resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#SecretCiphertextState">SecretCiphertextState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#SecretCiphertext">SecretCiphertext</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretCiphertextState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretCiphertext</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>additional_authenticated_data=None<span class="p">, </span>ciphertext=None<span class="p">, </span>crypto_key=None<span class="p">, </span>plaintext=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_authenticated_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ciphertext</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">crypto_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plaintext</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecretCiphertext</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretCiphertext<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#SecretCiphertextState">SecretCiphertextState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#SecretCiphertext">SecretCiphertext</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretCiphertext<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecretCiphertextState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretCiphertext</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.SecretCiphertext.html">SecretCiphertext</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.SecretCiphertextState.html">SecretCiphertextState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretCiphertext</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecretCiphertextState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -618,7 +782,6 @@ Get an existing SecretCiphertext resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -626,50 +789,47 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_additionalauthenticateddata_csharp">
 <a href="#state_additionalauthenticateddata_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Authenticated<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ciphertext_csharp">
 <a href="#state_ciphertext_csharp" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the result of encrypting the provided plaintext, encoded in base64.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cryptokey_csharp">
 <a href="#state_cryptokey_csharp" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_plaintext_csharp">
 <a href="#state_plaintext_csharp" style="color: inherit; text-decoration: inherit;">Plaintext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plaintext to be encrypted.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The plaintext to be encrypted.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -678,50 +838,47 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/crypt
             title="Optional">
         <span id="state_additionalauthenticateddata_go">
 <a href="#state_additionalauthenticateddata_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Authenticated<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ciphertext_go">
 <a href="#state_ciphertext_go" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the result of encrypting the provided plaintext, encoded in base64.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cryptokey_go">
 <a href="#state_cryptokey_go" style="color: inherit; text-decoration: inherit;">Crypto<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_plaintext_go">
 <a href="#state_plaintext_go" style="color: inherit; text-decoration: inherit;">Plaintext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plaintext to be encrypted.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The plaintext to be encrypted.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -730,50 +887,47 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/crypt
             title="Optional">
         <span id="state_additionalauthenticateddata_nodejs">
 <a href="#state_additionalauthenticateddata_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Authenticated<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ciphertext_nodejs">
 <a href="#state_ciphertext_nodejs" style="color: inherit; text-decoration: inherit;">ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the result of encrypting the provided plaintext, encoded in base64.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cryptokey_nodejs">
 <a href="#state_cryptokey_nodejs" style="color: inherit; text-decoration: inherit;">crypto<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_plaintext_nodejs">
 <a href="#state_plaintext_nodejs" style="color: inherit; text-decoration: inherit;">plaintext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plaintext to be encrypted.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The plaintext to be encrypted.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -782,47 +936,45 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/crypt
             title="Optional">
         <span id="state_additional_authenticated_data_python">
 <a href="#state_additional_authenticated_data_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>authenticated_<wbr>data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The additional authenticated data used for integrity checks during encryption and decryption.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ciphertext_python">
 <a href="#state_ciphertext_python" style="color: inherit; text-decoration: inherit;">ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains the result of encrypting the provided plaintext, encoded in base64.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_crypto_key_python">
 <a href="#state_crypto_key_python" style="color: inherit; text-decoration: inherit;">crypto_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_plaintext_python">
 <a href="#state_plaintext_python" style="color: inherit; text-decoration: inherit;">plaintext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The plaintext to be encrypted.  **Note**: This property is sensitive and will not be displayed in the plan.
+    <dd>{{% md %}}The plaintext to be encrypted.
+**Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -830,8 +982,10 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/crypt
 
 
 
+## Import
 
 
+This resource does not support import.
 
 
 
@@ -843,6 +997,6 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/crypt
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

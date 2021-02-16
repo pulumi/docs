@@ -1,8 +1,8 @@
 
 ---
 title: "Record"
-title_tag: "Resource Record | Module route53 | Package AWS"
-meta_desc: "Explore the Record resource of the route53 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Route53 record resource."
+title_tag: "aws.route53.Record"
+meta_desc: "Documentation for the aws.route53.Record resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -16,6 +16,70 @@ Provides a Route53 record resource.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Simple routing policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var www = new Aws.Route53.Record("www", new Aws.Route53.RecordArgs
+        {
+            ZoneId = aws_route53_zone.Primary.Zone_id,
+            Name = "www.example.com",
+            Type = "A",
+            Ttl = 300,
+            Records = 
+            {
+                aws_eip.Lb.Public_ip,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+www = aws.route53.Record("www",
+    zone_id=aws_route53_zone["primary"]["zone_id"],
+    name="www.example.com",
+    type="A",
+    ttl=300,
+    records=[aws_eip["lb"]["public_ip"]])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const www = new aws.route53.Record("www", {
+    zoneId: aws_route53_zone.primary.zone_id,
+    name: "www.example.com",
+    type: "A",
+    ttl: "300",
+    records: [aws_eip.lb.public_ip],
+});
+```
+
+{{% /example %}}
+
 ### Weighted routing policy
 {{% example csharp %}}
 ```csharp
@@ -134,20 +198,20 @@ www_dev = aws.route53.Record("www-dev",
     zone_id=aws_route53_zone["primary"]["zone_id"],
     name="www",
     type="CNAME",
-    ttl="5",
-    weighted_routing_policies=[{
-        "weight": 10,
-    }],
+    ttl=5,
+    weighted_routing_policies=[aws.route53.RecordWeightedRoutingPolicyArgs(
+        weight=10,
+    )],
     set_identifier="dev",
     records=["dev.example.com"])
 www_live = aws.route53.Record("www-live",
     zone_id=aws_route53_zone["primary"]["zone_id"],
     name="www",
     type="CNAME",
-    ttl="5",
-    weighted_routing_policies=[{
-        "weight": 90,
-    }],
+    ttl=5,
+    weighted_routing_policies=[aws.route53.RecordWeightedRoutingPolicyArgs(
+        weight=90,
+    )],
     set_identifier="live",
     records=["live.example.com"])
 ```
@@ -292,21 +356,21 @@ import pulumi_aws as aws
 
 main = aws.elb.LoadBalancer("main",
     availability_zones=["us-east-1c"],
-    listeners=[{
-        "instance_port": 80,
-        "instanceProtocol": "http",
-        "lb_port": 80,
-        "lbProtocol": "http",
-    }])
+    listeners=[aws.elb.LoadBalancerListenerArgs(
+        instance_port=80,
+        instance_protocol="http",
+        lb_port=80,
+        lb_protocol="http",
+    )])
 www = aws.route53.Record("www",
     zone_id=aws_route53_zone["primary"]["zone_id"],
     name="example.com",
     type="A",
-    aliases=[{
-        "name": main.dns_name,
-        "zone_id": main.zone_id,
-        "evaluateTargetHealth": True,
-    }])
+    aliases=[aws.route53.RecordAliasArgs(
+        name=main.dns_name,
+        zone_id=main.zone_id,
+        evaluate_target_health=True,
+    )])
 ```
 
 {{% /example %}}
@@ -475,19 +539,19 @@ const exampleRecord = new aws.route53.Record("exampleRecord", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#Record">Record</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#RecordArgs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Record</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/route53/#pulumi_aws.route53.Record">Record</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>aliases=None<span class="p">, </span>allow_overwrite=None<span class="p">, </span>failover_routing_policies=None<span class="p">, </span>geolocation_routing_policies=None<span class="p">, </span>health_check_id=None<span class="p">, </span>latency_routing_policies=None<span class="p">, </span>multivalue_answer_routing_policy=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>set_identifier=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>weighted_routing_policies=None<span class="p">, </span>zone_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Record</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordAliasArgs]]</span> = None<span class="p">, </span><span class="nx">allow_overwrite</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">failover_routing_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordFailoverRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">geolocation_routing_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordGeolocationRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">health_check_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">latency_routing_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordLatencyRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">multivalue_answer_routing_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">records</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">set_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, RecordType]]</span> = None<span class="p">, </span><span class="nx">weighted_routing_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordWeightedRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#Record">NewRecord</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordArgs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#Record">Record</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRecord</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Record</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Record.html">Record</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.RecordArgs.html">RecordArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Record</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RecordArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -498,7 +562,7 @@ const exampleRecord = new aws.route53.Record("exampleRecord", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -508,7 +572,7 @@ const exampleRecord = new aws.route53.Record("exampleRecord", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#RecordArgs">RecordArgs</a></span>
+        <span class="property-type"><a href="#inputs">RecordArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -567,7 +631,7 @@ const exampleRecord = new aws.route53.Record("exampleRecord", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -577,7 +641,7 @@ const exampleRecord = new aws.route53.Record("exampleRecord", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordArgs">RecordArgs</a></span>
+        <span class="property-type"><a href="#inputs">RecordArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -606,7 +670,7 @@ const exampleRecord = new aws.route53.Record("exampleRecord", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -616,7 +680,7 @@ const exampleRecord = new aws.route53.Record("exampleRecord", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.RecordArgs.html">RecordArgs</a></span>
+        <span class="property-type"><a href="#inputs">RecordArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -639,12 +703,11 @@ const exampleRecord = new aws.route53.Record("exampleRecord", {
 
 ## Record Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Record resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Record resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -655,160 +718,145 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#recordtype">Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aliases_csharp">
 <a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">List&lt;Record<wbr>Alias<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowoverwrite_csharp">
 <a href="#allowoverwrite_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failoverroutingpolicies_csharp">
 <a href="#failoverroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">List&lt;Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="geolocationroutingpolicies_csharp">
 <a href="#geolocationroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">List&lt;Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckid_csharp">
 <a href="#healthcheckid_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latencyroutingpolicies_csharp">
 <a href="#latencyroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">List&lt;Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="multivalueanswerroutingpolicy_csharp">
 <a href="#multivalueanswerroutingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="records_csharp">
 <a href="#records_csharp" style="color: inherit; text-decoration: inherit;">Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="setidentifier_csharp">
 <a href="#setidentifier_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weightedroutingpolicies_csharp">
 <a href="#weightedroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">List&lt;Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -817,160 +865,145 @@ Alias record documented below.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">string | <a href="#recordtype">Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aliases_go">
 <a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">[]Record<wbr>Alias</a></span>
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowoverwrite_go">
 <a href="#allowoverwrite_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failoverroutingpolicies_go">
 <a href="#failoverroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="geolocationroutingpolicies_go">
 <a href="#geolocationroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckid_go">
 <a href="#healthcheckid_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latencyroutingpolicies_go">
 <a href="#latencyroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="multivalueanswerroutingpolicy_go">
 <a href="#multivalueanswerroutingpolicy_go" style="color: inherit; text-decoration: inherit;">Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="records_go">
 <a href="#records_go" style="color: inherit; text-decoration: inherit;">Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="setidentifier_go">
 <a href="#setidentifier_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weightedroutingpolicies_go">
 <a href="#weightedroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -979,160 +1012,145 @@ Alias record documented below.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Record<wbr>Type</span>
+        <span class="property-type">string | <a href="#recordtype">Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aliases_nodejs">
 <a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">Record<wbr>Alias[]</a></span>
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowoverwrite_nodejs">
 <a href="#allowoverwrite_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failoverroutingpolicies_nodejs">
 <a href="#failoverroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">Record<wbr>Failover<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="geolocationroutingpolicies_nodejs">
 <a href="#geolocationroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">geolocation<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">Record<wbr>Geolocation<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckid_nodejs">
 <a href="#healthcheckid_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latencyroutingpolicies_nodejs">
 <a href="#latencyroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">Record<wbr>Latency<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="multivalueanswerroutingpolicy_nodejs">
 <a href="#multivalueanswerroutingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="records_nodejs">
 <a href="#records_nodejs" style="color: inherit; text-decoration: inherit;">records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="setidentifier_nodejs">
 <a href="#setidentifier_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weightedroutingpolicies_nodejs">
 <a href="#weightedroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">Record<wbr>Weighted<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1141,169 +1159,150 @@ Alias record documented below.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str | <a href="#recordtype">Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aliases_python">
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordalias">List[Record<wbr>Alias]</a></span>
+        <span class="property-type"><a href="#recordalias">Sequence[Record<wbr>Alias<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_overwrite_python">
 <a href="#allow_overwrite_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failover_routing_policies_python">
 <a href="#failover_routing_policies_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>routing_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfailoverroutingpolicy">List[Record<wbr>Failover<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordfailoverroutingpolicy">Sequence[Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="geolocation_routing_policies_python">
 <a href="#geolocation_routing_policies_python" style="color: inherit; text-decoration: inherit;">geolocation_<wbr>routing_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordgeolocationroutingpolicy">List[Record<wbr>Geolocation<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordgeolocationroutingpolicy">Sequence[Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="health_check_id_python">
 <a href="#health_check_id_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latency_routing_policies_python">
 <a href="#latency_routing_policies_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>routing_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordlatencyroutingpolicy">List[Record<wbr>Latency<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordlatencyroutingpolicy">Sequence[Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="multivalue_answer_routing_policy_python">
 <a href="#multivalue_answer_routing_policy_python" style="color: inherit; text-decoration: inherit;">multivalue_<wbr>answer_<wbr>routing_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="records_python">
 <a href="#records_python" style="color: inherit; text-decoration: inherit;">records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="set_identifier_python">
 <a href="#set_identifier_python" style="color: inherit; text-decoration: inherit;">set_<wbr>identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weighted_routing_policies_python">
 <a href="#weighted_routing_policies_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>routing_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordweightedroutingpolicy">List[Record<wbr>Weighted<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordweightedroutingpolicy">Sequence[Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Record resource produces the following output properties:
-
 
 
 
@@ -1314,26 +1313,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1342,26 +1338,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1370,26 +1363,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1398,29 +1388,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1430,19 +1414,20 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#RecordState">RecordState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#Record">Record</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RecordState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Record</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>aliases=None<span class="p">, </span>allow_overwrite=None<span class="p">, </span>failover_routing_policies=None<span class="p">, </span>fqdn=None<span class="p">, </span>geolocation_routing_policies=None<span class="p">, </span>health_check_id=None<span class="p">, </span>latency_routing_policies=None<span class="p">, </span>multivalue_answer_routing_policy=None<span class="p">, </span>name=None<span class="p">, </span>records=None<span class="p">, </span>set_identifier=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>weighted_routing_policies=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordAliasArgs]]</span> = None<span class="p">, </span><span class="nx">allow_overwrite</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">failover_routing_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordFailoverRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">geolocation_routing_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordGeolocationRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">health_check_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">latency_routing_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordLatencyRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">multivalue_answer_routing_policy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">records</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">set_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, RecordType]]</span> = None<span class="p">, </span><span class="nx">weighted_routing_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordWeightedRoutingPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Record</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRecord<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordState">RecordState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#Record">Record</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRecord<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RecordState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Record</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Record.html">Record</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.RecordState.html">RecordState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Record</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RecordState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1544,7 +1529,6 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1552,171 +1536,155 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_aliases_csharp">
 <a href="#state_aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">List&lt;Record<wbr>Alias<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowoverwrite_csharp">
 <a href="#state_allowoverwrite_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failoverroutingpolicies_csharp">
 <a href="#state_failoverroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">List&lt;Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_csharp">
 <a href="#state_fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_geolocationroutingpolicies_csharp">
 <a href="#state_geolocationroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">List&lt;Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckid_csharp">
 <a href="#state_healthcheckid_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_latencyroutingpolicies_csharp">
 <a href="#state_latencyroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">List&lt;Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_multivalueanswerroutingpolicy_csharp">
 <a href="#state_multivalueanswerroutingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_records_csharp">
 <a href="#state_records_csharp" style="color: inherit; text-decoration: inherit;">Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_setidentifier_csharp">
 <a href="#state_setidentifier_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#recordtype">Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_weightedroutingpolicies_csharp">
 <a href="#state_weightedroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">List&lt;Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1725,171 +1693,155 @@ Alias record documented below.
             title="Optional">
         <span id="state_aliases_go">
 <a href="#state_aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">[]Record<wbr>Alias</a></span>
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowoverwrite_go">
 <a href="#state_allowoverwrite_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failoverroutingpolicies_go">
 <a href="#state_failoverroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_go">
 <a href="#state_fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_geolocationroutingpolicies_go">
 <a href="#state_geolocationroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckid_go">
 <a href="#state_healthcheckid_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_latencyroutingpolicies_go">
 <a href="#state_latencyroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_multivalueanswerroutingpolicy_go">
 <a href="#state_multivalueanswerroutingpolicy_go" style="color: inherit; text-decoration: inherit;">Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_records_go">
 <a href="#state_records_go" style="color: inherit; text-decoration: inherit;">Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_setidentifier_go">
 <a href="#state_setidentifier_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">string | <a href="#recordtype">Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_weightedroutingpolicies_go">
 <a href="#state_weightedroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1898,171 +1850,155 @@ Alias record documented below.
             title="Optional">
         <span id="state_aliases_nodejs">
 <a href="#state_aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordalias">Record<wbr>Alias[]</a></span>
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowoverwrite_nodejs">
 <a href="#state_allowoverwrite_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failoverroutingpolicies_nodejs">
 <a href="#state_failoverroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfailoverroutingpolicy">Record<wbr>Failover<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_nodejs">
 <a href="#state_fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_geolocationroutingpolicies_nodejs">
 <a href="#state_geolocationroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">geolocation<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">Record<wbr>Geolocation<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckid_nodejs">
 <a href="#state_healthcheckid_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_latencyroutingpolicies_nodejs">
 <a href="#state_latencyroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordlatencyroutingpolicy">Record<wbr>Latency<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_multivalueanswerroutingpolicy_nodejs">
 <a href="#state_multivalueanswerroutingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_records_nodejs">
 <a href="#state_records_nodejs" style="color: inherit; text-decoration: inherit;">records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_setidentifier_nodejs">
 <a href="#state_setidentifier_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Record<wbr>Type</span>
+        <span class="property-type">string | <a href="#recordtype">Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_weightedroutingpolicies_nodejs">
 <a href="#state_weightedroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Routing<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordweightedroutingpolicy">Record<wbr>Weighted<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2071,174 +2007,155 @@ Alias record documented below.
             title="Optional">
         <span id="state_aliases_python">
 <a href="#state_aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordalias">List[Record<wbr>Alias]</a></span>
+        <span class="property-type"><a href="#recordalias">Sequence[Record<wbr>Alias<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allow_overwrite_python">
 <a href="#state_allow_overwrite_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>overwrite</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_failover_routing_policies_python">
 <a href="#state_failover_routing_policies_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>routing_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfailoverroutingpolicy">List[Record<wbr>Failover<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordfailoverroutingpolicy">Sequence[Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_python">
 <a href="#state_fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_geolocation_routing_policies_python">
 <a href="#state_geolocation_routing_policies_python" style="color: inherit; text-decoration: inherit;">geolocation_<wbr>routing_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordgeolocationroutingpolicy">List[Record<wbr>Geolocation<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordgeolocationroutingpolicy">Sequence[Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_health_check_id_python">
 <a href="#state_health_check_id_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_latency_routing_policies_python">
 <a href="#state_latency_routing_policies_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>routing_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordlatencyroutingpolicy">List[Record<wbr>Latency<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordlatencyroutingpolicy">Sequence[Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_multivalue_answer_routing_policy_python">
 <a href="#state_multivalue_answer_routing_policy_python" style="color: inherit; text-decoration: inherit;">multivalue_<wbr>answer_<wbr>routing_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_records_python">
 <a href="#state_records_python" style="color: inherit; text-decoration: inherit;">records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_set_identifier_python">
 <a href="#state_set_identifier_python" style="color: inherit; text-decoration: inherit;">set_<wbr>identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str | <a href="#recordtype">Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_weighted_routing_policies_python">
 <a href="#state_weighted_routing_policies_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>routing_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordweightedroutingpolicy">List[Record<wbr>Weighted<wbr>Routing<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#recordweightedroutingpolicy">Sequence[Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2248,20 +2165,8 @@ Alias record documented below.
 ## Supporting Types
 
 
+
 <h4 id="recordalias">Record<wbr>Alias</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RecordAlias">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RecordAlias">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordAliasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordAliasOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordAliasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordAlias.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2270,38 +2175,34 @@ Alias record documented below.
             title="Required">
         <span id="evaluatetargethealth_csharp">
 <a href="#evaluatetargethealth_csharp" style="color: inherit; text-decoration: inherit;">Evaluate<wbr>Target<wbr>Health</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2310,38 +2211,34 @@ Alias record documented below.
             title="Required">
         <span id="evaluatetargethealth_go">
 <a href="#evaluatetargethealth_go" style="color: inherit; text-decoration: inherit;">Evaluate<wbr>Target<wbr>Health</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2350,96 +2247,72 @@ Alias record documented below.
             title="Required">
         <span id="evaluatetargethealth_nodejs">
 <a href="#evaluatetargethealth_nodejs" style="color: inherit; text-decoration: inherit;">evaluate<wbr>Target<wbr>Health</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="evaluatetargethealth_python">
-<a href="#evaluatetargethealth_python" style="color: inherit; text-decoration: inherit;">evaluate<wbr>Target<wbr>Health</a>
-</span> 
+        <span id="evaluate_target_health_python">
+<a href="#evaluate_target_health_python" style="color: inherit; text-decoration: inherit;">evaluate_<wbr>target_<wbr>health</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="recordfailoverroutingpolicy">Record<wbr>Failover<wbr>Routing<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RecordFailoverRoutingPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RecordFailoverRoutingPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordFailoverRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordFailoverRoutingPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordFailoverRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordFailoverRoutingPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2448,16 +2321,14 @@ Alias record documented below.
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2466,16 +2337,14 @@ Alias record documented below.
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2484,16 +2353,14 @@ Alias record documented below.
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2502,34 +2369,16 @@ Alias record documented below.
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="recordgeolocationroutingpolicy">Record<wbr>Geolocation<wbr>Routing<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RecordGeolocationRoutingPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RecordGeolocationRoutingPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordGeolocationRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordGeolocationRoutingPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordGeolocationRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordGeolocationRoutingPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2538,38 +2387,34 @@ Alias record documented below.
             title="Optional">
         <span id="continent_csharp">
 <a href="#continent_csharp" style="color: inherit; text-decoration: inherit;">Continent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either `continent` or `country` must be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A two-character country code or `*` to indicate a default resource record set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subdivision_csharp">
 <a href="#subdivision_csharp" style="color: inherit; text-decoration: inherit;">Subdivision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subdivision code for a country.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2578,38 +2423,34 @@ Alias record documented below.
             title="Optional">
         <span id="continent_go">
 <a href="#continent_go" style="color: inherit; text-decoration: inherit;">Continent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either `continent` or `country` must be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A two-character country code or `*` to indicate a default resource record set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subdivision_go">
 <a href="#subdivision_go" style="color: inherit; text-decoration: inherit;">Subdivision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subdivision code for a country.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2618,38 +2459,34 @@ Alias record documented below.
             title="Optional">
         <span id="continent_nodejs">
 <a href="#continent_nodejs" style="color: inherit; text-decoration: inherit;">continent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either `continent` or `country` must be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A two-character country code or `*` to indicate a default resource record set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subdivision_nodejs">
 <a href="#subdivision_nodejs" style="color: inherit; text-decoration: inherit;">subdivision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subdivision code for a country.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2658,56 +2495,36 @@ Alias record documented below.
             title="Optional">
         <span id="continent_python">
 <a href="#continent_python" style="color: inherit; text-decoration: inherit;">continent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either `continent` or `country` must be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A two-character country code or `*` to indicate a default resource record set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subdivision_python">
 <a href="#subdivision_python" style="color: inherit; text-decoration: inherit;">subdivision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subdivision code for a country.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="recordlatencyroutingpolicy">Record<wbr>Latency<wbr>Routing<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RecordLatencyRoutingPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RecordLatencyRoutingPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordLatencyRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordLatencyRoutingPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordLatencyRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordLatencyRoutingPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2716,16 +2533,14 @@ Alias record documented below.
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AWS region from which to measure latency. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2734,16 +2549,14 @@ Alias record documented below.
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AWS region from which to measure latency. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2752,16 +2565,14 @@ Alias record documented below.
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AWS region from which to measure latency. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2770,34 +2581,134 @@ Alias record documented below.
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An AWS region from which to measure latency. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="recordtype">Record<wbr>Type</h4>
 
-
-
-
-<h4 id="recordweightedroutingpolicy">Record<wbr>Weighted<wbr>Routing<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RecordWeightedRoutingPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RecordWeightedRoutingPolicy">output</a> API doc for this type.
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>A</dt>
+    <dd>A</dd>
+    <dt>AAAA</dt>
+    <dd>AAAA</dd>
+    <dt>CNAME</dt>
+    <dd>CNAME</dd>
+    <dt>CAA</dt>
+    <dd>CAA</dd>
+    <dt>MX</dt>
+    <dd>MX</dd>
+    <dt>NAPTR</dt>
+    <dd>NAPTR</dd>
+    <dt>NS</dt>
+    <dd>NS</dd>
+    <dt>PTR</dt>
+    <dd>PTR</dd>
+    <dt>SOA</dt>
+    <dd>SOA</dd>
+    <dt>SPF</dt>
+    <dd>SPF</dd>
+    <dt>SRV</dt>
+    <dd>SRV</dd>
+    <dt>TXT</dt>
+    <dd>TXT</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordWeightedRoutingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#RecordWeightedRoutingPolicyOutput">output</a> API doc for this type.
+<dl class="tabular">
+    <dt>Record<wbr>Type<wbr>A</dt>
+    <dd>A</dd>
+    <dt>Record<wbr>Type<wbr>AAAA</dt>
+    <dd>AAAA</dd>
+    <dt>Record<wbr>Type<wbr>CNAME</dt>
+    <dd>CNAME</dd>
+    <dt>Record<wbr>Type<wbr>CAA</dt>
+    <dd>CAA</dd>
+    <dt>Record<wbr>Type<wbr>MX</dt>
+    <dd>MX</dd>
+    <dt>Record<wbr>Type<wbr>NAPTR</dt>
+    <dd>NAPTR</dd>
+    <dt>Record<wbr>Type<wbr>NS</dt>
+    <dd>NS</dd>
+    <dt>Record<wbr>Type<wbr>PTR</dt>
+    <dd>PTR</dd>
+    <dt>Record<wbr>Type<wbr>SOA</dt>
+    <dd>SOA</dd>
+    <dt>Record<wbr>Type<wbr>SPF</dt>
+    <dd>SPF</dd>
+    <dt>Record<wbr>Type<wbr>SRV</dt>
+    <dd>SRV</dd>
+    <dt>Record<wbr>Type<wbr>TXT</dt>
+    <dd>TXT</dd>
+</dl>
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Inputs.RecordWeightedRoutingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.Outputs.RecordWeightedRoutingPolicy.html">output</a> API doc for this type.
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>A</dt>
+    <dd>A</dd>
+    <dt>AAAA</dt>
+    <dd>AAAA</dd>
+    <dt>CNAME</dt>
+    <dd>CNAME</dd>
+    <dt>CAA</dt>
+    <dd>CAA</dd>
+    <dt>MX</dt>
+    <dd>MX</dd>
+    <dt>NAPTR</dt>
+    <dd>NAPTR</dd>
+    <dt>NS</dt>
+    <dd>NS</dd>
+    <dt>PTR</dt>
+    <dd>PTR</dd>
+    <dt>SOA</dt>
+    <dd>SOA</dd>
+    <dt>SPF</dt>
+    <dd>SPF</dd>
+    <dt>SRV</dt>
+    <dd>SRV</dd>
+    <dt>TXT</dt>
+    <dd>TXT</dd>
+</dl>
 {{% /choosable %}}
 
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>A</dt>
+    <dd>A</dd>
+    <dt>AAAA</dt>
+    <dd>AAAA</dd>
+    <dt>CNAME</dt>
+    <dd>CNAME</dd>
+    <dt>CAA</dt>
+    <dd>CAA</dd>
+    <dt>MX</dt>
+    <dd>MX</dd>
+    <dt>NAPTR</dt>
+    <dd>NAPTR</dd>
+    <dt>NS</dt>
+    <dd>NS</dd>
+    <dt>PTR</dt>
+    <dd>PTR</dd>
+    <dt>SOA</dt>
+    <dd>SOA</dd>
+    <dt>SPF</dt>
+    <dd>SPF</dd>
+    <dt>SRV</dt>
+    <dd>SRV</dd>
+    <dt>TXT</dt>
+    <dd>TXT</dd>
+</dl>
+{{% /choosable %}}
 
-
+<h4 id="recordweightedroutingpolicy">Record<wbr>Weighted<wbr>Routing<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2806,16 +2717,14 @@ Alias record documented below.
             title="Required">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2824,16 +2733,14 @@ Alias record documented below.
             title="Required">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2842,16 +2749,14 @@ Alias record documented below.
             title="Required">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2860,20 +2765,28 @@ Alias record documented below.
             title="Required">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Route53 Records can be imported using ID of the record, which is the zone identifier, record name, and record type, separated by underscores (`_`). e.g.
 
+```sh
+ $ pulumi import aws:route53/record:Record myrecord Z4KAPRWWNC7JR_dev.example.com_NS
+```
 
+ If the record also contains a delegated set identifier, it can be appended
 
+```sh
+ $ pulumi import aws:route53/record:Record myrecord Z4KAPRWWNC7JR_dev.example.com_NS_dev
+```
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the CommonLicenseManageBigIq resource of the f5 BIG-IP packa
 
 `f5bigip.CommonLicenseManageBigIq` This Resource is used for BIGIP/Provider License Management from BIGIQ
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -66,6 +67,24 @@ class MyStack : Stack
             MacAddress = "FA:16:3E:1B:6D:32",
             Hypervisor = "azure",
         });
+        // MANAGED Purchased Pool
+        var testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq2 = new F5BigIP.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq2", new F5BigIP.CommonLicenseManageBigIqArgs
+        {
+            BigiqAddress = @var.Bigiq,
+            BigiqUser = @var.Bigiq_un,
+            BigiqPassword = @var.Bigiq_pw,
+            LicensePoolname = "purchased_pool_name",
+            AssignmentType = "MANAGED",
+        });
+        // UNMANAGED Purchased Pool
+        var testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq3 = new F5BigIP.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq3", new F5BigIP.CommonLicenseManageBigIqArgs
+        {
+            BigiqAddress = @var.Bigiq,
+            BigiqUser = @var.Bigiq_un,
+            BigiqPassword = @var.Bigiq_pw,
+            LicensePoolname = "purchased_pool_name",
+            AssignmentType = "UNMANAGED",
+        });
     }
 
 }
@@ -78,16 +97,16 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip"
+	"github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := f5bigip.NewCommonLicenseManageBigIq(ctx, "testExampleCommonLicenseManageBigIq", &f5bigip.CommonLicenseManageBigIqArgs{
-			BigiqAddress:    pulumi.String(_var.Bigiq),
-			BigiqUser:       pulumi.String(_var.Bigiq_un),
-			BigiqPassword:   pulumi.String(_var.Bigiq_pw),
+			BigiqAddress:    pulumi.Any(_var.Bigiq),
+			BigiqUser:       pulumi.Any(_var.Bigiq_un),
+			BigiqPassword:   pulumi.Any(_var.Bigiq_pw),
 			LicensePoolname: pulumi.String("regkeypool_name"),
 			AssignmentType:  pulumi.String("MANAGED"),
 		})
@@ -95,9 +114,9 @@ func main() {
 			return err
 		}
 		_, err = f5bigip.NewCommonLicenseManageBigIq(ctx, "testExampleIndex_commonLicenseManageBigIqCommonLicenseManageBigIq", &f5bigip.CommonLicenseManageBigIqArgs{
-			BigiqAddress:    pulumi.String(_var.Bigiq),
-			BigiqUser:       pulumi.String(_var.Bigiq_un),
-			BigiqPassword:   pulumi.String(_var.Bigiq_pw),
+			BigiqAddress:    pulumi.Any(_var.Bigiq),
+			BigiqUser:       pulumi.Any(_var.Bigiq_un),
+			BigiqPassword:   pulumi.Any(_var.Bigiq_pw),
 			LicensePoolname: pulumi.String("regkeypool_name"),
 			AssignmentType:  pulumi.String("UNMANAGED"),
 		})
@@ -105,9 +124,9 @@ func main() {
 			return err
 		}
 		_, err = f5bigip.NewCommonLicenseManageBigIq(ctx, "testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq", &f5bigip.CommonLicenseManageBigIqArgs{
-			BigiqAddress:    pulumi.String(_var.Bigiq),
-			BigiqUser:       pulumi.String(_var.Bigiq_un),
-			BigiqPassword:   pulumi.String(_var.Bigiq_pw),
+			BigiqAddress:    pulumi.Any(_var.Bigiq),
+			BigiqUser:       pulumi.Any(_var.Bigiq_un),
+			BigiqPassword:   pulumi.Any(_var.Bigiq_pw),
 			LicensePoolname: pulumi.String("utilitypool_name"),
 			AssignmentType:  pulumi.String("UNMANAGED"),
 			UnitOfMeasure:   pulumi.String("yearly"),
@@ -124,6 +143,26 @@ func main() {
 			AssignmentType:  pulumi.String("UNREACHABLE"),
 			MacAddress:      pulumi.String("FA:16:3E:1B:6D:32"),
 			Hypervisor:      pulumi.String("azure"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = f5bigip.NewCommonLicenseManageBigIq(ctx, "testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq2", &f5bigip.CommonLicenseManageBigIqArgs{
+			BigiqAddress:    pulumi.Any(_var.Bigiq),
+			BigiqUser:       pulumi.Any(_var.Bigiq_un),
+			BigiqPassword:   pulumi.Any(_var.Bigiq_pw),
+			LicensePoolname: pulumi.String("purchased_pool_name"),
+			AssignmentType:  pulumi.String("MANAGED"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = f5bigip.NewCommonLicenseManageBigIq(ctx, "testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq3", &f5bigip.CommonLicenseManageBigIqArgs{
+			BigiqAddress:    pulumi.Any(_var.Bigiq),
+			BigiqUser:       pulumi.Any(_var.Bigiq_un),
+			BigiqPassword:   pulumi.Any(_var.Bigiq_pw),
+			LicensePoolname: pulumi.String("purchased_pool_name"),
+			AssignmentType:  pulumi.String("UNMANAGED"),
 		})
 		if err != nil {
 			return err
@@ -172,6 +211,20 @@ test_example_f5bigip_index_common_license_manage_big_iq_common_license_manage_bi
     assignment_type="UNREACHABLE",
     mac_address="FA:16:3E:1B:6D:32",
     hypervisor="azure")
+# MANAGED Purchased Pool
+test_example_f5bigip_index_common_license_manage_big_iq_common_license_manage_big_iq2 = f5bigip.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq2",
+    bigiq_address=var["bigiq"],
+    bigiq_user=var["bigiq_un"],
+    bigiq_password=var["bigiq_pw"],
+    license_poolname="purchased_pool_name",
+    assignment_type="MANAGED")
+# UNMANAGED Purchased Pool
+test_example_f5bigip_index_common_license_manage_big_iq_common_license_manage_big_iq3 = f5bigip.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq3",
+    bigiq_address=var["bigiq"],
+    bigiq_user=var["bigiq_un"],
+    bigiq_password=var["bigiq_pw"],
+    license_poolname="purchased_pool_name",
+    assignment_type="UNMANAGED")
 ```
 
 {{% /example %}}
@@ -218,6 +271,22 @@ const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq1 
     macAddress: "FA:16:3E:1B:6D:32",
     hypervisor: "azure",
 });
+// MANAGED Purchased Pool
+const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq2 = new f5bigip.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq2", {
+    bigiqAddress: _var.bigiq,
+    bigiqUser: _var.bigiq_un,
+    bigiqPassword: _var.bigiq_pw,
+    licensePoolname: "purchased_pool_name",
+    assignmentType: "MANAGED",
+});
+// UNMANAGED Purchased Pool
+const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq3 = new f5bigip.CommonLicenseManageBigIq("testExampleF5bigipIndex/commonLicenseManageBigIqCommonLicenseManageBigIq3", {
+    bigiqAddress: _var.bigiq,
+    bigiqUser: _var.bigiq_un,
+    bigiqPassword: _var.bigiq_pw,
+    licensePoolname: "purchased_pool_name",
+    assignmentType: "UNMANAGED",
+});
 ```
 
 {{% /example %}}
@@ -230,19 +299,19 @@ const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq1 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/#CommonLicenseManageBigIq">CommonLicenseManageBigIq</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/#CommonLicenseManageBigIqArgs">CommonLicenseManageBigIqArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/#CommonLicenseManageBigIq">CommonLicenseManageBigIq</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/#CommonLicenseManageBigIqArgs">CommonLicenseManageBigIqArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/#pulumi_f5bigip.CommonLicenseManageBigIq">CommonLicenseManageBigIq</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>assignment_type=None<span class="p">, </span>bigiq_address=None<span class="p">, </span>bigiq_login_ref=None<span class="p">, </span>bigiq_password=None<span class="p">, </span>bigiq_port=None<span class="p">, </span>bigiq_token_auth=None<span class="p">, </span>bigiq_user=None<span class="p">, </span>device_license_status=None<span class="p">, </span>hypervisor=None<span class="p">, </span>key=None<span class="p">, </span>license_poolname=None<span class="p">, </span>mac_address=None<span class="p">, </span>skukeyword1=None<span class="p">, </span>skukeyword2=None<span class="p">, </span>tenant=None<span class="p">, </span>unit_of_measure=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_f5bigip/#pulumi_f5bigip.CommonLicenseManageBigIq">CommonLicenseManageBigIq</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_login_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_token_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bigiq_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_license_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_poolname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skukeyword1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skukeyword2</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_of_measure</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/?tab=doc#CommonLicenseManageBigIq">NewCommonLicenseManageBigIq</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/?tab=doc#CommonLicenseManageBigIqArgs">CommonLicenseManageBigIqArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/?tab=doc#CommonLicenseManageBigIq">CommonLicenseManageBigIq</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/?tab=doc#CommonLicenseManageBigIq">NewCommonLicenseManageBigIq</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/?tab=doc#CommonLicenseManageBigIqArgs">CommonLicenseManageBigIqArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/?tab=doc#CommonLicenseManageBigIq">CommonLicenseManageBigIq</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.CommonLicenseManageBigIq.html">CommonLicenseManageBigIq</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.CommonLicenseManageBigIqArgs.html">CommonLicenseManageBigIqArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.CommonLicenseManageBigIq.html">CommonLicenseManageBigIq</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.CommonLicenseManageBigIqArgs.html">CommonLicenseManageBigIqArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -253,7 +322,7 @@ const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq1 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -322,7 +391,7 @@ const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq1 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -361,7 +430,7 @@ const testExampleF5bigipIndex_commonLicenseManageBigIqCommonLicenseManageBigIq1 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -402,7 +471,6 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -410,181 +478,164 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
             title="Required">
         <span id="assignmenttype_csharp">
 <a href="#assignmenttype_csharp" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bigiqaddress_csharp">
 <a href="#bigiqaddress_csharp" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager IP Address, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bigiqpassword_csharp">
 <a href="#bigiqpassword_csharp" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager password.  variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bigiquser_csharp">
 <a href="#bigiquser_csharp" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager username, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="licensepoolname_csharp">
 <a href="#licensepoolname_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Poolname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name given to the license pool. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigiqloginref_csharp">
 <a href="#bigiqloginref_csharp" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Login<wbr>Ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ Login reference for token authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigiqport_csharp">
 <a href="#bigiqport_csharp" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigiqtokenauth_csharp">
 <a href="#bigiqtokenauth_csharp" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Token<wbr>Auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}type `bool`, if set to `true` enables Token based Authentication,default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="devicelicensestatus_csharp">
 <a href="#devicelicensestatus_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>License<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of Licence Assignment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hypervisor_csharp">
 <a href="#hypervisor_csharp" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the BIG-IP. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skukeyword1_csharp">
 <a href="#skukeyword1_csharp" style="color: inherit; text-decoration: inherit;">Skukeyword1</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skukeyword2_csharp">
 <a href="#skukeyword2_csharp" style="color: inherit; text-decoration: inherit;">Skukeyword2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tenant_csharp">
 <a href="#tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unitofmeasure_csharp">
 <a href="#unitofmeasure_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Of<wbr>Measure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -593,181 +644,164 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
             title="Required">
         <span id="assignmenttype_go">
 <a href="#assignmenttype_go" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bigiqaddress_go">
 <a href="#bigiqaddress_go" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager IP Address, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bigiqpassword_go">
 <a href="#bigiqpassword_go" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager password.  variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bigiquser_go">
 <a href="#bigiquser_go" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager username, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="licensepoolname_go">
 <a href="#licensepoolname_go" style="color: inherit; text-decoration: inherit;">License<wbr>Poolname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name given to the license pool. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigiqloginref_go">
 <a href="#bigiqloginref_go" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Login<wbr>Ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ Login reference for token authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigiqport_go">
 <a href="#bigiqport_go" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigiqtokenauth_go">
 <a href="#bigiqtokenauth_go" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Token<wbr>Auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}type `bool`, if set to `true` enables Token based Authentication,default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="devicelicensestatus_go">
 <a href="#devicelicensestatus_go" style="color: inherit; text-decoration: inherit;">Device<wbr>License<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of Licence Assignment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hypervisor_go">
 <a href="#hypervisor_go" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the BIG-IP. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skukeyword1_go">
 <a href="#skukeyword1_go" style="color: inherit; text-decoration: inherit;">Skukeyword1</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skukeyword2_go">
 <a href="#skukeyword2_go" style="color: inherit; text-decoration: inherit;">Skukeyword2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tenant_go">
 <a href="#tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unitofmeasure_go">
 <a href="#unitofmeasure_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Of<wbr>Measure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -776,181 +810,164 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
             title="Required">
         <span id="assignmenttype_nodejs">
 <a href="#assignmenttype_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bigiqaddress_nodejs">
 <a href="#bigiqaddress_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager IP Address, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bigiqpassword_nodejs">
 <a href="#bigiqpassword_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager password.  variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bigiquser_nodejs">
 <a href="#bigiquser_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager username, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="licensepoolname_nodejs">
 <a href="#licensepoolname_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Poolname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name given to the license pool. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigiqloginref_nodejs">
 <a href="#bigiqloginref_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Login<wbr>Ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ Login reference for token authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigiqport_nodejs">
 <a href="#bigiqport_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigiqtokenauth_nodejs">
 <a href="#bigiqtokenauth_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Token<wbr>Auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}type `bool`, if set to `true` enables Token based Authentication,default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="devicelicensestatus_nodejs">
 <a href="#devicelicensestatus_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>License<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of Licence Assignment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hypervisor_nodejs">
 <a href="#hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the BIG-IP. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skukeyword1_nodejs">
 <a href="#skukeyword1_nodejs" style="color: inherit; text-decoration: inherit;">skukeyword1</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skukeyword2_nodejs">
 <a href="#skukeyword2_nodejs" style="color: inherit; text-decoration: inherit;">skukeyword2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tenant_nodejs">
 <a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unitofmeasure_nodejs">
 <a href="#unitofmeasure_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Of<wbr>Measure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -959,190 +976,169 @@ The CommonLicenseManageBigIq resource accepts the following [input]({{< relref "
             title="Required">
         <span id="assignment_type_python">
 <a href="#assignment_type_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bigiq_address_python">
 <a href="#bigiq_address_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager IP Address, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bigiq_password_python">
 <a href="#bigiq_password_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager password.  variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="bigiq_user_python">
 <a href="#bigiq_user_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>user</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager username, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="license_poolname_python">
 <a href="#license_poolname_python" style="color: inherit; text-decoration: inherit;">license_<wbr>poolname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name given to the license pool. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigiq_login_ref_python">
 <a href="#bigiq_login_ref_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>login_<wbr>ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ Login reference for token authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigiq_port_python">
 <a href="#bigiq_port_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigiq_token_auth_python">
 <a href="#bigiq_token_auth_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>token_<wbr>auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}type `bool`, if set to `true` enables Token based Authentication,default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="device_license_status_python">
 <a href="#device_license_status_python" style="color: inherit; text-decoration: inherit;">device_<wbr>license_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of Licence Assignment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hypervisor_python">
 <a href="#hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MAC address of the BIG-IP. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skukeyword1_python">
 <a href="#skukeyword1_python" style="color: inherit; text-decoration: inherit;">skukeyword1</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skukeyword2_python">
 <a href="#skukeyword2_python" style="color: inherit; text-decoration: inherit;">skukeyword2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tenant_python">
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unit_of_measure_python">
 <a href="#unit_of_measure_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>of_<wbr>measure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the CommonLicenseManageBigIq resource produces the following output properties:
-
 
 
 
@@ -1153,15 +1149,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1170,15 +1164,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1187,15 +1179,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1204,18 +1194,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1225,19 +1210,20 @@ Get an existing CommonLicenseManageBigIq resource's state with the given name, I
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/#CommonLicenseManageBigIqState">CommonLicenseManageBigIqState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/#CommonLicenseManageBigIq">CommonLicenseManageBigIq</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/#CommonLicenseManageBigIqState">CommonLicenseManageBigIqState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/#CommonLicenseManageBigIq">CommonLicenseManageBigIq</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>assignment_type=None<span class="p">, </span>bigiq_address=None<span class="p">, </span>bigiq_login_ref=None<span class="p">, </span>bigiq_password=None<span class="p">, </span>bigiq_port=None<span class="p">, </span>bigiq_token_auth=None<span class="p">, </span>bigiq_user=None<span class="p">, </span>device_license_status=None<span class="p">, </span>hypervisor=None<span class="p">, </span>key=None<span class="p">, </span>license_poolname=None<span class="p">, </span>mac_address=None<span class="p">, </span>skukeyword1=None<span class="p">, </span>skukeyword2=None<span class="p">, </span>tenant=None<span class="p">, </span>unit_of_measure=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assignment_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_login_ref</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bigiq_token_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bigiq_user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_license_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hypervisor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_poolname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mac_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skukeyword1</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skukeyword2</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_of_measure</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CommonLicenseManageBigIq</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCommonLicenseManageBigIq<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/?tab=doc#CommonLicenseManageBigIqState">CommonLicenseManageBigIqState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/?tab=doc#CommonLicenseManageBigIq">CommonLicenseManageBigIq</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCommonLicenseManageBigIq<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/?tab=doc#CommonLicenseManageBigIqState">CommonLicenseManageBigIqState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/?tab=doc#CommonLicenseManageBigIq">CommonLicenseManageBigIq</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.CommonLicenseManageBigIq.html">CommonLicenseManageBigIq</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP..CommonLicenseManageBigIqState.html">CommonLicenseManageBigIqState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.CommonLicenseManageBigIq.html">CommonLicenseManageBigIq</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP..CommonLicenseManageBigIqState.html">CommonLicenseManageBigIqState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1339,7 +1325,6 @@ Get an existing CommonLicenseManageBigIq resource's state with the given name, I
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1347,181 +1332,164 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_assignmenttype_csharp">
 <a href="#state_assignmenttype_csharp" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqaddress_csharp">
 <a href="#state_bigiqaddress_csharp" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager IP Address, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqloginref_csharp">
 <a href="#state_bigiqloginref_csharp" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Login<wbr>Ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ Login reference for token authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqpassword_csharp">
 <a href="#state_bigiqpassword_csharp" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager password.  variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqport_csharp">
 <a href="#state_bigiqport_csharp" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqtokenauth_csharp">
 <a href="#state_bigiqtokenauth_csharp" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Token<wbr>Auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}type `bool`, if set to `true` enables Token based Authentication,default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiquser_csharp">
 <a href="#state_bigiquser_csharp" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager username, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_devicelicensestatus_csharp">
 <a href="#state_devicelicensestatus_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>License<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of Licence Assignment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hypervisor_csharp">
 <a href="#state_hypervisor_csharp" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_csharp">
 <a href="#state_key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_licensepoolname_csharp">
 <a href="#state_licensepoolname_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Poolname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name given to the license pool. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_macaddress_csharp">
 <a href="#state_macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the BIG-IP. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_skukeyword1_csharp">
 <a href="#state_skukeyword1_csharp" style="color: inherit; text-decoration: inherit;">Skukeyword1</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_skukeyword2_csharp">
 <a href="#state_skukeyword2_csharp" style="color: inherit; text-decoration: inherit;">Skukeyword2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tenant_csharp">
 <a href="#state_tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_unitofmeasure_csharp">
 <a href="#state_unitofmeasure_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Of<wbr>Measure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1530,181 +1498,164 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_assignmenttype_go">
 <a href="#state_assignmenttype_go" style="color: inherit; text-decoration: inherit;">Assignment<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqaddress_go">
 <a href="#state_bigiqaddress_go" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager IP Address, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqloginref_go">
 <a href="#state_bigiqloginref_go" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Login<wbr>Ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ Login reference for token authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqpassword_go">
 <a href="#state_bigiqpassword_go" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager password.  variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqport_go">
 <a href="#state_bigiqport_go" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqtokenauth_go">
 <a href="#state_bigiqtokenauth_go" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>Token<wbr>Auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}type `bool`, if set to `true` enables Token based Authentication,default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiquser_go">
 <a href="#state_bigiquser_go" style="color: inherit; text-decoration: inherit;">Bigiq<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager username, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_devicelicensestatus_go">
 <a href="#state_devicelicensestatus_go" style="color: inherit; text-decoration: inherit;">Device<wbr>License<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of Licence Assignment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hypervisor_go">
 <a href="#state_hypervisor_go" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_go">
 <a href="#state_key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_licensepoolname_go">
 <a href="#state_licensepoolname_go" style="color: inherit; text-decoration: inherit;">License<wbr>Poolname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name given to the license pool. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_macaddress_go">
 <a href="#state_macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the BIG-IP. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_skukeyword1_go">
 <a href="#state_skukeyword1_go" style="color: inherit; text-decoration: inherit;">Skukeyword1</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_skukeyword2_go">
 <a href="#state_skukeyword2_go" style="color: inherit; text-decoration: inherit;">Skukeyword2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tenant_go">
 <a href="#state_tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_unitofmeasure_go">
 <a href="#state_unitofmeasure_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Of<wbr>Measure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1713,181 +1664,164 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_assignmenttype_nodejs">
 <a href="#state_assignmenttype_nodejs" style="color: inherit; text-decoration: inherit;">assignment<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqaddress_nodejs">
 <a href="#state_bigiqaddress_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager IP Address, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqloginref_nodejs">
 <a href="#state_bigiqloginref_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Login<wbr>Ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ Login reference for token authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqpassword_nodejs">
 <a href="#state_bigiqpassword_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager password.  variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqport_nodejs">
 <a href="#state_bigiqport_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiqtokenauth_nodejs">
 <a href="#state_bigiqtokenauth_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>Token<wbr>Auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}type `bool`, if set to `true` enables Token based Authentication,default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiquser_nodejs">
 <a href="#state_bigiquser_nodejs" style="color: inherit; text-decoration: inherit;">bigiq<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager username, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_devicelicensestatus_nodejs">
 <a href="#state_devicelicensestatus_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>License<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of Licence Assignment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hypervisor_nodejs">
 <a href="#state_hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_nodejs">
 <a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_licensepoolname_nodejs">
 <a href="#state_licensepoolname_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Poolname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name given to the license pool. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_macaddress_nodejs">
 <a href="#state_macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address of the BIG-IP. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_skukeyword1_nodejs">
 <a href="#state_skukeyword1_nodejs" style="color: inherit; text-decoration: inherit;">skukeyword1</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_skukeyword2_nodejs">
 <a href="#state_skukeyword2_nodejs" style="color: inherit; text-decoration: inherit;">skukeyword2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tenant_nodejs">
 <a href="#state_tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_unitofmeasure_nodejs">
 <a href="#state_unitofmeasure_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Of<wbr>Measure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1896,184 +1830,164 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_assignment_type_python">
 <a href="#state_assignment_type_python" style="color: inherit; text-decoration: inherit;">assignment_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of assignment, which is determined by whether the BIG-IP is unreachable, unmanaged, or managed by BIG-IQ. Possible values: “UNREACHABLE”, “UNMANAGED”, or “MANAGED”.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiq_address_python">
 <a href="#state_bigiq_address_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager IP Address, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiq_login_ref_python">
 <a href="#state_bigiq_login_ref_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>login_<wbr>ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ Login reference for token authentication
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiq_password_python">
 <a href="#state_bigiq_password_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager password.  variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiq_port_python">
 <a href="#state_bigiq_port_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}type `int`, BIGIQ License Manager Port number, specify if port is other than `443`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiq_token_auth_python">
 <a href="#state_bigiq_token_auth_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>token_<wbr>auth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}type `bool`, if set to `true` enables Token based Authentication,default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigiq_user_python">
 <a href="#state_bigiq_user_python" style="color: inherit; text-decoration: inherit;">bigiq_<wbr>user</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BIGIQ License Manager username, variable type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_device_license_status_python">
 <a href="#state_device_license_status_python" style="color: inherit; text-decoration: inherit;">device_<wbr>license_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of Licence Assignment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hypervisor_python">
 <a href="#state_hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the platform running the BIG-IP VE. Possible values: “aws”, “azure”, “gce”, “vmware”, “hyperv”, “kvm”, or “xen”. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_python">
 <a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}License Assignment is done with specified `key`, supported only with RegKeypool type License assignement. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_license_poolname_python">
 <a href="#state_license_poolname_python" style="color: inherit; text-decoration: inherit;">license_<wbr>poolname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name given to the license pool. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mac_address_python">
 <a href="#state_mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MAC address of the BIG-IP. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_skukeyword1_python">
 <a href="#state_skukeyword1_python" style="color: inherit; text-decoration: inherit;">skukeyword1</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_skukeyword2_python">
 <a href="#state_skukeyword2_python" style="color: inherit; text-decoration: inherit;">skukeyword2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional offering name. type `string`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tenant_python">
 <a href="#state_tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For an unreachable BIG-IP, you can provide an optional description for the assignment in this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_unit_of_measure_python">
 <a href="#state_unit_of_measure_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>of_<wbr>measure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The units used to measure billing. For example, “hourly” or “daily”. Type `string`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2088,6 +2002,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 </dl>
 

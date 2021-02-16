@@ -11,6 +11,7 @@ meta_desc: "Explore the Record resource of the NS1 package, including examples, 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a NS1 Record resource. This can be used to create, modify, and delete records.
+
 ## NS1 Documentation
 
 [Record Api Doc](https://ns1.com/api#records)
@@ -22,19 +23,19 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/ns1/#Record">Record</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/ns1/#RecordArgs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/ns1/#Record">Record</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/ns1/#RecordArgs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.Record">Record</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>answers=None<span class="p">, </span>domain=None<span class="p">, </span>filters=None<span class="p">, </span>link=None<span class="p">, </span>meta=None<span class="p">, </span>regions=None<span class="p">, </span>short_answers=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>use_client_subnet=None<span class="p">, </span>zone=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_ns1/#pulumi_ns1.Record">Record</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordFilterArgs]]</span> = None<span class="p">, </span><span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordRegionArgs]]</span> = None<span class="p">, </span><span class="nx">short_answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_client_subnet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#Record">NewRecord</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#RecordArgs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#Record">Record</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#Record">NewRecord</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#RecordArgs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#Record">Record</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Record.html">Record</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.RecordArgs.html">RecordArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Record.html">Record</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.RecordArgs.html">RecordArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -45,7 +46,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -114,7 +115,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -153,7 +154,7 @@ Provides a NS1 Record resource. This can be used to create, modify, and delete r
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -194,7 +195,6 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -202,88 +202,81 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="answers_csharp">
 <a href="#answers_csharp" style="color: inherit; text-decoration: inherit;">Answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordanswer">List&lt;Record<wbr>Answer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfilter">List&lt;Record<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="link_csharp">
 <a href="#link_csharp" style="color: inherit; text-decoration: inherit;">Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regions_csharp">
 <a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordregion">List&lt;Record<wbr>Region<wbr>Args&gt;</a></span>
     </dt>
@@ -292,52 +285,40 @@ just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="shortanswers_csharp">
 <a href="#shortanswers_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The records' time to live.
+    <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useclientsubnet_csharp">
 <a href="#useclientsubnet_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Client<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EDNS client subnet data when
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -346,88 +327,81 @@ is documented below.
             title="Required">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="answers_go">
 <a href="#answers_go" style="color: inherit; text-decoration: inherit;">Answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordanswer">[]Record<wbr>Answer</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfilter">[]Record<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="link_go">
 <a href="#link_go" style="color: inherit; text-decoration: inherit;">Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regions_go">
 <a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordregion">[]Record<wbr>Region</a></span>
     </dt>
@@ -436,52 +410,40 @@ just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="shortanswers_go">
 <a href="#shortanswers_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The records' time to live.
+    <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useclientsubnet_go">
 <a href="#useclientsubnet_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Client<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EDNS client subnet data when
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -490,88 +452,81 @@ is documented below.
             title="Required">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="answers_nodejs">
 <a href="#answers_nodejs" style="color: inherit; text-decoration: inherit;">answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordanswer">Record<wbr>Answer[]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfilter">Record<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="link_nodejs">
 <a href="#link_nodejs" style="color: inherit; text-decoration: inherit;">link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regions_nodejs">
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordregion">Record<wbr>Region[]</a></span>
     </dt>
@@ -580,52 +535,40 @@ just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="shortanswers_nodejs">
 <a href="#shortanswers_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The records' time to live.
+    <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useclientsubnet_nodejs">
 <a href="#useclientsubnet_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Client<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use EDNS client subnet data when
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -634,151 +577,128 @@ is documented below.
             title="Required">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="answers_python">
 <a href="#answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordanswer">List[Record<wbr>Answer]</a></span>
+        <span class="property-type"><a href="#recordanswer">Sequence[Record<wbr>Answer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfilter">List[Record<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#recordfilter">Sequence[Record<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="link_python">
 <a href="#link_python" style="color: inherit; text-decoration: inherit;">link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regions_python">
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordregion">List[Record<wbr>Region]</a></span>
+        <span class="property-type"><a href="#recordregion">Sequence[Record<wbr>Region<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more "regions" for the record. These are really
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="short_answers_python">
 <a href="#short_answers_python" style="color: inherit; text-decoration: inherit;">short_<wbr>answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The records' time to live.
+    <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_client_subnet_python">
 <a href="#use_client_subnet_python" style="color: inherit; text-decoration: inherit;">use_<wbr>client_<wbr>subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EDNS client subnet data when
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Record resource produces the following output properties:
-
 
 
 
@@ -789,15 +709,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -806,15 +724,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -823,15 +739,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -840,18 +754,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -861,19 +770,20 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/ns1/#RecordState">RecordState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/ns1/#Record">Record</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/ns1/#RecordState">RecordState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/ns1/#Record">Record</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>answers=None<span class="p">, </span>domain=None<span class="p">, </span>filters=None<span class="p">, </span>link=None<span class="p">, </span>meta=None<span class="p">, </span>regions=None<span class="p">, </span>short_answers=None<span class="p">, </span>ttl=None<span class="p">, </span>type=None<span class="p">, </span>use_client_subnet=None<span class="p">, </span>zone=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordAnswerArgs]]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordFilterArgs]]</span> = None<span class="p">, </span><span class="nx">link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">meta</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">regions</span><span class="p">:</span> <span class="nx">Optional[Sequence[RecordRegionArgs]]</span> = None<span class="p">, </span><span class="nx">short_answers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_client_subnet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Record</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRecord<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#RecordState">RecordState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#Record">Record</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRecord<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#RecordState">RecordState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#Record">Record</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Record.html">Record</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1..RecordState.html">RecordState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Record.html">Record</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1..RecordState.html">RecordState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -975,7 +885,6 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -983,65 +892,60 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_answers_csharp">
 <a href="#state_answers_csharp" style="color: inherit; text-decoration: inherit;">Answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordanswer">List&lt;Record<wbr>Answer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filters_csharp">
 <a href="#state_filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfilter">List&lt;Record<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_link_csharp">
 <a href="#state_link_csharp" style="color: inherit; text-decoration: inherit;">Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_meta_csharp">
 <a href="#state_meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regions_csharp">
 <a href="#state_regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordregion">List&lt;Record<wbr>Region<wbr>Args&gt;</a></span>
     </dt>
@@ -1050,75 +954,61 @@ just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_shortanswers_csharp">
 <a href="#state_shortanswers_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The records' time to live.
+    <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_useclientsubnet_csharp">
 <a href="#state_useclientsubnet_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Client<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EDNS client subnet data when
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1127,65 +1017,60 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
             title="Optional">
         <span id="state_answers_go">
 <a href="#state_answers_go" style="color: inherit; text-decoration: inherit;">Answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordanswer">[]Record<wbr>Answer</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filters_go">
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfilter">[]Record<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_link_go">
 <a href="#state_link_go" style="color: inherit; text-decoration: inherit;">Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_meta_go">
 <a href="#state_meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regions_go">
 <a href="#state_regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordregion">[]Record<wbr>Region</a></span>
     </dt>
@@ -1194,75 +1079,61 @@ just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_shortanswers_go">
 <a href="#state_shortanswers_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The records' time to live.
+    <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_useclientsubnet_go">
 <a href="#state_useclientsubnet_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Client<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EDNS client subnet data when
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
 <a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1271,65 +1142,60 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
             title="Optional">
         <span id="state_answers_nodejs">
 <a href="#state_answers_nodejs" style="color: inherit; text-decoration: inherit;">answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordanswer">Record<wbr>Answer[]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filters_nodejs">
 <a href="#state_filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordfilter">Record<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_link_nodejs">
 <a href="#state_link_nodejs" style="color: inherit; text-decoration: inherit;">link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_meta_nodejs">
 <a href="#state_meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regions_nodejs">
 <a href="#state_regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recordregion">Record<wbr>Region[]</a></span>
     </dt>
@@ -1338,75 +1204,61 @@ just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_shortanswers_nodejs">
 <a href="#state_shortanswers_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The records' time to live.
+    <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_useclientsubnet_nodejs">
 <a href="#state_useclientsubnet_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Client<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use EDNS client subnet data when
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1415,139 +1267,121 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
             title="Optional">
         <span id="state_answers_python">
 <a href="#state_answers_python" style="color: inherit; text-decoration: inherit;">answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordanswer">List[Record<wbr>Answer]</a></span>
+        <span class="property-type"><a href="#recordanswer">Sequence[Record<wbr>Answer<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 answers for the records' specified type.
 Answers are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The records' domain. Cannot have leading or trailing
 dots - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filters_python">
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordfilter">List[Record<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#recordfilter">Sequence[Record<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more NS1 filters for the record(order matters).
 Filters are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_link_python">
 <a href="#state_link_python" style="color: inherit; text-decoration: inherit;">link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target record to link to. This means this record is a
 'linked' record, and it inherits all properties from its target.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_meta_python">
 <a href="#state_meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regions_python">
 <a href="#state_regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recordregion">List[Record<wbr>Region]</a></span>
+        <span class="property-type"><a href="#recordregion">Sequence[Record<wbr>Region<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more "regions" for the record. These are really
 just groupings based on metadata, and are called "Answer Groups" in the NS1 UI,
 but remain `regions` here for legacy reasons. Regions are
 documented below. Please note the ordering requirement!
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_short_answers_python">
 <a href="#state_short_answers_python" style="color: inherit; text-decoration: inherit;">short_<wbr>answers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release.
-It is suggested to migrate to a regular &#34;answers&#34; block. Using Terraform 0.12&#43;, a similar convenience to &#34;short_answers&#34; can be achieved with dynamic blocks:
-  dynamic &#34;answers&#34; {
-    for_each = [&#34;4.4.4.4&#34;, &#34;5.5.5.5&#34;]
-    content {
-      answer  = answers.value
-    }
-  }{{% /md %}}</p></dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}short_answers will be deprecated in a future release. It is suggested to migrate to a regular &#34;answers&#34; block.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The records' time to live.
+    <dd>{{% md %}}The records' time to live (in seconds).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The records' RR type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_use_client_subnet_python">
 <a href="#state_use_client_subnet_python" style="color: inherit; text-decoration: inherit;">use_<wbr>client_<wbr>subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EDNS client subnet data when
 available(in filter chain).
 * ` meta` - (Optional) meta is supported at the `record` level. Meta
 is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone the record belongs to. Cannot have leading or
 trailing dots (".") - see the example above and `FQDN formatting` below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1556,11 +1390,8 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="recordanswer">Record<wbr>Answer</h4>
@@ -1571,11 +1402,10 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#RecordAnswerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#RecordAnswerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Inputs.RecordAnswerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Outputs.RecordAnswer.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1585,30 +1415,28 @@ trailing dots (".") - see the example above and `FQDN formatting` below.
             title="Optional">
         <span id="answer_csharp">
 <a href="#answer_csharp" style="color: inherit; text-decoration: inherit;">Answer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Space delimited string of RDATA fields dependent on the record type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region (Answer Group really) that this answer
 belongs to. This should be one of the names specified in `regions`. Only a
@@ -1618,10 +1446,8 @@ approach.
 * ` meta` - (Optional) meta is supported at the `answer` level. Meta
 is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1630,30 +1456,28 @@ is documented below.
             title="Optional">
         <span id="answer_go">
 <a href="#answer_go" style="color: inherit; text-decoration: inherit;">Answer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Space delimited string of RDATA fields dependent on the record type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region (Answer Group really) that this answer
 belongs to. This should be one of the names specified in `regions`. Only a
@@ -1663,10 +1487,8 @@ approach.
 * ` meta` - (Optional) meta is supported at the `answer` level. Meta
 is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1675,30 +1497,28 @@ is documented below.
             title="Optional">
         <span id="answer_nodejs">
 <a href="#answer_nodejs" style="color: inherit; text-decoration: inherit;">answer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Space delimited string of RDATA fields dependent on the record type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region (Answer Group really) that this answer
 belongs to. This should be one of the names specified in `regions`. Only a
@@ -1708,10 +1528,8 @@ approach.
 * ` meta` - (Optional) meta is supported at the `answer` level. Meta
 is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1720,30 +1538,28 @@ is documented below.
             title="Optional">
         <span id="answer_python">
 <a href="#answer_python" style="color: inherit; text-decoration: inherit;">answer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Space delimited string of RDATA fields dependent on the record type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region (Answer Group really) that this answer
 belongs to. This should be one of the names specified in `regions`. Only a
@@ -1753,13 +1569,8 @@ approach.
 * ` meta` - (Optional) meta is supported at the `answer` level. Meta
 is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="recordfilter">Record<wbr>Filter</h4>
 {{% choosable language nodejs %}}
@@ -1769,11 +1580,10 @@ is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#RecordFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#RecordFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Inputs.RecordFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Outputs.RecordFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1783,40 +1593,36 @@ is documented below.
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of filter.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The filters' configuration. Simple key/value pairs
 determined by the filter type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the filter is applied in the
 filter chain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1825,40 +1631,36 @@ filter chain.
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of filter.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The filters' configuration. Simple key/value pairs
 determined by the filter type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the filter is applied in the
 filter chain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1867,40 +1669,36 @@ filter chain.
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of filter.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The filters' configuration. Simple key/value pairs
 determined by the filter type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether the filter is applied in the
 filter chain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1909,43 +1707,36 @@ filter chain.
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of filter.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The filters' configuration. Simple key/value pairs
 determined by the filter type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the filter is applied in the
 filter chain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="recordregion">Record<wbr>Region</h4>
 {{% choosable language nodejs %}}
@@ -1955,11 +1746,10 @@ filter chain.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#RecordRegionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#RecordRegionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Inputs.RecordRegionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.Outputs.RecordRegion.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1969,26 +1759,23 @@ filter chain.
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the region (or Answer Group).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1997,26 +1784,23 @@ filter chain.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the region (or Answer Group).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2025,26 +1809,23 @@ filter chain.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the region (or Answer Group).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2053,30 +1834,35 @@ filter chain.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the region (or Answer Group).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+```sh
+ $ pulumi import ns1:index/record:Record <name> <zone>/<domain>/<type>`
+```
 
+ So for the example above
 
-
+```sh
+ $ pulumi import ns1:index/record:Record www terraform.example.io/www.terraform.example.io/CNAME`
+```
 
 
 
@@ -2088,6 +1874,6 @@ filter chain.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/terraform-providers/terraform-provider-ns1).</dd>
+	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).</dd>
 </dl>
 

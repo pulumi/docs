@@ -1,8 +1,8 @@
 
 ---
 title: "AutoscalingPolicy"
-title_tag: "Resource AutoscalingPolicy | Module dataproc | Package GCP"
-meta_desc: "Explore the AutoscalingPolicy resource of the dataproc module, including examples, input properties, output properties, lookup functions, and supporting types. Describes an autoscaling policy for Dataproc cluster autoscaler."
+title_tag: "gcp.dataproc.AutoscalingPolicy"
+meta_desc: "Documentation for the gcp.dataproc.AutoscalingPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -12,6 +12,164 @@ meta_desc: "Explore the AutoscalingPolicy resource of the dataproc module, inclu
 
 Describes an autoscaling policy for Dataproc cluster autoscaler.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Dataproc Autoscaling Policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var asp = new Gcp.Dataproc.AutoscalingPolicy("asp", new Gcp.Dataproc.AutoscalingPolicyArgs
+        {
+            PolicyId = "dataproc-policy",
+            Location = "us-central1",
+            WorkerConfig = new Gcp.Dataproc.Inputs.AutoscalingPolicyWorkerConfigArgs
+            {
+                MaxInstances = 3,
+            },
+            BasicAlgorithm = new Gcp.Dataproc.Inputs.AutoscalingPolicyBasicAlgorithmArgs
+            {
+                YarnConfig = new Gcp.Dataproc.Inputs.AutoscalingPolicyBasicAlgorithmYarnConfigArgs
+                {
+                    GracefulDecommissionTimeout = "30s",
+                    ScaleUpFactor = 0.5,
+                    ScaleDownFactor = 0.5,
+                },
+            },
+        });
+        var basic = new Gcp.Dataproc.Cluster("basic", new Gcp.Dataproc.ClusterArgs
+        {
+            Region = "us-central1",
+            ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
+            {
+                AutoscalingConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigAutoscalingConfigArgs
+                {
+                    PolicyUri = asp.Name,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		asp, err := dataproc.NewAutoscalingPolicy(ctx, "asp", &dataproc.AutoscalingPolicyArgs{
+			PolicyId: pulumi.String("dataproc-policy"),
+			Location: pulumi.String("us-central1"),
+			WorkerConfig: &dataproc.AutoscalingPolicyWorkerConfigArgs{
+				MaxInstances: pulumi.Int(3),
+			},
+			BasicAlgorithm: &dataproc.AutoscalingPolicyBasicAlgorithmArgs{
+				YarnConfig: &dataproc.AutoscalingPolicyBasicAlgorithmYarnConfigArgs{
+					GracefulDecommissionTimeout: pulumi.String("30s"),
+					ScaleUpFactor:               pulumi.Float64(0.5),
+					ScaleDownFactor:             pulumi.Float64(0.5),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = dataproc.NewCluster(ctx, "basic", &dataproc.ClusterArgs{
+			Region: pulumi.String("us-central1"),
+			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
+				AutoscalingConfig: &dataproc.ClusterClusterConfigAutoscalingConfigArgs{
+					PolicyUri: asp.Name,
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+asp = gcp.dataproc.AutoscalingPolicy("asp",
+    policy_id="dataproc-policy",
+    location="us-central1",
+    worker_config=gcp.dataproc.AutoscalingPolicyWorkerConfigArgs(
+        max_instances=3,
+    ),
+    basic_algorithm=gcp.dataproc.AutoscalingPolicyBasicAlgorithmArgs(
+        yarn_config=gcp.dataproc.AutoscalingPolicyBasicAlgorithmYarnConfigArgs(
+            graceful_decommission_timeout="30s",
+            scale_up_factor=0.5,
+            scale_down_factor=0.5,
+        ),
+    ))
+basic = gcp.dataproc.Cluster("basic",
+    region="us-central1",
+    cluster_config=gcp.dataproc.ClusterClusterConfigArgs(
+        autoscaling_config=gcp.dataproc.ClusterClusterConfigAutoscalingConfigArgs(
+            policy_uri=asp.name,
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const asp = new gcp.dataproc.AutoscalingPolicy("asp", {
+    policyId: "dataproc-policy",
+    location: "us-central1",
+    workerConfig: {
+        maxInstances: 3,
+    },
+    basicAlgorithm: {
+        yarnConfig: {
+            gracefulDecommissionTimeout: "30s",
+            scaleUpFactor: 0.5,
+            scaleDownFactor: 0.5,
+        },
+    },
+});
+const basic = new gcp.dataproc.Cluster("basic", {
+    region: "us-central1",
+    clusterConfig: {
+        autoscalingConfig: {
+            policyUri: asp.name,
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AutoscalingPolicy Resource {#create}
@@ -19,19 +177,19 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicy">AutoscalingPolicy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicyArgs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/dataproc/#AutoscalingPolicy">AutoscalingPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>basic_algorithm=None<span class="p">, </span>location=None<span class="p">, </span>policy_id=None<span class="p">, </span>project=None<span class="p">, </span>secondary_worker_config=None<span class="p">, </span>worker_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_algorithm</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicyBasicAlgorithmArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_worker_config</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicySecondaryWorkerConfigArgs]</span> = None<span class="p">, </span><span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicyWorkerConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicy">NewAutoscalingPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyArgs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicy">AutoscalingPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAutoscalingPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscalingPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicy.html">AutoscalingPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicyArgs.html">AutoscalingPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AutoscalingPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AutoscalingPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -42,7 +200,7 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -52,7 +210,7 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicyArgs">AutoscalingPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">AutoscalingPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -101,7 +259,7 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -111,7 +269,7 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -121,7 +279,7 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyArgs">AutoscalingPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">AutoscalingPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -131,7 +289,7 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -150,7 +308,7 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -160,7 +318,7 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicyArgs.html">AutoscalingPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">AutoscalingPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -183,12 +341,11 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
 
 ## AutoscalingPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -199,75 +356,71 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicalgorithm_csharp">
 <a href="#basicalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The  location where the autoscaling poicy should reside.
+    <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryworkerconfig_csharp">
 <a href="#secondaryworkerconfig_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workerconfig_csharp">
 <a href="#workerconfig_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -276,75 +429,71 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicalgorithm_go">
 <a href="#basicalgorithm_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The  location where the autoscaling poicy should reside.
+    <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryworkerconfig_go">
 <a href="#secondaryworkerconfig_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workerconfig_go">
 <a href="#workerconfig_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -353,75 +502,71 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicalgorithm_nodejs">
 <a href="#basicalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The  location where the autoscaling poicy should reside.
+    <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryworkerconfig_nodejs">
 <a href="#secondaryworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workerconfig_nodejs">
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -430,84 +575,76 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basic_algorithm_python">
 <a href="#basic_algorithm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Dict[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The  location where the autoscaling poicy should reside.
+    <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondary_worker_config_python">
 <a href="#secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="worker_config_python">
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Worker<wbr>Config]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the AutoscalingPolicy resource produces the following output properties:
-
 
 
 
@@ -518,26 +655,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -546,26 +680,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -574,26 +705,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -602,29 +730,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -634,19 +756,20 @@ Get an existing AutoscalingPolicy resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicyState">AutoscalingPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicy">AutoscalingPolicy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AutoscalingPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AutoscalingPolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>basic_algorithm=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>policy_id=None<span class="p">, </span>project=None<span class="p">, </span>secondary_worker_config=None<span class="p">, </span>worker_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">basic_algorithm</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicyBasicAlgorithmArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_worker_config</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicySecondaryWorkerConfigArgs]</span> = None<span class="p">, </span><span class="nx">worker_config</span><span class="p">:</span> <span class="nx">Optional[AutoscalingPolicyWorkerConfigArgs]</span> = None<span class="p">) -&gt;</span> AutoscalingPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoscalingPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyState">AutoscalingPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicy">AutoscalingPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoscalingPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AutoscalingPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AutoscalingPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicy.html">AutoscalingPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.AutoscalingPolicyState.html">AutoscalingPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AutoscalingPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AutoscalingPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -748,7 +871,6 @@ Get an existing AutoscalingPolicy resource's state with the given name, ID, and 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -756,86 +878,81 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_basicalgorithm_csharp">
 <a href="#state_basicalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The  location where the autoscaling poicy should reside.
+    <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secondaryworkerconfig_csharp">
 <a href="#state_secondaryworkerconfig_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_workerconfig_csharp">
 <a href="#state_workerconfig_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -844,86 +961,81 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_basicalgorithm_go">
 <a href="#state_basicalgorithm_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The  location where the autoscaling poicy should reside.
+    <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secondaryworkerconfig_go">
 <a href="#state_secondaryworkerconfig_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_workerconfig_go">
 <a href="#state_workerconfig_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -932,86 +1044,81 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_basicalgorithm_nodejs">
 <a href="#state_basicalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The  location where the autoscaling poicy should reside.
+    <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secondaryworkerconfig_nodejs">
 <a href="#state_secondaryworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_workerconfig_nodejs">
 <a href="#state_workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1020,89 +1127,81 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_basic_algorithm_python">
 <a href="#state_basic_algorithm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Dict[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.  Structure is documented below.
+    <dd>{{% md %}}Basic algorithm for autoscaling.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The  location where the autoscaling poicy should reside.
+    <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_id_python">
 <a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secondary_worker_config_python">
 <a href="#state_secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_worker_config_python">
 <a href="#state_worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Worker<wbr>Config]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.  Structure is documented below.
+    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1112,20 +1211,8 @@ If it is not provided, the provider project is used.
 ## Supporting Types
 
 
+
 <h4 id="autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicyBasicAlgorithm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalingPolicyBasicAlgorithm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyBasicAlgorithmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyBasicAlgorithmOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.AutoscalingPolicyBasicAlgorithmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.AutoscalingPolicyBasicAlgorithm.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1134,29 +1221,27 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="yarnconfig_csharp">
 <a href="#yarnconfig_csharp" style="color: inherit; text-decoration: inherit;">Yarn<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}YARN autoscaling configuration.  Structure is documented below.
+    <dd>{{% md %}}YARN autoscaling configuration.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cooldownperiod_csharp">
 <a href="#cooldownperiod_csharp" style="color: inherit; text-decoration: inherit;">Cooldown<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration between scaling events. A scaling period starts after the
 update operation from the previous event has completed.
 Bounds: [2m, 1d]. Default: 2m.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1165,29 +1250,27 @@ Bounds: [2m, 1d]. Default: 2m.
             title="Required">
         <span id="yarnconfig_go">
 <a href="#yarnconfig_go" style="color: inherit; text-decoration: inherit;">Yarn<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}YARN autoscaling configuration.  Structure is documented below.
+    <dd>{{% md %}}YARN autoscaling configuration.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cooldownperiod_go">
 <a href="#cooldownperiod_go" style="color: inherit; text-decoration: inherit;">Cooldown<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration between scaling events. A scaling period starts after the
 update operation from the previous event has completed.
 Bounds: [2m, 1d]. Default: 2m.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1196,78 +1279,58 @@ Bounds: [2m, 1d]. Default: 2m.
             title="Required">
         <span id="yarnconfig_nodejs">
 <a href="#yarnconfig_nodejs" style="color: inherit; text-decoration: inherit;">yarn<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}YARN autoscaling configuration.  Structure is documented below.
+    <dd>{{% md %}}YARN autoscaling configuration.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cooldownperiod_nodejs">
 <a href="#cooldownperiod_nodejs" style="color: inherit; text-decoration: inherit;">cooldown<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration between scaling events. A scaling period starts after the
 update operation from the previous event has completed.
 Bounds: [2m, 1d]. Default: 2m.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="yarnconfig_python">
-<a href="#yarnconfig_python" style="color: inherit; text-decoration: inherit;">yarn<wbr>Config</a>
-</span> 
+        <span id="yarn_config_python">
+<a href="#yarn_config_python" style="color: inherit; text-decoration: inherit;">yarn_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Dict[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config]</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}YARN autoscaling configuration.  Structure is documented below.
+    <dd>{{% md %}}YARN autoscaling configuration.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="cooldownperiod_python">
-<a href="#cooldownperiod_python" style="color: inherit; text-decoration: inherit;">cooldown<wbr>Period</a>
-</span> 
+        <span id="cooldown_period_python">
+<a href="#cooldown_period_python" style="color: inherit; text-decoration: inherit;">cooldown_<wbr>period</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration between scaling events. A scaling period starts after the
 update operation from the previous event has completed.
 Bounds: [2m, 1d]. Default: 2m.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicyBasicAlgorithmYarnConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalingPolicyBasicAlgorithmYarnConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyBasicAlgorithmYarnConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyBasicAlgorithmYarnConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.AutoscalingPolicyBasicAlgorithmYarnConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.AutoscalingPolicyBasicAlgorithmYarnConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1276,23 +1339,22 @@ Bounds: [2m, 1d]. Default: 2m.
             title="Required">
         <span id="gracefuldecommissiontimeout_csharp">
 <a href="#gracefuldecommissiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timeout for YARN graceful decommissioning of Node Managers. Specifies the
 duration to wait for jobs to complete before forcefully removing workers
 (and potentially interrupting jobs). Only applicable to downscaling operations.
 Bounds: [0s, 1d].
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scaledownfactor_csharp">
 <a href="#scaledownfactor_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Fraction of average pending memory in the last cooldown period for which to
 remove workers. A scale-down factor of 1 will result in scaling down so that there
@@ -1301,14 +1363,13 @@ A scale-down factor of 0 disables removing workers, which can be beneficial for
 autoscaling a single job.
 Bounds: [0.0, 1.0].
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scaleupfactor_csharp">
 <a href="#scaleupfactor_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Fraction of average pending memory in the last cooldown period for which to
 add workers. A scale-up factor of 1.0 will result in scaling up so that there
@@ -1317,14 +1378,13 @@ A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
 (less aggressive scaling).
 Bounds: [0.0, 1.0].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaledownminworkerfraction_csharp">
 <a href="#scaledownminworkerfraction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
 For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
@@ -1332,14 +1392,13 @@ recommend at least a 2 worker scale-down for the cluster to scale. A threshold o
 means the autoscaler will scale down on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaleupminworkerfraction_csharp">
 <a href="#scaleupminworkerfraction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Minimum scale-up threshold as a fraction of total cluster size before scaling
 occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
@@ -1347,10 +1406,8 @@ must recommend at least a 2-worker scale-up for the cluster to scale. A threshol
 0 means the autoscaler will scale up on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1359,23 +1416,22 @@ Bounds: [0.0, 1.0]. Default: 0.0.
             title="Required">
         <span id="gracefuldecommissiontimeout_go">
 <a href="#gracefuldecommissiontimeout_go" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timeout for YARN graceful decommissioning of Node Managers. Specifies the
 duration to wait for jobs to complete before forcefully removing workers
 (and potentially interrupting jobs). Only applicable to downscaling operations.
 Bounds: [0s, 1d].
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scaledownfactor_go">
 <a href="#scaledownfactor_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Fraction of average pending memory in the last cooldown period for which to
 remove workers. A scale-down factor of 1 will result in scaling down so that there
@@ -1384,14 +1440,13 @@ A scale-down factor of 0 disables removing workers, which can be beneficial for
 autoscaling a single job.
 Bounds: [0.0, 1.0].
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scaleupfactor_go">
 <a href="#scaleupfactor_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Fraction of average pending memory in the last cooldown period for which to
 add workers. A scale-up factor of 1.0 will result in scaling up so that there
@@ -1400,14 +1455,13 @@ A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
 (less aggressive scaling).
 Bounds: [0.0, 1.0].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaledownminworkerfraction_go">
 <a href="#scaledownminworkerfraction_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
 For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
@@ -1415,14 +1469,13 @@ recommend at least a 2 worker scale-down for the cluster to scale. A threshold o
 means the autoscaler will scale down on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaleupminworkerfraction_go">
 <a href="#scaleupminworkerfraction_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Minimum scale-up threshold as a fraction of total cluster size before scaling
 occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
@@ -1430,10 +1483,8 @@ must recommend at least a 2-worker scale-up for the cluster to scale. A threshol
 0 means the autoscaler will scale up on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1442,23 +1493,22 @@ Bounds: [0.0, 1.0]. Default: 0.0.
             title="Required">
         <span id="gracefuldecommissiontimeout_nodejs">
 <a href="#gracefuldecommissiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timeout for YARN graceful decommissioning of Node Managers. Specifies the
 duration to wait for jobs to complete before forcefully removing workers
 (and potentially interrupting jobs). Only applicable to downscaling operations.
 Bounds: [0s, 1d].
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scaledownfactor_nodejs">
 <a href="#scaledownfactor_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fraction of average pending memory in the last cooldown period for which to
 remove workers. A scale-down factor of 1 will result in scaling down so that there
@@ -1467,14 +1517,13 @@ A scale-down factor of 0 disables removing workers, which can be beneficial for
 autoscaling a single job.
 Bounds: [0.0, 1.0].
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scaleupfactor_nodejs">
 <a href="#scaleupfactor_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fraction of average pending memory in the last cooldown period for which to
 add workers. A scale-up factor of 1.0 will result in scaling up so that there
@@ -1483,14 +1532,13 @@ A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
 (less aggressive scaling).
 Bounds: [0.0, 1.0].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaledownminworkerfraction_nodejs">
 <a href="#scaledownminworkerfraction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
 For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
@@ -1498,14 +1546,13 @@ recommend at least a 2 worker scale-down for the cluster to scale. A threshold o
 means the autoscaler will scale down on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaleupminworkerfraction_nodejs">
 <a href="#scaleupminworkerfraction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum scale-up threshold as a fraction of total cluster size before scaling
 occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
@@ -1513,35 +1560,32 @@ must recommend at least a 2-worker scale-up for the cluster to scale. A threshol
 0 means the autoscaler will scale up on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="gracefuldecommissiontimeout_python">
-<a href="#gracefuldecommissiontimeout_python" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
-</span> 
+        <span id="graceful_decommission_timeout_python">
+<a href="#graceful_decommission_timeout_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>decommission_<wbr>timeout</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timeout for YARN graceful decommissioning of Node Managers. Specifies the
 duration to wait for jobs to complete before forcefully removing workers
 (and potentially interrupting jobs). Only applicable to downscaling operations.
 Bounds: [0s, 1d].
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="scaledownfactor_python">
-<a href="#scaledownfactor_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Factor</a>
-</span> 
+        <span id="scale_down_factor_python">
+<a href="#scale_down_factor_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>factor</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Fraction of average pending memory in the last cooldown period for which to
 remove workers. A scale-down factor of 1 will result in scaling down so that there
@@ -1550,14 +1594,13 @@ A scale-down factor of 0 disables removing workers, which can be beneficial for
 autoscaling a single job.
 Bounds: [0.0, 1.0].
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="scaleupfactor_python">
-<a href="#scaleupfactor_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Factor</a>
-</span> 
+        <span id="scale_up_factor_python">
+<a href="#scale_up_factor_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up_<wbr>factor</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Fraction of average pending memory in the last cooldown period for which to
 add workers. A scale-up factor of 1.0 will result in scaling up so that there
@@ -1566,14 +1609,13 @@ A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
 (less aggressive scaling).
 Bounds: [0.0, 1.0].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="scaledownminworkerfraction_python">
-<a href="#scaledownminworkerfraction_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
-</span> 
+        <span id="scale_down_min_worker_fraction_python">
+<a href="#scale_down_min_worker_fraction_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>min_<wbr>worker_<wbr>fraction</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
 For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
@@ -1581,14 +1623,13 @@ recommend at least a 2 worker scale-down for the cluster to scale. A threshold o
 means the autoscaler will scale down on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="scaleupminworkerfraction_python">
-<a href="#scaleupminworkerfraction_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
-</span> 
+        <span id="scale_up_min_worker_fraction_python">
+<a href="#scale_up_min_worker_fraction_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up_<wbr>min_<wbr>worker_<wbr>fraction</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Minimum scale-up threshold as a fraction of total cluster size before scaling
 occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
@@ -1596,28 +1637,10 @@ must recommend at least a 2-worker scale-up for the cluster to scale. A threshol
 0 means the autoscaler will scale up on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicySecondaryWorkerConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalingPolicySecondaryWorkerConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicySecondaryWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicySecondaryWorkerConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.AutoscalingPolicySecondaryWorkerConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.AutoscalingPolicySecondaryWorkerConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1626,33 +1649,31 @@ Bounds: [0.0, 1.0]. Default: 0.0.
             title="Optional">
         <span id="maxinstances_csharp">
 <a href="#maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mininstances_csharp">
 <a href="#mininstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
@@ -1667,10 +1688,8 @@ within the configured size bounds for each group. If weight is set for one group
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1679,33 +1698,31 @@ only on primary workers, the cluster will use primary workers only and no second
             title="Optional">
         <span id="maxinstances_go">
 <a href="#maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mininstances_go">
 <a href="#mininstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
@@ -1720,10 +1737,8 @@ within the configured size bounds for each group. If weight is set for one group
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1732,33 +1747,31 @@ only on primary workers, the cluster will use primary workers only and no second
             title="Optional">
         <span id="maxinstances_nodejs">
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mininstances_nodejs">
 <a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
@@ -1773,10 +1786,8 @@ within the configured size bounds for each group. If weight is set for one group
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1785,33 +1796,31 @@ only on primary workers, the cluster will use primary workers only and no second
             title="Optional">
         <span id="max_instances_python">
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="mininstances_python">
-<a href="#mininstances_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
-</span> 
+        <span id="min_instances_python">
+<a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
@@ -1826,28 +1835,10 @@ within the configured size bounds for each group. If weight is set for one group
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalingPolicyWorkerConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalingPolicyWorkerConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyWorkerConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Inputs.AutoscalingPolicyWorkerConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dataproc.Outputs.AutoscalingPolicyWorkerConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1856,33 +1847,31 @@ only on primary workers, the cluster will use primary workers only and no second
             title="Required">
         <span id="maxinstances_csharp">
 <a href="#maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mininstances_csharp">
 <a href="#mininstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
@@ -1897,10 +1886,8 @@ within the configured size bounds for each group. If weight is set for one group
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1909,33 +1896,31 @@ only on primary workers, the cluster will use primary workers only and no second
             title="Required">
         <span id="maxinstances_go">
 <a href="#maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mininstances_go">
 <a href="#mininstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
@@ -1950,10 +1935,8 @@ within the configured size bounds for each group. If weight is set for one group
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1962,33 +1945,31 @@ only on primary workers, the cluster will use primary workers only and no second
             title="Required">
         <span id="maxinstances_nodejs">
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mininstances_nodejs">
 <a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
@@ -2003,10 +1984,8 @@ within the configured size bounds for each group. If weight is set for one group
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2015,33 +1994,31 @@ only on primary workers, the cluster will use primary workers only and no second
             title="Required">
         <span id="max_instances_python">
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="mininstances_python">
-<a href="#mininstances_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
-</span> 
+        <span id="min_instances_python">
+<a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight for the instance group, which is used to determine the fraction of total workers
 in the cluster from this instance group. For example, if primary workers have weight 2,
@@ -2056,14 +2033,24 @@ within the configured size bounds for each group. If weight is set for one group
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+AutoscalingPolicy can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:dataproc/autoscalingPolicy:AutoscalingPolicy default projects/{{project}}/locations/{{location}}/autoscalingPolicies/{{policy_id}}
+```
 
+```sh
+ $ pulumi import gcp:dataproc/autoscalingPolicy:AutoscalingPolicy default {{project}}/{{location}}/{{policy_id}}
+```
 
+```sh
+ $ pulumi import gcp:dataproc/autoscalingPolicy:AutoscalingPolicy default {{location}}/{{policy_id}}
+```
 
 
 
@@ -2075,6 +2062,6 @@ only on primary workers, the cluster will use primary workers only and no second
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

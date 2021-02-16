@@ -63,14 +63,23 @@ project = gitlab.Project("my-project",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  gitlab "github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	gitlab "github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab"
 )
 
-project, _ := gitlab.NewProject(ctx, "test", &gitlab.ProjectArgs{
-  Description:     pulumi.String("example project created by Pulumi"),
-  VisibilityLevel: pulumi.String("public"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := gitlab.NewProject(ctx, "test", &gitlab.ProjectArgs{
+			Description:     pulumi.String("example project created by Pulumi"),
+			VisibilityLevel: pulumi.String("public"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}

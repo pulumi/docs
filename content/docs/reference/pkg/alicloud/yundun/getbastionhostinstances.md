@@ -14,6 +14,7 @@ This data source provides a list of cloud Bastionhost instances in an Alibaba Cl
 
 > **NOTE:** Available in 1.63.0+ .
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +45,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			NameRegex: "^bastionhost",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		var splat0 []interface{}
+		for _, val0 := range alicloud_yundun_bastionhost_instances.Instance {
+			splat0 = append(splat0, val0.Id)
+		}
+		ctx.Export("instance", splat0)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -87,7 +113,7 @@ export const instance = alicloud_yundun_bastionhost_instances_instance.map(v => 
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_bastion_host_instances(</span>description_regex=None<span class="p">, </span>ids=None<span class="p">, </span>output_file=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bastion_host_instances(</span><span class="nx">description_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBastionHostInstancesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -108,7 +134,6 @@ export const instance = alicloud_yundun_bastionhost_instances_instance.map(v => 
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -116,56 +141,103 @@ The following arguments are supported:
             title="Optional">
         <span id="descriptionregex_csharp">
 <a href="#descriptionregex_csharp" style="color: inherit; text-decoration: inherit;">Description<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by the instance description.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Matched instance IDs to filter data source result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name to persist data source output.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -174,56 +246,103 @@ tagKey1 = "tagValue1"
             title="Optional">
         <span id="descriptionregex_go">
 <a href="#descriptionregex_go" style="color: inherit; text-decoration: inherit;">Description<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by the instance description.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Matched instance IDs to filter data source result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name to persist data source output.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -232,56 +351,103 @@ tagKey1 = "tagValue1"
             title="Optional">
         <span id="descriptionregex_nodejs">
 <a href="#descriptionregex_nodejs" style="color: inherit; text-decoration: inherit;">description<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by the instance description.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Matched instance IDs to filter data source result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name to persist data source output.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -290,59 +456,103 @@ tagKey1 = "tagValue1"
             title="Optional">
         <span id="description_regex_python">
 <a href="#description_regex_python" style="color: inherit; text-decoration: inherit;">description_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by the instance description.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Matched instance IDs to filter data source result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File name to persist data source output.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -353,7 +563,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -361,78 +570,70 @@ The following output properties are available:
             title="">
         <span id="descriptions_csharp">
 <a href="#descriptions_csharp" style="color: inherit; text-decoration: inherit;">Descriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instances_csharp">
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbastionhostinstancesinstance">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Yundun.<wbr>Outputs.<wbr>Get<wbr>Bastion<wbr>Host<wbr>Instances<wbr>Instance&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of apis. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="descriptionregex_csharp">
 <a href="#descriptionregex_csharp" style="color: inherit; text-decoration: inherit;">Description<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -441,78 +642,70 @@ The following output properties are available:
             title="">
         <span id="descriptions_go">
 <a href="#descriptions_go" style="color: inherit; text-decoration: inherit;">Descriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instances_go">
 <a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbastionhostinstancesinstance">[]Get<wbr>Bastion<wbr>Host<wbr>Instances<wbr>Instance</a></span>
     </dt>
     <dd>{{% md %}}A list of apis. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="descriptionregex_go">
 <a href="#descriptionregex_go" style="color: inherit; text-decoration: inherit;">Description<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -521,78 +714,70 @@ The following output properties are available:
             title="">
         <span id="descriptions_nodejs">
 <a href="#descriptions_nodejs" style="color: inherit; text-decoration: inherit;">descriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instances_nodejs">
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbastionhostinstancesinstance">Get<wbr>Bastion<wbr>Host<wbr>Instances<wbr>Instance[]</a></span>
     </dt>
     <dd>{{% md %}}A list of apis. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="descriptionregex_nodejs">
 <a href="#descriptionregex_nodejs" style="color: inherit; text-decoration: inherit;">description<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -601,81 +786,70 @@ The following output properties are available:
             title="">
         <span id="descriptions_python">
 <a href="#descriptions_python" style="color: inherit; text-decoration: inherit;">descriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instances_python">
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbastionhostinstancesinstance">List[Get<wbr>Bastion<wbr>Host<wbr>Instances<wbr>Instance]</a></span>
+        <span class="property-type"><a href="#getbastionhostinstancesinstance">Sequence[Get<wbr>Bastion<wbr>Host<wbr>Instances<wbr>Instance]</a></span>
     </dt>
     <dd>{{% md %}}A list of apis. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_regex_python">
 <a href="#description_regex_python" style="color: inherit; text-decoration: inherit;">description_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -697,7 +871,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -705,121 +878,162 @@ The following output properties are available:
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's remark.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's id.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancestatus_csharp">
 <a href="#instancestatus_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's status.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="licensecode_csharp">
 <a href="#licensecode_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="privatedomain_csharp">
 <a href="#privatedomain_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's private domain name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publicdomain_csharp">
 <a href="#publicdomain_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's public domain name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The instance's public network access configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The instance's security group configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uservswitchid_csharp">
 <a href="#uservswitchid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Vswitch<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's vSwitch ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -828,121 +1042,162 @@ tagKey1 = "tagValue1"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's remark.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's id.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancestatus_go">
 <a href="#instancestatus_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's status.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="licensecode_go">
 <a href="#licensecode_go" style="color: inherit; text-decoration: inherit;">License<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="privatedomain_go">
 <a href="#privatedomain_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's private domain name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publicdomain_go">
 <a href="#publicdomain_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's public domain name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The instance's public network access configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The instance's security group configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uservswitchid_go">
 <a href="#uservswitchid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Vswitch<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's vSwitch ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -951,121 +1206,162 @@ tagKey1 = "tagValue1"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's remark.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's id.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancestatus_nodejs">
 <a href="#instancestatus_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's status.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="licensecode_nodejs">
 <a href="#licensecode_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="privatedomain_nodejs">
 <a href="#privatedomain_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's private domain name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publicdomain_nodejs">
 <a href="#publicdomain_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's public domain name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The instance's public network access configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The instance's security group configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uservswitchid_nodejs">
 <a href="#uservswitchid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Vswitch<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's vSwitch ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1074,124 +1370,162 @@ tagKey1 = "tagValue1"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance's remark.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance's id.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_status_python">
 <a href="#instance_status_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance's status.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="license_code_python">
 <a href="#license_code_python" style="color: inherit; text-decoration: inherit;">license_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="privatedomain_python">
-<a href="#privatedomain_python" style="color: inherit; text-decoration: inherit;">private<wbr>Domain</a>
-</span> 
+        <span id="private_domain_python">
+<a href="#private_domain_python" style="color: inherit; text-decoration: inherit;">private_<wbr>domain</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance's private domain name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="publicdomain_python">
-<a href="#publicdomain_python" style="color: inherit; text-decoration: inherit;">public<wbr>Domain</a>
-</span> 
+        <span id="public_domain_python">
+<a href="#public_domain_python" style="color: inherit; text-decoration: inherit;">public_<wbr>domain</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance's public domain name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="publicnetworkaccess_python">
-<a href="#publicnetworkaccess_python" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
-</span> 
+        <span id="public_network_access_python">
+<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The instance's public network access configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The instance's security group configuration.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="uservswitchid_python">
-<a href="#uservswitchid_python" style="color: inherit; text-decoration: inherit;">user<wbr>Vswitch<wbr>Id</a>
-</span> 
+        <span id="user_vswitch_id_python">
+<a href="#user_vswitch_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>vswitch_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance's vSwitch ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = pulumi.output(alicloud.yundun.getBastionHostInstances({
+    tags: {
+        tagKey1: "tagValue1",
+    },
+}, { async: true }));
 ```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
+```python
+import pulumi
+import pulumi_alicloud as alicloud
+
+instance = alicloud.yundun.get_bastion_host_instances(tags={
+    "tagKey1": "tagValue1",
+})
+```
+```csharp
+using Pulumi;
+using AliCloud = Pulumi.AliCloud;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = Output.Create(AliCloud.Yundun.GetBastionHostInstances.InvokeAsync(new AliCloud.Yundun.GetBastionHostInstancesArgs
+        {
+            Tags = 
+            {
+                { "tagKey1", "tagValue1" },
+            },
+        }));
+    }
+
 }
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/yundun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := yundun.GetBastionHostInstances(ctx, &yundun.GetBastionHostInstancesArgs{
+			Tags: map[string]interface{}{
+				"tagKey1": "tagValue1",
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
 }
 ```
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1204,6 +1538,6 @@ tagKey1 = "tagValue1"
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -21,6 +21,7 @@ Explore the resources and functions of the oss module in the AliCloud package.
     <li><a href="getbuckets" title="GetBuckets"><span class="symbol function"></span>GetBuckets</a></li>
     <li><a href="getinstanceattachments" title="GetInstanceAttachments"><span class="symbol function"></span>GetInstanceAttachments</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
     <li><a href="gettables" title="GetTables"><span class="symbol function"></span>GetTables</a></li>
 </ul>
 
@@ -31,26 +32,8 @@ Explore the resources and functions of the oss module in the AliCloud package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.html" title="Pulumi.AliCloud.Oss">Pulumi.AliCloud.Oss</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#" title="alicloud/oss">alicloud/oss</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/oss/#" title="@pulumi/alicloud/oss">@pulumi/alicloud/oss</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/oss" title="pulumi_alicloud/oss">pulumi_alicloud/oss</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

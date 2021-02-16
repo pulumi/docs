@@ -22,7 +22,7 @@ The Pulumi API is one of the components required for self-hosting Pulumi in your
 * Provide a persistent volume for the service to store checkpoint objects.
 * Provider a persistent volume for the MySQL data (optional if you are providing your own DB.)
 * If you are providing your own DB instance, ensure that it is accessible within the same Docker network that the service and the UI containers will be running in.
-    * The default DB endpoint is `pulumi-db:3306`. If you wish to change this, please set `PULUMI_LOCAL_DATABASE_NAME` and `PULUMI_LOCAL_DATABASE_PORT` accordingly (see Script Variables.)
+    * The default DB endpoint is `pulumi-db:3306`. If you wish to change this, set `PULUMI_LOCAL_DATABASE_NAME` and `PULUMI_LOCAL_DATABASE_PORT` accordingly (see Script Variables.)
     * If you do not create this network prior to running `run-ee.sh`, it will create only a bridged network on your local host. Ensure that the DB can be accessed by the API service container.
 * Provide an external load balancer with TLS termination.
 
@@ -51,8 +51,8 @@ This container runs an HTTP server which provides the APIs needed by the Console
 | PULUMI_LICENSE_KEY | The license key value. A JWT string.<br><br>**Note**: Be sure to enclose the value in single-quotes. |
 | PULUMI_DATABASE_ENDPOINT | The database server endpoint in the format `host:port`. This should be a MySQL 5.6 server. |
 | PULUMI_DATABASE_NAME | The name of the database on the database server. |
-| PULUMI_API_DOMAIN | The internet or network-local domain using which the service can be reached. Default is `localhost:8080`. |
-| PULUMI_CONSOLE_DOMAIN | The internet or network-local domain using which the Console can be reached. Default is `localhost:3000`. |
+| PULUMI_API_DOMAIN | The internet or network-local domain using which the API service can be reached, e.g. `api.pulumi.com`. Default is `localhost:8080`. |
+| PULUMI_CONSOLE_DOMAIN | The internet or network-local domain using which the Console can be reached, e.g. `app.pulumi.com`. Default is `localhost:3000`. |
 | PULUMI_LOCAL_OBJECTS | Folder path for persisting state for stacks. Ensure that this path is highly available, and backed-up regularly. |
 
 ### Other Environment Variables
@@ -60,9 +60,9 @@ This container runs an HTTP server which provides the APIs needed by the Console
 | Variable Name | Description |
 | ------------- | ----------- |
 | PULUMI_OBJECTS_BUCKET | S3 bucket name for persisting state for stacks.<br><br>**Note**: Only used if hosted on AWS. |
-| RECAPTCHA_SECRET_KEY | reCAPTCHA secret key for self-service password reset. Create a site key and a secret key from Google [here](https://www.google.com/recaptcha/admin). |
-| SAML_CERTIFICATE_PUBLIC_KEY | Public key used by the [IdP]({{< relref "../saml/sso#terminology" >}}) to sign SAML assertions. Learn how to set this value [here]({{< relref "saml-sso" >}}). |
-| SAML_CERTIFICATE_PRIVATE_KEY | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to set this value [here]({{< relref "saml-sso" >}}). |
+| RECAPTCHA_SECRET_KEY | reCAPTCHA secret key for self-service password reset. Create a [site key and a secret key from Google](https://www.google.com/recaptcha/admin). |
+| SAML_CERTIFICATE_PUBLIC_KEY | Public key used by the [IdP]({{< relref "../saml/sso#terminology" >}}) to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY]({{< relref "saml-sso" >}}). |
+| SAML_CERTIFICATE_PRIVATE_KEY | Private key used by Pulumi to validate the SAML assertions sent by the IdP. Learn how to [set SAML_CERTIFICATE_PRIVATE_KEY]({{< relref "saml-sso" >}}). |
 | GITHUB_OAUTH_ENDPOINT | Used for GitHub API calls. |
 | GITLAB_OAUTH_ENDPOINT | Used for GitLab API calls. |
 
@@ -89,9 +89,25 @@ openssl \
 
 #### Database Connections
 
+##### API Service
+
 The service is configurable to enable connections to the backend SQL database over TLS. The following environment variables are _all_ required to connect to the database using TLS. If these variables are set the service will establish connections to the database using TLS, otherwise the service will default to connecting without TLS. The same ports will be used for communication to the database regardless of whether TLS is configured or not.
 
 | Variable Name            | Description                                                                                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
 | DATABASE_CA_CERTIFICATE  | The CA certificate used to establish TLS connections with the database. This certificate must be PEM encoded. This must be set to the value of the certificate itself and _not_ a filepath to the location of the certificate file. |
 | DATABASE_MIN_TLS_VERSION | The minimum TLS version to use for database connections (must be in \<major>.\<minor> format, e.g. `1.2`).    |
+
+##### Migrations
+
+The database migrations container is configurable to enable connections to the database over TLS. To use TLS, the following environment variable must be set. The default is to not use TLS.
+
+| Variable Name            | Description                                                                                                   |
+|--------------------------|---------------------------------------------------------------------------------------------------------------|
+| DATABASE_CA_CERTIFICATE  | The CA certificate used to establish TLS connections with the database. This certificate must be PEM encoded. This must be set to the value of the certificate itself and _not_ a filepath to the location of the certificate file. |
+| MYSQL_ROOT_USERNAME      | The root username to log in to the MySQL database. Defaults to `root`. |
+| MYSQL_ROOT_PASSWORD      | The root user password to log in to the MySQL database. |
+| MYSQL_ALLOW_EMPTY_PASSWORD    | Set to `true` to allow the container to be started with a blank password for the root user. |
+| PULUMI_DATABASE_ENDPOINT      | The database server endpoint in the format `host:port`. This should be a MySQL 5.6 server. |
+| PULUMI_DATABASE_PING_ENDPOINT | The database server endpoint to ping for availability before login. |
+| RUN_MIGRATIONS_EXTERNALLY     | Request for migrations to be run against an external database. |

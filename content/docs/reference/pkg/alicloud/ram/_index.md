@@ -23,6 +23,7 @@ Explore the resources and functions of the ram module in the AliCloud package.
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="roleattachment" title="RoleAttachment"><span class="symbol resource"></span>RoleAttachment</a></li>
     <li><a href="rolepolicyattachment" title="RolePolicyAttachment"><span class="symbol resource"></span>RolePolicyAttachment</a></li>
+    <li><a href="samlprovider" title="SamlProvider"><span class="symbol resource"></span>SamlProvider</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
     <li><a href="userpolicyattachment" title="UserPolicyAttachment"><span class="symbol resource"></span>UserPolicyAttachment</a></li>
 </ul>
@@ -34,6 +35,7 @@ Explore the resources and functions of the ram module in the AliCloud package.
     <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
     <li><a href="getpolicies" title="GetPolicies"><span class="symbol function"></span>GetPolicies</a></li>
     <li><a href="getroles" title="GetRoles"><span class="symbol function"></span>GetRoles</a></li>
+    <li><a href="getsamlproviders" title="GetSamlProviders"><span class="symbol function"></span>GetSamlProviders</a></li>
     <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
@@ -44,26 +46,8 @@ Explore the resources and functions of the ram module in the AliCloud package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ram.html" title="Pulumi.AliCloud.Ram">Pulumi.AliCloud.Ram</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ram?tab=doc#" title="alicloud/ram">alicloud/ram</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ram/#" title="@pulumi/alicloud/ram">@pulumi/alicloud/ram</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/ram" title="pulumi_alicloud/ram">pulumi_alicloud/ram</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

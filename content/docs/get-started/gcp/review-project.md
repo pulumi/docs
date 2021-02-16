@@ -2,7 +2,7 @@
 title: Review the New Project | GCP
 h1: Review the New Project
 linktitle: Review the New Project
-meta_desc: This page provides an overview on how to a review a new GCP project.
+meta_desc: This page provides an overview on how to a review a new Google Cloud project.
 weight: 4
 menu:
   getstarted:
@@ -15,7 +15,7 @@ aliases: ["/docs/quickstart/gcp/review-project/"]
 Let's review some of the generated project files:
 
 - `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
-- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
+- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) you initialized.
 
 {{% choosable language csharp %}}
 
@@ -23,7 +23,7 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-- {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
+- {{< langfile >}} is the Pulumi program that defines your stack resources. Let's examine it.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -42,6 +42,7 @@ exports.bucketName = bucket.url;
 ```
 
 {{% /choosable %}}
+
 {{% choosable language typescript %}}
 
 ```typescript
@@ -56,6 +57,7 @@ export const bucketName = bucket.url;
 ```
 
 {{% /choosable %}}
+
 {{% choosable language python %}}
 
 ```python
@@ -70,13 +72,14 @@ pulumi.export('bucket_name',  bucket.url)
 ```
 
 {{% /choosable %}}
+
 {{% choosable language go %}}
 
 ```go
 package main
 
 import (
-    "github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
+    "github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
     "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -96,6 +99,7 @@ func main() {
 ```
 
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -120,8 +124,49 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
-This Pulumi program creates a storage bucket and exports the bucket URL.
+This Pulumi program creates a new storage bucket and exports the DNS name of the bucket.
 
-Next, we'll deploy the stack.
+{{% choosable language javascript %}}
+
+```javascript
+exports.bucketName = bucket.url;
+```
+
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+export const bucketName = bucket.url;
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+pulumi.export('bucket_name',  bucket.url)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+ctx.Export("bucketName", bucket.Url)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+[Output]
+public Output<string> BucketName { get; set; }
+```
+
+{{% /choosable %}}
+
+Next, you'll deploy your stack, which will provision your storage bucket.
 
 {{< get-started-stepper >}}

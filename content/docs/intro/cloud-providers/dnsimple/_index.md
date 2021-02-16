@@ -69,16 +69,26 @@ record = dnsimple.Record("test",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  dnsimple "github.com/pulumi/pulumi-dnsimple/sdk/v2/go/dnsimple"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	dnsimple "github.com/pulumi/pulumi-dnsimple/sdk/v2/go/dnsimple"
 )
 
-record, _ := dnsimple.NewRecord(ctx, "test", &dnsimple.RecordArgs{
-  Name:   pulumi.String("test"),
-  Domain: pulumi.String("mydomain.dev"),
-  Type:   pulumi.String("CNAME"),
-  Value:  pulumi.String("api.devflix.watch.herokudns.com"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		record, err := dnsimple.NewRecord(ctx, "test", &dnsimple.RecordArgs{
+			Name:   pulumi.String("test"),
+			Domain: pulumi.String("mydomain.dev"),
+			Type:   pulumi.String("CNAME"),
+			Value:  pulumi.String("api.devflix.watch.herokudns.com"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

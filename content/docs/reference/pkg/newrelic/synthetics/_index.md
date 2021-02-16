@@ -12,7 +12,6 @@ Explore the resources and functions of the synthetics module in the New Relic pa
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alertcondition" title="AlertCondition"><span class="symbol resource"></span>AlertCondition</a></li>
-    <li><a href="label" title="Label"><span class="symbol resource"></span>Label</a></li>
     <li><a href="monitor" title="Monitor"><span class="symbol resource"></span>Monitor</a></li>
     <li><a href="monitorscript" title="MonitorScript"><span class="symbol resource"></span>MonitorScript</a></li>
     <li><a href="multilocationalertcondition" title="MultiLocationAlertCondition"><span class="symbol resource"></span>MultiLocationAlertCondition</a></li>
@@ -35,24 +34,6 @@ Explore the resources and functions of the synthetics module in the New Relic pa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
 	<dt>Version</dt>
-	<dd>3.2.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Synthetics.html" title="Pulumi.NewRelic.Synthetics">Pulumi.NewRelic.Synthetics</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/synthetics?tab=doc#" title="newrelic/synthetics">newrelic/synthetics</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/synthetics/#" title="@pulumi/newrelic/synthetics">@pulumi/newrelic/synthetics</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_newrelic/synthetics" title="pulumi_newrelic/synthetics">pulumi_newrelic/synthetics</a></dd>
-
+	<dd>3.13.0</dd>
 </dl>
 

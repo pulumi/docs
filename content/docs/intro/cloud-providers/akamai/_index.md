@@ -80,20 +80,38 @@ pydomain = akamai.properties.EdgeHostName("test",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  "github.com/pulumi/pulumi-akamai/sdk/go/akamai"
-  "github.com/pulumi/pulumi-akamai/sdk/go/akam/properties
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-akamai/sdk/go/akamai"
+	"github.com/pulumi/pulumi-akamai/sdk/go/akam/properties"
+)
 
-contract, _ := akamai.GetContract(ctx)
-group, _ := akamai.GetGroup(ctx)
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		contract, err := akamai.GetContract(ctx)
+		if err != nil {
+			return err
+		}
 
-user, _ := properties.NewEdgeHostName(ctx, "demo", &properties.EdgeHostNameArgs{
-  Contract:     pulumi.String(contract.Id),
-  Group:        pulumi.String(group.Id),
-  Product:      pulumi.String("prd_Fresca"),
-  EdgeHostname: pulumi.String("test-go.mycompany.io"),
-  Ipv4:         pulumi.Bool(true),
-})
+		group, err := akamai.GetGroup(ctx)
+		if err != nil {
+			return err
+		}
+
+		user, err := properties.NewEdgeHostName(ctx, "demo", &properties.EdgeHostNameArgs{
+			Contract:     pulumi.String(contract.Id),
+			Group:        pulumi.String(group.Id),
+			Product:      pulumi.String("prd_Fresca"),
+			EdgeHostname: pulumi.String("test-go.mycompany.io"),
+			Ipv4:         pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

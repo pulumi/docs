@@ -13,12 +13,14 @@ Explore the resources and functions of the cosmosdb module in the Azure package.
 <ul class="api">
     <li><a href="account" title="Account"><span class="symbol resource"></span>Account</a></li>
     <li><a href="cassandrakeyspace" title="CassandraKeyspace"><span class="symbol resource"></span>CassandraKeyspace</a></li>
+    <li><a href="cassandratable" title="CassandraTable"><span class="symbol resource"></span>CassandraTable</a></li>
     <li><a href="gremlindatabase" title="GremlinDatabase"><span class="symbol resource"></span>GremlinDatabase</a></li>
     <li><a href="gremlingraph" title="GremlinGraph"><span class="symbol resource"></span>GremlinGraph</a></li>
     <li><a href="mongocollection" title="MongoCollection"><span class="symbol resource"></span>MongoCollection</a></li>
     <li><a href="mongodatabase" title="MongoDatabase"><span class="symbol resource"></span>MongoDatabase</a></li>
     <li><a href="sqlcontainer" title="SqlContainer"><span class="symbol resource"></span>SqlContainer</a></li>
     <li><a href="sqldatabase" title="SqlDatabase"><span class="symbol resource"></span>SqlDatabase</a></li>
+    <li><a href="sqlstoredprocedure" title="SqlStoredProcedure"><span class="symbol resource"></span>SqlStoredProcedure</a></li>
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
 </ul>
 
@@ -36,7 +38,7 @@ Explore the resources and functions of the cosmosdb module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.17.0</dd>
+	<dd>3.46.0</dd>
 </dl>
 
 

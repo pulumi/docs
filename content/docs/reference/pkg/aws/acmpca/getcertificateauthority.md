@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCertificateAuthority function of the acmpca module, i
 
 Get information on a AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority).
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -93,17 +94,17 @@ const example = pulumi.output(aws.acmpca.getCertificateAuthority({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCertificateAuthority<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acmpca/#GetCertificateAuthorityArgs">GetCertificateAuthorityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acmpca/#GetCertificateAuthorityResult">GetCertificateAuthorityResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCertificateAuthority<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCertificateAuthorityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCertificateAuthorityResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_certificate_authority(</span>arn=None<span class="p">, </span>revocation_configurations=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_certificate_authority(</span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revocation_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetCertificateAuthorityRevocationConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCertificateAuthorityResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCertificateAuthority<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/acmpca?tab=doc#LookupCertificateAuthorityArgs">LookupCertificateAuthorityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/acmpca?tab=doc#LookupCertificateAuthorityResult">LookupCertificateAuthorityResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCertificateAuthority<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCertificateAuthorityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCertificateAuthorityResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCertificateAuthority` in the Go SDK.
 
@@ -112,14 +113,13 @@ const example = pulumi.output(aws.acmpca.getCertificateAuthority({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCertificateAuthority </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.GetCertificateAuthorityResult.html">GetCertificateAuthorityResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.GetCertificateAuthorityArgs.html">GetCertificateAuthorityArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCertificateAuthorityResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCertificateAuthorityArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -129,18 +129,17 @@ The following arguments are supported:
             title="Required">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the certificate authority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="revocationconfigurations_csharp">
 <a href="#revocationconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificateauthorityrevocationconfiguration">List&lt;Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
@@ -151,21 +150,18 @@ The following arguments are supported:
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -174,18 +170,17 @@ The following arguments are supported:
             title="Required">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the certificate authority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="revocationconfigurations_go">
 <a href="#revocationconfigurations_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificateauthorityrevocationconfiguration">[]Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></span>
     </dt>
@@ -196,21 +191,18 @@ The following arguments are supported:
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -219,18 +211,17 @@ The following arguments are supported:
             title="Required">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the certificate authority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="revocationconfigurations_nodejs">
 <a href="#revocationconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificateauthorityrevocationconfiguration">Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration[]</a></span>
     </dt>
@@ -241,21 +232,18 @@ The following arguments are supported:
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -264,20 +252,19 @@ The following arguments are supported:
             title="Required">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the certificate authority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="revocation_configurations_python">
 <a href="#revocation_configurations_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificateauthorityrevocationconfiguration">List[Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getcertificateauthorityrevocationconfiguration">Sequence[Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute containing revocation configuration.
 * `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
@@ -286,24 +273,18 @@ The following arguments are supported:
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -314,7 +295,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -322,83 +302,76 @@ The following output properties are available:
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="certificatechain_csharp">
 <a href="#certificatechain_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="certificatesigningrequest_csharp">
 <a href="#certificatesigningrequest_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Signing<wbr>Request</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notafter_csharp">
 <a href="#notafter_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>After</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notbefore_csharp">
 <a href="#notbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="revocationconfigurations_csharp">
 <a href="#revocationconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificateauthorityrevocationconfiguration">List&lt;Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration&gt;</a></span>
     </dt>
@@ -409,54 +382,48 @@ The following output properties are available:
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serial_csharp">
 <a href="#serial_csharp" style="color: inherit; text-decoration: inherit;">Serial</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the certificate authority.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the certificate authority.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -465,83 +432,76 @@ The following output properties are available:
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="certificatechain_go">
 <a href="#certificatechain_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="certificatesigningrequest_go">
 <a href="#certificatesigningrequest_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Signing<wbr>Request</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notafter_go">
 <a href="#notafter_go" style="color: inherit; text-decoration: inherit;">Not<wbr>After</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notbefore_go">
 <a href="#notbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="revocationconfigurations_go">
 <a href="#revocationconfigurations_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificateauthorityrevocationconfiguration">[]Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</a></span>
     </dt>
@@ -552,54 +512,48 @@ The following output properties are available:
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serial_go">
 <a href="#serial_go" style="color: inherit; text-decoration: inherit;">Serial</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the certificate authority.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the certificate authority.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -608,83 +562,76 @@ The following output properties are available:
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="certificatechain_nodejs">
 <a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="certificatesigningrequest_nodejs">
 <a href="#certificatesigningrequest_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Signing<wbr>Request</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notafter_nodejs">
 <a href="#notafter_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>After</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="notbefore_nodejs">
 <a href="#notbefore_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="revocationconfigurations_nodejs">
 <a href="#revocationconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificateauthorityrevocationconfiguration">Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration[]</a></span>
     </dt>
@@ -695,54 +642,48 @@ The following output properties are available:
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serial_nodejs">
 <a href="#serial_nodejs" style="color: inherit; text-decoration: inherit;">serial</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the certificate authority.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the certificate authority.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -751,85 +692,78 @@ The following output properties are available:
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64-encoded certificate authority (CA) certificate. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="certificate_chain_python">
 <a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64-encoded certificate chain that includes any intermediate certificates and chains up to root on-premises certificate that you used to sign your private CA certificate. The chain does not include your private CA certificate. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="certificate_signing_request_python">
 <a href="#certificate_signing_request_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>signing_<wbr>request</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64 PEM-encoded certificate signing request (CSR) for your private CA certificate.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="not_after_python">
 <a href="#not_after_python" style="color: inherit; text-decoration: inherit;">not_<wbr>after</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="not_before_python">
 <a href="#not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date and time before which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="revocation_configurations_python">
 <a href="#revocation_configurations_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificateauthorityrevocationconfiguration">List[Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getcertificateauthorityrevocationconfiguration">Sequence[Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute containing revocation configuration.
 * `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
@@ -838,57 +772,48 @@ The following output properties are available:
 * `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
 * `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serial_python">
 <a href="#serial_python" style="color: inherit; text-decoration: inherit;">serial</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the certificate authority.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies a key-value map of user-defined tags that are attached to the certificate authority.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the certificate authority.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -897,17 +822,6 @@ The following output properties are available:
 
 
 <h4 id="getcertificateauthorityrevocationconfiguration">Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetCertificateAuthorityRevocationConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCertificateAuthorityRevocationConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/acmpca?tab=doc#GetCertificateAuthorityRevocationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/acmpca?tab=doc#GetCertificateAuthorityRevocationConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.Inputs.GetCertificateAuthorityRevocationConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.Outputs.GetCertificateAuthorityRevocationConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -918,15 +832,13 @@ The following output properties are available:
             title="Required">
         <span id="crlconfigurations_csharp">
 <a href="#crlconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Crl<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">List&lt;Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -935,15 +847,13 @@ The following output properties are available:
             title="Required">
         <span id="crlconfigurations_go">
 <a href="#crlconfigurations_go" style="color: inherit; text-decoration: inherit;">Crl<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">[]Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -952,48 +862,30 @@ The following output properties are available:
             title="Required">
         <span id="crlconfigurations_nodejs">
 <a href="#crlconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="crlconfigurations_python">
-<a href="#crlconfigurations_python" style="color: inherit; text-decoration: inherit;">crl<wbr>Configurations</a>
-</span> 
+        <span id="crl_configurations_python">
+<a href="#crl_configurations_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>configurations</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">List[Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#getcertificateauthorityrevocationconfigurationcrlconfiguration">Sequence[Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getcertificateauthorityrevocationconfigurationcrlconfiguration">Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetCertificateAuthorityRevocationConfigurationCrlConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCertificateAuthorityRevocationConfigurationCrlConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/acmpca?tab=doc#GetCertificateAuthorityRevocationConfigurationCrlConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/acmpca?tab=doc#GetCertificateAuthorityRevocationConfigurationCrlConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.Inputs.GetCertificateAuthorityRevocationConfigurationCrlConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Acmpca.Outputs.GetCertificateAuthorityRevocationConfigurationCrlConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -1004,45 +896,40 @@ The following output properties are available:
             title="Required">
         <span id="customcname_csharp">
 <a href="#customcname_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expirationindays_csharp">
 <a href="#expirationindays_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>In<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="s3bucketname_csharp">
 <a href="#s3bucketname_csharp" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1051,45 +938,40 @@ The following output properties are available:
             title="Required">
         <span id="customcname_go">
 <a href="#customcname_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expirationindays_go">
 <a href="#expirationindays_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>In<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="s3bucketname_go">
 <a href="#s3bucketname_go" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1098,95 +980,82 @@ The following output properties are available:
             title="Required">
         <span id="customcname_nodejs">
 <a href="#customcname_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Cname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expirationindays_nodejs">
 <a href="#expirationindays_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>In<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="s3bucketname_nodejs">
 <a href="#s3bucketname_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="customcname_python">
-<a href="#customcname_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Cname</a>
-</span> 
+        <span id="custom_cname_python">
+<a href="#custom_cname_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>cname</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="expirationindays_python">
-<a href="#expirationindays_python" style="color: inherit; text-decoration: inherit;">expiration<wbr>In<wbr>Days</a>
-</span> 
+        <span id="expiration_in_days_python">
+<a href="#expiration_in_days_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>in_<wbr>days</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="s3_bucket_name_python">
 <a href="#s3_bucket_name_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

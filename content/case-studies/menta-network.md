@@ -10,10 +10,10 @@ meta_desc: |
 
 customer_name: Menta Network
 customer_logo: /logos/customers/menta_logo.svg
-customer_url: https://www.menta.com.mx/
+customer_url:
 
 exec_summary: |
-    [Menta Network](https://www.menta.com.mx/) was looking for the right tools to build a
+    Menta Network was looking for the right tools to build a
     robust, scalable, and cost-effective load testing service for their clients in the
     retail sector. They needed cloud infrastructure that could be quickly deployed,
     scaled, and decommissioned while evaluating the unique traits of each e-commerce site

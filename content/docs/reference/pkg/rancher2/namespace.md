@@ -56,7 +56,42 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2"
+	"github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := rancher2.NewNamespace(ctx, "foo", &rancher2.NamespaceArgs{
+			ContainerResourceLimit: &rancher2.NamespaceContainerResourceLimitArgs{
+				LimitsCpu:      pulumi.String("20m"),
+				LimitsMemory:   pulumi.String("20Mi"),
+				RequestsCpu:    pulumi.String("1m"),
+				RequestsMemory: pulumi.String("1Mi"),
+			},
+			Description: pulumi.String("foo namespace"),
+			ProjectId:   pulumi.String("<PROJECT_ID>"),
+			ResourceQuota: &rancher2.NamespaceResourceQuotaArgs{
+				Limit: &rancher2.NamespaceResourceQuotaLimitArgs{
+					LimitsCpu:       pulumi.String("100m"),
+					LimitsMemory:    pulumi.String("100Mi"),
+					RequestsStorage: pulumi.String("1Gi"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,21 +101,21 @@ import pulumi_rancher2 as rancher2
 
 # Create a new rancher2 Namespace
 foo = rancher2.Namespace("foo",
-    container_resource_limit={
-        "limitsCpu": "20m",
-        "limitsMemory": "20Mi",
-        "requestsCpu": "1m",
-        "requestsMemory": "1Mi",
-    },
+    container_resource_limit=rancher2.NamespaceContainerResourceLimitArgs(
+        limits_cpu="20m",
+        limits_memory="20Mi",
+        requests_cpu="1m",
+        requests_memory="1Mi",
+    ),
     description="foo namespace",
     project_id="<PROJECT_ID>",
-    resource_quota={
-        "limit": {
-            "limitsCpu": "100m",
-            "limitsMemory": "100Mi",
-            "requestsStorage": "1Gi",
-        },
-    })
+    resource_quota=rancher2.NamespaceResourceQuotaArgs(
+        limit=rancher2.NamespaceResourceQuotaLimitArgs(
+            limits_cpu="100m",
+            limits_memory="100Mi",
+            requests_storage="1Gi",
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -121,19 +156,19 @@ const foo = new rancher2.Namespace("foo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#Namespace">Namespace</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NamespaceArgs">NamespaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#Namespace">Namespace</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NamespaceArgs">NamespaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.Namespace">Namespace</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>annotations=None<span class="p">, </span>container_resource_limit=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>resource_quota=None<span class="p">, </span>wait_for_cluster=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.Namespace">Namespace</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">container_resource_limit</span><span class="p">:</span> <span class="nx">Optional[NamespaceContainerResourceLimitArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_quota</span><span class="p">:</span> <span class="nx">Optional[NamespaceResourceQuotaArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#Namespace">NewNamespace</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NamespaceArgs">NamespaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#Namespace">Namespace</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#Namespace">NewNamespace</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NamespaceArgs">NamespaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#Namespace">Namespace</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Namespace.html">Namespace</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.NamespaceArgs.html">NamespaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Namespace.html">Namespace</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.NamespaceArgs.html">NamespaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -144,7 +179,7 @@ const foo = new rancher2.Namespace("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -213,7 +248,7 @@ const foo = new rancher2.Namespace("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -252,7 +287,7 @@ const foo = new rancher2.Namespace("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -293,7 +328,6 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -301,93 +335,84 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where assign namespace. It's on the form `project_id=<cluster_id>:<id>`. Updating `<id>` part on same `<cluster_id>` namespace will be moved between projects (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containerresourcelimit_csharp">
 <a href="#containerresourcelimit_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacecontainerresourcelimit">Namespace<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on namespace (List maxitem:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A namespace description (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcequota_csharp">
 <a href="#resourcequota_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Quota</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespaceresourcequota">Namespace<wbr>Resource<wbr>Quota<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource quota for namespace. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="waitforcluster_csharp">
 <a href="#waitforcluster_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -396,93 +421,84 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where assign namespace. It's on the form `project_id=<cluster_id>:<id>`. Updating `<id>` part on same `<cluster_id>` namespace will be moved between projects (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containerresourcelimit_go">
 <a href="#containerresourcelimit_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacecontainerresourcelimit">Namespace<wbr>Container<wbr>Resource<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on namespace (List maxitem:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A namespace description (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcequota_go">
 <a href="#resourcequota_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Quota</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespaceresourcequota">Namespace<wbr>Resource<wbr>Quota</a></span>
     </dt>
     <dd>{{% md %}}Resource quota for namespace. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="waitforcluster_go">
 <a href="#waitforcluster_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -491,93 +507,84 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where assign namespace. It's on the form `project_id=<cluster_id>:<id>`. Updating `<id>` part on same `<cluster_id>` namespace will be moved between projects (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containerresourcelimit_nodejs">
 <a href="#containerresourcelimit_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacecontainerresourcelimit">Namespace<wbr>Container<wbr>Resource<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on namespace (List maxitem:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A namespace description (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcequota_nodejs">
 <a href="#resourcequota_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Quota</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespaceresourcequota">Namespace<wbr>Resource<wbr>Quota</a></span>
     </dt>
     <dd>{{% md %}}Resource quota for namespace. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="waitforcluster_nodejs">
 <a href="#waitforcluster_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -586,102 +593,89 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project id where assign namespace. It's on the form `project_id=<cluster_id>:<id>`. Updating `<id>` part on same `<cluster_id>` namespace will be moved between projects (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_resource_limit_python">
 <a href="#container_resource_limit_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacecontainerresourcelimit">Dict[Namespace<wbr>Container<wbr>Resource<wbr>Limit]</a></span>
+        <span class="property-type"><a href="#namespacecontainerresourcelimit">Namespace<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on namespace (List maxitem:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A namespace description (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resource_quota_python">
 <a href="#resource_quota_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>quota</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespaceresourcequota">Dict[Namespace<wbr>Resource<wbr>Quota]</a></span>
+        <span class="property-type"><a href="#namespaceresourcequota">Namespace<wbr>Resource<wbr>Quota<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource quota for namespace. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wait_for_cluster_python">
 <a href="#wait_for_cluster_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Namespace resource produces the following output properties:
-
 
 
 
@@ -692,15 +686,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -709,15 +701,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -726,15 +716,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -743,18 +731,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -764,19 +747,20 @@ Get an existing Namespace resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NamespaceState">NamespaceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#Namespace">Namespace</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NamespaceState">NamespaceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#Namespace">Namespace</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>annotations=None<span class="p">, </span>container_resource_limit=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>project_id=None<span class="p">, </span>resource_quota=None<span class="p">, </span>wait_for_cluster=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">container_resource_limit</span><span class="p">:</span> <span class="nx">Optional[NamespaceContainerResourceLimitArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_quota</span><span class="p">:</span> <span class="nx">Optional[NamespaceResourceQuotaArgs]</span> = None<span class="p">, </span><span class="nx">wait_for_cluster</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Namespace</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNamespace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NamespaceState">NamespaceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#Namespace">Namespace</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNamespace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NamespaceState">NamespaceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#Namespace">Namespace</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Namespace.html">Namespace</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..NamespaceState.html">NamespaceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Namespace.html">Namespace</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..NamespaceState.html">NamespaceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -878,7 +862,6 @@ Get an existing Namespace resource's state with the given name, ID, and optional
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -886,93 +869,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_annotations_csharp">
 <a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_containerresourcelimit_csharp">
 <a href="#state_containerresourcelimit_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacecontainerresourcelimit">Namespace<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on namespace (List maxitem:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A namespace description (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where assign namespace. It's on the form `project_id=<cluster_id>:<id>`. Updating `<id>` part on same `<cluster_id>` namespace will be moved between projects (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcequota_csharp">
 <a href="#state_resourcequota_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Quota</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespaceresourcequota">Namespace<wbr>Resource<wbr>Quota<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource quota for namespace. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_waitforcluster_csharp">
 <a href="#state_waitforcluster_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -981,93 +955,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_annotations_go">
 <a href="#state_annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_containerresourcelimit_go">
 <a href="#state_containerresourcelimit_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacecontainerresourcelimit">Namespace<wbr>Container<wbr>Resource<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on namespace (List maxitem:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A namespace description (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where assign namespace. It's on the form `project_id=<cluster_id>:<id>`. Updating `<id>` part on same `<cluster_id>` namespace will be moved between projects (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcequota_go">
 <a href="#state_resourcequota_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Quota</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespaceresourcequota">Namespace<wbr>Resource<wbr>Quota</a></span>
     </dt>
     <dd>{{% md %}}Resource quota for namespace. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_waitforcluster_go">
 <a href="#state_waitforcluster_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1076,93 +1041,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_annotations_nodejs">
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_containerresourcelimit_nodejs">
 <a href="#state_containerresourcelimit_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespacecontainerresourcelimit">Namespace<wbr>Container<wbr>Resource<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on namespace (List maxitem:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A namespace description (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where assign namespace. It's on the form `project_id=<cluster_id>:<id>`. Updating `<id>` part on same `<cluster_id>` namespace will be moved between projects (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcequota_nodejs">
 <a href="#state_resourcequota_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Quota</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespaceresourcequota">Namespace<wbr>Resource<wbr>Quota</a></span>
     </dt>
     <dd>{{% md %}}Resource quota for namespace. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_waitforcluster_nodejs">
 <a href="#state_waitforcluster_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1171,90 +1127,82 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_annotations_python">
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Annotations for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_container_resource_limit_python">
 <a href="#state_container_resource_limit_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespacecontainerresourcelimit">Dict[Namespace<wbr>Container<wbr>Resource<wbr>Limit]</a></span>
+        <span class="property-type"><a href="#namespacecontainerresourcelimit">Namespace<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default containers resource limits on namespace (List maxitem:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A namespace description (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Node Pool object (map)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project id where assign namespace. It's on the form `project_id=<cluster_id>:<id>`. Updating `<id>` part on same `<cluster_id>` namespace will be moved between projects (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resource_quota_python">
 <a href="#state_resource_quota_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>quota</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespaceresourcequota">Dict[Namespace<wbr>Resource<wbr>Quota]</a></span>
+        <span class="property-type"><a href="#namespaceresourcequota">Namespace<wbr>Resource<wbr>Quota<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource quota for namespace. Rancher v2.1.x or higher (list maxitems:1)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_cluster_python">
 <a href="#state_wait_for_cluster_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1263,11 +1211,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="namespacecontainerresourcelimit">Namespace<wbr>Container<wbr>Resource<wbr>Limit</h4>
@@ -1278,11 +1223,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NamespaceContainerResourceLimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NamespaceContainerResourceLimitOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NamespaceContainerResourceLimitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NamespaceContainerResourceLimit.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1292,49 +1236,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="limitscpu_csharp">
 <a href="#limitscpu_csharp" style="color: inherit; text-decoration: inherit;">Limits<wbr>Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limitsmemory_csharp">
 <a href="#limitsmemory_csharp" style="color: inherit; text-decoration: inherit;">Limits<wbr>Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestscpu_csharp">
 <a href="#requestscpu_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestsmemory_csharp">
 <a href="#requestsmemory_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in namespace (string)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1343,49 +1282,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="limitscpu_go">
 <a href="#limitscpu_go" style="color: inherit; text-decoration: inherit;">Limits<wbr>Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limitsmemory_go">
 <a href="#limitsmemory_go" style="color: inherit; text-decoration: inherit;">Limits<wbr>Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestscpu_go">
 <a href="#requestscpu_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestsmemory_go">
 <a href="#requestsmemory_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in namespace (string)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1394,103 +1328,90 @@ The following state arguments are supported:
             title="Optional">
         <span id="limitscpu_nodejs">
 <a href="#limitscpu_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limitsmemory_nodejs">
 <a href="#limitsmemory_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestscpu_nodejs">
 <a href="#requestscpu_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestsmemory_nodejs">
 <a href="#requestsmemory_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in namespace (string)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="limitscpu_python">
-<a href="#limitscpu_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
-</span> 
+        <span id="limits_cpu_python">
+<a href="#limits_cpu_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>cpu</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="limitsmemory_python">
-<a href="#limitsmemory_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
-</span> 
+        <span id="limits_memory_python">
+<a href="#limits_memory_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>memory</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="requestscpu_python">
-<a href="#requestscpu_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
-</span> 
+        <span id="requests_cpu_python">
+<a href="#requests_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>cpu</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="requestsmemory_python">
-<a href="#requestsmemory_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
-</span> 
+        <span id="requests_memory_python">
+<a href="#requests_memory_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>memory</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in namespace (string)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="namespaceresourcequota">Namespace<wbr>Resource<wbr>Quota</h4>
 {{% choosable language nodejs %}}
@@ -1500,11 +1421,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NamespaceResourceQuotaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NamespaceResourceQuotaOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NamespaceResourceQuotaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NamespaceResourceQuota.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1514,16 +1434,14 @@ The following state arguments are supported:
             title="Required">
         <span id="limit_csharp">
 <a href="#limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespaceresourcequotalimit">Namespace<wbr>Resource<wbr>Quota<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource quota limit for namespace (list maxitems:1)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1532,16 +1450,14 @@ The following state arguments are supported:
             title="Required">
         <span id="limit_go">
 <a href="#limit_go" style="color: inherit; text-decoration: inherit;">Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespaceresourcequotalimit">Namespace<wbr>Resource<wbr>Quota<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}Resource quota limit for namespace (list maxitems:1)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1550,16 +1466,14 @@ The following state arguments are supported:
             title="Required">
         <span id="limit_nodejs">
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#namespaceresourcequotalimit">Namespace<wbr>Resource<wbr>Quota<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}Resource quota limit for namespace (list maxitems:1)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1568,19 +1482,14 @@ The following state arguments are supported:
             title="Required">
         <span id="limit_python">
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#namespaceresourcequotalimit">Dict[Namespace<wbr>Resource<wbr>Quota<wbr>Limit]</a></span>
+        <span class="property-type"><a href="#namespaceresourcequotalimit">Namespace<wbr>Resource<wbr>Quota<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource quota limit for namespace (list maxitems:1)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="namespaceresourcequotalimit">Namespace<wbr>Resource<wbr>Quota<wbr>Limit</h4>
 {{% choosable language nodejs %}}
@@ -1590,11 +1499,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NamespaceResourceQuotaLimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#NamespaceResourceQuotaLimitOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.NamespaceResourceQuotaLimitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.NamespaceResourceQuotaLimit.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1604,147 +1512,133 @@ The following state arguments are supported:
             title="Optional">
         <span id="configmaps_csharp">
 <a href="#configmaps_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Maps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for config maps in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limitscpu_csharp">
 <a href="#limitscpu_csharp" style="color: inherit; text-decoration: inherit;">Limits<wbr>Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limitsmemory_csharp">
 <a href="#limitsmemory_csharp" style="color: inherit; text-decoration: inherit;">Limits<wbr>Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="persistentvolumeclaims_csharp">
 <a href="#persistentvolumeclaims_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Volume<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for persistent volume claims in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pods_csharp">
 <a href="#pods_csharp" style="color: inherit; text-decoration: inherit;">Pods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for pods in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicationcontrollers_csharp">
 <a href="#replicationcontrollers_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Controllers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for replication controllers in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestscpu_csharp">
 <a href="#requestscpu_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestsmemory_csharp">
 <a href="#requestsmemory_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestsstorage_csharp">
 <a href="#requestsstorage_csharp" style="color: inherit; text-decoration: inherit;">Requests<wbr>Storage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests storage in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secrets_csharp">
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for secrets in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="services_csharp">
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicesloadbalancers_csharp">
 <a href="#servicesloadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Load<wbr>Balancers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for services load balancers in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicesnodeports_csharp">
 <a href="#servicesnodeports_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Node<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for services node ports in namespace (string)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1753,147 +1647,133 @@ The following state arguments are supported:
             title="Optional">
         <span id="configmaps_go">
 <a href="#configmaps_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Maps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for config maps in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limitscpu_go">
 <a href="#limitscpu_go" style="color: inherit; text-decoration: inherit;">Limits<wbr>Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limitsmemory_go">
 <a href="#limitsmemory_go" style="color: inherit; text-decoration: inherit;">Limits<wbr>Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="persistentvolumeclaims_go">
 <a href="#persistentvolumeclaims_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Volume<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for persistent volume claims in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pods_go">
 <a href="#pods_go" style="color: inherit; text-decoration: inherit;">Pods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for pods in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicationcontrollers_go">
 <a href="#replicationcontrollers_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Controllers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for replication controllers in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestscpu_go">
 <a href="#requestscpu_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestsmemory_go">
 <a href="#requestsmemory_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestsstorage_go">
 <a href="#requestsstorage_go" style="color: inherit; text-decoration: inherit;">Requests<wbr>Storage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests storage in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secrets_go">
 <a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for secrets in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="services_go">
 <a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicesloadbalancers_go">
 <a href="#servicesloadbalancers_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Load<wbr>Balancers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for services load balancers in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicesnodeports_go">
 <a href="#servicesnodeports_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Node<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for services node ports in namespace (string)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1902,300 +1782,282 @@ The following state arguments are supported:
             title="Optional">
         <span id="configmaps_nodejs">
 <a href="#configmaps_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Maps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for config maps in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limitscpu_nodejs">
 <a href="#limitscpu_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limitsmemory_nodejs">
 <a href="#limitsmemory_nodejs" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="persistentvolumeclaims_nodejs">
 <a href="#persistentvolumeclaims_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Claims</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for persistent volume claims in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pods_nodejs">
 <a href="#pods_nodejs" style="color: inherit; text-decoration: inherit;">pods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for pods in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicationcontrollers_nodejs">
 <a href="#replicationcontrollers_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Controllers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for replication controllers in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestscpu_nodejs">
 <a href="#requestscpu_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestsmemory_nodejs">
 <a href="#requestsmemory_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestsstorage_nodejs">
 <a href="#requestsstorage_nodejs" style="color: inherit; text-decoration: inherit;">requests<wbr>Storage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for requests storage in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secrets_nodejs">
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for secrets in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="services_nodejs">
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicesloadbalancers_nodejs">
 <a href="#servicesloadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Load<wbr>Balancers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for services load balancers in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicesnodeports_nodejs">
 <a href="#servicesnodeports_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Node<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit for services node ports in namespace (string)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="configmaps_python">
-<a href="#configmaps_python" style="color: inherit; text-decoration: inherit;">config<wbr>Maps</a>
-</span> 
+        <span id="config_maps_python">
+<a href="#config_maps_python" style="color: inherit; text-decoration: inherit;">config_<wbr>maps</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for config maps in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="limitscpu_python">
-<a href="#limitscpu_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Cpu</a>
-</span> 
+        <span id="limits_cpu_python">
+<a href="#limits_cpu_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>cpu</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for limits cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="limitsmemory_python">
-<a href="#limitsmemory_python" style="color: inherit; text-decoration: inherit;">limits<wbr>Memory</a>
-</span> 
+        <span id="limits_memory_python">
+<a href="#limits_memory_python" style="color: inherit; text-decoration: inherit;">limits_<wbr>memory</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for limits memory in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="persistentvolumeclaims_python">
-<a href="#persistentvolumeclaims_python" style="color: inherit; text-decoration: inherit;">persistent<wbr>Volume<wbr>Claims</a>
-</span> 
+        <span id="persistent_volume_claims_python">
+<a href="#persistent_volume_claims_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>volume_<wbr>claims</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for persistent volume claims in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pods_python">
 <a href="#pods_python" style="color: inherit; text-decoration: inherit;">pods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for pods in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="replicationcontrollers_python">
-<a href="#replicationcontrollers_python" style="color: inherit; text-decoration: inherit;">replication<wbr>Controllers</a>
-</span> 
+        <span id="replication_controllers_python">
+<a href="#replication_controllers_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>controllers</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for replication controllers in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="requestscpu_python">
-<a href="#requestscpu_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Cpu</a>
-</span> 
+        <span id="requests_cpu_python">
+<a href="#requests_cpu_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>cpu</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for requests cpu in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="requestsmemory_python">
-<a href="#requestsmemory_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Memory</a>
-</span> 
+        <span id="requests_memory_python">
+<a href="#requests_memory_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>memory</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for requests memory in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="requestsstorage_python">
-<a href="#requestsstorage_python" style="color: inherit; text-decoration: inherit;">requests<wbr>Storage</a>
-</span> 
+        <span id="requests_storage_python">
+<a href="#requests_storage_python" style="color: inherit; text-decoration: inherit;">requests_<wbr>storage</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for requests storage in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secrets_python">
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for secrets in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="services_python">
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="servicesloadbalancers_python">
-<a href="#servicesloadbalancers_python" style="color: inherit; text-decoration: inherit;">services<wbr>Load<wbr>Balancers</a>
-</span> 
+        <span id="services_load_balancers_python">
+<a href="#services_load_balancers_python" style="color: inherit; text-decoration: inherit;">services_<wbr>load_<wbr>balancers</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for services load balancers in namespace (string)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="servicesnodeports_python">
-<a href="#servicesnodeports_python" style="color: inherit; text-decoration: inherit;">services<wbr>Node<wbr>Ports</a>
-</span> 
+        <span id="services_node_ports_python">
+<a href="#services_node_ports_python" style="color: inherit; text-decoration: inherit;">services_<wbr>node_<wbr>ports</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit for services node ports in namespace (string)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Namespaces can be imported using the namespace ID in the format `<project_id>.<namespace_id>`
 
+```sh
+ $ pulumi import rancher2:index/namespace:Namespace foo &lt;project_id&gt;.&lt;namespaces_id&gt;
+```
 
+ `<project_id>` is in the format `<cluster_id>:<id>`, but <id> part is optional:
 
+- If full project_id is provided, `<project_id>=<cluster_id>:<id>`, the namespace'll be assigned to corresponding cluster project once it's imported.
+
+- If `<id>` part is omitted `<project_id>=<cluster_id>`, the namespace'll not be assigned to any project. To move it into a project, `<project_id>=<cluster_id>:<id>` needs to be updated in tf file. Namespace movement is only supported inside same `cluster_id`.
 
 
 
@@ -2207,6 +2069,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rancher2).</dd>
+	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
 </dl>
 

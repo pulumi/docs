@@ -1,6 +1,6 @@
 ---
-title: "azuredevops"
-title_tag: "Package azuredevops"
+title: "Azure DevOps"
+title_tag: "Package Azure DevOps"
 meta_desc: "A Pulumi package for creating and managing Azure DevOps."
 menu:
     reference:
@@ -28,7 +28,55 @@ A Pulumi package for creating and managing Azure DevOps.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="areapermissions" title="AreaPermissions"><span class="symbol resource"></span>AreaPermissions</a></li>
+    <li><a href="branchpolicyautoreviewers" title="BranchPolicyAutoReviewers"><span class="symbol resource"></span>BranchPolicyAutoReviewers</a></li>
+    <li><a href="branchpolicybuildvalidation" title="BranchPolicyBuildValidation"><span class="symbol resource"></span>BranchPolicyBuildValidation</a></li>
+    <li><a href="branchpolicycommentresolution" title="BranchPolicyCommentResolution"><span class="symbol resource"></span>BranchPolicyCommentResolution</a></li>
+    <li><a href="branchpolicyminreviewers" title="BranchPolicyMinReviewers"><span class="symbol resource"></span>BranchPolicyMinReviewers</a></li>
+    <li><a href="branchpolicyworkitemlinking" title="BranchPolicyWorkItemLinking"><span class="symbol resource"></span>BranchPolicyWorkItemLinking</a></li>
+    <li><a href="builddefinition" title="BuildDefinition"><span class="symbol resource"></span>BuildDefinition</a></li>
+    <li><a href="builddefinitionpermissions" title="BuildDefinitionPermissions"><span class="symbol resource"></span>BuildDefinitionPermissions</a></li>
+    <li><a href="git" title="Git"><span class="symbol resource"></span>Git</a></li>
+    <li><a href="gitpermissions" title="GitPermissions"><span class="symbol resource"></span>GitPermissions</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="groupmembership" title="GroupMembership"><span class="symbol resource"></span>GroupMembership</a></li>
+    <li><a href="iterativepermissions" title="IterativePermissions"><span class="symbol resource"></span>IterativePermissions</a></li>
+    <li><a href="pool" title="Pool"><span class="symbol resource"></span>Pool</a></li>
+    <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
+    <li><a href="projectfeatures" title="ProjectFeatures"><span class="symbol resource"></span>ProjectFeatures</a></li>
+    <li><a href="projectpermissions" title="ProjectPermissions"><span class="symbol resource"></span>ProjectPermissions</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
+    <li><a href="resourceauthorization" title="ResourceAuthorization"><span class="symbol resource"></span>ResourceAuthorization</a></li>
+    <li><a href="serviceendpointartifactory" title="ServiceEndpointArtifactory"><span class="symbol resource"></span>ServiceEndpointArtifactory</a></li>
+    <li><a href="serviceendpointaws" title="ServiceEndpointAws"><span class="symbol resource"></span>ServiceEndpointAws</a></li>
+    <li><a href="serviceendpointazureecr" title="ServiceEndpointAzureEcr"><span class="symbol resource"></span>ServiceEndpointAzureEcr</a></li>
+    <li><a href="serviceendpointazurerm" title="ServiceEndpointAzureRM"><span class="symbol resource"></span>ServiceEndpointAzureRM</a></li>
+    <li><a href="serviceendpointbitbucket" title="ServiceEndpointBitBucket"><span class="symbol resource"></span>ServiceEndpointBitBucket</a></li>
+    <li><a href="serviceendpointdockerregistry" title="ServiceEndpointDockerRegistry"><span class="symbol resource"></span>ServiceEndpointDockerRegistry</a></li>
+    <li><a href="serviceendpointgithub" title="ServiceEndpointGitHub"><span class="symbol resource"></span>ServiceEndpointGitHub</a></li>
+    <li><a href="serviceendpointkubernetes" title="ServiceEndpointKubernetes"><span class="symbol resource"></span>ServiceEndpointKubernetes</a></li>
+    <li><a href="serviceendpointpipeline" title="ServiceEndpointPipeline"><span class="symbol resource"></span>ServiceEndpointPipeline</a></li>
+    <li><a href="serviceendpointsonarqube" title="ServiceEndpointSonarQube"><span class="symbol resource"></span>ServiceEndpointSonarQube</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="variablegroup" title="VariableGroup"><span class="symbol resource"></span>VariableGroup</a></li>
+    <li><a href="workitemquerypermissions" title="WorkItemQueryPermissions"><span class="symbol resource"></span>WorkItemQueryPermissions</a></li>
+</ul>
+
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getagentqueue" title="GetAgentQueue"><span class="symbol function"></span>GetAgentQueue</a></li>
+    <li><a href="getarea" title="GetArea"><span class="symbol function"></span>GetArea</a></li>
+    <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
+    <li><a href="getgitrepository" title="GetGitRepository"><span class="symbol function"></span>GetGitRepository</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
+    <li><a href="getiteration" title="GetIteration"><span class="symbol function"></span>GetIteration</a></li>
+    <li><a href="getpool" title="GetPool"><span class="symbol function"></span>GetPool</a></li>
+    <li><a href="getpools" title="GetPools"><span class="symbol function"></span>GetPools</a></li>
+    <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
+    <li><a href="getprojects" title="GetProjects"><span class="symbol function"></span>GetProjects</a></li>
+    <li><a href="getrepositories" title="GetRepositories"><span class="symbol function"></span>GetRepositories</a></li>
+    <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -38,26 +86,8 @@ A Pulumi package for creating and managing Azure DevOps.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuredevops).</dd>
+	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.0.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.html" title="Pulumi.AzureDevOps">Pulumi.AzureDevOps</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/?tab=doc#" title="azuredevops">azuredevops</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/#" title="@pulumi/azuredevops">@pulumi/azuredevops</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azuredevops" title="pulumi_azuredevops">pulumi_azuredevops</a></dd>
-
+	<dd>1.2.1</dd>
 </dl>
 

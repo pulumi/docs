@@ -12,11 +12,81 @@ meta_desc: "Explore the GetBundle function of the workspaces module, including e
 
 Retrieve information about an AWS WorkSpaces bundle.
 
+
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### By ID
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
 
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(Aws.Workspaces.GetBundle.InvokeAsync(new Aws.Workspaces.GetBundleArgs
+        {
+            BundleId = "wsb-b0s22j3d7",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "wsb-b0s22j3d7"
+		_, err := workspaces.GetBundle(ctx, &workspaces.GetBundleArgs{
+			BundleId: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.workspaces.get_bundle(bundle_id="wsb-b0s22j3d7")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = pulumi.output(aws.workspaces.getBundle({
+    bundleId: "wsb-b0s22j3d7",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+### By Owner &amp; Name
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -99,31 +169,30 @@ const example = pulumi.output(aws.workspaces.getBundle({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBundle<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/workspaces/#GetBundleArgs">GetBundleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/workspaces/#GetBundleResult">GetBundleResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBundle<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBundleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBundleResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_bundle(</span>bundle_id=None<span class="p">, </span>name=None<span class="p">, </span>owner=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bundle(</span><span class="nx">bundle_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBundleResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBundle<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#GetBundleArgs">GetBundleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#GetBundleResult">GetBundleResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBundle<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetBundleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBundleResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBundle </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.GetBundleResult.html">GetBundleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.GetBundleArgs.html">GetBundleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBundleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBundleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -133,38 +202,34 @@ The following arguments are supported:
             title="Optional">
         <span id="bundleid_csharp">
 <a href="#bundleid_csharp" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the bundle.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bundle. You cannot combine this parameter with `bundle_id`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the bundles. You have to leave it blank for own bundles. You cannot combine this parameter with `bundle_id`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -173,38 +238,34 @@ The following arguments are supported:
             title="Optional">
         <span id="bundleid_go">
 <a href="#bundleid_go" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the bundle.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bundle. You cannot combine this parameter with `bundle_id`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the bundles. You have to leave it blank for own bundles. You cannot combine this parameter with `bundle_id`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -213,38 +274,34 @@ The following arguments are supported:
             title="Optional">
         <span id="bundleid_nodejs">
 <a href="#bundleid_nodejs" style="color: inherit; text-decoration: inherit;">bundle<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the bundle.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bundle. You cannot combine this parameter with `bundle_id`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the bundles. You have to leave it blank for own bundles. You cannot combine this parameter with `bundle_id`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -253,41 +310,34 @@ The following arguments are supported:
             title="Optional">
         <span id="bundle_id_python">
 <a href="#bundle_id_python" style="color: inherit; text-decoration: inherit;">bundle_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the bundle.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bundle. You cannot combine this parameter with `bundle_id`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the bundles. You have to leave it blank for own bundles. You cannot combine this parameter with `bundle_id`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -298,7 +348,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -306,93 +355,84 @@ The following output properties are available:
             title="">
         <span id="computetypes_csharp">
 <a href="#computetypes_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbundlecomputetype">List&lt;Get<wbr>Bundle<wbr>Compute<wbr>Type&gt;</a></span>
     </dt>
     <dd>{{% md %}}The compute type. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bundle.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootstorages_csharp">
 <a href="#rootstorages_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Storages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbundlerootstorage">List&lt;Get<wbr>Bundle<wbr>Root<wbr>Storage&gt;</a></span>
     </dt>
     <dd>{{% md %}}The root volume. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="userstorages_csharp">
 <a href="#userstorages_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Storages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbundleuserstorage">List&lt;Get<wbr>Bundle<wbr>User<wbr>Storage&gt;</a></span>
     </dt>
     <dd>{{% md %}}The user storage. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bundleid_csharp">
 <a href="#bundleid_csharp" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the bundle.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the compute type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the bundle.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -401,93 +441,84 @@ The following output properties are available:
             title="">
         <span id="computetypes_go">
 <a href="#computetypes_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbundlecomputetype">[]Get<wbr>Bundle<wbr>Compute<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The compute type. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bundle.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootstorages_go">
 <a href="#rootstorages_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Storages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbundlerootstorage">[]Get<wbr>Bundle<wbr>Root<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}The root volume. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="userstorages_go">
 <a href="#userstorages_go" style="color: inherit; text-decoration: inherit;">User<wbr>Storages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbundleuserstorage">[]Get<wbr>Bundle<wbr>User<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}The user storage. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bundleid_go">
 <a href="#bundleid_go" style="color: inherit; text-decoration: inherit;">Bundle<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the bundle.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the compute type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the bundle.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -496,93 +527,84 @@ The following output properties are available:
             title="">
         <span id="computetypes_nodejs">
 <a href="#computetypes_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbundlecomputetype">Get<wbr>Bundle<wbr>Compute<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}The compute type. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bundle.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootstorages_nodejs">
 <a href="#rootstorages_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Storages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbundlerootstorage">Get<wbr>Bundle<wbr>Root<wbr>Storage[]</a></span>
     </dt>
     <dd>{{% md %}}The root volume. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="userstorages_nodejs">
 <a href="#userstorages_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Storages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbundleuserstorage">Get<wbr>Bundle<wbr>User<wbr>Storage[]</a></span>
     </dt>
     <dd>{{% md %}}The user storage. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bundleid_nodejs">
 <a href="#bundleid_nodejs" style="color: inherit; text-decoration: inherit;">bundle<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the bundle.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the compute type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the bundle.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -591,96 +613,84 @@ The following output properties are available:
             title="">
         <span id="compute_types_python">
 <a href="#compute_types_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbundlecomputetype">List[Get<wbr>Bundle<wbr>Compute<wbr>Type]</a></span>
+        <span class="property-type"><a href="#getbundlecomputetype">Sequence[Get<wbr>Bundle<wbr>Compute<wbr>Type]</a></span>
     </dt>
     <dd>{{% md %}}The compute type. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the bundle.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="root_storages_python">
 <a href="#root_storages_python" style="color: inherit; text-decoration: inherit;">root_<wbr>storages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbundlerootstorage">List[Get<wbr>Bundle<wbr>Root<wbr>Storage]</a></span>
+        <span class="property-type"><a href="#getbundlerootstorage">Sequence[Get<wbr>Bundle<wbr>Root<wbr>Storage]</a></span>
     </dt>
     <dd>{{% md %}}The root volume. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="user_storages_python">
 <a href="#user_storages_python" style="color: inherit; text-decoration: inherit;">user_<wbr>storages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbundleuserstorage">List[Get<wbr>Bundle<wbr>User<wbr>Storage]</a></span>
+        <span class="property-type"><a href="#getbundleuserstorage">Sequence[Get<wbr>Bundle<wbr>User<wbr>Storage]</a></span>
     </dt>
     <dd>{{% md %}}The user storage. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bundle_id_python">
 <a href="#bundle_id_python" style="color: inherit; text-decoration: inherit;">bundle_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the bundle.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the compute type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the bundle.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -689,17 +699,6 @@ The following output properties are available:
 
 
 <h4 id="getbundlecomputetype">Get<wbr>Bundle<wbr>Compute<wbr>Type</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleComputeType">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#GetBundleComputeType">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Outputs.GetBundleComputeType.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -710,16 +709,14 @@ The following output properties are available:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bundle. You cannot combine this parameter with `bundle_id`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -728,16 +725,14 @@ The following output properties are available:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bundle. You cannot combine this parameter with `bundle_id`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -746,16 +741,14 @@ The following output properties are available:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bundle. You cannot combine this parameter with `bundle_id`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -764,32 +757,16 @@ The following output properties are available:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bundle. You cannot combine this parameter with `bundle_id`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getbundlerootstorage">Get<wbr>Bundle<wbr>Root<wbr>Storage</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleRootStorage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#GetBundleRootStorage">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Outputs.GetBundleRootStorage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -800,16 +777,14 @@ The following output properties are available:
             title="Required">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the user storage.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -818,16 +793,14 @@ The following output properties are available:
             title="Required">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the user storage.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -836,16 +809,14 @@ The following output properties are available:
             title="Required">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the user storage.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -854,32 +825,16 @@ The following output properties are available:
             title="Required">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the user storage.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getbundleuserstorage">Get<wbr>Bundle<wbr>User<wbr>Storage</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleUserStorage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#GetBundleUserStorage">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Outputs.GetBundleUserStorage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -890,16 +845,14 @@ The following output properties are available:
             title="Required">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the user storage.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -908,16 +861,14 @@ The following output properties are available:
             title="Required">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the user storage.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -926,16 +877,14 @@ The following output properties are available:
             title="Required">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the user storage.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -944,19 +893,14 @@ The following output properties are available:
             title="Required">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the user storage.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

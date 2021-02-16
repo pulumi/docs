@@ -14,12 +14,14 @@ Explore the resources and functions of the appservice module in the Azure packag
     <li><a href="activeslot" title="ActiveSlot"><span class="symbol resource"></span>ActiveSlot</a></li>
     <li><a href="appservice" title="AppService"><span class="symbol resource"></span>AppService</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="certificatebinding" title="CertificateBinding"><span class="symbol resource"></span>CertificateBinding</a></li>
     <li><a href="certificateorder" title="CertificateOrder"><span class="symbol resource"></span>CertificateOrder</a></li>
     <li><a href="customhostnamebinding" title="CustomHostnameBinding"><span class="symbol resource"></span>CustomHostnameBinding</a></li>
     <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
     <li><a href="functionapp" title="FunctionApp"><span class="symbol resource"></span>FunctionApp</a></li>
     <li><a href="functionappslot" title="FunctionAppSlot"><span class="symbol resource"></span>FunctionAppSlot</a></li>
     <li><a href="hybridconnection" title="HybridConnection"><span class="symbol resource"></span>HybridConnection</a></li>
+    <li><a href="managedcertificate" title="ManagedCertificate"><span class="symbol resource"></span>ManagedCertificate</a></li>
     <li><a href="plan" title="Plan"><span class="symbol resource"></span>Plan</a></li>
     <li><a href="slot" title="Slot"><span class="symbol resource"></span>Slot</a></li>
     <li><a href="slotvirtualnetworkswiftconnection" title="SlotVirtualNetworkSwiftConnection"><span class="symbol resource"></span>SlotVirtualNetworkSwiftConnection</a></li>
@@ -35,6 +37,7 @@ Explore the resources and functions of the appservice module in the Azure packag
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
     <li><a href="getcertificateorder" title="GetCertificateOrder"><span class="symbol function"></span>GetCertificateOrder</a></li>
     <li><a href="getfunctionapp" title="GetFunctionApp"><span class="symbol function"></span>GetFunctionApp</a></li>
+    <li><a href="getfunctionapphostkeys" title="GetFunctionAppHostKeys"><span class="symbol function"></span>GetFunctionAppHostKeys</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -46,7 +49,7 @@ Explore the resources and functions of the appservice module in the Azure packag
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.17.0</dd>
+	<dd>3.46.0</dd>
 </dl>
 
 

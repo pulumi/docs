@@ -1,6 +1,6 @@
 ---
-title: "wavefront"
-title_tag: "Module wavefront | Package wavefront"
+title: "Wavefront"
+title_tag: "Module Wavefront | Package Wavefront"
 meta_desc: "A Pulumi package for creating and managing wavefront cloud resources."
 menu:
     reference:
@@ -30,8 +30,12 @@ A Pulumi package for creating and managing wavefront cloud resources.
     <li><a href="dashboard" title="Dashboard"><span class="symbol resource"></span>Dashboard</a></li>
     <li><a href="dashboardjson" title="DashboardJson"><span class="symbol resource"></span>DashboardJson</a></li>
     <li><a href="derivedmetric" title="DerivedMetric"><span class="symbol resource"></span>DerivedMetric</a></li>
+    <li><a href="externallink" title="ExternalLink"><span class="symbol resource"></span>ExternalLink</a></li>
+    <li><a href="ingestionpolicy" title="IngestionPolicy"><span class="symbol resource"></span>IngestionPolicy</a></li>
+    <li><a href="maintenancewindow" title="MaintenanceWindow"><span class="symbol resource"></span>MaintenanceWindow</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+    <li><a href="serviceaccount" title="ServiceAccount"><span class="symbol resource"></span>ServiceAccount</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
     <li><a href="usergroup" title="UserGroup"><span class="symbol resource"></span>UserGroup</a></li>
 </ul>
@@ -48,9 +52,9 @@ A Pulumi package for creating and managing wavefront cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/terraform-providers/terraform-provider-wavefront).</dd>
+	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/vmware/terraform-provider-wavefront).</dd>
 	<dt>Version</dt>
-	<dd>0.0.1</dd>
+	<dd>0.7.0</dd>
 </dl>
 
 

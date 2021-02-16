@@ -25,26 +25,8 @@ Explore the resources and functions of the alikafka module in the AliCloud packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.AliKafka.html" title="Pulumi.AliCloud.AliKafka">Pulumi.AliCloud.AliKafka</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/alikafka?tab=doc#" title="alicloud/alikafka">alicloud/alikafka</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/alikafka/#" title="@pulumi/alicloud/alikafka">@pulumi/alicloud/alikafka</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/alikafka" title="pulumi_alicloud/alikafka">pulumi_alicloud/alikafka</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

@@ -21,6 +21,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="appinsights/" title="appinsights"><span class="symbol module"></span>appinsights</a></li>
     <li><a href="appplatform/" title="appplatform"><span class="symbol module"></span>appplatform</a></li>
     <li><a href="appservice/" title="appservice"><span class="symbol module"></span>appservice</a></li>
+    <li><a href="attestation/" title="attestation"><span class="symbol module"></span>attestation</a></li>
     <li><a href="authorization/" title="authorization"><span class="symbol module"></span>authorization</a></li>
     <li><a href="automation/" title="automation"><span class="symbol module"></span>automation</a></li>
     <li><a href="backup/" title="backup"><span class="symbol module"></span>backup</a></li>
@@ -40,8 +41,10 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="datafactory/" title="datafactory"><span class="symbol module"></span>datafactory</a></li>
     <li><a href="datalake/" title="datalake"><span class="symbol module"></span>datalake</a></li>
     <li><a href="datashare/" title="datashare"><span class="symbol module"></span>datashare</a></li>
+    <li><a href="desktopvirtualization/" title="desktopvirtualization"><span class="symbol module"></span>desktopvirtualization</a></li>
     <li><a href="devspace/" title="devspace"><span class="symbol module"></span>devspace</a></li>
     <li><a href="devtest/" title="devtest"><span class="symbol module"></span>devtest</a></li>
+    <li><a href="digitaltwins/" title="digitaltwins"><span class="symbol module"></span>digitaltwins</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
     <li><a href="eventgrid/" title="eventgrid"><span class="symbol module"></span>eventgrid</a></li>
     <li><a href="eventhub/" title="eventhub"><span class="symbol module"></span>eventhub</a></li>
@@ -55,6 +58,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="keyvault/" title="keyvault"><span class="symbol module"></span>keyvault</a></li>
     <li><a href="kusto/" title="kusto"><span class="symbol module"></span>kusto</a></li>
     <li><a href="lb/" title="lb"><span class="symbol module"></span>lb</a></li>
+    <li><a href="lighthouse/" title="lighthouse"><span class="symbol module"></span>lighthouse</a></li>
     <li><a href="loganalytics/" title="loganalytics"><span class="symbol module"></span>loganalytics</a></li>
     <li><a href="logicapps/" title="logicapps"><span class="symbol module"></span>logicapps</a></li>
     <li><a href="machinelearning/" title="machinelearning"><span class="symbol module"></span>machinelearning</a></li>
@@ -66,6 +70,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="maps/" title="maps"><span class="symbol module"></span>maps</a></li>
     <li><a href="mariadb/" title="mariadb"><span class="symbol module"></span>mariadb</a></li>
     <li><a href="marketplace/" title="marketplace"><span class="symbol module"></span>marketplace</a></li>
+    <li><a href="media/" title="media"><span class="symbol module"></span>media</a></li>
     <li><a href="mediaservices/" title="mediaservices"><span class="symbol module"></span>mediaservices</a></li>
     <li><a href="mixedreality/" title="mixedreality"><span class="symbol module"></span>mixedreality</a></li>
     <li><a href="monitoring/" title="monitoring"><span class="symbol module"></span>monitoring</a></li>
@@ -94,6 +99,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="signalr/" title="signalr"><span class="symbol module"></span>signalr</a></li>
     <li><a href="siterecovery/" title="siterecovery"><span class="symbol module"></span>siterecovery</a></li>
     <li><a href="sql/" title="sql"><span class="symbol module"></span>sql</a></li>
+    <li><a href="stack/" title="stack"><span class="symbol module"></span>stack</a></li>
     <li><a href="storage/" title="storage"><span class="symbol module"></span>storage</a></li>
     <li><a href="streamanalytics/" title="streamanalytics"><span class="symbol module"></span>streamanalytics</a></li>
     <li><a href="synapse/" title="synapse"><span class="symbol module"></span>synapse</a></li>
@@ -115,7 +121,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.17.0</dd>
+	<dd>3.46.0</dd>
 </dl>
 
 

@@ -69,16 +69,25 @@ user = auth0.User("my-demo-user",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  auth0 "github.com/pulumi/pulumi-auth0/sdk/go/auth0"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	auth0 "github.com/pulumi/pulumi-auth0/sdk/go/auth0"
 )
 
-user, _ := auth.NewUser(ctx, "my-demo-user", &auth0.UserArgs{
-  Username:       pulumi.String("joebloggs"),
-  Password:       pulumi.String("Password1234!"),
-  Email:          pulumi.String("joebloggs@mycompany.com"),
-  ConnectionName: pulumi.String("Username-Password-Authentication"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		user, err := auth.NewUser(ctx, "my-demo-user", &auth0.UserArgs{
+			Username:       pulumi.String("joebloggs"),
+			Password:       pulumi.String("Password1234!"),
+			Email:          pulumi.String("joebloggs@mycompany.com"),
+			ConnectionName: pulumi.String("Username-Password-Authentication"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}

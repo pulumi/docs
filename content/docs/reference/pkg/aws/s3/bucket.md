@@ -1,8 +1,8 @@
 
 ---
 title: "Bucket"
-title_tag: "Resource Bucket | Module s3 | Package AWS"
-meta_desc: "Explore the Bucket resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a S3 bucket resource."
+title_tag: "aws.s3.Bucket"
+meta_desc: "Documentation for the aws.s3.Bucket resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,8 @@ meta_desc: "Explore the Bucket resource of the s3 module, including examples, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a S3 bucket resource.
+
+> This functionality is for managing S3 in an AWS Partition. To manage [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html), see the [`aws.s3control.Bucket`](https://www.terraform.io/docs/providers/aws/r/s3control_bucket.html) resource.
 
 {{% examples %}}
 ## Example Usage
@@ -151,10 +153,10 @@ import pulumi_aws as aws
 bucket = aws.s3.Bucket("bucket",
     acl="public-read",
     policy=(lambda path: open(path).read())("policy.json"),
-    website={
-        "indexDocument": "index.html",
-        "errorDocument": "error.html",
-        "routingRules": """[{
+    website=aws.s3.BucketWebsiteArgs(
+        index_document="index.html",
+        error_document="error.html",
+        routing_rules="""[{
     "Condition": {
         "KeyPrefixEquals": "docs/"
     },
@@ -163,7 +165,7 @@ bucket = aws.s3.Bucket("bucket",
     }
 }]
 """,
-    })
+    ))
 ```
 
 {{% /example %}}
@@ -290,16 +292,16 @@ import pulumi_aws as aws
 
 bucket = aws.s3.Bucket("bucket",
     acl="public-read",
-    cors_rules=[{
-        "allowedHeaders": ["*"],
-        "allowedMethods": [
+    cors_rules=[aws.s3.BucketCorsRuleArgs(
+        allowed_headers=["*"],
+        allowed_methods=[
             "PUT",
             "POST",
         ],
-        "allowedOrigins": ["https://s3-website-test.mydomain.com"],
-        "exposeHeaders": ["ETag"],
-        "maxAgeSeconds": 3000,
-    }])
+        allowed_origins=["https://s3-website-test.mydomain.com"],
+        expose_headers=["ETag"],
+        max_age_seconds=3000,
+    )])
 ```
 
 {{% /example %}}
@@ -386,9 +388,9 @@ import pulumi_aws as aws
 
 bucket = aws.s3.Bucket("bucket",
     acl="private",
-    versioning={
-        "enabled": True,
-    })
+    versioning=aws.s3.BucketVersioningArgs(
+        enabled=True,
+    ))
 ```
 
 {{% /example %}}
@@ -486,10 +488,10 @@ import pulumi_aws as aws
 log_bucket = aws.s3.Bucket("logBucket", acl="log-delivery-write")
 bucket = aws.s3.Bucket("bucket",
     acl="private",
-    loggings=[{
-        "targetBucket": log_bucket.id,
-        "targetPrefix": "log/",
-    }])
+    loggings=[aws.s3.BucketLoggingArgs(
+        target_bucket=log_bucket.id,
+        target_prefix="log/",
+    )])
 ```
 
 {{% /example %}}
@@ -699,59 +701,59 @@ import pulumi_aws as aws
 bucket = aws.s3.Bucket("bucket",
     acl="private",
     lifecycle_rules=[
-        {
-            "enabled": True,
-            "expiration": {
-                "days": 90,
-            },
-            "id": "log",
-            "prefix": "log/",
-            "tags": {
+        aws.s3.BucketLifecycleRuleArgs(
+            enabled=True,
+            expiration=aws.s3.BucketLifecycleRuleExpirationArgs(
+                days=90,
+            ),
+            id="log",
+            prefix="log/",
+            tags={
                 "autoclean": "true",
                 "rule": "log",
             },
-            "transitions": [
-                {
-                    "days": 30,
-                    "storage_class": "STANDARD_IA",
-                },
-                {
-                    "days": 60,
-                    "storage_class": "GLACIER",
-                },
+            transitions=[
+                aws.s3.BucketLifecycleRuleTransitionArgs(
+                    days=30,
+                    storage_class="STANDARD_IA",
+                ),
+                aws.s3.BucketLifecycleRuleTransitionArgs(
+                    days=60,
+                    storage_class="GLACIER",
+                ),
             ],
-        },
-        {
-            "enabled": True,
-            "expiration": {
-                "date": "2016-01-12",
-            },
-            "id": "tmp",
-            "prefix": "tmp/",
-        },
+        ),
+        aws.s3.BucketLifecycleRuleArgs(
+            enabled=True,
+            expiration=aws.s3.BucketLifecycleRuleExpirationArgs(
+                date="2016-01-12",
+            ),
+            id="tmp",
+            prefix="tmp/",
+        ),
     ])
 versioning_bucket = aws.s3.Bucket("versioningBucket",
     acl="private",
-    lifecycle_rules=[{
-        "enabled": True,
-        "noncurrentVersionExpiration": {
-            "days": 90,
-        },
-        "noncurrentVersionTransitions": [
-            {
-                "days": 30,
-                "storage_class": "STANDARD_IA",
-            },
-            {
-                "days": 60,
-                "storage_class": "GLACIER",
-            },
+    lifecycle_rules=[aws.s3.BucketLifecycleRuleArgs(
+        enabled=True,
+        noncurrent_version_expiration=aws.s3.BucketLifecycleRuleNoncurrentVersionExpirationArgs(
+            days=90,
+        ),
+        noncurrent_version_transitions=[
+            aws.s3.BucketLifecycleRuleNoncurrentVersionTransitionArgs(
+                days=30,
+                storage_class="STANDARD_IA",
+            ),
+            aws.s3.BucketLifecycleRuleNoncurrentVersionTransitionArgs(
+                days=60,
+                storage_class="GLACIER",
+            ),
         ],
-        "prefix": "config/",
-    }],
-    versioning={
-        "enabled": True,
-    })
+        prefix="config/",
+    )],
+    versioning=aws.s3.BucketVersioningArgs(
+        enabled=True,
+    ))
 ```
 
 {{% /example %}}
@@ -1050,27 +1052,27 @@ replication_role = aws.iam.Role("replicationRole", assume_role_policy="""{
   ]
 }
 """)
-destination = aws.s3.Bucket("destination", versioning={
-    "enabled": True,
-})
+destination = aws.s3.Bucket("destination", versioning=aws.s3.BucketVersioningArgs(
+    enabled=True,
+))
 bucket = aws.s3.Bucket("bucket",
     acl="private",
-    versioning={
-        "enabled": True,
-    },
-    replication_configuration={
-        "role": replication_role.arn,
-        "rules": [{
-            "id": "foobar",
-            "prefix": "foo",
-            "status": "Enabled",
-            "destination": {
-                "bucket": destination.arn,
-                "storage_class": "STANDARD",
-            },
-        }],
-    },
-    opts=ResourceOptions(provider=aws["central"]))
+    versioning=aws.s3.BucketVersioningArgs(
+        enabled=True,
+    ),
+    replication_configuration=aws.s3.BucketReplicationConfigurationArgs(
+        role=replication_role.arn,
+        rules=[aws.s3.BucketReplicationConfigurationRuleArgs(
+            id="foobar",
+            prefix="foo",
+            status="Enabled",
+            destination=aws.s3.BucketReplicationConfigurationRuleDestinationArgs(
+                bucket=destination.arn,
+                storage_class="STANDARD",
+            ),
+        )],
+    ),
+    opts=pulumi.ResourceOptions(provider=aws["central"]))
 replication_policy = aws.iam.Policy("replicationPolicy", policy=pulumi.Output.all(bucket.arn, bucket.arn, destination.arn).apply(lambda bucketArn, bucketArn1, destinationArn: f"""{{
   "Version": "2012-10-17",
   "Statement": [
@@ -1281,14 +1283,14 @@ import pulumi_aws as aws
 mykey = aws.kms.Key("mykey",
     description="This key is used to encrypt bucket objects",
     deletion_window_in_days=10)
-mybucket = aws.s3.Bucket("mybucket", server_side_encryption_configuration={
-    "rule": {
-        "applyServerSideEncryptionByDefault": {
-            "kms_master_key_id": mykey.arn,
-            "sseAlgorithm": "aws:kms",
-        },
-    },
-})
+mybucket = aws.s3.Bucket("mybucket", server_side_encryption_configuration=aws.s3.BucketServerSideEncryptionConfigurationArgs(
+    rule=aws.s3.BucketServerSideEncryptionConfigurationRuleArgs(
+        apply_server_side_encryption_by_default=aws.s3.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs(
+            kms_master_key_id=mykey.arn,
+            sse_algorithm="aws:kms",
+        ),
+    ),
+))
 ```
 
 {{% /example %}}
@@ -1410,19 +1412,19 @@ import pulumi_aws as aws
 
 current_user = aws.get_canonical_user_id()
 bucket = aws.s3.Bucket("bucket", grants=[
-    {
-        "id": current_user.id,
-        "type": "CanonicalUser",
-        "permissions": ["FULL_CONTROL"],
-    },
-    {
-        "type": "Group",
-        "permissions": [
+    aws.s3.BucketGrantArgs(
+        id=current_user.id,
+        type="CanonicalUser",
+        permissions=["FULL_CONTROL"],
+    ),
+    aws.s3.BucketGrantArgs(
+        type="Group",
+        permissions=[
             "READ",
             "WRITE",
         ],
-        "uri": "http://acs.amazonaws.com/groups/s3/LogDelivery",
-    },
+        uri="http://acs.amazonaws.com/groups/s3/LogDelivery",
+    ),
 ])
 ```
 
@@ -1462,19 +1464,19 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#Bucket">Bucket</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketArgs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.Bucket">Bucket</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>acceleration_status=None<span class="p">, </span>acl=None<span class="p">, </span>arn=None<span class="p">, </span>bucket=None<span class="p">, </span>bucket_prefix=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>grants=None<span class="p">, </span>hosted_zone_id=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>loggings=None<span class="p">, </span>object_lock_configuration=None<span class="p">, </span>policy=None<span class="p">, </span>replication_configuration=None<span class="p">, </span>request_payer=None<span class="p">, </span>server_side_encryption_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, </span>website_domain=None<span class="p">, </span>website_endpoint=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceleration_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[Union[str, CannedAcl]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grants</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketGrantArgs]]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLoggingArgs]]</span> = None<span class="p">, </span><span class="nx">object_lock_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketObjectLockConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketReplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">request_payer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_side_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketServerSideEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">, </span><span class="nx">website_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">website_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#Bucket">NewBucket</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketArgs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#Bucket">Bucket</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Bucket.html">Bucket</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketArgs.html">BucketArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bucket</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BucketArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1485,7 +1487,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1495,7 +1497,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketArgs">BucketArgs</a></span>
+        <span class="property-type"><a href="#inputs">BucketArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1554,7 +1556,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1564,7 +1566,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketArgs">BucketArgs</a></span>
+        <span class="property-type"><a href="#inputs">BucketArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1593,7 +1595,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1603,7 +1605,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketArgs.html">BucketArgs</a></span>
+        <span class="property-type"><a href="#inputs">BucketArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1626,12 +1628,11 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
 
 ## Bucket Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Bucket resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Bucket resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1642,239 +1643,217 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Optional">
         <span id="accelerationstatus_csharp">
 <a href="#accelerationstatus_csharp" style="color: inherit; text-decoration: inherit;">Acceleration<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
 <a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#cannedacl">Pulumi.<wbr>Aws.<wbr>S3.<wbr>Canned<wbr>Acl</a></span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".  Conflicts with `grant`.
+    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucketprefix_csharp">
 <a href="#bucketprefix_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="corsrules_csharp">
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcorsrule">List&lt;Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_csharp">
 <a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grants_csharp">
 <a href="#grants_csharp" style="color: inherit; text-decoration: inherit;">Grants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketgrant">List&lt;Bucket<wbr>Grant<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostedzoneid_csharp">
 <a href="#hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifecyclerules_csharp">
 <a href="#lifecyclerules_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerule">List&lt;Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loggings_csharp">
 <a href="#loggings_csharp" style="color: inherit; text-decoration: inherit;">Loggings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">List&lt;Bucket<wbr>Logging<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objectlockconfiguration_csharp">
 <a href="#objectlockconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicationconfiguration_csharp">
 <a href="#replicationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestpayer_csharp">
 <a href="#requestpayer_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Payer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies who should bear the cost of Amazon S3 data transfer.
 Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
 the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html)
 developer guide for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serversideencryptionconfiguration_csharp">
 <a href="#serversideencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versioning_csharp">
 <a href="#versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="website_csharp">
 <a href="#website_csharp" style="color: inherit; text-decoration: inherit;">Website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="websitedomain_csharp">
 <a href="#websitedomain_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="websiteendpoint_csharp">
 <a href="#websiteendpoint_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1883,239 +1862,217 @@ developer guide for more information.
             title="Optional">
         <span id="accelerationstatus_go">
 <a href="#accelerationstatus_go" style="color: inherit; text-decoration: inherit;">Acceleration<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="acl_go">
 <a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">string | <a href="#cannedacl">Canned<wbr>Acl</a></span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".  Conflicts with `grant`.
+    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucketprefix_go">
 <a href="#bucketprefix_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="corsrules_go">
 <a href="#corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcorsrule">[]Bucket<wbr>Cors<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_go">
 <a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grants_go">
 <a href="#grants_go" style="color: inherit; text-decoration: inherit;">Grants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketgrant">[]Bucket<wbr>Grant</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostedzoneid_go">
 <a href="#hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifecyclerules_go">
 <a href="#lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerule">[]Bucket<wbr>Lifecycle<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loggings_go">
 <a href="#loggings_go" style="color: inherit; text-decoration: inherit;">Loggings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">[]Bucket<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objectlockconfiguration_go">
 <a href="#objectlockconfiguration_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicationconfiguration_go">
 <a href="#replicationconfiguration_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestpayer_go">
 <a href="#requestpayer_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Payer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies who should bear the cost of Amazon S3 data transfer.
 Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
 the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html)
 developer guide for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serversideencryptionconfiguration_go">
 <a href="#serversideencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versioning_go">
 <a href="#versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="website_go">
 <a href="#website_go" style="color: inherit; text-decoration: inherit;">Website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="websitedomain_go">
 <a href="#websitedomain_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="websiteendpoint_go">
 <a href="#websiteendpoint_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2124,239 +2081,217 @@ developer guide for more information.
             title="Optional">
         <span id="accelerationstatus_nodejs">
 <a href="#accelerationstatus_nodejs" style="color: inherit; text-decoration: inherit;">acceleration<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Canned<wbr>Acl</span>
+        <span class="property-type">string | <a href="#cannedacl">Canned<wbr>Acl</a></span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".  Conflicts with `grant`.
+    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucketprefix_nodejs">
 <a href="#bucketprefix_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="corsrules_nodejs">
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcorsrule">Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_nodejs">
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grants_nodejs">
 <a href="#grants_nodejs" style="color: inherit; text-decoration: inherit;">grants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketgrant">Bucket<wbr>Grant[]</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostedzoneid_nodejs">
 <a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifecyclerules_nodejs">
 <a href="#lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loggings_nodejs">
 <a href="#loggings_nodejs" style="color: inherit; text-decoration: inherit;">loggings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging[]</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objectlockconfiguration_nodejs">
 <a href="#objectlockconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicationconfiguration_nodejs">
 <a href="#replicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestpayer_nodejs">
 <a href="#requestpayer_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Payer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies who should bear the cost of Amazon S3 data transfer.
 Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
 the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html)
 developer guide for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serversideencryptionconfiguration_nodejs">
 <a href="#serversideencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versioning_nodejs">
 <a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="website_nodejs">
 <a href="#website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="websitedomain_nodejs">
 <a href="#websitedomain_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="websiteendpoint_nodejs">
 <a href="#websiteendpoint_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2365,248 +2300,222 @@ developer guide for more information.
             title="Optional">
         <span id="acceleration_status_python">
 <a href="#acceleration_status_python" style="color: inherit; text-decoration: inherit;">acceleration_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="acl_python">
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str | <a href="#cannedacl">Canned<wbr>Acl</a></span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".  Conflicts with `grant`.
+    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_prefix_python">
 <a href="#bucket_prefix_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cors_rules_python">
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">List[Bucket<wbr>Cors<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketcorsrule">Sequence[Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_destroy_python">
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grants_python">
 <a href="#grants_python" style="color: inherit; text-decoration: inherit;">grants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketgrant">List[Bucket<wbr>Grant]</a></span>
+        <span class="property-type"><a href="#bucketgrant">Sequence[Bucket<wbr>Grant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hosted_zone_id_python">
 <a href="#hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifecycle_rules_python">
 <a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loggings_python">
 <a href="#loggings_python" style="color: inherit; text-decoration: inherit;">loggings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">List[Bucket<wbr>Logging]</a></span>
+        <span class="property-type"><a href="#bucketlogging">Sequence[Bucket<wbr>Logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="object_lock_configuration_python">
 <a href="#object_lock_configuration_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfiguration">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replication_configuration_python">
 <a href="#replication_configuration_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfiguration">Dict[Bucket<wbr>Replication<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="request_payer_python">
 <a href="#request_payer_python" style="color: inherit; text-decoration: inherit;">request_<wbr>payer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies who should bear the cost of Amazon S3 data transfer.
 Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
 the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html)
 developer guide for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="server_side_encryption_configuration_python">
 <a href="#server_side_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versioning_python">
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Dict[Bucket<wbr>Versioning]</a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="website_python">
 <a href="#website_python" style="color: inherit; text-decoration: inherit;">website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Dict[Bucket<wbr>Website]</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="website_domain_python">
 <a href="#website_domain_python" style="color: inherit; text-decoration: inherit;">website_<wbr>domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="website_endpoint_python">
 <a href="#website_endpoint_python" style="color: inherit; text-decoration: inherit;">website_<wbr>endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Bucket resource produces the following output properties:
-
 
 
 
@@ -2617,48 +2526,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="bucketdomainname_csharp">
 <a href="#bucketdomainname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bucketregionaldomainname_csharp">
 <a href="#bucketregionaldomainname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Regional<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region this bucket resides in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2667,48 +2571,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="bucketdomainname_go">
 <a href="#bucketdomainname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bucketregionaldomainname_go">
 <a href="#bucketregionaldomainname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Regional<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region this bucket resides in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2717,48 +2616,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="bucketdomainname_nodejs">
 <a href="#bucketdomainname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bucketregionaldomainname_nodejs">
 <a href="#bucketregionaldomainname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Regional<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region this bucket resides in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2767,51 +2661,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="bucket_domain_name_python">
 <a href="#bucket_domain_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>domain_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bucket_regional_domain_name_python">
 <a href="#bucket_regional_domain_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>regional_<wbr>domain_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS region this bucket resides in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2821,19 +2707,20 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketState">BucketState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#Bucket">Bucket</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Bucket</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acceleration_status=None<span class="p">, </span>acl=None<span class="p">, </span>arn=None<span class="p">, </span>bucket=None<span class="p">, </span>bucket_domain_name=None<span class="p">, </span>bucket_prefix=None<span class="p">, </span>bucket_regional_domain_name=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>grants=None<span class="p">, </span>hosted_zone_id=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>loggings=None<span class="p">, </span>object_lock_configuration=None<span class="p">, </span>policy=None<span class="p">, </span>region=None<span class="p">, </span>replication_configuration=None<span class="p">, </span>request_payer=None<span class="p">, </span>server_side_encryption_configuration=None<span class="p">, </span>tags=None<span class="p">, </span>versioning=None<span class="p">, </span>website=None<span class="p">, </span>website_domain=None<span class="p">, </span>website_endpoint=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">acceleration_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">acl</span><span class="p">:</span> <span class="nx">Optional[Union[str, CannedAcl]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_regional_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cors_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketCorsRuleArgs]]</span> = None<span class="p">, </span><span class="nx">force_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">grants</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketGrantArgs]]</span> = None<span class="p">, </span><span class="nx">hosted_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifecycle_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLifecycleRuleArgs]]</span> = None<span class="p">, </span><span class="nx">loggings</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketLoggingArgs]]</span> = None<span class="p">, </span><span class="nx">object_lock_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketObjectLockConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketReplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">request_payer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_side_encryption_configuration</span><span class="p">:</span> <span class="nx">Optional[BucketServerSideEncryptionConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">versioning</span><span class="p">:</span> <span class="nx">Optional[BucketVersioningArgs]</span> = None<span class="p">, </span><span class="nx">website</span><span class="p">:</span> <span class="nx">Optional[BucketWebsiteArgs]</span> = None<span class="p">, </span><span class="nx">website_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">website_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Bucket</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketState">BucketState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#Bucket">Bucket</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucket<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BucketState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bucket</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Bucket.html">Bucket</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketState.html">BucketState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Bucket</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BucketState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2935,7 +2822,6 @@ Get an existing Bucket resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2943,272 +2829,247 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accelerationstatus_csharp">
 <a href="#state_accelerationstatus_csharp" style="color: inherit; text-decoration: inherit;">Acceleration<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_acl_csharp">
 <a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | <a href="#cannedacl">Pulumi.<wbr>Aws.<wbr>S3.<wbr>Canned<wbr>Acl</a></span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".  Conflicts with `grant`.
+    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucketdomainname_csharp">
 <a href="#state_bucketdomainname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucketname_csharp">
 <a href="#state_bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucketprefix_csharp">
 <a href="#state_bucketprefix_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucketregionaldomainname_csharp">
 <a href="#state_bucketregionaldomainname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Regional<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_corsrules_csharp">
 <a href="#state_corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcorsrule">List&lt;Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_csharp">
 <a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_grants_csharp">
 <a href="#state_grants_csharp" style="color: inherit; text-decoration: inherit;">Grants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketgrant">List&lt;Bucket<wbr>Grant<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostedzoneid_csharp">
 <a href="#state_hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lifecyclerules_csharp">
 <a href="#state_lifecyclerules_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerule">List&lt;Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loggings_csharp">
 <a href="#state_loggings_csharp" style="color: inherit; text-decoration: inherit;">Loggings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">List&lt;Bucket<wbr>Logging<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_objectlockconfiguration_csharp">
 <a href="#state_objectlockconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_csharp">
 <a href="#state_policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region this bucket resides in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_replicationconfiguration_csharp">
 <a href="#state_replicationconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requestpayer_csharp">
 <a href="#state_requestpayer_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Payer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies who should bear the cost of Amazon S3 data transfer.
 Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
 the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html)
 developer guide for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serversideencryptionconfiguration_csharp">
 <a href="#state_serversideencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_versioning_csharp">
 <a href="#state_versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_website_csharp">
 <a href="#state_website_csharp" style="color: inherit; text-decoration: inherit;">Website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_websitedomain_csharp">
 <a href="#state_websitedomain_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_websiteendpoint_csharp">
 <a href="#state_websiteendpoint_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3217,272 +3078,247 @@ developer guide for more information.
             title="Optional">
         <span id="state_accelerationstatus_go">
 <a href="#state_accelerationstatus_go" style="color: inherit; text-decoration: inherit;">Acceleration<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_acl_go">
 <a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">string | <a href="#cannedacl">Canned<wbr>Acl</a></span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".  Conflicts with `grant`.
+    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucket_go">
 <a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucketdomainname_go">
 <a href="#state_bucketdomainname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucketprefix_go">
 <a href="#state_bucketprefix_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucketregionaldomainname_go">
 <a href="#state_bucketregionaldomainname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Regional<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_corsrules_go">
 <a href="#state_corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcorsrule">[]Bucket<wbr>Cors<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_go">
 <a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_grants_go">
 <a href="#state_grants_go" style="color: inherit; text-decoration: inherit;">Grants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketgrant">[]Bucket<wbr>Grant</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostedzoneid_go">
 <a href="#state_hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lifecyclerules_go">
 <a href="#state_lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerule">[]Bucket<wbr>Lifecycle<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loggings_go">
 <a href="#state_loggings_go" style="color: inherit; text-decoration: inherit;">Loggings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">[]Bucket<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_objectlockconfiguration_go">
 <a href="#state_objectlockconfiguration_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_go">
 <a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region this bucket resides in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_replicationconfiguration_go">
 <a href="#state_replicationconfiguration_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requestpayer_go">
 <a href="#state_requestpayer_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Payer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies who should bear the cost of Amazon S3 data transfer.
 Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
 the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html)
 developer guide for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serversideencryptionconfiguration_go">
 <a href="#state_serversideencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_versioning_go">
 <a href="#state_versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_website_go">
 <a href="#state_website_go" style="color: inherit; text-decoration: inherit;">Website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_websitedomain_go">
 <a href="#state_websitedomain_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_websiteendpoint_go">
 <a href="#state_websiteendpoint_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3491,272 +3327,247 @@ developer guide for more information.
             title="Optional">
         <span id="state_accelerationstatus_nodejs">
 <a href="#state_accelerationstatus_nodejs" style="color: inherit; text-decoration: inherit;">acceleration<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_acl_nodejs">
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | Canned<wbr>Acl</span>
+        <span class="property-type">string | <a href="#cannedacl">Canned<wbr>Acl</a></span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".  Conflicts with `grant`.
+    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucket_nodejs">
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucketdomainname_nodejs">
 <a href="#state_bucketdomainname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucketprefix_nodejs">
 <a href="#state_bucketprefix_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucketregionaldomainname_nodejs">
 <a href="#state_bucketregionaldomainname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Regional<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_corsrules_nodejs">
 <a href="#state_corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketcorsrule">Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_nodejs">
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_grants_nodejs">
 <a href="#state_grants_nodejs" style="color: inherit; text-decoration: inherit;">grants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketgrant">Bucket<wbr>Grant[]</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hostedzoneid_nodejs">
 <a href="#state_hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lifecyclerules_nodejs">
 <a href="#state_lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loggings_nodejs">
 <a href="#state_loggings_nodejs" style="color: inherit; text-decoration: inherit;">loggings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlogging">Bucket<wbr>Logging[]</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_objectlockconfiguration_nodejs">
 <a href="#state_objectlockconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_nodejs">
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region this bucket resides in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_replicationconfiguration_nodejs">
 <a href="#state_replicationconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requestpayer_nodejs">
 <a href="#state_requestpayer_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Payer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies who should bear the cost of Amazon S3 data transfer.
 Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
 the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html)
 developer guide for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serversideencryptionconfiguration_nodejs">
 <a href="#state_serversideencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_versioning_nodejs">
 <a href="#state_versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_website_nodejs">
 <a href="#state_website_nodejs" style="color: inherit; text-decoration: inherit;">website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_websitedomain_nodejs">
 <a href="#state_websitedomain_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_websiteendpoint_nodejs">
 <a href="#state_websiteendpoint_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3765,275 +3576,247 @@ developer guide for more information.
             title="Optional">
         <span id="state_acceleration_status_python">
 <a href="#state_acceleration_status_python" style="color: inherit; text-decoration: inherit;">acceleration_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_acl_python">
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str | <a href="#cannedacl">Canned<wbr>Acl</a></span>
     </dt>
-    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".  Conflicts with `grant`.
+    <dd>{{% md %}}The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucket_python">
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}The name of the bucket. If omitted, this provider will assign a random, unique name. Must be less than or equal to 63 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucket_domain_name_python">
 <a href="#state_bucket_domain_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>domain_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucket_prefix_python">
 <a href="#state_bucket_prefix_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`.
+    <dd>{{% md %}}Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be less than or equal to 37 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bucket_regional_domain_name_python">
 <a href="#state_bucket_regional_domain_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>regional_<wbr>domain_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cors_rules_python">
 <a href="#state_cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketcorsrule">List[Bucket<wbr>Cors<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketcorsrule">Sequence[Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_force_destroy_python">
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_grants_python">
 <a href="#state_grants_python" style="color: inherit; text-decoration: inherit;">grants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketgrant">List[Bucket<wbr>Grant]</a></span>
+        <span class="property-type"><a href="#bucketgrant">Sequence[Bucket<wbr>Grant<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hosted_zone_id_python">
 <a href="#state_hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lifecycle_rules_python">
 <a href="#state_lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerule">List[Bucket<wbr>Lifecycle<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerule">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loggings_python">
 <a href="#state_loggings_python" style="color: inherit; text-decoration: inherit;">loggings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlogging">List[Bucket<wbr>Logging]</a></span>
+        <span class="property-type"><a href="#bucketlogging">Sequence[Bucket<wbr>Logging<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_object_lock_configuration_python">
 <a href="#state_object_lock_configuration_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfiguration">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_python">
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | str</span>
+        <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS region this bucket resides in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_replication_configuration_python">
 <a href="#state_replication_configuration_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfiguration">Dict[Bucket<wbr>Replication<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_request_payer_python">
 <a href="#state_request_payer_python" style="color: inherit; text-decoration: inherit;">request_<wbr>payer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies who should bear the cost of Amazon S3 data transfer.
 Can be either `BucketOwner` or `Requester`. By default, the owner of the S3 bucket would incur
 the costs of any data transfer. See [Requester Pays Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html)
 developer guide for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_server_side_encryption_configuration_python">
 <a href="#state_server_side_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_versioning_python">
 <a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketversioning">Dict[Bucket<wbr>Versioning]</a></span>
+        <span class="property-type"><a href="#bucketversioning">Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_website_python">
 <a href="#state_website_python" style="color: inherit; text-decoration: inherit;">website</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketwebsite">Dict[Bucket<wbr>Website]</a></span>
+        <span class="property-type"><a href="#bucketwebsite">Bucket<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A website object (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_website_domain_python">
 <a href="#state_website_domain_python" style="color: inherit; text-decoration: inherit;">website_<wbr>domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_website_endpoint_python">
 <a href="#state_website_endpoint_python" style="color: inherit; text-decoration: inherit;">website_<wbr>endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -4043,20 +3826,8 @@ developer guide for more information.
 ## Supporting Types
 
 
+
 <h4 id="bucketcorsrule">Bucket<wbr>Cors<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketCorsRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketCorsRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketCorsRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketCorsRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketCorsRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketCorsRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4065,60 +3836,54 @@ developer guide for more information.
             title="Required">
         <span id="allowedmethods_csharp">
 <a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `HEAD`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="allowedorigins_csharp">
 <a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies which origins are allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedheaders_csharp">
 <a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies which headers are allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_csharp">
 <a href="#exposeheaders_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies expose header in the response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxageseconds_csharp">
 <a href="#maxageseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4127,60 +3892,54 @@ developer guide for more information.
             title="Required">
         <span id="allowedmethods_go">
 <a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `HEAD`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="allowedorigins_go">
 <a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies which origins are allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedheaders_go">
 <a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies which headers are allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_go">
 <a href="#exposeheaders_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies expose header in the response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxageseconds_go">
 <a href="#maxageseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4189,140 +3948,112 @@ developer guide for more information.
             title="Required">
         <span id="allowedmethods_nodejs">
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `HEAD`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="allowedorigins_nodejs">
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which origins are allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedheaders_nodejs">
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies which headers are allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_nodejs">
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies expose header in the response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxageseconds_nodejs">
 <a href="#maxageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="allowedmethods_python">
-<a href="#allowedmethods_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
-</span> 
+        <span id="allowed_methods_python">
+<a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which methods are allowed. Can be `GET`, `PUT`, `POST`, `DELETE` or `HEAD`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="allowedorigins_python">
-<a href="#allowedorigins_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
-</span> 
+        <span id="allowed_origins_python">
+<a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which origins are allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedheaders_python">
-<a href="#allowedheaders_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
-</span> 
+        <span id="allowed_headers_python">
+<a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies which headers are allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="exposeheaders_python">
-<a href="#exposeheaders_python" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
-</span> 
+        <span id="expose_headers_python">
+<a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies expose header in the response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxageseconds_python">
-<a href="#maxageseconds_python" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
-</span> 
+        <span id="max_age_seconds_python">
+<a href="#max_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>seconds</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketgrant">Bucket<wbr>Grant</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketGrant">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketGrant">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketGrantArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketGrantOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketGrantArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketGrant.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4331,49 +4062,44 @@ developer guide for more information.
             title="Required">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Type of grantee to apply for. Valid values are `CanonicalUser` and `Group`. `AmazonCustomerByEmail` is not supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri address to grant for. Used only when `type` is `Group`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4382,49 +4108,44 @@ developer guide for more information.
             title="Required">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Type of grantee to apply for. Valid values are `CanonicalUser` and `Group`. `AmazonCustomerByEmail` is not supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri address to grant for. Used only when `type` is `Group`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4433,49 +4154,44 @@ developer guide for more information.
             title="Required">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Type of grantee to apply for. Valid values are `CanonicalUser` and `Group`. `AmazonCustomerByEmail` is not supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri address to grant for. Used only when `type` is `Group`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4484,67 +4200,46 @@ developer guide for more information.
             title="Required">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Type of grantee to apply for. Valid values are `CanonicalUser` and `Group`. `AmazonCustomerByEmail` is not supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uri address to grant for. Used only when `type` is `Group`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketLifecycleRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLifecycleRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketLifecycleRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketLifecycleRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketLifecycleRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketLifecycleRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4553,104 +4248,94 @@ developer guide for more information.
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="abortincompletemultipartuploaddays_csharp">
 <a href="#abortincompletemultipartuploaddays_csharp" style="color: inherit; text-decoration: inherit;">Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiration_csharp">
 <a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleruleexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's expire (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noncurrentversionexpiration_csharp">
 <a href="#noncurrentversionexpiration_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions expire (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noncurrentversiontransitions_csharp">
 <a href="#noncurrentversiontransitions_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Transitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">List&lt;Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions transitions (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies object tags key and value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transitions_csharp">
 <a href="#transitions_csharp" style="color: inherit; text-decoration: inherit;">Transitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleruletransition">List&lt;Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's transitions (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4659,104 +4344,94 @@ developer guide for more information.
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="abortincompletemultipartuploaddays_go">
 <a href="#abortincompletemultipartuploaddays_go" style="color: inherit; text-decoration: inherit;">Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiration_go">
 <a href="#expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleruleexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's expire (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noncurrentversionexpiration_go">
 <a href="#noncurrentversionexpiration_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions expire (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noncurrentversiontransitions_go">
 <a href="#noncurrentversiontransitions_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Transitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">[]Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions transitions (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Specifies object tags key and value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transitions_go">
 <a href="#transitions_go" style="color: inherit; text-decoration: inherit;">Transitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleruletransition">[]Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's transitions (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4765,104 +4440,94 @@ developer guide for more information.
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="abortincompletemultipartuploaddays_nodejs">
 <a href="#abortincompletemultipartuploaddays_nodejs" style="color: inherit; text-decoration: inherit;">abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiration_nodejs">
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleruleexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's expire (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noncurrentversionexpiration_nodejs">
 <a href="#noncurrentversionexpiration_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions expire (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noncurrentversiontransitions_nodejs">
 <a href="#noncurrentversiontransitions_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Transitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions transitions (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies object tags key and value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transitions_nodejs">
 <a href="#transitions_nodejs" style="color: inherit; text-decoration: inherit;">transitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketlifecycleruletransition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's transitions (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4871,122 +4536,96 @@ developer guide for more information.
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="abortincompletemultipartuploaddays_python">
-<a href="#abortincompletemultipartuploaddays_python" style="color: inherit; text-decoration: inherit;">abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
-</span> 
+        <span id="abort_incomplete_multipart_upload_days_python">
+<a href="#abort_incomplete_multipart_upload_days_python" style="color: inherit; text-decoration: inherit;">abort_<wbr>incomplete_<wbr>multipart_<wbr>upload_<wbr>days</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiration_python">
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruleexpiration">Dict[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruleexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's expire (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="noncurrentversionexpiration_python">
-<a href="#noncurrentversionexpiration_python" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Expiration</a>
-</span> 
+        <span id="noncurrent_version_expiration_python">
+<a href="#noncurrent_version_expiration_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>version_<wbr>expiration</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">Dict[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversionexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions expire (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="noncurrentversiontransitions_python">
-<a href="#noncurrentversiontransitions_python" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Transitions</a>
-</span> 
+        <span id="noncurrent_version_transitions_python">
+<a href="#noncurrent_version_transitions_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>version_<wbr>transitions</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition]</a></span>
+        <span class="property-type"><a href="#bucketlifecyclerulenoncurrentversiontransition">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies when noncurrent object versions transitions (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies object tags key and value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transitions_python">
 <a href="#transitions_python" style="color: inherit; text-decoration: inherit;">transitions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketlifecycleruletransition">List[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition]</a></span>
+        <span class="property-type"><a href="#bucketlifecycleruletransition">Sequence[Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a period in the object's transitions (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketlifecycleruleexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketLifecycleRuleExpiration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLifecycleRuleExpiration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketLifecycleRuleExpirationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketLifecycleRuleExpirationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketLifecycleRuleExpirationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketLifecycleRuleExpiration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4995,38 +4634,34 @@ developer guide for more information.
             title="Optional">
         <span id="date_csharp">
 <a href="#date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiredobjectdeletemarker_csharp">
 <a href="#expiredobjectdeletemarker_csharp" style="color: inherit; text-decoration: inherit;">Expired<wbr>Object<wbr>Delete<wbr>Marker</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers.
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5035,38 +4670,34 @@ developer guide for more information.
             title="Optional">
         <span id="date_go">
 <a href="#date_go" style="color: inherit; text-decoration: inherit;">Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiredobjectdeletemarker_go">
 <a href="#expiredobjectdeletemarker_go" style="color: inherit; text-decoration: inherit;">Expired<wbr>Object<wbr>Delete<wbr>Marker</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers.
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5075,38 +4706,34 @@ developer guide for more information.
             title="Optional">
         <span id="date_nodejs">
 <a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiredobjectdeletemarker_nodejs">
 <a href="#expiredobjectdeletemarker_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Object<wbr>Delete<wbr>Marker</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers.
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5115,56 +4742,36 @@ developer guide for more information.
             title="Optional">
         <span id="date_python">
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="expiredobjectdeletemarker_python">
-<a href="#expiredobjectdeletemarker_python" style="color: inherit; text-decoration: inherit;">expired<wbr>Object<wbr>Delete<wbr>Marker</a>
-</span> 
+        <span id="expired_object_delete_marker_python">
+<a href="#expired_object_delete_marker_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>object_<wbr>delete_<wbr>marker</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers.
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers. This cannot be specified with Days or Date in a Lifecycle Expiration Policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketlifecyclerulenoncurrentversionexpiration">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketLifecycleRuleNoncurrentVersionExpiration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLifecycleRuleNoncurrentVersionExpiration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketLifecycleRuleNoncurrentVersionExpirationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketLifecycleRuleNoncurrentVersionExpirationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketLifecycleRuleNoncurrentVersionExpirationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketLifecycleRuleNoncurrentVersionExpiration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5173,16 +4780,14 @@ developer guide for more information.
             title="Optional">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days noncurrent object versions expire.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5191,16 +4796,14 @@ developer guide for more information.
             title="Optional">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days noncurrent object versions expire.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5209,16 +4812,14 @@ developer guide for more information.
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days noncurrent object versions expire.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5227,34 +4828,16 @@ developer guide for more information.
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days noncurrent object versions expire.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketlifecyclerulenoncurrentversiontransition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Transition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketLifecycleRuleNoncurrentVersionTransition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLifecycleRuleNoncurrentVersionTransition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketLifecycleRuleNoncurrentVersionTransitionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketLifecycleRuleNoncurrentVersionTransitionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketLifecycleRuleNoncurrentVersionTransitionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketLifecycleRuleNoncurrentVersionTransition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5263,27 +4846,24 @@ developer guide for more information.
             title="Required">
         <span id="storageclass_csharp">
 <a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent object versions to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5292,27 +4872,24 @@ developer guide for more information.
             title="Required">
         <span id="storageclass_go">
 <a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent object versions to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5321,27 +4898,24 @@ developer guide for more information.
             title="Required">
         <span id="storageclass_nodejs">
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent object versions to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5350,45 +4924,26 @@ developer guide for more information.
             title="Required">
         <span id="storage_class_python">
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the noncurrent object versions to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days noncurrent object versions transition.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketlifecycleruletransition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Transition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketLifecycleRuleTransition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLifecycleRuleTransition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketLifecycleRuleTransitionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketLifecycleRuleTransitionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketLifecycleRuleTransitionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketLifecycleRuleTransition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5397,38 +4952,34 @@ developer guide for more information.
             title="Required">
         <span id="storageclass_csharp">
 <a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the object to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="date_csharp">
 <a href="#date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5437,38 +4988,34 @@ developer guide for more information.
             title="Required">
         <span id="storageclass_go">
 <a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the object to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="date_go">
 <a href="#date_go" style="color: inherit; text-decoration: inherit;">Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5477,38 +5024,34 @@ developer guide for more information.
             title="Required">
         <span id="storageclass_nodejs">
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the object to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="date_nodejs">
 <a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5517,56 +5060,36 @@ developer guide for more information.
             title="Required">
         <span id="storage_class_python">
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Amazon S3 storage class to which you want the object to transition. Can be `ONEZONE_IA`, `STANDARD_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="date_python">
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the date after which you want the corresponding action to take effect.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the specific rule action takes effect.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketlogging">Bucket<wbr>Logging</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketLogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketLogging">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketLoggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketLoggingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketLoggingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketLogging.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5575,27 +5098,24 @@ developer guide for more information.
             title="Required">
         <span id="targetbucket_csharp">
 <a href="#targetbucket_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that will receive the log objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetprefix_csharp">
 <a href="#targetprefix_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To specify a key prefix for log objects.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5604,27 +5124,24 @@ developer guide for more information.
             title="Required">
         <span id="targetbucket_go">
 <a href="#targetbucket_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that will receive the log objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetprefix_go">
 <a href="#targetprefix_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To specify a key prefix for log objects.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5633,74 +5150,52 @@ developer guide for more information.
             title="Required">
         <span id="targetbucket_nodejs">
 <a href="#targetbucket_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that will receive the log objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetprefix_nodejs">
 <a href="#targetprefix_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To specify a key prefix for log objects.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="targetbucket_python">
-<a href="#targetbucket_python" style="color: inherit; text-decoration: inherit;">target<wbr>Bucket</a>
-</span> 
+        <span id="target_bucket_python">
+<a href="#target_bucket_python" style="color: inherit; text-decoration: inherit;">target_<wbr>bucket</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket that will receive the log objects.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="targetprefix_python">
-<a href="#targetprefix_python" style="color: inherit; text-decoration: inherit;">target<wbr>Prefix</a>
-</span> 
+        <span id="target_prefix_python">
+<a href="#target_prefix_python" style="color: inherit; text-decoration: inherit;">target_<wbr>prefix</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To specify a key prefix for log objects.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketobjectlockconfiguration">Bucket<wbr>Object<wbr>Lock<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketObjectLockConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketObjectLockConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketObjectLockConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketObjectLockConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketObjectLockConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketObjectLockConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5709,27 +5204,24 @@ developer guide for more information.
             title="Required">
         <span id="objectlockenabled_csharp">
 <a href="#objectlockenabled_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether this bucket has an Object Lock configuration enabled. Valid value is `Enabled`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rule_csharp">
 <a href="#rule_csharp" style="color: inherit; text-decoration: inherit;">Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfigurationrule">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Object Lock rule in place for this bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5738,27 +5230,24 @@ developer guide for more information.
             title="Required">
         <span id="objectlockenabled_go">
 <a href="#objectlockenabled_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Lock<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether this bucket has an Object Lock configuration enabled. Valid value is `Enabled`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rule_go">
 <a href="#rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfigurationrule">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The Object Lock rule in place for this bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5767,74 +5256,52 @@ developer guide for more information.
             title="Required">
         <span id="objectlockenabled_nodejs">
 <a href="#objectlockenabled_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether this bucket has an Object Lock configuration enabled. Valid value is `Enabled`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rule_nodejs">
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfigurationrule">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The Object Lock rule in place for this bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="objectlockenabled_python">
-<a href="#objectlockenabled_python" style="color: inherit; text-decoration: inherit;">object<wbr>Lock<wbr>Enabled</a>
-</span> 
+        <span id="object_lock_enabled_python">
+<a href="#object_lock_enabled_python" style="color: inherit; text-decoration: inherit;">object_<wbr>lock_<wbr>enabled</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether this bucket has an Object Lock configuration enabled. Valid value is `Enabled`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rule_python">
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfigurationrule">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfigurationrule">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Object Lock rule in place for this bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketobjectlockconfigurationrule">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketObjectLockConfigurationRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketObjectLockConfigurationRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketObjectLockConfigurationRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketObjectLockConfigurationRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketObjectLockConfigurationRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketObjectLockConfigurationRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5843,16 +5310,14 @@ developer guide for more information.
             title="Required">
         <span id="defaultretention_csharp">
 <a href="#defaultretention_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Retention</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfigurationruledefaultretention">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default retention period that you want to apply to new objects placed in this bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5861,16 +5326,14 @@ developer guide for more information.
             title="Required">
         <span id="defaultretention_go">
 <a href="#defaultretention_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Retention</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfigurationruledefaultretention">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention</a></span>
     </dt>
     <dd>{{% md %}}The default retention period that you want to apply to new objects placed in this bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5879,52 +5342,32 @@ developer guide for more information.
             title="Required">
         <span id="defaultretention_nodejs">
 <a href="#defaultretention_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Retention</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketobjectlockconfigurationruledefaultretention">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention</a></span>
     </dt>
     <dd>{{% md %}}The default retention period that you want to apply to new objects placed in this bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="defaultretention_python">
-<a href="#defaultretention_python" style="color: inherit; text-decoration: inherit;">default<wbr>Retention</a>
-</span> 
+        <span id="default_retention_python">
+<a href="#default_retention_python" style="color: inherit; text-decoration: inherit;">default_<wbr>retention</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketobjectlockconfigurationruledefaultretention">Dict[Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention]</a></span>
+        <span class="property-type"><a href="#bucketobjectlockconfigurationruledefaultretention">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default retention period that you want to apply to new objects placed in this bucket.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketobjectlockconfigurationruledefaultretention">Bucket<wbr>Object<wbr>Lock<wbr>Configuration<wbr>Rule<wbr>Default<wbr>Retention</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketObjectLockConfigurationRuleDefaultRetention">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketObjectLockConfigurationRuleDefaultRetention">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketObjectLockConfigurationRuleDefaultRetentionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketObjectLockConfigurationRuleDefaultRetentionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketObjectLockConfigurationRuleDefaultRetentionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketObjectLockConfigurationRuleDefaultRetention.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5933,38 +5376,34 @@ developer guide for more information.
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default Object Lock retention mode you want to apply to new objects placed in this bucket. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days that you want to specify for the default retention period.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="years_csharp">
 <a href="#years_csharp" style="color: inherit; text-decoration: inherit;">Years</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of years that you want to specify for the default retention period.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5973,38 +5412,34 @@ developer guide for more information.
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default Object Lock retention mode you want to apply to new objects placed in this bucket. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days that you want to specify for the default retention period.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="years_go">
 <a href="#years_go" style="color: inherit; text-decoration: inherit;">Years</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of years that you want to specify for the default retention period.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6013,38 +5448,34 @@ developer guide for more information.
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default Object Lock retention mode you want to apply to new objects placed in this bucket. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days that you want to specify for the default retention period.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="years_nodejs">
 <a href="#years_nodejs" style="color: inherit; text-decoration: inherit;">years</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of years that you want to specify for the default retention period.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6053,56 +5484,36 @@ developer guide for more information.
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default Object Lock retention mode you want to apply to new objects placed in this bucket. Valid values are `GOVERNANCE` and `COMPLIANCE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days that you want to specify for the default retention period.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="years_python">
 <a href="#years_python" style="color: inherit; text-decoration: inherit;">years</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of years that you want to specify for the default retention period.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketreplicationconfiguration">Bucket<wbr>Replication<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketReplicationConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketReplicationConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketReplicationConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6111,27 +5522,24 @@ developer guide for more information.
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationrule">List&lt;Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the rules managing the replication (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6140,27 +5548,24 @@ developer guide for more information.
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationrule">[]Bucket<wbr>Replication<wbr>Configuration<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Specifies the rules managing the replication (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6169,27 +5574,24 @@ developer guide for more information.
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationrule">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the rules managing the replication (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6198,45 +5600,26 @@ developer guide for more information.
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrule">List[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrule">Sequence[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the rules managing the replication (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketreplicationconfigurationrule">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketReplicationConfigurationRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfigurationRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketReplicationConfigurationRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketReplicationConfigurationRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6245,82 +5628,74 @@ developer guide for more information.
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationruledestination">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the destination for the rule (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationrulefilter">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter that identifies subset of objects to which the replication rule applies (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is optional (with a default value of `0`) but must be unique between multiple rules
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceselectioncriteria_csharp">
 <a href="#sourceselectioncriteria_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Selection<wbr>Criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies special object selection criteria (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6329,82 +5704,74 @@ developer guide for more information.
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationruledestination">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Specifies the destination for the rule (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationrulefilter">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filter that identifies subset of objects to which the replication rule applies (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is optional (with a default value of `0`) but must be unique between multiple rules
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceselectioncriteria_go">
 <a href="#sourceselectioncriteria_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Selection<wbr>Criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Specifies special object selection criteria (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6413,82 +5780,74 @@ developer guide for more information.
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationruledestination">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Specifies the destination for the rule (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationrulefilter">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filter that identifies subset of objects to which the replication rule applies (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}is optional (with a default value of `0`) but must be unique between multiple rules
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceselectioncriteria_nodejs">
 <a href="#sourceselectioncriteria_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Selection<wbr>Criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}Specifies special object selection criteria (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6497,100 +5856,76 @@ developer guide for more information.
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationruledestination">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestination">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the destination for the rule (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the rule. Either `Enabled` or `Disabled`. The rule is ignored if status is not Enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrulefilter">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrulefilter">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Filter that identifies subset of objects to which the replication rule applies (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique identifier for the rule.
+    <dd>{{% md %}}Unique identifier for the rule. Must be less than or equal to 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is optional (with a default value of `0`) but must be unique between multiple rules
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceselectioncriteria_python">
-<a href="#sourceselectioncriteria_python" style="color: inherit; text-decoration: inherit;">source<wbr>Selection<wbr>Criteria</a>
-</span> 
+        <span id="source_selection_criteria_python">
+<a href="#source_selection_criteria_python" style="color: inherit; text-decoration: inherit;">source_<wbr>selection_<wbr>criteria</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteria">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies special object selection criteria (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketreplicationconfigurationruledestination">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketReplicationConfigurationRuleDestination">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfigurationRuleDestination">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationRuleDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationRuleDestinationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketReplicationConfigurationRuleDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketReplicationConfigurationRuleDestination.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6599,61 +5934,55 @@ developer guide for more information.
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesscontroltranslation_csharp">
 <a href="#accesscontroltranslation_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control<wbr>Translation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the overrides to use for object owners on replication. Must be used in conjunction with `account_id` owner override configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicakmskeyid_csharp">
 <a href="#replicakmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Kms<wbr>Key<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
 `sse_kms_encrypted_objects` source selection criteria.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_csharp">
 <a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The class of storage used to store the object. Can be `STANDARD`, `REDUCED_REDUNDANCY`, `STANDARD_IA`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6662,61 +5991,55 @@ developer guide for more information.
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesscontroltranslation_go">
 <a href="#accesscontroltranslation_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control<wbr>Translation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation</a></span>
     </dt>
     <dd>{{% md %}}Specifies the overrides to use for object owners on replication. Must be used in conjunction with `account_id` owner override configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicakmskeyid_go">
 <a href="#replicakmskeyid_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Kms<wbr>Key<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
 `sse_kms_encrypted_objects` source selection criteria.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_go">
 <a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The class of storage used to store the object. Can be `STANDARD`, `REDUCED_REDUNDANCY`, `STANDARD_IA`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6725,61 +6048,55 @@ developer guide for more information.
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesscontroltranslation_nodejs">
 <a href="#accesscontroltranslation_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control<wbr>Translation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation</a></span>
     </dt>
     <dd>{{% md %}}Specifies the overrides to use for object owners on replication. Must be used in conjunction with `account_id` owner override configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicakmskeyid_nodejs">
 <a href="#replicakmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Kms<wbr>Key<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
 `sse_kms_encrypted_objects` source selection criteria.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageclass_nodejs">
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The class of storage used to store the object. Can be `STANDARD`, `REDUCED_REDUNDANCY`, `STANDARD_IA`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6788,79 +6105,57 @@ developer guide for more information.
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="accesscontroltranslation_python">
-<a href="#accesscontroltranslation_python" style="color: inherit; text-decoration: inherit;">access<wbr>Control<wbr>Translation</a>
-</span> 
+        <span id="access_control_translation_python">
+<a href="#access_control_translation_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control_<wbr>translation</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationruledestinationaccesscontroltranslation">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the overrides to use for object owners on replication. Must be used in conjunction with `account_id` owner override configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Account ID to use for overriding the object owner on replication. Must be used in conjunction with `access_control_translation` override configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="replicakmskeyid_python">
-<a href="#replicakmskeyid_python" style="color: inherit; text-decoration: inherit;">replica<wbr>Kms<wbr>Key<wbr>Id</a>
-</span> 
+        <span id="replica_kms_key_id_python">
+<a href="#replica_kms_key_id_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>kms_<wbr>key_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Destination KMS encryption key ARN for SSE-KMS replication. Must be used in conjunction with
 `sse_kms_encrypted_objects` source selection criteria.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_class_python">
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The class of storage used to store the object. Can be `STANDARD`, `REDUCED_REDUNDANCY`, `STANDARD_IA`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketreplicationconfigurationruledestinationaccesscontroltranslation">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Destination<wbr>Access<wbr>Control<wbr>Translation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketReplicationConfigurationRuleDestinationAccessControlTranslation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfigurationRuleDestinationAccessControlTranslation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationRuleDestinationAccessControlTranslationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketReplicationConfigurationRuleDestinationAccessControlTranslationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketReplicationConfigurationRuleDestinationAccessControlTranslation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6869,16 +6164,14 @@ developer guide for more information.
             title="Required">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The override value for the owner on replicated objects. Currently only `Destination` is supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6887,16 +6180,14 @@ developer guide for more information.
             title="Required">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The override value for the owner on replicated objects. Currently only `Destination` is supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6905,16 +6196,14 @@ developer guide for more information.
             title="Required">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The override value for the owner on replicated objects. Currently only `Destination` is supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6923,34 +6212,16 @@ developer guide for more information.
             title="Required">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The override value for the owner on replicated objects. Currently only `Destination` is supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketreplicationconfigurationrulefilter">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketReplicationConfigurationRuleFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfigurationRuleFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationRuleFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationRuleFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketReplicationConfigurationRuleFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketReplicationConfigurationRuleFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6959,28 +6230,25 @@ developer guide for more information.
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6989,28 +6257,25 @@ The rule applies only to objects having all the tags in its tagset.
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7019,28 +6284,25 @@ The rule applies only to objects having all the tags in its tagset.
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7049,46 +6311,27 @@ The rule applies only to objects having all the tags in its tagset.
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies.
+    <dd>{{% md %}}Object keyname prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags that identifies subset of objects to which the rule applies.
 The rule applies only to objects having all the tags in its tagset.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketreplicationconfigurationrulesourceselectioncriteria">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketReplicationConfigurationRuleSourceSelectionCriteria">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfigurationRuleSourceSelectionCriteria">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationRuleSourceSelectionCriteriaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketReplicationConfigurationRuleSourceSelectionCriteriaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketReplicationConfigurationRuleSourceSelectionCriteria.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7097,17 +6340,15 @@ The rule applies only to objects having all the tags in its tagset.
             title="Optional">
         <span id="ssekmsencryptedobjects_csharp">
 <a href="#ssekmsencryptedobjects_csharp" style="color: inherit; text-decoration: inherit;">Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Match SSE-KMS encrypted objects (documented below). If specified, `replica_kms_key_id`
 in `destination` must be specified as well.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7116,17 +6357,15 @@ in `destination` must be specified as well.
             title="Optional">
         <span id="ssekmsencryptedobjects_go">
 <a href="#ssekmsencryptedobjects_go" style="color: inherit; text-decoration: inherit;">Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a></span>
     </dt>
     <dd>{{% md %}}Match SSE-KMS encrypted objects (documented below). If specified, `replica_kms_key_id`
 in `destination` must be specified as well.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7135,54 +6374,34 @@ in `destination` must be specified as well.
             title="Optional">
         <span id="ssekmsencryptedobjects_nodejs">
 <a href="#ssekmsencryptedobjects_nodejs" style="color: inherit; text-decoration: inherit;">sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a></span>
     </dt>
     <dd>{{% md %}}Match SSE-KMS encrypted objects (documented below). If specified, `replica_kms_key_id`
 in `destination` must be specified as well.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ssekmsencryptedobjects_python">
-<a href="#ssekmsencryptedobjects_python" style="color: inherit; text-decoration: inherit;">sse<wbr>Kms<wbr>Encrypted<wbr>Objects</a>
-</span> 
+        <span id="sse_kms_encrypted_objects_python">
+<a href="#sse_kms_encrypted_objects_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>kms_<wbr>encrypted_<wbr>objects</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Dict[Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects]</a></span>
+        <span class="property-type"><a href="#bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Match SSE-KMS encrypted objects (documented below). If specified, `replica_kms_key_id`
 in `destination` must be specified as well.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketreplicationconfigurationrulesourceselectioncriteriassekmsencryptedobjects">Bucket<wbr>Replication<wbr>Configuration<wbr>Rule<wbr>Source<wbr>Selection<wbr>Criteria<wbr>Sse<wbr>Kms<wbr>Encrypted<wbr>Objects</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7191,16 +6410,14 @@ in `destination` must be specified as well.
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean which indicates if this criteria is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7209,16 +6426,14 @@ in `destination` must be specified as well.
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean which indicates if this criteria is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7227,16 +6442,14 @@ in `destination` must be specified as well.
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean which indicates if this criteria is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7245,34 +6458,16 @@ in `destination` must be specified as well.
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean which indicates if this criteria is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketserversideencryptionconfiguration">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketServerSideEncryptionConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketServerSideEncryptionConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketServerSideEncryptionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketServerSideEncryptionConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketServerSideEncryptionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketServerSideEncryptionConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7281,16 +6476,14 @@ in `destination` must be specified as well.
             title="Required">
         <span id="rule_csharp">
 <a href="#rule_csharp" style="color: inherit; text-decoration: inherit;">Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketserversideencryptionconfigurationrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A single object for server-side encryption by default configuration. (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7299,16 +6492,14 @@ in `destination` must be specified as well.
             title="Required">
         <span id="rule_go">
 <a href="#rule_go" style="color: inherit; text-decoration: inherit;">Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketserversideencryptionconfigurationrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A single object for server-side encryption by default configuration. (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7317,16 +6508,14 @@ in `destination` must be specified as well.
             title="Required">
         <span id="rule_nodejs">
 <a href="#rule_nodejs" style="color: inherit; text-decoration: inherit;">rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketserversideencryptionconfigurationrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A single object for server-side encryption by default configuration. (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7335,34 +6524,16 @@ in `destination` must be specified as well.
             title="Required">
         <span id="rule_python">
 <a href="#rule_python" style="color: inherit; text-decoration: inherit;">rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfigurationrule">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfigurationrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A single object for server-side encryption by default configuration. (documented below)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketserversideencryptionconfigurationrule">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketServerSideEncryptionConfigurationRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketServerSideEncryptionConfigurationRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketServerSideEncryptionConfigurationRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketServerSideEncryptionConfigurationRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketServerSideEncryptionConfigurationRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7371,16 +6542,24 @@ in `destination` must be specified as well.
             title="Required">
         <span id="applyserversideencryptionbydefault_csharp">
 <a href="#applyserversideencryptionbydefault_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A single object for setting server-side encryption by default. (documented below)
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bucketkeyenabled_csharp">
+<a href="#bucketkeyenabled_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7389,16 +6568,24 @@ in `destination` must be specified as well.
             title="Required">
         <span id="applyserversideencryptionbydefault_go">
 <a href="#applyserversideencryptionbydefault_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}A single object for setting server-side encryption by default. (documented below)
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bucketkeyenabled_go">
+<a href="#bucketkeyenabled_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7407,52 +6594,52 @@ in `destination` must be specified as well.
             title="Required">
         <span id="applyserversideencryptionbydefault_nodejs">
 <a href="#applyserversideencryptionbydefault_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</a></span>
     </dt>
     <dd>{{% md %}}A single object for setting server-side encryption by default. (documented below)
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bucketkeyenabled_nodejs">
+<a href="#bucketkeyenabled_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="applyserversideencryptionbydefault_python">
-<a href="#applyserversideencryptionbydefault_python" style="color: inherit; text-decoration: inherit;">apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</a>
-</span> 
+        <span id="apply_server_side_encryption_by_default_python">
+<a href="#apply_server_side_encryption_by_default_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>server_<wbr>side_<wbr>encryption_<wbr>by_<wbr>default</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Dict[Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default]</a></span>
+        <span class="property-type"><a href="#bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A single object for setting server-side encryption by default. (documented below)
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bucket_key_enabled_python">
+<a href="#bucket_key_enabled_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>key_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketserversideencryptionconfigurationruleapplyserversideencryptionbydefault">Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Configuration<wbr>Rule<wbr>Apply<wbr>Server<wbr>Side<wbr>Encryption<wbr>By<wbr>Default</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7461,27 +6648,24 @@ in `destination` must be specified as well.
             title="Required">
         <span id="ssealgorithm_csharp">
 <a href="#ssealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Sse<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-side encryption algorithm to use. Valid values are `AES256` and `aws:kms`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kmsmasterkeyid_csharp">
 <a href="#kmsmasterkeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Master<wbr>Key<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of `sse_algorithm` as `aws:kms`. The default `aws/s3` AWS KMS master key is used if this element is absent while the `sse_algorithm` is `aws:kms`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7490,27 +6674,24 @@ in `destination` must be specified as well.
             title="Required">
         <span id="ssealgorithm_go">
 <a href="#ssealgorithm_go" style="color: inherit; text-decoration: inherit;">Sse<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-side encryption algorithm to use. Valid values are `AES256` and `aws:kms`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kmsmasterkeyid_go">
 <a href="#kmsmasterkeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Master<wbr>Key<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of `sse_algorithm` as `aws:kms`. The default `aws/s3` AWS KMS master key is used if this element is absent while the `sse_algorithm` is `aws:kms`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7519,74 +6700,52 @@ in `destination` must be specified as well.
             title="Required">
         <span id="ssealgorithm_nodejs">
 <a href="#ssealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">sse<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-side encryption algorithm to use. Valid values are `AES256` and `aws:kms`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kmsmasterkeyid_nodejs">
 <a href="#kmsmasterkeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Master<wbr>Key<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of `sse_algorithm` as `aws:kms`. The default `aws/s3` AWS KMS master key is used if this element is absent while the `sse_algorithm` is `aws:kms`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="ssealgorithm_python">
-<a href="#ssealgorithm_python" style="color: inherit; text-decoration: inherit;">sse<wbr>Algorithm</a>
-</span> 
+        <span id="sse_algorithm_python">
+<a href="#sse_algorithm_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>algorithm</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server-side encryption algorithm to use. Valid values are `AES256` and `aws:kms`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kms_master_key_id_python">
 <a href="#kms_master_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>master_<wbr>key_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of `sse_algorithm` as `aws:kms`. The default `aws/s3` AWS KMS master key is used if this element is absent while the `sse_algorithm` is `aws:kms`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketversioning">Bucket<wbr>Versioning</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketVersioning">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketVersioning">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketVersioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketVersioningOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketVersioningArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketVersioning.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7595,27 +6754,24 @@ in `destination` must be specified as well.
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mfadelete_csharp">
 <a href="#mfadelete_csharp" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable MFA delete for either `Change the versioning state of your bucket` or `Permanently delete an object version`. Default is `false`. This cannot be used to toggle this setting but is available to allow managed buckets to reflect the state in AWS
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7624,27 +6780,24 @@ in `destination` must be specified as well.
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mfadelete_go">
 <a href="#mfadelete_go" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable MFA delete for either `Change the versioning state of your bucket` or `Permanently delete an object version`. Default is `false`. This cannot be used to toggle this setting but is available to allow managed buckets to reflect the state in AWS
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7653,27 +6806,24 @@ in `destination` must be specified as well.
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mfadelete_nodejs">
 <a href="#mfadelete_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable MFA delete for either `Change the versioning state of your bucket` or `Permanently delete an object version`. Default is `false`. This cannot be used to toggle this setting but is available to allow managed buckets to reflect the state in AWS
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7682,45 +6832,26 @@ in `destination` must be specified as well.
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="mfadelete_python">
-<a href="#mfadelete_python" style="color: inherit; text-decoration: inherit;">mfa<wbr>Delete</a>
-</span> 
+        <span id="mfa_delete_python">
+<a href="#mfa_delete_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>delete</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable MFA delete for either `Change the versioning state of your bucket` or `Permanently delete an object version`. Default is `false`. This cannot be used to toggle this setting but is available to allow managed buckets to reflect the state in AWS
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketwebsite">Bucket<wbr>Website</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketWebsite">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketWebsite">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketWebsiteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketWebsiteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketWebsiteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketWebsite.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7729,50 +6860,45 @@ in `destination` must be specified as well.
             title="Optional">
         <span id="errordocument_csharp">
 <a href="#errordocument_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Document</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the document to return in case of a 4XX error.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="indexdocument_csharp">
 <a href="#indexdocument_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Document</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirectallrequeststo_csharp">
 <a href="#redirectallrequeststo_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>All<wbr>Requests<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="routingrules_csharp">
 <a href="#routingrules_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
+        <span class="property-type">string | List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A json array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html)
 describing redirect behavior and when redirects are applied.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7781,50 +6907,45 @@ describing redirect behavior and when redirects are applied.
             title="Optional">
         <span id="errordocument_go">
 <a href="#errordocument_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Document</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the document to return in case of a 4XX error.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="indexdocument_go">
 <a href="#indexdocument_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Document</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirectallrequeststo_go">
 <a href="#redirectallrequeststo_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>All<wbr>Requests<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="routingrules_go">
 <a href="#routingrules_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">string | []string</span>
     </dt>
     <dd>{{% md %}}A json array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html)
 describing redirect behavior and when redirects are applied.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7833,106 +6954,188 @@ describing redirect behavior and when redirects are applied.
             title="Optional">
         <span id="errordocument_nodejs">
 <a href="#errordocument_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Document</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the document to return in case of a 4XX error.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="indexdocument_nodejs">
 <a href="#indexdocument_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirectallrequeststo_nodejs">
 <a href="#redirectallrequeststo_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>All<wbr>Requests<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="routingrules_nodejs">
 <a href="#routingrules_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string | Routing<wbr>Rule[]</span>
     </dt>
     <dd>{{% md %}}A json array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html)
 describing redirect behavior and when redirects are applied.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="errordocument_python">
-<a href="#errordocument_python" style="color: inherit; text-decoration: inherit;">error<wbr>Document</a>
-</span> 
+        <span id="error_document_python">
+<a href="#error_document_python" style="color: inherit; text-decoration: inherit;">error_<wbr>document</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the document to return in case of a 4XX error.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="indexdocument_python">
-<a href="#indexdocument_python" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
-</span> 
+        <span id="index_document_python">
+<a href="#index_document_python" style="color: inherit; text-decoration: inherit;">index_<wbr>document</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon S3 returns this index document when requests are made to the root domain or any of the subfolders.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="redirectallrequeststo_python">
-<a href="#redirectallrequeststo_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>All<wbr>Requests<wbr>To</a>
-</span> 
+        <span id="redirect_all_requests_to_python">
+<a href="#redirect_all_requests_to_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>all_<wbr>requests_<wbr>to</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A hostname to redirect all website requests for this bucket to. Hostname can optionally be prefixed with a protocol (`http://` or `https://`) to use when redirecting requests. The default is the protocol that is used in the original request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="routingrules_python">
-<a href="#routingrules_python" style="color: inherit; text-decoration: inherit;">routing<wbr>Rules</a>
-</span> 
+        <span id="routing_rules_python">
+<a href="#routing_rules_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>rules</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | List[Routing<wbr>Rule]</span>
+        <span class="property-type">str | Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A json array containing [routing rules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules.html)
 describing redirect behavior and when redirects are applied.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="cannedacl">Canned<wbr>Acl</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Private</dt>
+    <dd>private</dd>
+    <dt>Public<wbr>Read</dt>
+    <dd>public-read</dd>
+    <dt>Public<wbr>Read<wbr>Write</dt>
+    <dd>public-read-write</dd>
+    <dt>Aws<wbr>Exec<wbr>Read</dt>
+    <dd>aws-exec-read</dd>
+    <dt>Authenticated<wbr>Read</dt>
+    <dd>authenticated-read</dd>
+    <dt>Bucket<wbr>Owner<wbr>Read</dt>
+    <dd>bucket-owner-read</dd>
+    <dt>Bucket<wbr>Owner<wbr>Full<wbr>Control</dt>
+    <dd>bucket-owner-full-control</dd>
+    <dt>Log<wbr>Delivery<wbr>Write</dt>
+    <dd>log-delivery-write</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Canned<wbr>Acl<wbr>Private</dt>
+    <dd>private</dd>
+    <dt>Canned<wbr>Acl<wbr>Public<wbr>Read</dt>
+    <dd>public-read</dd>
+    <dt>Canned<wbr>Acl<wbr>Public<wbr>Read<wbr>Write</dt>
+    <dd>public-read-write</dd>
+    <dt>Canned<wbr>Acl<wbr>Aws<wbr>Exec<wbr>Read</dt>
+    <dd>aws-exec-read</dd>
+    <dt>Canned<wbr>Acl<wbr>Authenticated<wbr>Read</dt>
+    <dd>authenticated-read</dd>
+    <dt>Canned<wbr>Acl<wbr>Bucket<wbr>Owner<wbr>Read</dt>
+    <dd>bucket-owner-read</dd>
+    <dt>Canned<wbr>Acl<wbr>Bucket<wbr>Owner<wbr>Full<wbr>Control</dt>
+    <dd>bucket-owner-full-control</dd>
+    <dt>Canned<wbr>Acl<wbr>Log<wbr>Delivery<wbr>Write</dt>
+    <dd>log-delivery-write</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Private</dt>
+    <dd>private</dd>
+    <dt>Public<wbr>Read</dt>
+    <dd>public-read</dd>
+    <dt>Public<wbr>Read<wbr>Write</dt>
+    <dd>public-read-write</dd>
+    <dt>Aws<wbr>Exec<wbr>Read</dt>
+    <dd>aws-exec-read</dd>
+    <dt>Authenticated<wbr>Read</dt>
+    <dd>authenticated-read</dd>
+    <dt>Bucket<wbr>Owner<wbr>Read</dt>
+    <dd>bucket-owner-read</dd>
+    <dt>Bucket<wbr>Owner<wbr>Full<wbr>Control</dt>
+    <dd>bucket-owner-full-control</dd>
+    <dt>Log<wbr>Delivery<wbr>Write</dt>
+    <dd>log-delivery-write</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>PRIVATE</dt>
+    <dd>private</dd>
+    <dt>PUBLIC_READ</dt>
+    <dd>public-read</dd>
+    <dt>PUBLIC_READ_WRITE</dt>
+    <dd>public-read-write</dd>
+    <dt>AWS_EXEC_READ</dt>
+    <dd>aws-exec-read</dd>
+    <dt>AUTHENTICATED_READ</dt>
+    <dd>authenticated-read</dd>
+    <dt>BUCKET_OWNER_READ</dt>
+    <dd>bucket-owner-read</dd>
+    <dt>BUCKET_OWNER_FULL_CONTROL</dt>
+    <dd>bucket-owner-full-control</dd>
+    <dt>LOG_DELIVERY_WRITE</dt>
+    <dd>log-delivery-write</dd>
+</dl>
+{{% /choosable %}}
+## Import
 
 
+S3 bucket can be imported using the `bucket`, e.g.
 
+```sh
+ $ pulumi import aws:s3/bucket:Bucket bucket bucket-name
+```
 
+ The `policy` argument is not imported and will be deprecated in a future version 3.x of the Terraform AWS Provider for removal in version 4.0. Use the [`aws_s3_bucket_policy` resource](/docs/providers/aws/r/s3_bucket_policy.html) to manage the S3 Bucket Policy instead.
 
 
 

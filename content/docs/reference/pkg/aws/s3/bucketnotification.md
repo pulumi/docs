@@ -1,8 +1,8 @@
 
 ---
 title: "BucketNotification"
-title_tag: "Resource BucketNotification | Module s3 | Package AWS"
-meta_desc: "Explore the BucketNotification resource of the s3 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a S3 Bucket Notification Configuration. For additional information, see the [Configuring S3 Event Notifications section in the Amazon S3 Developer Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html)."
+title_tag: "aws.s3.BucketNotification"
+meta_desc: "Documentation for the aws.s3.BucketNotification resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -139,11 +139,11 @@ topic = aws.sns.Topic("topic", policy=bucket.arn.apply(lambda arn: f"""{{
 """))
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
-    topics=[{
-        "topic_arn": topic.arn,
-        "events": ["s3:ObjectCreated:*"],
-        "filterSuffix": ".log",
-    }])
+    topics=[aws.s3.BucketNotificationTopicArgs(
+        topic_arn=topic.arn,
+        events=["s3:ObjectCreated:*"],
+        filter_suffix=".log",
+    )])
 ```
 
 {{% /example %}}
@@ -305,11 +305,11 @@ queue = aws.sqs.Queue("queue", policy=bucket.arn.apply(lambda arn: f"""{{
 """))
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
-    queues=[{
-        "queueArn": queue.arn,
-        "events": ["s3:ObjectCreated:*"],
-        "filterSuffix": ".log",
-    }])
+    queues=[aws.s3.BucketNotificationQueueArgs(
+        queue_arn=queue.arn,
+        events=["s3:ObjectCreated:*"],
+        filter_suffix=".log",
+    )])
 ```
 
 {{% /example %}}
@@ -456,13 +456,13 @@ allow_bucket = aws.lambda_.Permission("allowBucket",
     source_arn=bucket.arn)
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
-    lambda_functions=[{
-        "lambda_function_arn": func.arn,
-        "events": ["s3:ObjectCreated:*"],
-        "filterPrefix": "AWSLogs/",
-        "filterSuffix": ".log",
-    }],
-    opts=ResourceOptions(depends_on=[allow_bucket]))
+    lambda_functions=[aws.s3.BucketNotificationLambdaFunctionArgs(
+        lambda_function_arn=func.arn,
+        events=["s3:ObjectCreated:*"],
+        filter_prefix="AWSLogs/",
+        filter_suffix=".log",
+    )],
+    opts=pulumi.ResourceOptions(depends_on=[allow_bucket]))
 ```
 
 {{% /example %}}
@@ -656,20 +656,20 @@ allow_bucket2 = aws.lambda_.Permission("allowBucket2",
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
     lambda_functions=[
-        {
-            "lambda_function_arn": func1.arn,
-            "events": ["s3:ObjectCreated:*"],
-            "filterPrefix": "AWSLogs/",
-            "filterSuffix": ".log",
-        },
-        {
-            "lambda_function_arn": func2.arn,
-            "events": ["s3:ObjectCreated:*"],
-            "filterPrefix": "OtherLogs/",
-            "filterSuffix": ".log",
-        },
+        aws.s3.BucketNotificationLambdaFunctionArgs(
+            lambda_function_arn=func1.arn,
+            events=["s3:ObjectCreated:*"],
+            filter_prefix="AWSLogs/",
+            filter_suffix=".log",
+        ),
+        aws.s3.BucketNotificationLambdaFunctionArgs(
+            lambda_function_arn=func2.arn,
+            events=["s3:ObjectCreated:*"],
+            filter_prefix="OtherLogs/",
+            filter_suffix=".log",
+        ),
     ],
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             allow_bucket1,
             allow_bucket2,
         ]))
@@ -892,18 +892,18 @@ queue = aws.sqs.Queue("queue", policy=bucket.arn.apply(lambda arn: f"""{{
 bucket_notification = aws.s3.BucketNotification("bucketNotification",
     bucket=bucket.id,
     queues=[
-        {
-            "id": "image-upload-event",
-            "queueArn": queue.arn,
-            "events": ["s3:ObjectCreated:*"],
-            "filterPrefix": "images/",
-        },
-        {
-            "id": "video-upload-event",
-            "queueArn": queue.arn,
-            "events": ["s3:ObjectCreated:*"],
-            "filterPrefix": "videos/",
-        },
+        aws.s3.BucketNotificationQueueArgs(
+            id="image-upload-event",
+            queue_arn=queue.arn,
+            events=["s3:ObjectCreated:*"],
+            filter_prefix="images/",
+        ),
+        aws.s3.BucketNotificationQueueArgs(
+            id="video-upload-event",
+            queue_arn=queue.arn,
+            events=["s3:ObjectCreated:*"],
+            filter_prefix="videos/",
+        ),
     ])
 ```
 
@@ -960,19 +960,19 @@ const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketNotification">BucketNotification</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketNotificationArgs">BucketNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BucketNotification</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BucketNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/s3/#pulumi_aws.s3.BucketNotification">BucketNotification</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bucket=None<span class="p">, </span>lambda_functions=None<span class="p">, </span>queues=None<span class="p">, </span>topics=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BucketNotification</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_functions</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketNotificationLambdaFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketNotificationQueueArgs]]</span> = None<span class="p">, </span><span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketNotificationTopicArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotification">NewBucketNotification</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationArgs">BucketNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotification">BucketNotification</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBucketNotification</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BucketNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BucketNotification</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketNotification.html">BucketNotification</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketNotificationArgs.html">BucketNotificationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BucketNotification</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BucketNotificationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -983,7 +983,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -993,7 +993,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketNotificationArgs">BucketNotificationArgs</a></span>
+        <span class="property-type"><a href="#inputs">BucketNotificationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1052,7 +1052,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1062,7 +1062,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationArgs">BucketNotificationArgs</a></span>
+        <span class="property-type"><a href="#inputs">BucketNotificationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1091,7 +1091,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1101,7 +1101,7 @@ const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketNotificationArgs.html">BucketNotificationArgs</a></span>
+        <span class="property-type"><a href="#inputs">BucketNotificationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1124,12 +1124,11 @@ const bucketNotification = new aws.s3.BucketNotification("bucketNotification", {
 
 ## BucketNotification Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The BucketNotification resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The BucketNotification resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1140,49 +1139,44 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lambdafunctions_csharp">
 <a href="#lambdafunctions_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Functions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationlambdafunction">List&lt;Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queues_csharp">
 <a href="#queues_csharp" style="color: inherit; text-decoration: inherit;">Queues</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationqueue">List&lt;Bucket<wbr>Notification<wbr>Queue<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="topics_csharp">
 <a href="#topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationtopic">List&lt;Bucket<wbr>Notification<wbr>Topic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1191,49 +1185,44 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lambdafunctions_go">
 <a href="#lambdafunctions_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Functions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationlambdafunction">[]Bucket<wbr>Notification<wbr>Lambda<wbr>Function</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queues_go">
 <a href="#queues_go" style="color: inherit; text-decoration: inherit;">Queues</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationqueue">[]Bucket<wbr>Notification<wbr>Queue</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="topics_go">
 <a href="#topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationtopic">[]Bucket<wbr>Notification<wbr>Topic</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1242,49 +1231,44 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lambdafunctions_nodejs">
 <a href="#lambdafunctions_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Functions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationlambdafunction">Bucket<wbr>Notification<wbr>Lambda<wbr>Function[]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queues_nodejs">
 <a href="#queues_nodejs" style="color: inherit; text-decoration: inherit;">queues</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationqueue">Bucket<wbr>Notification<wbr>Queue[]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="topics_nodejs">
 <a href="#topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationtopic">Bucket<wbr>Notification<wbr>Topic[]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1293,58 +1277,49 @@ The BucketNotification resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lambda_functions_python">
 <a href="#lambda_functions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>functions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">List[Bucket<wbr>Notification<wbr>Lambda<wbr>Function]</a></span>
+        <span class="property-type"><a href="#bucketnotificationlambdafunction">Sequence[Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queues_python">
 <a href="#queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">List[Bucket<wbr>Notification<wbr>Queue]</a></span>
+        <span class="property-type"><a href="#bucketnotificationqueue">Sequence[Bucket<wbr>Notification<wbr>Queue<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="topics_python">
 <a href="#topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">List[Bucket<wbr>Notification<wbr>Topic]</a></span>
+        <span class="property-type"><a href="#bucketnotificationtopic">Sequence[Bucket<wbr>Notification<wbr>Topic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the BucketNotification resource produces the following output properties:
-
 
 
 
@@ -1355,15 +1330,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1372,15 +1345,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1389,15 +1360,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1406,18 +1375,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1427,19 +1391,20 @@ Get an existing BucketNotification resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketNotificationState">BucketNotificationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketNotification">BucketNotification</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BucketNotificationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BucketNotification</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bucket=None<span class="p">, </span>lambda_functions=None<span class="p">, </span>queues=None<span class="p">, </span>topics=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_functions</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketNotificationLambdaFunctionArgs]]</span> = None<span class="p">, </span><span class="nx">queues</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketNotificationQueueArgs]]</span> = None<span class="p">, </span><span class="nx">topics</span><span class="p">:</span> <span class="nx">Optional[Sequence[BucketNotificationTopicArgs]]</span> = None<span class="p">) -&gt;</span> BucketNotification</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucketNotification<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationState">BucketNotificationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotification">BucketNotification</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBucketNotification<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BucketNotificationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BucketNotification</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketNotification.html">BucketNotification</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.BucketNotificationState.html">BucketNotificationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BucketNotification</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BucketNotificationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1541,7 +1506,6 @@ Get an existing BucketNotification resource's state with the given name, ID, and
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1549,49 +1513,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bucket_csharp">
 <a href="#state_bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lambdafunctions_csharp">
 <a href="#state_lambdafunctions_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Functions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationlambdafunction">List&lt;Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_queues_csharp">
 <a href="#state_queues_csharp" style="color: inherit; text-decoration: inherit;">Queues</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationqueue">List&lt;Bucket<wbr>Notification<wbr>Queue<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_topics_csharp">
 <a href="#state_topics_csharp" style="color: inherit; text-decoration: inherit;">Topics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationtopic">List&lt;Bucket<wbr>Notification<wbr>Topic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1600,49 +1559,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bucket_go">
 <a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lambdafunctions_go">
 <a href="#state_lambdafunctions_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Functions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationlambdafunction">[]Bucket<wbr>Notification<wbr>Lambda<wbr>Function</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_queues_go">
 <a href="#state_queues_go" style="color: inherit; text-decoration: inherit;">Queues</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationqueue">[]Bucket<wbr>Notification<wbr>Queue</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_topics_go">
 <a href="#state_topics_go" style="color: inherit; text-decoration: inherit;">Topics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationtopic">[]Bucket<wbr>Notification<wbr>Topic</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1651,49 +1605,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bucket_nodejs">
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lambdafunctions_nodejs">
 <a href="#state_lambdafunctions_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Functions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationlambdafunction">Bucket<wbr>Notification<wbr>Lambda<wbr>Function[]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_queues_nodejs">
 <a href="#state_queues_nodejs" style="color: inherit; text-decoration: inherit;">queues</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationqueue">Bucket<wbr>Notification<wbr>Queue[]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_topics_nodejs">
 <a href="#state_topics_nodejs" style="color: inherit; text-decoration: inherit;">topics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bucketnotificationtopic">Bucket<wbr>Notification<wbr>Topic[]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1702,52 +1651,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bucket_python">
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put notification configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lambda_functions_python">
 <a href="#state_lambda_functions_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>functions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationlambdafunction">List[Bucket<wbr>Notification<wbr>Lambda<wbr>Function]</a></span>
+        <span class="property-type"><a href="#bucketnotificationlambdafunction">Sequence[Bucket<wbr>Notification<wbr>Lambda<wbr>Function<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Used to configure notifications to a Lambda Function (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_queues_python">
 <a href="#state_queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationqueue">List[Bucket<wbr>Notification<wbr>Queue]</a></span>
+        <span class="property-type"><a href="#bucketnotificationqueue">Sequence[Bucket<wbr>Notification<wbr>Queue<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SQS Queue (documented below).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_topics_python">
 <a href="#state_topics_python" style="color: inherit; text-decoration: inherit;">topics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#bucketnotificationtopic">List[Bucket<wbr>Notification<wbr>Topic]</a></span>
+        <span class="property-type"><a href="#bucketnotificationtopic">Sequence[Bucket<wbr>Notification<wbr>Topic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The notification configuration to SNS Topic (documented below).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1757,20 +1698,8 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="bucketnotificationlambdafunction">Bucket<wbr>Notification<wbr>Lambda<wbr>Function</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketNotificationLambdaFunction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketNotificationLambdaFunction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationLambdaFunctionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationLambdaFunctionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketNotificationLambdaFunctionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketNotificationLambdaFunction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1779,60 +1708,54 @@ The following state arguments are supported:
             title="Required">
         <span id="events_csharp">
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filterprefix_csharp">
 <a href="#filterprefix_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_csharp">
 <a href="#filtersuffix_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionarn_csharp">
 <a href="#lambdafunctionarn_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon Lambda function ARN.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1841,60 +1764,54 @@ The following state arguments are supported:
             title="Required">
         <span id="events_go">
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filterprefix_go">
 <a href="#filterprefix_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_go">
 <a href="#filtersuffix_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionarn_go">
 <a href="#lambdafunctionarn_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon Lambda function ARN.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1903,60 +1820,54 @@ The following state arguments are supported:
             title="Required">
         <span id="events_nodejs">
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filterprefix_nodejs">
 <a href="#filterprefix_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_nodejs">
 <a href="#filtersuffix_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionarn_nodejs">
 <a href="#lambdafunctionarn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon Lambda function ARN.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1965,78 +1876,56 @@ The following state arguments are supported:
             title="Required">
         <span id="events_python">
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="filterprefix_python">
-<a href="#filterprefix_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Prefix</a>
-</span> 
+        <span id="filter_prefix_python">
+<a href="#filter_prefix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>prefix</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="filtersuffix_python">
-<a href="#filtersuffix_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Suffix</a>
-</span> 
+        <span id="filter_suffix_python">
+<a href="#filter_suffix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>suffix</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lambda_function_arn_python">
 <a href="#lambda_function_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>function_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon Lambda function ARN.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketnotificationqueue">Bucket<wbr>Notification<wbr>Queue</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketNotificationQueue">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketNotificationQueue">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationQueueArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationQueueOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketNotificationQueueArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketNotificationQueue.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2045,60 +1934,54 @@ The following state arguments are supported:
             title="Required">
         <span id="events_csharp">
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="queuearn_csharp">
 <a href="#queuearn_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SQS queue ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filterprefix_csharp">
 <a href="#filterprefix_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_csharp">
 <a href="#filtersuffix_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2107,60 +1990,54 @@ The following state arguments are supported:
             title="Required">
         <span id="events_go">
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="queuearn_go">
 <a href="#queuearn_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SQS queue ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filterprefix_go">
 <a href="#filterprefix_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_go">
 <a href="#filtersuffix_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2169,60 +2046,54 @@ The following state arguments are supported:
             title="Required">
         <span id="events_nodejs">
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="queuearn_nodejs">
 <a href="#queuearn_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SQS queue ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filterprefix_nodejs">
 <a href="#filterprefix_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_nodejs">
 <a href="#filtersuffix_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2231,78 +2102,56 @@ The following state arguments are supported:
             title="Required">
         <span id="events_python">
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="queuearn_python">
-<a href="#queuearn_python" style="color: inherit; text-decoration: inherit;">queue<wbr>Arn</a>
-</span> 
+        <span id="queue_arn_python">
+<a href="#queue_arn_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>arn</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SQS queue ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="filterprefix_python">
-<a href="#filterprefix_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Prefix</a>
-</span> 
+        <span id="filter_prefix_python">
+<a href="#filter_prefix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>prefix</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="filtersuffix_python">
-<a href="#filtersuffix_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Suffix</a>
-</span> 
+        <span id="filter_suffix_python">
+<a href="#filter_suffix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>suffix</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bucketnotificationtopic">Bucket<wbr>Notification<wbr>Topic</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BucketNotificationTopic">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BucketNotificationTopic">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationTopicArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#BucketNotificationTopicOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Inputs.BucketNotificationTopicArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.Outputs.BucketNotificationTopic.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2311,60 +2160,54 @@ The following state arguments are supported:
             title="Required">
         <span id="events_csharp">
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="topicarn_csharp">
 <a href="#topicarn_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SNS topic ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filterprefix_csharp">
 <a href="#filterprefix_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_csharp">
 <a href="#filtersuffix_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2373,60 +2216,54 @@ The following state arguments are supported:
             title="Required">
         <span id="events_go">
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="topicarn_go">
 <a href="#topicarn_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SNS topic ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filterprefix_go">
 <a href="#filterprefix_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_go">
 <a href="#filtersuffix_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2435,60 +2272,54 @@ The following state arguments are supported:
             title="Required">
         <span id="events_nodejs">
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="topicarn_nodejs">
 <a href="#topicarn_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SNS topic ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filterprefix_nodejs">
 <a href="#filterprefix_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersuffix_nodejs">
 <a href="#filtersuffix_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2497,64 +2328,62 @@ The following state arguments are supported:
             title="Required">
         <span id="events_python">
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies [event](http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#notification-how-to-event-types-and-destinations) for which to send notifications.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="topic_arn_python">
 <a href="#topic_arn_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies Amazon SNS topic ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="filterprefix_python">
-<a href="#filterprefix_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Prefix</a>
-</span> 
+        <span id="filter_prefix_python">
+<a href="#filter_prefix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>prefix</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies object key name prefix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="filtersuffix_python">
-<a href="#filtersuffix_python" style="color: inherit; text-decoration: inherit;">filter<wbr>Suffix</a>
-</span> 
+        <span id="filter_suffix_python">
+<a href="#filter_suffix_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>suffix</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies object key name suffix.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies unique identifier for each of the notification configurations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+S3 bucket notification can be imported using the `bucket`, e.g.
 
-
-
+```sh
+ $ pulumi import aws:s3/bucketNotification:BucketNotification bucket_notification bucket-name
+```
 
 
 

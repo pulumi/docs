@@ -27,12 +27,12 @@ For example, in the gif below, we can see how updating one resource (in this cas
 
 ## Prerequisites
 
-> **IMPORTANT:** This tutorial expects that you have provisioned a Kubernetes cluster and have an
-> active kubeconfig file. If you don't, please follow instructions [here]({{< relref "/docs/intro/cloud-providers/kubernetes" >}}).
+> **IMPORTANT:** This tutorial expects that you have [provisioned a Kubernetes cluster]({{< relref "/docs/intro/cloud-providers/kubernetes" >}}) and have an
+> active kubeconfig file.
 
 1. Install [Node.js][nodejs].
 1. Install a package manager for Node.js, such as [npm] or [Yarn].
-1. Follow the directions [here][install] to install the Pulumi CLI.
+1. [Install the Pulumi CLI][install].
 
 ## Provisioning a Kubernetes application
 

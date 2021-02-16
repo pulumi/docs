@@ -1,8 +1,8 @@
 
 ---
 title: "MasterSlaveServerGroup"
-title_tag: "Resource MasterSlaveServerGroup | Module slb | Package AliCloud"
-meta_desc: "Explore the MasterSlaveServerGroup resource of the slb module, including examples, input properties, output properties, lookup functions, and supporting types. A master slave server group contains two ECS instances. The master slave server group can help you to define multiple listening dimension."
+title_tag: "alicloud.slb.MasterSlaveServerGroup"
+meta_desc: "Documentation for the alicloud.slb.MasterSlaveServerGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -64,8 +64,8 @@ class MyStack : Stack
         })));
         var image = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
         {
-            MostRecent = true,
             NameRegex = "^ubuntu_18.*64",
+            MostRecent = true,
             Owners = "system",
         }));
         var config = new Config();
@@ -77,39 +77,39 @@ class MyStack : Stack
         });
         var mainSwitch = new AliCloud.Vpc.Switch("mainSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/16",
             VpcId = mainNetwork.Id,
+            CidrBlock = "172.16.0.0/16",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var groupSecurityGroup = new AliCloud.Ecs.SecurityGroup("groupSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
         {
             VpcId = mainNetwork.Id,
         });
         var instanceInstance = new List<AliCloud.Ecs.Instance>();
-        for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
+        for (var rangeIndex = 0; rangeIndex < "2"; rangeIndex++)
         {
             var range = new { Value = rangeIndex };
             instanceInstance.Add(new AliCloud.Ecs.Instance($"instanceInstance-{range.Value}", new AliCloud.Ecs.InstanceArgs
             {
-                AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
                 ImageId = image.Apply(image => image.Images[0].Id),
-                InstanceChargeType = "PostPaid",
-                InstanceName = name,
                 InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
-                InternetChargeType = "PayByTraffic",
-                InternetMaxBandwidthOut = 10,
+                InstanceName = name,
                 SecurityGroups = 
                 {
                     groupSecurityGroup.Id,
                 },
+                InternetChargeType = "PayByTraffic",
+                InternetMaxBandwidthOut = 10,
+                AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
+                InstanceChargeType = "PostPaid",
                 SystemDiskCategory = "cloud_efficiency",
                 VswitchId = mainSwitch.Id,
             }));
         }
         var instanceLoadBalancer = new AliCloud.Slb.LoadBalancer("instanceLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
         {
-            Specification = "slb.s2.small",
             VswitchId = mainSwitch.Id,
+            Specification = "slb.s2.small",
         });
         var defaultNetworkInterface = new List<AliCloud.Vpc.NetworkInterface>();
         for (var rangeIndex = 0; rangeIndex < number; rangeIndex++)
@@ -117,11 +117,11 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             defaultNetworkInterface.Add(new AliCloud.Vpc.NetworkInterface($"defaultNetworkInterface-{range.Value}", new AliCloud.Vpc.NetworkInterfaceArgs
             {
+                VswitchId = mainSwitch.Id,
                 SecurityGroups = 
                 {
                     groupSecurityGroup.Id,
                 },
-                VswitchId = mainSwitch.Id,
             }));
         }
         var defaultNetworkInterfaceAttachment = new List<AliCloud.Vpc.NetworkInterfaceAttachment>();
@@ -141,37 +141,37 @@ class MyStack : Stack
             {
                 new AliCloud.Slb.Inputs.MasterSlaveServerGroupServerArgs
                 {
-                    Port = 100,
                     ServerId = instanceInstance[0].Id,
-                    ServerType = "Master",
+                    Port = 100,
                     Weight = 100,
+                    ServerType = "Master",
                 },
                 new AliCloud.Slb.Inputs.MasterSlaveServerGroupServerArgs
                 {
-                    Port = 100,
                     ServerId = instanceInstance[1].Id,
-                    ServerType = "Slave",
+                    Port = 100,
                     Weight = 100,
+                    ServerType = "Slave",
                 },
             },
         });
         var tcp = new AliCloud.Slb.Listener("tcp", new AliCloud.Slb.ListenerArgs
         {
-            Bandwidth = 10,
-            EstablishedTimeout = 600,
-            FrontendPort = 22,
-            HealthCheckConnectPort = 20,
-            HealthCheckHttpCode = "http_2xx",
-            HealthCheckInterval = 5,
-            HealthCheckTimeout = 8,
-            HealthCheckType = "tcp",
-            HealthCheckUri = "/console",
-            HealthyThreshold = 8,
             LoadBalancerId = instanceLoadBalancer.Id,
             MasterSlaveServerGroupId = groupMasterSlaveServerGroup.Id,
-            PersistenceTimeout = 3600,
+            FrontendPort = 22,
             Protocol = "tcp",
+            Bandwidth = 10,
+            HealthCheckType = "tcp",
+            PersistenceTimeout = 3600,
+            HealthyThreshold = 8,
             UnhealthyThreshold = 8,
+            HealthCheckTimeout = 8,
+            HealthCheckInterval = 5,
+            HealthCheckHttpCode = "http_2xx",
+            HealthCheckConnectPort = 20,
+            HealthCheckUri = "/console",
+            EstablishedTimeout = 600,
         });
     }
 
@@ -191,10 +191,10 @@ import pulumi_alicloud as alicloud
 
 default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
-default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
+default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0].id,
     eni_amount=2)
-image = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
+image = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
+    most_recent=True,
     owners="system")
 config = pulumi.Config()
 name = config.get("name")
@@ -205,31 +205,31 @@ if number is None:
     number = "1"
 main_network = alicloud.vpc.Network("mainNetwork", cidr_block="172.16.0.0/16")
 main_switch = alicloud.vpc.Switch("mainSwitch",
-    availability_zone=default_zones.zones[0]["id"],
+    vpc_id=main_network.id,
     cidr_block="172.16.0.0/16",
-    vpc_id=main_network.id)
+    availability_zone=default_zones.zones[0].id)
 group_security_group = alicloud.ecs.SecurityGroup("groupSecurityGroup", vpc_id=main_network.id)
 instance_instance = []
 for range in [{"value": i} for i in range(0, 2)]:
     instance_instance.append(alicloud.ecs.Instance(f"instanceInstance-{range['value']}",
-        availability_zone=default_zones.zones[0]["id"],
-        image_id=image.images[0]["id"],
-        instance_charge_type="PostPaid",
+        image_id=image.images[0].id,
+        instance_type=default_instance_types.instance_types[0].id,
         instance_name=name,
-        instance_type=default_instance_types.instance_types[0]["id"],
-        internet_charge_type="PayByTraffic",
-        internet_max_bandwidth_out="10",
         security_groups=[group_security_group.id],
+        internet_charge_type="PayByTraffic",
+        internet_max_bandwidth_out=10,
+        availability_zone=default_zones.zones[0].id,
+        instance_charge_type="PostPaid",
         system_disk_category="cloud_efficiency",
         vswitch_id=main_switch.id))
 instance_load_balancer = alicloud.slb.LoadBalancer("instanceLoadBalancer",
-    specification="slb.s2.small",
-    vswitch_id=main_switch.id)
+    vswitch_id=main_switch.id,
+    specification="slb.s2.small")
 default_network_interface = []
 for range in [{"value": i} for i in range(0, number)]:
     default_network_interface.append(alicloud.vpc.NetworkInterface(f"defaultNetworkInterface-{range['value']}",
-        security_groups=[group_security_group.id],
-        vswitch_id=main_switch.id))
+        vswitch_id=main_switch.id,
+        security_groups=[group_security_group.id]))
 default_network_interface_attachment = []
 for range in [{"value": i} for i in range(0, number)]:
     default_network_interface_attachment.append(alicloud.vpc.NetworkInterfaceAttachment(f"defaultNetworkInterfaceAttachment-{range['value']}",
@@ -238,35 +238,35 @@ for range in [{"value": i} for i in range(0, number)]:
 group_master_slave_server_group = alicloud.slb.MasterSlaveServerGroup("groupMasterSlaveServerGroup",
     load_balancer_id=instance_load_balancer.id,
     servers=[
-        {
-            "port": 100,
-            "serverId": instance_instance[0].id,
-            "server_type": "Master",
-            "weight": 100,
-        },
-        {
-            "port": 100,
-            "serverId": instance_instance[1].id,
-            "server_type": "Slave",
-            "weight": 100,
-        },
+        alicloud.slb.MasterSlaveServerGroupServerArgs(
+            server_id=instance_instance[0].id,
+            port=100,
+            weight=100,
+            server_type="Master",
+        ),
+        alicloud.slb.MasterSlaveServerGroupServerArgs(
+            server_id=instance_instance[1].id,
+            port=100,
+            weight=100,
+            server_type="Slave",
+        ),
     ])
 tcp = alicloud.slb.Listener("tcp",
-    bandwidth="10",
-    established_timeout=600,
-    frontend_port="22",
-    health_check_connect_port=20,
-    health_check_http_code="http_2xx",
-    health_check_interval=5,
-    health_check_timeout=8,
-    health_check_type="tcp",
-    health_check_uri="/console",
-    healthy_threshold=8,
     load_balancer_id=instance_load_balancer.id,
     master_slave_server_group_id=group_master_slave_server_group.id,
-    persistence_timeout=3600,
+    frontend_port=22,
     protocol="tcp",
-    unhealthy_threshold=8)
+    bandwidth=10,
+    health_check_type="tcp",
+    persistence_timeout=3600,
+    healthy_threshold=8,
+    unhealthy_threshold=8,
+    health_check_timeout=8,
+    health_check_interval=5,
+    health_check_http_code="http_2xx",
+    health_check_connect_port=20,
+    health_check_uri="/console",
+    established_timeout=600)
 ```
 
 {{% /example %}}
@@ -277,100 +277,95 @@ tcp = alicloud.slb.Listener("tcp",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
+const defaultZones = alicloud.getZones({
+    availableDiskCategory: "cloud_efficiency",
+    availableResourceCreation: "VSwitch",
+});
+const defaultInstanceTypes = defaultZones.then(defaultZones => alicloud.ecs.getInstanceTypes({
+    availabilityZone: defaultZones.zones[0].id,
+    eniAmount: 2,
+}));
+const image = alicloud.ecs.getImages({
+    nameRegex: "^ubuntu_18.*64",
+    mostRecent: true,
+    owners: "system",
+});
 const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccSlbMasterSlaveServerGroupVpc";
 const number = config.get("number") || "1";
-
-const defaultZones = pulumi.output(alicloud.getZones({
-    availableDiskCategory: "cloud_efficiency",
-    availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
-    availabilityZone: defaultZones.zones[0].id,
-    eniAmount: 2,
-}, { async: true }));
-const image = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
-    nameRegex: "^ubuntu_18.*64",
-    owners: "system",
-}, { async: true }));
-const mainNetwork = new alicloud.vpc.Network("main", {
-    cidrBlock: "172.16.0.0/16",
-});
-const mainSwitch = new alicloud.vpc.Switch("main", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/16",
+const mainNetwork = new alicloud.vpc.Network("mainNetwork", {cidrBlock: "172.16.0.0/16"});
+const mainSwitch = new alicloud.vpc.Switch("mainSwitch", {
     vpcId: mainNetwork.id,
+    cidrBlock: "172.16.0.0/16",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const groupSecurityGroup = new alicloud.ecs.SecurityGroup("group", {
-    vpcId: mainNetwork.id,
-});
-const instanceInstance: alicloud.ecs.Instance[] = [];
-for (let i = 0; i < 2; i++) {
-    instanceInstance.push(new alicloud.ecs.Instance(`instance-${i}`, {
-        availabilityZone: defaultZones.zones[0].id,
-        imageId: image.images[0].id,
-        instanceChargeType: "PostPaid",
+const groupSecurityGroup = new alicloud.ecs.SecurityGroup("groupSecurityGroup", {vpcId: mainNetwork.id});
+const instanceInstance: alicloud.ecs.Instance[];
+for (const range = {value: 0}; range.value < "2"; range.value++) {
+    instanceInstance.push(new alicloud.ecs.Instance(`instanceInstance-${range.value}`, {
+        imageId: image.then(image => image.images[0].id),
+        instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.instanceTypes[0].id),
         instanceName: name,
-        instanceType: defaultInstanceTypes.instanceTypes[0].id,
-        internetChargeType: "PayByTraffic",
-        internetMaxBandwidthOut: 10,
         securityGroups: [groupSecurityGroup.id],
+        internetChargeType: "PayByTraffic",
+        internetMaxBandwidthOut: "10",
+        availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
+        instanceChargeType: "PostPaid",
         systemDiskCategory: "cloud_efficiency",
         vswitchId: mainSwitch.id,
     }));
 }
-const instanceLoadBalancer = new alicloud.slb.LoadBalancer("instance", {
-    specification: "slb.s2.small",
+const instanceLoadBalancer = new alicloud.slb.LoadBalancer("instanceLoadBalancer", {
     vswitchId: mainSwitch.id,
+    specification: "slb.s2.small",
 });
-const defaultNetworkInterface: alicloud.vpc.NetworkInterface[] = [];
-for (let i = 0; i < number; i++) {
-    defaultNetworkInterface.push(new alicloud.vpc.NetworkInterface(`default-${i}`, {
-        securityGroups: [groupSecurityGroup.id],
+const defaultNetworkInterface: alicloud.vpc.NetworkInterface[];
+for (const range = {value: 0}; range.value < number; range.value++) {
+    defaultNetworkInterface.push(new alicloud.vpc.NetworkInterface(`defaultNetworkInterface-${range.value}`, {
         vswitchId: mainSwitch.id,
+        securityGroups: [groupSecurityGroup.id],
     }));
 }
-const defaultNetworkInterfaceAttachment: alicloud.vpc.NetworkInterfaceAttachment[] = [];
-for (let i = 0; i < number; i++) {
-    defaultNetworkInterfaceAttachment.push(new alicloud.vpc.NetworkInterfaceAttachment(`default-${i}`, {
+const defaultNetworkInterfaceAttachment: alicloud.vpc.NetworkInterfaceAttachment[];
+for (const range = {value: 0}; range.value < number; range.value++) {
+    defaultNetworkInterfaceAttachment.push(new alicloud.vpc.NetworkInterfaceAttachment(`defaultNetworkInterfaceAttachment-${range.value}`, {
         instanceId: instanceInstance[0].id,
-        networkInterfaceId: pulumi.all(defaultNetworkInterface.map(v => v.id)).apply(id => id.map(v => v)[i]),
+        networkInterfaceId: defaultNetworkInterface.map(__item => __item.id)[range.index],
     }));
 }
-const groupMasterSlaveServerGroup = new alicloud.slb.MasterSlaveServerGroup("group", {
+const groupMasterSlaveServerGroup = new alicloud.slb.MasterSlaveServerGroup("groupMasterSlaveServerGroup", {
     loadBalancerId: instanceLoadBalancer.id,
     servers: [
         {
-            port: 100,
             serverId: instanceInstance[0].id,
-            serverType: "Master",
+            port: 100,
             weight: 100,
+            serverType: "Master",
         },
         {
-            port: 100,
             serverId: instanceInstance[1].id,
-            serverType: "Slave",
+            port: 100,
             weight: 100,
+            serverType: "Slave",
         },
     ],
 });
 const tcp = new alicloud.slb.Listener("tcp", {
-    bandwidth: 10,
-    establishedTimeout: 600,
-    frontendPort: 22,
-    healthCheckConnectPort: 20,
-    healthCheckHttpCode: "http_2xx",
-    healthCheckInterval: 5,
-    healthCheckTimeout: 8,
-    healthCheckType: "tcp",
-    healthCheckUri: "/console",
-    healthyThreshold: 8,
     loadBalancerId: instanceLoadBalancer.id,
     masterSlaveServerGroupId: groupMasterSlaveServerGroup.id,
-    persistenceTimeout: 3600,
+    frontendPort: "22",
     protocol: "tcp",
+    bandwidth: "10",
+    healthCheckType: "tcp",
+    persistenceTimeout: 3600,
+    healthyThreshold: 8,
     unhealthyThreshold: 8,
+    healthCheckTimeout: 8,
+    healthCheckInterval: 5,
+    healthCheckHttpCode: "http_2xx",
+    healthCheckConnectPort: 20,
+    healthCheckUri: "/console",
+    establishedTimeout: 600,
 });
 ```
 
@@ -384,19 +379,19 @@ const tcp = new alicloud.slb.Listener("tcp", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#MasterSlaveServerGroup">MasterSlaveServerGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#MasterSlaveServerGroupArgs">MasterSlaveServerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#MasterSlaveServerGroup">MasterSlaveServerGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#MasterSlaveServerGroupArgs">MasterSlaveServerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/slb/#pulumi_alicloud.slb.MasterSlaveServerGroup">MasterSlaveServerGroup</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>delete_protection_validation=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name=None<span class="p">, </span>servers=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/slb/#pulumi_alicloud.slb.MasterSlaveServerGroup">MasterSlaveServerGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">delete_protection_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[MasterSlaveServerGroupServerArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroup">NewMasterSlaveServerGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroupArgs">MasterSlaveServerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroup">MasterSlaveServerGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroup">NewMasterSlaveServerGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroupArgs">MasterSlaveServerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroup">MasterSlaveServerGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.MasterSlaveServerGroup.html">MasterSlaveServerGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.MasterSlaveServerGroupArgs.html">MasterSlaveServerGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.MasterSlaveServerGroup.html">MasterSlaveServerGroup</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.MasterSlaveServerGroupArgs.html">MasterSlaveServerGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -407,7 +402,7 @@ const tcp = new alicloud.slb.Listener("tcp", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -476,7 +471,7 @@ const tcp = new alicloud.slb.Listener("tcp", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -515,7 +510,7 @@ const tcp = new alicloud.slb.Listener("tcp", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -556,7 +551,6 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -564,49 +558,44 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
             title="Required">
         <span id="loadbalancerid_csharp">
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer ID which is used to launch a new master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteprotectionvalidation_csharp">
 <a href="#deleteprotectionvalidation_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection<wbr>Validation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Checking DeleteProtection of SLB instance before deleting. If true, this resource will not be deleted when its SLB instance enabled DeleteProtection. Default to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servers_csharp">
 <a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Inputs.<wbr>Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ECS instances to be added. Only two ECS instances can be supported in one resource. It contains six sub-fields as `Block server` follows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -615,49 +604,44 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
             title="Required">
         <span id="loadbalancerid_go">
 <a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer ID which is used to launch a new master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteprotectionvalidation_go">
 <a href="#deleteprotectionvalidation_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection<wbr>Validation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Checking DeleteProtection of SLB instance before deleting. If true, this resource will not be deleted when its SLB instance enabled DeleteProtection. Default to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servers_go">
 <a href="#servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">[]Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A list of ECS instances to be added. Only two ECS instances can be supported in one resource. It contains six sub-fields as `Block server` follows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -666,49 +650,44 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
             title="Required">
         <span id="loadbalancerid_nodejs">
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer ID which is used to launch a new master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteprotectionvalidation_nodejs">
 <a href="#deleteprotectionvalidation_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection<wbr>Validation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Checking DeleteProtection of SLB instance before deleting. If true, this resource will not be deleted when its SLB instance enabled DeleteProtection. Default to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servers_nodejs">
 <a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ECS instances to be added. Only two ECS instances can be supported in one resource. It contains six sub-fields as `Block server` follows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -717,58 +696,49 @@ The MasterSlaveServerGroup resource accepts the following [input]({{< relref "/d
             title="Required">
         <span id="load_balancer_id_python">
 <a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Load Balancer ID which is used to launch a new master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="delete_protection_validation_python">
 <a href="#delete_protection_validation_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection_<wbr>validation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Checking DeleteProtection of SLB instance before deleting. If true, this resource will not be deleted when its SLB instance enabled DeleteProtection. Default to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servers_python">
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#masterslaveservergroupserver">List[Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server]</a></span>
+        <span class="property-type"><a href="#masterslaveservergroupserver">Sequence[Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ECS instances to be added. Only two ECS instances can be supported in one resource. It contains six sub-fields as `Block server` follows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the MasterSlaveServerGroup resource produces the following output properties:
-
 
 
 
@@ -779,15 +749,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -796,15 +764,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -813,15 +779,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -830,18 +794,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -851,19 +810,20 @@ Get an existing MasterSlaveServerGroup resource's state with the given name, ID,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#MasterSlaveServerGroupState">MasterSlaveServerGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#MasterSlaveServerGroup">MasterSlaveServerGroup</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#MasterSlaveServerGroupState">MasterSlaveServerGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#MasterSlaveServerGroup">MasterSlaveServerGroup</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>delete_protection_validation=None<span class="p">, </span>load_balancer_id=None<span class="p">, </span>name=None<span class="p">, </span>servers=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">delete_protection_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">load_balancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[MasterSlaveServerGroupServerArgs]]</span> = None<span class="p">) -&gt;</span> MasterSlaveServerGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMasterSlaveServerGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroupState">MasterSlaveServerGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroup">MasterSlaveServerGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMasterSlaveServerGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroupState">MasterSlaveServerGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroup">MasterSlaveServerGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.MasterSlaveServerGroup.html">MasterSlaveServerGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.MasterSlaveServerGroupState.html">MasterSlaveServerGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.MasterSlaveServerGroup.html">MasterSlaveServerGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.MasterSlaveServerGroupState.html">MasterSlaveServerGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -965,7 +925,6 @@ Get an existing MasterSlaveServerGroup resource's state with the given name, ID,
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -973,49 +932,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_deleteprotectionvalidation_csharp">
 <a href="#state_deleteprotectionvalidation_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection<wbr>Validation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Checking DeleteProtection of SLB instance before deleting. If true, this resource will not be deleted when its SLB instance enabled DeleteProtection. Default to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_csharp">
 <a href="#state_loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer ID which is used to launch a new master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servers_csharp">
 <a href="#state_servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Inputs.<wbr>Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ECS instances to be added. Only two ECS instances can be supported in one resource. It contains six sub-fields as `Block server` follows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1024,49 +978,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_deleteprotectionvalidation_go">
 <a href="#state_deleteprotectionvalidation_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection<wbr>Validation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Checking DeleteProtection of SLB instance before deleting. If true, this resource will not be deleted when its SLB instance enabled DeleteProtection. Default to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_go">
 <a href="#state_loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer ID which is used to launch a new master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servers_go">
 <a href="#state_servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">[]Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A list of ECS instances to be added. Only two ECS instances can be supported in one resource. It contains six sub-fields as `Block server` follows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1075,49 +1024,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_deleteprotectionvalidation_nodejs">
 <a href="#state_deleteprotectionvalidation_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection<wbr>Validation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Checking DeleteProtection of SLB instance before deleting. If true, this resource will not be deleted when its SLB instance enabled DeleteProtection. Default to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_nodejs">
 <a href="#state_loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Load Balancer ID which is used to launch a new master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servers_nodejs">
 <a href="#state_servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#masterslaveservergroupserver">Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ECS instances to be added. Only two ECS instances can be supported in one resource. It contains six sub-fields as `Block server` follows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1126,46 +1070,42 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_delete_protection_validation_python">
 <a href="#state_delete_protection_validation_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection_<wbr>validation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Checking DeleteProtection of SLB instance before deleting. If true, this resource will not be deleted when its SLB instance enabled DeleteProtection. Default to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_id_python">
 <a href="#state_load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Load Balancer ID which is used to launch a new master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the master slave server group. 
+    <dd>{{% md %}}Name of the master slave server group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servers_python">
 <a href="#state_servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#masterslaveservergroupserver">List[Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server]</a></span>
+        <span class="property-type"><a href="#masterslaveservergroupserver">Sequence[Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ECS instances to be added. Only two ECS instances can be supported in one resource. It contains six sub-fields as `Block server` follows.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1174,11 +1114,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="masterslaveservergroupserver">Master<wbr>Slave<wbr>Server<wbr>Group<wbr>Server</h4>
@@ -1189,11 +1126,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroupServerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#MasterSlaveServerGroupServerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.Inputs.MasterSlaveServerGroupServerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.Outputs.MasterSlaveServerGroupServer.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1203,55 +1139,58 @@ The following state arguments are supported:
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="serverid_csharp">
 <a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isbackup_csharp">
+<a href="#isbackup_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="servertype_csharp">
 <a href="#servertype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1260,55 +1199,58 @@ The following state arguments are supported:
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="serverid_go">
 <a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isbackup_go">
+<a href="#isbackup_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="servertype_go">
 <a href="#servertype_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1317,55 +1259,58 @@ The following state arguments are supported:
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="serverid_nodejs">
 <a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isbackup_nodejs">
+<a href="#isbackup_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="servertype_nodejs">
 <a href="#servertype_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1374,59 +1319,66 @@ The following state arguments are supported:
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="serverid_python">
-<a href="#serverid_python" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
-</span> 
+        <span id="server_id_python">
+<a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_backup_python">
+<a href="#is_backup_python" style="color: inherit; text-decoration: inherit;">is_<wbr>backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="server_type_python">
 <a href="#server_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Load balancer master slave server group can be imported using the id, e.g.
 
-
-
+```sh
+ $ pulumi import alicloud:slb/masterSlaveServerGroup:MasterSlaveServerGroup example abc123456
+```
 
 
 
@@ -1438,6 +1390,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Attachment"
-title_tag: "Resource Attachment | Module ess | Package AliCloud"
-meta_desc: "Explore the Attachment resource of the ess module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches several ECS instances to a specified scaling group or remove them from it."
+title_tag: "alicloud.ess.Attachment"
+meta_desc: "Documentation for the alicloud.ess.Attachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -46,8 +46,8 @@ class MyStack : Stack
         })));
         var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
         {
-            MostRecent = true,
             NameRegex = "^ubuntu_18.*64",
+            MostRecent = true,
             Owners = "system",
         }));
         var defaultNetwork = new AliCloud.Vpc.Network("defaultNetwork", new AliCloud.Vpc.NetworkArgs
@@ -56,9 +56,9 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
         {
@@ -66,25 +66,25 @@ class MyStack : Stack
         });
         var defaultSecurityGroupRule = new AliCloud.Ecs.SecurityGroupRule("defaultSecurityGroupRule", new AliCloud.Ecs.SecurityGroupRuleArgs
         {
-            CidrIp = "172.16.0.0/24",
+            Type = "ingress",
             IpProtocol = "tcp",
             NicType = "intranet",
             Policy = "accept",
             PortRange = "22/22",
             Priority = 1,
             SecurityGroupId = defaultSecurityGroup.Id,
-            Type = "ingress",
+            CidrIp = "172.16.0.0/24",
         });
         var defaultScalingGroup = new AliCloud.Ess.ScalingGroup("defaultScalingGroup", new AliCloud.Ess.ScalingGroupArgs
         {
-            MaxSize = 2,
             MinSize = 0,
+            MaxSize = 2,
+            ScalingGroupName = name,
             RemovalPolicies = 
             {
                 "OldestInstance",
                 "NewestInstance",
             },
-            ScalingGroupName = name,
             VswitchIds = 
             {
                 defaultSwitch.Id,
@@ -92,13 +92,13 @@ class MyStack : Stack
         });
         var defaultScalingConfiguration = new AliCloud.Ess.ScalingConfiguration("defaultScalingConfiguration", new AliCloud.Ess.ScalingConfigurationArgs
         {
-            Active = true,
-            Enable = true,
-            ForceDelete = true,
+            ScalingGroupId = defaultScalingGroup.Id,
             ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
             InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
-            ScalingGroupId = defaultScalingGroup.Id,
             SecurityGroupId = defaultSecurityGroup.Id,
+            ForceDelete = true,
+            Active = true,
+            Enable = true,
         });
         var defaultInstance = new List<AliCloud.Ecs.Instance>();
         for (var rangeIndex = 0; rangeIndex < 2; rangeIndex++)
@@ -107,28 +107,28 @@ class MyStack : Stack
             defaultInstance.Add(new AliCloud.Ecs.Instance($"defaultInstance-{range.Value}", new AliCloud.Ecs.InstanceArgs
             {
                 ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
-                InstanceChargeType = "PostPaid",
-                InstanceName = name,
                 InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
-                InternetChargeType = "PayByTraffic",
-                InternetMaxBandwidthOut = 10,
                 SecurityGroups = 
                 {
                     defaultSecurityGroup.Id,
                 },
+                InternetChargeType = "PayByTraffic",
+                InternetMaxBandwidthOut = 10,
+                InstanceChargeType = "PostPaid",
                 SystemDiskCategory = "cloud_efficiency",
                 VswitchId = defaultSwitch.Id,
+                InstanceName = name,
             }));
         }
         var defaultAttachment = new AliCloud.Ess.Attachment("defaultAttachment", new AliCloud.Ess.AttachmentArgs
         {
-            Force = true,
+            ScalingGroupId = defaultScalingGroup.Id,
             InstanceIds = 
             {
                 defaultInstance[0].Id,
                 defaultInstance[1].Id,
             },
-            ScalingGroupId = defaultScalingGroup.Id,
+            Force = true,
         });
     }
 
@@ -138,7 +138,153 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "essattachmentconfig"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		opt0 := "cloud_efficiency"
+		opt1 := "VSwitch"
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableDiskCategory:     &opt0,
+			AvailableResourceCreation: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt2 := defaultZones.Zones[0].Id
+		opt3 := 2
+		opt4 := 4
+		defaultInstanceTypes, err := ecs.GetInstanceTypes(ctx, &ecs.GetInstanceTypesArgs{
+			AvailabilityZone: &opt2,
+			CpuCoreCount:     &opt3,
+			MemorySize:       &opt4,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt5 := "^ubuntu_18.*64"
+		opt6 := true
+		opt7 := "system"
+		defaultImages, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
+			NameRegex:  &opt5,
+			MostRecent: &opt6,
+			Owners:     &opt7,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
+			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSecurityGroup, err := ecs.NewSecurityGroup(ctx, "defaultSecurityGroup", &ecs.SecurityGroupArgs{
+			VpcId: defaultNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ecs.NewSecurityGroupRule(ctx, "defaultSecurityGroupRule", &ecs.SecurityGroupRuleArgs{
+			Type:            pulumi.String("ingress"),
+			IpProtocol:      pulumi.String("tcp"),
+			NicType:         pulumi.String("intranet"),
+			Policy:          pulumi.String("accept"),
+			PortRange:       pulumi.String("22/22"),
+			Priority:        pulumi.Int(1),
+			SecurityGroupId: defaultSecurityGroup.ID(),
+			CidrIp:          pulumi.String("172.16.0.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultScalingGroup, err := ess.NewScalingGroup(ctx, "defaultScalingGroup", &ess.ScalingGroupArgs{
+			MinSize:          pulumi.Int(0),
+			MaxSize:          pulumi.Int(2),
+			ScalingGroupName: pulumi.String(name),
+			RemovalPolicies: pulumi.StringArray{
+				pulumi.String("OldestInstance"),
+				pulumi.String("NewestInstance"),
+			},
+			VswitchIds: pulumi.StringArray{
+				defaultSwitch.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = ess.NewScalingConfiguration(ctx, "defaultScalingConfiguration", &ess.ScalingConfigurationArgs{
+			ScalingGroupId:  defaultScalingGroup.ID(),
+			ImageId:         pulumi.String(defaultImages.Images[0].Id),
+			InstanceType:    pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
+			SecurityGroupId: defaultSecurityGroup.ID(),
+			ForceDelete:     pulumi.Bool(true),
+			Active:          pulumi.Bool(true),
+			Enable:          pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		var defaultInstance []*ecs.Instance
+		for key0, _ := range 2 {
+			__res, err := ecs.NewInstance(ctx, fmt.Sprintf("defaultInstance-%v", key0), &ecs.InstanceArgs{
+				ImageId:      pulumi.String(defaultImages.Images[0].Id),
+				InstanceType: pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
+				SecurityGroups: pulumi.StringArray{
+					defaultSecurityGroup.ID(),
+				},
+				InternetChargeType:      pulumi.String("PayByTraffic"),
+				InternetMaxBandwidthOut: pulumi.Int(10),
+				InstanceChargeType:      pulumi.String("PostPaid"),
+				SystemDiskCategory:      pulumi.String("cloud_efficiency"),
+				VswitchId:               defaultSwitch.ID(),
+				InstanceName:            pulumi.String(name),
+			})
+			if err != nil {
+				return err
+			}
+			defaultInstance = append(defaultInstance, __res)
+		}
+		_, err = ess.NewAttachment(ctx, "defaultAttachment", &ess.AttachmentArgs{
+			ScalingGroupId: defaultScalingGroup.ID(),
+			InstanceIds: pulumi.StringArray{
+				defaultInstance[0].ID(),
+				defaultInstance[1].ID(),
+			},
+			Force: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -152,63 +298,63 @@ if name is None:
     name = "essattachmentconfig"
 default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
-default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0]["id"],
+default_instance_types = alicloud.ecs.get_instance_types(availability_zone=default_zones.zones[0].id,
     cpu_core_count=2,
     memory_size=4)
-default_images = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
+default_images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
+    most_recent=True,
     owners="system")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_network.id)
 default_security_group_rule = alicloud.ecs.SecurityGroupRule("defaultSecurityGroupRule",
-    cidr_ip="172.16.0.0/24",
+    type="ingress",
     ip_protocol="tcp",
     nic_type="intranet",
     policy="accept",
     port_range="22/22",
     priority=1,
     security_group_id=default_security_group.id,
-    type="ingress")
+    cidr_ip="172.16.0.0/24")
 default_scaling_group = alicloud.ess.ScalingGroup("defaultScalingGroup",
-    max_size=2,
     min_size=0,
+    max_size=2,
+    scaling_group_name=name,
     removal_policies=[
         "OldestInstance",
         "NewestInstance",
     ],
-    scaling_group_name=name,
     vswitch_ids=[default_switch.id])
 default_scaling_configuration = alicloud.ess.ScalingConfiguration("defaultScalingConfiguration",
-    active=True,
-    enable=True,
-    force_delete=True,
-    image_id=default_images.images[0]["id"],
-    instance_type=default_instance_types.instance_types[0]["id"],
     scaling_group_id=default_scaling_group.id,
-    security_group_id=default_security_group.id)
+    image_id=default_images.images[0].id,
+    instance_type=default_instance_types.instance_types[0].id,
+    security_group_id=default_security_group.id,
+    force_delete=True,
+    active=True,
+    enable=True)
 default_instance = []
 for range in [{"value": i} for i in range(0, 2)]:
     default_instance.append(alicloud.ecs.Instance(f"defaultInstance-{range['value']}",
-        image_id=default_images.images[0]["id"],
-        instance_charge_type="PostPaid",
-        instance_name=name,
-        instance_type=default_instance_types.instance_types[0]["id"],
-        internet_charge_type="PayByTraffic",
-        internet_max_bandwidth_out="10",
+        image_id=default_images.images[0].id,
+        instance_type=default_instance_types.instance_types[0].id,
         security_groups=[default_security_group.id],
+        internet_charge_type="PayByTraffic",
+        internet_max_bandwidth_out=10,
+        instance_charge_type="PostPaid",
         system_disk_category="cloud_efficiency",
-        vswitch_id=default_switch.id))
+        vswitch_id=default_switch.id,
+        instance_name=name))
 default_attachment = alicloud.ess.Attachment("defaultAttachment",
-    force=True,
+    scaling_group_id=default_scaling_group.id,
     instance_ids=[
         default_instance[0].id,
         default_instance[1].id,
     ],
-    scaling_group_id=default_scaling_group.id)
+    force=True)
 ```
 
 {{% /example %}}
@@ -221,82 +367,77 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "essattachmentconfig";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+});
+const defaultInstanceTypes = defaultZones.then(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     cpuCoreCount: 2,
     memorySize: 4,
-}, { async: true }));
-const defaultImages = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
+}));
+const defaultImages = alicloud.ecs.getImages({
     nameRegex: "^ubuntu_18.*64",
+    mostRecent: true,
     owners: "system",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
+    vpcId: defaultNetwork.id,
     cidrBlock: "172.16.0.0/24",
-    vpcId: defaultNetwork.id,
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
-    vpcId: defaultNetwork.id,
-});
-const defaultSecurityGroupRule = new alicloud.ecs.SecurityGroupRule("default", {
-    cidrIp: "172.16.0.0/24",
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("defaultSecurityGroup", {vpcId: defaultNetwork.id});
+const defaultSecurityGroupRule = new alicloud.ecs.SecurityGroupRule("defaultSecurityGroupRule", {
+    type: "ingress",
     ipProtocol: "tcp",
     nicType: "intranet",
     policy: "accept",
     portRange: "22/22",
     priority: 1,
     securityGroupId: defaultSecurityGroup.id,
-    type: "ingress",
+    cidrIp: "172.16.0.0/24",
 });
-const defaultScalingGroup = new alicloud.ess.ScalingGroup("default", {
-    maxSize: 2,
+const defaultScalingGroup = new alicloud.ess.ScalingGroup("defaultScalingGroup", {
     minSize: 0,
+    maxSize: 2,
+    scalingGroupName: name,
     removalPolicies: [
         "OldestInstance",
         "NewestInstance",
     ],
-    scalingGroupName: name,
     vswitchIds: [defaultSwitch.id],
 });
-const defaultScalingConfiguration = new alicloud.ess.ScalingConfiguration("default", {
+const defaultScalingConfiguration = new alicloud.ess.ScalingConfiguration("defaultScalingConfiguration", {
+    scalingGroupId: defaultScalingGroup.id,
+    imageId: defaultImages.then(defaultImages => defaultImages.images[0].id),
+    instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.instanceTypes[0].id),
+    securityGroupId: defaultSecurityGroup.id,
+    forceDelete: true,
     active: true,
     enable: true,
-    forceDelete: true,
-    imageId: defaultImages.images[0].id,
-    instanceType: defaultInstanceTypes.instanceTypes[0].id,
-    scalingGroupId: defaultScalingGroup.id,
-    securityGroupId: defaultSecurityGroup.id,
 });
-const defaultInstance: alicloud.ecs.Instance[] = [];
-for (let i = 0; i < 2; i++) {
-    defaultInstance.push(new alicloud.ecs.Instance(`default-${i}`, {
-        imageId: defaultImages.images[0].id,
-        instanceChargeType: "PostPaid",
-        instanceName: name,
-        instanceType: defaultInstanceTypes.instanceTypes[0].id,
-        internetChargeType: "PayByTraffic",
-        internetMaxBandwidthOut: 10,
+const defaultInstance: alicloud.ecs.Instance[];
+for (const range = {value: 0}; range.value < 2; range.value++) {
+    defaultInstance.push(new alicloud.ecs.Instance(`defaultInstance-${range.value}`, {
+        imageId: defaultImages.then(defaultImages => defaultImages.images[0].id),
+        instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.instanceTypes[0].id),
         securityGroups: [defaultSecurityGroup.id],
+        internetChargeType: "PayByTraffic",
+        internetMaxBandwidthOut: "10",
+        instanceChargeType: "PostPaid",
         systemDiskCategory: "cloud_efficiency",
         vswitchId: defaultSwitch.id,
+        instanceName: name,
     }));
 }
-const defaultAttachment = new alicloud.ess.Attachment("default", {
-    force: true,
+const defaultAttachment = new alicloud.ess.Attachment("defaultAttachment", {
+    scalingGroupId: defaultScalingGroup.id,
     instanceIds: [
         defaultInstance[0].id,
         defaultInstance[1].id,
     ],
-    scalingGroupId: defaultScalingGroup.id,
+    force: true,
 });
 ```
 
@@ -310,19 +451,19 @@ const defaultAttachment = new alicloud.ess.Attachment("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#Attachment">Attachment</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#AttachmentArgs">AttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#Attachment">Attachment</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#AttachmentArgs">AttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.Attachment">Attachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>force=None<span class="p">, </span>instance_ids=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.Attachment">Attachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#Attachment">NewAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#AttachmentArgs">AttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#Attachment">Attachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#Attachment">NewAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#AttachmentArgs">AttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#Attachment">Attachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.Attachment.html">Attachment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.AttachmentArgs.html">AttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.Attachment.html">Attachment</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.AttachmentArgs.html">AttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -333,7 +474,7 @@ const defaultAttachment = new alicloud.ess.Attachment("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -402,7 +543,7 @@ const defaultAttachment = new alicloud.ess.Attachment("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -441,7 +582,7 @@ const defaultAttachment = new alicloud.ess.Attachment("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -482,7 +623,6 @@ The Attachment resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -490,38 +630,34 @@ The Attachment resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="instanceids_csharp">
 <a href="#instanceids_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}ID of the ECS instance to be attached to the scaling group. You can input up to 20 IDs.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalinggroupid_csharp">
 <a href="#scalinggroupid_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_csharp">
 <a href="#force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to remove forcibly "AutoCreated" ECS instances in order to release scaling group capacity "MaxSize" for attaching ECS instances. Default to false.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -530,38 +666,34 @@ The Attachment resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="instanceids_go">
 <a href="#instanceids_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}ID of the ECS instance to be attached to the scaling group. You can input up to 20 IDs.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalinggroupid_go">
 <a href="#scalinggroupid_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_go">
 <a href="#force_go" style="color: inherit; text-decoration: inherit;">Force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to remove forcibly "AutoCreated" ECS instances in order to release scaling group capacity "MaxSize" for attaching ECS instances. Default to false.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -570,38 +702,34 @@ The Attachment resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="instanceids_nodejs">
 <a href="#instanceids_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}ID of the ECS instance to be attached to the scaling group. You can input up to 20 IDs.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalinggroupid_nodejs">
 <a href="#scalinggroupid_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_nodejs">
 <a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to remove forcibly "AutoCreated" ECS instances in order to release scaling group capacity "MaxSize" for attaching ECS instances. Default to false.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -610,47 +738,39 @@ The Attachment resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="instance_ids_python">
 <a href="#instance_ids_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}ID of the ECS instance to be attached to the scaling group. You can input up to 20 IDs.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scaling_group_id_python">
 <a href="#scaling_group_id_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_python">
 <a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to remove forcibly "AutoCreated" ECS instances in order to release scaling group capacity "MaxSize" for attaching ECS instances. Default to false.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Attachment resource produces the following output properties:
-
 
 
 
@@ -661,15 +781,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -678,15 +796,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -695,15 +811,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -712,18 +826,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -733,19 +842,20 @@ Get an existing Attachment resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#AttachmentState">AttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#Attachment">Attachment</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#AttachmentState">AttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#Attachment">Attachment</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>force=None<span class="p">, </span>instance_ids=None<span class="p">, </span>scaling_group_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Attachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#AttachmentState">AttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#Attachment">Attachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#AttachmentState">AttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#Attachment">Attachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.Attachment.html">Attachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.AttachmentState.html">AttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.Attachment.html">Attachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.AttachmentState.html">AttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -847,7 +957,6 @@ Get an existing Attachment resource's state with the given name, ID, and optiona
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -855,38 +964,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_force_csharp">
 <a href="#state_force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to remove forcibly "AutoCreated" ECS instances in order to release scaling group capacity "MaxSize" for attaching ECS instances. Default to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceids_csharp">
 <a href="#state_instanceids_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}ID of the ECS instance to be attached to the scaling group. You can input up to 20 IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalinggroupid_csharp">
 <a href="#state_scalinggroupid_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling configuration.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -895,38 +1000,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_force_go">
 <a href="#state_force_go" style="color: inherit; text-decoration: inherit;">Force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to remove forcibly "AutoCreated" ECS instances in order to release scaling group capacity "MaxSize" for attaching ECS instances. Default to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceids_go">
 <a href="#state_instanceids_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}ID of the ECS instance to be attached to the scaling group. You can input up to 20 IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalinggroupid_go">
 <a href="#state_scalinggroupid_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling configuration.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -935,38 +1036,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_force_nodejs">
 <a href="#state_force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to remove forcibly "AutoCreated" ECS instances in order to release scaling group capacity "MaxSize" for attaching ECS instances. Default to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceids_nodejs">
 <a href="#state_instanceids_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}ID of the ECS instance to be attached to the scaling group. You can input up to 20 IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalinggroupid_nodejs">
 <a href="#state_scalinggroupid_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling configuration.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -975,35 +1072,32 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_force_python">
 <a href="#state_force_python" style="color: inherit; text-decoration: inherit;">force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to remove forcibly "AutoCreated" ECS instances in order to release scaling group capacity "MaxSize" for attaching ECS instances. Default to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_ids_python">
 <a href="#state_instance_ids_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}ID of the ECS instance to be attached to the scaling group. You can input up to 20 IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scaling_group_id_python">
 <a href="#state_scaling_group_id_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group of a scaling configuration.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1011,8 +1105,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+ESS attachment can be imported using the id or scaling group id, e.g.
+
+```sh
+ $ pulumi import alicloud:ess/attachment:Attachment example asg-abc123456
+```
 
 
 
@@ -1024,6 +1124,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

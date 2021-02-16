@@ -127,7 +127,7 @@ containers across a variety of public and private cloud environments.
 Most public cloud vendors now offer an EKS-like managed offering,
 including [Azure (AKS)]({{< relref "/docs/tutorials/kubernetes/aks" >}}),
 [Google Cloud (GKE)]({{< relref "/docs/tutorials/kubernetes/gke" >}}),
-and [Digital Ocean]({{< relref "/docs/reference/pkg/nodejs/pulumi/digitalocean#KubernetesCluster" >}}),
+and [Digital Ocean]({{< relref "/docs/reference/pkg/digitalocean" >}}),
 and the availability of on-premises private cloud configurations enables
 hybrid cloud for large organizations. Kubernetes in inherently more
 complicated to operate than the equivalent ECS solutions mentioned

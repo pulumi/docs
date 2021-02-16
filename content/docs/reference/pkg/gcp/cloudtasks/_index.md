@@ -21,26 +21,8 @@ Explore the resources and functions of the cloudtasks module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.html" title="Pulumi.Gcp.CloudTasks">Pulumi.Gcp.CloudTasks</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#" title="gcp/cloudtasks">gcp/cloudtasks</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudtasks/#" title="@pulumi/gcp/cloudtasks">@pulumi/gcp/cloudtasks</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/cloudtasks" title="pulumi_gcp/cloudtasks">pulumi_gcp/cloudtasks</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

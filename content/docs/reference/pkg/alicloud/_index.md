@@ -18,15 +18,18 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="adb/" title="adb"><span class="symbol module"></span>adb</a></li>
     <li><a href="alikafka/" title="alikafka"><span class="symbol module"></span>alikafka</a></li>
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
+    <li><a href="brain/" title="brain"><span class="symbol module"></span>brain</a></li>
     <li><a href="cas/" title="cas"><span class="symbol module"></span>cas</a></li>
     <li><a href="cassandra/" title="cassandra"><span class="symbol module"></span>cassandra</a></li>
     <li><a href="cdn/" title="cdn"><span class="symbol module"></span>cdn</a></li>
     <li><a href="cen/" title="cen"><span class="symbol module"></span>cen</a></li>
+    <li><a href="cfg/" title="cfg"><span class="symbol module"></span>cfg</a></li>
     <li><a href="cloudconnect/" title="cloudconnect"><span class="symbol module"></span>cloudconnect</a></li>
     <li><a href="cms/" title="cms"><span class="symbol module"></span>cms</a></li>
     <li><a href="cr/" title="cr"><span class="symbol module"></span>cr</a></li>
     <li><a href="cs/" title="cs"><span class="symbol module"></span>cs</a></li>
     <li><a href="datahub/" title="datahub"><span class="symbol module"></span>datahub</a></li>
+    <li><a href="dcdn/" title="dcdn"><span class="symbol module"></span>dcdn</a></li>
     <li><a href="ddos/" title="ddos"><span class="symbol module"></span>ddos</a></li>
     <li><a href="dds/" title="dds"><span class="symbol module"></span>dds</a></li>
     <li><a href="dms/" title="dms"><span class="symbol module"></span>dms</a></li>
@@ -35,12 +38,16 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="eci/" title="eci"><span class="symbol module"></span>eci</a></li>
     <li><a href="ecs/" title="ecs"><span class="symbol module"></span>ecs</a></li>
     <li><a href="edas/" title="edas"><span class="symbol module"></span>edas</a></li>
+    <li><a href="eipanycast/" title="eipanycast"><span class="symbol module"></span>eipanycast</a></li>
     <li><a href="elasticsearch/" title="elasticsearch"><span class="symbol module"></span>elasticsearch</a></li>
     <li><a href="emr/" title="emr"><span class="symbol module"></span>emr</a></li>
     <li><a href="ess/" title="ess"><span class="symbol module"></span>ess</a></li>
     <li><a href="fc/" title="fc"><span class="symbol module"></span>fc</a></li>
+    <li><a href="fnf/" title="fnf"><span class="symbol module"></span>fnf</a></li>
+    <li><a href="ga/" title="ga"><span class="symbol module"></span>ga</a></li>
     <li><a href="gpdb/" title="gpdb"><span class="symbol module"></span>gpdb</a></li>
     <li><a href="hbase/" title="hbase"><span class="symbol module"></span>hbase</a></li>
+    <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
     <li><a href="kvstore/" title="kvstore"><span class="symbol module"></span>kvstore</a></li>
     <li><a href="log/" title="log"><span class="symbol module"></span>log</a></li>
@@ -48,18 +55,23 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="maxcompute/" title="maxcompute"><span class="symbol module"></span>maxcompute</a></li>
     <li><a href="mns/" title="mns"><span class="symbol module"></span>mns</a></li>
     <li><a href="mongodb/" title="mongodb"><span class="symbol module"></span>mongodb</a></li>
+    <li><a href="mse/" title="mse"><span class="symbol module"></span>mse</a></li>
     <li><a href="nas/" title="nas"><span class="symbol module"></span>nas</a></li>
     <li><a href="oos/" title="oos"><span class="symbol module"></span>oos</a></li>
     <li><a href="oss/" title="oss"><span class="symbol module"></span>oss</a></li>
     <li><a href="ots/" title="ots"><span class="symbol module"></span>ots</a></li>
     <li><a href="polardb/" title="polardb"><span class="symbol module"></span>polardb</a></li>
+    <li><a href="privatelink/" title="privatelink"><span class="symbol module"></span>privatelink</a></li>
     <li><a href="pvtz/" title="pvtz"><span class="symbol module"></span>pvtz</a></li>
+    <li><a href="quotas/" title="quotas"><span class="symbol module"></span>quotas</a></li>
     <li><a href="ram/" title="ram"><span class="symbol module"></span>ram</a></li>
     <li><a href="rds/" title="rds"><span class="symbol module"></span>rds</a></li>
     <li><a href="resourcemanager/" title="resourcemanager"><span class="symbol module"></span>resourcemanager</a></li>
     <li><a href="rocketmq/" title="rocketmq"><span class="symbol module"></span>rocketmq</a></li>
+    <li><a href="ros/" title="ros"><span class="symbol module"></span>ros</a></li>
     <li><a href="sag/" title="sag"><span class="symbol module"></span>sag</a></li>
     <li><a href="slb/" title="slb"><span class="symbol module"></span>slb</a></li>
+    <li><a href="tsdb/" title="tsdb"><span class="symbol module"></span>tsdb</a></li>
     <li><a href="vpc/" title="vpc"><span class="symbol module"></span>vpc</a></li>
     <li><a href="vpn/" title="vpn"><span class="symbol module"></span>vpn</a></li>
     <li><a href="waf/" title="waf"><span class="symbol module"></span>waf</a></li>
@@ -87,26 +99,8 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.html" title="Pulumi.AliCloud">Pulumi.AliCloud</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/?tab=doc#" title="alicloud">alicloud</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/#" title="@pulumi/alicloud">@pulumi/alicloud</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud" title="pulumi_alicloud">pulumi_alicloud</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

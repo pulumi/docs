@@ -22,13 +22,17 @@ explore what's possible, you've come to the right place.
 
 {{< resource-providers "aws,azure,gcp,kubernetes" >}}
 
+### Next Generation Providers
+
+{{< resource-providers "azure-nextgen" >}}
+
 ### Cloud Providers
 
-{{< resource-providers "digitalocean,linode,vsphere,fastly,packet,openstack,alicloud,cloudamqp,hcloud,civo" >}}
+{{< resource-providers "digitalocean,linode,vsphere,fastly,equinix-metal,openstack,alicloud,cloudamqp,hcloud,civo,packet" >}}
 
 ### Infrastructure
 
-{{< resource-providers "aiven,auth0,azuread,azuredevops,consul,docker,kafka,keycloak,kong,mailgun,okta,pagerduty,rabbitmq,rancher2,spotinst,vault" >}}
+{{< resource-providers "aiven,auth0,azuread,azuredevops,consul,docker,kafka,keycloak,kong,mailgun,okta,pagerduty,rabbitmq,rancher2,spotinst,splunk,vault,venafi,opsgenie" >}}
 
 ### Database
 
@@ -48,7 +52,7 @@ explore what's possible, you've come to the right place.
 
 ### Utilities
 
-{{< resource-providers "random,tls" false >}}
+{{< resource-providers "random,tls,cloudinit" false >}}
 
 ## Package Documentation
 
@@ -90,7 +94,7 @@ SDK reference documentation, organized by language.
 {{% choosable language csharp %}}
 <dl class="tabular">
     <dt>Pulumi SDK</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.html">Pulumi</a></dd>
+    <dd><a href="https://github.com/pulumi/pulumi/tree/master/sdk/dotnet">Pulumi</a></dd>
 </dl>
 {{% /choosable %}}
 

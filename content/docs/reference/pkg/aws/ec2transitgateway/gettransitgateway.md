@@ -12,6 +12,7 @@ meta_desc: "Explore the GetTransitGateway function of the ec2transitgateway modu
 
 Get information on an EC2 Transit Gateway.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -83,10 +84,10 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.ec2transitgateway.get_transit_gateway(filters=[{
-    "name": "options.amazon-side-asn",
-    "values": ["64512"],
-}])
+example = aws.ec2transitgateway.get_transit_gateway(filters=[aws.ec2transitgateway.GetTransitGatewayFilterArgs(
+    name="options.amazon-side-asn",
+    values=["64512"],
+)])
 ```
 
 {{% /example %}}
@@ -185,17 +186,17 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTransitGateway<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2transitgateway/#GetTransitGatewayArgs">GetTransitGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2transitgateway/#GetTransitGatewayResult">GetTransitGatewayResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTransitGateway<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTransitGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTransitGatewayResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_transit_gateway(</span>filters=None<span class="p">, </span>id=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_transit_gateway(</span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetTransitGatewayFilterArgs]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetTransitGatewayResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTransitGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2transitgateway?tab=doc#LookupTransitGatewayArgs">LookupTransitGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2transitgateway?tab=doc#LookupTransitGatewayResult">LookupTransitGatewayResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTransitGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTransitGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTransitGatewayResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupTransitGateway` in the Go SDK.
 
@@ -204,14 +205,13 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTransitGateway </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2transitgateway.GetTransitGatewayResult.html">GetTransitGatewayResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2TransitGateway.GetTransitGatewayArgs.html">GetTransitGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetTransitGatewayResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTransitGatewayArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -221,38 +221,34 @@ The following arguments are supported:
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettransitgatewayfilter">List&lt;Get<wbr>Transit<wbr>Gateway<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Transit Gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -261,38 +257,34 @@ The following arguments are supported:
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettransitgatewayfilter">[]Get<wbr>Transit<wbr>Gateway<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Transit Gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -301,38 +293,34 @@ The following arguments are supported:
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettransitgatewayfilter">Get<wbr>Transit<wbr>Gateway<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Transit Gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -341,41 +329,34 @@ The following arguments are supported:
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettransitgatewayfilter">List[Get<wbr>Transit<wbr>Gateway<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#gettransitgatewayfilter">Sequence[Get<wbr>Transit<wbr>Gateway<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Transit Gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -386,7 +367,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -394,158 +374,143 @@ The following output properties are available:
             title="">
         <span id="amazonsideasn_csharp">
 <a href="#amazonsideasn_csharp" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Side<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Private Autonomous System Number (ASN) for the Amazon side of a BGP session
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway Amazon Resource Name (ARN)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="associationdefaultroutetableid_csharp">
 <a href="#associationdefaultroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Association<wbr>Default<wbr>Route<wbr>Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the default association route table
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="autoacceptsharedattachments_csharp">
 <a href="#autoacceptsharedattachments_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Accept<wbr>Shared<wbr>Attachments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether resource attachment requests are automatically accepted.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="defaultroutetableassociation_csharp">
 <a href="#defaultroutetableassociation_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Table<wbr>Association</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether resource attachments are automatically associated with the default association route table.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="defaultroutetablepropagation_csharp">
 <a href="#defaultroutetablepropagation_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Table<wbr>Propagation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether resource attachments automatically propagate routes to the default propagation route table.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the EC2 Transit Gateway
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dnssupport_csharp">
 <a href="#dnssupport_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}EC2 Transit Gateway identifier
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="ownerid_csharp">
 <a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 Transit Gateway
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="propagationdefaultroutetableid_csharp">
 <a href="#propagationdefaultroutetableid_csharp" style="color: inherit; text-decoration: inherit;">Propagation<wbr>Default<wbr>Route<wbr>Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the default propagation route table.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpnecmpsupport_csharp">
 <a href="#vpnecmpsupport_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Ecmp<wbr>Support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether VPN Equal Cost Multipath Protocol support is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettransitgatewayfilter">List&lt;Get<wbr>Transit<wbr>Gateway<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="id_csharp">
-<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}EC2 Transit Gateway identifier
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -554,158 +519,143 @@ The following output properties are available:
             title="">
         <span id="amazonsideasn_go">
 <a href="#amazonsideasn_go" style="color: inherit; text-decoration: inherit;">Amazon<wbr>Side<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Private Autonomous System Number (ASN) for the Amazon side of a BGP session
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway Amazon Resource Name (ARN)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="associationdefaultroutetableid_go">
 <a href="#associationdefaultroutetableid_go" style="color: inherit; text-decoration: inherit;">Association<wbr>Default<wbr>Route<wbr>Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the default association route table
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="autoacceptsharedattachments_go">
 <a href="#autoacceptsharedattachments_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Accept<wbr>Shared<wbr>Attachments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether resource attachment requests are automatically accepted.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="defaultroutetableassociation_go">
 <a href="#defaultroutetableassociation_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Table<wbr>Association</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether resource attachments are automatically associated with the default association route table.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="defaultroutetablepropagation_go">
 <a href="#defaultroutetablepropagation_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Table<wbr>Propagation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether resource attachments automatically propagate routes to the default propagation route table.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the EC2 Transit Gateway
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dnssupport_go">
 <a href="#dnssupport_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}EC2 Transit Gateway identifier
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="ownerid_go">
 <a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 Transit Gateway
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="propagationdefaultroutetableid_go">
 <a href="#propagationdefaultroutetableid_go" style="color: inherit; text-decoration: inherit;">Propagation<wbr>Default<wbr>Route<wbr>Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the default propagation route table.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpnecmpsupport_go">
 <a href="#vpnecmpsupport_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Ecmp<wbr>Support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether VPN Equal Cost Multipath Protocol support is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettransitgatewayfilter">[]Get<wbr>Transit<wbr>Gateway<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="id_go">
-<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}EC2 Transit Gateway identifier
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -714,158 +664,143 @@ The following output properties are available:
             title="">
         <span id="amazonsideasn_nodejs">
 <a href="#amazonsideasn_nodejs" style="color: inherit; text-decoration: inherit;">amazon<wbr>Side<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Private Autonomous System Number (ASN) for the Amazon side of a BGP session
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway Amazon Resource Name (ARN)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="associationdefaultroutetableid_nodejs">
 <a href="#associationdefaultroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Default<wbr>Route<wbr>Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the default association route table
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="autoacceptsharedattachments_nodejs">
 <a href="#autoacceptsharedattachments_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Accept<wbr>Shared<wbr>Attachments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether resource attachment requests are automatically accepted.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="defaultroutetableassociation_nodejs">
 <a href="#defaultroutetableassociation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Table<wbr>Association</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether resource attachments are automatically associated with the default association route table.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="defaultroutetablepropagation_nodejs">
 <a href="#defaultroutetablepropagation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Table<wbr>Propagation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether resource attachments automatically propagate routes to the default propagation route table.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the EC2 Transit Gateway
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dnssupport_nodejs">
 <a href="#dnssupport_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}EC2 Transit Gateway identifier
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="ownerid_nodejs">
 <a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 Transit Gateway
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="propagationdefaultroutetableid_nodejs">
 <a href="#propagationdefaultroutetableid_nodejs" style="color: inherit; text-decoration: inherit;">propagation<wbr>Default<wbr>Route<wbr>Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the default propagation route table.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpnecmpsupport_nodejs">
 <a href="#vpnecmpsupport_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Ecmp<wbr>Support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether VPN Equal Cost Multipath Protocol support is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettransitgatewayfilter">Get<wbr>Transit<wbr>Gateway<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="id_nodejs">
-<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}EC2 Transit Gateway identifier
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -874,161 +809,143 @@ The following output properties are available:
             title="">
         <span id="amazon_side_asn_python">
 <a href="#amazon_side_asn_python" style="color: inherit; text-decoration: inherit;">amazon_<wbr>side_<wbr>asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Private Autonomous System Number (ASN) for the Amazon side of a BGP session
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway Amazon Resource Name (ARN)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="association_default_route_table_id_python">
 <a href="#association_default_route_table_id_python" style="color: inherit; text-decoration: inherit;">association_<wbr>default_<wbr>route_<wbr>table_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the default association route table
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="auto_accept_shared_attachments_python">
 <a href="#auto_accept_shared_attachments_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>accept_<wbr>shared_<wbr>attachments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether resource attachment requests are automatically accepted.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="default_route_table_association_python">
 <a href="#default_route_table_association_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>table_<wbr>association</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether resource attachments are automatically associated with the default association route table.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="default_route_table_propagation_python">
 <a href="#default_route_table_propagation_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>table_<wbr>propagation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether resource attachments automatically propagate routes to the default propagation route table.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the EC2 Transit Gateway
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dns_support_python">
 <a href="#dns_support_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="owner_id_python">
-<a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Identifier of the AWS account that owns the EC2 Transit Gateway
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="propagation_default_route_table_id_python">
-<a href="#propagation_default_route_table_id_python" style="color: inherit; text-decoration: inherit;">propagation_<wbr>default_<wbr>route_<wbr>table_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Identifier of the default propagation route table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="vpn_ecmp_support_python">
-<a href="#vpn_ecmp_support_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>ecmp_<wbr>support</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Whether VPN Equal Cost Multipath Protocol support is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="filters_python">
-<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gettransitgatewayfilter">List[Get<wbr>Transit<wbr>Gateway<wbr>Filter]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway identifier
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="owner_id_python">
+<a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identifier of the AWS account that owns the EC2 Transit Gateway
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="propagation_default_route_table_id_python">
+<a href="#propagation_default_route_table_id_python" style="color: inherit; text-decoration: inherit;">propagation_<wbr>default_<wbr>route_<wbr>table_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identifier of the default propagation route table.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="vpn_ecmp_support_python">
+<a href="#vpn_ecmp_support_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>ecmp_<wbr>support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Whether VPN Equal Cost Multipath Protocol support is enabled.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="filters_python">
+<a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gettransitgatewayfilter">Sequence[Get<wbr>Transit<wbr>Gateway<wbr>Filter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1037,17 +954,6 @@ The following output properties are available:
 
 
 <h4 id="gettransitgatewayfilter">Get<wbr>Transit<wbr>Gateway<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetTransitGatewayFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTransitGatewayFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2transitgateway?tab=doc#GetTransitGatewayFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2transitgateway?tab=doc#GetTransitGatewayFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2TransitGateway.Inputs.GetTransitGatewayFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2TransitGateway.Outputs.GetTransitGatewayFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -1058,27 +964,24 @@ The following output properties are available:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the filter.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1087,27 +990,24 @@ The following output properties are available:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the filter.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1116,27 +1016,24 @@ The following output properties are available:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the filter.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1145,30 +1042,24 @@ The following output properties are available:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the filter.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

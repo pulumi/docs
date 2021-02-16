@@ -13,9 +13,13 @@ Explore the resources and functions of the route53 module in the AWS package.
 <ul class="api">
     <li><a href="delegationset" title="DelegationSet"><span class="symbol resource"></span>DelegationSet</a></li>
     <li><a href="healthcheck" title="HealthCheck"><span class="symbol resource"></span>HealthCheck</a></li>
+    <li><a href="keysigningkey" title="KeySigningKey"><span class="symbol resource"></span>KeySigningKey</a></li>
     <li><a href="querylog" title="QueryLog"><span class="symbol resource"></span>QueryLog</a></li>
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
+    <li><a href="resolverdnssecconfig" title="ResolverDnsSecConfig"><span class="symbol resource"></span>ResolverDnsSecConfig</a></li>
     <li><a href="resolverendpoint" title="ResolverEndpoint"><span class="symbol resource"></span>ResolverEndpoint</a></li>
+    <li><a href="resolverquerylogconfig" title="ResolverQueryLogConfig"><span class="symbol resource"></span>ResolverQueryLogConfig</a></li>
+    <li><a href="resolverquerylogconfigassociation" title="ResolverQueryLogConfigAssociation"><span class="symbol resource"></span>ResolverQueryLogConfigAssociation</a></li>
     <li><a href="resolverrule" title="ResolverRule"><span class="symbol resource"></span>ResolverRule</a></li>
     <li><a href="resolverruleassociation" title="ResolverRuleAssociation"><span class="symbol resource"></span>ResolverRuleAssociation</a></li>
     <li><a href="vpcassociationauthorization" title="VpcAssociationAuthorization"><span class="symbol resource"></span>VpcAssociationAuthorization</a></li>
@@ -26,6 +30,7 @@ Explore the resources and functions of the route53 module in the AWS package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdelegationset" title="GetDelegationSet"><span class="symbol function"></span>GetDelegationSet</a></li>
+    <li><a href="getresolverendpoint" title="GetResolverEndpoint"><span class="symbol function"></span>GetResolverEndpoint</a></li>
     <li><a href="getresolverrule" title="GetResolverRule"><span class="symbol function"></span>GetResolverRule</a></li>
     <li><a href="getresolverrules" title="GetResolverRules"><span class="symbol function"></span>GetResolverRules</a></li>
     <li><a href="getzone" title="GetZone"><span class="symbol function"></span>GetZone</a></li>
@@ -40,24 +45,6 @@ Explore the resources and functions of the route53 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.html" title="Pulumi.Aws.Route53">Pulumi.Aws.Route53</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#" title="aws/route53">aws/route53</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#" title="@pulumi/aws/route53">@pulumi/aws/route53</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/route53" title="pulumi_aws/route53">pulumi_aws/route53</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

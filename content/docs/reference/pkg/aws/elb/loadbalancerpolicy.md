@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancerPolicy"
-title_tag: "Resource LoadBalancerPolicy | Module elb | Package AWS"
-meta_desc: "Explore the LoadBalancerPolicy resource of the elb module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a load balancer policy, which can be attached to an ELB listener or backend server."
+title_tag: "aws.elb.LoadBalancerPolicy"
+meta_desc: "Documentation for the aws.elb.LoadBalancerPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the LoadBalancerPolicy resource of the elb module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a load balancer policy, which can be attached to an ELB listener or backend server.
+
 
 {{% examples %}}
 ## Example Usage
@@ -159,13 +160,13 @@ import pulumi_aws as aws
 
 wu_tang = aws.elb.LoadBalancer("wu-tang",
     availability_zones=["us-east-1a"],
-    listeners=[{
-        "instance_port": 443,
-        "instanceProtocol": "http",
-        "lb_port": 443,
-        "lbProtocol": "https",
-        "sslCertificateId": "arn:aws:iam::000000000000:server-certificate/wu-tang.net",
-    }],
+    listeners=[aws.elb.LoadBalancerListenerArgs(
+        instance_port=443,
+        instance_protocol="http",
+        lb_port=443,
+        lb_protocol="https",
+        ssl_certificate_id="arn:aws:iam::000000000000:server-certificate/wu-tang.net",
+    )],
     tags={
         "Name": "wu-tang",
     })
@@ -173,40 +174,40 @@ wu_tang_ca_pubkey_policy = aws.elb.LoadBalancerPolicy("wu-tang-ca-pubkey-policy"
     load_balancer_name=wu_tang.name,
     policy_name="wu-tang-ca-pubkey-policy",
     policy_type_name="PublicKeyPolicyType",
-    policy_attributes=[{
-        "name": "PublicKey",
-        "value": (lambda path: open(path).read())("wu-tang-pubkey"),
-    }])
+    policy_attributes=[aws.elb.LoadBalancerPolicyPolicyAttributeArgs(
+        name="PublicKey",
+        value=(lambda path: open(path).read())("wu-tang-pubkey"),
+    )])
 wu_tang_root_ca_backend_auth_policy = aws.elb.LoadBalancerPolicy("wu-tang-root-ca-backend-auth-policy",
     load_balancer_name=wu_tang.name,
     policy_name="wu-tang-root-ca-backend-auth-policy",
     policy_type_name="BackendServerAuthenticationPolicyType",
-    policy_attributes=[{
-        "name": "PublicKeyPolicyName",
-        "value": aws_load_balancer_policy["wu-tang-root-ca-pubkey-policy"]["policy_name"],
-    }])
+    policy_attributes=[aws.elb.LoadBalancerPolicyPolicyAttributeArgs(
+        name="PublicKeyPolicyName",
+        value=aws_load_balancer_policy["wu-tang-root-ca-pubkey-policy"]["policy_name"],
+    )])
 wu_tang_ssl = aws.elb.LoadBalancerPolicy("wu-tang-ssl",
     load_balancer_name=wu_tang.name,
     policy_name="wu-tang-ssl",
     policy_type_name="SSLNegotiationPolicyType",
     policy_attributes=[
-        {
-            "name": "ECDHE-ECDSA-AES128-GCM-SHA256",
-            "value": "true",
-        },
-        {
-            "name": "Protocol-TLSv1.2",
-            "value": "true",
-        },
+        aws.elb.LoadBalancerPolicyPolicyAttributeArgs(
+            name="ECDHE-ECDSA-AES128-GCM-SHA256",
+            value="true",
+        ),
+        aws.elb.LoadBalancerPolicyPolicyAttributeArgs(
+            name="Protocol-TLSv1.2",
+            value="true",
+        ),
     ])
 wu_tang_ssl_tls_1_1 = aws.elb.LoadBalancerPolicy("wu-tang-ssl-tls-1-1",
     load_balancer_name=wu_tang.name,
     policy_name="wu-tang-ssl",
     policy_type_name="SSLNegotiationPolicyType",
-    policy_attributes=[{
-        "name": "Reference-Security-Policy",
-        "value": "ELBSecurityPolicy-TLS-1-1-2017-01",
-    }])
+    policy_attributes=[aws.elb.LoadBalancerPolicyPolicyAttributeArgs(
+        name="Reference-Security-Policy",
+        value="ELBSecurityPolicy-TLS-1-1-2017-01",
+    )])
 wu_tang_backend_auth_policies_443 = aws.elb.LoadBalancerBackendServerPolicy("wu-tang-backend-auth-policies-443",
     load_balancer_name=wu_tang.name,
     instance_port=443,
@@ -303,19 +304,19 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancerPolicy">LoadBalancerPolicy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancerPolicyArgs">LoadBalancerPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LoadBalancerPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LoadBalancerPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/elb/#pulumi_aws.elb.LoadBalancerPolicy">LoadBalancerPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>load_balancer_name=None<span class="p">, </span>policy_attributes=None<span class="p">, </span>policy_name=None<span class="p">, </span>policy_type_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LoadBalancerPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">load_balancer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerPolicyPolicyAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#LoadBalancerPolicy">NewLoadBalancerPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#LoadBalancerPolicyArgs">LoadBalancerPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#LoadBalancerPolicy">LoadBalancerPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLoadBalancerPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LoadBalancerPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancerPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elb.LoadBalancerPolicy.html">LoadBalancerPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elb.LoadBalancerPolicyArgs.html">LoadBalancerPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LoadBalancerPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LoadBalancerPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -326,7 +327,7 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -336,7 +337,7 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancerPolicyArgs">LoadBalancerPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">LoadBalancerPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -395,7 +396,7 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -405,7 +406,7 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#LoadBalancerPolicyArgs">LoadBalancerPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">LoadBalancerPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -434,7 +435,7 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -444,7 +445,7 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elb.LoadBalancerPolicyArgs.html">LoadBalancerPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">LoadBalancerPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -467,12 +468,11 @@ const wu_tang_listener_policies_443 = new aws.elb.ListenerPolicy("wu-tang-listen
 
 ## LoadBalancerPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -483,49 +483,44 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="loadbalancername_csharp">
 <a href="#loadbalancername_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policytypename_csharp">
 <a href="#policytypename_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyattributes_csharp">
 <a href="#policyattributes_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">List&lt;Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -534,49 +529,44 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="loadbalancername_go">
 <a href="#loadbalancername_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policytypename_go">
 <a href="#policytypename_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyattributes_go">
 <a href="#policyattributes_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">[]Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -585,49 +575,44 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="loadbalancername_nodejs">
 <a href="#loadbalancername_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policytypename_nodejs">
 <a href="#policytypename_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyattributes_nodejs">
 <a href="#policyattributes_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -636,58 +621,49 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="load_balancer_name_python">
 <a href="#load_balancer_name_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_type_name_python">
 <a href="#policy_type_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_attributes_python">
 <a href="#policy_attributes_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">List[Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">Sequence[Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the LoadBalancerPolicy resource produces the following output properties:
-
 
 
 
@@ -698,15 +674,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -715,15 +689,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -732,15 +704,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -749,18 +719,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -770,19 +735,20 @@ Get an existing LoadBalancerPolicy resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancerPolicyState">LoadBalancerPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elb/#LoadBalancerPolicy">LoadBalancerPolicy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">LoadBalancerPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LoadBalancerPolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>load_balancer_name=None<span class="p">, </span>policy_attributes=None<span class="p">, </span>policy_name=None<span class="p">, </span>policy_type_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">load_balancer_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerPolicyPolicyAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LoadBalancerPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancerPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#LoadBalancerPolicyState">LoadBalancerPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#LoadBalancerPolicy">LoadBalancerPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancerPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">LoadBalancerPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LoadBalancerPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elb.LoadBalancerPolicy.html">LoadBalancerPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elb.LoadBalancerPolicyState.html">LoadBalancerPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LoadBalancerPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">LoadBalancerPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -884,7 +850,6 @@ Get an existing LoadBalancerPolicy resource's state with the given name, ID, and
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -892,49 +857,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_loadbalancername_csharp">
 <a href="#state_loadbalancername_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyattributes_csharp">
 <a href="#state_policyattributes_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">List&lt;Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyname_csharp">
 <a href="#state_policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policytypename_csharp">
 <a href="#state_policytypename_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -943,49 +903,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_loadbalancername_go">
 <a href="#state_loadbalancername_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyattributes_go">
 <a href="#state_policyattributes_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">[]Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyname_go">
 <a href="#state_policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policytypename_go">
 <a href="#state_policytypename_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -994,49 +949,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_loadbalancername_nodejs">
 <a href="#state_loadbalancername_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyattributes_nodejs">
 <a href="#state_policyattributes_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyname_nodejs">
 <a href="#state_policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policytypename_nodejs">
 <a href="#state_policytypename_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1045,52 +995,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_load_balancer_name_python">
 <a href="#state_load_balancer_name_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_attributes_python">
 <a href="#state_policy_attributes_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">List[Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">Sequence[Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_name_python">
 <a href="#state_policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_type_name_python">
 <a href="#state_policy_type_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy type.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1100,20 +1042,8 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="loadbalancerpolicypolicyattribute">Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerPolicyPolicyAttribute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerPolicyPolicyAttribute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#LoadBalancerPolicyPolicyAttributeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb?tab=doc#LoadBalancerPolicyPolicyAttributeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elb.Inputs.LoadBalancerPolicyPolicyAttributeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elb.Outputs.LoadBalancerPolicyPolicyAttribute.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1122,25 +1052,22 @@ The following state arguments are supported:
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1149,25 +1076,22 @@ The following state arguments are supported:
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1176,25 +1100,22 @@ The following state arguments are supported:
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1203,31 +1124,22 @@ The following state arguments are supported:
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

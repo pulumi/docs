@@ -11,6 +11,7 @@ Explore the resources and functions of the sentinel module in the Azure package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="alertrulefusion" title="AlertRuleFusion"><span class="symbol resource"></span>AlertRuleFusion</a></li>
     <li><a href="alertrulemssecurityincident" title="AlertRuleMsSecurityIncident"><span class="symbol resource"></span>AlertRuleMsSecurityIncident</a></li>
     <li><a href="alertrulescheduled" title="AlertRuleScheduled"><span class="symbol resource"></span>AlertRuleScheduled</a></li>
 </ul>
@@ -18,6 +19,7 @@ Explore the resources and functions of the sentinel module in the Azure package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getalertrule" title="GetAlertRule"><span class="symbol function"></span>GetAlertRule</a></li>
+    <li><a href="getalertruletemplate" title="GetAlertRuleTemplate"><span class="symbol function"></span>GetAlertRuleTemplate</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -29,7 +31,7 @@ Explore the resources and functions of the sentinel module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.17.0</dd>
+	<dd>3.46.0</dd>
 </dl>
 
 

@@ -17,17 +17,17 @@ with other developers.
 If you're an admin of a Pulumi organization, you have the
 ability to:
 
-* [Add users]({{< relref "../collaboration/organization-roles/#organization-membership" >}})
+* [Invite users]({{< relref "/docs/intro/console/collaboration/organization-roles#organization-membership" >}})
 * Manage default stack permissions for the organization
-* Create [teams]({{< relref "../collaboration/teams" >}}) and manage their permissions
-* Assign [organization roles]({{< relref "../collaboration/organization-roles" >}}) for role-based access control (RBAC)
+* Create [teams]({{< relref "/docs/intro/console/collaboration/teams" >}}) and manage their permissions
+* Assign [organization roles]({{< relref "/docs/intro/console/collaboration/organization-roles" >}}) for role-based access control (RBAC)
 to your organization's stacks
 
 ## Creating a New Organization
 
 You can create a new Pulumi organization directly from the Pulumi Console.
 
-<a class="btn btn-secondary" href="https://app.pulumi.com/site/organizations/add"
+<a class="btn btn-secondary" href="https://app.pulumi.com/site/trial"
 target="_blank">
     CREATE ORGANIZATION
 </a>
@@ -50,8 +50,8 @@ Similarly, as soon as someone loses access to the GitHub organization, they will
 longer have access to the Pulumi organization it is backing.
 
 {{% notes %}}
-See [Organization Roles]({{< relref "organization-roles" >}}) or
-[Adding New Identities]({{< relref "accounts#adding-new-identities" >}})
+See [Organization Roles]({{< relref "/docs/intro/console/collaboration/organization-roles" >}}) or
+[Adding New Identities]({{< relref "/docs/intro/console/accounts-and-organizations/accounts#adding-new-identities" >}})
 for more information.
 {{% /notes %}}
 
@@ -60,7 +60,7 @@ groupings.
 
 | Pulumi | GitHub | GitLab | Bitbucket |
 |--------|--------|--------|--------|
-| Organization | [Organization](https://github.com/collab-uniba/socialcde4eclipse/wiki/How-to-setup-a-GitHub-organization,-project-and-team) | [Group](https://docs.gitlab.com/ce/user/group/)| [Team](https://confluence.atlassian.com/bitbucket/teams-321853005.html) |
+| Organization | [Organization](https://github.com/collab-uniba/socialcde4eclipse/wiki/How-to-setup-a-GitHub-organization,-project-and-team) | [Group](https://docs.gitlab.com/ce/user/group/)| [Workspace](https://bitbucket.org/blog/introducing-workspaces) |
 
 In addition, a Pulumi organization may be backed by a [SAML 2.0 identity provider]({{<
 relref "/docs/guides/saml" >}}).
@@ -93,12 +93,12 @@ organization on Pulumi.
 ### Bitbucket-backed
 
 To add a Bitbucket-backed organization to Pulumi, an administrator of the Atlassian
-Bitbucket team
+Bitbucket workspace
 must first grant the Pulumi Oauth app [read
 access](https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html#OAuthonBitbucketCloud-Scopes)
-to their Bitbucket account and team membership information.
+to their Bitbucket account and workspace membership information.
 
-Once the Pulumi organization has been created, the admin can see a list of BitBucket team
+Once the Pulumi organization has been created, the admin can see a list of Bitbucket workspace
 members
 that they can add or invite to the Pulumi organization. See [Switching
 Organizations](#switching-organizations)
@@ -141,8 +141,7 @@ and Settings tabs.
 
 | Console Tab | Description |
 |--------|--------|
-| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "../collaboration/project-and-stack-management"
->}}) to learn more. |
+| Stacks | A searchable list of organization stacks that you can group by project and tag. See [Project and Stack Management]({{< relref "/docs/intro/console/collaboration/project-and-stack-management">}}) to learn more. |
 | People | A list of active members of the Pulumi organization. |
 | Teams | A [Team Pro]({{< relref "/pricing" >}}) feature that provides a way to assign stack permissions to groups of organization members. |
 | Webhooks | A [Team Pro]({{< relref "/pricing" >}}) feature that allows external services to be notified about events happening on an organization, including events occurring on organization stacks. |
@@ -150,4 +149,4 @@ and Settings tabs.
 
 ## Next Steps
 
-* [Organization Roles]({{< relref "../collaboration/organization-roles" >}})
+* [Organization Roles]({{< relref "/docs/intro/console/collaboration/organization-roles" >}})

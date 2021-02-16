@@ -12,8 +12,49 @@ meta_desc: "Explore the GetPrivateEndpoint function of the MongoDB Atlas package
 
 `mongodbatlas.PrivateEndpoint` describe a Private Endpoint. This represents a Private Endpoint Connection to retrieve details regarding a private endpoint by id in an Atlas project
 
+!> **WARNING:** This datasource is deprecated and will be removed in the next major version
+                Please transition to privatelink_endpoint as soon as possible. [PrivateLink Endpoints](https://docs.atlas.mongodb.com/reference/api/private-endpoints-service-get-one/)
+
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mongodbatlas from "@pulumi/mongodbatlas";
+
+const testMongodbatlasPrivateEndpoint = new mongodbatlas.PrivateEndpoint("test", {
+    projectId: "<PROJECT-ID>",
+    providerName: "AWS",
+    region: "us-east-1",
+});
+const testPrivateEndpoint = pulumi.all([testMongodbatlasPrivateEndpoint.privateLinkId, testMongodbatlasPrivateEndpoint.projectId]).apply(([privateLinkId, projectId]) => mongodbatlas.getPrivateEndpoint({
+    privateLinkId: privateLinkId,
+    projectId: projectId,
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetPrivateEndpoint {#using}
@@ -27,7 +68,7 @@ meta_desc: "Explore the GetPrivateEndpoint function of the MongoDB Atlas package
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_private_endpoint(</span>private_link_id=None<span class="p">, </span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_private_endpoint(</span><span class="nx">private_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPrivateEndpointResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -50,7 +91,6 @@ meta_desc: "Explore the GetPrivateEndpoint function of the MongoDB Atlas package
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -58,27 +98,24 @@ The following arguments are supported:
             title="Required">
         <span id="privatelinkid_csharp">
 <a href="#privatelinkid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -87,27 +124,24 @@ The following arguments are supported:
             title="Required">
         <span id="privatelinkid_go">
 <a href="#privatelinkid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -116,27 +150,24 @@ The following arguments are supported:
             title="Required">
         <span id="privatelinkid_nodejs">
 <a href="#privatelinkid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -145,30 +176,24 @@ The following arguments are supported:
             title="Required">
         <span id="private_link_id_python">
 <a href="#private_link_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -179,7 +204,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -187,81 +211,73 @@ The following output properties are available:
             title="">
         <span id="endpointservicename_csharp">
 <a href="#endpointservicename_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="interfaceendpoints_csharp">
 <a href="#interfaceendpoints_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privatelinkid_csharp">
 <a href="#privatelinkid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the AWS PrivateLink connection.
-Returns one of the following values:
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -270,81 +286,73 @@ Returns one of the following values:
             title="">
         <span id="endpointservicename_go">
 <a href="#endpointservicename_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="interfaceendpoints_go">
 <a href="#interfaceendpoints_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privatelinkid_go">
 <a href="#privatelinkid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the AWS PrivateLink connection.
-Returns one of the following values:
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -353,81 +361,73 @@ Returns one of the following values:
             title="">
         <span id="endpointservicename_nodejs">
 <a href="#endpointservicename_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="interfaceendpoints_nodejs">
 <a href="#interfaceendpoints_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privatelinkid_nodejs">
 <a href="#privatelinkid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the AWS PrivateLink connection.
-Returns one of the following values:
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -436,84 +436,73 @@ Returns one of the following values:
             title="">
         <span id="endpoint_service_name_python">
 <a href="#endpoint_service_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the PrivateLink endpoint service in AWS. Returns null while the endpoint service is being created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the AWS PrivateLink connection. Returns null if there are no errors.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="interface_endpoints_python">
 <a href="#interface_endpoints_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Unique identifiers of the interface endpoints in your VPC that you added to the AWS PrivateLink connection.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="private_link_id_python">
 <a href="#private_link_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the AWS PrivateLink connection.
-Returns one of the following values:
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -526,6 +515,6 @@ Returns one of the following values:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mongodbatlas).</dd>
+	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 </dl>
 

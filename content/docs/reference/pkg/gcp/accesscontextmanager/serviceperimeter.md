@@ -1,8 +1,8 @@
 
 ---
 title: "ServicePerimeter"
-title_tag: "Resource ServicePerimeter | Module accesscontextmanager | Package GCP"
-meta_desc: "Explore the ServicePerimeter resource of the accesscontextmanager module, including examples, input properties, output properties, lookup functions, and supporting types. ServicePerimeter describes a set of GCP resources which can freely import"
+title_tag: "gcp.accesscontextmanager.ServicePerimeter"
+meta_desc: "Documentation for the gcp.accesscontextmanager.ServicePerimeter resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -25,6 +25,12 @@ To get more information about ServicePerimeter, see:
 * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.servicePerimeters)
 * How-to Guides
     * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/quickstart)
+
+> **Warning:** If you are using User ADCs (Application Default Credentials) with this resource,
+you must specify a `billing_project` and set `user_project_override` to true
+in the provider configuration. Otherwise the ACM API will return a 403 error.
+Your account must have the `serviceusage.services.use` permission on the
+`billing_project` you defined.
 
 {{% examples %}}
 ## Example Usage
@@ -96,7 +102,72 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/accesscontextmanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := accesscontextmanager.NewAccessPolicy(ctx, "access_policy", &accesscontextmanager.AccessPolicyArgs{
+			Parent: pulumi.String("organizations/123456789"),
+			Title:  pulumi.String("my policy"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = accesscontextmanager.NewServicePerimeter(ctx, "service_perimeter", &accesscontextmanager.ServicePerimeterArgs{
+			Parent: access_policy.Name.ApplyT(func(name string) (string, error) {
+				return fmt.Sprintf("%v%v", "accessPolicies/", name), nil
+			}).(pulumi.StringOutput),
+			Status: &accesscontextmanager.ServicePerimeterStatusArgs{
+				RestrictedServices: pulumi.StringArray{
+					pulumi.String("storage.googleapis.com"),
+				},
+			},
+			Title: pulumi.String("restrict_storage"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = accesscontextmanager.NewAccessLevel(ctx, "access_level", &accesscontextmanager.AccessLevelArgs{
+			Basic: &accesscontextmanager.AccessLevelBasicArgs{
+				Conditions: accesscontextmanager.AccessLevelBasicConditionArray{
+					&accesscontextmanager.AccessLevelBasicConditionArgs{
+						DevicePolicy: &accesscontextmanager.AccessLevelBasicConditionDevicePolicyArgs{
+							OsConstraints: accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraintArray{
+								&accesscontextmanager.AccessLevelBasicConditionDevicePolicyOsConstraintArgs{
+									OsType: pulumi.String("DESKTOP_CHROME_OS"),
+								},
+							},
+							RequireScreenLock: pulumi.Bool(false),
+						},
+						Regions: pulumi.StringArray{
+							pulumi.String("CH"),
+							pulumi.String("IT"),
+							pulumi.String("US"),
+						},
+					},
+				},
+			},
+			Parent: access_policy.Name.ApplyT(func(name string) (string, error) {
+				return fmt.Sprintf("%v%v", "accessPolicies/", name), nil
+			}).(pulumi.StringOutput),
+			Title: pulumi.String("chromeos_no_lock"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -109,26 +180,26 @@ access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
     title="my policy")
 service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter",
     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
-    status={
-        "restrictedServices": ["storage.googleapis.com"],
-    },
+    status=gcp.accesscontextmanager.ServicePerimeterStatusArgs(
+        restricted_services=["storage.googleapis.com"],
+    ),
     title="restrict_storage")
 access_level = gcp.accesscontextmanager.AccessLevel("access-level",
-    basic={
-        "conditions": [{
-            "devicePolicy": {
+    basic=gcp.accesscontextmanager.AccessLevelBasicArgs(
+        conditions=[gcp.accesscontextmanager.AccessLevelBasicConditionArgs(
+            device_policy={
                 "osConstraints": [{
                     "osType": "DESKTOP_CHROME_OS",
                 }],
                 "requireScreenLock": False,
             },
-            "regions": [
+            regions=[
                 "CH",
                 "IT",
                 "US",
             ],
-        }],
-    },
+        )],
+    ),
     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
     title="chromeos_no_lock")
 ```
@@ -218,7 +289,50 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/accesscontextmanager"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := accesscontextmanager.NewAccessPolicy(ctx, "access_policy", &accesscontextmanager.AccessPolicyArgs{
+			Parent: pulumi.String("organizations/123456789"),
+			Title:  pulumi.String("my policy"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = accesscontextmanager.NewServicePerimeter(ctx, "service_perimeter", &accesscontextmanager.ServicePerimeterArgs{
+			Parent: access_policy.Name.ApplyT(func(name string) (string, error) {
+				return fmt.Sprintf("%v%v", "accessPolicies/", name), nil
+			}).(pulumi.StringOutput),
+			Spec: &accesscontextmanager.ServicePerimeterSpecArgs{
+				RestrictedServices: pulumi.StringArray{
+					pulumi.String("storage.googleapis.com"),
+				},
+			},
+			Status: &accesscontextmanager.ServicePerimeterStatusArgs{
+				RestrictedServices: pulumi.StringArray{
+					pulumi.String("bigquery.googleapis.com"),
+				},
+			},
+			Title:                 pulumi.String("restrict_bigquery_dryrun_storage"),
+			UseExplicitDryRunSpec: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -231,12 +345,12 @@ access_policy = gcp.accesscontextmanager.AccessPolicy("access-policy",
     title="my policy")
 service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter",
     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"),
-    spec={
-        "restrictedServices": ["storage.googleapis.com"],
-    },
-    status={
-        "restrictedServices": ["bigquery.googleapis.com"],
-    },
+    spec=gcp.accesscontextmanager.ServicePerimeterSpecArgs(
+        restricted_services=["storage.googleapis.com"],
+    ),
+    status=gcp.accesscontextmanager.ServicePerimeterStatusArgs(
+        restricted_services=["bigquery.googleapis.com"],
+    ),
     title="restrict_bigquery_dryrun_storage",
     use_explicit_dry_run_spec=True)
 ```
@@ -278,19 +392,19 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/accesscontextmanager/#ServicePerimeter">ServicePerimeter</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/accesscontextmanager/#ServicePerimeterArgs">ServicePerimeterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServicePerimeter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServicePerimeterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/accesscontextmanager/#ServicePerimeter">ServicePerimeter</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>perimeter_type=None<span class="p">, </span>spec=None<span class="p">, </span>status=None<span class="p">, </span>title=None<span class="p">, </span>use_explicit_dry_run_spec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServicePerimeter</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">perimeter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[ServicePerimeterSpecArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[ServicePerimeterStatusArgs]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_explicit_dry_run_spec</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeter">NewServicePerimeter</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeterArgs">ServicePerimeterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeter">ServicePerimeter</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServicePerimeter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServicePerimeterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServicePerimeter</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.ServicePerimeter.html">ServicePerimeter</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.ServicePerimeterArgs.html">ServicePerimeterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServicePerimeter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServicePerimeterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -301,7 +415,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -311,7 +425,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/accesscontextmanager/#ServicePerimeterArgs">ServicePerimeterArgs</a></span>
+        <span class="property-type"><a href="#inputs">ServicePerimeterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -360,7 +474,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -370,7 +484,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -380,7 +494,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeterArgs">ServicePerimeterArgs</a></span>
+        <span class="property-type"><a href="#inputs">ServicePerimeterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -390,7 +504,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -409,7 +523,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -419,7 +533,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.ServicePerimeterArgs.html">ServicePerimeterArgs</a></span>
+        <span class="property-type"><a href="#inputs">ServicePerimeterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -442,12 +556,11 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
 
 ## ServicePerimeter Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ServicePerimeter resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The ServicePerimeter resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -458,57 +571,53 @@ The ServicePerimeter resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
 Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
 behavior.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
 begin with a letter and only include alphanumeric and '_'.
 Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perimetertype_csharp">
 <a href="#perimetertype_csharp" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
 bridge. Regular Service Perimeter contains resources, access levels,
@@ -524,42 +633,43 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="spec_csharp">
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useexplicitdryrunspec_csharp">
 <a href="#useexplicitdryrunspec_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Explicit<wbr>Dry<wbr>Run<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
 for all Service Perimeters, and that spec is identical to the status for those
@@ -571,10 +681,8 @@ actually enforcing them. This testing is done through analyzing the differences
 between currently enforced and suggested restrictions. useExplicitDryRunSpec must
 bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -583,57 +691,53 @@ bet set to True if any of the fields in the spec are set to non-default values.
             title="Required">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
 Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
 behavior.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
 begin with a letter and only include alphanumeric and '_'.
 Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perimetertype_go">
 <a href="#perimetertype_go" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
 bridge. Regular Service Perimeter contains resources, access levels,
@@ -649,42 +753,43 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="spec_go">
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useexplicitdryrunspec_go">
 <a href="#useexplicitdryrunspec_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Explicit<wbr>Dry<wbr>Run<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
 for all Service Perimeters, and that spec is identical to the status for those
@@ -696,10 +801,8 @@ actually enforcing them. This testing is done through analyzing the differences
 between currently enforced and suggested restrictions. useExplicitDryRunSpec must
 bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -708,57 +811,53 @@ bet set to True if any of the fields in the spec are set to non-default values.
             title="Required">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
 Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
 behavior.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
 begin with a letter and only include alphanumeric and '_'.
 Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perimetertype_nodejs">
 <a href="#perimetertype_nodejs" style="color: inherit; text-decoration: inherit;">perimeter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
 bridge. Regular Service Perimeter contains resources, access levels,
@@ -774,42 +873,43 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="spec_nodejs">
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useexplicitdryrunspec_nodejs">
 <a href="#useexplicitdryrunspec_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Explicit<wbr>Dry<wbr>Run<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
 for all Service Perimeters, and that spec is identical to the status for those
@@ -821,10 +921,8 @@ actually enforcing them. This testing is done through analyzing the differences
 between currently enforced and suggested restrictions. useExplicitDryRunSpec must
 bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -833,57 +931,53 @@ bet set to True if any of the fields in the spec are set to non-default values.
             title="Required">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
 Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
 behavior.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
 begin with a letter and only include alphanumeric and '_'.
 Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perimeter_type_python">
 <a href="#perimeter_type_python" style="color: inherit; text-decoration: inherit;">perimeter_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
 bridge. Regular Service Perimeter contains resources, access levels,
@@ -899,42 +993,43 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="spec_python">
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspec">Dict[Service<wbr>Perimeter<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatus">Dict[Service<wbr>Perimeter<wbr>Status]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_explicit_dry_run_spec_python">
 <a href="#use_explicit_dry_run_spec_python" style="color: inherit; text-decoration: inherit;">use_<wbr>explicit_<wbr>dry_<wbr>run_<wbr>spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
 for all Service Perimeters, and that spec is identical to the status for those
@@ -946,19 +1041,13 @@ actually enforcing them. This testing is done through analyzing the differences
 between currently enforced and suggested restrictions. useExplicitDryRunSpec must
 bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ServicePerimeter resource produces the following output properties:
-
 
 
 
@@ -969,37 +1058,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was created in UTC.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was updated in UTC.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1008,37 +1093,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was created in UTC.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was updated in UTC.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1047,37 +1128,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was created in UTC.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was updated in UTC.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1086,40 +1163,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was created in UTC.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was updated in UTC.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1129,19 +1199,20 @@ Get an existing ServicePerimeter resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/accesscontextmanager/#ServicePerimeterState">ServicePerimeterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/accesscontextmanager/#ServicePerimeter">ServicePerimeter</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServicePerimeterState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServicePerimeter</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>create_time=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>perimeter_type=None<span class="p">, </span>spec=None<span class="p">, </span>status=None<span class="p">, </span>title=None<span class="p">, </span>update_time=None<span class="p">, </span>use_explicit_dry_run_spec=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">perimeter_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[ServicePerimeterSpecArgs]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[ServicePerimeterStatusArgs]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">update_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_explicit_dry_run_spec</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ServicePerimeter</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServicePerimeter<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeterState">ServicePerimeterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeter">ServicePerimeter</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServicePerimeter<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServicePerimeterState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServicePerimeter</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.ServicePerimeter.html">ServicePerimeter</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.ServicePerimeterState.html">ServicePerimeterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServicePerimeter</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServicePerimeterState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1243,7 +1314,6 @@ Get an existing ServicePerimeter resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1251,57 +1321,53 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was created in UTC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
 behavior.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
 begin with a letter and only include alphanumeric and '_'.
 Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
 Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_perimetertype_csharp">
 <a href="#state_perimetertype_csharp" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
 bridge. Regular Service Perimeter contains resources, access levels,
@@ -1317,64 +1383,63 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_csharp">
 <a href="#state_spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_title_csharp">
 <a href="#state_title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was updated in UTC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_useexplicitdryrunspec_csharp">
 <a href="#state_useexplicitdryrunspec_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Explicit<wbr>Dry<wbr>Run<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
 for all Service Perimeters, and that spec is identical to the status for those
@@ -1386,10 +1451,8 @@ actually enforcing them. This testing is done through analyzing the differences
 between currently enforced and suggested restrictions. useExplicitDryRunSpec must
 bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1398,57 +1461,53 @@ bet set to True if any of the fields in the spec are set to non-default values.
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was created in UTC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
 behavior.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
 begin with a letter and only include alphanumeric and '_'.
 Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
 Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_perimetertype_go">
 <a href="#state_perimetertype_go" style="color: inherit; text-decoration: inherit;">Perimeter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
 bridge. Regular Service Perimeter contains resources, access levels,
@@ -1464,64 +1523,63 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_go">
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_title_go">
 <a href="#state_title_go" style="color: inherit; text-decoration: inherit;">Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was updated in UTC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_useexplicitdryrunspec_go">
 <a href="#state_useexplicitdryrunspec_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Explicit<wbr>Dry<wbr>Run<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
 for all Service Perimeters, and that spec is identical to the status for those
@@ -1533,10 +1591,8 @@ actually enforcing them. This testing is done through analyzing the differences
 between currently enforced and suggested restrictions. useExplicitDryRunSpec must
 bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1545,57 +1601,53 @@ bet set to True if any of the fields in the spec are set to non-default values.
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was created in UTC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
 behavior.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
 begin with a letter and only include alphanumeric and '_'.
 Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
 Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_perimetertype_nodejs">
 <a href="#state_perimetertype_nodejs" style="color: inherit; text-decoration: inherit;">perimeter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
 bridge. Regular Service Perimeter contains resources, access levels,
@@ -1611,64 +1663,63 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_nodejs">
 <a href="#state_spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_title_nodejs">
 <a href="#state_title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was updated in UTC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_useexplicitdryrunspec_nodejs">
 <a href="#state_useexplicitdryrunspec_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Explicit<wbr>Dry<wbr>Run<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
 for all Service Perimeters, and that spec is identical to the status for those
@@ -1680,10 +1731,8 @@ actually enforcing them. This testing is done through analyzing the differences
 between currently enforced and suggested restrictions. useExplicitDryRunSpec must
 bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1692,57 +1741,53 @@ bet set to True if any of the fields in the spec are set to non-default values.
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was created in UTC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the ServicePerimeter and its use. Does not affect
 behavior.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name for the ServicePerimeter. The short_name component must
 begin with a letter and only include alphanumeric and '_'.
 Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AccessPolicy this ServicePerimeter lives in.
 Format: accessPolicies/{policy_id}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_perimeter_type_python">
 <a href="#state_perimeter_type_python" style="color: inherit; text-decoration: inherit;">perimeter_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the Perimeter. There are two types: regular and
 bridge. Regular Service Perimeter contains resources, access levels,
@@ -1758,64 +1803,63 @@ Perimeter Bridges are typically useful when building more complex
 topologies with many independent perimeters that need to share some data
 with a common perimeter, but should not be able to share data among
 themselves.
+Default value is `PERIMETER_TYPE_REGULAR`.
+Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_python">
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspec">Dict[Service<wbr>Perimeter<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the `useExplicitDryRunSpec` flag is set.  Structure is documented below.
+the `useExplicitDryRunSpec` flag is set.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatus">Dict[Service<wbr>Perimeter<wbr>Status]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries.  Structure is documented below.
+perimeter content and boundaries.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_title_python">
 <a href="#state_title_python" style="color: inherit; text-decoration: inherit;">title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human readable title. Must be unique within the Policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the AccessPolicy was updated in UTC.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_use_explicit_dry_run_spec_python">
 <a href="#state_use_explicit_dry_run_spec_python" style="color: inherit; text-decoration: inherit;">use_<wbr>explicit_<wbr>dry_<wbr>run_<wbr>spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use explicit dry run spec flag. Ordinarily, a dry-run spec implicitly exists
 for all Service Perimeters, and that spec is identical to the status for those
@@ -1827,13 +1871,8 @@ actually enforcing them. This testing is done through analyzing the differences
 between currently enforced and suggested restrictions. useExplicitDryRunSpec must
 bet set to True if any of the fields in the spec are set to non-default values.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1843,20 +1882,8 @@ bet set to True if any of the fields in the spec are set to non-default values.
 ## Supporting Types
 
 
+
 <h4 id="serviceperimeterspec">Service<wbr>Perimeter<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServicePerimeterSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServicePerimeterSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeterSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeterSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.ServicePerimeterSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.ServicePerimeterSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1865,9 +1892,9 @@ bet set to True if any of the fields in the spec are set to non-default values.
             title="Optional">
         <span id="accesslevels_csharp">
 <a href="#accesslevels_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Levels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -1879,27 +1906,25 @@ origins within the perimeter. For Service Perimeter Bridge, must
 be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restrictedservices_csharp">
 <a href="#restrictedservices_csharp" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -1907,22 +1932,20 @@ restrictions. Must contain a list of services. For example, if
 buckets inside the perimeter must meet the perimeter's access
 restrictions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpcaccessibleservices_csharp">
 <a href="#vpcaccessibleservices_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Accessible<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1931,9 +1954,9 @@ Perimeter.  Structure is documented below.
             title="Optional">
         <span id="accesslevels_go">
 <a href="#accesslevels_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Levels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -1945,27 +1968,25 @@ origins within the perimeter. For Service Perimeter Bridge, must
 be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restrictedservices_go">
 <a href="#restrictedservices_go" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -1973,22 +1994,20 @@ restrictions. Must contain a list of services. For example, if
 buckets inside the perimeter must meet the perimeter's access
 restrictions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpcaccessibleservices_go">
 <a href="#vpcaccessibleservices_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Accessible<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1997,9 +2016,9 @@ Perimeter.  Structure is documented below.
             title="Optional">
         <span id="accesslevels_nodejs">
 <a href="#accesslevels_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -2011,27 +2030,25 @@ origins within the perimeter. For Service Perimeter Bridge, must
 be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restrictedservices_nodejs">
 <a href="#restrictedservices_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -2039,33 +2056,31 @@ restrictions. Must contain a list of services. For example, if
 buckets inside the perimeter must meet the perimeter's access
 restrictions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpcaccessibleservices_nodejs">
 <a href="#vpcaccessibleservices_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesslevels_python">
-<a href="#accesslevels_python" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
-</span> 
+        <span id="access_levels_python">
+<a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -2077,27 +2092,25 @@ origins within the perimeter. For Service Perimeter Bridge, must
 be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="restrictedservices_python">
-<a href="#restrictedservices_python" style="color: inherit; text-decoration: inherit;">restricted<wbr>Services</a>
-</span> 
+        <span id="restricted_services_python">
+<a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -2105,40 +2118,22 @@ restrictions. Must contain a list of services. For example, if
 buckets inside the perimeter must meet the perimeter's access
 restrictions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="vpcaccessibleservices_python">
-<a href="#vpcaccessibleservices_python" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
-</span> 
+        <span id="vpc_accessible_services_python">
+<a href="#vpc_accessible_services_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>accessible_<wbr>services</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Dict[Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services]</a></span>
+        <span class="property-type"><a href="#serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="serviceperimeterspecvpcaccessibleservices">Service<wbr>Perimeter<wbr>Spec<wbr>Vpc<wbr>Accessible<wbr>Services</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServicePerimeterSpecVpcAccessibleServices">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServicePerimeterSpecVpcAccessibleServices">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeterSpecVpcAccessibleServicesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeterSpecVpcAccessibleServicesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.ServicePerimeterSpecVpcAccessibleServicesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.ServicePerimeterSpecVpcAccessibleServices.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2147,29 +2142,26 @@ Perimeter.  Structure is documented below.
             title="Optional">
         <span id="allowedservices_csharp">
 <a href="#allowedservices_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablerestriction_csharp">
 <a href="#enablerestriction_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Restriction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
 list of APIs specified in 'allowedServices'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2178,29 +2170,26 @@ list of APIs specified in 'allowedServices'.
             title="Optional">
         <span id="allowedservices_go">
 <a href="#allowedservices_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablerestriction_go">
 <a href="#enablerestriction_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Restriction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
 list of APIs specified in 'allowedServices'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2209,78 +2198,56 @@ list of APIs specified in 'allowedServices'.
             title="Optional">
         <span id="allowedservices_nodejs">
 <a href="#allowedservices_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablerestriction_nodejs">
 <a href="#enablerestriction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Restriction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
 list of APIs specified in 'allowedServices'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedservices_python">
-<a href="#allowedservices_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Services</a>
-</span> 
+        <span id="allowed_services_python">
+<a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="enablerestriction_python">
-<a href="#enablerestriction_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Restriction</a>
-</span> 
+        <span id="enable_restriction_python">
+<a href="#enable_restriction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>restriction</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
 list of APIs specified in 'allowedServices'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="serviceperimeterstatus">Service<wbr>Perimeter<wbr>Status</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServicePerimeterStatus">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServicePerimeterStatus">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeterStatusArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeterStatusOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.ServicePerimeterStatusArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.ServicePerimeterStatus.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2289,9 +2256,9 @@ list of APIs specified in 'allowedServices'.
             title="Optional">
         <span id="accesslevels_csharp">
 <a href="#accesslevels_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Levels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -2303,27 +2270,25 @@ origins within the perimeter. For Service Perimeter Bridge, must
 be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restrictedservices_csharp">
 <a href="#restrictedservices_csharp" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -2331,22 +2296,20 @@ restrictions. Must contain a list of services. For example, if
 buckets inside the perimeter must meet the perimeter's access
 restrictions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpcaccessibleservices_csharp">
 <a href="#vpcaccessibleservices_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Accessible<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2355,9 +2318,9 @@ Perimeter.  Structure is documented below.
             title="Optional">
         <span id="accesslevels_go">
 <a href="#accesslevels_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Levels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -2369,27 +2332,25 @@ origins within the perimeter. For Service Perimeter Bridge, must
 be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restrictedservices_go">
 <a href="#restrictedservices_go" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -2397,22 +2358,20 @@ restrictions. Must contain a list of services. For example, if
 buckets inside the perimeter must meet the perimeter's access
 restrictions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpcaccessibleservices_go">
 <a href="#vpcaccessibleservices_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Accessible<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2421,9 +2380,9 @@ Perimeter.  Structure is documented below.
             title="Optional">
         <span id="accesslevels_nodejs">
 <a href="#accesslevels_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -2435,27 +2394,25 @@ origins within the perimeter. For Service Perimeter Bridge, must
 be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="restrictedservices_nodejs">
 <a href="#restrictedservices_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -2463,33 +2420,31 @@ restrictions. Must contain a list of services. For example, if
 buckets inside the perimeter must meet the perimeter's access
 restrictions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpcaccessibleservices_nodejs">
 <a href="#vpcaccessibleservices_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesslevels_python">
-<a href="#accesslevels_python" style="color: inherit; text-decoration: inherit;">access<wbr>Levels</a>
-</span> 
+        <span id="access_levels_python">
+<a href="#access_levels_python" style="color: inherit; text-decoration: inherit;">access_<wbr>levels</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of AccessLevel resource names that allow resources within
 the ServicePerimeter to be accessed from the internet.
@@ -2501,27 +2456,25 @@ origins within the perimeter. For Service Perimeter Bridge, must
 be empty.
 Format: accessPolicies/{policy_id}/accessLevels/{access_level_name}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of GCP resources that are inside of the service perimeter.
 Currently only projects are allowed.
 Format: projects/{project_number}
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="restrictedservices_python">
-<a href="#restrictedservices_python" style="color: inherit; text-decoration: inherit;">restricted<wbr>Services</a>
-</span> 
+        <span id="restricted_services_python">
+<a href="#restricted_services_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>services</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}GCP services that are subject to the Service Perimeter
 restrictions. Must contain a list of services. For example, if
@@ -2529,40 +2482,22 @@ restrictions. Must contain a list of services. For example, if
 buckets inside the perimeter must meet the perimeter's access
 restrictions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="vpcaccessibleservices_python">
-<a href="#vpcaccessibleservices_python" style="color: inherit; text-decoration: inherit;">vpc<wbr>Accessible<wbr>Services</a>
-</span> 
+        <span id="vpc_accessible_services_python">
+<a href="#vpc_accessible_services_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>accessible_<wbr>services</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Dict[Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services]</a></span>
+        <span class="property-type"><a href="#serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies how APIs are allowed to communicate within the Service
-Perimeter.  Structure is documented below.
+Perimeter.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="serviceperimeterstatusvpcaccessibleservices">Service<wbr>Perimeter<wbr>Status<wbr>Vpc<wbr>Accessible<wbr>Services</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServicePerimeterStatusVpcAccessibleServices">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServicePerimeterStatusVpcAccessibleServices">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeterStatusVpcAccessibleServicesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#ServicePerimeterStatusVpcAccessibleServicesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Inputs.ServicePerimeterStatusVpcAccessibleServicesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.Outputs.ServicePerimeterStatusVpcAccessibleServices.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2571,29 +2506,26 @@ Perimeter.  Structure is documented below.
             title="Optional">
         <span id="allowedservices_csharp">
 <a href="#allowedservices_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablerestriction_csharp">
 <a href="#enablerestriction_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Restriction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
 list of APIs specified in 'allowedServices'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2602,29 +2534,26 @@ list of APIs specified in 'allowedServices'.
             title="Optional">
         <span id="allowedservices_go">
 <a href="#allowedservices_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablerestriction_go">
 <a href="#enablerestriction_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Restriction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
 list of APIs specified in 'allowedServices'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2633,64 +2562,62 @@ list of APIs specified in 'allowedServices'.
             title="Optional">
         <span id="allowedservices_nodejs">
 <a href="#allowedservices_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablerestriction_nodejs">
 <a href="#enablerestriction_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Restriction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
 list of APIs specified in 'allowedServices'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowedservices_python">
-<a href="#allowedservices_python" style="color: inherit; text-decoration: inherit;">allowed<wbr>Services</a>
-</span> 
+        <span id="allowed_services_python">
+<a href="#allowed_services_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>services</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of APIs usable within the Service Perimeter.
 Must be empty unless `enableRestriction` is True.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="enablerestriction_python">
-<a href="#enablerestriction_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Restriction</a>
-</span> 
+        <span id="enable_restriction_python">
+<a href="#enable_restriction_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>restriction</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to restrict API calls within the Service Perimeter to the
 list of APIs specified in 'allowedServices'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+ServicePerimeter can be imported using any of these accepted formats
 
-
-
+```sh
+ $ pulumi import gcp:accesscontextmanager/servicePerimeter:ServicePerimeter default {{name}}
+```
 
 
 
@@ -2702,6 +2629,6 @@ list of APIs specified in 'allowedServices'.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -60,13 +60,23 @@ network = civo.Network("demo",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  "github.com/pulumi/pulumi-civo/sdk/go/civo"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi-civo/sdk/go/civo"
 )
 
-network, _ := civo.NewNetwork(ctx, "demo", &civo.NetworkArgs{
-  Label: pulumi.String("demo-network"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network, err := civo.NewNetwork(ctx, "demo", &civo.NetworkArgs{
+			Label: pulumi.String("demo-network"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

@@ -65,11 +65,11 @@ In your project directory, you’ll see a *.devcontainer* directory with a Docke
 
 ## Dockerfile
 
-For this example, we’ll use the standard Pulumi Dockerfile, which includes the SDK for all the supported languages. Download the [Dockerfile](https://raw.githubusercontent.com/pulumi/pulumi/master/dist/pulumi/Dockerfile) and save it to the .devcontainer directory.
+For this example, we’ll use the standard Pulumi Dockerfile, which includes the SDK for all the supported languages. Download the [Dockerfile](https://raw.githubusercontent.com/pulumi/pulumi/master/docker/pulumi/Dockerfile) and save it to the .devcontainer directory.
 
 ```bash
 $ cd .devcontainer
-$ curl "https://raw.githubusercontent.com/pulumi/pulumi/master/dist/pulumi/Dockerfile" -o Dockerfile
+$ curl "https://raw.githubusercontent.com/pulumi/pulumi/master/docker/pulumi/Dockerfile" -o Dockerfile
 ```
 
 ## Container configuration

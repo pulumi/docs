@@ -16,8 +16,16 @@ Explore the resources and functions of the datacatalog module in the GCP package
     <li><a href="entrygroupiambinding" title="EntryGroupIamBinding"><span class="symbol resource"></span>EntryGroupIamBinding</a></li>
     <li><a href="entrygroupiammember" title="EntryGroupIamMember"><span class="symbol resource"></span>EntryGroupIamMember</a></li>
     <li><a href="entrygroupiampolicy" title="EntryGroupIamPolicy"><span class="symbol resource"></span>EntryGroupIamPolicy</a></li>
+    <li><a href="policytag" title="PolicyTag"><span class="symbol resource"></span>PolicyTag</a></li>
+    <li><a href="policytagiambinding" title="PolicyTagIamBinding"><span class="symbol resource"></span>PolicyTagIamBinding</a></li>
+    <li><a href="policytagiammember" title="PolicyTagIamMember"><span class="symbol resource"></span>PolicyTagIamMember</a></li>
+    <li><a href="policytagiampolicy" title="PolicyTagIamPolicy"><span class="symbol resource"></span>PolicyTagIamPolicy</a></li>
     <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
     <li><a href="tagtemplate" title="TagTemplate"><span class="symbol resource"></span>TagTemplate</a></li>
+    <li><a href="taxonomy" title="Taxonomy"><span class="symbol resource"></span>Taxonomy</a></li>
+    <li><a href="taxonomyiambinding" title="TaxonomyIamBinding"><span class="symbol resource"></span>TaxonomyIamBinding</a></li>
+    <li><a href="taxonomyiammember" title="TaxonomyIamMember"><span class="symbol resource"></span>TaxonomyIamMember</a></li>
+    <li><a href="taxonomyiampolicy" title="TaxonomyIamPolicy"><span class="symbol resource"></span>TaxonomyIamPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -27,26 +35,8 @@ Explore the resources and functions of the datacatalog module in the GCP package
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.html" title="Pulumi.Gcp.DataCatalog">Pulumi.Gcp.DataCatalog</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#" title="gcp/datacatalog">gcp/datacatalog</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datacatalog/#" title="@pulumi/gcp/datacatalog">@pulumi/gcp/datacatalog</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/datacatalog" title="pulumi_gcp/datacatalog">pulumi_gcp/datacatalog</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

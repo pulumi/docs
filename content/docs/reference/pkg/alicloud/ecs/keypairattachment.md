@@ -1,8 +1,8 @@
 
 ---
 title: "KeyPairAttachment"
-title_tag: "Resource KeyPairAttachment | Module ecs | Package AliCloud"
-meta_desc: "Explore the KeyPairAttachment resource of the ecs module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a key pair attachment resource to bind key pair for several ECS instances."
+title_tag: "alicloud.ecs.KeyPairAttachment"
+meta_desc: "Documentation for the alicloud.ecs.KeyPairAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,6 +13,7 @@ meta_desc: "Explore the KeyPairAttachment resource of the ecs module, including 
 Provides a key pair attachment resource to bind key pair for several ECS instances.
 
 > **NOTE:** After the key pair is attached with sone instances, there instances must be rebooted to make the key pair affect.
+
 
 {{% examples %}}
 ## Example Usage
@@ -43,8 +44,8 @@ class MyStack : Stack
         })));
         var images = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
         {
-            MostRecent = true,
             NameRegex = "^ubuntu_18.*64",
+            MostRecent = true,
             Owners = "system",
         }));
         var config = new Config();
@@ -55,9 +56,9 @@ class MyStack : Stack
         });
         var vswitch = new AliCloud.Vpc.Switch("vswitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = @default.Apply(@default => @default.Zones[0].Id),
-            CidrBlock = "10.1.1.0/24",
             VpcId = vpc.Id,
+            CidrBlock = "10.1.1.0/24",
+            AvailabilityZone = @default.Apply(@default => @default.Zones[0].Id),
         });
         var @group = new AliCloud.Ecs.SecurityGroup("group", new AliCloud.Ecs.SecurityGroupArgs
         {
@@ -70,19 +71,19 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             instance.Add(new AliCloud.Ecs.Instance($"instance-{range.Value}", new AliCloud.Ecs.InstanceArgs
             {
-                ImageId = images.Apply(images => images.Images[0].Id),
-                InstanceChargeType = "PostPaid",
                 InstanceName = $"{name}-{range.Value + 1}",
+                ImageId = images.Apply(images => images.Images[0].Id),
                 InstanceType = type.Apply(type => type.InstanceTypes[0].Id),
-                InternetChargeType = "PayByTraffic",
-                InternetMaxBandwidthOut = 5,
-                Password = "Test12345",
                 SecurityGroups = 
                 {
                     @group.Id,
                 },
-                SystemDiskCategory = "cloud_ssd",
                 VswitchId = vswitch.Id,
+                InternetChargeType = "PayByTraffic",
+                InternetMaxBandwidthOut = 5,
+                Password = "Test12345",
+                InstanceChargeType = "PostPaid",
+                SystemDiskCategory = "cloud_ssd",
             }));
         }
         var pair = new AliCloud.Ecs.KeyPair("pair", new AliCloud.Ecs.KeyPairArgs
@@ -91,8 +92,8 @@ class MyStack : Stack
         });
         var attachment = new AliCloud.Ecs.KeyPairAttachment("attachment", new AliCloud.Ecs.KeyPairAttachmentArgs
         {
-            InstanceIds = instance.Select(__item => __item.Id).ToList(),
             KeyName = pair.Id,
+            InstanceIds = instance.Select(__item => __item.Id).ToList(),
         });
     }
 
@@ -102,7 +103,129 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "cloud_ssd"
+		opt1 := "VSwitch"
+		_default, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableDiskCategory:     &opt0,
+			AvailableResourceCreation: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt2 := _default.Zones[0].Id
+		opt3 := 1
+		opt4 := 2
+		_type, err := ecs.GetInstanceTypes(ctx, &ecs.GetInstanceTypesArgs{
+			AvailabilityZone: &opt2,
+			CpuCoreCount:     &opt3,
+			MemorySize:       &opt4,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt5 := "^ubuntu_18.*64"
+		opt6 := true
+		opt7 := "system"
+		images, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
+			NameRegex:  &opt5,
+			MostRecent: &opt6,
+			Owners:     &opt7,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		cfg := config.New(ctx, "")
+		name := "keyPairAttachmentName"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		vpc, err := vpc.NewNetwork(ctx, "vpc", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("10.1.0.0/21"),
+		})
+		if err != nil {
+			return err
+		}
+		vswitch, err := vpc.NewSwitch(ctx, "vswitch", &vpc.SwitchArgs{
+			VpcId:            vpc.ID(),
+			CidrBlock:        pulumi.String("10.1.1.0/24"),
+			AvailabilityZone: pulumi.String(_default.Zones[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		group, err := ecs.NewSecurityGroup(ctx, "group", &ecs.SecurityGroupArgs{
+			Description: pulumi.String("New security group"),
+			VpcId:       vpc.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		var instance []*ecs.Instance
+		for key0, val0 := range 2 {
+			__res, err := ecs.NewInstance(ctx, fmt.Sprintf("instance-%v", key0), &ecs.InstanceArgs{
+				InstanceName: pulumi.String(fmt.Sprintf("%v%v%v", name, "-", val0+1)),
+				ImageId:      pulumi.String(images.Images[0].Id),
+				InstanceType: pulumi.String(_type.InstanceTypes[0].Id),
+				SecurityGroups: pulumi.StringArray{
+					group.ID(),
+				},
+				VswitchId:               vswitch.ID(),
+				InternetChargeType:      pulumi.String("PayByTraffic"),
+				InternetMaxBandwidthOut: pulumi.Int(5),
+				Password:                pulumi.String("Test12345"),
+				InstanceChargeType:      pulumi.String("PostPaid"),
+				SystemDiskCategory:      pulumi.String("cloud_ssd"),
+			})
+			if err != nil {
+				return err
+			}
+			instance = append(instance, __res)
+		}
+		pair, err := ecs.NewKeyPair(ctx, "pair", &ecs.KeyPairArgs{
+			KeyName: pulumi.String(name),
+		})
+		if err != nil {
+			return err
+		}
+		var splat0 pulumi.StringArray
+		for _, val0 := range instance {
+			splat0 = append(splat0, val0.ID())
+		}
+		_, err = ecs.NewKeyPairAttachment(ctx, "attachment", &ecs.KeyPairAttachmentArgs{
+			KeyName:     pair.ID(),
+			InstanceIds: toPulumiStringArray(splat0),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+func toPulumiStringArray(arr []string) pulumi.StringArray {
+	var pulumiArr pulumi.StringArray
+	for _, v := range arr {
+		pulumiArr = append(pulumiArr, pulumi.String(v))
+	}
+	return pulumiArr
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -112,11 +235,11 @@ import pulumi_alicloud as alicloud
 
 default = alicloud.get_zones(available_disk_category="cloud_ssd",
     available_resource_creation="VSwitch")
-type = alicloud.ecs.get_instance_types(availability_zone=default.zones[0]["id"],
+type = alicloud.ecs.get_instance_types(availability_zone=default.zones[0].id,
     cpu_core_count=1,
     memory_size=2)
-images = alicloud.ecs.get_images(most_recent=True,
-    name_regex="^ubuntu_18.*64",
+images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
+    most_recent=True,
     owners="system")
 config = pulumi.Config()
 name = config.get("name")
@@ -124,29 +247,29 @@ if name is None:
     name = "keyPairAttachmentName"
 vpc = alicloud.vpc.Network("vpc", cidr_block="10.1.0.0/21")
 vswitch = alicloud.vpc.Switch("vswitch",
-    availability_zone=default.zones[0]["id"],
+    vpc_id=vpc.id,
     cidr_block="10.1.1.0/24",
-    vpc_id=vpc.id)
+    availability_zone=default.zones[0].id)
 group = alicloud.ecs.SecurityGroup("group",
     description="New security group",
     vpc_id=vpc.id)
 instance = []
 for range in [{"value": i} for i in range(0, 2)]:
     instance.append(alicloud.ecs.Instance(f"instance-{range['value']}",
-        image_id=images.images[0]["id"],
-        instance_charge_type="PostPaid",
         instance_name=f"{name}-{range['value'] + 1}",
-        instance_type=type.instance_types[0]["id"],
+        image_id=images.images[0].id,
+        instance_type=type.instance_types[0].id,
+        security_groups=[group.id],
+        vswitch_id=vswitch.id,
         internet_charge_type="PayByTraffic",
         internet_max_bandwidth_out=5,
         password="Test12345",
-        security_groups=[group.id],
-        system_disk_category="cloud_ssd",
-        vswitch_id=vswitch.id))
+        instance_charge_type="PostPaid",
+        system_disk_category="cloud_ssd"))
 pair = alicloud.ecs.KeyPair("pair", key_name=name)
 attachment = alicloud.ecs.KeyPairAttachment("attachment",
-    instance_ids=[__item.id for __item in instance],
-    key_name=pair.id)
+    key_name=pair.id,
+    instance_ids=[__item.id for __item in instance])
 ```
 
 {{% /example %}}
@@ -157,56 +280,51 @@ attachment = alicloud.ecs.KeyPairAttachment("attachment",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const config = new pulumi.Config();
-const name = config.get("name") || "keyPairAttachmentName";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const default = alicloud.getZones({
     availableDiskCategory: "cloud_ssd",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const type = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
-    availabilityZone: defaultZones.zones[0].id,
+});
+const type = _default.then(_default => alicloud.ecs.getInstanceTypes({
+    availabilityZone: _default.zones[0].id,
     cpuCoreCount: 1,
     memorySize: 2,
-}, { async: true }));
-const images = pulumi.output(alicloud.ecs.getImages({
-    mostRecent: true,
+}));
+const images = alicloud.ecs.getImages({
     nameRegex: "^ubuntu_18.*64",
+    mostRecent: true,
     owners: "system",
-}, { async: true }));
-const vpc = new alicloud.vpc.Network("vpc", {
-    cidrBlock: "10.1.0.0/21",
 });
+const config = new pulumi.Config();
+const name = config.get("name") || "keyPairAttachmentName";
+const vpc = new alicloud.vpc.Network("vpc", {cidrBlock: "10.1.0.0/21"});
 const vswitch = new alicloud.vpc.Switch("vswitch", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "10.1.1.0/24",
     vpcId: vpc.id,
+    cidrBlock: "10.1.1.0/24",
+    availabilityZone: _default.then(_default => _default.zones[0].id),
 });
 const group = new alicloud.ecs.SecurityGroup("group", {
     description: "New security group",
     vpcId: vpc.id,
 });
-const instance: alicloud.ecs.Instance[] = [];
-for (let i = 0; i < 2; i++) {
-    instance.push(new alicloud.ecs.Instance(`instance-${i}`, {
-        imageId: images.images[0].id,
-        instanceChargeType: "PostPaid",
-        instanceName: `${name}-${(i + 1)}`,
-        instanceType: type.instanceTypes[0].id,
+const instance: alicloud.ecs.Instance[];
+for (const range = {value: 0}; range.value < 2; range.value++) {
+    instance.push(new alicloud.ecs.Instance(`instance-${range.value}`, {
+        instanceName: `${name}-${range.value + 1}`,
+        imageId: images.then(images => images.images[0].id),
+        instanceType: type.then(type => type.instanceTypes[0].id),
+        securityGroups: [group.id],
+        vswitchId: vswitch.id,
         internetChargeType: "PayByTraffic",
         internetMaxBandwidthOut: 5,
         password: "Test12345",
-        securityGroups: [group.id],
+        instanceChargeType: "PostPaid",
         systemDiskCategory: "cloud_ssd",
-        vswitchId: vswitch.id,
     }));
 }
-const pair = new alicloud.ecs.KeyPair("pair", {
-    keyName: name,
-});
+const pair = new alicloud.ecs.KeyPair("pair", {keyName: name});
 const attachment = new alicloud.ecs.KeyPairAttachment("attachment", {
-    instanceIds: instance.map(v => v.id),
     keyName: pair.id,
+    instanceIds: instance.map(__item => __item.id),
 });
 ```
 
@@ -220,19 +338,19 @@ const attachment = new alicloud.ecs.KeyPairAttachment("attachment", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#KeyPairAttachment">KeyPairAttachment</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#KeyPairAttachmentArgs">KeyPairAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#KeyPairAttachment">KeyPairAttachment</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#KeyPairAttachmentArgs">KeyPairAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#pulumi_alicloud.ecs.KeyPairAttachment">KeyPairAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>force=None<span class="p">, </span>instance_ids=None<span class="p">, </span>key_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ecs/#pulumi_alicloud.ecs.KeyPairAttachment">KeyPairAttachment</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#KeyPairAttachment">NewKeyPairAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#KeyPairAttachmentArgs">KeyPairAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#KeyPairAttachment">KeyPairAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#KeyPairAttachment">NewKeyPairAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#KeyPairAttachmentArgs">KeyPairAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#KeyPairAttachment">KeyPairAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.KeyPairAttachment.html">KeyPairAttachment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.KeyPairAttachmentArgs.html">KeyPairAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.KeyPairAttachment.html">KeyPairAttachment</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.KeyPairAttachmentArgs.html">KeyPairAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -243,7 +361,7 @@ const attachment = new alicloud.ecs.KeyPairAttachment("attachment", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -312,7 +430,7 @@ const attachment = new alicloud.ecs.KeyPairAttachment("attachment", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -351,7 +469,7 @@ const attachment = new alicloud.ecs.KeyPairAttachment("attachment", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -392,7 +510,6 @@ The KeyPairAttachment resource accepts the following [input]({{< relref "/docs/i
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -400,38 +517,34 @@ The KeyPairAttachment resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="instanceids_csharp">
 <a href="#instanceids_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of ECS instance's IDs.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of key pair used to bind.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_csharp">
 <a href="#force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set it to true and it will reboot instances which attached with the key pair to make key pair affect immediately.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -440,38 +553,34 @@ The KeyPairAttachment resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="instanceids_go">
 <a href="#instanceids_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of ECS instance's IDs.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of key pair used to bind.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_go">
 <a href="#force_go" style="color: inherit; text-decoration: inherit;">Force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set it to true and it will reboot instances which attached with the key pair to make key pair affect immediately.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -480,38 +589,34 @@ The KeyPairAttachment resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="instanceids_nodejs">
 <a href="#instanceids_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of ECS instance's IDs.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of key pair used to bind.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_nodejs">
 <a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set it to true and it will reboot instances which attached with the key pair to make key pair affect immediately.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -520,47 +625,39 @@ The KeyPairAttachment resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="instance_ids_python">
 <a href="#instance_ids_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of ECS instance's IDs.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of key pair used to bind.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_python">
 <a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set it to true and it will reboot instances which attached with the key pair to make key pair affect immediately.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the KeyPairAttachment resource produces the following output properties:
-
 
 
 
@@ -571,15 +668,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -588,15 +683,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -605,15 +698,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -622,18 +713,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -643,19 +729,20 @@ Get an existing KeyPairAttachment resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#KeyPairAttachmentState">KeyPairAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#KeyPairAttachment">KeyPairAttachment</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#KeyPairAttachmentState">KeyPairAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#KeyPairAttachment">KeyPairAttachment</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>force=None<span class="p">, </span>instance_ids=None<span class="p">, </span>key_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KeyPairAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKeyPairAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#KeyPairAttachmentState">KeyPairAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#KeyPairAttachment">KeyPairAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKeyPairAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#KeyPairAttachmentState">KeyPairAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#KeyPairAttachment">KeyPairAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.KeyPairAttachment.html">KeyPairAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.KeyPairAttachmentState.html">KeyPairAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.KeyPairAttachment.html">KeyPairAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.KeyPairAttachmentState.html">KeyPairAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -757,7 +844,6 @@ Get an existing KeyPairAttachment resource's state with the given name, ID, and 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -765,38 +851,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_force_csharp">
 <a href="#state_force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set it to true and it will reboot instances which attached with the key pair to make key pair affect immediately.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceids_csharp">
 <a href="#state_instanceids_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of ECS instance's IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keyname_csharp">
 <a href="#state_keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of key pair used to bind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -805,38 +887,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_force_go">
 <a href="#state_force_go" style="color: inherit; text-decoration: inherit;">Force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set it to true and it will reboot instances which attached with the key pair to make key pair affect immediately.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceids_go">
 <a href="#state_instanceids_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of ECS instance's IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keyname_go">
 <a href="#state_keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of key pair used to bind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -845,38 +923,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_force_nodejs">
 <a href="#state_force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set it to true and it will reboot instances which attached with the key pair to make key pair affect immediately.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceids_nodejs">
 <a href="#state_instanceids_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of ECS instance's IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keyname_nodejs">
 <a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of key pair used to bind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -885,41 +959,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_force_python">
 <a href="#state_force_python" style="color: inherit; text-decoration: inherit;">force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set it to true and it will reboot instances which attached with the key pair to make key pair affect immediately.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_ids_python">
 <a href="#state_instance_ids_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of ECS instance's IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_name_python">
 <a href="#state_key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of key pair used to bind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -934,6 +1001,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

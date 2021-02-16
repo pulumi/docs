@@ -17,10 +17,16 @@ Explore the resources and functions of the storage module in the Azure package.
     <li><a href="container" title="Container"><span class="symbol resource"></span>Container</a></li>
     <li><a href="customermanagedkey" title="CustomerManagedKey"><span class="symbol resource"></span>CustomerManagedKey</a></li>
     <li><a href="datalakegen2filesystem" title="DataLakeGen2Filesystem"><span class="symbol resource"></span>DataLakeGen2Filesystem</a></li>
+    <li><a href="datalakegen2path" title="DataLakeGen2Path"><span class="symbol resource"></span>DataLakeGen2Path</a></li>
+    <li><a href="encryptionscope" title="EncryptionScope"><span class="symbol resource"></span>EncryptionScope</a></li>
     <li><a href="managementpolicy" title="ManagementPolicy"><span class="symbol resource"></span>ManagementPolicy</a></li>
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
     <li><a href="share" title="Share"><span class="symbol resource"></span>Share</a></li>
     <li><a href="sharedirectory" title="ShareDirectory"><span class="symbol resource"></span>ShareDirectory</a></li>
+    <li><a href="sharefile" title="ShareFile"><span class="symbol resource"></span>ShareFile</a></li>
+    <li><a href="sync" title="Sync"><span class="symbol resource"></span>Sync</a></li>
+    <li><a href="synccloudendpoint" title="SyncCloudEndpoint"><span class="symbol resource"></span>SyncCloudEndpoint</a></li>
+    <li><a href="syncgroup" title="SyncGroup"><span class="symbol resource"></span>SyncGroup</a></li>
     <li><a href="table" title="Table"><span class="symbol resource"></span>Table</a></li>
     <li><a href="tableentity" title="TableEntity"><span class="symbol resource"></span>TableEntity</a></li>
     <li><a href="zipblob" title="ZipBlob"><span class="symbol resource"></span>ZipBlob</a></li>
@@ -31,8 +37,11 @@ Explore the resources and functions of the storage module in the Azure package.
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getaccountblobcontainersas" title="GetAccountBlobContainerSAS"><span class="symbol function"></span>GetAccountBlobContainerSAS</a></li>
     <li><a href="getaccountsas" title="GetAccountSAS"><span class="symbol function"></span>GetAccountSAS</a></li>
+    <li><a href="getencryptionscope" title="GetEncryptionScope"><span class="symbol function"></span>GetEncryptionScope</a></li>
     <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
     <li><a href="getstoragecontainer" title="GetStorageContainer"><span class="symbol function"></span>GetStorageContainer</a></li>
+    <li><a href="getsync" title="GetSync"><span class="symbol function"></span>GetSync</a></li>
+    <li><a href="getsyncgroup" title="GetSyncGroup"><span class="symbol function"></span>GetSyncGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -44,7 +53,7 @@ Explore the resources and functions of the storage module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.17.0</dd>
+	<dd>3.46.0</dd>
 </dl>
 
 

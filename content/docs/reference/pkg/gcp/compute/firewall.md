@@ -1,8 +1,8 @@
 
 ---
 title: "Firewall"
-title_tag: "Resource Firewall | Module compute | Package GCP"
-meta_desc: "Explore the Firewall resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Each network has its own firewall controlling access to and from the"
+title_tag: "gcp.compute.Firewall"
+meta_desc: "Documentation for the gcp.compute.Firewall resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -29,6 +29,154 @@ To get more information about Firewall, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/firewalls)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Firewall Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+        });
+        var defaultFirewall = new Gcp.Compute.Firewall("defaultFirewall", new Gcp.Compute.FirewallArgs
+        {
+            Network = defaultNetwork.Name,
+            Allows = 
+            {
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "icmp",
+                },
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "tcp",
+                    Ports = 
+                    {
+                        "80",
+                        "8080",
+                        "1000-2000",
+                    },
+                },
+            },
+            SourceTags = 
+            {
+                "web",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewFirewall(ctx, "defaultFirewall", &compute.FirewallArgs{
+			Network: defaultNetwork.Name,
+			Allows: compute.FirewallAllowArray{
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("icmp"),
+				},
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("tcp"),
+					Ports: pulumi.StringArray{
+						pulumi.String("80"),
+						pulumi.String("8080"),
+						pulumi.String("1000-2000"),
+					},
+				},
+			},
+			SourceTags: pulumi.StringArray{
+				pulumi.String("web"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork")
+default_firewall = gcp.compute.Firewall("defaultFirewall",
+    network=default_network.name,
+    allows=[
+        gcp.compute.FirewallAllowArgs(
+            protocol="icmp",
+        ),
+        gcp.compute.FirewallAllowArgs(
+            protocol="tcp",
+            ports=[
+                "80",
+                "8080",
+                "1000-2000",
+            ],
+        ),
+    ],
+    source_tags=["web"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
+const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
+    network: defaultNetwork.name,
+    allows: [
+        {
+            protocol: "icmp",
+        },
+        {
+            protocol: "tcp",
+            ports: [
+                "80",
+                "8080",
+                "1000-2000",
+            ],
+        },
+    ],
+    sourceTags: ["web"],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Firewall Resource {#create}
@@ -36,19 +184,19 @@ To get more information about Firewall, see:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Firewall">Firewall</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#FirewallArgs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#Firewall">Firewall</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>allows=None<span class="p">, </span>denies=None<span class="p">, </span>description=None<span class="p">, </span>destination_ranges=None<span class="p">, </span>direction=None<span class="p">, </span>disabled=None<span class="p">, </span>enable_logging=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>source_ranges=None<span class="p">, </span>source_service_accounts=None<span class="p">, </span>source_tags=None<span class="p">, </span>target_service_accounts=None<span class="p">, </span>target_tags=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallAllowArgs]]</span> = None<span class="p">, </span><span class="nx">denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallDenyArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[FirewallLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Firewall">NewFirewall</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#FirewallArgs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Firewall">Firewall</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewall</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Firewall.html">Firewall</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.FirewallArgs.html">FirewallArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Firewall</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FirewallArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -59,7 +207,7 @@ To get more information about Firewall, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -69,7 +217,7 @@ To get more information about Firewall, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#FirewallArgs">FirewallArgs</a></span>
+        <span class="property-type"><a href="#inputs">FirewallArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -118,7 +266,7 @@ To get more information about Firewall, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -128,7 +276,7 @@ To get more information about Firewall, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -138,7 +286,7 @@ To get more information about Firewall, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#FirewallArgs">FirewallArgs</a></span>
+        <span class="property-type"><a href="#inputs">FirewallArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -148,7 +296,7 @@ To get more information about Firewall, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -167,7 +315,7 @@ To get more information about Firewall, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -177,7 +325,7 @@ To get more information about Firewall, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.FirewallArgs.html">FirewallArgs</a></span>
+        <span class="property-type"><a href="#inputs">FirewallArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -200,12 +348,11 @@ To get more information about Firewall, see:
 
 ## Firewall Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Firewall resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Firewall resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -216,111 +363,117 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allows_csharp">
 <a href="#allows_csharp" style="color: inherit; text-decoration: inherit;">Allows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">List&lt;Firewall<wbr>Allow<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denies_csharp">
 <a href="#denies_csharp" style="color: inherit; text-decoration: inherit;">Denies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">List&lt;Firewall<wbr>Deny<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationranges_csharp">
 <a href="#destinationranges_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="enablelogging_csharp">
 <a href="#enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logconfig_csharp">
+<a href="#logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -330,14 +483,13 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -346,26 +498,24 @@ priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceranges_csharp">
 <a href="#sourceranges_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -376,14 +526,13 @@ source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceserviceaccounts_csharp">
 <a href="#sourceserviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -397,14 +546,13 @@ sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcetags_csharp">
 <a href="#sourcetags_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -416,14 +564,13 @@ source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetserviceaccounts_csharp">
 <a href="#targetserviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -432,24 +579,21 @@ sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targettags_csharp">
 <a href="#targettags_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -458,111 +602,117 @@ instances on the specified network.
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allows_go">
 <a href="#allows_go" style="color: inherit; text-decoration: inherit;">Allows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">[]Firewall<wbr>Allow</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denies_go">
 <a href="#denies_go" style="color: inherit; text-decoration: inherit;">Denies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">[]Firewall<wbr>Deny</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationranges_go">
 <a href="#destinationranges_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="enablelogging_go">
 <a href="#enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logconfig_go">
+<a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -572,14 +722,13 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -588,26 +737,24 @@ priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceranges_go">
 <a href="#sourceranges_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -618,14 +765,13 @@ source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceserviceaccounts_go">
 <a href="#sourceserviceaccounts_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -639,14 +785,13 @@ sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcetags_go">
 <a href="#sourcetags_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -658,14 +803,13 @@ source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetserviceaccounts_go">
 <a href="#targetserviceaccounts_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -674,24 +818,21 @@ sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targettags_go">
 <a href="#targettags_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -700,111 +841,117 @@ instances on the specified network.
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allows_nodejs">
 <a href="#allows_nodejs" style="color: inherit; text-decoration: inherit;">allows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">Firewall<wbr>Allow[]</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denies_nodejs">
 <a href="#denies_nodejs" style="color: inherit; text-decoration: inherit;">denies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">Firewall<wbr>Deny[]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationranges_nodejs">
 <a href="#destinationranges_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="enablelogging_nodejs">
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logconfig_nodejs">
+<a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -814,14 +961,13 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -830,26 +976,24 @@ priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceranges_nodejs">
 <a href="#sourceranges_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -860,14 +1004,13 @@ source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceserviceaccounts_nodejs">
 <a href="#sourceserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -881,14 +1024,13 @@ sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcetags_nodejs">
 <a href="#sourcetags_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -900,14 +1042,13 @@ source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetserviceaccounts_nodejs">
 <a href="#targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -916,24 +1057,21 @@ sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targettags_nodejs">
 <a href="#targettags_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -942,111 +1080,117 @@ instances on the specified network.
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allows_python">
 <a href="#allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallow">List[Firewall<wbr>Allow]</a></span>
+        <span class="property-type"><a href="#firewallallow">Sequence[Firewall<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denies_python">
 <a href="#denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldeny">List[Firewall<wbr>Deny]</a></span>
+        <span class="property-type"><a href="#firewalldeny">Sequence[Firewall<wbr>Deny<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_ranges_python">
 <a href="#destination_ranges_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="enable_logging_python">
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_config_python">
+<a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1056,14 +1200,13 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -1072,26 +1215,24 @@ priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_ranges_python">
 <a href="#source_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -1102,14 +1243,13 @@ source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_service_accounts_python">
 <a href="#source_service_accounts_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -1123,14 +1263,13 @@ sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_tags_python">
 <a href="#source_tags_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -1142,14 +1281,13 @@ source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_service_accounts_python">
 <a href="#target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -1158,33 +1296,26 @@ sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_tags_python">
 <a href="#target_tags_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Firewall resource produces the following output properties:
-
 
 
 
@@ -1195,37 +1326,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1234,37 +1361,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1273,37 +1396,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1312,40 +1431,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1355,19 +1467,20 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#FirewallState">FirewallState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Firewall">Firewall</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FirewallState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Firewall</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>allows=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>denies=None<span class="p">, </span>description=None<span class="p">, </span>destination_ranges=None<span class="p">, </span>direction=None<span class="p">, </span>disabled=None<span class="p">, </span>enable_logging=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>priority=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>source_ranges=None<span class="p">, </span>source_service_accounts=None<span class="p">, </span>source_tags=None<span class="p">, </span>target_service_accounts=None<span class="p">, </span>target_tags=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallAllowArgs]]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallDenyArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[FirewallLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_service_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewall<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#FirewallState">FirewallState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Firewall">Firewall</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewall<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FirewallState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Firewall</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Firewall.html">Firewall</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.FirewallState.html">FirewallState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Firewall</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FirewallState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1469,7 +1582,6 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1477,111 +1589,117 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_allows_csharp">
 <a href="#state_allows_csharp" style="color: inherit; text-decoration: inherit;">Allows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">List&lt;Firewall<wbr>Allow<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_denies_csharp">
 <a href="#state_denies_csharp" style="color: inherit; text-decoration: inherit;">Denies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">List&lt;Firewall<wbr>Deny<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destinationranges_csharp">
 <a href="#state_destinationranges_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_direction_csharp">
 <a href="#state_direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_enablelogging_csharp">
 <a href="#state_enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logconfig_csharp">
+<a href="#state_logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1591,25 +1709,23 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -1618,37 +1734,34 @@ priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceranges_csharp">
 <a href="#state_sourceranges_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -1659,14 +1772,13 @@ source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceserviceaccounts_csharp">
 <a href="#state_sourceserviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -1680,14 +1792,13 @@ sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourcetags_csharp">
 <a href="#state_sourcetags_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -1699,14 +1810,13 @@ source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targetserviceaccounts_csharp">
 <a href="#state_targetserviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -1715,24 +1825,21 @@ sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targettags_csharp">
 <a href="#state_targettags_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1741,111 +1848,117 @@ instances on the specified network.
             title="Optional">
         <span id="state_allows_go">
 <a href="#state_allows_go" style="color: inherit; text-decoration: inherit;">Allows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">[]Firewall<wbr>Allow</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_denies_go">
 <a href="#state_denies_go" style="color: inherit; text-decoration: inherit;">Denies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">[]Firewall<wbr>Deny</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destinationranges_go">
 <a href="#state_destinationranges_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_direction_go">
 <a href="#state_direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_enablelogging_go">
 <a href="#state_enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logconfig_go">
+<a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1855,25 +1968,23 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -1882,37 +1993,34 @@ priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceranges_go">
 <a href="#state_sourceranges_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -1923,14 +2031,13 @@ source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceserviceaccounts_go">
 <a href="#state_sourceserviceaccounts_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -1944,14 +2051,13 @@ sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourcetags_go">
 <a href="#state_sourcetags_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -1963,14 +2069,13 @@ source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targetserviceaccounts_go">
 <a href="#state_targetserviceaccounts_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -1979,24 +2084,21 @@ sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targettags_go">
 <a href="#state_targettags_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2005,111 +2107,117 @@ instances on the specified network.
             title="Optional">
         <span id="state_allows_nodejs">
 <a href="#state_allows_nodejs" style="color: inherit; text-decoration: inherit;">allows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallallow">Firewall<wbr>Allow[]</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_denies_nodejs">
 <a href="#state_denies_nodejs" style="color: inherit; text-decoration: inherit;">denies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewalldeny">Firewall<wbr>Deny[]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destinationranges_nodejs">
 <a href="#state_destinationranges_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_direction_nodejs">
 <a href="#state_direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_enablelogging_nodejs">
 <a href="#state_enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logconfig_nodejs">
+<a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -2119,25 +2227,23 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -2146,37 +2252,34 @@ priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceranges_nodejs">
 <a href="#state_sourceranges_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -2187,14 +2290,13 @@ source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceserviceaccounts_nodejs">
 <a href="#state_sourceserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -2208,14 +2310,13 @@ sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourcetags_nodejs">
 <a href="#state_sourcetags_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -2227,14 +2328,13 @@ source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targetserviceaccounts_nodejs">
 <a href="#state_targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -2243,24 +2343,21 @@ sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targettags_nodejs">
 <a href="#state_targettags_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2269,111 +2366,117 @@ instances on the specified network.
             title="Optional">
         <span id="state_allows_python">
 <a href="#state_allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallallow">List[Firewall<wbr>Allow]</a></span>
+        <span class="property-type"><a href="#firewallallow">Sequence[Firewall<wbr>Allow<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of ALLOW rules specified by this firewall. Each rule
 specifies a protocol and port-range tuple that describes a permitted
-connection.  Structure is documented below.
+connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_denies_python">
 <a href="#state_denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewalldeny">List[Firewall<wbr>Deny]</a></span>
+        <span class="property-type"><a href="#firewalldeny">Sequence[Firewall<wbr>Deny<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
-a protocol and port-range tuple that describes a denied connection.  Structure is documented below.
+a protocol and port-range tuple that describes a denied connection.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_ranges_python">
 <a href="#state_destination_ranges_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_direction_python">
 <a href="#state_direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
+Possible values are `INGRESS` and `EGRESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_enable_logging_python">
 <a href="#state_enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This field denotes whether to enable logging for a particular
-firewall rule. If logging is enabled, logs will be exported to
-Stackdriver.
+    <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
+If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_log_config_python">
+<a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewalllogconfig">Firewall<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
+If defined, logging is enabled, and logs will be exported to Cloud Logging.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -2383,25 +2486,23 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority for this rule. This is an integer between 0 and 65535, both
 inclusive. When not specified, the value assumed is 1000. Relative
@@ -2410,37 +2511,34 @@ priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_ranges_python">
 <a href="#state_source_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If source ranges are specified, the firewall will apply only to
 traffic that has source IP address in these ranges. These ranges must
@@ -2451,14 +2549,13 @@ source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_service_accounts_python">
 <a href="#state_source_service_accounts_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
@@ -2472,14 +2569,13 @@ sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_tags_python">
 <a href="#state_source_tags_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If source tags are specified, the firewall will apply only to traffic
 with source IP that belongs to a tag listed in source tags. Source
@@ -2491,14 +2587,13 @@ source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_target_service_accounts_python">
 <a href="#state_target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service accounts indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
@@ -2507,27 +2602,21 @@ sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_target_tags_python">
 <a href="#state_target_tags_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags indicating sets of instances located in the
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2537,20 +2626,8 @@ instances on the specified network.
 ## Supporting Types
 
 
+
 <h4 id="firewallallow">Firewall<wbr>Allow</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FirewallAllow">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FirewallAllow">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#FirewallAllowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#FirewallAllowOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.FirewallAllowArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.FirewallAllow.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2559,23 +2636,22 @@ instances on the specified network.
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
-icmp, esp, ah, sctp, ipip), or the IP protocol number.
+icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2584,10 +2660,8 @@ applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2596,23 +2670,22 @@ Example inputs include: ["22"], ["80","443"], and
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
-icmp, esp, ah, sctp, ipip), or the IP protocol number.
+icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2621,10 +2694,8 @@ applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2633,23 +2704,22 @@ Example inputs include: ["22"], ["80","443"], and
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
-icmp, esp, ah, sctp, ipip), or the IP protocol number.
+icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2658,10 +2728,8 @@ applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2670,23 +2738,22 @@ Example inputs include: ["22"], ["80","443"], and
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
-icmp, esp, ah, sctp, ipip), or the IP protocol number.
+icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2695,28 +2762,10 @@ applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="firewalldeny">Firewall<wbr>Deny</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FirewallDeny">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FirewallDeny">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#FirewallDenyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#FirewallDenyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.FirewallDenyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.FirewallDeny.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2725,23 +2774,22 @@ Example inputs include: ["22"], ["80","443"], and
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
-icmp, esp, ah, sctp, ipip), or the IP protocol number.
+icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2750,10 +2798,8 @@ applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2762,23 +2808,22 @@ Example inputs include: ["22"], ["80","443"], and
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
-icmp, esp, ah, sctp, ipip), or the IP protocol number.
+icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2787,10 +2832,8 @@ applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2799,23 +2842,22 @@ Example inputs include: ["22"], ["80","443"], and
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
-icmp, esp, ah, sctp, ipip), or the IP protocol number.
+icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2824,10 +2866,8 @@ applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2836,23 +2876,22 @@ Example inputs include: ["22"], ["80","443"], and
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. The protocol type is
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
-icmp, esp, ah, sctp, ipip), or the IP protocol number.
+icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An optional list of ports to which this rule applies. This field
 is only applicable for UDP or TCP protocol. Each entry must be
@@ -2861,14 +2900,94 @@ applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="firewalllogconfig">Firewall<wbr>Log<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metadata_csharp">
+<a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
+Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metadata_go">
+<a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
+Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metadata_nodejs">
+<a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
+Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="metadata_python">
+<a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
+Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+## Import
 
 
+Firewall can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:compute/firewall:Firewall default projects/{{project}}/global/firewalls/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:compute/firewall:Firewall default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/firewall:Firewall default {{name}}
+```
 
 
 
@@ -2880,6 +2999,6 @@ Example inputs include: ["22"], ["80","443"], and
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

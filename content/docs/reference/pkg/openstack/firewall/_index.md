@@ -28,26 +28,8 @@ Explore the resources and functions of the firewall module in the Open Stack pac
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Firewall.html" title="Pulumi.OpenStack.Firewall">Pulumi.OpenStack.Firewall</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/firewall?tab=doc#" title="openstack/firewall">openstack/firewall</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/firewall/#" title="@pulumi/openstack/firewall">@pulumi/openstack/firewall</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/firewall" title="pulumi_openstack/firewall">pulumi_openstack/firewall</a></dd>
-
+	<dd>2.14.0</dd>
 </dl>
 

@@ -5,7 +5,7 @@ type: page
 layout: about
 menu:
     header:
-        weight: 6
+        weight: 7
         identifier: about
 form:
     hubspot_form_id: 8381e562-5fdf-4736-bb10-86096705e4ee

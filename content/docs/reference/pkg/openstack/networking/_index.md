@@ -48,6 +48,7 @@ Explore the resources and functions of the networking module in the Open Stack p
     <li><a href="getrouter" title="GetRouter"><span class="symbol function"></span>GetRouter</a></li>
     <li><a href="getsecgroup" title="GetSecGroup"><span class="symbol function"></span>GetSecGroup</a></li>
     <li><a href="getsubnet" title="GetSubnet"><span class="symbol function"></span>GetSubnet</a></li>
+    <li><a href="getsubnetidsv2" title="GetSubnetIdsV2"><span class="symbol function"></span>GetSubnetIdsV2</a></li>
     <li><a href="getsubnetpool" title="GetSubnetPool"><span class="symbol function"></span>GetSubnetPool</a></li>
     <li><a href="gettrunk" title="GetTrunk"><span class="symbol function"></span>GetTrunk</a></li>
 </ul>
@@ -59,26 +60,8 @@ Explore the resources and functions of the networking module in the Open Stack p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.html" title="Pulumi.OpenStack.Networking">Pulumi.OpenStack.Networking</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#" title="openstack/networking">openstack/networking</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#" title="@pulumi/openstack/networking">@pulumi/openstack/networking</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_openstack/networking" title="pulumi_openstack/networking">pulumi_openstack/networking</a></dd>
-
+	<dd>2.14.0</dd>
 </dl>
 

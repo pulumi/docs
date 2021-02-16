@@ -31,10 +31,8 @@ In this tutorial, we'll create a simplified version of the example above, that j
             // Create a property for the bucket name that was created
             this.bucketName = siteBucket.bucket,
 
-            // For dependency tracking, register output properties for this component
-            this.registerOutputs({
-                bucketName: this.bucketName,
-            });
+            // Register that we are done constructing the component
+            this.registerOutputs();
         }
     }
 

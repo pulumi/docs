@@ -11,11 +11,9 @@ meta_desc: "Explore the GetIAMPolicy function of the organizations module, inclu
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Generates an IAM policy document that may be referenced by and applied to
-other Google Cloud Platform resources, such as the `gcp.organizations.Project` resource.
+other Google Cloud Platform IAM resources, such as the `gcp.projects.IAMPolicy` resource.
 
-**Note:** Several restrictions apply when setting IAM policies through this API.
-See the [setIamPolicy docs](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy)
-for a list of these restrictions.
+**Note:** Please review the documentation of the resource that you will be using the datasource with. Some resources such as `gcp.projects.IAMPolicy` and others have limitations in their API methods which are noted on their respective page.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -53,30 +51,30 @@ const admin = pulumi.output(gcp.organizations.getIAMPolicy({
 import pulumi
 import pulumi_gcp as gcp
 
-admin = gcp.organizations.get_iam_policy(audit_configs=[{
-        "audit_log_configs": [
-            {
-                "exemptedMembers": ["user:you@domain.com"],
-                "logType": "DATA_READ",
-            },
-            {
-                "logType": "DATA_WRITE",
-            },
-            {
-                "logType": "ADMIN_READ",
-            },
+admin = gcp.organizations.get_iam_policy(audit_configs=[gcp.organizations.GetIAMPolicyAuditConfigArgs(
+        audit_log_configs=[
+            gcp.organizations.GetIAMPolicyAuditConfigAuditLogConfigArgs(
+                exempted_members=["user:you@domain.com"],
+                log_type="DATA_READ",
+            ),
+            gcp.organizations.GetIAMPolicyAuditConfigAuditLogConfigArgs(
+                log_type="DATA_WRITE",
+            ),
+            gcp.organizations.GetIAMPolicyAuditConfigAuditLogConfigArgs(
+                log_type="ADMIN_READ",
+            ),
         ],
-        "service": "cloudkms.googleapis.com",
-    }],
+        service="cloudkms.googleapis.com",
+    )],
     bindings=[
-        {
-            "members": ["serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com"],
-            "role": "roles/compute.instanceAdmin",
-        },
-        {
-            "members": ["user:alice@gmail.com"],
-            "role": "roles/storage.objectViewer",
-        },
+        gcp.organizations.GetIAMPolicyBindingArgs(
+            members=["serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com"],
+            role="roles/compute.instanceAdmin",
+        ),
+        gcp.organizations.GetIAMPolicyBindingArgs(
+            members=["user:alice@gmail.com"],
+            role="roles/storage.objectViewer",
+        ),
     ])
 ```
 ```csharp
@@ -143,7 +141,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -198,23 +196,24 @@ from another resource is the only way to apply an IAM policy to a resource.
 
 
 
+
 ## Using GetIAMPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIAMPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#GetIAMPolicyArgs">GetIAMPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#GetIAMPolicyResult">GetIAMPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIAMPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIAMPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIAMPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_iam_policy(</span>audit_configs=None<span class="p">, </span>bindings=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_iam_policy(</span><span class="nx">audit_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetIAMPolicyAuditConfigArgs]]</span> = None<span class="p">, </span><span class="nx">bindings</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetIAMPolicyBindingArgs]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIAMPolicyResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIAMPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#LookupIAMPolicyArgs">LookupIAMPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#LookupIAMPolicyResult">LookupIAMPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIAMPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIAMPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIAMPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIAMPolicy` in the Go SDK.
 
@@ -223,14 +222,13 @@ from another resource is the only way to apply an IAM policy to a resource.
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIAMPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.GetIAMPolicyResult.html">GetIAMPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.GetIAMPolicyArgs.html">GetIAMPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIAMPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIAMPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -240,18 +238,17 @@ The following arguments are supported:
             title="Optional">
         <span id="auditconfigs_csharp">
 <a href="#auditconfigs_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project.
+    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bindings_csharp">
 <a href="#bindings_csharp" style="color: inherit; text-decoration: inherit;">Bindings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">List&lt;Get<wbr>IAMPolicy<wbr>Binding<wbr>Args&gt;</a></span>
     </dt>
@@ -259,10 +256,8 @@ The following arguments are supported:
 defining a binding to be included in the policy document. Multiple
 `binding` arguments are supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -271,18 +266,17 @@ defining a binding to be included in the policy document. Multiple
             title="Optional">
         <span id="auditconfigs_go">
 <a href="#auditconfigs_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">[]Get<wbr>IAMPolicy<wbr>Audit<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project.
+    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bindings_go">
 <a href="#bindings_go" style="color: inherit; text-decoration: inherit;">Bindings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">[]Get<wbr>IAMPolicy<wbr>Binding</a></span>
     </dt>
@@ -290,10 +284,8 @@ defining a binding to be included in the policy document. Multiple
 defining a binding to be included in the policy document. Multiple
 `binding` arguments are supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -302,18 +294,17 @@ defining a binding to be included in the policy document. Multiple
             title="Optional">
         <span id="auditconfigs_nodejs">
 <a href="#auditconfigs_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project.
+    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bindings_nodejs">
 <a href="#bindings_nodejs" style="color: inherit; text-decoration: inherit;">bindings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">Get<wbr>IAMPolicy<wbr>Binding[]</a></span>
     </dt>
@@ -321,10 +312,8 @@ defining a binding to be included in the policy document. Multiple
 defining a binding to be included in the policy document. Multiple
 `binding` arguments are supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -333,32 +322,26 @@ defining a binding to be included in the policy document. Multiple
             title="Optional">
         <span id="audit_configs_python">
 <a href="#audit_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfig">Sequence[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project.
+    <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bindings_python">
 <a href="#bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybinding">List[Get<wbr>IAMPolicy<wbr>Binding]</a></span>
+        <span class="property-type"><a href="#getiampolicybinding">Sequence[Get<wbr>IAMPolicy<wbr>Binding<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 defining a binding to be included in the policy document. Multiple
 `binding` arguments are supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -369,7 +352,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -377,48 +359,43 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="policydata_csharp">
 <a href="#policydata_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The above bindings serialized in a format suitable for
 referencing from a resource that supports IAM.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="auditconfigs_csharp">
 <a href="#auditconfigs_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bindings_csharp">
 <a href="#bindings_csharp" style="color: inherit; text-decoration: inherit;">Bindings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">List&lt;Get<wbr>IAMPolicy<wbr>Binding&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -427,48 +404,43 @@ referencing from a resource that supports IAM.
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="policydata_go">
 <a href="#policydata_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The above bindings serialized in a format suitable for
 referencing from a resource that supports IAM.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="auditconfigs_go">
 <a href="#auditconfigs_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">[]Get<wbr>IAMPolicy<wbr>Audit<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bindings_go">
 <a href="#bindings_go" style="color: inherit; text-decoration: inherit;">Bindings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">[]Get<wbr>IAMPolicy<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -477,48 +449,43 @@ referencing from a resource that supports IAM.
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="policydata_nodejs">
 <a href="#policydata_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The above bindings serialized in a format suitable for
 referencing from a resource that supports IAM.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="auditconfigs_nodejs">
 <a href="#auditconfigs_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bindings_nodejs">
 <a href="#bindings_nodejs" style="color: inherit; text-decoration: inherit;">bindings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybinding">Get<wbr>IAMPolicy<wbr>Binding[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -527,51 +494,43 @@ referencing from a resource that supports IAM.
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="policy_data_python">
 <a href="#policy_data_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The above bindings serialized in a format suitable for
 referencing from a resource that supports IAM.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="audit_configs_python">
 <a href="#audit_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfig">Sequence[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bindings_python">
 <a href="#bindings_python" style="color: inherit; text-decoration: inherit;">bindings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybinding">List[Get<wbr>IAMPolicy<wbr>Binding]</a></span>
+        <span class="property-type"><a href="#getiampolicybinding">Sequence[Get<wbr>IAMPolicy<wbr>Binding]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -580,17 +539,6 @@ referencing from a resource that supports IAM.
 
 
 <h4 id="getiampolicyauditconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetIAMPolicyAuditConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetIAMPolicyAuditConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyAuditConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyAuditConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.Inputs.GetIAMPolicyAuditConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.Outputs.GetIAMPolicyAuditConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -601,27 +549,24 @@ referencing from a resource that supports IAM.
             title="Required">
         <span id="auditlogconfigs_csharp">
 <a href="#auditlogconfigs_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested block that defines the operations you'd like to log.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -630,27 +575,24 @@ referencing from a resource that supports IAM.
             title="Required">
         <span id="auditlogconfigs_go">
 <a href="#auditlogconfigs_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">[]Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A nested block that defines the operations you'd like to log.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -659,27 +601,24 @@ referencing from a resource that supports IAM.
             title="Required">
         <span id="auditlogconfigs_nodejs">
 <a href="#auditlogconfigs_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that defines the operations you'd like to log.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -688,43 +627,26 @@ referencing from a resource that supports IAM.
             title="Required">
         <span id="audit_log_configs_python">
 <a href="#audit_log_configs_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">List[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfigauditlogconfig">Sequence[Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that defines the operations you'd like to log.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getiampolicyauditconfigauditlogconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetIAMPolicyAuditConfigAuditLogConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetIAMPolicyAuditConfigAuditLogConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyAuditConfigAuditLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyAuditConfigAuditLogConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.Inputs.GetIAMPolicyAuditConfigAuditLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.Outputs.GetIAMPolicyAuditConfigAuditLogConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -735,27 +657,24 @@ referencing from a resource that supports IAM.
             title="Required">
         <span id="logtype_csharp">
 <a href="#logtype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the logging level. `DATA_READ`, `DATA_WRITE` and `ADMIN_READ` capture different types of events. See [the audit configuration documentation](https://cloud.google.com/resource-manager/reference/rest/Shared.Types/AuditConfig) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exemptedmembers_csharp">
 <a href="#exemptedmembers_csharp" style="color: inherit; text-decoration: inherit;">Exempted<wbr>Members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -764,27 +683,24 @@ referencing from a resource that supports IAM.
             title="Required">
         <span id="logtype_go">
 <a href="#logtype_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the logging level. `DATA_READ`, `DATA_WRITE` and `ADMIN_READ` capture different types of events. See [the audit configuration documentation](https://cloud.google.com/resource-manager/reference/rest/Shared.Types/AuditConfig) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exemptedmembers_go">
 <a href="#exemptedmembers_go" style="color: inherit; text-decoration: inherit;">Exempted<wbr>Members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -793,72 +709,52 @@ referencing from a resource that supports IAM.
             title="Required">
         <span id="logtype_nodejs">
 <a href="#logtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the logging level. `DATA_READ`, `DATA_WRITE` and `ADMIN_READ` capture different types of events. See [the audit configuration documentation](https://cloud.google.com/resource-manager/reference/rest/Shared.Types/AuditConfig) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exemptedmembers_nodejs">
 <a href="#exemptedmembers_nodejs" style="color: inherit; text-decoration: inherit;">exempted<wbr>Members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="logtype_python">
-<a href="#logtype_python" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
-</span> 
+        <span id="log_type_python">
+<a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the logging level. `DATA_READ`, `DATA_WRITE` and `ADMIN_READ` capture different types of events. See [the audit configuration documentation](https://cloud.google.com/resource-manager/reference/rest/Shared.Types/AuditConfig) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="exemptedmembers_python">
-<a href="#exemptedmembers_python" style="color: inherit; text-decoration: inherit;">exempted<wbr>Members</a>
-</span> 
+        <span id="exempted_members_python">
+<a href="#exempted_members_python" style="color: inherit; text-decoration: inherit;">exempted_<wbr>members</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getiampolicybinding">Get<wbr>IAMPolicy<wbr>Binding</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetIAMPolicyBinding">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetIAMPolicyBinding">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyBinding">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.Outputs.GetIAMPolicyBinding.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -869,46 +765,43 @@ referencing from a resource that supports IAM.
             title="Required">
         <span id="members_csharp">
 <a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
-* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. It **can't** be used with the `gcp.organizations.Project` resource.
-* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. It **can't** be used with the `gcp.organizations.Project` resource.
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don't** support this identity.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don't** support this identity.
 * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role/permission that will be granted to the members.
 See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
 Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -917,46 +810,43 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
             title="Required">
         <span id="members_go">
 <a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
-* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. It **can't** be used with the `gcp.organizations.Project` resource.
-* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. It **can't** be used with the `gcp.organizations.Project` resource.
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don't** support this identity.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don't** support this identity.
 * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role/permission that will be granted to the members.
 See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
 Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -965,46 +855,43 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
             title="Required">
         <span id="members_nodejs">
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
-* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. It **can't** be used with the `gcp.organizations.Project` resource.
-* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. It **can't** be used with the `gcp.organizations.Project` resource.
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don't** support this identity.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don't** support this identity.
 * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role/permission that will be granted to the members.
 See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
 Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1013,62 +900,45 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
             title="Required">
         <span id="members_python">
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
-* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. It **can't** be used with the `gcp.organizations.Project` resource.
-* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. It **can't** be used with the `gcp.organizations.Project` resource.
+* **allUsers**: A special identifier that represents anyone who is on the internet; with or without a Google account. Some resources **don't** support this identity.
+* **allAuthenticatedUsers**: A special identifier that represents anyone who is authenticated with a Google account or a service account. Some resources **don't** support this identity.
 * **user:{emailid}**: An email address that represents a specific Google account. For example, alice@gmail.com.
 * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
 * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
 * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role/permission that will be granted to the members.
 See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
 Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybindingcondition">Dict[Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetIAMPolicyBindingCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetIAMPolicyBindingCondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyBindingCondition">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.Inputs.GetIAMPolicyBindingConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.Outputs.GetIAMPolicyBindingCondition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -1079,35 +949,34 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
             title="Required">
         <span id="expression_csharp">
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1116,35 +985,34 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
             title="Required">
         <span id="expression_go">
 <a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1153,35 +1021,34 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
             title="Required">
         <span id="expression_nodejs">
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1190,38 +1057,34 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
             title="Required">
         <span id="expression_python">
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1234,6 +1097,6 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

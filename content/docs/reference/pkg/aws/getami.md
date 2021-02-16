@@ -13,6 +13,7 @@ meta_desc: "Explore the GetAmi function of the AWS package, including examples, 
 Use this data source to get the ID of a registered AMI for use in other
 resources.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -134,18 +135,18 @@ import pulumi_aws as aws
 
 example = aws.get_ami(executable_users=["self"],
     filters=[
-        {
-            "name": "name",
-            "values": ["myami-*"],
-        },
-        {
-            "name": "root-device-type",
-            "values": ["ebs"],
-        },
-        {
-            "name": "virtualization-type",
-            "values": ["hvm"],
-        },
+        aws.GetAmiFilterArgs(
+            name="name",
+            values=["myami-*"],
+        ),
+        aws.GetAmiFilterArgs(
+            name="root-device-type",
+            values=["ebs"],
+        ),
+        aws.GetAmiFilterArgs(
+            name="virtualization-type",
+            values=["hvm"],
+        ),
     ],
     most_recent=True,
     name_regex="^myami-\\d{3}",
@@ -193,31 +194,30 @@ const example = pulumi.output(aws.getAmi({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAmi<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/#GetAmiArgs">GetAmiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/#GetAmiResult">GetAmiResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAmi<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAmiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAmiResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_ami(</span>executable_users=None<span class="p">, </span>filters=None<span class="p">, </span>most_recent=None<span class="p">, </span>name_regex=None<span class="p">, </span>owners=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ami(</span><span class="nx">executable_users</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetAmiFilterArgs]]</span> = None<span class="p">, </span><span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owners</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAmiResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAmi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAmiArgs">GetAmiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAmiResult">GetAmiResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAmi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAmiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAmiResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAmi </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GetAmiResult.html">GetAmiResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GetAmiArgs.html">GetAmiArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAmiResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAmiArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -227,30 +227,28 @@ The following arguments are supported:
             title="Required">
         <span id="owners_csharp">
 <a href="#owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="executableusers_csharp">
 <a href="#executableusers_csharp" style="color: inherit; text-decoration: inherit;">Executable<wbr>Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Limit search to users with *explicit* launch permission on
 the image. Valid items are the numeric account ID or `self`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamifilter">List&lt;Get<wbr>Ami<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
@@ -258,26 +256,24 @@ the image. Valid items are the numeric account ID or `self`.
 several valid keys, for a full reference, check out
 [describe-images in the AWS CLI reference][1].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mostrecent_csharp">
 <a href="#mostrecent_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If more than one result is returned, use the most
 recent AMI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to apply to the AMI list returned
 by AWS. This allows more advanced filtering not supported from the AWS API. This
@@ -285,12 +281,11 @@ filtering is done locally on what AWS returns, and could have a performance
 impact if the result is large. It is recommended to combine this with other
 options to narrow down the list AWS returns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -298,10 +293,8 @@ options to narrow down the list AWS returns.
 * `tags.#.key` - The key name of the tag.
 * `tags.#.value` - The value of the tag.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -310,30 +303,28 @@ options to narrow down the list AWS returns.
             title="Required">
         <span id="owners_go">
 <a href="#owners_go" style="color: inherit; text-decoration: inherit;">Owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="executableusers_go">
 <a href="#executableusers_go" style="color: inherit; text-decoration: inherit;">Executable<wbr>Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Limit search to users with *explicit* launch permission on
 the image. Valid items are the numeric account ID or `self`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamifilter">[]Get<wbr>Ami<wbr>Filter</a></span>
     </dt>
@@ -341,26 +332,24 @@ the image. Valid items are the numeric account ID or `self`.
 several valid keys, for a full reference, check out
 [describe-images in the AWS CLI reference][1].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mostrecent_go">
 <a href="#mostrecent_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If more than one result is returned, use the most
 recent AMI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to apply to the AMI list returned
 by AWS. This allows more advanced filtering not supported from the AWS API. This
@@ -368,12 +357,11 @@ filtering is done locally on what AWS returns, and could have a performance
 impact if the result is large. It is recommended to combine this with other
 options to narrow down the list AWS returns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -381,10 +369,8 @@ options to narrow down the list AWS returns.
 * `tags.#.key` - The key name of the tag.
 * `tags.#.value` - The value of the tag.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -393,30 +379,28 @@ options to narrow down the list AWS returns.
             title="Required">
         <span id="owners_nodejs">
 <a href="#owners_nodejs" style="color: inherit; text-decoration: inherit;">owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="executableusers_nodejs">
 <a href="#executableusers_nodejs" style="color: inherit; text-decoration: inherit;">executable<wbr>Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Limit search to users with *explicit* launch permission on
 the image. Valid items are the numeric account ID or `self`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamifilter">Get<wbr>Ami<wbr>Filter[]</a></span>
     </dt>
@@ -424,26 +408,24 @@ the image. Valid items are the numeric account ID or `self`.
 several valid keys, for a full reference, check out
 [describe-images in the AWS CLI reference][1].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mostrecent_nodejs">
 <a href="#mostrecent_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If more than one result is returned, use the most
 recent AMI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to apply to the AMI list returned
 by AWS. This allows more advanced filtering not supported from the AWS API. This
@@ -451,12 +433,11 @@ filtering is done locally on what AWS returns, and could have a performance
 impact if the result is large. It is recommended to combine this with other
 options to narrow down the list AWS returns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -464,10 +445,8 @@ options to narrow down the list AWS returns.
 * `tags.#.key` - The key name of the tag.
 * `tags.#.value` - The value of the tag.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -476,57 +455,53 @@ options to narrow down the list AWS returns.
             title="Required">
         <span id="owners_python">
 <a href="#owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="executable_users_python">
 <a href="#executable_users_python" style="color: inherit; text-decoration: inherit;">executable_<wbr>users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Limit search to users with *explicit* launch permission on
 the image. Valid items are the numeric account ID or `self`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getamifilter">List[Get<wbr>Ami<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getamifilter">Sequence[Get<wbr>Ami<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more name/value pairs to filter off of. There are
 several valid keys, for a full reference, check out
 [describe-images in the AWS CLI reference][1].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="most_recent_python">
 <a href="#most_recent_python" style="color: inherit; text-decoration: inherit;">most_<wbr>recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If more than one result is returned, use the most
 recent AMI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regex string to apply to the AMI list returned
 by AWS. This allows more advanced filtering not supported from the AWS API. This
@@ -534,26 +509,20 @@ filtering is done locally on what AWS returns, and could have a performance
 impact if the result is large. It is recommended to combine this with other
 options to narrow down the list AWS returns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
 * `tags.#.value` - The value of the tag.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -564,7 +533,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -572,29 +540,27 @@ The following output properties are available:
             title="">
         <span id="architecture_csharp">
 <a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS architecture of the AMI (ie: `i386` or `x86_64`).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="blockdevicemappings_csharp">
 <a href="#blockdevicemappings_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiblockdevicemapping">List&lt;Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping&gt;</a></span>
     </dt>
@@ -608,163 +574,150 @@ is encrypted.
 not a provisioned IOPS image, otherwise the supported IOPS count.
 * `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
 * `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
+* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
 * `block_device_mappings.#.ebs.volume_type` - The volume type.
 * `block_device_mappings.#.no_device` - Suppresses the specified device
 included in the block device mapping of the AMI.
 * `block_device_mappings.#.virtual_name` - The virtual device name (for
 instance stores).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the image was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the AMI that was provided during image
 creation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hypervisor_csharp">
 <a href="#hypervisor_csharp" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI. Should be the same as the resource `id`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imagelocation_csharp">
 <a href="#imagelocation_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the AMI.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imageowneralias_csharp">
 <a href="#imageowneralias_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Owner<wbr>Alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, `amazon`, `self`) or
 the AWS account ID of the AMI owner.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imagetype_csharp">
 <a href="#imagetype_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of image.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kernelid_csharp">
 <a href="#kernelid_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kernel associated with the image, if any. Only applicable
 for machine images.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AMI that was provided during image creation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ownerid_csharp">
 <a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owners_csharp">
 <a href="#owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="platform_csharp">
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value is Windows for `Windows` AMIs; otherwise blank.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="productcodes_csharp">
 <a href="#productcodes_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiproductcode">List&lt;Get<wbr>Ami<wbr>Product<wbr>Code&gt;</a></span>
     </dt>
@@ -772,92 +725,84 @@ for machine images.
 * `product_codes.#.product_code_id` - The product code.
 * `product_codes.#.product_code_type` - The type of product code.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="public_csharp">
 <a href="#public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the image has public launch permissions.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ramdiskid_csharp">
 <a href="#ramdiskid_csharp" style="color: inherit; text-decoration: inherit;">Ramdisk<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAM disk associated with the image, if any. Only applicable
 for machine images.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootdevicename_csharp">
 <a href="#rootdevicename_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name of the root device.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootdevicetype_csharp">
 <a href="#rootdevicetype_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of root device (ie: `ebs` or `instance-store`).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootsnapshotid_csharp">
 <a href="#rootsnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Snapshot<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot id associated with the root device, if any
 (only applies to `ebs` root devices).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sriovnetsupport_csharp">
 <a href="#sriovnetsupport_csharp" style="color: inherit; text-decoration: inherit;">Sriov<wbr>Net<wbr>Support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the AMI. If the state is `available`, the image
 is successfully registered and can be used to launch an instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="statereason_csharp">
 <a href="#statereason_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -865,12 +810,11 @@ is successfully registered and can be used to launch an instance.
 * `state_reason.code` - The reason code for the state change.
 * `state_reason.message` - The message for the state change.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -878,62 +822,55 @@ is successfully registered and can be used to launch an instance.
 * `tags.#.key` - The key name of the tag.
 * `tags.#.value` - The value of the tag.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="virtualizationtype_csharp">
 <a href="#virtualizationtype_csharp" style="color: inherit; text-decoration: inherit;">Virtualization<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of virtualization of the AMI (ie: `hvm` or
 `paravirtual`).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executableusers_csharp">
 <a href="#executableusers_csharp" style="color: inherit; text-decoration: inherit;">Executable<wbr>Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamifilter">List&lt;Get<wbr>Ami<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mostrecent_csharp">
 <a href="#mostrecent_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -942,29 +879,27 @@ is successfully registered and can be used to launch an instance.
             title="">
         <span id="architecture_go">
 <a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS architecture of the AMI (ie: `i386` or `x86_64`).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="blockdevicemappings_go">
 <a href="#blockdevicemappings_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiblockdevicemapping">[]Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping</a></span>
     </dt>
@@ -978,163 +913,150 @@ is encrypted.
 not a provisioned IOPS image, otherwise the supported IOPS count.
 * `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
 * `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
+* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
 * `block_device_mappings.#.ebs.volume_type` - The volume type.
 * `block_device_mappings.#.no_device` - Suppresses the specified device
 included in the block device mapping of the AMI.
 * `block_device_mappings.#.virtual_name` - The virtual device name (for
 instance stores).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the image was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the AMI that was provided during image
 creation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hypervisor_go">
 <a href="#hypervisor_go" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI. Should be the same as the resource `id`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imagelocation_go">
 <a href="#imagelocation_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the AMI.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imageowneralias_go">
 <a href="#imageowneralias_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Owner<wbr>Alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, `amazon`, `self`) or
 the AWS account ID of the AMI owner.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imagetype_go">
 <a href="#imagetype_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of image.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kernelid_go">
 <a href="#kernelid_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kernel associated with the image, if any. Only applicable
 for machine images.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AMI that was provided during image creation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ownerid_go">
 <a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owners_go">
 <a href="#owners_go" style="color: inherit; text-decoration: inherit;">Owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="platform_go">
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value is Windows for `Windows` AMIs; otherwise blank.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="productcodes_go">
 <a href="#productcodes_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiproductcode">[]Get<wbr>Ami<wbr>Product<wbr>Code</a></span>
     </dt>
@@ -1142,92 +1064,84 @@ for machine images.
 * `product_codes.#.product_code_id` - The product code.
 * `product_codes.#.product_code_type` - The type of product code.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="public_go">
 <a href="#public_go" style="color: inherit; text-decoration: inherit;">Public</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the image has public launch permissions.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ramdiskid_go">
 <a href="#ramdiskid_go" style="color: inherit; text-decoration: inherit;">Ramdisk<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAM disk associated with the image, if any. Only applicable
 for machine images.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootdevicename_go">
 <a href="#rootdevicename_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name of the root device.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootdevicetype_go">
 <a href="#rootdevicetype_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of root device (ie: `ebs` or `instance-store`).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootsnapshotid_go">
 <a href="#rootsnapshotid_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Snapshot<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot id associated with the root device, if any
 (only applies to `ebs` root devices).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sriovnetsupport_go">
 <a href="#sriovnetsupport_go" style="color: inherit; text-decoration: inherit;">Sriov<wbr>Net<wbr>Support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the AMI. If the state is `available`, the image
 is successfully registered and can be used to launch an instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="statereason_go">
 <a href="#statereason_go" style="color: inherit; text-decoration: inherit;">State<wbr>Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1235,12 +1149,11 @@ is successfully registered and can be used to launch an instance.
 * `state_reason.code` - The reason code for the state change.
 * `state_reason.message` - The message for the state change.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1248,62 +1161,55 @@ is successfully registered and can be used to launch an instance.
 * `tags.#.key` - The key name of the tag.
 * `tags.#.value` - The value of the tag.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="virtualizationtype_go">
 <a href="#virtualizationtype_go" style="color: inherit; text-decoration: inherit;">Virtualization<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of virtualization of the AMI (ie: `hvm` or
 `paravirtual`).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executableusers_go">
 <a href="#executableusers_go" style="color: inherit; text-decoration: inherit;">Executable<wbr>Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamifilter">[]Get<wbr>Ami<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mostrecent_go">
 <a href="#mostrecent_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1312,29 +1218,27 @@ is successfully registered and can be used to launch an instance.
             title="">
         <span id="architecture_nodejs">
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS architecture of the AMI (ie: `i386` or `x86_64`).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="blockdevicemappings_nodejs">
 <a href="#blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiblockdevicemapping">Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
     </dt>
@@ -1348,163 +1252,150 @@ is encrypted.
 not a provisioned IOPS image, otherwise the supported IOPS count.
 * `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
 * `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
+* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
 * `block_device_mappings.#.ebs.volume_type` - The volume type.
 * `block_device_mappings.#.no_device` - Suppresses the specified device
 included in the block device mapping of the AMI.
 * `block_device_mappings.#.virtual_name` - The virtual device name (for
 instance stores).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the image was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the AMI that was provided during image
 creation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hypervisor_nodejs">
 <a href="#hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI. Should be the same as the resource `id`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imagelocation_nodejs">
 <a href="#imagelocation_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the AMI.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imageowneralias_nodejs">
 <a href="#imageowneralias_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Owner<wbr>Alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, `amazon`, `self`) or
 the AWS account ID of the AMI owner.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="imagetype_nodejs">
 <a href="#imagetype_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of image.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kernelid_nodejs">
 <a href="#kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kernel associated with the image, if any. Only applicable
 for machine images.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AMI that was provided during image creation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ownerid_nodejs">
 <a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owners_nodejs">
 <a href="#owners_nodejs" style="color: inherit; text-decoration: inherit;">owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="platform_nodejs">
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value is Windows for `Windows` AMIs; otherwise blank.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="productcodes_nodejs">
 <a href="#productcodes_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiproductcode">Get<wbr>Ami<wbr>Product<wbr>Code[]</a></span>
     </dt>
@@ -1512,92 +1403,84 @@ for machine images.
 * `product_codes.#.product_code_id` - The product code.
 * `product_codes.#.product_code_type` - The type of product code.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="public_nodejs">
 <a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` if the image has public launch permissions.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ramdiskid_nodejs">
 <a href="#ramdiskid_nodejs" style="color: inherit; text-decoration: inherit;">ramdisk<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAM disk associated with the image, if any. Only applicable
 for machine images.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootdevicename_nodejs">
 <a href="#rootdevicename_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name of the root device.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootdevicetype_nodejs">
 <a href="#rootdevicetype_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Device<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of root device (ie: `ebs` or `instance-store`).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootsnapshotid_nodejs">
 <a href="#rootsnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Snapshot<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot id associated with the root device, if any
 (only applies to `ebs` root devices).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sriovnetsupport_nodejs">
 <a href="#sriovnetsupport_nodejs" style="color: inherit; text-decoration: inherit;">sriov<wbr>Net<wbr>Support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the AMI. If the state is `available`, the image
 is successfully registered and can be used to launch an instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="statereason_nodejs">
 <a href="#statereason_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1605,12 +1488,11 @@ is successfully registered and can be used to launch an instance.
 * `state_reason.code` - The reason code for the state change.
 * `state_reason.message` - The message for the state change.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1618,62 +1500,55 @@ is successfully registered and can be used to launch an instance.
 * `tags.#.key` - The key name of the tag.
 * `tags.#.value` - The value of the tag.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="virtualizationtype_nodejs">
 <a href="#virtualizationtype_nodejs" style="color: inherit; text-decoration: inherit;">virtualization<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of virtualization of the AMI (ie: `hvm` or
 `paravirtual`).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executableusers_nodejs">
 <a href="#executableusers_nodejs" style="color: inherit; text-decoration: inherit;">executable<wbr>Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamifilter">Get<wbr>Ami<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mostrecent_nodejs">
 <a href="#mostrecent_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1682,31 +1557,29 @@ is successfully registered and can be used to launch an instance.
             title="">
         <span id="architecture_python">
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OS architecture of the AMI (ie: `i386` or `x86_64`).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the AMI.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="block_device_mappings_python">
 <a href="#block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getamiblockdevicemapping">List[Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#getamiblockdevicemapping">Sequence[Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}The block device mappings of the AMI.
 * `block_device_mappings.#.device_name` - The physical name of the device.
@@ -1718,335 +1591,303 @@ is encrypted.
 not a provisioned IOPS image, otherwise the supported IOPS count.
 * `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
 * `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
+* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
 * `block_device_mappings.#.ebs.volume_type` - The volume type.
 * `block_device_mappings.#.no_device` - Suppresses the specified device
 included in the block device mapping of the AMI.
 * `block_device_mappings.#.virtual_name` - The virtual device name (for
 instance stores).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time the image was created.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the AMI that was provided during image
 creation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hypervisor_python">
 <a href="#hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hypervisor type of the image.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI. Should be the same as the resource `id`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="image_location_python">
 <a href="#image_location_python" style="color: inherit; text-decoration: inherit;">image_<wbr>location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the AMI.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="image_owner_alias_python">
 <a href="#image_owner_alias_python" style="color: inherit; text-decoration: inherit;">image_<wbr>owner_<wbr>alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account alias (for example, `amazon`, `self`) or
 the AWS account ID of the AMI owner.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="image_type_python">
 <a href="#image_type_python" style="color: inherit; text-decoration: inherit;">image_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of image.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kernel_id_python">
 <a href="#kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kernel associated with the image, if any. Only applicable
 for machine images.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the AMI that was provided during image creation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owner_id_python">
 <a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the image owner.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="owners_python">
 <a href="#owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="platform_python">
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value is Windows for `Windows` AMIs; otherwise blank.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="product_codes_python">
 <a href="#product_codes_python" style="color: inherit; text-decoration: inherit;">product_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getamiproductcode">List[Get<wbr>Ami<wbr>Product<wbr>Code]</a></span>
+        <span class="property-type"><a href="#getamiproductcode">Sequence[Get<wbr>Ami<wbr>Product<wbr>Code]</a></span>
     </dt>
     <dd>{{% md %}}Any product codes associated with the AMI.
 * `product_codes.#.product_code_id` - The product code.
 * `product_codes.#.product_code_type` - The type of product code.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="public_python">
 <a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` if the image has public launch permissions.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ramdisk_id_python">
 <a href="#ramdisk_id_python" style="color: inherit; text-decoration: inherit;">ramdisk_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RAM disk associated with the image, if any. Only applicable
 for machine images.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="root_device_name_python">
 <a href="#root_device_name_python" style="color: inherit; text-decoration: inherit;">root_<wbr>device_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device name of the root device.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="root_device_type_python">
 <a href="#root_device_type_python" style="color: inherit; text-decoration: inherit;">root_<wbr>device_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of root device (ie: `ebs` or `instance-store`).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="root_snapshot_id_python">
 <a href="#root_snapshot_id_python" style="color: inherit; text-decoration: inherit;">root_<wbr>snapshot_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The snapshot id associated with the root device, if any
 (only applies to `ebs` root devices).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sriov_net_support_python">
 <a href="#sriov_net_support_python" style="color: inherit; text-decoration: inherit;">sriov_<wbr>net_<wbr>support</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the AMI. If the state is `available`, the image
 is successfully registered and can be used to launch an instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_reason_python">
 <a href="#state_reason_python" style="color: inherit; text-decoration: inherit;">state_<wbr>reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Describes a state change. Fields are `UNSET` if not available.
 * `state_reason.code` - The reason code for the state change.
 * `state_reason.message` - The message for the state change.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
 * `tags.#.value` - The value of the tag.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="virtualization_type_python">
 <a href="#virtualization_type_python" style="color: inherit; text-decoration: inherit;">virtualization_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of virtualization of the AMI (ie: `hvm` or
 `paravirtual`).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="executable_users_python">
 <a href="#executable_users_python" style="color: inherit; text-decoration: inherit;">executable_<wbr>users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getamifilter">List[Get<wbr>Ami<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getamifilter">Sequence[Get<wbr>Ami<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="most_recent_python">
 <a href="#most_recent_python" style="color: inherit; text-decoration: inherit;">most_<wbr>recent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2055,17 +1896,6 @@ is successfully registered and can be used to launch an instance.
 
 
 <h4 id="getamiblockdevicemapping">Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiBlockDeviceMapping">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAmiBlockDeviceMapping">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Outputs.GetAmiBlockDeviceMapping.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -2076,45 +1906,40 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ebs_csharp">
 <a href="#ebs_csharp" style="color: inherit; text-decoration: inherit;">Ebs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nodevice_csharp">
 <a href="#nodevice_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Device</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtualname_csharp">
 <a href="#virtualname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2123,45 +1948,40 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ebs_go">
 <a href="#ebs_go" style="color: inherit; text-decoration: inherit;">Ebs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nodevice_go">
 <a href="#nodevice_go" style="color: inherit; text-decoration: inherit;">No<wbr>Device</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtualname_go">
 <a href="#virtualname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2170,45 +1990,40 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ebs_nodejs">
 <a href="#ebs_nodejs" style="color: inherit; text-decoration: inherit;">ebs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nodevice_nodejs">
 <a href="#nodevice_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtualname_nodejs">
 <a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2217,61 +2032,42 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ebs_python">
 <a href="#ebs_python" style="color: inherit; text-decoration: inherit;">ebs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="nodevice_python">
-<a href="#nodevice_python" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
-</span> 
+        <span id="no_device_python">
+<a href="#no_device_python" style="color: inherit; text-decoration: inherit;">no_<wbr>device</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="virtualname_python">
-<a href="#virtualname_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
-</span> 
+        <span id="virtual_name_python">
+<a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getamifilter">Get<wbr>Ami<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAmiFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAmiFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAmiFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.GetAmiFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Outputs.GetAmiFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -2282,26 +2078,23 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AMI that was provided during image creation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2310,26 +2103,23 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AMI that was provided during image creation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2338,26 +2128,23 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AMI that was provided during image creation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2366,42 +2153,25 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the AMI that was provided during image creation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getamiproductcode">Get<wbr>Ami<wbr>Product<wbr>Code</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiProductCode">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAmiProductCode">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Outputs.GetAmiProductCode.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -2412,25 +2182,22 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span id="productcodeid_csharp">
 <a href="#productcodeid_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Code<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="productcodetype_csharp">
 <a href="#productcodetype_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Code<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2439,25 +2206,22 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span id="productcodeid_go">
 <a href="#productcodeid_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Code<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="productcodetype_go">
 <a href="#productcodetype_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Code<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2466,55 +2230,46 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span id="productcodeid_nodejs">
 <a href="#productcodeid_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Code<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="productcodetype_nodejs">
 <a href="#productcodetype_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Code<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="productcodeid_python">
-<a href="#productcodeid_python" style="color: inherit; text-decoration: inherit;">product<wbr>Code<wbr>Id</a>
-</span> 
+        <span id="product_code_id_python">
+<a href="#product_code_id_python" style="color: inherit; text-decoration: inherit;">product_<wbr>code_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="productcodetype_python">
-<a href="#productcodetype_python" style="color: inherit; text-decoration: inherit;">product<wbr>Code<wbr>Type</a>
-</span> 
+        <span id="product_code_type_python">
+<a href="#product_code_type_python" style="color: inherit; text-decoration: inherit;">product_<wbr>code_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

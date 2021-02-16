@@ -65,6 +65,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq"
+	"github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -114,11 +115,11 @@ test_user = rabbitmq.User("testUser",
     password="foobar",
     tags=["administrator"])
 test_topic_permissions = rabbitmq.TopicPermissions("testTopicPermissions",
-    permissions=[{
-        "exchange": "amq.topic",
-        "read": ".*",
-        "write": ".*",
-    }],
+    permissions=[rabbitmq.TopicPermissionsPermissionArgs(
+        exchange="amq.topic",
+        read=".*",
+        write=".*",
+    )],
     user=test_user.name,
     vhost=test_v_host.name)
 ```
@@ -157,19 +158,19 @@ const testTopicPermissions = new rabbitmq.TopicPermissions("test", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#TopicPermissions">TopicPermissions</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#TopicPermissionsArgs">TopicPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#TopicPermissions">TopicPermissions</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#TopicPermissionsArgs">TopicPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rabbitmq/#pulumi_rabbitmq.TopicPermissions">TopicPermissions</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>permissions=None<span class="p">, </span>user=None<span class="p">, </span>vhost=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rabbitmq/#pulumi_rabbitmq.TopicPermissions">TopicPermissions</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicPermissionsPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vhost</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#TopicPermissions">NewTopicPermissions</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#TopicPermissionsArgs">TopicPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#TopicPermissions">TopicPermissions</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#TopicPermissions">NewTopicPermissions</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#TopicPermissionsArgs">TopicPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#TopicPermissions">TopicPermissions</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.TopicPermissions.html">TopicPermissions</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.TopicPermissionsArgs.html">TopicPermissionsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.TopicPermissions.html">TopicPermissions</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.TopicPermissionsArgs.html">TopicPermissionsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -180,7 +181,7 @@ const testTopicPermissions = new rabbitmq.TopicPermissions("test", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -249,7 +250,7 @@ const testTopicPermissions = new rabbitmq.TopicPermissions("test", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -288,7 +289,7 @@ const testTopicPermissions = new rabbitmq.TopicPermissions("test", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -329,7 +330,6 @@ The TopicPermissions resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -337,39 +337,35 @@ The TopicPermissions resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">List&lt;Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Topic<wbr>Permissions<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vhost_csharp">
 <a href="#vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -378,39 +374,35 @@ described below.
             title="Required">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">[]Topic<wbr>Permissions<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vhost_go">
 <a href="#vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -419,39 +411,35 @@ described below.
             title="Required">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">Topic<wbr>Permissions<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vhost_nodejs">
 <a href="#vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -460,48 +448,40 @@ described below.
             title="Required">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicpermissionspermission">List[Topic<wbr>Permissions<wbr>Permission]</a></span>
+        <span class="property-type"><a href="#topicpermissionspermission">Sequence[Topic<wbr>Permissions<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vhost_python">
 <a href="#vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the TopicPermissions resource produces the following output properties:
-
 
 
 
@@ -512,15 +492,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -529,15 +507,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -546,15 +522,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -563,18 +537,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -584,19 +553,20 @@ Get an existing TopicPermissions resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#TopicPermissionsState">TopicPermissionsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#TopicPermissions">TopicPermissions</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#TopicPermissionsState">TopicPermissionsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#TopicPermissions">TopicPermissions</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>permissions=None<span class="p">, </span>user=None<span class="p">, </span>vhost=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[TopicPermissionsPermissionArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vhost</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> TopicPermissions</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTopicPermissions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#TopicPermissionsState">TopicPermissionsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#TopicPermissions">TopicPermissions</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTopicPermissions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#TopicPermissionsState">TopicPermissionsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#TopicPermissions">TopicPermissions</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.TopicPermissions.html">TopicPermissions</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ..TopicPermissionsState.html">TopicPermissionsState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.TopicPermissions.html">TopicPermissions</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ..TopicPermissionsState.html">TopicPermissionsState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -698,7 +668,6 @@ Get an existing TopicPermissions resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -706,39 +675,35 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_permissions_csharp">
 <a href="#state_permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">List&lt;Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Topic<wbr>Permissions<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_user_csharp">
 <a href="#state_user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vhost_csharp">
 <a href="#state_vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -747,39 +712,35 @@ described below.
             title="Optional">
         <span id="state_permissions_go">
 <a href="#state_permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">[]Topic<wbr>Permissions<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_user_go">
 <a href="#state_user_go" style="color: inherit; text-decoration: inherit;">User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vhost_go">
 <a href="#state_vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -788,39 +749,35 @@ described below.
             title="Optional">
         <span id="state_permissions_nodejs">
 <a href="#state_permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topicpermissionspermission">Topic<wbr>Permissions<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_user_nodejs">
 <a href="#state_user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vhost_nodejs">
 <a href="#state_vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -829,36 +786,33 @@ described below.
             title="Optional">
         <span id="state_permissions_python">
 <a href="#state_permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicpermissionspermission">List[Topic<wbr>Permissions<wbr>Permission]</a></span>
+        <span class="property-type"><a href="#topicpermissionspermission">Sequence[Topic<wbr>Permissions<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_user_python">
 <a href="#state_user_python" style="color: inherit; text-decoration: inherit;">user</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vhost_python">
 <a href="#state_vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -867,11 +821,8 @@ described below.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="topicpermissionspermission">Topic<wbr>Permissions<wbr>Permission</h4>
@@ -882,11 +833,10 @@ described below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#TopicPermissionsPermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/v2/go/rabbitmq/?tab=doc#TopicPermissionsPermissionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.Inputs.TopicPermissionsPermissionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.Outputs.TopicPermissionsPermission.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -896,38 +846,34 @@ described below.
             title="Required">
         <span id="exchange_csharp">
 <a href="#exchange_csharp" style="color: inherit; text-decoration: inherit;">Exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exchange to set the permissions for.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="read_csharp">
 <a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "read" ACL.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="write_csharp">
 <a href="#write_csharp" style="color: inherit; text-decoration: inherit;">Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "write" ACL.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -936,38 +882,34 @@ described below.
             title="Required">
         <span id="exchange_go">
 <a href="#exchange_go" style="color: inherit; text-decoration: inherit;">Exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exchange to set the permissions for.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="read_go">
 <a href="#read_go" style="color: inherit; text-decoration: inherit;">Read</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "read" ACL.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="write_go">
 <a href="#write_go" style="color: inherit; text-decoration: inherit;">Write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "write" ACL.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -976,38 +918,34 @@ described below.
             title="Required">
         <span id="exchange_nodejs">
 <a href="#exchange_nodejs" style="color: inherit; text-decoration: inherit;">exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exchange to set the permissions for.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="read_nodejs">
 <a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "read" ACL.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="write_nodejs">
 <a href="#write_nodejs" style="color: inherit; text-decoration: inherit;">write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "write" ACL.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1016,42 +954,44 @@ described below.
             title="Required">
         <span id="exchange_python">
 <a href="#exchange_python" style="color: inherit; text-decoration: inherit;">exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The exchange to set the permissions for.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="read_python">
 <a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "read" ACL.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="write_python">
 <a href="#write_python" style="color: inherit; text-decoration: inherit;">write</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "write" ACL.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Permissions can be imported using the `id` which is composed of
 
+`user@vhost`. E.g.
 
-
+```sh
+ $ pulumi import rabbitmq:index/topicPermissions:TopicPermissions test user@vhost
+```
 
 
 

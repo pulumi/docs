@@ -1,8 +1,8 @@
 
 ---
 title: "ScalingGroupVServerGroups"
-title_tag: "Resource ScalingGroupVServerGroups | Module ess | Package AliCloud"
-meta_desc: "Explore the ScalingGroupVServerGroups resource of the ess module, including examples, input properties, output properties, lookup functions, and supporting types. Attaches/Detaches vserver groups to a specified scaling group."
+title_tag: "alicloud.ess.ScalingGroupVServerGroups"
+meta_desc: "Documentation for the alicloud.ess.ScalingGroupVServerGroups resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -71,9 +71,9 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultLoadBalancer = new AliCloud.Slb.LoadBalancer("defaultLoadBalancer", new AliCloud.Slb.LoadBalancerArgs
         {
@@ -89,21 +89,21 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             defaultListener.Add(new AliCloud.Slb.Listener($"defaultListener-{range.Value}", new AliCloud.Slb.ListenerArgs
             {
-                BackendPort = 22,
-                Bandwidth = 10,
-                FrontendPort = 22,
-                HealthCheckType = "tcp",
                 LoadBalancerId = 
                 {
                     defaultLoadBalancer,
                 }.Select(__item => __item.Id).ToList()[range.Value],
+                BackendPort = 22,
+                FrontendPort = 22,
                 Protocol = "tcp",
+                Bandwidth = 10,
+                HealthCheckType = "tcp",
             }));
         }
         var defaultScalingGroup = new AliCloud.Ess.ScalingGroup("defaultScalingGroup", new AliCloud.Ess.ScalingGroupArgs
         {
-            MaxSize = 2,
             MinSize = 2,
+            MaxSize = 2,
             ScalingGroupName = name,
             VswitchIds = 
             {
@@ -122,8 +122,8 @@ class MyStack : Stack
                     {
                         new AliCloud.Ess.Inputs.ScalingGroupVServerGroupsVserverGroupVserverAttributeArgs
                         {
-                            Port = 100,
                             VserverGroupId = defaultServerGroup.Id,
+                            Port = 100,
                             Weight = 60,
                         },
                     },
@@ -154,35 +154,35 @@ default_zones = alicloud.get_zones(available_disk_category="cloud_efficiency",
     available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_load_balancer = alicloud.slb.LoadBalancer("defaultLoadBalancer", vswitch_id=default_switch.id)
 default_server_group = alicloud.slb.ServerGroup("defaultServerGroup", load_balancer_id=default_load_balancer.id)
 default_listener = []
 for range in [{"value": i} for i in range(0, 2)]:
     default_listener.append(alicloud.slb.Listener(f"defaultListener-{range['value']}",
-        backend_port="22",
-        bandwidth="10",
-        frontend_port="22",
-        health_check_type="tcp",
         load_balancer_id=[__item.id for __item in [default_load_balancer]][range["value"]],
-        protocol="tcp"))
+        backend_port=22,
+        frontend_port=22,
+        protocol="tcp",
+        bandwidth=10,
+        health_check_type="tcp"))
 default_scaling_group = alicloud.ess.ScalingGroup("defaultScalingGroup",
-    max_size="2",
-    min_size="2",
+    min_size=2,
+    max_size=2,
     scaling_group_name=name,
     vswitch_ids=[default_switch.id])
 default_scaling_group_v_server_groups = alicloud.ess.ScalingGroupVServerGroups("defaultScalingGroupVServerGroups",
     scaling_group_id=default_scaling_group.id,
-    vserver_groups=[{
-        "loadbalancerId": default_load_balancer.id,
-        "vserverAttributes": [{
-            "port": "100",
-            "vserver_group_id": default_server_group.id,
-            "weight": "60",
-        }],
-    }])
+    vserver_groups=[alicloud.ess.ScalingGroupVServerGroupsVserverGroupArgs(
+        loadbalancer_id=default_load_balancer.id,
+        vserver_attributes=[alicloud.ess.ScalingGroupVServerGroupsVserverGroupVserverAttributeArgs(
+            vserver_group_id=default_server_group.id,
+            port=100,
+            weight=60,
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -195,50 +195,43 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "testAccEssVserverGroupsAttachment";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultLoadBalancer = new alicloud.slb.LoadBalancer("default", {
-    vswitchId: defaultSwitch.id,
-});
-const defaultServerGroup = new alicloud.slb.ServerGroup("default", {
-    loadBalancerId: defaultLoadBalancer.id,
-});
-const defaultListener: alicloud.slb.Listener[] = [];
-for (let i = 0; i < 2; i++) {
-    defaultListener.push(new alicloud.slb.Listener(`default-${i}`, {
-        backendPort: 22,
-        bandwidth: 10,
-        frontendPort: 22,
-        healthCheckType: "tcp",
-        loadBalancerId: defaultLoadBalancer.id.apply(id => id[i]),
+const defaultLoadBalancer = new alicloud.slb.LoadBalancer("defaultLoadBalancer", {vswitchId: defaultSwitch.id});
+const defaultServerGroup = new alicloud.slb.ServerGroup("defaultServerGroup", {loadBalancerId: defaultLoadBalancer.id});
+const defaultListener: alicloud.slb.Listener[];
+for (const range = {value: 0}; range.value < 2; range.value++) {
+    defaultListener.push(new alicloud.slb.Listener(`defaultListener-${range.value}`, {
+        loadBalancerId: [defaultLoadBalancer].map(__item => __item.id)[range.value],
+        backendPort: "22",
+        frontendPort: "22",
         protocol: "tcp",
+        bandwidth: "10",
+        healthCheckType: "tcp",
     }));
 }
-const defaultScalingGroup = new alicloud.ess.ScalingGroup("default", {
-    maxSize: 2,
-    minSize: 2,
+const defaultScalingGroup = new alicloud.ess.ScalingGroup("defaultScalingGroup", {
+    minSize: "2",
+    maxSize: "2",
     scalingGroupName: name,
     vswitchIds: [defaultSwitch.id],
 });
-const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGroups("default", {
+const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGroups("defaultScalingGroupVServerGroups", {
     scalingGroupId: defaultScalingGroup.id,
     vserverGroups: [{
         loadbalancerId: defaultLoadBalancer.id,
         vserverAttributes: [{
-            port: 100,
             vserverGroupId: defaultServerGroup.id,
-            weight: 60,
+            port: "100",
+            weight: "60",
         }],
     }],
 });
@@ -254,19 +247,19 @@ const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGro
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#ScalingGroupVServerGroupsArgs">ScalingGroupVServerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#ScalingGroupVServerGroupsArgs">ScalingGroupVServerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>force=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>vserver_groups=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/ess/#pulumi_alicloud.ess.ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vserver_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingGroupVServerGroupsVserverGroupArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroups">NewScalingGroupVServerGroups</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroupsArgs">ScalingGroupVServerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroups">NewScalingGroupVServerGroups</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroupsArgs">ScalingGroupVServerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroups.html">ScalingGroupVServerGroups</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroupsArgs.html">ScalingGroupVServerGroupsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroups.html">ScalingGroupVServerGroups</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroupsArgs.html">ScalingGroupVServerGroupsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -277,7 +270,7 @@ const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGro
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -346,7 +339,7 @@ const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGro
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -385,7 +378,7 @@ const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGro
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -426,7 +419,6 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -434,38 +426,34 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
             title="Required">
         <span id="scalinggroupid_csharp">
 <a href="#scalinggroupid_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vservergroups_csharp">
 <a href="#vservergroups_csharp" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ess.<wbr>Inputs.<wbr>Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_csharp">
 <a href="#force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -474,38 +462,34 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
             title="Required">
         <span id="scalinggroupid_go">
 <a href="#scalinggroupid_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vservergroups_go">
 <a href="#vservergroups_go" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">[]Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_go">
 <a href="#force_go" style="color: inherit; text-decoration: inherit;">Force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -514,38 +498,34 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
             title="Required">
         <span id="scalinggroupid_nodejs">
 <a href="#scalinggroupid_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vservergroups_nodejs">
 <a href="#vservergroups_nodejs" style="color: inherit; text-decoration: inherit;">vserver<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_nodejs">
 <a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -554,47 +534,39 @@ The ScalingGroupVServerGroups resource accepts the following [input]({{< relref 
             title="Required">
         <span id="scaling_group_id_python">
 <a href="#scaling_group_id_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vserver_groups_python">
 <a href="#vserver_groups_python" style="color: inherit; text-decoration: inherit;">vserver_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group]</a></span>
+        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">Sequence[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_python">
 <a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ScalingGroupVServerGroups resource produces the following output properties:
-
 
 
 
@@ -605,15 +577,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -622,15 +592,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -639,15 +607,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -656,18 +622,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -677,19 +638,20 @@ Get an existing ScalingGroupVServerGroups resource's state with the given name, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#ScalingGroupVServerGroupsState">ScalingGroupVServerGroupsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#ScalingGroupVServerGroupsState">ScalingGroupVServerGroupsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>force=None<span class="p">, </span>scaling_group_id=None<span class="p">, </span>vserver_groups=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scaling_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vserver_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[ScalingGroupVServerGroupsVserverGroupArgs]]</span> = None<span class="p">) -&gt;</span> ScalingGroupVServerGroups</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScalingGroupVServerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroupsState">ScalingGroupVServerGroupsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetScalingGroupVServerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroupsState">ScalingGroupVServerGroupsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroups.html">ScalingGroupVServerGroups</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroupsState.html">ScalingGroupVServerGroupsState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroups.html">ScalingGroupVServerGroups</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroupsState.html">ScalingGroupVServerGroupsState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -791,7 +753,6 @@ Get an existing ScalingGroupVServerGroups resource's state with the given name, 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -799,38 +760,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_force_csharp">
 <a href="#state_force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalinggroupid_csharp">
 <a href="#state_scalinggroupid_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vservergroups_csharp">
 <a href="#state_vservergroups_csharp" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ess.<wbr>Inputs.<wbr>Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -839,38 +796,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_force_go">
 <a href="#state_force_go" style="color: inherit; text-decoration: inherit;">Force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalinggroupid_go">
 <a href="#state_scalinggroupid_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vservergroups_go">
 <a href="#state_vservergroups_go" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">[]Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -879,38 +832,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_force_nodejs">
 <a href="#state_force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalinggroupid_nodejs">
 <a href="#state_scalinggroupid_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vservergroups_nodejs">
 <a href="#state_vservergroups_nodejs" style="color: inherit; text-decoration: inherit;">vserver<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -919,35 +868,32 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_force_python">
 <a href="#state_force_python" style="color: inherit; text-decoration: inherit;">force</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scaling_group_id_python">
 <a href="#state_scaling_group_id_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vserver_groups_python">
 <a href="#state_vserver_groups_python" style="color: inherit; text-decoration: inherit;">vserver_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group]</a></span>
+        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">Sequence[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -956,11 +902,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="scalinggroupvservergroupsvservergroup">Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group</h4>
@@ -971,11 +914,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroupsVserverGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroupsVserverGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.Inputs.ScalingGroupVServerGroupsVserverGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.Outputs.ScalingGroupVServerGroupsVserverGroup.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -985,25 +927,22 @@ The following state arguments are supported:
             title="Required">
         <span id="loadbalancerid_csharp">
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vserverattributes_csharp">
 <a href="#vserverattributes_csharp" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ess.<wbr>Inputs.<wbr>Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1012,25 +951,22 @@ The following state arguments are supported:
             title="Required">
         <span id="loadbalancerid_go">
 <a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vserverattributes_go">
 <a href="#vserverattributes_go" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">[]Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1039,55 +975,46 @@ The following state arguments are supported:
             title="Required">
         <span id="loadbalancerid_nodejs">
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vserverattributes_nodejs">
 <a href="#vserverattributes_nodejs" style="color: inherit; text-decoration: inherit;">vserver<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="loadbalancerid_python">
-<a href="#loadbalancerid_python" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
-</span> 
+        <span id="loadbalancer_id_python">
+<a href="#loadbalancer_id_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="vserverattributes_python">
-<a href="#vserverattributes_python" style="color: inherit; text-decoration: inherit;">vserver<wbr>Attributes</a>
-</span> 
+        <span id="vserver_attributes_python">
+<a href="#vserver_attributes_python" style="color: inherit; text-decoration: inherit;">vserver_<wbr>attributes</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute]</a></span>
+        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">Sequence[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="scalinggroupvservergroupsvservergroupvserverattribute">Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute</h4>
 {{% choosable language nodejs %}}
@@ -1097,11 +1024,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroupsVserverGroupVserverAttributeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess?tab=doc#ScalingGroupVServerGroupsVserverGroupVserverAttributeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.Inputs.ScalingGroupVServerGroupsVserverGroupVserverAttributeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ess.Outputs.ScalingGroupVServerGroupsVserverGroupVserverAttribute.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1111,35 +1037,31 @@ The following state arguments are supported:
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vservergroupid_csharp">
 <a href="#vservergroupid_csharp" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1148,35 +1070,31 @@ The following state arguments are supported:
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vservergroupid_go">
 <a href="#vservergroupid_go" style="color: inherit; text-decoration: inherit;">Vserver<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1185,35 +1103,31 @@ The following state arguments are supported:
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vservergroupid_nodejs">
 <a href="#vservergroupid_nodejs" style="color: inherit; text-decoration: inherit;">vserver<wbr>Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1222,39 +1136,39 @@ The following state arguments are supported:
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vserver_group_id_python">
 <a href="#vserver_group_id_python" style="color: inherit; text-decoration: inherit;">vserver_<wbr>group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+ESS vserver groups can be imported using the id, e.g.
 
-
-
+```sh
+ $ pulumi import alicloud:ess/scalingGroupVServerGroups:ScalingGroupVServerGroups example abc123456
+```
 
 
 
@@ -1266,6 +1180,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

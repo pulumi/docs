@@ -14,6 +14,7 @@ meta_desc: "Explore the GetCloudProviderSnapshotRestoreJobs function of the Mong
 
 > **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -72,6 +73,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -118,11 +120,11 @@ test_cloud_provider_snapshot = mongodbatlas.CloudProviderSnapshot("testCloudProv
     retention_in_days=1)
 test_cloud_provider_snapshot_restore_job = mongodbatlas.CloudProviderSnapshotRestoreJob("testCloudProviderSnapshotRestoreJob",
     cluster_name="MyCluster",
-    delivery_type={
-        "automated": True,
-        "target_cluster_name": "MyCluster",
-        "target_project_id": "5cf5a45a9ccf6400e60981b6",
-    },
+    delivery_type=mongodbatlas.CloudProviderSnapshotRestoreJobDeliveryTypeArgs(
+        automated=True,
+        target_cluster_name="MyCluster",
+        target_project_id="5cf5a45a9ccf6400e60981b6",
+    ),
     project_id="5cf5a45a9ccf6400e60981b6",
     snapshot_id=test_cloud_provider_snapshot.id)
 test_cloud_provider_snapshot_restore_jobs = pulumi.Output.all(test_cloud_provider_snapshot_restore_job.cluster_name, test_cloud_provider_snapshot_restore_job.project_id).apply(lambda cluster_name, project_id: mongodbatlas.get_cloud_provider_snapshot_restore_jobs(cluster_name=cluster_name,
@@ -179,7 +181,7 @@ const testCloudProviderSnapshotRestoreJobs = pulumi.all([testCloudProviderSnapsh
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cloud_provider_snapshot_restore_jobs(</span>cluster_name=None<span class="p">, </span>items_per_page=None<span class="p">, </span>page_num=None<span class="p">, </span>project_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_cloud_provider_snapshot_restore_jobs(</span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">items_per_page</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">page_num</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetCloudProviderSnapshotRestoreJobsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -200,7 +202,6 @@ const testCloudProviderSnapshotRestoreJobs = pulumi.all([testCloudProviderSnapsh
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -208,49 +209,44 @@ The following arguments are supported:
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Atlas cluster for which you want to retrieve restore jobs.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the project for the Atlas cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="itemsperpage_csharp">
 <a href="#itemsperpage_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Per<wbr>Page</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items to return per page, up to a maximum of 500. Defaults to `100`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pagenum_csharp">
 <a href="#pagenum_csharp" style="color: inherit; text-decoration: inherit;">Page<wbr>Num</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The page to return. Defaults to `1`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -259,49 +255,44 @@ The following arguments are supported:
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Atlas cluster for which you want to retrieve restore jobs.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the project for the Atlas cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="itemsperpage_go">
 <a href="#itemsperpage_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Per<wbr>Page</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items to return per page, up to a maximum of 500. Defaults to `100`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pagenum_go">
 <a href="#pagenum_go" style="color: inherit; text-decoration: inherit;">Page<wbr>Num</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The page to return. Defaults to `1`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -310,49 +301,44 @@ The following arguments are supported:
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Atlas cluster for which you want to retrieve restore jobs.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the project for the Atlas cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="itemsperpage_nodejs">
 <a href="#itemsperpage_nodejs" style="color: inherit; text-decoration: inherit;">items<wbr>Per<wbr>Page</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items to return per page, up to a maximum of 500. Defaults to `100`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pagenum_nodejs">
 <a href="#pagenum_nodejs" style="color: inherit; text-decoration: inherit;">page<wbr>Num</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The page to return. Defaults to `1`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -361,52 +347,44 @@ The following arguments are supported:
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Atlas cluster for which you want to retrieve restore jobs.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the project for the Atlas cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="items_per_page_python">
 <a href="#items_per_page_python" style="color: inherit; text-decoration: inherit;">items_<wbr>per_<wbr>page</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items to return per page, up to a maximum of 500. Defaults to `100`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="page_num_python">
 <a href="#page_num_python" style="color: inherit; text-decoration: inherit;">page_<wbr>num</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The page to return. Defaults to `1`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -417,7 +395,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -425,77 +402,69 @@ The following output properties are available:
             title="">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="results_csharp">
 <a href="#results_csharp" style="color: inherit; text-decoration: inherit;">Results</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcloudprovidersnapshotrestorejobsresult">List&lt;Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Restore<wbr>Jobs<wbr>Result&gt;</a></span>
     </dt>
     <dd>{{% md %}}Includes cloudProviderSnapshotRestoreJob object for each item detailed in the results array section.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="totalcount_csharp">
 <a href="#totalcount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="itemsperpage_csharp">
 <a href="#itemsperpage_csharp" style="color: inherit; text-decoration: inherit;">Items<wbr>Per<wbr>Page</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pagenum_csharp">
 <a href="#pagenum_csharp" style="color: inherit; text-decoration: inherit;">Page<wbr>Num</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -504,77 +473,69 @@ The following output properties are available:
             title="">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="results_go">
 <a href="#results_go" style="color: inherit; text-decoration: inherit;">Results</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcloudprovidersnapshotrestorejobsresult">[]Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Restore<wbr>Jobs<wbr>Result<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Includes cloudProviderSnapshotRestoreJob object for each item detailed in the results array section.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="totalcount_go">
 <a href="#totalcount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="itemsperpage_go">
 <a href="#itemsperpage_go" style="color: inherit; text-decoration: inherit;">Items<wbr>Per<wbr>Page</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pagenum_go">
 <a href="#pagenum_go" style="color: inherit; text-decoration: inherit;">Page<wbr>Num</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -583,77 +544,69 @@ The following output properties are available:
             title="">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="results_nodejs">
 <a href="#results_nodejs" style="color: inherit; text-decoration: inherit;">results</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcloudprovidersnapshotrestorejobsresult">Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Restore<wbr>Jobs<wbr>Result[]</a></span>
     </dt>
     <dd>{{% md %}}Includes cloudProviderSnapshotRestoreJob object for each item detailed in the results array section.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="totalcount_nodejs">
 <a href="#totalcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="itemsperpage_nodejs">
 <a href="#itemsperpage_nodejs" style="color: inherit; text-decoration: inherit;">items<wbr>Per<wbr>Page</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pagenum_nodejs">
 <a href="#pagenum_nodejs" style="color: inherit; text-decoration: inherit;">page<wbr>Num</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -662,80 +615,69 @@ The following output properties are available:
             title="">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="results_python">
 <a href="#results_python" style="color: inherit; text-decoration: inherit;">results</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcloudprovidersnapshotrestorejobsresult">List[Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Restore<wbr>Jobs<wbr>Result]</a></span>
+        <span class="property-type"><a href="#getcloudprovidersnapshotrestorejobsresult">Sequence[Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Restore<wbr>Jobs<wbr>Result]</a></span>
     </dt>
     <dd>{{% md %}}Includes cloudProviderSnapshotRestoreJob object for each item detailed in the results array section.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="total_count_python">
 <a href="#total_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="items_per_page_python">
 <a href="#items_per_page_python" style="color: inherit; text-decoration: inherit;">items_<wbr>per_<wbr>page</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="page_num_python">
 <a href="#page_num_python" style="color: inherit; text-decoration: inherit;">page_<wbr>num</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -757,7 +699,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -765,166 +706,150 @@ The following output properties are available:
             title="Required">
         <span id="cancelled_csharp">
 <a href="#cancelled_csharp" style="color: inherit; text-decoration: inherit;">Cancelled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the restore job was canceled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC ISO 8601 formatted point in time when Atlas created the restore job.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deliverytype_csharp">
 <a href="#deliverytype_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of restore job to create. Possible values are: automated and download.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deliveryurls_csharp">
 <a href="#deliveryurls_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more URLs for the compressed snapshot files for manual download. Only visible if deliveryType is download.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expired_csharp">
 <a href="#expired_csharp" style="color: inherit; text-decoration: inherit;">Expired</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the restore job expired.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expiresat_csharp">
 <a href="#expiresat_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC ISO 8601 formatted point in time when the restore job expires.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="finishedat_csharp">
 <a href="#finishedat_csharp" style="color: inherit; text-decoration: inherit;">Finished<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC ISO 8601 formatted point in time when the restore job completed.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the restore job.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="oploginc_csharp">
 <a href="#oploginc_csharp" style="color: inherit; text-decoration: inherit;">Oplog<wbr>Inc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="oplogts_csharp">
 <a href="#oplogts_csharp" style="color: inherit; text-decoration: inherit;">Oplog<wbr>Ts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pointintimeutcseconds_csharp">
 <a href="#pointintimeutcseconds_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time<wbr>Utc<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the source snapshot ID of the restore job.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetclustername_csharp">
 <a href="#targetclustername_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the target Atlas cluster to which the restore job restores the snapshot. Only visible if deliveryType is automated.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetprojectid_csharp">
 <a href="#targetprojectid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timestamp_csharp">
 <a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when the snapshot associated to snapshotId was taken.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -933,166 +858,150 @@ The following output properties are available:
             title="Required">
         <span id="cancelled_go">
 <a href="#cancelled_go" style="color: inherit; text-decoration: inherit;">Cancelled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the restore job was canceled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC ISO 8601 formatted point in time when Atlas created the restore job.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deliverytype_go">
 <a href="#deliverytype_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of restore job to create. Possible values are: automated and download.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deliveryurls_go">
 <a href="#deliveryurls_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more URLs for the compressed snapshot files for manual download. Only visible if deliveryType is download.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expired_go">
 <a href="#expired_go" style="color: inherit; text-decoration: inherit;">Expired</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the restore job expired.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expiresat_go">
 <a href="#expiresat_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC ISO 8601 formatted point in time when the restore job expires.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="finishedat_go">
 <a href="#finishedat_go" style="color: inherit; text-decoration: inherit;">Finished<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC ISO 8601 formatted point in time when the restore job completed.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the restore job.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="oploginc_go">
 <a href="#oploginc_go" style="color: inherit; text-decoration: inherit;">Oplog<wbr>Inc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="oplogts_go">
 <a href="#oplogts_go" style="color: inherit; text-decoration: inherit;">Oplog<wbr>Ts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pointintimeutcseconds_go">
 <a href="#pointintimeutcseconds_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time<wbr>Utc<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the source snapshot ID of the restore job.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetclustername_go">
 <a href="#targetclustername_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the target Atlas cluster to which the restore job restores the snapshot. Only visible if deliveryType is automated.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetprojectid_go">
 <a href="#targetprojectid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timestamp_go">
 <a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when the snapshot associated to snapshotId was taken.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1101,166 +1010,150 @@ The following output properties are available:
             title="Required">
         <span id="cancelled_nodejs">
 <a href="#cancelled_nodejs" style="color: inherit; text-decoration: inherit;">cancelled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the restore job was canceled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC ISO 8601 formatted point in time when Atlas created the restore job.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deliverytype_nodejs">
 <a href="#deliverytype_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of restore job to create. Possible values are: automated and download.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deliveryurls_nodejs">
 <a href="#deliveryurls_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more URLs for the compressed snapshot files for manual download. Only visible if deliveryType is download.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expired_nodejs">
 <a href="#expired_nodejs" style="color: inherit; text-decoration: inherit;">expired</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the restore job expired.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expiresat_nodejs">
 <a href="#expiresat_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC ISO 8601 formatted point in time when the restore job expires.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="finishedat_nodejs">
 <a href="#finishedat_nodejs" style="color: inherit; text-decoration: inherit;">finished<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC ISO 8601 formatted point in time when the restore job completed.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the restore job.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="oploginc_nodejs">
 <a href="#oploginc_nodejs" style="color: inherit; text-decoration: inherit;">oplog<wbr>Inc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="oplogts_nodejs">
 <a href="#oplogts_nodejs" style="color: inherit; text-decoration: inherit;">oplog<wbr>Ts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="pointintimeutcseconds_nodejs">
 <a href="#pointintimeutcseconds_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time<wbr>Utc<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the source snapshot ID of the restore job.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetclustername_nodejs">
 <a href="#targetclustername_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the target Atlas cluster to which the restore job restores the snapshot. Only visible if deliveryType is automated.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetprojectid_nodejs">
 <a href="#targetprojectid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timestamp_nodejs">
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when the snapshot associated to snapshotId was taken.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1269,169 +1162,150 @@ The following output properties are available:
             title="Required">
         <span id="cancelled_python">
 <a href="#cancelled_python" style="color: inherit; text-decoration: inherit;">cancelled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the restore job was canceled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UTC ISO 8601 formatted point in time when Atlas created the restore job.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="delivery_type_python">
 <a href="#delivery_type_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of restore job to create. Possible values are: automated and download.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="delivery_urls_python">
 <a href="#delivery_urls_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more URLs for the compressed snapshot files for manual download. Only visible if deliveryType is download.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expired_python">
 <a href="#expired_python" style="color: inherit; text-decoration: inherit;">expired</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the restore job expired.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expires_at_python">
 <a href="#expires_at_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>at</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UTC ISO 8601 formatted point in time when the restore job expires.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="finished_at_python">
 <a href="#finished_at_python" style="color: inherit; text-decoration: inherit;">finished_<wbr>at</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UTC ISO 8601 formatted point in time when the restore job completed.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the restore job.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="oplog_inc_python">
 <a href="#oplog_inc_python" style="color: inherit; text-decoration: inherit;">oplog_<wbr>inc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="oplog_ts_python">
 <a href="#oplog_ts_python" style="color: inherit; text-decoration: inherit;">oplog_<wbr>ts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="point_in_time_utc_seconds_python">
 <a href="#point_in_time_utc_seconds_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>utc_<wbr>seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the source snapshot ID of the restore job.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="target_cluster_name_python">
 <a href="#target_cluster_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>cluster_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the target Atlas cluster to which the restore job restores the snapshot. Only visible if deliveryType is automated.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="target_project_id_python">
 <a href="#target_project_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timestamp_python">
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when the snapshot associated to snapshotId was taken.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1444,6 +1318,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mongodbatlas).</dd>
+	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 </dl>
 

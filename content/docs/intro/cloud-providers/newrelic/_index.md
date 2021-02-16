@@ -54,10 +54,21 @@ policy = newrelic.AlertPolicy("my-policy")
 
 ```go
 import (
-  newrelic "github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	newrelic "github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic"
 )
 
-policy, _ := newrelic.NewAlertPolicy(ctx, "my-policy", &newrelic.AlertPolicyArgs{})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		policy, err := newrelic.NewAlertPolicy(ctx, "my-policy", &newrelic.AlertPolicyArgs{})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

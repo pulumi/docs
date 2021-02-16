@@ -12,6 +12,7 @@ Explore the resources and functions of the apimanagement module in the Azure pac
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="api" title="Api"><span class="symbol resource"></span>Api</a></li>
+    <li><a href="apidiagnostic" title="ApiDiagnostic"><span class="symbol resource"></span>ApiDiagnostic</a></li>
     <li><a href="apioperation" title="ApiOperation"><span class="symbol resource"></span>ApiOperation</a></li>
     <li><a href="apioperationpolicy" title="ApiOperationPolicy"><span class="symbol resource"></span>ApiOperationPolicy</a></li>
     <li><a href="apipolicy" title="ApiPolicy"><span class="symbol resource"></span>ApiPolicy</a></li>
@@ -20,10 +21,12 @@ Explore the resources and functions of the apimanagement module in the Azure pac
     <li><a href="authorizationserver" title="AuthorizationServer"><span class="symbol resource"></span>AuthorizationServer</a></li>
     <li><a href="backend" title="Backend"><span class="symbol resource"></span>Backend</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
+    <li><a href="customdomain" title="CustomDomain"><span class="symbol resource"></span>CustomDomain</a></li>
     <li><a href="diagnostic" title="Diagnostic"><span class="symbol resource"></span>Diagnostic</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupuser" title="GroupUser"><span class="symbol resource"></span>GroupUser</a></li>
     <li><a href="identityprovideraad" title="IdentityProviderAad"><span class="symbol resource"></span>IdentityProviderAad</a></li>
+    <li><a href="identityprovideraadb2c" title="IdentityProviderAadb2c"><span class="symbol resource"></span>IdentityProviderAadb2c</a></li>
     <li><a href="identityproviderfacebook" title="IdentityProviderFacebook"><span class="symbol resource"></span>IdentityProviderFacebook</a></li>
     <li><a href="identityprovidergoogle" title="IdentityProviderGoogle"><span class="symbol resource"></span>IdentityProviderGoogle</a></li>
     <li><a href="identityprovidermicrosoft" title="IdentityProviderMicrosoft"><span class="symbol resource"></span>IdentityProviderMicrosoft</a></li>
@@ -31,6 +34,7 @@ Explore the resources and functions of the apimanagement module in the Azure pac
     <li><a href="logger" title="Logger"><span class="symbol resource"></span>Logger</a></li>
     <li><a href="namedvalue" title="NamedValue"><span class="symbol resource"></span>NamedValue</a></li>
     <li><a href="openidconnectprovider" title="OpenIdConnectProvider"><span class="symbol resource"></span>OpenIdConnectProvider</a></li>
+    <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="product" title="Product"><span class="symbol resource"></span>Product</a></li>
     <li><a href="productapi" title="ProductApi"><span class="symbol resource"></span>ProductApi</a></li>
     <li><a href="productgroup" title="ProductGroup"><span class="symbol resource"></span>ProductGroup</a></li>
@@ -60,7 +64,7 @@ Explore the resources and functions of the apimanagement module in the Azure pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.17.0</dd>
+	<dd>3.46.0</dd>
 </dl>
 
 

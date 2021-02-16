@@ -212,8 +212,8 @@ or join our [Community Slack](https://slack.pulumi.com/) channel if you have any
 
 {{< youtube "7qN9ABgmK9M" >}}
 
-[peks-oidc]: https://github.com/pulumi/pulumi-eks/tree/master/nodejs/eks/examples/oidc-iam-sa
-[peks-scoped-kubeconfigs]: https://github.com/pulumi/pulumi-eks/tree/master/nodejs/eks/examples/scoped-kubeconfigs
+[peks-oidc]: https://github.com/pulumi/pulumi-eks/tree/master/examples/oidc-iam-sa
+[peks-scoped-kubeconfigs]: https://github.com/pulumi/pulumi-eks/tree/master/examples/scoped-kubeconfigs
 [fluentd-cloudwatch]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Container-Insights-setup-logs.html
 [aws-cw]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html
 [aws-eks]: https://aws.amazon.com/eks/
@@ -222,7 +222,7 @@ or join our [Community Slack](https://slack.pulumi.com/) channel if you have any
 [aws-oidc]: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html
 [s3-app]: https://github.com/mhausenblas/s3-echoer
 [aws-sts]: https://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html
-[eks-examples]: https://github.com/pulumi/pulumi-eks/tree/master/nodejs/eks/examples
+[eks-examples]: https://github.com/pulumi/pulumi-eks/tree/master/examples
 [aws-assume-role-web]: https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html
 [k8s-dynamic-webhook]: https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers
 [eks-webhook]: https://github.com/aws/amazon-eks-pod-identity-webhook/

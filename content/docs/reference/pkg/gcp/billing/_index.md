@@ -15,6 +15,7 @@ Explore the resources and functions of the billing module in the GCP package.
     <li><a href="accountiammember" title="AccountIamMember"><span class="symbol resource"></span>AccountIamMember</a></li>
     <li><a href="accountiampolicy" title="AccountIamPolicy"><span class="symbol resource"></span>AccountIamPolicy</a></li>
     <li><a href="budget" title="Budget"><span class="symbol resource"></span>Budget</a></li>
+    <li><a href="subaccount" title="SubAccount"><span class="symbol resource"></span>SubAccount</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,26 +25,8 @@ Explore the resources and functions of the billing module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Billing.html" title="Pulumi.Gcp.Billing">Pulumi.Gcp.Billing</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/billing?tab=doc#" title="gcp/billing">gcp/billing</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/billing/#" title="@pulumi/gcp/billing">@pulumi/gcp/billing</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/billing" title="pulumi_gcp/billing">pulumi_gcp/billing</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

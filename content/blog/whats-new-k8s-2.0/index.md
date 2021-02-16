@@ -119,7 +119,7 @@ requirements to run. We’ve expanded our support for managed Kubernetes cluster
 across the respective cloud provider packages.
 
 * [pulumi/eks](https://github.com/pulumi/pulumi-eks)
-    * More [examples](https://github.com/pulumi/pulumi-eks/tree/master/nodejs/eks/examples) are provided to cover various EKS-specific scenarios.
+    * More [examples](https://github.com/pulumi/pulumi-eks/tree/master/examples) are provided to cover various EKS-specific scenarios.
     * Support for [additional security groups](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#NodeGroup-extraNodeSecurityGroups) for node groups to attach to user-specified rules
     * Support for [envelope encrypted secrets](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-encryptionConfigKeyArn) so that Kubernetes Secrets are encrypted in etcd
     * Support for [alternative authentication](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/eks/#ClusterOptions-providerCredentialOpts) approaches on the cluster and infrastructure created, such as using AWS named profiles

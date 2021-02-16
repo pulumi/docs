@@ -18,6 +18,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="acm/" title="acm"><span class="symbol module"></span>acm</a></li>
     <li><a href="acmpca/" title="acmpca"><span class="symbol module"></span>acmpca</a></li>
     <li><a href="alb/" title="alb"><span class="symbol module"></span>alb</a></li>
+    <li><a href="amp/" title="amp"><span class="symbol module"></span>amp</a></li>
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
     <li><a href="apigatewayv2/" title="apigatewayv2"><span class="symbol module"></span>apigatewayv2</a></li>
     <li><a href="appautoscaling/" title="appautoscaling"><span class="symbol module"></span>appautoscaling</a></li>
@@ -26,6 +27,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="appsync/" title="appsync"><span class="symbol module"></span>appsync</a></li>
     <li><a href="athena/" title="athena"><span class="symbol module"></span>athena</a></li>
     <li><a href="autoscaling/" title="autoscaling"><span class="symbol module"></span>autoscaling</a></li>
+    <li><a href="autoscalingplans/" title="autoscalingplans"><span class="symbol module"></span>autoscalingplans</a></li>
     <li><a href="backup/" title="backup"><span class="symbol module"></span>backup</a></li>
     <li><a href="batch/" title="batch"><span class="symbol module"></span>batch</a></li>
     <li><a href="budgets/" title="budgets"><span class="symbol module"></span>budgets</a></li>
@@ -36,10 +38,12 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="cloudhsmv2/" title="cloudhsmv2"><span class="symbol module"></span>cloudhsmv2</a></li>
     <li><a href="cloudtrail/" title="cloudtrail"><span class="symbol module"></span>cloudtrail</a></li>
     <li><a href="cloudwatch/" title="cloudwatch"><span class="symbol module"></span>cloudwatch</a></li>
+    <li><a href="codeartifact/" title="codeartifact"><span class="symbol module"></span>codeartifact</a></li>
     <li><a href="codebuild/" title="codebuild"><span class="symbol module"></span>codebuild</a></li>
     <li><a href="codecommit/" title="codecommit"><span class="symbol module"></span>codecommit</a></li>
     <li><a href="codedeploy/" title="codedeploy"><span class="symbol module"></span>codedeploy</a></li>
     <li><a href="codepipeline/" title="codepipeline"><span class="symbol module"></span>codepipeline</a></li>
+    <li><a href="codestarconnections/" title="codestarconnections"><span class="symbol module"></span>codestarconnections</a></li>
     <li><a href="codestarnotifications/" title="codestarnotifications"><span class="symbol module"></span>codestarnotifications</a></li>
     <li><a href="cognito/" title="cognito"><span class="symbol module"></span>cognito</a></li>
     <li><a href="cur/" title="cur"><span class="symbol module"></span>cur</a></li>
@@ -77,12 +81,17 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="glue/" title="glue"><span class="symbol module"></span>glue</a></li>
     <li><a href="guardduty/" title="guardduty"><span class="symbol module"></span>guardduty</a></li>
     <li><a href="iam/" title="iam"><span class="symbol module"></span>iam</a></li>
+    <li><a href="identitystore/" title="identitystore"><span class="symbol module"></span>identitystore</a></li>
+    <li><a href="imagebuilder/" title="imagebuilder"><span class="symbol module"></span>imagebuilder</a></li>
     <li><a href="inspector/" title="inspector"><span class="symbol module"></span>inspector</a></li>
     <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
     <li><a href="kinesis/" title="kinesis"><span class="symbol module"></span>kinesis</a></li>
+    <li><a href="kinesisanalyticsv2/" title="kinesisanalyticsv2"><span class="symbol module"></span>kinesisanalyticsv2</a></li>
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
+    <li><a href="lakeformation/" title="lakeformation"><span class="symbol module"></span>lakeformation</a></li>
     <li><a href="lambda/" title="lambda"><span class="symbol module"></span>lambda</a></li>
     <li><a href="lb/" title="lb"><span class="symbol module"></span>lb</a></li>
+    <li><a href="lex/" title="lex"><span class="symbol module"></span>lex</a></li>
     <li><a href="licensemanager/" title="licensemanager"><span class="symbol module"></span>licensemanager</a></li>
     <li><a href="lightsail/" title="lightsail"><span class="symbol module"></span>lightsail</a></li>
     <li><a href="macie/" title="macie"><span class="symbol module"></span>macie</a></li>
@@ -92,6 +101,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="mq/" title="mq"><span class="symbol module"></span>mq</a></li>
     <li><a href="msk/" title="msk"><span class="symbol module"></span>msk</a></li>
     <li><a href="neptune/" title="neptune"><span class="symbol module"></span>neptune</a></li>
+    <li><a href="networkfirewall/" title="networkfirewall"><span class="symbol module"></span>networkfirewall</a></li>
     <li><a href="opsworks/" title="opsworks"><span class="symbol module"></span>opsworks</a></li>
     <li><a href="organizations/" title="organizations"><span class="symbol module"></span>organizations</a></li>
     <li><a href="outposts/" title="outposts"><span class="symbol module"></span>outposts</a></li>
@@ -105,21 +115,27 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="resourcegroups/" title="resourcegroups"><span class="symbol module"></span>resourcegroups</a></li>
     <li><a href="route53/" title="route53"><span class="symbol module"></span>route53</a></li>
     <li><a href="s3/" title="s3"><span class="symbol module"></span>s3</a></li>
+    <li><a href="s3control/" title="s3control"><span class="symbol module"></span>s3control</a></li>
+    <li><a href="s3outposts/" title="s3outposts"><span class="symbol module"></span>s3outposts</a></li>
     <li><a href="sagemaker/" title="sagemaker"><span class="symbol module"></span>sagemaker</a></li>
     <li><a href="secretsmanager/" title="secretsmanager"><span class="symbol module"></span>secretsmanager</a></li>
     <li><a href="securityhub/" title="securityhub"><span class="symbol module"></span>securityhub</a></li>
+    <li><a href="serverlessrepository/" title="serverlessrepository"><span class="symbol module"></span>serverlessrepository</a></li>
     <li><a href="servicecatalog/" title="servicecatalog"><span class="symbol module"></span>servicecatalog</a></li>
     <li><a href="servicediscovery/" title="servicediscovery"><span class="symbol module"></span>servicediscovery</a></li>
     <li><a href="servicequotas/" title="servicequotas"><span class="symbol module"></span>servicequotas</a></li>
     <li><a href="ses/" title="ses"><span class="symbol module"></span>ses</a></li>
     <li><a href="sfn/" title="sfn"><span class="symbol module"></span>sfn</a></li>
     <li><a href="shield/" title="shield"><span class="symbol module"></span>shield</a></li>
+    <li><a href="signer/" title="signer"><span class="symbol module"></span>signer</a></li>
     <li><a href="simpledb/" title="simpledb"><span class="symbol module"></span>simpledb</a></li>
     <li><a href="sns/" title="sns"><span class="symbol module"></span>sns</a></li>
     <li><a href="sqs/" title="sqs"><span class="symbol module"></span>sqs</a></li>
     <li><a href="ssm/" title="ssm"><span class="symbol module"></span>ssm</a></li>
+    <li><a href="ssoadmin/" title="ssoadmin"><span class="symbol module"></span>ssoadmin</a></li>
     <li><a href="storagegateway/" title="storagegateway"><span class="symbol module"></span>storagegateway</a></li>
     <li><a href="swf/" title="swf"><span class="symbol module"></span>swf</a></li>
+    <li><a href="synthetics/" title="synthetics"><span class="symbol module"></span>synthetics</a></li>
     <li><a href="transfer/" title="transfer"><span class="symbol module"></span>transfer</a></li>
     <li><a href="waf/" title="waf"><span class="symbol module"></span>waf</a></li>
     <li><a href="wafregional/" title="wafregional"><span class="symbol module"></span>wafregional</a></li>
@@ -162,24 +178,6 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.html" title="Pulumi.Aws">Pulumi.Aws</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#" title="aws">aws</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/#" title="@pulumi/aws">@pulumi/aws</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws" title="pulumi_aws">pulumi_aws</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

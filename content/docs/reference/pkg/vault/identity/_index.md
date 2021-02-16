@@ -16,6 +16,7 @@ Explore the resources and functions of the identity module in the Vault package.
     <li><a href="entitypolicies" title="EntityPolicies"><span class="symbol resource"></span>EntityPolicies</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="groupalias" title="GroupAlias"><span class="symbol resource"></span>GroupAlias</a></li>
+    <li><a href="groupmemberentityids" title="GroupMemberEntityIds"><span class="symbol resource"></span>GroupMemberEntityIds</a></li>
     <li><a href="grouppolicies" title="GroupPolicies"><span class="symbol resource"></span>GroupPolicies</a></li>
     <li><a href="oidc" title="Oidc"><span class="symbol resource"></span>Oidc</a></li>
     <li><a href="oidckey" title="OidcKey"><span class="symbol resource"></span>OidcKey</a></li>
@@ -36,9 +37,9 @@ Explore the resources and functions of the identity module in the Vault package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 
 
@@ -49,7 +50,7 @@ Explore the resources and functions of the identity module in the Vault package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Identity.html" title="Pulumi.Vault.Identity">Pulumi.Vault.Identity</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/identity?tab=doc#" title="vault/identity">vault/identity</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/identity?tab=doc#" title="vault/identity">vault/identity</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/identity/#" title="@pulumi/vault/identity">@pulumi/vault/identity</a></dd>

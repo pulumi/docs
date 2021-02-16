@@ -10,15 +10,11 @@ aliases: ["/docs/reference/clouds/gcp/setup/"]
 The [Pulumi Google Cloud Platform Provider] needs to be configured with Google credentials
 before it can be used to create resources.
 
-When developing locally, we recommend that you use `gcloud login` to configure your account credentials. First, install the [Google Cloud SDK](https://cloud.google.com/sdk/install), which includes the `gcloud` command line tool. Then, execute the following:
+{{% configure-gcp %}}
 
-```bash
-$ gcloud auth login
-$ gcloud config set project <YOUR_GCP_PROJECT_HERE>
-$ gcloud auth application-default login
-```
-
+{{% notes "info" %}}
 If you are using Pulumi in an non-interactive setting (such as a CI/CD system) you will need to [configure and use a service account]({{< relref "service-account" >}}) instead.
+{{% /notes %}}
 
 ## Optional Settings
 

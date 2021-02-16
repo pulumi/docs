@@ -4,7 +4,7 @@ meta_desc: An overview of the Pulumi CLI and common commands used to deploy clou
 menu:
   reference:
     identifier: cli
-    weight: 3
+    weight: 2
 
 aliases: [/docs/reference/commands/]
 ---

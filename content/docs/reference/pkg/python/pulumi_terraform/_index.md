@@ -5,6 +5,8 @@ linktitle: pulumi_terraform
 notitle: true
 ---
 
+{{< resource-docs-alert "terraform" >}}
+
 <div class="section" id="pulumi-terraform">
 <h1>Pulumi Terraform<a class="headerlink" href="#pulumi-terraform" title="Permalink to this headline">¶</a></h1>
 <blockquote>

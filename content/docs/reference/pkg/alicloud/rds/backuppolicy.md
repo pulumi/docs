@@ -1,8 +1,8 @@
 
 ---
 title: "BackupPolicy"
-title_tag: "Resource BackupPolicy | Module rds | Package AliCloud"
-meta_desc: "Explore the BackupPolicy resource of the rds module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an RDS instance backup policy resource and used to configure instance backup policy."
+title_tag: "alicloud.rds.BackupPolicy"
+meta_desc: "Documentation for the alicloud.rds.BackupPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -41,18 +41,18 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/24",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/24",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var instance = new AliCloud.Rds.Instance("instance", new AliCloud.Rds.InstanceArgs
         {
             Engine = "MySQL",
             EngineVersion = "5.6",
-            InstanceName = name,
-            InstanceStorage = 10,
             InstanceType = "rds.mysql.s1.small",
+            InstanceStorage = 10,
             VswitchId = defaultSwitch.Id,
+            InstanceName = name,
         });
         var policy = new AliCloud.Rds.BackupPolicy("policy", new AliCloud.Rds.BackupPolicyArgs
         {
@@ -66,7 +66,72 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		creation := "Rds"
+		if param := cfg.Get("creation"); param != "" {
+			creation = param
+		}
+		name := "dbbackuppolicybasic"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		opt0 := creation
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableResourceCreation: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/16"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
+			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/24"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		instance, err := rds.NewInstance(ctx, "instance", &rds.InstanceArgs{
+			Engine:          pulumi.String("MySQL"),
+			EngineVersion:   pulumi.String("5.6"),
+			InstanceType:    pulumi.String("rds.mysql.s1.small"),
+			InstanceStorage: pulumi.Int(10),
+			VswitchId:       defaultSwitch.ID(),
+			InstanceName:    pulumi.String(name),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = rds.NewBackupPolicy(ctx, "policy", &rds.BackupPolicyArgs{
+			InstanceId: instance.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -84,16 +149,16 @@ if name is None:
 default_zones = alicloud.get_zones(available_resource_creation=creation)
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/16")
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/24",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 instance = alicloud.rds.Instance("instance",
     engine="MySQL",
     engine_version="5.6",
-    instance_name=name,
-    instance_storage="10",
     instance_type="rds.mysql.s1.small",
-    vswitch_id=default_switch.id)
+    instance_storage=10,
+    vswitch_id=default_switch.id,
+    instance_name=name)
 policy = alicloud.rds.BackupPolicy("policy", instance_id=instance.id)
 ```
 
@@ -108,29 +173,24 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const creation = config.get("creation") || "Rds";
 const name = config.get("name") || "dbbackuppolicybasic";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: creation,
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/16",
 });
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
-    cidrBlock: "172.16.0.0/24",
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/16"});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
+    cidrBlock: "172.16.0.0/24",
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
 const instance = new alicloud.rds.Instance("instance", {
     engine: "MySQL",
     engineVersion: "5.6",
-    instanceName: name,
-    instanceStorage: 10,
     instanceType: "rds.mysql.s1.small",
+    instanceStorage: "10",
     vswitchId: defaultSwitch.id,
+    instanceName: name,
 });
-const policy = new alicloud.rds.BackupPolicy("policy", {
-    instanceId: instance.id,
-});
+const policy = new alicloud.rds.BackupPolicy("policy", {instanceId: instance.id});
 ```
 
 {{% /example %}}
@@ -143,19 +203,19 @@ const policy = new alicloud.rds.BackupPolicy("policy", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rds/#BackupPolicy">BackupPolicy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rds/#BackupPolicyArgs">BackupPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rds/#BackupPolicy">BackupPolicy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rds/#BackupPolicyArgs">BackupPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/rds/#pulumi_alicloud.rds.BackupPolicy">BackupPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>archive_backup_keep_count=None<span class="p">, </span>archive_backup_keep_policy=None<span class="p">, </span>archive_backup_retention_period=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>backup_time=None<span class="p">, </span>compress_type=None<span class="p">, </span>enable_backup_log=None<span class="p">, </span>high_space_usage_protection=None<span class="p">, </span>instance_id=None<span class="p">, </span>local_log_retention_hours=None<span class="p">, </span>local_log_retention_space=None<span class="p">, </span>log_backup=None<span class="p">, </span>log_backup_frequency=None<span class="p">, </span>log_backup_retention_period=None<span class="p">, </span>log_retention_period=None<span class="p">, </span>preferred_backup_periods=None<span class="p">, </span>preferred_backup_time=None<span class="p">, </span>retention_period=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/rds/#pulumi_alicloud.rds.BackupPolicy">BackupPolicy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">archive_backup_keep_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archive_backup_keep_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">archive_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compress_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_backup_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">high_space_usage_protection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_log_retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">local_log_retention_space</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_backup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_backup_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preferred_backup_periods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">preferred_backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#BackupPolicy">NewBackupPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#BackupPolicyArgs">BackupPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#BackupPolicy">BackupPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#BackupPolicy">NewBackupPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#BackupPolicyArgs">BackupPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#BackupPolicy">BackupPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.BackupPolicy.html">BackupPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.BackupPolicyArgs.html">BackupPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.BackupPolicy.html">BackupPolicy</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.BackupPolicyArgs.html">BackupPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -166,7 +226,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -235,7 +295,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -274,7 +334,7 @@ const policy = new alicloud.rds.BackupPolicy("policy", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -315,7 +375,6 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -323,214 +382,194 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archivebackupkeepcount_csharp">
 <a href="#archivebackupkeepcount_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archivebackupkeeppolicy_csharp">
 <a href="#archivebackupkeeppolicy_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archivebackupretentionperiod_csharp">
 <a href="#archivebackupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backupperiods_csharp">
 <a href="#backupperiods_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupretentionperiod_csharp">
 <a href="#backupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backuptime_csharp">
 <a href="#backuptime_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compresstype_csharp">
 <a href="#compresstype_csharp" style="color: inherit; text-decoration: inherit;">Compress<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablebackuplog_csharp">
 <a href="#enablebackuplog_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backup<wbr>Log</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="highspaceusageprotection_csharp">
 <a href="#highspaceusageprotection_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Space<wbr>Usage<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locallogretentionhours_csharp">
 <a href="#locallogretentionhours_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locallogretentionspace_csharp">
 <a href="#locallogretentionspace_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Space</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [5-50].
+    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="logbackup_csharp">
 <a href="#logbackup_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logbackupfrequency_csharp">
 <a href="#logbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logbackupretentionperiod_csharp">
 <a href="#logbackupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="logretentionperiod_csharp">
 <a href="#logretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferredbackupperiods_csharp">
 <a href="#preferredbackupperiods_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferredbackuptime_csharp">
 <a href="#preferredbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="retentionperiod_csharp">
 <a href="#retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -539,214 +578,194 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archivebackupkeepcount_go">
 <a href="#archivebackupkeepcount_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archivebackupkeeppolicy_go">
 <a href="#archivebackupkeeppolicy_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archivebackupretentionperiod_go">
 <a href="#archivebackupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backupperiods_go">
 <a href="#backupperiods_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupretentionperiod_go">
 <a href="#backupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backuptime_go">
 <a href="#backuptime_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compresstype_go">
 <a href="#compresstype_go" style="color: inherit; text-decoration: inherit;">Compress<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablebackuplog_go">
 <a href="#enablebackuplog_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backup<wbr>Log</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="highspaceusageprotection_go">
 <a href="#highspaceusageprotection_go" style="color: inherit; text-decoration: inherit;">High<wbr>Space<wbr>Usage<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locallogretentionhours_go">
 <a href="#locallogretentionhours_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locallogretentionspace_go">
 <a href="#locallogretentionspace_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Space</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [5-50].
+    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="logbackup_go">
 <a href="#logbackup_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logbackupfrequency_go">
 <a href="#logbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logbackupretentionperiod_go">
 <a href="#logbackupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="logretentionperiod_go">
 <a href="#logretentionperiod_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferredbackupperiods_go">
 <a href="#preferredbackupperiods_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferredbackuptime_go">
 <a href="#preferredbackuptime_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="retentionperiod_go">
 <a href="#retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -755,214 +774,194 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archivebackupkeepcount_nodejs">
 <a href="#archivebackupkeepcount_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Keep<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archivebackupkeeppolicy_nodejs">
 <a href="#archivebackupkeeppolicy_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archivebackupretentionperiod_nodejs">
 <a href="#archivebackupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backupperiods_nodejs">
 <a href="#backupperiods_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupretentionperiod_nodejs">
 <a href="#backupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backuptime_nodejs">
 <a href="#backuptime_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compresstype_nodejs">
 <a href="#compresstype_nodejs" style="color: inherit; text-decoration: inherit;">compress<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablebackuplog_nodejs">
 <a href="#enablebackuplog_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backup<wbr>Log</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="highspaceusageprotection_nodejs">
 <a href="#highspaceusageprotection_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Space<wbr>Usage<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locallogretentionhours_nodejs">
 <a href="#locallogretentionhours_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Log<wbr>Retention<wbr>Hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locallogretentionspace_nodejs">
 <a href="#locallogretentionspace_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Log<wbr>Retention<wbr>Space</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [5-50].
+    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="logbackup_nodejs">
 <a href="#logbackup_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logbackupfrequency_nodejs">
 <a href="#logbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logbackupretentionperiod_nodejs">
 <a href="#logbackupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="logretentionperiod_nodejs">
 <a href="#logretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferredbackupperiods_nodejs">
 <a href="#preferredbackupperiods_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferredbackuptime_nodejs">
 <a href="#preferredbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="retentionperiod_nodejs">
 <a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -971,223 +970,199 @@ The BackupPolicy resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archive_backup_keep_count_python">
 <a href="#archive_backup_keep_count_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archive_backup_keep_policy_python">
 <a href="#archive_backup_keep_policy_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="archive_backup_retention_period_python">
 <a href="#archive_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>retention_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backup_periods_python">
 <a href="#backup_periods_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_retention_period_python">
 <a href="#backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="backup_time_python">
 <a href="#backup_time_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compress_type_python">
 <a href="#compress_type_python" style="color: inherit; text-decoration: inherit;">compress_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_backup_log_python">
 <a href="#enable_backup_log_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backup_<wbr>log</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="high_space_usage_protection_python">
 <a href="#high_space_usage_protection_python" style="color: inherit; text-decoration: inherit;">high_<wbr>space_<wbr>usage_<wbr>protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="local_log_retention_hours_python">
 <a href="#local_log_retention_hours_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="local_log_retention_space_python">
 <a href="#local_log_retention_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>space</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [5-50].
+    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="log_backup_python">
 <a href="#log_backup_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="log_backup_frequency_python">
 <a href="#log_backup_frequency_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="log_backup_retention_period_python">
 <a href="#log_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>retention_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="log_retention_period_python">
 <a href="#log_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferred_backup_periods_python">
 <a href="#preferred_backup_periods_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preferred_backup_time_python">
 <a href="#preferred_backup_time_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="retention_period_python">
 <a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the BackupPolicy resource produces the following output properties:
-
 
 
 
@@ -1198,15 +1173,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1215,15 +1188,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1232,15 +1203,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1249,18 +1218,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1270,19 +1234,20 @@ Get an existing BackupPolicy resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rds/#BackupPolicyState">BackupPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rds/#BackupPolicy">BackupPolicy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rds/#BackupPolicyState">BackupPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rds/#BackupPolicy">BackupPolicy</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>archive_backup_keep_count=None<span class="p">, </span>archive_backup_keep_policy=None<span class="p">, </span>archive_backup_retention_period=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>backup_time=None<span class="p">, </span>compress_type=None<span class="p">, </span>enable_backup_log=None<span class="p">, </span>high_space_usage_protection=None<span class="p">, </span>instance_id=None<span class="p">, </span>local_log_retention_hours=None<span class="p">, </span>local_log_retention_space=None<span class="p">, </span>log_backup=None<span class="p">, </span>log_backup_frequency=None<span class="p">, </span>log_backup_retention_period=None<span class="p">, </span>log_retention_period=None<span class="p">, </span>preferred_backup_periods=None<span class="p">, </span>preferred_backup_time=None<span class="p">, </span>retention_period=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">archive_backup_keep_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archive_backup_keep_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">archive_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backup_periods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">compress_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_backup_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">high_space_usage_protection</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_log_retention_hours</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">local_log_retention_space</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_backup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">log_backup_frequency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_backup_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">log_retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">preferred_backup_periods</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">preferred_backup_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> BackupPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackupPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#BackupPolicyState">BackupPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#BackupPolicy">BackupPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackupPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#BackupPolicyState">BackupPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#BackupPolicy">BackupPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.BackupPolicy.html">BackupPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.BackupPolicyState.html">BackupPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.BackupPolicy.html">BackupPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.BackupPolicyState.html">BackupPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1384,7 +1349,6 @@ Get an existing BackupPolicy resource's state with the given name, ID, and optio
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1392,214 +1356,194 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_archivebackupkeepcount_csharp">
 <a href="#state_archivebackupkeepcount_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupkeeppolicy_csharp">
 <a href="#state_archivebackupkeeppolicy_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupretentionperiod_csharp">
 <a href="#state_archivebackupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backupperiods_csharp">
 <a href="#state_backupperiods_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backupretentionperiod_csharp">
 <a href="#state_backupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backuptime_csharp">
 <a href="#state_backuptime_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_compresstype_csharp">
 <a href="#state_compresstype_csharp" style="color: inherit; text-decoration: inherit;">Compress<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablebackuplog_csharp">
 <a href="#state_enablebackuplog_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backup<wbr>Log</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_highspaceusageprotection_csharp">
 <a href="#state_highspaceusageprotection_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Space<wbr>Usage<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_csharp">
 <a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locallogretentionhours_csharp">
 <a href="#state_locallogretentionhours_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locallogretentionspace_csharp">
 <a href="#state_locallogretentionspace_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Space</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [5-50].
+    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_logbackup_csharp">
 <a href="#state_logbackup_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logbackupfrequency_csharp">
 <a href="#state_logbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logbackupretentionperiod_csharp">
 <a href="#state_logbackupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_logretentionperiod_csharp">
 <a href="#state_logretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupperiods_csharp">
 <a href="#state_preferredbackupperiods_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackuptime_csharp">
 <a href="#state_preferredbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_retentionperiod_csharp">
 <a href="#state_retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1608,214 +1552,194 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_archivebackupkeepcount_go">
 <a href="#state_archivebackupkeepcount_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupkeeppolicy_go">
 <a href="#state_archivebackupkeeppolicy_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupretentionperiod_go">
 <a href="#state_archivebackupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backupperiods_go">
 <a href="#state_backupperiods_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backupretentionperiod_go">
 <a href="#state_backupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backuptime_go">
 <a href="#state_backuptime_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_compresstype_go">
 <a href="#state_compresstype_go" style="color: inherit; text-decoration: inherit;">Compress<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablebackuplog_go">
 <a href="#state_enablebackuplog_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backup<wbr>Log</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_highspaceusageprotection_go">
 <a href="#state_highspaceusageprotection_go" style="color: inherit; text-decoration: inherit;">High<wbr>Space<wbr>Usage<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
 <a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locallogretentionhours_go">
 <a href="#state_locallogretentionhours_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locallogretentionspace_go">
 <a href="#state_locallogretentionspace_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Log<wbr>Retention<wbr>Space</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [5-50].
+    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_logbackup_go">
 <a href="#state_logbackup_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logbackupfrequency_go">
 <a href="#state_logbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logbackupretentionperiod_go">
 <a href="#state_logbackupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_logretentionperiod_go">
 <a href="#state_logretentionperiod_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupperiods_go">
 <a href="#state_preferredbackupperiods_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackuptime_go">
 <a href="#state_preferredbackuptime_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_retentionperiod_go">
 <a href="#state_retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1824,214 +1748,194 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_archivebackupkeepcount_nodejs">
 <a href="#state_archivebackupkeepcount_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Keep<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupkeeppolicy_nodejs">
 <a href="#state_archivebackupkeeppolicy_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Keep<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_archivebackupretentionperiod_nodejs">
 <a href="#state_archivebackupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backupperiods_nodejs">
 <a href="#state_backupperiods_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backupretentionperiod_nodejs">
 <a href="#state_backupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backuptime_nodejs">
 <a href="#state_backuptime_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_compresstype_nodejs">
 <a href="#state_compresstype_nodejs" style="color: inherit; text-decoration: inherit;">compress<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablebackuplog_nodejs">
 <a href="#state_enablebackuplog_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backup<wbr>Log</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_highspaceusageprotection_nodejs">
 <a href="#state_highspaceusageprotection_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Space<wbr>Usage<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locallogretentionhours_nodejs">
 <a href="#state_locallogretentionhours_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Log<wbr>Retention<wbr>Hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locallogretentionspace_nodejs">
 <a href="#state_locallogretentionspace_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Log<wbr>Retention<wbr>Space</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [5-50].
+    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_logbackup_nodejs">
 <a href="#state_logbackup_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logbackupfrequency_nodejs">
 <a href="#state_logbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logbackupretentionperiod_nodejs">
 <a href="#state_logbackupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_logretentionperiod_nodejs">
 <a href="#state_logretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackupperiods_nodejs">
 <a href="#state_preferredbackupperiods_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preferredbackuptime_nodejs">
 <a href="#state_preferredbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_retentionperiod_nodejs">
 <a href="#state_retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2040,211 +1944,192 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_archive_backup_keep_count_python">
 <a href="#state_archive_backup_keep_count_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep count. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. When `archive_backup_keep_policy` is `ByMonth` Valid values: [1-31]. When `archive_backup_keep_policy` is `ByWeek` Valid values: [1-7].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_archive_backup_keep_policy_python">
 <a href="#state_archive_backup_keep_policy_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>keep_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance archive backup keep policy. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values are `ByMonth`, `Disable`, `KeepAll`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_archive_backup_retention_period_python">
 <a href="#state_archive_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>backup_<wbr>retention_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance archive backup retention days. Valid when the `enable_backup_log` is `true` and instance is mysql local disk. Valid values: [30-1095], and `archive_backup_retention_period` must larger than `backup_retention_period` 730.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backup_periods_python">
 <a href="#state_backup_periods_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_period&#39; has been deprecated from version 1.69.0. Use `preferred_backup_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backup_retention_period_python">
 <a href="#state_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance backup retention days. Valid values: [7-730]. Default to 7. But mysql local disk is unlimited.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_backup_time_python">
 <a href="#state_backup_time_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'preferred_backup_time' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;backup_time&#39; has been deprecated from version 1.69.0. Use `preferred_backup_time` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_compress_type_python">
 <a href="#state_compress_type_python" style="color: inherit; text-decoration: inherit;">compress_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compress type of instance policy. Valid values are `1`, `4`, `8`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enable_backup_log_python">
 <a href="#state_enable_backup_log_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backup_<wbr>log</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to backup instance log. Valid values are `true`, `false`, Default to `true`. Note: The 'Basic Edition' category Rds instance does not support setting log backup. [What is Basic Edition](https://www.alibabacloud.com/help/doc-detail/48980.htm).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_high_space_usage_protection_python">
 <a href="#state_high_space_usage_protection_python" style="color: inherit; text-decoration: inherit;">high_<wbr>space_<wbr>usage_<wbr>protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance high space usage protection policy. Valid when the `enable_backup_log` is `true`. Valid values are `Enable`, `Disable`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of instance that can run database.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_local_log_retention_hours_python">
 <a href="#state_local_log_retention_hours_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup local retention hours. Valid when the `enable_backup_log` is `true`. Valid values: [0-7*24].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_local_log_retention_space_python">
 <a href="#state_local_log_retention_space_python" style="color: inherit; text-decoration: inherit;">local_<wbr>log_<wbr>retention_<wbr>space</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [5-50].
+    <dd>{{% md %}}Instance log backup local retention space. Valid when the `enable_backup_log` is `true`. Valid values: [0-50].
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_log_backup_python">
 <a href="#state_log_backup_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.68.0, and use field 'enable_backup_log' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_backup&#39; has been deprecated from version 1.68.0. Use `enable_backup_log` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_log_backup_frequency_python">
 <a href="#state_log_backup_frequency_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance log backup frequency. Valid when the instance engine is `SQLServer`. Valid values are `LogInterval`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_log_backup_retention_period_python">
 <a href="#state_log_backup_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>retention_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Valid when the `enable_backup_log` is `1`. Valid values: [7-730]. Default to 7. It cannot be larger than `backup_retention_period`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_log_retention_period_python">
 <a href="#state_log_retention_period_python" style="color: inherit; text-decoration: inherit;">log_<wbr>retention_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'log_backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;log_retention_period&#39; has been deprecated from version 1.69.0. Use `log_backup_retention_period` instead{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preferred_backup_periods_python">
 <a href="#state_preferred_backup_periods_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>periods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}DB Instance backup period. Please set at least two days to ensure backing up at least twice a week. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preferred_backup_time_python">
 <a href="#state_preferred_backup_time_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DB instance backup time, in the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. Default to "02:00Z-03:00Z". China time is 8 hours behind it.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_retention_period_python">
 <a href="#state_retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version 1.69.0, and use field 'backup_retention_period' instead.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute &#39;retention_period&#39; has been deprecated from version 1.69.0. Use `backup_retention_period` instead{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2252,8 +2137,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+RDS backup policy can be imported using the id or instance id, e.g.
+
+```sh
+ $ pulumi import alicloud:rds/backupPolicy:BackupPolicy example "rm-12345678"
+```
 
 
 
@@ -2265,6 +2156,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

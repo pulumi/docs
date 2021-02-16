@@ -1,0 +1,34 @@
+name: "Scheduled jobs: Bucket cleanup"
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string.
+    # Run every day at 3:00PM UTC.
+    - cron:  '0 15 * * *'
+jobs:
+  all:
+    env:
+      GOPATH: ${{ github.workspace }}
+    name: Bucket cleanup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - uses: actions/setup-go@v2
+        with:
+          go-version: 1.13.x
+
+      - name: Install assume-role
+        run: go get -u github.com/remind101/assume-role
+
+      - name: Run make ci_bucket_cleanup
+        run: make ci_bucket_cleanup
+        env:
+            AWS_ACCESS_KEY_ID: ${{ secrets.CI_AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
+            PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+            SLACK_ACCESS_TOKEN: ${{ secrets.SLACK_ACCESS_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

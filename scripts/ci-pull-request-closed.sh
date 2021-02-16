@@ -2,14 +2,14 @@
 
 set -o errexit -o pipefail
 
+# This script handles closed pull requests by finding all of their associated site-preview
+# buckets and deleting them.
+
 # See if we have the requisite credentials. If not, we might be in a fork, so exit.
 if [ -z "${AWS_ACCESS_KEY_ID:-}" ] || [ -z "${AWS_SECRET_ACCESS_KEY:-}" ] || [ -z "${PULUMI_ACCESS_TOKEN:-}" ]; then
     echo "Missing secret tokens, possibly due to a forked PR. Exiting."
     exit
 fi
-
-# This script handles closed pull requests by finding all of their associated site-preview
-# buckets and deleting them.
 
 source ./scripts/ci-login.sh
 source ./scripts/common.sh
@@ -25,6 +25,7 @@ if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; th
         # Find all commits associated with the PR.
         pr_commits="$(curl \
             -s \
+            -H "Authorization: token ${GITHUB_TOKEN}" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${pr_number}/commits")"
 

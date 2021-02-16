@@ -119,7 +119,7 @@ The following code creates a new VPC using all default settings:
 import * as awsx from "@pulumi/awsx";
 
 // Allocate a new VPC with the default settings:
-const vpc = new awsx.ec2.Vpc("custom");
+const vpc = new awsx.ec2.Vpc("custom", {});
 
 // Export a few resulting fields to make them easy to use:
 export const vpcId = vpc.id;
@@ -199,7 +199,7 @@ The following sections show how to explicitly manage any or all of these setting
 Although the default CIDR block of `10.0.0.0/16` is reasonable most of the time, it is easy to override.
 
 > Classless Inter-Domain Routing (CIDR) is an Internet standard for specifying ranges of
-> IP addresses. Please see [RFC 4632](https://tools.ietf.org/html/rfc4632) for more details.
+> IP addresses. See [RFC 4632](https://tools.ietf.org/html/rfc4632) for more details.
 
 To set our VPC's CIDR block, pass a custom `cidrBlock` argument to `awsx.ec2.Vpc`'s constructor:
 
@@ -227,7 +227,7 @@ In addition to configuring the CIDR block for your entire VPC, you can optionall
 VPC's subnets. These must reside entirely within your VPC's CIDR block. If you do not explicitly specify ranges,
 traffic will be evenly partitioned between availability zones within the VPC CIDR block range provided.
 
-Please see [IP Addressing in Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html)
+See [IP Addressing in Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html)
 for information about the full range of IP address and CIDR configuration available for your VPC.
 
 ## Configuring Availability Zones for an AWS VPC
@@ -306,7 +306,7 @@ export const vpcPublicSubnetIds = vpc.publicSubnetIds;
 The `subnets` argument simply takes an array of subnet specifications. Each one can include this information:
 
 * `type`: A required type of subnet to create. There are three kinds available:
-    * A `public` subnet is is one whose traffic is routed to an
+    * A `public` subnet is one whose traffic is routed to an
     [Internet Gateway (IGW)](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html).
     * A `private` subnet is one that is configured to use a
     [NAT Gateway (NAT)](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html) so that it can reach the internet,
@@ -350,7 +350,7 @@ a particular size for each zone can be requested by passing in an appropriate `c
 This value can be provided for specific subnets you know the number of instances you want IP addresses for. The
 remaining IP addresses in the availability zone, if any, will be split over the subnets without a defined size.
 
-Please refer to [VPCs and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) for complete
+Refer to [VPCs and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) for complete
 information about how VPCs and subnets relate in AWS and the configuration options available to you.
 
 ## Configuring Internet and NAT Gateways for Subnets in a VPC
@@ -392,9 +392,7 @@ routed to in a round-robin fashion from the availability zones with NAT gateways
 
 ## Configuring Security Groups for a VPC
 
-All traffic in and out of a VPC is controlled by
-[Security Groups](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html), which act as virtual
-firewalls that limit inbound traffic to and outbound traffic from your VPC.
+A [security group](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) acts as a virtual firewall for your instance (e.g EC2) to control inbound and outbound traffic. Security groups act at the instance level, not the subnet level. Therefore, each instance in a subnet in your VPC can be assigned to a different set of security groups.
 
 For security groups, you add _rules_ that control traffic what traffic is permitted in the form of _ingress rules_ (for
 inbound traffic) and _egress rules_ (outbound traffic). In addition to specifying what network protocol and ports
@@ -413,7 +411,7 @@ import * as awsx from "@pulumi/awsx";
 const vpc = new awsx.ec2.Vpc("custom", { /*...*/ });
 
 // Allocate a security group and then a series of rules:
-const sg = new awsx.ec2.SecurityGroup("sg", { vpc });
+const sg = new awsx.ec2.SecurityGroup("webserver-sg", { vpc });
 
 // 1) inbound SSH traffic on port 22 from a specific IP address
 sg.createIngressRule("ssh-access", {
@@ -449,7 +447,7 @@ import * as awsx from "@pulumi/awsx";
 const vpc = new awsx.ec2.Vpc("custom", { /*...*/ });
 
 // Allocate a security group and then a series of rules:
-const sg = new awsx.ec2.SecurityGroup("sg", { vpc });
+const sg = new awsx.ec2.SecurityGroup("webserver-sg", { vpc });
 
 // 1) inbound SSH traffic on port 22 from a specific IP address
 sg.createIngressRule("ssh-access", {
@@ -473,8 +471,88 @@ sg.createEgressRule("outbound-access", {
 });
 ```
 
-For additional details about configuring security group rules, please see the
+For additional details about configuring security group rules, See the
 [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) documentation.
+
+## How to use your VPC, Security Group, and EC2 instance
+
+This example shows how to deploy an EC2 instance using a VPC and Security Group provisioned with the Crosswalk AWS component:
+
+```typescript
+import * as awsx from "@pulumi/awsx";
+import * as aws from "@pulumi/aws";
+import * as pulumi from "@pulumi/pulumi";
+
+// Allocate a new VPC using any of the above techniques.
+const vpc = new awsx.ec2.Vpc("custom", { /*...*/ });
+
+// Allocate a security group using the above techniques:
+const sg = new awsx.ec2.SecurityGroup("webserver-sg", { vpc });
+
+// t2.micro is available in the AWS free tier
+const size = "t2.micro";
+
+// Get the most recent Amazon linux ami:
+const ami = pulumi.output(aws.getAmi({
+    filters: [{
+        name: "name",
+        values: ["amzn-ami-hvm-*"],
+    }],
+    owners: ["137112412989"], // This owner ID is Amazon
+    mostRecent: true,
+}));
+
+const server = new aws.ec2.Instance("webserver-www", {
+    instanceType: size,
+    vpcSecurityGroupIds: [ sg.id ], // reference the security group resource above
+    subnetId: pulumi.output(vpc.publicSubnetIds)[0],  // reference the public subnet from the custom vpc above
+    ami: ami.id,
+});
+```
+
+If we run `pulumi up`, the `aws.ec2.Instance` will be provisioned using the _first_ public subnet from the `awsx.ec2.Vpc` component and the security group provisioned with the `awsx.ec2.SecurityGroup` component:
+
+```bash
+$ pulumi up
+Updating (dev):
+     Type                                    Name                    Status  
+ +   pulumi:pulumi:Stack                     crosswalk-dev           created
+ +   ├─ awsx:x:ec2:SecurityGroup             webserver-sg            created
+ +   │  └─ aws:ec2:SecurityGroup             webserver-sg            created
+ +   ├─ awsx:x:ec2:Vpc                       custom                  created
+ +   │  ├─ awsx:x:ec2:Subnet                 custom-public-1         created
+ +   │  │  ├─ aws:ec2:RouteTable             custom-public-1         created
+ +   │  │  ├─ aws:ec2:Subnet                 custom-public-1         created
+ +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-public-1         created
+ +   │  │  └─ aws:ec2:Route                  custom-public-1-ig      created
+ +   │  ├─ awsx:x:ec2:NatGateway             custom-1                created
+ +   │  │  ├─ aws:ec2:Eip                    custom-1                created
+ +   │  │  └─ aws:ec2:NatGateway             custom-1                created
+ +   │  ├─ awsx:x:ec2:Subnet                 custom-private-0        created
+ +   │  │  ├─ aws:ec2:RouteTable             custom-private-0        created
+ +   │  │  ├─ aws:ec2:Subnet                 custom-private-0        created
+ +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-private-0        created
+ +   │  │  └─ aws:ec2:Route                  custom-private-0-nat-0  created
+ +   │  ├─ awsx:x:ec2:Subnet                 custom-private-1        created
+ +   │  │  ├─ aws:ec2:RouteTable             custom-private-1        created
+ +   │  │  ├─ aws:ec2:Subnet                 custom-private-1        created
+ +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-private-1        created
+ +   │  │  └─ aws:ec2:Route                  custom-private-1-nat-1  created
+ +   │  ├─ awsx:x:ec2:Subnet                 custom-public-0         created
+ +   │  │  ├─ aws:ec2:RouteTable             custom-public-0         created
+ +   │  │  ├─ aws:ec2:Subnet                 custom-public-0         created
+ +   │  │  ├─ aws:ec2:RouteTableAssociation  custom-public-0         created
+ +   │  │  └─ aws:ec2:Route                  custom-public-0-ig      created
+ +   │  ├─ awsx:x:ec2:NatGateway             custom-0                created
+ +   │  │  ├─ aws:ec2:Eip                    custom-0                created
+ +   │  │  └─ aws:ec2:NatGateway             custom-0                created
+ +   │  ├─ awsx:x:ec2:InternetGateway        custom                  created
+ +   │  │  └─ aws:ec2:InternetGateway        custom                  created
+ +   │  └─ aws:ec2:Vpc                       custom                  created
+ +   └─ aws:ec2:Instance                     webserver-www           created
+Resources:
+    + 34 created
+```
 
 ## Setting Up a New VPC the Hard Way
 
@@ -482,7 +560,7 @@ The `awsx.ec2.Vpc` component encapsulates a lot of details, including subnets, r
 the VPC resource itself. The `aws.ec2` package, on the other hand, out of which `Vpc` is built, provides all of these
 raw resource so that you can code directly to the underlying AWS resource types, exposing every underlying capability.
 
-For information about configuring each of these resources, please refer to each type's API documentation:
+For information about configuring each of these resources, refer to each type's API documentation:
 
 * [Vpc]({{< relref "/docs/reference/pkg/aws/ec2/vpc" >}})
 * [Subnet]({{< relref "/docs/reference/pkg/aws/ec2/subnet" >}})
@@ -493,11 +571,11 @@ For information about configuring each of these resources, please refer to each 
 These resources can be independently allocated, just as with the `Vpc` class shown above. They will need to be
 connected together manually, however, which can provide greater flexibility but at a greater implementation cost.
 
-Please note that the constituent parts, in the form of these raw resources, are available as properties on the
+Note that the constituent parts, in the form of these raw resources, are available as properties on the
 resulting `Vpc` class. For instance, `internetGateway` will return the Internet Gateway object for a VPC.
 
 ## Additional VPC Resources
 
-For more information about VPCs, please read the following:
+For more information about VPCs, read the following:
 
 * [Amazon Virtual Private Cloud homepage](https://aws.amazon.com/vpc/)

@@ -13,6 +13,7 @@ meta_desc: "Explore the GetDatacenters function of the Hetzner Cloud package, in
 Provides a list of available Hetzner Cloud Datacenters.
 This resource may be useful to create highly available infrastructure, distributed across several datacenters.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -35,9 +36,9 @@ class MyStack : Stack
             var range = new { Value = rangeIndex };
             workers.Add(new HCloud.Server($"workers-{range.Value}", new HCloud.ServerArgs
             {
-                Datacenter = ds.Apply(ds => ds.Names)[range.Value],
                 Image = "debian-9",
                 ServerType = "cx31",
+                Datacenter = ds.Apply(ds => ds.Names)[range.Value],
             }));
         }
     }
@@ -60,9 +61,9 @@ ds = hcloud.get_datacenters()
 workers = []
 for range in [{"value": i} for i in range(0, 3)]:
     workers.append(hcloud.Server(f"workers-{range['value']}",
-        datacenter=ds.names[range["value"]],
         image="debian-9",
-        server_type="cx31"))
+        server_type="cx31",
+        datacenter=ds.names[range["value"]]))
 ```
 
 {{% /example %}}
@@ -73,13 +74,13 @@ for range in [{"value": i} for i in range(0, 3)]:
 import * as pulumi from "@pulumi/pulumi";
 import * as hcloud from "@pulumi/hcloud";
 
-const ds = pulumi.output(hcloud.getDatacenters({ async: true }));
-const workers: hcloud.Server[] = [];
-for (let i = 0; i < 3; i++) {
-    workers.push(new hcloud.Server(`workers-${i}`, {
-        datacenter: ds.apply(ds => ds.names[i]),
+const ds = hcloud.getDatacenters({});
+const workers: hcloud.Server[];
+for (const range = {value: 0}; range.value < 3; range.value++) {
+    workers.push(new hcloud.Server(`workers-${range.value}`, {
         image: "debian-9",
         serverType: "cx31",
+        datacenter: ds.then(ds => ds.names)[range.value],
     }));
 }
 ```
@@ -100,7 +101,7 @@ for (let i = 0; i < 3; i++) {
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_datacenters(</span>datacenter_ids=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_datacenters(</span><span class="nx">datacenter_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDatacentersResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -121,7 +122,6 @@ for (let i = 0; i < 3; i++) {
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -129,15 +129,14 @@ The following arguments are supported:
             title="Optional">
         <span id="datacenterids_csharp">
 <a href="#datacenterids_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of unique datacenter identifiers.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -146,15 +145,14 @@ The following arguments are supported:
             title="Optional">
         <span id="datacenterids_go">
 <a href="#datacenterids_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of unique datacenter identifiers.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -163,15 +161,14 @@ The following arguments are supported:
             title="Optional">
         <span id="datacenterids_nodejs">
 <a href="#datacenterids_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of unique datacenter identifiers.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -180,18 +177,14 @@ The following arguments are supported:
             title="Optional">
         <span id="datacenter_ids_python">
 <a href="#datacenter_ids_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of unique datacenter identifiers.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -202,7 +195,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -210,46 +202,44 @@ The following output properties are available:
             title="">
         <span id="descriptions_csharp">
 <a href="#descriptions_csharp" style="color: inherit; text-decoration: inherit;">Descriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of all datacenter descriptions.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of datacenter names.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="datacenterids_csharp">
 <a href="#datacenterids_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of unique datacenter identifiers.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -258,46 +248,44 @@ The following output properties are available:
             title="">
         <span id="descriptions_go">
 <a href="#descriptions_go" style="color: inherit; text-decoration: inherit;">Descriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of all datacenter descriptions.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of datacenter names.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="datacenterids_go">
 <a href="#datacenterids_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of unique datacenter identifiers.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -306,46 +294,44 @@ The following output properties are available:
             title="">
         <span id="descriptions_nodejs">
 <a href="#descriptions_nodejs" style="color: inherit; text-decoration: inherit;">descriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of all datacenter descriptions.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of datacenter names.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="datacenterids_nodejs">
 <a href="#datacenterids_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of unique datacenter identifiers.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -354,49 +340,44 @@ The following output properties are available:
             title="">
         <span id="descriptions_python">
 <a href="#descriptions_python" style="color: inherit; text-decoration: inherit;">descriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of all datacenter descriptions.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of datacenter names.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="datacenter_ids_python">
 <a href="#datacenter_ids_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}(list) List of unique datacenter identifiers.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -409,6 +390,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 </dl>
 

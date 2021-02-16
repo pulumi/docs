@@ -94,7 +94,93 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty"
+	"github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := pagerduty.NewUser(ctx, "example", &pagerduty.UserArgs{
+			Email: pulumi.String("125.greenholt.earline@graham.name"),
+		})
+		if err != nil {
+			return err
+		}
+		email, err := pagerduty.NewUserContactMethod(ctx, "email", &pagerduty.UserContactMethodArgs{
+			UserId:  example.ID(),
+			Type:    pulumi.String("email_contact_method"),
+			Address: pulumi.String("foo@bar.com"),
+			Label:   pulumi.String("Work"),
+		})
+		if err != nil {
+			return err
+		}
+		phone, err := pagerduty.NewUserContactMethod(ctx, "phone", &pagerduty.UserContactMethodArgs{
+			UserId:      example.ID(),
+			Type:        pulumi.String("phone_contact_method"),
+			CountryCode: pulumi.Int(1),
+			Address:     pulumi.String("2025550199"),
+			Label:       pulumi.String("Work"),
+		})
+		if err != nil {
+			return err
+		}
+		sms, err := pagerduty.NewUserContactMethod(ctx, "sms", &pagerduty.UserContactMethodArgs{
+			UserId:      example.ID(),
+			Type:        pulumi.String("sms_contact_method"),
+			CountryCode: pulumi.Int(1),
+			Address:     pulumi.String("2025550199"),
+			Label:       pulumi.String("Work"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewUserNotificationRule(ctx, "highUrgencyPhone", &pagerduty.UserNotificationRuleArgs{
+			UserId:              example.ID(),
+			StartDelayInMinutes: pulumi.Int(1),
+			Urgency:             pulumi.String("high"),
+			ContactMethod: &pagerduty.UserNotificationRuleContactMethodArgs{
+				Type: pulumi.String("phone_contact_method"),
+				Id:   phone.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewUserNotificationRule(ctx, "lowUrgencyEmail", &pagerduty.UserNotificationRuleArgs{
+			UserId:              example.ID(),
+			StartDelayInMinutes: pulumi.Int(1),
+			Urgency:             pulumi.String("low"),
+			ContactMethod: &pagerduty.UserNotificationRuleContactMethodArgs{
+				Type: pulumi.String("email_contact_method"),
+				Id:   email.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pagerduty.NewUserNotificationRule(ctx, "lowUrgencySms", &pagerduty.UserNotificationRuleArgs{
+			UserId:              example.ID(),
+			StartDelayInMinutes: pulumi.Int(10),
+			Urgency:             pulumi.String("low"),
+			ContactMethod: &pagerduty.UserNotificationRuleContactMethodArgs{
+				Type: pulumi.String("sms_contact_method"),
+				Id:   sms.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -111,39 +197,39 @@ email = pagerduty.UserContactMethod("email",
 phone = pagerduty.UserContactMethod("phone",
     user_id=example.id,
     type="phone_contact_method",
-    country_code="+1",
+    country_code=1,
     address="2025550199",
     label="Work")
 sms = pagerduty.UserContactMethod("sms",
     user_id=example.id,
     type="sms_contact_method",
-    country_code="+1",
+    country_code=1,
     address="2025550199",
     label="Work")
 high_urgency_phone = pagerduty.UserNotificationRule("highUrgencyPhone",
     user_id=example.id,
     start_delay_in_minutes=1,
     urgency="high",
-    contact_method={
-        "type": "phone_contact_method",
-        "id": phone.id,
-    })
+    contact_method=pagerduty.UserNotificationRuleContactMethodArgs(
+        type="phone_contact_method",
+        id=phone.id,
+    ))
 low_urgency_email = pagerduty.UserNotificationRule("lowUrgencyEmail",
     user_id=example.id,
     start_delay_in_minutes=1,
     urgency="low",
-    contact_method={
-        "type": "email_contact_method",
-        "id": email.id,
-    })
+    contact_method=pagerduty.UserNotificationRuleContactMethodArgs(
+        type="email_contact_method",
+        id=email.id,
+    ))
 low_urgency_sms = pagerduty.UserNotificationRule("lowUrgencySms",
     user_id=example.id,
     start_delay_in_minutes=10,
     urgency="low",
-    contact_method={
-        "type": "sms_contact_method",
-        "id": sms.id,
-    })
+    contact_method=pagerduty.UserNotificationRuleContactMethodArgs(
+        type="sms_contact_method",
+        id=sms.id,
+    ))
 ```
 
 {{% /example %}}
@@ -214,19 +300,19 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#UserNotificationRule">UserNotificationRule</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#UserNotificationRuleArgs">UserNotificationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#UserNotificationRule">UserNotificationRule</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#UserNotificationRuleArgs">UserNotificationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.UserNotificationRule">UserNotificationRule</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>contact_method=None<span class="p">, </span>start_delay_in_minutes=None<span class="p">, </span>urgency=None<span class="p">, </span>user_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_pagerduty/#pulumi_pagerduty.UserNotificationRule">UserNotificationRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_method</span><span class="p">:</span> <span class="nx">Optional[UserNotificationRuleContactMethodArgs]</span> = None<span class="p">, </span><span class="nx">start_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">urgency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#UserNotificationRule">NewUserNotificationRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#UserNotificationRuleArgs">UserNotificationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#UserNotificationRule">UserNotificationRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#UserNotificationRule">NewUserNotificationRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#UserNotificationRuleArgs">UserNotificationRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#UserNotificationRule">UserNotificationRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.UserNotificationRule.html">UserNotificationRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.UserNotificationRuleArgs.html">UserNotificationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.UserNotificationRule.html">UserNotificationRule</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.UserNotificationRuleArgs.html">UserNotificationRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -237,7 +323,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -306,7 +392,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -345,7 +431,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -386,7 +472,6 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -394,49 +479,44 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="contactmethod_csharp">
 <a href="#contactmethod_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="startdelayinminutes_csharp">
 <a href="#startdelayinminutes_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="urgency_csharp">
 <a href="#urgency_csharp" style="color: inherit; text-decoration: inherit;">Urgency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -445,49 +525,44 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="contactmethod_go">
 <a href="#contactmethod_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="startdelayinminutes_go">
 <a href="#startdelayinminutes_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="urgency_go">
 <a href="#urgency_go" style="color: inherit; text-decoration: inherit;">Urgency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -496,49 +571,44 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="contactmethod_nodejs">
 <a href="#contactmethod_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="startdelayinminutes_nodejs">
 <a href="#startdelayinminutes_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Delay<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="urgency_nodejs">
 <a href="#urgency_nodejs" style="color: inherit; text-decoration: inherit;">urgency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -547,58 +617,49 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="contact_method_python">
 <a href="#contact_method_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">Dict[User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method]</a></span>
+        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="start_delay_in_minutes_python">
 <a href="#start_delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">start_<wbr>delay_<wbr>in_<wbr>minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="urgency_python">
 <a href="#urgency_python" style="color: inherit; text-decoration: inherit;">urgency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the UserNotificationRule resource produces the following output properties:
-
 
 
 
@@ -609,15 +670,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -626,15 +685,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -643,15 +700,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -660,18 +715,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -681,19 +731,20 @@ Get an existing UserNotificationRule resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#UserNotificationRuleState">UserNotificationRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#UserNotificationRule">UserNotificationRule</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#UserNotificationRuleState">UserNotificationRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pagerduty/#UserNotificationRule">UserNotificationRule</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>contact_method=None<span class="p">, </span>start_delay_in_minutes=None<span class="p">, </span>urgency=None<span class="p">, </span>user_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_method</span><span class="p">:</span> <span class="nx">Optional[UserNotificationRuleContactMethodArgs]</span> = None<span class="p">, </span><span class="nx">start_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">urgency</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> UserNotificationRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserNotificationRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#UserNotificationRuleState">UserNotificationRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#UserNotificationRule">UserNotificationRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserNotificationRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#UserNotificationRuleState">UserNotificationRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#UserNotificationRule">UserNotificationRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.UserNotificationRule.html">UserNotificationRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..UserNotificationRuleState.html">UserNotificationRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.UserNotificationRule.html">UserNotificationRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty..UserNotificationRuleState.html">UserNotificationRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -795,7 +846,6 @@ Get an existing UserNotificationRule resource's state with the given name, ID, a
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -803,49 +853,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_contactmethod_csharp">
 <a href="#state_contactmethod_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_startdelayinminutes_csharp">
 <a href="#state_startdelayinminutes_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_urgency_csharp">
 <a href="#state_urgency_csharp" style="color: inherit; text-decoration: inherit;">Urgency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userid_csharp">
 <a href="#state_userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -854,49 +899,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_contactmethod_go">
 <a href="#state_contactmethod_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_startdelayinminutes_go">
 <a href="#state_startdelayinminutes_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_urgency_go">
 <a href="#state_urgency_go" style="color: inherit; text-decoration: inherit;">Urgency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userid_go">
 <a href="#state_userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -905,49 +945,44 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_contactmethod_nodejs">
 <a href="#state_contactmethod_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_startdelayinminutes_nodejs">
 <a href="#state_startdelayinminutes_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Delay<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_urgency_nodejs">
 <a href="#state_urgency_nodejs" style="color: inherit; text-decoration: inherit;">urgency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userid_nodejs">
 <a href="#state_userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -956,46 +991,42 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_contact_method_python">
 <a href="#state_contact_method_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usernotificationrulecontactmethod">Dict[User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method]</a></span>
+        <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_start_delay_in_minutes_python">
 <a href="#state_start_delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">start_<wbr>delay_<wbr>in_<wbr>minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_urgency_python">
 <a href="#state_urgency_python" style="color: inherit; text-decoration: inherit;">urgency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_user_id_python">
 <a href="#state_user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1004,11 +1035,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</h4>
@@ -1019,11 +1047,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#UserNotificationRuleContactMethodArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-pagerduty/sdk/go/pagerduty/?tab=doc#UserNotificationRuleContactMethodOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Inputs.UserNotificationRuleContactMethodArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Pagerduty/Pulumi.Pagerduty.Outputs.UserNotificationRuleContactMethod.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1033,27 +1060,24 @@ The following state arguments are supported:
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the referenced contact method.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of contact method. Can be `email_contact_method`, `phone_contact_method`, `push_notification_contact_method` or `sms_contact_method`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1062,27 +1086,24 @@ The following state arguments are supported:
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the referenced contact method.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of contact method. Can be `email_contact_method`, `phone_contact_method`, `push_notification_contact_method` or `sms_contact_method`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1091,27 +1112,24 @@ The following state arguments are supported:
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the referenced contact method.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of contact method. Can be `email_contact_method`, `phone_contact_method`, `push_notification_contact_method` or `sms_contact_method`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1120,31 +1138,32 @@ The following state arguments are supported:
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the referenced contact method.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of contact method. Can be `email_contact_method`, `phone_contact_method`, `push_notification_contact_method` or `sms_contact_method`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+User notification rules can be imported using the `user_id` and the `id`, e.g.
 
-
-
+```sh
+ $ pulumi import pagerduty:index/userNotificationRule:UserNotificationRule main PXPGF42:PPSCXAN
+```
 
 
 

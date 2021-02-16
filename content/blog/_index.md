@@ -4,5 +4,5 @@ meta_desc: Articles, resources, and posts on modern infrastructure as code best 
 outputs: ["html", "rss"]
 menu:
     header:
-        weight: 4
+        weight: 5
 ---

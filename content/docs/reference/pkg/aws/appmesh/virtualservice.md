@@ -1,8 +1,8 @@
 
 ---
 title: "VirtualService"
-title_tag: "Resource VirtualService | Module appmesh | Package AWS"
-meta_desc: "Explore the VirtualService resource of the appmesh module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS App Mesh virtual service resource."
+title_tag: "aws.appmesh.VirtualService"
+meta_desc: "Documentation for the aws.appmesh.VirtualService resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -85,13 +85,13 @@ import pulumi_aws as aws
 
 servicea = aws.appmesh.VirtualService("servicea",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
-    spec={
-        "provider": {
-            "virtualNode": {
-                "virtualNodeName": aws_appmesh_virtual_node["serviceb1"]["name"],
-            },
-        },
-    })
+    spec=aws.appmesh.VirtualServiceSpecArgs(
+        provider=aws.appmesh.VirtualServiceSpecProviderArgs(
+            virtual_node=aws.appmesh.VirtualServiceSpecProviderVirtualNodeArgs(
+                virtual_node_name=aws_appmesh_virtual_node["serviceb1"]["name"],
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -185,13 +185,13 @@ import pulumi_aws as aws
 
 servicea = aws.appmesh.VirtualService("servicea",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
-    spec={
-        "provider": {
-            "virtualRouter": {
-                "virtual_router_name": aws_appmesh_virtual_router["serviceb"]["name"],
-            },
-        },
-    })
+    spec=aws.appmesh.VirtualServiceSpecArgs(
+        provider=aws.appmesh.VirtualServiceSpecProviderArgs(
+            virtual_router=aws.appmesh.VirtualServiceSpecProviderVirtualRouterArgs(
+                virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -224,19 +224,19 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualService">VirtualService</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualServiceArgs">VirtualServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.VirtualService">VirtualService</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualServiceSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualService">NewVirtualService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualServiceArgs">VirtualServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualService">VirtualService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualService.html">VirtualService</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualServiceArgs.html">VirtualServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -247,7 +247,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -257,7 +257,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualServiceArgs">VirtualServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -316,7 +316,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -326,7 +326,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualServiceArgs">VirtualServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -355,7 +355,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -365,7 +365,7 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualServiceArgs.html">VirtualServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -388,12 +388,11 @@ const servicea = new aws.appmesh.VirtualService("servicea", {
 
 ## VirtualService Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualService resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The VirtualService resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -404,49 +403,54 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="meshname_csharp">
 <a href="#meshname_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual service.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="spec_csharp">
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="meshowner_csharp">
+<a href="#meshowner_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual service.
+    <dd>{{% md %}}The name to use for the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -455,49 +459,54 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="meshname_go">
 <a href="#meshname_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual service.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="spec_go">
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="meshowner_go">
+<a href="#meshowner_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual service.
+    <dd>{{% md %}}The name to use for the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -506,49 +515,54 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="meshname_nodejs">
 <a href="#meshname_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual service.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="spec_nodejs">
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="meshowner_nodejs">
+<a href="#meshowner_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual service.
+    <dd>{{% md %}}The name to use for the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -557,58 +571,59 @@ The VirtualService resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="mesh_name_python">
 <a href="#mesh_name_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual service.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="spec_python">
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespec">Dict[Virtual<wbr>Service<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mesh_owner_python">
+<a href="#mesh_owner_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual service.
+    <dd>{{% md %}}The name to use for the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the VirtualService resource produces the following output properties:
-
 
 
 
@@ -619,48 +634,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastupdateddate_csharp">
 <a href="#lastupdateddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual service.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="resourceowner_csharp">
+<a href="#resourceowner_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -669,48 +689,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastupdateddate_go">
 <a href="#lastupdateddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual service.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="resourceowner_go">
+<a href="#resourceowner_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -719,48 +744,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastupdateddate_nodejs">
 <a href="#lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual service.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="resourceowner_nodejs">
+<a href="#resourceowner_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -769,51 +799,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_updated_date_python">
 <a href="#last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual service.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="resource_owner_python">
+<a href="#resource_owner_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -823,19 +855,20 @@ Get an existing VirtualService resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualServiceState">VirtualServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#VirtualService">VirtualService</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualService</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>created_date=None<span class="p">, </span>last_updated_date=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[VirtualServiceSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> VirtualService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualServiceState">VirtualServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualService">VirtualService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualService.html">VirtualService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.VirtualServiceState.html">VirtualServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VirtualServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -937,7 +970,6 @@ Get an existing VirtualService resource's state with the given name, ID, and opt
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -945,82 +977,94 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createddate_csharp">
 <a href="#state_createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastupdateddate_csharp">
 <a href="#state_lastupdateddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_meshname_csharp">
 <a href="#state_meshname_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual service.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_meshowner_csharp">
+<a href="#state_meshowner_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual service.
+    <dd>{{% md %}}The name to use for the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourceowner_csharp">
+<a href="#state_resourceowner_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_csharp">
 <a href="#state_spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1029,82 +1073,94 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createddate_go">
 <a href="#state_createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastupdateddate_go">
 <a href="#state_lastupdateddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_meshname_go">
 <a href="#state_meshname_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual service.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_meshowner_go">
+<a href="#state_meshowner_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual service.
+    <dd>{{% md %}}The name to use for the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourceowner_go">
+<a href="#state_resourceowner_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_go">
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1113,82 +1169,94 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createddate_nodejs">
 <a href="#state_createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastupdateddate_nodejs">
 <a href="#state_lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_meshname_nodejs">
 <a href="#state_meshname_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual service.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_meshowner_nodejs">
+<a href="#state_meshowner_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual service.
+    <dd>{{% md %}}The name to use for the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourceowner_nodejs">
+<a href="#state_resourceowner_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_nodejs">
 <a href="#state_spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1197,85 +1265,94 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_created_date_python">
 <a href="#state_created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_last_updated_date_python">
 <a href="#state_last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mesh_name_python">
 <a href="#state_mesh_name_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual service.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mesh_owner_python">
+<a href="#state_mesh_owner_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual service.
+    <dd>{{% md %}}The name to use for the virtual service. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resource_owner_python">
+<a href="#state_resource_owner_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_python">
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespec">Dict[Virtual<wbr>Service<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#virtualservicespec">Virtual<wbr>Service<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual service specification to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1285,20 +1362,8 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="virtualservicespec">Virtual<wbr>Service<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualServiceSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualServiceSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualServiceSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualServiceSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualServiceSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualServiceSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1307,16 +1372,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="provider_csharp">
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1325,16 +1388,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="provider_go">
 <a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1343,16 +1404,14 @@ The following state arguments are supported:
             title="Optional">
         <span id="provider_nodejs">
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1361,34 +1420,16 @@ The following state arguments are supported:
             title="Optional">
         <span id="provider_python">
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovider">Dict[Virtual<wbr>Service<wbr>Spec<wbr>Provider]</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="virtualservicespecprovider">Virtual<wbr>Service<wbr>Spec<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualServiceSpecProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualServiceSpecProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualServiceSpecProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualServiceSpecProviderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualServiceSpecProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualServiceSpecProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1397,27 +1438,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="virtualnode_csharp">
 <a href="#virtualnode_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual node associated with a virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualrouter_csharp">
 <a href="#virtualrouter_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Router</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual router associated with a virtual service.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1426,27 +1464,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="virtualnode_go">
 <a href="#virtualnode_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}The virtual node associated with a virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualrouter_go">
 <a href="#virtualrouter_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Router</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router</a></span>
     </dt>
     <dd>{{% md %}}The virtual router associated with a virtual service.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1455,74 +1490,52 @@ The following state arguments are supported:
             title="Optional">
         <span id="virtualnode_nodejs">
 <a href="#virtualnode_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}The virtual node associated with a virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualrouter_nodejs">
 <a href="#virtualrouter_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Router</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router</a></span>
     </dt>
     <dd>{{% md %}}The virtual router associated with a virtual service.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualnode_python">
-<a href="#virtualnode_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
-</span> 
+        <span id="virtual_node_python">
+<a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Dict[Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node]</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual node associated with a virtual service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="virtualrouter_python">
-<a href="#virtualrouter_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Router</a>
-</span> 
+        <span id="virtual_router_python">
+<a href="#virtual_router_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>router</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Dict[Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router]</a></span>
+        <span class="property-type"><a href="#virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual router associated with a virtual service.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="virtualservicespecprovidervirtualnode">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Node</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualServiceSpecProviderVirtualNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualServiceSpecProviderVirtualNode">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualServiceSpecProviderVirtualNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualServiceSpecProviderVirtualNodeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualServiceSpecProviderVirtualNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualServiceSpecProviderVirtualNode.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1531,16 +1544,14 @@ The following state arguments are supported:
             title="Required">
         <span id="virtualnodename_csharp">
 <a href="#virtualnodename_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual node that is acting as a service provider.
+    <dd>{{% md %}}The name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1549,16 +1560,14 @@ The following state arguments are supported:
             title="Required">
         <span id="virtualnodename_go">
 <a href="#virtualnodename_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual node that is acting as a service provider.
+    <dd>{{% md %}}The name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1567,52 +1576,32 @@ The following state arguments are supported:
             title="Required">
         <span id="virtualnodename_nodejs">
 <a href="#virtualnodename_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual node that is acting as a service provider.
+    <dd>{{% md %}}The name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnodename_python">
-<a href="#virtualnodename_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node<wbr>Name</a>
-</span> 
+        <span id="virtual_node_name_python">
+<a href="#virtual_node_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual node that is acting as a service provider.
+    <dd>{{% md %}}The name of the virtual node that is acting as a service provider. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="virtualservicespecprovidervirtualrouter">Virtual<wbr>Service<wbr>Spec<wbr>Provider<wbr>Virtual<wbr>Router</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualServiceSpecProviderVirtualRouter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualServiceSpecProviderVirtualRouter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualServiceSpecProviderVirtualRouterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualServiceSpecProviderVirtualRouterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualServiceSpecProviderVirtualRouterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualServiceSpecProviderVirtualRouter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1621,16 +1610,14 @@ The following state arguments are supported:
             title="Required">
         <span id="virtualroutername_csharp">
 <a href="#virtualroutername_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Router<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router that is acting as a service provider.
+    <dd>{{% md %}}The name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1639,16 +1626,14 @@ The following state arguments are supported:
             title="Required">
         <span id="virtualroutername_go">
 <a href="#virtualroutername_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Router<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router that is acting as a service provider.
+    <dd>{{% md %}}The name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1657,16 +1642,14 @@ The following state arguments are supported:
             title="Required">
         <span id="virtualroutername_nodejs">
 <a href="#virtualroutername_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Router<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router that is acting as a service provider.
+    <dd>{{% md %}}The name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1675,20 +1658,24 @@ The following state arguments are supported:
             title="Required">
         <span id="virtual_router_name_python">
 <a href="#virtual_router_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>router_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router that is acting as a service provider.
+    <dd>{{% md %}}The name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+App Mesh virtual services can be imported using `mesh_name` together with the virtual service's `name`, e.g.
 
+```sh
+ $ pulumi import aws:appmesh/virtualService:VirtualService servicea simpleapp/servicea.simpleapp.local
+```
 
-
+ [1]/docs/providers/aws/index.html
 
 
 

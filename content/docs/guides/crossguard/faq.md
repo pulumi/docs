@@ -13,7 +13,7 @@ menu:
 
 The [Pulumi Policy SDK](https://github.com/pulumi/pulumi-policy) that allows you to express policies and using the local `--policy-pack` flag (as part of the Pulumi CLI) to enforce Policy Packs is also open source.
 
-Enforcing Policy Packs across an organization and viewing Policy Pack results in the Pulumi Console are part of Pulumi CrossGuard and are only available to preview for Team Pro and Enterprise organizations.
+Enforcing Policy Packs across an organization and viewing Policy Pack results in the Pulumi Console are part of Pulumi CrossGuard and are available to [Pulumi Enterprise]({{< relref "/pricing" >}}) organizations.
 
 ## How do Policy Packs enforced by the service interact with Policy Packs specified by the local Policy Pack flag?
 
@@ -65,7 +65,7 @@ A version can only be used one time and once published the version can never be 
 
 ## How are secrets handled in policies?
 
-Encrypted [secrets]({{< relref "/docs/intro/concepts/programming-model#secrets" >}}) are decrypted during previews and updates. Any policy that is run against a stack can access the values in plaintext. It is up to you to treat these values sensitively and only run policies that you trust.
+Encrypted [secrets]({{< relref "/docs/intro/concepts/secrets#secrets" >}}) are decrypted during previews and updates. Any policy that is run against a stack can access the values in plaintext. It is up to you to treat these values sensitively and only run policies that you trust.
 
 ## How are dependencies managed with Python Policy Packs?
 

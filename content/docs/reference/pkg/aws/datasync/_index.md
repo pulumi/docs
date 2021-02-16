@@ -13,6 +13,7 @@ Explore the resources and functions of the datasync module in the AWS package.
 <ul class="api">
     <li><a href="agent" title="Agent"><span class="symbol resource"></span>Agent</a></li>
     <li><a href="efslocation" title="EfsLocation"><span class="symbol resource"></span>EfsLocation</a></li>
+    <li><a href="locationfsxwindows" title="LocationFsxWindows"><span class="symbol resource"></span>LocationFsxWindows</a></li>
     <li><a href="locationsmb" title="LocationSmb"><span class="symbol resource"></span>LocationSmb</a></li>
     <li><a href="nfslocation" title="NfsLocation"><span class="symbol resource"></span>NfsLocation</a></li>
     <li><a href="s3location" title="S3Location"><span class="symbol resource"></span>S3Location</a></li>
@@ -28,24 +29,6 @@ Explore the resources and functions of the datasync module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.html" title="Pulumi.Aws.DataSync">Pulumi.Aws.DataSync</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/datasync?tab=doc#" title="aws/datasync">aws/datasync</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/datasync/#" title="@pulumi/aws/datasync">@pulumi/aws/datasync</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/datasync" title="pulumi_aws/datasync">pulumi_aws/datasync</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

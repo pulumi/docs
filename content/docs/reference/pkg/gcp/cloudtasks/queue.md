@@ -1,8 +1,8 @@
 
 ---
 title: "Queue"
-title_tag: "Resource Queue | Module cloudtasks | Package GCP"
-meta_desc: "Explore the Queue resource of the cloudtasks module, including examples, input properties, output properties, lookup functions, and supporting types. A named resource to which messages are sent by publishers."
+title_tag: "gcp.cloudtasks.Queue"
+meta_desc: "Documentation for the gcp.cloudtasks.Queue resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,11 @@ meta_desc: "Explore the Queue resource of the cloudtasks module, including examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A named resource to which messages are sent by publishers.
+
+> **Warning:** This resource requires an App Engine application to be created on the
+project you're provisioning it on. If you haven't already enabled it, you
+can create a `gcp.appengine.Application` resource to do so. This
+resource's location will be the same as the App Engine location specified.
 
 {{% examples %}}
 ## Example Usage
@@ -42,13 +47,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cloudtasks.NewQueue(ctx, "default", &cloudtasks.QueueArgs{
+		_, err := cloudtasks.NewQueue(ctx, "_default", &cloudtasks.QueueArgs{
 			Location: pulumi.String("us-central1"),
 		})
 		if err != nil {
@@ -84,6 +89,155 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
 
 {{% /example %}}
 
+### Cloud Tasks Queue Advanced
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var advancedConfiguration = new Gcp.CloudTasks.Queue("advancedConfiguration", new Gcp.CloudTasks.QueueArgs
+        {
+            AppEngineRoutingOverride = new Gcp.CloudTasks.Inputs.QueueAppEngineRoutingOverrideArgs
+            {
+                Instance = "test",
+                Service = "worker",
+                Version = "1.0",
+            },
+            Location = "us-central1",
+            RateLimits = new Gcp.CloudTasks.Inputs.QueueRateLimitsArgs
+            {
+                MaxConcurrentDispatches = 3,
+                MaxDispatchesPerSecond = 2,
+            },
+            RetryConfig = new Gcp.CloudTasks.Inputs.QueueRetryConfigArgs
+            {
+                MaxAttempts = 5,
+                MaxBackoff = "3s",
+                MaxDoublings = 1,
+                MaxRetryDuration = "4s",
+                MinBackoff = "2s",
+            },
+            StackdriverLoggingConfig = new Gcp.CloudTasks.Inputs.QueueStackdriverLoggingConfigArgs
+            {
+                SamplingRatio = 0.9,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudtasks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudtasks.NewQueue(ctx, "advancedConfiguration", &cloudtasks.QueueArgs{
+			AppEngineRoutingOverride: &cloudtasks.QueueAppEngineRoutingOverrideArgs{
+				Instance: pulumi.String("test"),
+				Service:  pulumi.String("worker"),
+				Version:  pulumi.String("1.0"),
+			},
+			Location: pulumi.String("us-central1"),
+			RateLimits: &cloudtasks.QueueRateLimitsArgs{
+				MaxConcurrentDispatches: pulumi.Int(3),
+				MaxDispatchesPerSecond:  pulumi.Float64(2),
+			},
+			RetryConfig: &cloudtasks.QueueRetryConfigArgs{
+				MaxAttempts:      pulumi.Int(5),
+				MaxBackoff:       pulumi.String("3s"),
+				MaxDoublings:     pulumi.Int(1),
+				MaxRetryDuration: pulumi.String("4s"),
+				MinBackoff:       pulumi.String("2s"),
+			},
+			StackdriverLoggingConfig: &cloudtasks.QueueStackdriverLoggingConfigArgs{
+				SamplingRatio: pulumi.Float64(0.9),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+advanced_configuration = gcp.cloudtasks.Queue("advancedConfiguration",
+    app_engine_routing_override=gcp.cloudtasks.QueueAppEngineRoutingOverrideArgs(
+        instance="test",
+        service="worker",
+        version="1.0",
+    ),
+    location="us-central1",
+    rate_limits=gcp.cloudtasks.QueueRateLimitsArgs(
+        max_concurrent_dispatches=3,
+        max_dispatches_per_second=2,
+    ),
+    retry_config=gcp.cloudtasks.QueueRetryConfigArgs(
+        max_attempts=5,
+        max_backoff="3s",
+        max_doublings=1,
+        max_retry_duration="4s",
+        min_backoff="2s",
+    ),
+    stackdriver_logging_config=gcp.cloudtasks.QueueStackdriverLoggingConfigArgs(
+        sampling_ratio=0.9,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const advancedConfiguration = new gcp.cloudtasks.Queue("advanced_configuration", {
+    appEngineRoutingOverride: {
+        instance: "test",
+        service: "worker",
+        version: "1.0",
+    },
+    location: "us-central1",
+    rateLimits: {
+        maxConcurrentDispatches: 3,
+        maxDispatchesPerSecond: 2,
+    },
+    retryConfig: {
+        maxAttempts: 5,
+        maxBackoff: "3s",
+        maxDoublings: 1,
+        maxRetryDuration: "4s",
+        minBackoff: "2s",
+    },
+    stackdriverLoggingConfig: {
+        samplingRatio: 0.9,
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -92,19 +246,19 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudtasks/#Queue">Queue</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudtasks/#QueueArgs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudtasks/#Queue">Queue</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>app_engine_routing_override=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>rate_limits=None<span class="p">, </span>retry_config=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_routing_override</span><span class="p">:</span> <span class="nx">Optional[QueueAppEngineRoutingOverrideArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[QueueRateLimitsArgs]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[QueueRetryConfigArgs]</span> = None<span class="p">, </span><span class="nx">stackdriver_logging_config</span><span class="p">:</span> <span class="nx">Optional[QueueStackdriverLoggingConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#Queue">NewQueue</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueArgs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewQueue</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Queue</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Queue.html">Queue</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.QueueArgs.html">QueueArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Queue</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">QueueArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -115,7 +269,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -125,7 +279,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudtasks/#QueueArgs">QueueArgs</a></span>
+        <span class="property-type"><a href="#inputs">QueueArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -174,7 +328,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -184,7 +338,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -194,7 +348,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueArgs">QueueArgs</a></span>
+        <span class="property-type"><a href="#inputs">QueueArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -204,7 +358,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -223,7 +377,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -233,7 +387,7 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.QueueArgs.html">QueueArgs</a></span>
+        <span class="property-type"><a href="#inputs">QueueArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -256,12 +410,11 @@ const defaultQueue = new gcp.cloudtasks.Queue("default", {
 
 ## Queue Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Queue resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Queue resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -272,53 +425,50 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="appengineroutingoverride_csharp">
 <a href="#appengineroutingoverride_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Routing<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ratelimits_csharp">
 <a href="#ratelimits_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
@@ -328,23 +478,33 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retryconfig_csharp">
 <a href="#retryconfig_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stackdriverloggingconfig_csharp">
+<a href="#stackdriverloggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -353,53 +513,50 @@ smooth sudden large traffic spikes.  Structure is documented below.
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="appengineroutingoverride_go">
 <a href="#appengineroutingoverride_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Routing<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ratelimits_go">
 <a href="#ratelimits_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
     </dt>
@@ -409,23 +566,33 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retryconfig_go">
 <a href="#retryconfig_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stackdriverloggingconfig_go">
+<a href="#stackdriverloggingconfig_go" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -434,53 +601,50 @@ smooth sudden large traffic spikes.  Structure is documented below.
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="appengineroutingoverride_nodejs">
 <a href="#appengineroutingoverride_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Routing<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ratelimits_nodejs">
 <a href="#ratelimits_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
     </dt>
@@ -490,23 +654,33 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retryconfig_nodejs">
 <a href="#retryconfig_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stackdriverloggingconfig_nodejs">
+<a href="#stackdriverloggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">stackdriver<wbr>Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -515,55 +689,52 @@ smooth sudden large traffic spikes.  Structure is documented below.
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the queue
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="app_engine_routing_override_python">
 <a href="#app_engine_routing_override_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing_<wbr>override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">Dict[Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override]</a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queue name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rate_limits_python">
 <a href="#rate_limits_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">Dict[Queue<wbr>Rate<wbr>Limits]</a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches.
 The queue's actual dispatch rate is the result of:
@@ -571,32 +742,38 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retry_config_python">
 <a href="#retry_config_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">Dict[Queue<wbr>Retry<wbr>Config]</a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stackdriver_logging_config_python">
+<a href="#stackdriver_logging_config_python" style="color: inherit; text-decoration: inherit;">stackdriver_<wbr>logging_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Queue resource produces the following output properties:
-
 
 
 
@@ -607,15 +784,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -624,15 +799,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -641,15 +814,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -658,18 +829,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -679,19 +845,20 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudtasks/#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudtasks/#Queue">Queue</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">QueueState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Queue</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>app_engine_routing_override=None<span class="p">, </span>location=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>rate_limits=None<span class="p">, </span>retry_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_engine_routing_override</span><span class="p">:</span> <span class="nx">Optional[QueueAppEngineRoutingOverrideArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rate_limits</span><span class="p">:</span> <span class="nx">Optional[QueueRateLimitsArgs]</span> = None<span class="p">, </span><span class="nx">retry_config</span><span class="p">:</span> <span class="nx">Optional[QueueRetryConfigArgs]</span> = None<span class="p">, </span><span class="nx">stackdriver_logging_config</span><span class="p">:</span> <span class="nx">Optional[QueueStackdriverLoggingConfigArgs]</span> = None<span class="p">) -&gt;</span> Queue</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueue<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueState">QueueState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueue<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">QueueState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Queue</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Queue.html">Queue</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.QueueState.html">QueueState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Queue</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">QueueState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -793,7 +960,6 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -801,53 +967,50 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_appengineroutingoverride_csharp">
 <a href="#state_appengineroutingoverride_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Routing<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ratelimits_csharp">
 <a href="#state_ratelimits_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
@@ -857,23 +1020,33 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_retryconfig_csharp">
 <a href="#state_retryconfig_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_stackdriverloggingconfig_csharp">
+<a href="#state_stackdriverloggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -882,53 +1055,50 @@ smooth sudden large traffic spikes.  Structure is documented below.
             title="Optional">
         <span id="state_appengineroutingoverride_go">
 <a href="#state_appengineroutingoverride_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine<wbr>Routing<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ratelimits_go">
 <a href="#state_ratelimits_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
     </dt>
@@ -938,23 +1108,33 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_retryconfig_go">
 <a href="#state_retryconfig_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_stackdriverloggingconfig_go">
+<a href="#state_stackdriverloggingconfig_go" style="color: inherit; text-decoration: inherit;">Stackdriver<wbr>Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -963,53 +1143,50 @@ smooth sudden large traffic spikes.  Structure is documented below.
             title="Optional">
         <span id="state_appengineroutingoverride_nodejs">
 <a href="#state_appengineroutingoverride_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine<wbr>Routing<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the queue
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The queue name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ratelimits_nodejs">
 <a href="#state_ratelimits_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits</a></span>
     </dt>
@@ -1019,23 +1196,33 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_retryconfig_nodejs">
 <a href="#state_retryconfig_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_stackdriverloggingconfig_nodejs">
+<a href="#state_stackdriverloggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">stackdriver<wbr>Logging<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1044,55 +1231,52 @@ smooth sudden large traffic spikes.  Structure is documented below.
             title="Optional">
         <span id="state_app_engine_routing_override_python">
 <a href="#state_app_engine_routing_override_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine_<wbr>routing_<wbr>override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueappengineroutingoverride">Dict[Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override]</a></span>
+        <span class="property-type"><a href="#queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue  Structure is documented below.
+to App Engine tasks in this queue
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the queue
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The queue name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rate_limits_python">
 <a href="#state_rate_limits_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueratelimits">Dict[Queue<wbr>Rate<wbr>Limits]</a></span>
+        <span class="property-type"><a href="#queueratelimits">Queue<wbr>Rate<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rate limits for task dispatches.
 The queue's actual dispatch rate is the result of:
@@ -1100,26 +1284,33 @@ The queue's actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue's state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
 Unavailable) responses from the worker, high error rates, or to
-smooth sudden large traffic spikes.  Structure is documented below.
+smooth sudden large traffic spikes.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_retry_config_python">
 <a href="#state_retry_config_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queueretryconfig">Dict[Queue<wbr>Retry<wbr>Config]</a></span>
+        <span class="property-type"><a href="#queueretryconfig">Queue<wbr>Retry<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings that determine the retry behavior.  Structure is documented below.
+    <dd>{{% md %}}Settings that determine the retry behavior.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_stackdriver_logging_config_python">
+<a href="#state_stackdriver_logging_config_python" style="color: inherit; text-decoration: inherit;">stackdriver_<wbr>logging_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration options for writing logs to Stackdriver Logging.
+Structure is documented below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1129,20 +1320,8 @@ smooth sudden large traffic spikes.  Structure is documented below.
 ## Supporting Types
 
 
+
 <h4 id="queueappengineroutingoverride">Queue<wbr>App<wbr>Engine<wbr>Routing<wbr>Override</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#QueueAppEngineRoutingOverride">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#QueueAppEngineRoutingOverride">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueAppEngineRoutingOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueAppEngineRoutingOverrideOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Inputs.QueueAppEngineRoutingOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Outputs.QueueAppEngineRoutingOverride.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1151,53 +1330,48 @@ smooth sudden large traffic spikes.  Structure is documented below.
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The host that the task is sent to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App instance.
 By default, the task is sent to an instance which is available when the task is attempted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App service.
 By default, the task is sent to the service which is the default service when the task is attempted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version.
 By default, the task is sent to the version which is the default version when the task is attempted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1206,53 +1380,48 @@ By default, the task is sent to the version which is the default version when th
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The host that the task is sent to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App instance.
 By default, the task is sent to an instance which is available when the task is attempted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App service.
 By default, the task is sent to the service which is the default service when the task is attempted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version.
 By default, the task is sent to the version which is the default version when the task is attempted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1261,53 +1430,48 @@ By default, the task is sent to the version which is the default version when th
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The host that the task is sent to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App instance.
 By default, the task is sent to an instance which is available when the task is attempted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App service.
 By default, the task is sent to the service which is the default service when the task is attempted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App version.
 By default, the task is sent to the version which is the default version when the task is attempted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1316,71 +1480,50 @@ By default, the task is sent to the version which is the default version when th
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The host that the task is sent to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App instance.
 By default, the task is sent to an instance which is available when the task is attempted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App service.
 By default, the task is sent to the service which is the default service when the task is attempted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App version.
 By default, the task is sent to the version which is the default version when the task is attempted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="queueratelimits">Queue<wbr>Rate<wbr>Limits</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#QueueRateLimits">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#QueueRateLimits">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueRateLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueRateLimitsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Inputs.QueueRateLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Outputs.QueueRateLimits.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1389,9 +1532,9 @@ By default, the task is sent to the version which is the default version when th
             title="Optional">
         <span id="maxburstsize_csharp">
 <a href="#maxburstsize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 The max burst size.
@@ -1400,36 +1543,32 @@ in the queue and the rate is high. This field allows the queue to have a high
 rate so processing starts shortly after a task is enqueued, but still limits
 resource usage when many tasks are enqueued in a short period of time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentdispatches_csharp">
 <a href="#maxconcurrentdispatches_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Dispatches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to
 be dispatched for this queue. After this threshold has been
 reached, Cloud Tasks stops dispatching tasks until the number of
 concurrent requests decreases.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdispatchespersecond_csharp">
 <a href="#maxdispatchespersecond_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Dispatches<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
 If unspecified when the queue is created, Cloud Tasks will pick the default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1438,9 +1577,9 @@ If unspecified when the queue is created, Cloud Tasks will pick the default.
             title="Optional">
         <span id="maxburstsize_go">
 <a href="#maxburstsize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 The max burst size.
@@ -1449,36 +1588,32 @@ in the queue and the rate is high. This field allows the queue to have a high
 rate so processing starts shortly after a task is enqueued, but still limits
 resource usage when many tasks are enqueued in a short period of time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentdispatches_go">
 <a href="#maxconcurrentdispatches_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Dispatches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to
 be dispatched for this queue. After this threshold has been
 reached, Cloud Tasks stops dispatching tasks until the number of
 concurrent requests decreases.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdispatchespersecond_go">
 <a href="#maxdispatchespersecond_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Dispatches<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
 If unspecified when the queue is created, Cloud Tasks will pick the default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1487,9 +1622,9 @@ If unspecified when the queue is created, Cloud Tasks will pick the default.
             title="Optional">
         <span id="maxburstsize_nodejs">
 <a href="#maxburstsize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Burst<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}-
 The max burst size.
@@ -1498,47 +1633,43 @@ in the queue and the rate is high. This field allows the queue to have a high
 rate so processing starts shortly after a task is enqueued, but still limits
 resource usage when many tasks are enqueued in a short period of time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentdispatches_nodejs">
 <a href="#maxconcurrentdispatches_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Dispatches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to
 be dispatched for this queue. After this threshold has been
 reached, Cloud Tasks stops dispatching tasks until the number of
 concurrent requests decreases.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdispatchespersecond_nodejs">
 <a href="#maxdispatchespersecond_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Dispatches<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
 If unspecified when the queue is created, Cloud Tasks will pick the default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxburstsize_python">
-<a href="#maxburstsize_python" style="color: inherit; text-decoration: inherit;">max<wbr>Burst<wbr>Size</a>
-</span> 
+        <span id="max_burst_size_python">
+<a href="#max_burst_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>burst_<wbr>size</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 The max burst size.
@@ -1547,54 +1678,34 @@ in the queue and the rate is high. This field allows the queue to have a high
 rate so processing starts shortly after a task is enqueued, but still limits
 resource usage when many tasks are enqueued in a short period of time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconcurrentdispatches_python">
-<a href="#maxconcurrentdispatches_python" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Dispatches</a>
-</span> 
+        <span id="max_concurrent_dispatches_python">
+<a href="#max_concurrent_dispatches_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>dispatches</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent tasks that Cloud Tasks allows to
 be dispatched for this queue. After this threshold has been
 reached, Cloud Tasks stops dispatching tasks until the number of
 concurrent requests decreases.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxdispatchespersecond_python">
-<a href="#maxdispatchespersecond_python" style="color: inherit; text-decoration: inherit;">max<wbr>Dispatches<wbr>Per<wbr>Second</a>
-</span> 
+        <span id="max_dispatches_per_second_python">
+<a href="#max_dispatches_per_second_python" style="color: inherit; text-decoration: inherit;">max_<wbr>dispatches_<wbr>per_<wbr>second</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum rate at which tasks are dispatched from this queue.
 If unspecified when the queue is created, Cloud Tasks will pick the default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="queueretryconfig">Queue<wbr>Retry<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#QueueRetryConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#QueueRetryConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueRetryConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudtasks?tab=doc#QueueRetryConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Inputs.QueueRetryConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudTasks.Outputs.QueueRetryConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1603,9 +1714,9 @@ If unspecified when the queue is created, Cloud Tasks will pick the default.
             title="Optional">
         <span id="maxattempts_csharp">
 <a href="#maxattempts_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of attempts per task.
 Cloud Tasks will attempt the task maxAttempts times (that is, if
@@ -1615,41 +1726,38 @@ If unspecified when the queue is created, Cloud Tasks will pick
 the default.
 -1 indicates unlimited attempts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbackoff_csharp">
 <a href="#maxbackoff_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Backoff</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdoublings_csharp">
 <a href="#maxdoublings_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Doublings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time between retries will double maxDoublings times.
 A task's retry interval starts at minBackoff, then doubles maxDoublings times,
 then increases linearly, and finally retries retries at intervals of maxBackoff
 up to maxAttempts times.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxretryduration_csharp">
 <a href="#maxretryduration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retry<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If positive, maxRetryDuration specifies the time limit for
 retrying a failed task, measured from when the task was first
@@ -1658,23 +1766,20 @@ been attempted maxAttempts times, no further attempts will be
 made and the task will be deleted.
 If zero, then the task age is unlimited.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minbackoff_csharp">
 <a href="#minbackoff_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Backoff</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1683,9 +1788,9 @@ specifies that the task should be retried.
             title="Optional">
         <span id="maxattempts_go">
 <a href="#maxattempts_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of attempts per task.
 Cloud Tasks will attempt the task maxAttempts times (that is, if
@@ -1695,41 +1800,38 @@ If unspecified when the queue is created, Cloud Tasks will pick
 the default.
 -1 indicates unlimited attempts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbackoff_go">
 <a href="#maxbackoff_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Backoff</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdoublings_go">
 <a href="#maxdoublings_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Doublings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time between retries will double maxDoublings times.
 A task's retry interval starts at minBackoff, then doubles maxDoublings times,
 then increases linearly, and finally retries retries at intervals of maxBackoff
 up to maxAttempts times.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxretryduration_go">
 <a href="#maxretryduration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retry<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If positive, maxRetryDuration specifies the time limit for
 retrying a failed task, measured from when the task was first
@@ -1738,23 +1840,20 @@ been attempted maxAttempts times, no further attempts will be
 made and the task will be deleted.
 If zero, then the task age is unlimited.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minbackoff_go">
 <a href="#minbackoff_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Backoff</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1763,9 +1862,9 @@ specifies that the task should be retried.
             title="Optional">
         <span id="maxattempts_nodejs">
 <a href="#maxattempts_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of attempts per task.
 Cloud Tasks will attempt the task maxAttempts times (that is, if
@@ -1775,41 +1874,38 @@ If unspecified when the queue is created, Cloud Tasks will pick
 the default.
 -1 indicates unlimited attempts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbackoff_nodejs">
 <a href="#maxbackoff_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Backoff</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdoublings_nodejs">
 <a href="#maxdoublings_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Doublings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time between retries will double maxDoublings times.
 A task's retry interval starts at minBackoff, then doubles maxDoublings times,
 then increases linearly, and finally retries retries at intervals of maxBackoff
 up to maxAttempts times.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxretryduration_nodejs">
 <a href="#maxretryduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If positive, maxRetryDuration specifies the time limit for
 retrying a failed task, measured from when the task was first
@@ -1818,34 +1914,31 @@ been attempted maxAttempts times, no further attempts will be
 made and the task will be deleted.
 If zero, then the task age is unlimited.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minbackoff_nodejs">
 <a href="#minbackoff_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Backoff</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="maxattempts_python">
-<a href="#maxattempts_python" style="color: inherit; text-decoration: inherit;">max<wbr>Attempts</a>
-</span> 
+        <span id="max_attempts_python">
+<a href="#max_attempts_python" style="color: inherit; text-decoration: inherit;">max_<wbr>attempts</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of attempts per task.
 Cloud Tasks will attempt the task maxAttempts times (that is, if
@@ -1855,41 +1948,38 @@ If unspecified when the queue is created, Cloud Tasks will pick
 the default.
 -1 indicates unlimited attempts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxbackoff_python">
-<a href="#maxbackoff_python" style="color: inherit; text-decoration: inherit;">max<wbr>Backoff</a>
-</span> 
+        <span id="max_backoff_python">
+<a href="#max_backoff_python" style="color: inherit; text-decoration: inherit;">max_<wbr>backoff</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxdoublings_python">
-<a href="#maxdoublings_python" style="color: inherit; text-decoration: inherit;">max<wbr>Doublings</a>
-</span> 
+        <span id="max_doublings_python">
+<a href="#max_doublings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>doublings</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time between retries will double maxDoublings times.
 A task's retry interval starts at minBackoff, then doubles maxDoublings times,
 then increases linearly, and finally retries retries at intervals of maxBackoff
 up to maxAttempts times.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxretryduration_python">
-<a href="#maxretryduration_python" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Duration</a>
-</span> 
+        <span id="max_retry_duration_python">
+<a href="#max_retry_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>duration</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If positive, maxRetryDuration specifies the time limit for
 retrying a failed task, measured from when the task was first
@@ -1898,27 +1988,110 @@ been attempted maxAttempts times, no further attempts will be
 made and the task will be deleted.
 If zero, then the task age is unlimited.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="minbackoff_python">
-<a href="#minbackoff_python" style="color: inherit; text-decoration: inherit;">min<wbr>Backoff</a>
-</span> 
+        <span id="min_backoff_python">
+<a href="#min_backoff_python" style="color: inherit; text-decoration: inherit;">min_<wbr>backoff</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A task will be scheduled for retry between minBackoff and
 maxBackoff duration after it fails, if the queue's RetryConfig
 specifies that the task should be retried.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="queuestackdriverloggingconfig">Queue<wbr>Stackdriver<wbr>Logging<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="samplingratio_csharp">
+<a href="#samplingratio_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Ratio</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
+This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+default and means that no operations are logged.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="samplingratio_go">
+<a href="#samplingratio_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Ratio</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
+This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+default and means that no operations are logged.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="samplingratio_nodejs">
+<a href="#samplingratio_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Ratio</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
+This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+default and means that no operations are logged.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sampling_ratio_python">
+<a href="#sampling_ratio_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>ratio</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Specifies the fraction of operations to write to Stackdriver Logging.
+This field may contain any value between 0.0 and 1.0, inclusive. 0.0 is the
+default and means that no operations are logged.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+## Import
 
 
+Queue can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:cloudtasks/queue:Queue default projects/{{project}}/locations/{{location}}/queues/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:cloudtasks/queue:Queue default {{project}}/{{location}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudtasks/queue:Queue default {{location}}/{{name}}
+```
 
 
 
@@ -1930,6 +2103,6 @@ specifies that the task should be retried.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

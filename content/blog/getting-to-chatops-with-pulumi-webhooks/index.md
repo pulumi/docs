@@ -17,7 +17,7 @@ cloud native infrastructure.
 
 Pulumi Webhooks are available for the Team and Enterprise editions of
 Pulumi. If you're keen to try them out, start a trial of
-[Team Edition here](https://app.pulumi.com/site/organizations/add).
+[Team Edition here](https://app.pulumi.com/site/trial).
 <!--more-->
 
 ChatOps --- the idea of conversation-driven collaboration --- is an
@@ -142,13 +142,11 @@ That's it! As stacks are created, updated, and so on, the webhook
 handler will be notified and you can start building any custom actions
 you can think of.
 
-For our initial release, there are four kinds of webhook events. But
-we'll quickly be expanding coverage in the coming weeks.
+There are three kinds of webhook events.
 
 | **Event Type**                    | **Trigger**
 | --------------------------------- | ----------------------------------
 | `stack`                           | Fired whenever a stack is created or deleted within an organization.
-| `team`                            | Fired when a team is created, updated, or deleted within an organization.
 | `stack_update`                    | Fired when a stack is updated. (Be it from `pulumi up`, `pulumi refresh`, or `pulumi destroy`.)
 | `stack_preview`                   | Fired whenever changes to a stack  are previewed.
 

@@ -15,6 +15,7 @@ Use this data source to access information about an existing Key Vault Certifica
 > **Note:** All arguments including the secret value will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -152,7 +153,6 @@ export const certificateThumbprint = exampleCertificate.then(exampleCertificate 
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -160,38 +160,34 @@ The following arguments are supported:
             title="Required">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Key Vault instance where the Secret resides, available on the `azure.keyvault.KeyVault` Data Source / Resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Key Vault Secret.
+    <dd>{{% md %}}Specifies the name of the Key Vault Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the certificate to look up.  (Defaults to latest)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -200,38 +196,34 @@ The following arguments are supported:
             title="Required">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Key Vault instance where the Secret resides, available on the `azure.keyvault.KeyVault` Data Source / Resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Key Vault Secret.
+    <dd>{{% md %}}Specifies the name of the Key Vault Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the certificate to look up.  (Defaults to latest)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -240,38 +232,34 @@ The following arguments are supported:
             title="Required">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Key Vault instance where the Secret resides, available on the `azure.keyvault.KeyVault` Data Source / Resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Key Vault Secret.
+    <dd>{{% md %}}Specifies the name of the Key Vault Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the certificate to look up.  (Defaults to latest)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -280,41 +268,34 @@ The following arguments are supported:
             title="Required">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Key Vault instance where the Secret resides, available on the `azure.keyvault.KeyVault` Data Source / Resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Key Vault Secret.
+    <dd>{{% md %}}Specifies the name of the Key Vault Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the certificate to look up.  (Defaults to latest)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -325,7 +306,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -333,99 +313,103 @@ The following output properties are available:
             title="">
         <span id="certificatedata_csharp">
 <a href="#certificatedata_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="certificatedatabase64_csharp">
+<a href="#certificatedatabase64_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The raw Key Vault Certificate data represented as a base64 string.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="certificatepolicies_csharp">
 <a href="#certificatepolicies_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicy">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="secretid_csharp">
 <a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The ID of the associated Key Vault Secret.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="thumbprint_csharp">
 <a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The current version of the Key Vault Certificate.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -434,99 +418,103 @@ The following output properties are available:
             title="">
         <span id="certificatedata_go">
 <a href="#certificatedata_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="certificatedatabase64_go">
+<a href="#certificatedatabase64_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The raw Key Vault Certificate data represented as a base64 string.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="certificatepolicies_go">
 <a href="#certificatepolicies_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicy">[]Get<wbr>Certificate<wbr>Certificate<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="secretid_go">
 <a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The ID of the associated Key Vault Secret.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="thumbprint_go">
 <a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The current version of the Key Vault Certificate.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -535,99 +523,103 @@ The following output properties are available:
             title="">
         <span id="certificatedata_nodejs">
 <a href="#certificatedata_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="certificatedatabase64_nodejs">
+<a href="#certificatedatabase64_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The raw Key Vault Certificate data represented as a base64 string.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="certificatepolicies_nodejs">
 <a href="#certificatepolicies_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicy">Get<wbr>Certificate<wbr>Certificate<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="secretid_nodejs">
 <a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The ID of the associated Key Vault Secret.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="thumbprint_nodejs">
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The current version of the Key Vault Certificate.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -636,102 +628,103 @@ The following output properties are available:
             title="">
         <span id="certificate_data_python">
 <a href="#certificate_data_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="certificate_data_base64_python">
+<a href="#certificate_data_base64_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data_<wbr>base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The raw Key Vault Certificate data represented as a base64 string.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="certificate_policies_python">
 <a href="#certificate_policies_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicy">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicy">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="secret_id_python">
 <a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The ID of the associated Key Vault Secret.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="thumbprint_python">
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The current version of the Key Vault Certificate.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -753,7 +746,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -761,60 +753,54 @@ The following output properties are available:
             title="Required">
         <span id="issuerparameters_csharp">
 <a href="#issuerparameters_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keyproperties_csharp">
 <a href="#keyproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secretproperties_csharp">
 <a href="#secretproperties_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="x509certificateproperties_csharp">
 <a href="#x509certificateproperties_csharp" style="color: inherit; text-decoration: inherit;">X509Certificate<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `x509_certificate_properties` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifetimeactions_csharp">
 <a href="#lifetimeactions_csharp" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -823,60 +809,54 @@ The following output properties are available:
             title="Required">
         <span id="issuerparameters_go">
 <a href="#issuerparameters_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">[]Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keyproperties_go">
 <a href="#keyproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">[]Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secretproperties_go">
 <a href="#secretproperties_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">[]Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="x509certificateproperties_go">
 <a href="#x509certificateproperties_go" style="color: inherit; text-decoration: inherit;">X509Certificate<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">[]Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}An `x509_certificate_properties` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifetimeactions_go">
 <a href="#lifetimeactions_go" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">[]Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -885,125 +865,110 @@ The following output properties are available:
             title="Required">
         <span id="issuerparameters_nodejs">
 <a href="#issuerparameters_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keyproperties_nodejs">
 <a href="#keyproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property[]</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secretproperties_nodejs">
 <a href="#secretproperties_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property[]</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="x509certificateproperties_nodejs">
 <a href="#x509certificateproperties_nodejs" style="color: inherit; text-decoration: inherit;">x509Certificate<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property[]</a></span>
     </dt>
     <dd>{{% md %}}An `x509_certificate_properties` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lifetimeactions_nodejs">
 <a href="#lifetimeactions_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="issuerparameters_python">
-<a href="#issuerparameters_python" style="color: inherit; text-decoration: inherit;">issuer<wbr>Parameters</a>
-</span> 
+        <span id="issuer_parameters_python">
+<a href="#issuer_parameters_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>parameters</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyissuerparameter">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_properties_python">
 <a href="#key_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicykeyproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="secretproperties_python">
-<a href="#secretproperties_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Properties</a>
-</span> 
+        <span id="secret_properties_python">
+<a href="#secret_properties_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>properties</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicysecretproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="x509certificateproperties_python">
-<a href="#x509certificateproperties_python" style="color: inherit; text-decoration: inherit;">x509Certificate<wbr>Properties</a>
-</span> 
+        <span id="x509_certificate_properties_python">
+<a href="#x509_certificate_properties_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>certificate_<wbr>properties</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificateproperty">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `x509_certificate_properties` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="lifetimeactions_python">
-<a href="#lifetimeactions_python" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Actions</a>
-</span> 
+        <span id="lifetime_actions_python">
+<a href="#lifetime_actions_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>actions</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeaction">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getcertificatecertificatepolicyissuerparameter">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameter</h4>
 {{% choosable language nodejs %}}
@@ -1019,7 +984,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1027,16 +991,14 @@ The following output properties are available:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Key Vault Secret.
+    <dd>{{% md %}}Specifies the name of the Key Vault Certificate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1045,16 +1007,14 @@ The following output properties are available:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Key Vault Secret.
+    <dd>{{% md %}}Specifies the name of the Key Vault Certificate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1063,16 +1023,14 @@ The following output properties are available:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Key Vault Secret.
+    <dd>{{% md %}}Specifies the name of the Key Vault Certificate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1081,19 +1039,14 @@ The following output properties are available:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Key Vault Secret.
+    <dd>{{% md %}}Specifies the name of the Key Vault Certificate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getcertificatecertificatepolicykeyproperty">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Property</h4>
 {{% choosable language nodejs %}}
@@ -1109,7 +1062,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1117,49 +1069,44 @@ The following output properties are available:
             title="Required">
         <span id="exportable_csharp">
 <a href="#exportable_csharp" style="color: inherit; text-decoration: inherit;">Exportable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Certificate Exportable?
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keysize_csharp">
 <a href="#keysize_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Key used in the Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keytype_csharp">
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of Key, for example `RSA`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reusekey_csharp">
 <a href="#reusekey_csharp" style="color: inherit; text-decoration: inherit;">Reuse<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the key reusable?
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1168,49 +1115,44 @@ The following output properties are available:
             title="Required">
         <span id="exportable_go">
 <a href="#exportable_go" style="color: inherit; text-decoration: inherit;">Exportable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Certificate Exportable?
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keysize_go">
 <a href="#keysize_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Key used in the Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keytype_go">
 <a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of Key, for example `RSA`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reusekey_go">
 <a href="#reusekey_go" style="color: inherit; text-decoration: inherit;">Reuse<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the key reusable?
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1219,49 +1161,44 @@ The following output properties are available:
             title="Required">
         <span id="exportable_nodejs">
 <a href="#exportable_nodejs" style="color: inherit; text-decoration: inherit;">exportable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Certificate Exportable?
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keysize_nodejs">
 <a href="#keysize_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the Key used in the Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keytype_nodejs">
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of Key, for example `RSA`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reusekey_nodejs">
 <a href="#reusekey_nodejs" style="color: inherit; text-decoration: inherit;">reuse<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the key reusable?
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1270,52 +1207,44 @@ The following output properties are available:
             title="Required">
         <span id="exportable_python">
 <a href="#exportable_python" style="color: inherit; text-decoration: inherit;">exportable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Certificate Exportable?
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_size_python">
 <a href="#key_size_python" style="color: inherit; text-decoration: inherit;">key_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Key used in the Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_type_python">
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of Key, for example `RSA`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="reusekey_python">
-<a href="#reusekey_python" style="color: inherit; text-decoration: inherit;">reuse<wbr>Key</a>
-</span> 
+        <span id="reuse_key_python">
+<a href="#reuse_key_python" style="color: inherit; text-decoration: inherit;">reuse_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the key reusable?
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getcertificatecertificatepolicylifetimeaction">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action</h4>
 {{% choosable language nodejs %}}
@@ -1331,7 +1260,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1339,27 +1267,24 @@ The following output properties are available:
             title="Required">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="triggers_csharp">
 <a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1368,27 +1293,24 @@ The following output properties are available:
             title="Required">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">[]Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="triggers_go">
 <a href="#triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">[]Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1397,27 +1319,24 @@ The following output properties are available:
             title="Required">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="triggers_nodejs">
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger[]</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1426,30 +1345,24 @@ The following output properties are available:
             title="Required">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactionaction">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="triggers_python">
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicylifetimeactiontrigger">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getcertificatecertificatepolicylifetimeactionaction">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</h4>
 {{% choosable language nodejs %}}
@@ -1465,7 +1378,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1473,16 +1385,14 @@ The following output properties are available:
             title="Required">
         <span id="actiontype_csharp">
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of action to be performed when the lifetime trigger is triggerec.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1491,16 +1401,14 @@ The following output properties are available:
             title="Required">
         <span id="actiontype_go">
 <a href="#actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of action to be performed when the lifetime trigger is triggerec.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1509,37 +1417,30 @@ The following output properties are available:
             title="Required">
         <span id="actiontype_nodejs">
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of action to be performed when the lifetime trigger is triggerec.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="actiontype_python">
-<a href="#actiontype_python" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
-</span> 
+        <span id="action_type_python">
+<a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of action to be performed when the lifetime trigger is triggerec.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getcertificatecertificatepolicylifetimeactiontrigger">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</h4>
 {{% choosable language nodejs %}}
@@ -1555,7 +1456,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1563,27 +1463,24 @@ The following output properties are available:
             title="Required">
         <span id="daysbeforeexpiry_csharp">
 <a href="#daysbeforeexpiry_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Before<wbr>Expiry</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days before the Certificate expires that the action associated with this Trigger should run.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="lifetimepercentage_csharp">
 <a href="#lifetimepercentage_csharp" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage at which during the Certificates Lifetime the action associated with this Trigger should run.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1592,27 +1489,24 @@ The following output properties are available:
             title="Required">
         <span id="daysbeforeexpiry_go">
 <a href="#daysbeforeexpiry_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Before<wbr>Expiry</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days before the Certificate expires that the action associated with this Trigger should run.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="lifetimepercentage_go">
 <a href="#lifetimepercentage_go" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage at which during the Certificates Lifetime the action associated with this Trigger should run.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1621,59 +1515,50 @@ The following output properties are available:
             title="Required">
         <span id="daysbeforeexpiry_nodejs">
 <a href="#daysbeforeexpiry_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Before<wbr>Expiry</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days before the Certificate expires that the action associated with this Trigger should run.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="lifetimepercentage_nodejs">
 <a href="#lifetimepercentage_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage at which during the Certificates Lifetime the action associated with this Trigger should run.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="daysbeforeexpiry_python">
-<a href="#daysbeforeexpiry_python" style="color: inherit; text-decoration: inherit;">days<wbr>Before<wbr>Expiry</a>
-</span> 
+        <span id="days_before_expiry_python">
+<a href="#days_before_expiry_python" style="color: inherit; text-decoration: inherit;">days_<wbr>before_<wbr>expiry</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days before the Certificate expires that the action associated with this Trigger should run.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="lifetimepercentage_python">
-<a href="#lifetimepercentage_python" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Percentage</a>
-</span> 
+        <span id="lifetime_percentage_python">
+<a href="#lifetime_percentage_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>percentage</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage at which during the Certificates Lifetime the action associated with this Trigger should run.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getcertificatecertificatepolicysecretproperty">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Property</h4>
 {{% choosable language nodejs %}}
@@ -1689,7 +1574,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1697,16 +1581,14 @@ The following output properties are available:
             title="Required">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content-Type of the Certificate, for example `application/x-pkcs12` for a PFX or `application/x-pem-file` for a PEM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1715,16 +1597,14 @@ The following output properties are available:
             title="Required">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content-Type of the Certificate, for example `application/x-pkcs12` for a PFX or `application/x-pem-file` for a PEM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1733,16 +1613,14 @@ The following output properties are available:
             title="Required">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content-Type of the Certificate, for example `application/x-pkcs12` for a PFX or `application/x-pem-file` for a PEM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1751,19 +1629,14 @@ The following output properties are available:
             title="Required">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Content-Type of the Certificate, for example `application/x-pkcs12` for a PFX or `application/x-pem-file` for a PEM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getcertificatecertificatepolicyx509certificateproperty">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property</h4>
 {{% choosable language nodejs %}}
@@ -1779,7 +1652,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1787,60 +1659,54 @@ The following output properties are available:
             title="Required">
         <span id="extendedkeyusages_csharp">
 <a href="#extendedkeyusages_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Extended/Enhanced Key Usages.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keyusages_csharp">
 <a href="#keyusages_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of uses associated with this Key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subject_csharp">
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate's Subject.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subjectalternativenames_csharp">
 <a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">List&lt;Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="validityinmonths_csharp">
 <a href="#validityinmonths_csharp" style="color: inherit; text-decoration: inherit;">Validity<wbr>In<wbr>Months</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Certificates Validity Period in Months.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1849,60 +1715,54 @@ The following output properties are available:
             title="Required">
         <span id="extendedkeyusages_go">
 <a href="#extendedkeyusages_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Extended/Enhanced Key Usages.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keyusages_go">
 <a href="#keyusages_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of uses associated with this Key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subject_go">
 <a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate's Subject.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subjectalternativenames_go">
 <a href="#subjectalternativenames_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">[]Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="validityinmonths_go">
 <a href="#validityinmonths_go" style="color: inherit; text-decoration: inherit;">Validity<wbr>In<wbr>Months</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Certificates Validity Period in Months.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1911,125 +1771,110 @@ The following output properties are available:
             title="Required">
         <span id="extendedkeyusages_nodejs">
 <a href="#extendedkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Extended/Enhanced Key Usages.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keyusages_nodejs">
 <a href="#keyusages_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of uses associated with this Key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subject_nodejs">
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate's Subject.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subjectalternativenames_nodejs">
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name[]</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="validityinmonths_nodejs">
 <a href="#validityinmonths_nodejs" style="color: inherit; text-decoration: inherit;">validity<wbr>In<wbr>Months</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Certificates Validity Period in Months.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="extendedkeyusages_python">
-<a href="#extendedkeyusages_python" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usages</a>
-</span> 
+        <span id="extended_key_usages_python">
+<a href="#extended_key_usages_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>key_<wbr>usages</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Extended/Enhanced Key Usages.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="keyusages_python">
-<a href="#keyusages_python" style="color: inherit; text-decoration: inherit;">key<wbr>Usages</a>
-</span> 
+        <span id="key_usages_python">
+<a href="#key_usages_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usages</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of uses associated with this Key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subject_python">
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Certificate's Subject.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="subjectalternativenames_python">
-<a href="#subjectalternativenames_python" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
-</span> 
+        <span id="subject_alternative_names_python">
+<a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">List[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name]</a></span>
+        <span class="property-type"><a href="#getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">Sequence[Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="validityinmonths_python">
-<a href="#validityinmonths_python" style="color: inherit; text-decoration: inherit;">validity<wbr>In<wbr>Months</a>
-</span> 
+        <span id="validity_in_months_python">
+<a href="#validity_in_months_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>in_<wbr>months</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Certificates Validity Period in Months.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getcertificatecertificatepolicyx509certificatepropertysubjectalternativename">Get<wbr>Certificate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Property<wbr>Subject<wbr>Alternative<wbr>Name</h4>
 {{% choosable language nodejs %}}
@@ -2045,7 +1890,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2053,38 +1897,34 @@ The following output properties are available:
             title="Required">
         <span id="dnsnames_csharp">
 <a href="#dnsnames_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of alternative DNS names (FQDNs) identified by the Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="emails_csharp">
 <a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of email addresses identified by this Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="upns_csharp">
 <a href="#upns_csharp" style="color: inherit; text-decoration: inherit;">Upns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of User Principal Names identified by the Certificate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2093,38 +1933,34 @@ The following output properties are available:
             title="Required">
         <span id="dnsnames_go">
 <a href="#dnsnames_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of alternative DNS names (FQDNs) identified by the Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="emails_go">
 <a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of email addresses identified by this Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="upns_go">
 <a href="#upns_go" style="color: inherit; text-decoration: inherit;">Upns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of User Principal Names identified by the Certificate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2133,81 +1969,70 @@ The following output properties are available:
             title="Required">
         <span id="dnsnames_nodejs">
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of alternative DNS names (FQDNs) identified by the Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="emails_nodejs">
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses identified by this Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="upns_nodejs">
 <a href="#upns_nodejs" style="color: inherit; text-decoration: inherit;">upns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of User Principal Names identified by the Certificate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="dnsnames_python">
-<a href="#dnsnames_python" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
-</span> 
+        <span id="dns_names_python">
+<a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of alternative DNS names (FQDNs) identified by the Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="emails_python">
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses identified by this Certificate.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="upns_python">
 <a href="#upns_python" style="color: inherit; text-decoration: inherit;">upns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of User Principal Names identified by the Certificate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

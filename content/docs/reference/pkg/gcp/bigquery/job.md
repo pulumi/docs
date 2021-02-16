@@ -1,8 +1,8 @@
 
 ---
 title: "Job"
-title_tag: "Resource Job | Module bigquery | Package GCP"
-meta_desc: "Explore the Job resource of the bigquery module, including examples, input properties, output properties, lookup functions, and supporting types. Jobs are actions that BigQuery runs on your behalf to load data, export data, query data, or copy data."
+title_tag: "gcp.bigquery.Job"
+meta_desc: "Documentation for the gcp.bigquery.Job resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -12,6 +12,12 @@ meta_desc: "Explore the Job resource of the bigquery module, including examples,
 
 Jobs are actions that BigQuery runs on your behalf to load data, export data, query data, or copy data.
 Once a BigQuery job is created, it cannot be changed or deleted.
+
+To get more information about Job, see:
+
+* [API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/jobs)
+* How-to Guides
+    * [BigQuery Jobs Intro](https://cloud.google.com/bigquery/docs/jobs-overview)
 
 {{% examples %}}
 ## Example Usage
@@ -49,17 +55,17 @@ class MyStack : Stack
             Query = new Gcp.BigQuery.Inputs.JobQueryArgs
             {
                 Query = "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-                Destination_table = 
+                DestinationTable = new Gcp.BigQuery.Inputs.JobQueryDestinationTableArgs
                 {
-                    { "projectId", foo.Project },
-                    { "datasetId", foo.DatasetId },
-                    { "tableId", foo.TableId },
+                    ProjectId = foo.Project,
+                    DatasetId = foo.DatasetId,
+                    TableId = foo.TableId,
                 },
                 AllowLargeResults = true,
                 FlattenResults = true,
-                Script_options = 
+                ScriptOptions = new Gcp.BigQuery.Inputs.JobQueryScriptOptionsArgs
                 {
-                    { "keyResultStatement", "LAST" },
+                    KeyResultStatement = "LAST",
                 },
             },
         });
@@ -75,7 +81,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -99,20 +105,20 @@ func main() {
 		}
 		_, err = bigquery.NewJob(ctx, "job", &bigquery.JobArgs{
 			JobId: pulumi.String("job_query"),
-			Labels: pulumi.Map{
+			Labels: pulumi.StringMap{
 				"example-label": pulumi.String("example-value"),
 			},
 			Query: &bigquery.JobQueryArgs{
 				Query: pulumi.String("SELECT state FROM [lookerdata:cdc.project_tycho_reports]"),
-				Destination_table: pulumi.Map{
-					"projectId": foo.Project,
-					"datasetId": foo.DatasetId,
-					"tableId":   foo.TableId,
+				DestinationTable: &bigquery.JobQueryDestinationTableArgs{
+					ProjectId: foo.Project,
+					DatasetId: foo.DatasetId,
+					TableId:   foo.TableId,
 				},
 				AllowLargeResults: pulumi.Bool(true),
 				FlattenResults:    pulumi.Bool(true),
-				Script_options: pulumi.Map{
-					"keyResultStatement": pulumi.String("LAST"),
+				ScriptOptions: &bigquery.JobQueryScriptOptionsArgs{
+					KeyResultStatement: pulumi.String("LAST"),
 				},
 			},
 		})
@@ -144,19 +150,19 @@ job = gcp.bigquery.Job("job",
     labels={
         "example-label": "example-value",
     },
-    query={
-        "query": "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-        "destination_table": {
-            "project_id": foo.project,
-            "dataset_id": foo.dataset_id,
-            "table_id": foo.table_id,
-        },
-        "allowLargeResults": True,
-        "flattenResults": True,
-        "script_options": {
-            "keyResultStatement": "LAST",
-        },
-    })
+    query=gcp.bigquery.JobQueryArgs(
+        query="SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+        destination_table=gcp.bigquery.JobQueryDestinationTableArgs(
+            project_id=foo.project,
+            dataset_id=foo.dataset_id,
+            table_id=foo.table_id,
+        ),
+        allow_large_results=True,
+        flatten_results=True,
+        script_options=gcp.bigquery.JobQueryScriptOptionsArgs(
+            key_result_statement="LAST",
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -184,14 +190,14 @@ const job = new gcp.bigquery.Job("job", {
     },
     query: {
         query: "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-        destination_table: {
+        destinationTable: {
             projectId: foo.project,
             datasetId: foo.datasetId,
             tableId: foo.tableId,
         },
         allowLargeResults: true,
         flattenResults: true,
-        script_options: {
+        scriptOptions: {
             keyResultStatement: "LAST",
         },
     },
@@ -232,19 +238,19 @@ class MyStack : Stack
             Query = new Gcp.BigQuery.Inputs.JobQueryArgs
             {
                 Query = "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-                Destination_table = 
+                DestinationTable = new Gcp.BigQuery.Inputs.JobQueryDestinationTableArgs
                 {
-                    { "tableId", foo.Id },
+                    TableId = foo.Id,
                 },
-                Default_dataset = 
+                DefaultDataset = new Gcp.BigQuery.Inputs.JobQueryDefaultDatasetArgs
                 {
-                    { "datasetId", bar.Id },
+                    DatasetId = bar.Id,
                 },
                 AllowLargeResults = true,
                 FlattenResults = true,
-                Script_options = 
+                ScriptOptions = new Gcp.BigQuery.Inputs.JobQueryScriptOptionsArgs
                 {
-                    { "keyResultStatement", "LAST" },
+                    KeyResultStatement = "LAST",
                 },
             },
         });
@@ -260,7 +266,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -284,21 +290,21 @@ func main() {
 		}
 		_, err = bigquery.NewJob(ctx, "job", &bigquery.JobArgs{
 			JobId: pulumi.String("job_query"),
-			Labels: pulumi.Map{
+			Labels: pulumi.StringMap{
 				"example-label": pulumi.String("example-value"),
 			},
 			Query: &bigquery.JobQueryArgs{
 				Query: pulumi.String("SELECT state FROM [lookerdata:cdc.project_tycho_reports]"),
-				Destination_table: pulumi.Map{
-					"tableId": foo.ID(),
+				DestinationTable: &bigquery.JobQueryDestinationTableArgs{
+					TableId: foo.ID(),
 				},
-				Default_dataset: pulumi.Map{
-					"datasetId": bar.ID(),
+				DefaultDataset: &bigquery.JobQueryDefaultDatasetArgs{
+					DatasetId: bar.ID(),
 				},
 				AllowLargeResults: pulumi.Bool(true),
 				FlattenResults:    pulumi.Bool(true),
-				Script_options: pulumi.Map{
-					"keyResultStatement": pulumi.String("LAST"),
+				ScriptOptions: &bigquery.JobQueryScriptOptionsArgs{
+					KeyResultStatement: pulumi.String("LAST"),
 				},
 			},
 		})
@@ -330,20 +336,20 @@ job = gcp.bigquery.Job("job",
     labels={
         "example-label": "example-value",
     },
-    query={
-        "query": "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-        "destination_table": {
-            "table_id": foo.id,
-        },
-        "default_dataset": {
-            "dataset_id": bar.id,
-        },
-        "allowLargeResults": True,
-        "flattenResults": True,
-        "script_options": {
-            "keyResultStatement": "LAST",
-        },
-    })
+    query=gcp.bigquery.JobQueryArgs(
+        query="SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
+        destination_table=gcp.bigquery.JobQueryDestinationTableArgs(
+            table_id=foo.id,
+        ),
+        default_dataset=gcp.bigquery.JobQueryDefaultDatasetArgs(
+            dataset_id=bar.id,
+        ),
+        allow_large_results=True,
+        flatten_results=True,
+        script_options=gcp.bigquery.JobQueryScriptOptionsArgs(
+            key_result_statement="LAST",
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -371,15 +377,15 @@ const job = new gcp.bigquery.Job("job", {
     },
     query: {
         query: "SELECT state FROM [lookerdata:cdc.project_tycho_reports]",
-        destination_table: {
+        destinationTable: {
             tableId: foo.id,
         },
-        default_dataset: {
+        defaultDataset: {
             datasetId: bar.id,
         },
         allowLargeResults: true,
         flattenResults: true,
-        script_options: {
+        scriptOptions: {
             keyResultStatement: "LAST",
         },
     },
@@ -423,11 +429,11 @@ class MyStack : Stack
                 {
                     "gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv",
                 },
-                Destination_table = 
+                DestinationTable = new Gcp.BigQuery.Inputs.JobLoadDestinationTableArgs
                 {
-                    { "projectId", foo.Project },
-                    { "datasetId", foo.DatasetId },
-                    { "tableId", foo.TableId },
+                    ProjectId = foo.Project,
+                    DatasetId = foo.DatasetId,
+                    TableId = foo.TableId,
                 },
                 SkipLeadingRows = 1,
                 SchemaUpdateOptions = 
@@ -451,7 +457,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -475,17 +481,17 @@ func main() {
 		}
 		_, err = bigquery.NewJob(ctx, "job", &bigquery.JobArgs{
 			JobId: pulumi.String("job_load"),
-			Labels: pulumi.Map{
+			Labels: pulumi.StringMap{
 				"my_job": pulumi.String("load"),
 			},
 			Load: &bigquery.JobLoadArgs{
 				SourceUris: pulumi.StringArray{
 					pulumi.String("gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv"),
 				},
-				Destination_table: pulumi.Map{
-					"projectId": foo.Project,
-					"datasetId": foo.DatasetId,
-					"tableId":   foo.TableId,
+				DestinationTable: &bigquery.JobLoadDestinationTableArgs{
+					ProjectId: foo.Project,
+					DatasetId: foo.DatasetId,
+					TableId:   foo.TableId,
 				},
 				SkipLeadingRows: pulumi.Int(1),
 				SchemaUpdateOptions: pulumi.StringArray{
@@ -524,21 +530,21 @@ job = gcp.bigquery.Job("job",
     labels={
         "my_job": "load",
     },
-    load={
-        "sourceUris": ["gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv"],
-        "destination_table": {
-            "project_id": foo.project,
-            "dataset_id": foo.dataset_id,
-            "table_id": foo.table_id,
-        },
-        "skipLeadingRows": 1,
-        "schemaUpdateOptions": [
+    load=gcp.bigquery.JobLoadArgs(
+        source_uris=["gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv"],
+        destination_table=gcp.bigquery.JobLoadDestinationTableArgs(
+            project_id=foo.project,
+            dataset_id=foo.dataset_id,
+            table_id=foo.table_id,
+        ),
+        skip_leading_rows=1,
+        schema_update_options=[
             "ALLOW_FIELD_RELAXATION",
             "ALLOW_FIELD_ADDITION",
         ],
-        "writeDisposition": "WRITE_APPEND",
-        "autodetect": True,
-    })
+        write_disposition="WRITE_APPEND",
+        autodetect=True,
+    ))
 ```
 
 {{% /example %}}
@@ -566,7 +572,7 @@ const job = new gcp.bigquery.Job("job", {
     },
     load: {
         sourceUris: ["gs://cloud-samples-data/bigquery/us-states/us-states-by-date.csv"],
-        destination_table: {
+        destinationTable: {
             projectId: foo.project,
             datasetId: foo.datasetId,
             tableId: foo.tableId,
@@ -637,11 +643,11 @@ class MyStack : Stack
                 {
                     dest.Url.Apply(url => $"{url}/extract"),
                 },
-                Source_table = 
+                SourceTable = new Gcp.BigQuery.Inputs.JobExtractSourceTableArgs
                 {
-                    { "projectId", source_oneTable.Project },
-                    { "datasetId", source_oneTable.DatasetId },
-                    { "tableId", source_oneTable.TableId },
+                    ProjectId = source_oneTable.Project,
+                    DatasetId = source_oneTable.DatasetId,
+                    TableId = source_oneTable.TableId,
                 },
                 DestinationFormat = "NEWLINE_DELIMITED_JSON",
                 Compression = "GZIP",
@@ -655,7 +661,67 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := bigquery.NewDataset(ctx, "source_oneDataset", &bigquery.DatasetArgs{
+			DatasetId:    pulumi.String("job_extract_dataset"),
+			FriendlyName: pulumi.String("test"),
+			Description:  pulumi.String("This is a test description"),
+			Location:     pulumi.String("US"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewTable(ctx, "source_oneTable", &bigquery.TableArgs{
+			DatasetId: source_oneDataset.DatasetId,
+			TableId:   pulumi.String("job_extract_table"),
+			Schema:    pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "[\n", "  {\n", "    \"name\": \"name\",\n", "    \"type\": \"STRING\",\n", "    \"mode\": \"NULLABLE\"\n", "  },\n", "  {\n", "    \"name\": \"post_abbr\",\n", "    \"type\": \"STRING\",\n", "    \"mode\": \"NULLABLE\"\n", "  },\n", "  {\n", "    \"name\": \"date\",\n", "    \"type\": \"DATE\",\n", "    \"mode\": \"NULLABLE\"\n", "  }\n", "]\n")),
+		})
+		if err != nil {
+			return err
+		}
+		dest, err := storage.NewBucket(ctx, "dest", &storage.BucketArgs{
+			ForceDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewJob(ctx, "job", &bigquery.JobArgs{
+			JobId: pulumi.String("job_extract"),
+			Extract: &bigquery.JobExtractArgs{
+				DestinationUris: pulumi.StringArray{
+					dest.Url.ApplyT(func(url string) (string, error) {
+						return fmt.Sprintf("%v%v", url, "/extract"), nil
+					}).(pulumi.StringOutput),
+				},
+				SourceTable: &bigquery.JobExtractSourceTableArgs{
+					ProjectId: source_oneTable.Project,
+					DatasetId: source_oneTable.DatasetId,
+					TableId:   source_oneTable.TableId,
+				},
+				DestinationFormat: pulumi.String("NEWLINE_DELIMITED_JSON"),
+				Compression:       pulumi.String("GZIP"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -692,16 +758,16 @@ source_one_table = gcp.bigquery.Table("source-oneTable",
 dest = gcp.storage.Bucket("dest", force_destroy=True)
 job = gcp.bigquery.Job("job",
     job_id="job_extract",
-    extract={
-        "destinationUris": [dest.url.apply(lambda url: f"{url}/extract")],
-        "source_table": {
-            "project_id": source_one_table.project,
-            "dataset_id": source_one_table.dataset_id,
-            "table_id": source_one_table.table_id,
-        },
-        "destinationFormat": "NEWLINE_DELIMITED_JSON",
-        "compression": "GZIP",
-    })
+    extract=gcp.bigquery.JobExtractArgs(
+        destination_uris=[dest.url.apply(lambda url: f"{url}/extract")],
+        source_table=gcp.bigquery.JobExtractSourceTableArgs(
+            project_id=source_one_table.project,
+            dataset_id=source_one_table.dataset_id,
+            table_id=source_one_table.table_id,
+        ),
+        destination_format="NEWLINE_DELIMITED_JSON",
+        compression="GZIP",
+    ))
 ```
 
 {{% /example %}}
@@ -745,7 +811,7 @@ const job = new gcp.bigquery.Job("job", {
     jobId: "job_extract",
     extract: {
         destinationUris: [pulumi.interpolate`${dest.url}/extract`],
-        source_table: {
+        sourceTable: {
             projectId: source_oneTable.project,
             datasetId: source_oneTable.datasetId,
             tableId: source_oneTable.tableId,
@@ -766,19 +832,19 @@ const job = new gcp.bigquery.Job("job", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Job">Job</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#JobArgs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Job</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigquery/#Job">Job</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>copy=None<span class="p">, </span>extract=None<span class="p">, </span>job_id=None<span class="p">, </span>job_timeout_ms=None<span class="p">, </span>labels=None<span class="p">, </span>load=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>query=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Job</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">copy</span><span class="p">:</span> <span class="nx">Optional[JobCopyArgs]</span> = None<span class="p">, </span><span class="nx">extract</span><span class="p">:</span> <span class="nx">Optional[JobExtractArgs]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_timeout_ms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load</span><span class="p">:</span> <span class="nx">Optional[JobLoadArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[JobQueryArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Job">NewJob</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobArgs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Job.html">Job</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.JobArgs.html">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Job</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">JobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -789,7 +855,7 @@ const job = new gcp.bigquery.Job("job", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -799,7 +865,7 @@ const job = new gcp.bigquery.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#JobArgs">JobArgs</a></span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -848,7 +914,7 @@ const job = new gcp.bigquery.Job("job", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -858,7 +924,7 @@ const job = new gcp.bigquery.Job("job", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -868,7 +934,7 @@ const job = new gcp.bigquery.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobArgs">JobArgs</a></span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -878,7 +944,7 @@ const job = new gcp.bigquery.Job("job", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -897,7 +963,7 @@ const job = new gcp.bigquery.Job("job", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -907,7 +973,7 @@ const job = new gcp.bigquery.Job("job", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.JobArgs.html">JobArgs</a></span>
+        <span class="property-type"><a href="#inputs">JobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -930,12 +996,11 @@ const job = new gcp.bigquery.Job("job", {
 
 ## Job Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -946,105 +1011,99 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="jobid_csharp">
 <a href="#jobid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="copy_csharp">
 <a href="#copy_csharp" style="color: inherit; text-decoration: inherit;">Copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopy">Job<wbr>Copy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extract_csharp">
 <a href="#extract_csharp" style="color: inherit; text-decoration: inherit;">Extract</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextract">Job<wbr>Extract<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="jobtimeoutms_csharp">
 <a href="#jobtimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Timeout<wbr>Ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="load_csharp">
 <a href="#load_csharp" style="color: inherit; text-decoration: inherit;">Load</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobload">Job<wbr>Load<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquery">Job<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1053,105 +1112,99 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="jobid_go">
 <a href="#jobid_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="copy_go">
 <a href="#copy_go" style="color: inherit; text-decoration: inherit;">Copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopy">Job<wbr>Copy</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extract_go">
 <a href="#extract_go" style="color: inherit; text-decoration: inherit;">Extract</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextract">Job<wbr>Extract</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="jobtimeoutms_go">
 <a href="#jobtimeoutms_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Timeout<wbr>Ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="load_go">
 <a href="#load_go" style="color: inherit; text-decoration: inherit;">Load</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobload">Job<wbr>Load</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquery">Job<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1160,105 +1213,99 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="jobid_nodejs">
 <a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="copy_nodejs">
 <a href="#copy_nodejs" style="color: inherit; text-decoration: inherit;">copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopy">Job<wbr>Copy</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extract_nodejs">
 <a href="#extract_nodejs" style="color: inherit; text-decoration: inherit;">extract</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextract">Job<wbr>Extract</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="jobtimeoutms_nodejs">
 <a href="#jobtimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Timeout<wbr>Ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="load_nodejs">
 <a href="#load_nodejs" style="color: inherit; text-decoration: inherit;">load</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobload">Job<wbr>Load</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquery">Job<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1267,114 +1314,104 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="job_id_python">
 <a href="#job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="copy_python">
 <a href="#copy_python" style="color: inherit; text-decoration: inherit;">copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopy">Dict[Job<wbr>Copy]</a></span>
+        <span class="property-type"><a href="#jobcopy">Job<wbr>Copy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extract_python">
 <a href="#extract_python" style="color: inherit; text-decoration: inherit;">extract</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextract">Dict[Job<wbr>Extract]</a></span>
+        <span class="property-type"><a href="#jobextract">Job<wbr>Extract<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="job_timeout_ms_python">
 <a href="#job_timeout_ms_python" style="color: inherit; text-decoration: inherit;">job_<wbr>timeout_<wbr>ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="load_python">
 <a href="#load_python" style="color: inherit; text-decoration: inherit;">load</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobload">Dict[Job<wbr>Load]</a></span>
+        <span class="property-type"><a href="#jobload">Job<wbr>Load<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquery">Dict[Job<wbr>Query]</a></span>
+        <span class="property-type"><a href="#jobquery">Job<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Job resource produces the following output properties:
-
 
 
 
@@ -1385,37 +1422,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="jobtype_csharp">
 <a href="#jobtype_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the job.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="useremail_csharp">
 <a href="#useremail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the user who ran the job.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1424,37 +1457,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="jobtype_go">
 <a href="#jobtype_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the job.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="useremail_go">
 <a href="#useremail_go" style="color: inherit; text-decoration: inherit;">User<wbr>Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the user who ran the job.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1463,37 +1492,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="jobtype_nodejs">
 <a href="#jobtype_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the job.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="useremail_nodejs">
 <a href="#useremail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the user who ran the job.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1502,40 +1527,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="job_type_python">
 <a href="#job_type_python" style="color: inherit; text-decoration: inherit;">job_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the job.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="user_email_python">
 <a href="#user_email_python" style="color: inherit; text-decoration: inherit;">user_<wbr>email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address of the user who ran the job.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1545,19 +1563,20 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigquery/#Job">Job</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">JobState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Job</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>copy=None<span class="p">, </span>extract=None<span class="p">, </span>job_id=None<span class="p">, </span>job_timeout_ms=None<span class="p">, </span>job_type=None<span class="p">, </span>labels=None<span class="p">, </span>load=None<span class="p">, </span>location=None<span class="p">, </span>project=None<span class="p">, </span>query=None<span class="p">, </span>user_email=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">copy</span><span class="p">:</span> <span class="nx">Optional[JobCopyArgs]</span> = None<span class="p">, </span><span class="nx">extract</span><span class="p">:</span> <span class="nx">Optional[JobExtractArgs]</span> = None<span class="p">, </span><span class="nx">job_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_timeout_ms</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">job_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load</span><span class="p">:</span> <span class="nx">Optional[JobLoadArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query</span><span class="p">:</span> <span class="nx">Optional[JobQueryArgs]</span> = None<span class="p">, </span><span class="nx">user_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Job</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">JobState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Job</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Job.html">Job</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.JobState.html">JobState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Job</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">JobState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1659,7 +1678,6 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1667,127 +1685,119 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_copy_csharp">
 <a href="#state_copy_csharp" style="color: inherit; text-decoration: inherit;">Copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopy">Job<wbr>Copy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extract_csharp">
 <a href="#state_extract_csharp" style="color: inherit; text-decoration: inherit;">Extract</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextract">Job<wbr>Extract<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobid_csharp">
 <a href="#state_jobid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobtimeoutms_csharp">
 <a href="#state_jobtimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Timeout<wbr>Ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobtype_csharp">
 <a href="#state_jobtype_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the job.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_load_csharp">
 <a href="#state_load_csharp" style="color: inherit; text-decoration: inherit;">Load</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobload">Job<wbr>Load<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_query_csharp">
 <a href="#state_query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquery">Job<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_useremail_csharp">
 <a href="#state_useremail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the user who ran the job.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1796,127 +1806,119 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_copy_go">
 <a href="#state_copy_go" style="color: inherit; text-decoration: inherit;">Copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopy">Job<wbr>Copy</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extract_go">
 <a href="#state_extract_go" style="color: inherit; text-decoration: inherit;">Extract</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextract">Job<wbr>Extract</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobid_go">
 <a href="#state_jobid_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobtimeoutms_go">
 <a href="#state_jobtimeoutms_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Timeout<wbr>Ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobtype_go">
 <a href="#state_jobtype_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the job.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_load_go">
 <a href="#state_load_go" style="color: inherit; text-decoration: inherit;">Load</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobload">Job<wbr>Load</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_query_go">
 <a href="#state_query_go" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquery">Job<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_useremail_go">
 <a href="#state_useremail_go" style="color: inherit; text-decoration: inherit;">User<wbr>Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the user who ran the job.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1925,127 +1927,119 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_copy_nodejs">
 <a href="#state_copy_nodejs" style="color: inherit; text-decoration: inherit;">copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopy">Job<wbr>Copy</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extract_nodejs">
 <a href="#state_extract_nodejs" style="color: inherit; text-decoration: inherit;">extract</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextract">Job<wbr>Extract</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobid_nodejs">
 <a href="#state_jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobtimeoutms_nodejs">
 <a href="#state_jobtimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Timeout<wbr>Ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobtype_nodejs">
 <a href="#state_jobtype_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the job.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_load_nodejs">
 <a href="#state_load_nodejs" style="color: inherit; text-decoration: inherit;">load</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobload">Job<wbr>Load</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_query_nodejs">
 <a href="#state_query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquery">Job<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_useremail_nodejs">
 <a href="#state_useremail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the user who ran the job.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2054,130 +2048,119 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_copy_python">
 <a href="#state_copy_python" style="color: inherit; text-decoration: inherit;">copy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopy">Dict[Job<wbr>Copy]</a></span>
+        <span class="property-type"><a href="#jobcopy">Job<wbr>Copy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Copies a table.  Structure is documented below.
+    <dd>{{% md %}}Copies a table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extract_python">
 <a href="#state_extract_python" style="color: inherit; text-decoration: inherit;">extract</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextract">Dict[Job<wbr>Extract]</a></span>
+        <span class="property-type"><a href="#jobextract">Job<wbr>Extract<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures an extract job.  Structure is documented below.
+    <dd>{{% md %}}Configures an extract job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_job_id_python">
 <a href="#state_job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_job_timeout_ms_python">
 <a href="#state_job_timeout_ms_python" style="color: inherit; text-decoration: inherit;">job_<wbr>timeout_<wbr>ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_job_type_python">
 <a href="#state_job_type_python" style="color: inherit; text-decoration: inherit;">job_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the job.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The labels associated with this job. You can use these to organize and group your jobs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_load_python">
 <a href="#state_load_python" style="color: inherit; text-decoration: inherit;">load</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobload">Dict[Job<wbr>Load]</a></span>
+        <span class="property-type"><a href="#jobload">Job<wbr>Load<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a load job.  Structure is documented below.
+    <dd>{{% md %}}Configures a load job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geographic location of the job. The default value is US.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_query_python">
 <a href="#state_query_python" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquery">Dict[Job<wbr>Query]</a></span>
+        <span class="property-type"><a href="#jobquery">Job<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_user_email_python">
 <a href="#state_user_email_python" style="color: inherit; text-decoration: inherit;">user_<wbr>email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address of the user who ran the job.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2187,20 +2170,8 @@ If it is not provided, the provider project is used.
 ## Supporting Types
 
 
+
 <h4 id="jobcopy">Job<wbr>Copy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobCopy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobCopy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobCopyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobCopy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2209,56 +2180,57 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="sourcetables_csharp">
 <a href="#sourcetables_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Tables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopysourcetable">List&lt;Job<wbr>Copy<wbr>Source<wbr>Table<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Source tables to copy.  Structure is documented below.
+    <dd>{{% md %}}Source tables to copy.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdisposition_csharp">
 <a href="#createdisposition_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationencryptionconfiguration_csharp">
 <a href="#destinationencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationtable_csharp">
 <a href="#destinationtable_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="writedisposition_csharp">
 <a href="#writedisposition_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -2266,11 +2238,11 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2279,56 +2251,57 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="sourcetables_go">
 <a href="#sourcetables_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Tables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopysourcetable">[]Job<wbr>Copy<wbr>Source<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}Source tables to copy.  Structure is documented below.
+    <dd>{{% md %}}Source tables to copy.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdisposition_go">
 <a href="#createdisposition_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationencryptionconfiguration_go">
 <a href="#destinationencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationtable_go">
 <a href="#destinationtable_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="writedisposition_go">
 <a href="#writedisposition_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -2336,11 +2309,11 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2349,56 +2322,57 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="sourcetables_nodejs">
 <a href="#sourcetables_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Tables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopysourcetable">Job<wbr>Copy<wbr>Source<wbr>Table[]</a></span>
     </dt>
-    <dd>{{% md %}}Source tables to copy.  Structure is documented below.
+    <dd>{{% md %}}Source tables to copy.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdisposition_nodejs">
 <a href="#createdisposition_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationencryptionconfiguration_nodejs">
 <a href="#destinationencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationtable_nodejs">
 <a href="#destinationtable_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="writedisposition_nodejs">
 <a href="#writedisposition_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -2406,69 +2380,70 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcetables_python">
-<a href="#sourcetables_python" style="color: inherit; text-decoration: inherit;">source<wbr>Tables</a>
-</span> 
+        <span id="source_tables_python">
+<a href="#source_tables_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tables</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopysourcetable">List[Job<wbr>Copy<wbr>Source<wbr>Table]</a></span>
+        <span class="property-type"><a href="#jobcopysourcetable">Sequence[Job<wbr>Copy<wbr>Source<wbr>Table<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Source tables to copy.  Structure is documented below.
+    <dd>{{% md %}}Source tables to copy.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="createdisposition_python">
-<a href="#createdisposition_python" style="color: inherit; text-decoration: inherit;">create<wbr>Disposition</a>
-</span> 
+        <span id="create_disposition_python">
+<a href="#create_disposition_python" style="color: inherit; text-decoration: inherit;">create_<wbr>disposition</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationencryptionconfiguration_python">
-<a href="#destinationencryptionconfiguration_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
-</span> 
+        <span id="destination_encryption_configuration_python">
+<a href="#destination_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>encryption_<wbr>configuration</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Dict[Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationtable_python">
-<a href="#destinationtable_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
-</span> 
+        <span id="destination_table_python">
+<a href="#destination_table_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>table</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcopydestinationtable">Dict[Job<wbr>Copy<wbr>Destination<wbr>Table]</a></span>
+        <span class="property-type"><a href="#jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="writedisposition_python">
-<a href="#writedisposition_python" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
-</span> 
+        <span id="write_disposition_python">
+<a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -2476,29 +2451,13 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobcopydestinationencryptionconfiguration">Job<wbr>Copy<wbr>Destination<wbr>Encryption<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobCopyDestinationEncryptionConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobCopyDestinationEncryptionConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopyDestinationEncryptionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopyDestinationEncryptionConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobCopyDestinationEncryptionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobCopyDestinationEncryptionConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2507,17 +2466,15 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2526,17 +2483,15 @@ The BigQuery Service Account associated with your project requires access to thi
             title="Required">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2545,17 +2500,15 @@ The BigQuery Service Account associated with your project requires access to thi
             title="Required">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2564,35 +2517,17 @@ The BigQuery Service Account associated with your project requires access to thi
             title="Required">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="jobcopydestinationtable">Job<wbr>Copy<wbr>Destination<wbr>Table</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobCopyDestinationTable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobCopyDestinationTable">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopyDestinationTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopyDestinationTableOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobCopyDestinationTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobCopyDestinationTable.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2601,39 +2536,35 @@ The BigQuery Service Account associated with your project requires access to thi
             title="Required">
         <span id="tableid_csharp">
 <a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2642,39 +2573,35 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="tableid_go">
 <a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2683,39 +2610,35 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="tableid_nodejs">
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2724,57 +2647,37 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="table_id_python">
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="jobcopysourcetable">Job<wbr>Copy<wbr>Source<wbr>Table</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobCopySourceTable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobCopySourceTable">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopySourceTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobCopySourceTableOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobCopySourceTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobCopySourceTable.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2783,39 +2686,35 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="tableid_csharp">
 <a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2824,39 +2723,35 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="tableid_go">
 <a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2865,39 +2760,35 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="tableid_nodejs">
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2906,57 +2797,37 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="table_id_python">
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobextract">Job<wbr>Extract</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobExtract">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobExtract">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobExtractArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobExtractOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobExtractArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobExtract.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2965,97 +2836,90 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="destinationuris_csharp">
 <a href="#destinationuris_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compression_csharp">
 <a href="#compression_csharp" style="color: inherit; text-decoration: inherit;">Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
 The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationformat_csharp">
 <a href="#destinationformat_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
 The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
 The default value for models is SAVED_MODEL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_csharp">
 <a href="#fielddelimiter_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
 Default is ','
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="printheader_csharp">
 <a href="#printheader_csharp" style="color: inherit; text-decoration: inherit;">Print<wbr>Header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to print out a header row in the results. Default is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcemodel_csharp">
 <a href="#sourcemodel_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Model</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the model being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the model being exported.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcetable_csharp">
 <a href="#sourcetable_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the table being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the table being exported.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useavrologicaltypes_csharp">
 <a href="#useavrologicaltypes_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Avro<wbr>Logical<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use logical types when extracting to AVRO format.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3064,97 +2928,90 @@ Default is ','
             title="Required">
         <span id="destinationuris_go">
 <a href="#destinationuris_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compression_go">
 <a href="#compression_go" style="color: inherit; text-decoration: inherit;">Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
 The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationformat_go">
 <a href="#destinationformat_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
 The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
 The default value for models is SAVED_MODEL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_go">
 <a href="#fielddelimiter_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
 Default is ','
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="printheader_go">
 <a href="#printheader_go" style="color: inherit; text-decoration: inherit;">Print<wbr>Header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to print out a header row in the results. Default is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcemodel_go">
 <a href="#sourcemodel_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Model</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the model being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the model being exported.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcetable_go">
 <a href="#sourcetable_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the table being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the table being exported.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useavrologicaltypes_go">
 <a href="#useavrologicaltypes_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Avro<wbr>Logical<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use logical types when extracting to AVRO format.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3163,214 +3020,184 @@ Default is ','
             title="Required">
         <span id="destinationuris_nodejs">
 <a href="#destinationuris_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compression_nodejs">
 <a href="#compression_nodejs" style="color: inherit; text-decoration: inherit;">compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
 The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationformat_nodejs">
 <a href="#destinationformat_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
 The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
 The default value for models is SAVED_MODEL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_nodejs">
 <a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
 Default is ','
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="printheader_nodejs">
 <a href="#printheader_nodejs" style="color: inherit; text-decoration: inherit;">print<wbr>Header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to print out a header row in the results. Default is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcemodel_nodejs">
 <a href="#sourcemodel_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Model</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the model being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the model being exported.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcetable_nodejs">
 <a href="#sourcetable_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the table being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the table being exported.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useavrologicaltypes_nodejs">
 <a href="#useavrologicaltypes_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Avro<wbr>Logical<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use logical types when extracting to AVRO format.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationuris_python">
-<a href="#destinationuris_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Uris</a>
-</span> 
+        <span id="destination_uris_python">
+<a href="#destination_uris_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>uris</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compression_python">
 <a href="#compression_python" style="color: inherit; text-decoration: inherit;">compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
 The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationformat_python">
-<a href="#destinationformat_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Format</a>
-</span> 
+        <span id="destination_format_python">
+<a href="#destination_format_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>format</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The exported file format. Possible values include CSV, NEWLINE_DELIMITED_JSON and AVRO for tables and SAVED_MODEL for models.
 The default value for tables is CSV. Tables with nested or repeated fields cannot be exported as CSV.
 The default value for models is SAVED_MODEL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="fielddelimiter_python">
-<a href="#fielddelimiter_python" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
-</span> 
+        <span id="field_delimiter_python">
+<a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
 Default is ','
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="printheader_python">
-<a href="#printheader_python" style="color: inherit; text-decoration: inherit;">print<wbr>Header</a>
-</span> 
+        <span id="print_header_python">
+<a href="#print_header_python" style="color: inherit; text-decoration: inherit;">print_<wbr>header</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to print out a header row in the results. Default is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcemodel_python">
-<a href="#sourcemodel_python" style="color: inherit; text-decoration: inherit;">source<wbr>Model</a>
-</span> 
+        <span id="source_model_python">
+<a href="#source_model_python" style="color: inherit; text-decoration: inherit;">source_<wbr>model</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcemodel">Dict[Job<wbr>Extract<wbr>Source<wbr>Model]</a></span>
+        <span class="property-type"><a href="#jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the model being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the model being exported.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="sourcetable_python">
-<a href="#sourcetable_python" style="color: inherit; text-decoration: inherit;">source<wbr>Table</a>
-</span> 
+        <span id="source_table_python">
+<a href="#source_table_python" style="color: inherit; text-decoration: inherit;">source_<wbr>table</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobextractsourcetable">Dict[Job<wbr>Extract<wbr>Source<wbr>Table]</a></span>
+        <span class="property-type"><a href="#jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A reference to the table being exported.  Structure is documented below.
+    <dd>{{% md %}}A reference to the table being exported.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="useavrologicaltypes_python">
-<a href="#useavrologicaltypes_python" style="color: inherit; text-decoration: inherit;">use<wbr>Avro<wbr>Logical<wbr>Types</a>
-</span> 
+        <span id="use_avro_logical_types_python">
+<a href="#use_avro_logical_types_python" style="color: inherit; text-decoration: inherit;">use_<wbr>avro_<wbr>logical_<wbr>types</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use logical types when extracting to AVRO format.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobextractsourcemodel">Job<wbr>Extract<wbr>Source<wbr>Model</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobExtractSourceModel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobExtractSourceModel">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobExtractSourceModelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobExtractSourceModelOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobExtractSourceModelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobExtractSourceModel.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3379,38 +3206,34 @@ Default is ','
             title="Required">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="modelid_csharp">
 <a href="#modelid_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the model.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3419,38 +3242,34 @@ Default is ','
             title="Required">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="modelid_go">
 <a href="#modelid_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the model.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3459,38 +3278,34 @@ Default is ','
             title="Required">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="modelid_nodejs">
 <a href="#modelid_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the model.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3499,56 +3314,36 @@ Default is ','
             title="Required">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="modelid_python">
-<a href="#modelid_python" style="color: inherit; text-decoration: inherit;">model<wbr>Id</a>
-</span> 
+        <span id="model_id_python">
+<a href="#model_id_python" style="color: inherit; text-decoration: inherit;">model_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the model.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobextractsourcetable">Job<wbr>Extract<wbr>Source<wbr>Table</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobExtractSourceTable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobExtractSourceTable">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobExtractSourceTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobExtractSourceTableOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobExtractSourceTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobExtractSourceTable.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3557,39 +3352,35 @@ Default is ','
             title="Required">
         <span id="tableid_csharp">
 <a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3598,39 +3389,35 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="tableid_go">
 <a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3639,39 +3426,35 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="tableid_nodejs">
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3680,57 +3463,37 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="table_id_python">
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobload">Job<wbr>Load</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobLoad">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobLoad">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobLoadArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobLoad.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3739,20 +3502,20 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="destinationtable_csharp">
 <a href="#destinationtable_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceuris_csharp">
 <a href="#sourceuris_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URIs that point to your data in Google Cloud.
 For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character
@@ -3761,100 +3524,95 @@ to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
 specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
 For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the '*' wildcard character is not allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowjaggedrows_csharp">
 <a href="#allowjaggedrows_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Jagged<wbr>Rows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
 If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
 an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowquotednewlines_csharp">
 <a href="#allowquotednewlines_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Quoted<wbr>Newlines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
 The default value is false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodetect_csharp">
 <a href="#autodetect_csharp" style="color: inherit; text-decoration: inherit;">Autodetect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if we should automatically infer the options and schema for CSV and JSON sources.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdisposition_csharp">
 <a href="#createdisposition_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationencryptionconfiguration_csharp">
 <a href="#destinationencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encoding_csharp">
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
 The default value is UTF-8. BigQuery decodes the data after the raw, binary data
 has been split using the values of the quote and fieldDelimiter properties.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_csharp">
 <a href="#fielddelimiter_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
 Default is ','
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignoreunknownvalues_csharp">
 <a href="#ignoreunknownvalues_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Unknown<wbr>Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow extra values that are not represented in the table schema.
 If true, the extra values are ignored. If false, records with extra columns are treated as bad records,
@@ -3863,67 +3621,62 @@ The default value is false. The sourceFormat property determines what BigQuery t
 CSV: Trailing columns
 JSON: Named values that don't match any column names
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbadrecords_csharp">
 <a href="#maxbadrecords_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bad<wbr>Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
 an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nullmarker_csharp">
 <a href="#nullmarker_csharp" style="color: inherit; text-decoration: inherit;">Null<wbr>Marker</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a string that represents a null value in a CSV file. The default value is the empty string. If you set this
 property to a custom value, BigQuery throws an error if an
 empty string is present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the empty string as
 an empty value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectionfields_csharp">
 <a href="#projectionfields_csharp" style="color: inherit; text-decoration: inherit;">Projection<wbr>Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
 Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
 If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="quote_csharp">
 <a href="#quote_csharp" style="color: inherit; text-decoration: inherit;">Quote</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
 and then uses the first byte of the encoded string to split the data in its raw, binary state.
 The default value is a double-quote ('"'). If your data does not contain quoted sections, set the property value to an empty string.
 If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schemaupdateoptions_csharp">
 <a href="#schemaupdateoptions_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Update<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -3932,14 +3685,13 @@ For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more 
 ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
 ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skipleadingrows_csharp">
 <a href="#skipleadingrows_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Leading<wbr>Rows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
 The default value is 0. This property is useful if you have header rows in the file that should be skipped.
@@ -3950,38 +3702,36 @@ skipLeadingRows is 0 - Instructs autodetect that there are no headers and data s
 skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
 row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceformat_csharp">
 <a href="#sourceformat_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP".
 For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET".
 For orc, specify "ORC". The default value is CSV.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timepartitioning_csharp">
 <a href="#timepartitioning_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Partitioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Time-based partitioning specification for the destination table.  Structure is documented below.
+    <dd>{{% md %}}Time-based partitioning specification for the destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="writedisposition_csharp">
 <a href="#writedisposition_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -3989,11 +3739,11 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4002,20 +3752,20 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="destinationtable_go">
 <a href="#destinationtable_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceuris_go">
 <a href="#sourceuris_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URIs that point to your data in Google Cloud.
 For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character
@@ -4024,100 +3774,95 @@ to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
 specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
 For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the '*' wildcard character is not allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowjaggedrows_go">
 <a href="#allowjaggedrows_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Jagged<wbr>Rows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
 If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
 an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowquotednewlines_go">
 <a href="#allowquotednewlines_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Quoted<wbr>Newlines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
 The default value is false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodetect_go">
 <a href="#autodetect_go" style="color: inherit; text-decoration: inherit;">Autodetect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if we should automatically infer the options and schema for CSV and JSON sources.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdisposition_go">
 <a href="#createdisposition_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationencryptionconfiguration_go">
 <a href="#destinationencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encoding_go">
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
 The default value is UTF-8. BigQuery decodes the data after the raw, binary data
 has been split using the values of the quote and fieldDelimiter properties.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_go">
 <a href="#fielddelimiter_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
 Default is ','
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignoreunknownvalues_go">
 <a href="#ignoreunknownvalues_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Unknown<wbr>Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow extra values that are not represented in the table schema.
 If true, the extra values are ignored. If false, records with extra columns are treated as bad records,
@@ -4126,67 +3871,62 @@ The default value is false. The sourceFormat property determines what BigQuery t
 CSV: Trailing columns
 JSON: Named values that don't match any column names
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbadrecords_go">
 <a href="#maxbadrecords_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bad<wbr>Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
 an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nullmarker_go">
 <a href="#nullmarker_go" style="color: inherit; text-decoration: inherit;">Null<wbr>Marker</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a string that represents a null value in a CSV file. The default value is the empty string. If you set this
 property to a custom value, BigQuery throws an error if an
 empty string is present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the empty string as
 an empty value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectionfields_go">
 <a href="#projectionfields_go" style="color: inherit; text-decoration: inherit;">Projection<wbr>Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
 Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
 If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="quote_go">
 <a href="#quote_go" style="color: inherit; text-decoration: inherit;">Quote</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
 and then uses the first byte of the encoded string to split the data in its raw, binary state.
 The default value is a double-quote ('"'). If your data does not contain quoted sections, set the property value to an empty string.
 If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schemaupdateoptions_go">
 <a href="#schemaupdateoptions_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Update<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -4195,14 +3935,13 @@ For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more 
 ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
 ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skipleadingrows_go">
 <a href="#skipleadingrows_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Leading<wbr>Rows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
 The default value is 0. This property is useful if you have header rows in the file that should be skipped.
@@ -4213,38 +3952,36 @@ skipLeadingRows is 0 - Instructs autodetect that there are no headers and data s
 skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
 row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceformat_go">
 <a href="#sourceformat_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP".
 For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET".
 For orc, specify "ORC". The default value is CSV.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timepartitioning_go">
 <a href="#timepartitioning_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Partitioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning</a></span>
     </dt>
-    <dd>{{% md %}}Time-based partitioning specification for the destination table.  Structure is documented below.
+    <dd>{{% md %}}Time-based partitioning specification for the destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="writedisposition_go">
 <a href="#writedisposition_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -4252,11 +3989,11 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4265,20 +4002,20 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="destinationtable_nodejs">
 <a href="#destinationtable_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceuris_nodejs">
 <a href="#sourceuris_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uris</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URIs that point to your data in Google Cloud.
 For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character
@@ -4287,100 +4024,95 @@ to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
 specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
 For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the '*' wildcard character is not allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowjaggedrows_nodejs">
 <a href="#allowjaggedrows_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Jagged<wbr>Rows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
 If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
 an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowquotednewlines_nodejs">
 <a href="#allowquotednewlines_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Quoted<wbr>Newlines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
 The default value is false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodetect_nodejs">
 <a href="#autodetect_nodejs" style="color: inherit; text-decoration: inherit;">autodetect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if we should automatically infer the options and schema for CSV and JSON sources.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdisposition_nodejs">
 <a href="#createdisposition_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationencryptionconfiguration_nodejs">
 <a href="#destinationencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encoding_nodejs">
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
 The default value is UTF-8. BigQuery decodes the data after the raw, binary data
 has been split using the values of the quote and fieldDelimiter properties.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_nodejs">
 <a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
 Default is ','
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ignoreunknownvalues_nodejs">
 <a href="#ignoreunknownvalues_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Unknown<wbr>Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow extra values that are not represented in the table schema.
 If true, the extra values are ignored. If false, records with extra columns are treated as bad records,
@@ -4389,67 +4121,62 @@ The default value is false. The sourceFormat property determines what BigQuery t
 CSV: Trailing columns
 JSON: Named values that don't match any column names
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbadrecords_nodejs">
 <a href="#maxbadrecords_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bad<wbr>Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
 an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nullmarker_nodejs">
 <a href="#nullmarker_nodejs" style="color: inherit; text-decoration: inherit;">null<wbr>Marker</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a string that represents a null value in a CSV file. The default value is the empty string. If you set this
 property to a custom value, BigQuery throws an error if an
 empty string is present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the empty string as
 an empty value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectionfields_nodejs">
 <a href="#projectionfields_nodejs" style="color: inherit; text-decoration: inherit;">projection<wbr>Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
 Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
 If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="quote_nodejs">
 <a href="#quote_nodejs" style="color: inherit; text-decoration: inherit;">quote</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
 and then uses the first byte of the encoded string to split the data in its raw, binary state.
 The default value is a double-quote ('"'). If your data does not contain quoted sections, set the property value to an empty string.
 If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schemaupdateoptions_nodejs">
 <a href="#schemaupdateoptions_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Update<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -4458,14 +4185,13 @@ For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more 
 ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
 ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skipleadingrows_nodejs">
 <a href="#skipleadingrows_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Leading<wbr>Rows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
 The default value is 0. This property is useful if you have header rows in the file that should be skipped.
@@ -4476,38 +4202,36 @@ skipLeadingRows is 0 - Instructs autodetect that there are no headers and data s
 skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
 row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceformat_nodejs">
 <a href="#sourceformat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP".
 For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET".
 For orc, specify "ORC". The default value is CSV.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timepartitioning_nodejs">
 <a href="#timepartitioning_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Partitioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning</a></span>
     </dt>
-    <dd>{{% md %}}Time-based partitioning specification for the destination table.  Structure is documented below.
+    <dd>{{% md %}}Time-based partitioning specification for the destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="writedisposition_nodejs">
 <a href="#writedisposition_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -4515,33 +4239,33 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="destinationtable_python">
-<a href="#destinationtable_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
-</span> 
+        <span id="destination_table_python">
+<a href="#destination_table_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>table</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationtable">Dict[Job<wbr>Load<wbr>Destination<wbr>Table]</a></span>
+        <span class="property-type"><a href="#jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="sourceuris_python">
-<a href="#sourceuris_python" style="color: inherit; text-decoration: inherit;">source<wbr>Uris</a>
-</span> 
+        <span id="source_uris_python">
+<a href="#source_uris_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uris</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URIs that point to your data in Google Cloud.
 For Google Cloud Storage URIs: Each URI can contain one '*' wildcard character
@@ -4550,100 +4274,95 @@ to external data sources. For Google Cloud Bigtable URIs: Exactly one URI can be
 specified and it has be a fully specified and valid HTTPS URL for a Google Cloud Bigtable table.
 For Google Cloud Datastore backups: Exactly one URI can be specified. Also, the '*' wildcard character is not allowed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="allowjaggedrows_python">
-<a href="#allowjaggedrows_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Jagged<wbr>Rows</a>
-</span> 
+        <span id="allow_jagged_rows_python">
+<a href="#allow_jagged_rows_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>jagged_<wbr>rows</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Accept rows that are missing trailing optional columns. The missing values are treated as nulls.
 If false, records with missing trailing columns are treated as bad records, and if there are too many bad records,
 an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="allowquotednewlines_python">
-<a href="#allowquotednewlines_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Quoted<wbr>Newlines</a>
-</span> 
+        <span id="allow_quoted_newlines_python">
+<a href="#allow_quoted_newlines_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>quoted_<wbr>newlines</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow quoted data sections that contain newline characters in a CSV file.
 The default value is false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodetect_python">
 <a href="#autodetect_python" style="color: inherit; text-decoration: inherit;">autodetect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if we should automatically infer the options and schema for CSV and JSON sources.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="createdisposition_python">
-<a href="#createdisposition_python" style="color: inherit; text-decoration: inherit;">create<wbr>Disposition</a>
-</span> 
+        <span id="create_disposition_python">
+<a href="#create_disposition_python" style="color: inherit; text-decoration: inherit;">create_<wbr>disposition</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationencryptionconfiguration_python">
-<a href="#destinationencryptionconfiguration_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
-</span> 
+        <span id="destination_encryption_configuration_python">
+<a href="#destination_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>encryption_<wbr>configuration</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Dict[Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encoding_python">
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The character encoding of the data. The supported values are UTF-8 or ISO-8859-1.
 The default value is UTF-8. BigQuery decodes the data after the raw, binary data
 has been split using the values of the quote and fieldDelimiter properties.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="fielddelimiter_python">
-<a href="#fielddelimiter_python" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
-</span> 
+        <span id="field_delimiter_python">
+<a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When extracting data in CSV format, this defines the delimiter to use between fields in the exported data.
 Default is ','
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ignoreunknownvalues_python">
-<a href="#ignoreunknownvalues_python" style="color: inherit; text-decoration: inherit;">ignore<wbr>Unknown<wbr>Values</a>
-</span> 
+        <span id="ignore_unknown_values_python">
+<a href="#ignore_unknown_values_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>unknown_<wbr>values</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if BigQuery should allow extra values that are not represented in the table schema.
 If true, the extra values are ignored. If false, records with extra columns are treated as bad records,
@@ -4652,67 +4371,62 @@ The default value is false. The sourceFormat property determines what BigQuery t
 CSV: Trailing columns
 JSON: Named values that don't match any column names
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxbadrecords_python">
-<a href="#maxbadrecords_python" style="color: inherit; text-decoration: inherit;">max<wbr>Bad<wbr>Records</a>
-</span> 
+        <span id="max_bad_records_python">
+<a href="#max_bad_records_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bad_<wbr>records</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bad records that BigQuery can ignore when running the job. If the number of bad records exceeds this value,
 an invalid error is returned in the job result. The default value is 0, which requires that all records are valid.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="nullmarker_python">
-<a href="#nullmarker_python" style="color: inherit; text-decoration: inherit;">null<wbr>Marker</a>
-</span> 
+        <span id="null_marker_python">
+<a href="#null_marker_python" style="color: inherit; text-decoration: inherit;">null_<wbr>marker</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a string that represents a null value in a CSV file. The default value is the empty string. If you set this
 property to a custom value, BigQuery throws an error if an
 empty string is present for all data types except for STRING and BYTE. For STRING and BYTE columns, BigQuery interprets the empty string as
 an empty value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="projectionfields_python">
-<a href="#projectionfields_python" style="color: inherit; text-decoration: inherit;">projection<wbr>Fields</a>
-</span> 
+        <span id="projection_fields_python">
+<a href="#projection_fields_python" style="color: inherit; text-decoration: inherit;">projection_<wbr>fields</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup.
 Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties.
 If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="quote_python">
 <a href="#quote_python" style="color: inherit; text-decoration: inherit;">quote</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding,
 and then uses the first byte of the encoded string to split the data in its raw, binary state.
 The default value is a double-quote ('"'). If your data does not contain quoted sections, set the property value to an empty string.
 If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="schemaupdateoptions_python">
-<a href="#schemaupdateoptions_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Update<wbr>Options</a>
-</span> 
+        <span id="schema_update_options_python">
+<a href="#schema_update_options_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>update_<wbr>options</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -4721,14 +4435,13 @@ For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more 
 ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
 ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="skipleadingrows_python">
-<a href="#skipleadingrows_python" style="color: inherit; text-decoration: inherit;">skip<wbr>Leading<wbr>Rows</a>
-</span> 
+        <span id="skip_leading_rows_python">
+<a href="#skip_leading_rows_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>leading_<wbr>rows</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of rows at the top of a CSV file that BigQuery will skip when loading the data.
 The default value is 0. This property is useful if you have header rows in the file that should be skipped.
@@ -4739,38 +4452,36 @@ skipLeadingRows is 0 - Instructs autodetect that there are no headers and data s
 skipLeadingRows = N > 0 - Autodetect skips N-1 rows and tries to detect headers in row N. If headers are not detected,
 row N is just skipped. Otherwise row N is used to extract column names for the detected schema.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="sourceformat_python">
-<a href="#sourceformat_python" style="color: inherit; text-decoration: inherit;">source<wbr>Format</a>
-</span> 
+        <span id="source_format_python">
+<a href="#source_format_python" style="color: inherit; text-decoration: inherit;">source_<wbr>format</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of the data files. For CSV files, specify "CSV". For datastore backups, specify "DATASTORE_BACKUP".
 For newline-delimited JSON, specify "NEWLINE_DELIMITED_JSON". For Avro, specify "AVRO". For parquet, specify "PARQUET".
 For orc, specify "ORC". The default value is CSV.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_partitioning_python">
 <a href="#time_partitioning_python" style="color: inherit; text-decoration: inherit;">time_<wbr>partitioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobloadtimepartitioning">Dict[Job<wbr>Load<wbr>Time<wbr>Partitioning]</a></span>
+        <span class="property-type"><a href="#jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Time-based partitioning specification for the destination table.  Structure is documented below.
+    <dd>{{% md %}}Time-based partitioning specification for the destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="writedisposition_python">
-<a href="#writedisposition_python" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
-</span> 
+        <span id="write_disposition_python">
+<a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -4778,29 +4489,13 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobloaddestinationencryptionconfiguration">Job<wbr>Load<wbr>Destination<wbr>Encryption<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobLoadDestinationEncryptionConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobLoadDestinationEncryptionConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadDestinationEncryptionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadDestinationEncryptionConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobLoadDestinationEncryptionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobLoadDestinationEncryptionConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4809,17 +4504,15 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4828,17 +4521,15 @@ The BigQuery Service Account associated with your project requires access to thi
             title="Required">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4847,17 +4538,15 @@ The BigQuery Service Account associated with your project requires access to thi
             title="Required">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4866,35 +4555,17 @@ The BigQuery Service Account associated with your project requires access to thi
             title="Required">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobloaddestinationtable">Job<wbr>Load<wbr>Destination<wbr>Table</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobLoadDestinationTable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobLoadDestinationTable">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadDestinationTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadDestinationTableOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobLoadDestinationTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobLoadDestinationTable.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4903,39 +4574,35 @@ The BigQuery Service Account associated with your project requires access to thi
             title="Required">
         <span id="tableid_csharp">
 <a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4944,39 +4611,35 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="tableid_go">
 <a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4985,39 +4648,35 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="tableid_nodejs">
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5026,57 +4685,37 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="table_id_python">
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobloadtimepartitioning">Job<wbr>Load<wbr>Time<wbr>Partitioning</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobLoadTimePartitioning">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobLoadTimePartitioning">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadTimePartitioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobLoadTimePartitioningOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobLoadTimePartitioningArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobLoadTimePartitioning.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5085,41 +4724,37 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
 but in OnePlatform the field will be treated as unset.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirationms_csharp">
 <a href="#expirationms_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="field_csharp">
 <a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If not set, the table is partitioned by pseudo column '_PARTITIONTIME'; if set, the table is partitioned by this field.
 The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
 A wrapper is used here because an empty string is an invalid value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5128,41 +4763,37 @@ A wrapper is used here because an empty string is an invalid value.
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
 but in OnePlatform the field will be treated as unset.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirationms_go">
 <a href="#expirationms_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="field_go">
 <a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If not set, the table is partitioned by pseudo column '_PARTITIONTIME'; if set, the table is partitioned by this field.
 The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
 A wrapper is used here because an empty string is an invalid value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5171,41 +4802,37 @@ A wrapper is used here because an empty string is an invalid value.
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
 but in OnePlatform the field will be treated as unset.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirationms_nodejs">
 <a href="#expirationms_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="field_nodejs">
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If not set, the table is partitioned by pseudo column '_PARTITIONTIME'; if set, the table is partitioned by this field.
 The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
 A wrapper is used here because an empty string is an invalid value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5214,59 +4841,39 @@ A wrapper is used here because an empty string is an invalid value.
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The only type supported is DAY, which will generate one partition per day. Providing an empty string used to cause an error,
 but in OnePlatform the field will be treated as unset.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="expirationms_python">
-<a href="#expirationms_python" style="color: inherit; text-decoration: inherit;">expiration<wbr>Ms</a>
-</span> 
+        <span id="expiration_ms_python">
+<a href="#expiration_ms_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>ms</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="field_python">
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If not set, the table is partitioned by pseudo column '_PARTITIONTIME'; if set, the table is partitioned by this field.
 The field must be a top-level TIMESTAMP or DATE field. Its mode must be NULLABLE or REQUIRED.
 A wrapper is used here because an empty string is an invalid value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobquery">Job<wbr>Query</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobQuery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobQuery">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobQueryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobQuery.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5275,138 +4882,135 @@ A wrapper is used here because an empty string is an invalid value.
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowlargeresults_csharp">
 <a href="#allowlargeresults_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Large<wbr>Results</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
 Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
 However, you must still set destinationTable when result size exceeds the allowed maximum response size.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdisposition_csharp">
 <a href="#createdisposition_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultdataset_csharp">
 <a href="#defaultdataset_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.
+    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationencryptionconfiguration_csharp">
 <a href="#destinationencryptionconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationtable_csharp">
 <a href="#destinationtable_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="flattenresults_csharp">
 <a href="#flattenresults_csharp" style="color: inherit; text-decoration: inherit;">Flatten<wbr>Results</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
 allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximumbillingtier_csharp">
 <a href="#maximumbillingtier_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Billing<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximumbytesbilled_csharp">
 <a href="#maximumbytesbilled_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Bytes<wbr>Billed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parametermode_csharp">
 <a href="#parametermode_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a priority for the query.
+Default value is `INTERACTIVE`.
+Possible values are `INTERACTIVE` and `BATCH`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schemaupdateoptions_csharp">
 <a href="#schemaupdateoptions_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Update<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -5415,61 +5019,58 @@ For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more 
 ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
 ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scriptoptions_csharp">
 <a href="#scriptoptions_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options controlling the execution of scripts.  Structure is documented below.
+    <dd>{{% md %}}Options controlling the execution of scripts.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uselegacysql_csharp">
 <a href="#uselegacysql_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Legacy<wbr>Sql</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true.
 If set to false, the query will use BigQuery's standard SQL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usequerycache_csharp">
 <a href="#usequerycache_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Query<wbr>Cache</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
 tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
 The default value is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdefinedfunctionresources_csharp">
 <a href="#userdefinedfunctionresources_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Function<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">List&lt;Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Describes user-defined function resources used in the query.  Structure is documented below.
+    <dd>{{% md %}}Describes user-defined function resources used in the query.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="writedisposition_csharp">
 <a href="#writedisposition_csharp" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -5477,11 +5078,11 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5490,138 +5091,135 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowlargeresults_go">
 <a href="#allowlargeresults_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Large<wbr>Results</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
 Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
 However, you must still set destinationTable when result size exceeds the allowed maximum response size.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdisposition_go">
 <a href="#createdisposition_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultdataset_go">
 <a href="#defaultdataset_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.
+    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationencryptionconfiguration_go">
 <a href="#destinationencryptionconfiguration_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationtable_go">
 <a href="#destinationtable_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="flattenresults_go">
 <a href="#flattenresults_go" style="color: inherit; text-decoration: inherit;">Flatten<wbr>Results</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
 allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximumbillingtier_go">
 <a href="#maximumbillingtier_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Billing<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximumbytesbilled_go">
 <a href="#maximumbytesbilled_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Bytes<wbr>Billed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parametermode_go">
 <a href="#parametermode_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a priority for the query.
+Default value is `INTERACTIVE`.
+Possible values are `INTERACTIVE` and `BATCH`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schemaupdateoptions_go">
 <a href="#schemaupdateoptions_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Update<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -5630,61 +5228,58 @@ For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more 
 ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
 ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scriptoptions_go">
 <a href="#scriptoptions_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options controlling the execution of scripts.  Structure is documented below.
+    <dd>{{% md %}}Options controlling the execution of scripts.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uselegacysql_go">
 <a href="#uselegacysql_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Legacy<wbr>Sql</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true.
 If set to false, the query will use BigQuery's standard SQL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usequerycache_go">
 <a href="#usequerycache_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Query<wbr>Cache</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
 tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
 The default value is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdefinedfunctionresources_go">
 <a href="#userdefinedfunctionresources_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Function<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">[]Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}Describes user-defined function resources used in the query.  Structure is documented below.
+    <dd>{{% md %}}Describes user-defined function resources used in the query.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="writedisposition_go">
 <a href="#writedisposition_go" style="color: inherit; text-decoration: inherit;">Write<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -5692,11 +5287,11 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5705,138 +5300,135 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowlargeresults_nodejs">
 <a href="#allowlargeresults_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Large<wbr>Results</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
 Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
 However, you must still set destinationTable when result size exceeds the allowed maximum response size.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdisposition_nodejs">
 <a href="#createdisposition_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultdataset_nodejs">
 <a href="#defaultdataset_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.
+    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationencryptionconfiguration_nodejs">
 <a href="#destinationencryptionconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationtable_nodejs">
 <a href="#destinationtable_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="flattenresults_nodejs">
 <a href="#flattenresults_nodejs" style="color: inherit; text-decoration: inherit;">flatten<wbr>Results</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
 allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximumbillingtier_nodejs">
 <a href="#maximumbillingtier_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Billing<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maximumbytesbilled_nodejs">
 <a href="#maximumbytesbilled_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Bytes<wbr>Billed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parametermode_nodejs">
 <a href="#parametermode_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a priority for the query.
+Default value is `INTERACTIVE`.
+Possible values are `INTERACTIVE` and `BATCH`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schemaupdateoptions_nodejs">
 <a href="#schemaupdateoptions_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Update<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -5845,61 +5437,58 @@ For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more 
 ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
 ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scriptoptions_nodejs">
 <a href="#scriptoptions_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options controlling the execution of scripts.  Structure is documented below.
+    <dd>{{% md %}}Options controlling the execution of scripts.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uselegacysql_nodejs">
 <a href="#uselegacysql_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Legacy<wbr>Sql</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true.
 If set to false, the query will use BigQuery's standard SQL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usequerycache_nodejs">
 <a href="#usequerycache_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Query<wbr>Cache</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
 tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
 The default value is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdefinedfunctionresources_nodejs">
 <a href="#userdefinedfunctionresources_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Function<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource[]</a></span>
     </dt>
-    <dd>{{% md %}}Describes user-defined function resources used in the query.  Structure is documented below.
+    <dd>{{% md %}}Describes user-defined function resources used in the query.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="writedisposition_nodejs">
 <a href="#writedisposition_nodejs" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -5907,11 +5496,11 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5920,138 +5509,135 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Configures a query job.  Structure is documented below.
+    <dd>{{% md %}}Configures a query job.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="allowlargeresults_python">
-<a href="#allowlargeresults_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Large<wbr>Results</a>
-</span> 
+        <span id="allow_large_results_python">
+<a href="#allow_large_results_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>large_<wbr>results</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
 Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed.
 However, you must still set destinationTable when result size exceeds the allowed maximum response size.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="createdisposition_python">
-<a href="#createdisposition_python" style="color: inherit; text-decoration: inherit;">create<wbr>Disposition</a>
-</span> 
+        <span id="create_disposition_python">
+<a href="#create_disposition_python" style="color: inherit; text-decoration: inherit;">create_<wbr>disposition</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the job is allowed to create new tables. The following values are supported:
 CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table.
 CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result.
 Creation, truncation and append actions occur as one atomic update upon job completion
+Default value is `CREATE_IF_NEEDED`.
+Possible values are `CREATE_IF_NEEDED` and `CREATE_NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="defaultdataset_python">
-<a href="#defaultdataset_python" style="color: inherit; text-decoration: inherit;">default<wbr>Dataset</a>
-</span> 
+        <span id="default_dataset_python">
+<a href="#default_dataset_python" style="color: inherit; text-decoration: inherit;">default_<wbr>dataset</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydefaultdataset">Dict[Job<wbr>Query<wbr>Default<wbr>Dataset]</a></span>
+        <span class="property-type"><a href="#jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.  Structure is documented below.
+    <dd>{{% md %}}Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationencryptionconfiguration_python">
-<a href="#destinationencryptionconfiguration_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Encryption<wbr>Configuration</a>
-</span> 
+        <span id="destination_encryption_configuration_python">
+<a href="#destination_encryption_configuration_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>encryption_<wbr>configuration</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Dict[Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)  Structure is documented below.
+    <dd>{{% md %}}Custom encryption configuration (e.g., Cloud KMS keys)
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationtable_python">
-<a href="#destinationtable_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Table</a>
-</span> 
+        <span id="destination_table_python">
+<a href="#destination_table_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>table</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobquerydestinationtable">Dict[Job<wbr>Query<wbr>Destination<wbr>Table]</a></span>
+        <span class="property-type"><a href="#jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The destination table.  Structure is documented below.
+    <dd>{{% md %}}The destination table.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="flattenresults_python">
-<a href="#flattenresults_python" style="color: inherit; text-decoration: inherit;">flatten<wbr>Results</a>
-</span> 
+        <span id="flatten_results_python">
+<a href="#flatten_results_python" style="color: inherit; text-decoration: inherit;">flatten_<wbr>results</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results.
 allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maximumbillingtier_python">
-<a href="#maximumbillingtier_python" style="color: inherit; text-decoration: inherit;">maximum<wbr>Billing<wbr>Tier</a>
-</span> 
+        <span id="maximum_billing_tier_python">
+<a href="#maximum_billing_tier_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>billing_<wbr>tier</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maximumbytesbilled_python">
-<a href="#maximumbytesbilled_python" style="color: inherit; text-decoration: inherit;">maximum<wbr>Bytes<wbr>Billed</a>
-</span> 
+        <span id="maximum_bytes_billed_python">
+<a href="#maximum_bytes_billed_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>bytes_<wbr>billed</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge).
 If unspecified, this will be set to your project default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="parametermode_python">
-<a href="#parametermode_python" style="color: inherit; text-decoration: inherit;">parameter<wbr>Mode</a>
-</span> 
+        <span id="parameter_mode_python">
+<a href="#parameter_mode_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>mode</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a priority for the query.
+Default value is `INTERACTIVE`.
+Possible values are `INTERACTIVE` and `BATCH`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="schemaupdateoptions_python">
-<a href="#schemaupdateoptions_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Update<wbr>Options</a>
-</span> 
+        <span id="schema_update_options_python">
+<a href="#schema_update_options_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>update_<wbr>options</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allows the schema of the destination table to be updated as a side effect of the load job if a schema is autodetected or
 supplied in the job configuration. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND;
@@ -6060,61 +5646,58 @@ For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more 
 ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema.
 ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="scriptoptions_python">
-<a href="#scriptoptions_python" style="color: inherit; text-decoration: inherit;">script<wbr>Options</a>
-</span> 
+        <span id="script_options_python">
+<a href="#script_options_python" style="color: inherit; text-decoration: inherit;">script_<wbr>options</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryscriptoptions">Dict[Job<wbr>Query<wbr>Script<wbr>Options]</a></span>
+        <span class="property-type"><a href="#jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options controlling the execution of scripts.  Structure is documented below.
+    <dd>{{% md %}}Options controlling the execution of scripts.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="uselegacysql_python">
-<a href="#uselegacysql_python" style="color: inherit; text-decoration: inherit;">use<wbr>Legacy<wbr>Sql</a>
-</span> 
+        <span id="use_legacy_sql_python">
+<a href="#use_legacy_sql_python" style="color: inherit; text-decoration: inherit;">use_<wbr>legacy_<wbr>sql</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true.
 If set to false, the query will use BigQuery's standard SQL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="usequerycache_python">
-<a href="#usequerycache_python" style="color: inherit; text-decoration: inherit;">use<wbr>Query<wbr>Cache</a>
-</span> 
+        <span id="use_query_cache_python">
+<a href="#use_query_cache_python" style="color: inherit; text-decoration: inherit;">use_<wbr>query_<wbr>cache</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever
 tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified.
 The default value is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="userdefinedfunctionresources_python">
-<a href="#userdefinedfunctionresources_python" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Function<wbr>Resources</a>
-</span> 
+        <span id="user_defined_function_resources_python">
+<a href="#user_defined_function_resources_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>function_<wbr>resources</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">List[Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#jobqueryuserdefinedfunctionresource">Sequence[Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Describes user-defined function resources used in the query.  Structure is documented below.
+    <dd>{{% md %}}Describes user-defined function resources used in the query.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="writedisposition_python">
-<a href="#writedisposition_python" style="color: inherit; text-decoration: inherit;">write<wbr>Disposition</a>
-</span> 
+        <span id="write_disposition_python">
+<a href="#write_disposition_python" style="color: inherit; text-decoration: inherit;">write_<wbr>disposition</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the action that occurs if the destination table already exists. The following values are supported:
 WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result.
@@ -6122,29 +5705,13 @@ WRITE_APPEND: If the table already exists, BigQuery appends the data to the tabl
 WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result.
 Each action is atomic and only occurs if BigQuery is able to complete the job successfully.
 Creation, truncation and append actions occur as one atomic update upon job completion.
+Default value is `WRITE_EMPTY`.
+Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobquerydefaultdataset">Job<wbr>Query<wbr>Default<wbr>Dataset</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobQueryDefaultDataset">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobQueryDefaultDataset">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryDefaultDatasetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryDefaultDatasetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobQueryDefaultDatasetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobQueryDefaultDataset.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6153,27 +5720,24 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6182,27 +5746,24 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6211,27 +5772,24 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6240,45 +5798,26 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobquerydestinationencryptionconfiguration">Job<wbr>Query<wbr>Destination<wbr>Encryption<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobQueryDestinationEncryptionConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobQueryDestinationEncryptionConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryDestinationEncryptionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryDestinationEncryptionConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobQueryDestinationEncryptionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobQueryDestinationEncryptionConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6287,17 +5826,15 @@ Creation, truncation and append actions occur as one atomic update upon job comp
             title="Required">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6306,17 +5843,15 @@ The BigQuery Service Account associated with your project requires access to thi
             title="Required">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6325,17 +5860,15 @@ The BigQuery Service Account associated with your project requires access to thi
             title="Required">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6344,35 +5877,17 @@ The BigQuery Service Account associated with your project requires access to thi
             title="Required">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table.
 The BigQuery Service Account associated with your project requires access to this encryption key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobquerydestinationtable">Job<wbr>Query<wbr>Destination<wbr>Table</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobQueryDestinationTable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobQueryDestinationTable">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryDestinationTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryDestinationTableOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobQueryDestinationTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobQueryDestinationTable.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6381,39 +5896,35 @@ The BigQuery Service Account associated with your project requires access to thi
             title="Required">
         <span id="tableid_csharp">
 <a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6422,39 +5933,35 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="tableid_go">
 <a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6463,39 +5970,35 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="tableid_nodejs">
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6504,57 +6007,37 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Required">
         <span id="table_id_python">
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table. Can be specified `{{table_id}}` if `project_id` and `dataset_id` are also set,
 or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}` if not.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dataset containing this model.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project containing this model.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobqueryscriptoptions">Job<wbr>Query<wbr>Script<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobQueryScriptOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobQueryScriptOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryScriptOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryScriptOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobQueryScriptOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobQueryScriptOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6563,39 +6046,36 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
             title="Optional">
         <span id="keyresultstatement_csharp">
 <a href="#keyresultstatement_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Result<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
 used to populate the schema and query results of the script job.
+Possible values are `LAST` and `FIRST_SELECT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statementbytebudget_csharp">
 <a href="#statementbytebudget_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Byte<wbr>Budget</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statementtimeoutms_csharp">
 <a href="#statementtimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Statement<wbr>Timeout<wbr>Ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timeout period for each statement in a script.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6604,39 +6084,36 @@ used to populate the schema and query results of the script job.
             title="Optional">
         <span id="keyresultstatement_go">
 <a href="#keyresultstatement_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Result<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
 used to populate the schema and query results of the script job.
+Possible values are `LAST` and `FIRST_SELECT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statementbytebudget_go">
 <a href="#statementbytebudget_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Byte<wbr>Budget</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statementtimeoutms_go">
 <a href="#statementtimeoutms_go" style="color: inherit; text-decoration: inherit;">Statement<wbr>Timeout<wbr>Ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timeout period for each statement in a script.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6645,98 +6122,76 @@ used to populate the schema and query results of the script job.
             title="Optional">
         <span id="keyresultstatement_nodejs">
 <a href="#keyresultstatement_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Result<wbr>Statement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
 used to populate the schema and query results of the script job.
+Possible values are `LAST` and `FIRST_SELECT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statementbytebudget_nodejs">
 <a href="#statementbytebudget_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Byte<wbr>Budget</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statementtimeoutms_nodejs">
 <a href="#statementtimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">statement<wbr>Timeout<wbr>Ms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timeout period for each statement in a script.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="keyresultstatement_python">
-<a href="#keyresultstatement_python" style="color: inherit; text-decoration: inherit;">key<wbr>Result<wbr>Statement</a>
-</span> 
+        <span id="key_result_statement_python">
+<a href="#key_result_statement_python" style="color: inherit; text-decoration: inherit;">key_<wbr>result_<wbr>statement</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines which statement in the script represents the "key result",
 used to populate the schema and query results of the script job.
+Possible values are `LAST` and `FIRST_SELECT`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="statementbytebudget_python">
-<a href="#statementbytebudget_python" style="color: inherit; text-decoration: inherit;">statement<wbr>Byte<wbr>Budget</a>
-</span> 
+        <span id="statement_byte_budget_python">
+<a href="#statement_byte_budget_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>byte_<wbr>budget</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="statementtimeoutms_python">
-<a href="#statementtimeoutms_python" style="color: inherit; text-decoration: inherit;">statement<wbr>Timeout<wbr>Ms</a>
-</span> 
+        <span id="statement_timeout_ms_python">
+<a href="#statement_timeout_ms_python" style="color: inherit; text-decoration: inherit;">statement_<wbr>timeout_<wbr>ms</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timeout period for each statement in a script.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="jobqueryuserdefinedfunctionresource">Job<wbr>Query<wbr>User<wbr>Defined<wbr>Function<wbr>Resource</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobQueryUserDefinedFunctionResource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobQueryUserDefinedFunctionResource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryUserDefinedFunctionResourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#JobQueryUserDefinedFunctionResourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Inputs.JobQueryUserDefinedFunctionResourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigQuery.Outputs.JobQueryUserDefinedFunctionResource.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6745,28 +6200,25 @@ used to populate the schema and query results of the script job.
             title="Optional">
         <span id="inlinecode_csharp">
 <a href="#inlinecode_csharp" style="color: inherit; text-decoration: inherit;">Inline<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An inline resource that contains code for a user-defined function (UDF).
 Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceuri_csharp">
 <a href="#resourceuri_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6775,28 +6227,25 @@ Providing a inline code resource is equivalent to providing a URI for a file con
             title="Optional">
         <span id="inlinecode_go">
 <a href="#inlinecode_go" style="color: inherit; text-decoration: inherit;">Inline<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An inline resource that contains code for a user-defined function (UDF).
 Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceuri_go">
 <a href="#resourceuri_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6805,62 +6254,80 @@ Providing a inline code resource is equivalent to providing a URI for a file con
             title="Optional">
         <span id="inlinecode_nodejs">
 <a href="#inlinecode_nodejs" style="color: inherit; text-decoration: inherit;">inline<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An inline resource that contains code for a user-defined function (UDF).
 Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceuri_nodejs">
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="inlinecode_python">
-<a href="#inlinecode_python" style="color: inherit; text-decoration: inherit;">inline<wbr>Code</a>
-</span> 
+        <span id="inline_code_python">
+<a href="#inline_code_python" style="color: inherit; text-decoration: inherit;">inline_<wbr>code</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An inline resource that contains code for a user-defined function (UDF).
 Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resource_uri_python">
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Job can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:bigquery/job:Job default projects/{{project}}/jobs/{{job_id}}/location/{{location}}
+```
 
+```sh
+ $ pulumi import gcp:bigquery/job:Job default projects/{{project}}/jobs/{{job_id}}
+```
 
+```sh
+ $ pulumi import gcp:bigquery/job:Job default {{project}}/{{job_id}}/{{location}}
+```
+
+```sh
+ $ pulumi import gcp:bigquery/job:Job default {{job_id}}/{{location}}
+```
+
+```sh
+ $ pulumi import gcp:bigquery/job:Job default {{project}}/{{job_id}}
+```
+
+```sh
+ $ pulumi import gcp:bigquery/job:Job default {{job_id}}
+```
 
 
 
@@ -6872,6 +6339,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

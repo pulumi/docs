@@ -16,6 +16,8 @@ Explore the resources and functions of the storagegateway module in the AWS pack
     <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
     <li><a href="nfsfileshare" title="NfsFileShare"><span class="symbol resource"></span>NfsFileShare</a></li>
     <li><a href="smbfileshare" title="SmbFileShare"><span class="symbol resource"></span>SmbFileShare</a></li>
+    <li><a href="storediscsivolume" title="StoredIscsiVolume"><span class="symbol resource"></span>StoredIscsiVolume</a></li>
+    <li><a href="tapepool" title="TapePool"><span class="symbol resource"></span>TapePool</a></li>
     <li><a href="uploadbuffer" title="UploadBuffer"><span class="symbol resource"></span>UploadBuffer</a></li>
     <li><a href="workingstorage" title="WorkingStorage"><span class="symbol resource"></span>WorkingStorage</a></li>
 </ul>
@@ -34,24 +36,6 @@ Explore the resources and functions of the storagegateway module in the AWS pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.html" title="Pulumi.Aws.StorageGateway">Pulumi.Aws.StorageGateway</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#" title="aws/storagegateway">aws/storagegateway</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/storagegateway/#" title="@pulumi/aws/storagegateway">@pulumi/aws/storagegateway</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/storagegateway" title="pulumi_aws/storagegateway">pulumi_aws/storagegateway</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

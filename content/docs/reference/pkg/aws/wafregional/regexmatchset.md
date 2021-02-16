@@ -1,8 +1,8 @@
 
 ---
 title: "RegexMatchSet"
-title_tag: "Resource RegexMatchSet | Module wafregional | Package AWS"
-meta_desc: "Explore the RegexMatchSet resource of the wafregional module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a WAF Regional Regex Match Set Resource"
+title_tag: "aws.wafregional.RegexMatchSet"
+meta_desc: "Documentation for the aws.wafregional.RegexMatchSet resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -108,14 +108,14 @@ example_regex_pattern_set = aws.wafregional.RegexPatternSet("exampleRegexPattern
     "one",
     "two",
 ])
-example_regex_match_set = aws.wafregional.RegexMatchSet("exampleRegexMatchSet", regex_match_tuples=[{
-    "fieldToMatch": {
-        "data": "User-Agent",
-        "type": "HEADER",
-    },
-    "regexPatternSetId": example_regex_pattern_set.id,
-    "textTransformation": "NONE",
-}])
+example_regex_match_set = aws.wafregional.RegexMatchSet("exampleRegexMatchSet", regex_match_tuples=[aws.wafregional.RegexMatchSetRegexMatchTupleArgs(
+    field_to_match=aws.wafregional.RegexMatchSetRegexMatchTupleFieldToMatchArgs(
+        data="User-Agent",
+        type="HEADER",
+    ),
+    regex_pattern_set_id=example_regex_pattern_set.id,
+    text_transformation="NONE",
+)])
 ```
 
 {{% /example %}}
@@ -150,19 +150,19 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("exampleRegexMatc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#RegexMatchSet">RegexMatchSet</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#RegexMatchSetArgs">RegexMatchSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegexMatchSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">RegexMatchSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafregional/#pulumi_aws.wafregional.RegexMatchSet">RegexMatchSet</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>regex_match_tuples=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegexMatchSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regex_match_tuples</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegexMatchSetRegexMatchTupleArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#RegexMatchSet">NewRegexMatchSet</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#RegexMatchSetArgs">RegexMatchSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#RegexMatchSet">RegexMatchSet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegexMatchSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">RegexMatchSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegexMatchSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.RegexMatchSet.html">RegexMatchSet</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.RegexMatchSetArgs.html">RegexMatchSetArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegexMatchSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegexMatchSetArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -173,7 +173,7 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("exampleRegexMatc
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -183,7 +183,7 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("exampleRegexMatc
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#RegexMatchSetArgs">RegexMatchSetArgs</a></span>
+        <span class="property-type"><a href="#inputs">RegexMatchSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -242,7 +242,7 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("exampleRegexMatc
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -252,7 +252,7 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("exampleRegexMatc
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#RegexMatchSetArgs">RegexMatchSetArgs</a></span>
+        <span class="property-type"><a href="#inputs">RegexMatchSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,7 +281,7 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("exampleRegexMatc
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -291,7 +291,7 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("exampleRegexMatc
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.RegexMatchSetArgs.html">RegexMatchSetArgs</a></span>
+        <span class="property-type"><a href="#inputs">RegexMatchSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -314,12 +314,11 @@ const exampleRegexMatchSet = new aws.wafregional.RegexMatchSet("exampleRegexMatc
 
 ## RegexMatchSet Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RegexMatchSet resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The RegexMatchSet resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -330,28 +329,24 @@ The RegexMatchSet resource accepts the following [input]({{< relref "/docs/intro
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Regex Match Set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regexmatchtuples_csharp">
 <a href="#regexmatchtuples_csharp" style="color: inherit; text-decoration: inherit;">Regex<wbr>Match<wbr>Tuples</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List&lt;Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -360,28 +355,24 @@ the location in requests that you want AWS WAF to search, and other settings. Se
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Regex Match Set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regexmatchtuples_go">
 <a href="#regexmatchtuples_go" style="color: inherit; text-decoration: inherit;">Regex<wbr>Match<wbr>Tuples</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">[]Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -390,28 +381,24 @@ the location in requests that you want AWS WAF to search, and other settings. Se
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Regex Match Set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regexmatchtuples_nodejs">
 <a href="#regexmatchtuples_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match<wbr>Tuples</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple[]</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -420,37 +407,29 @@ the location in requests that you want AWS WAF to search, and other settings. Se
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or description of the Regex Match Set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_match_tuples_python">
 <a href="#regex_match_tuples_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match_<wbr>tuples</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List[Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple]</a></span>
+        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">Sequence[Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the RegexMatchSet resource produces the following output properties:
-
 
 
 
@@ -461,15 +440,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -478,15 +455,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -495,15 +470,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -512,18 +485,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -533,19 +501,20 @@ Get an existing RegexMatchSet resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#RegexMatchSetState">RegexMatchSetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#RegexMatchSet">RegexMatchSet</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RegexMatchSetState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RegexMatchSet</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>name=None<span class="p">, </span>regex_match_tuples=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regex_match_tuples</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegexMatchSetRegexMatchTupleArgs]]</span> = None<span class="p">) -&gt;</span> RegexMatchSet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegexMatchSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#RegexMatchSetState">RegexMatchSetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#RegexMatchSet">RegexMatchSet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegexMatchSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RegexMatchSetState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegexMatchSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.RegexMatchSet.html">RegexMatchSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.RegexMatchSetState.html">RegexMatchSetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RegexMatchSet</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RegexMatchSetState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -647,7 +616,6 @@ Get an existing RegexMatchSet resource's state with the given name, ID, and opti
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -655,28 +623,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Regex Match Set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regexmatchtuples_csharp">
 <a href="#state_regexmatchtuples_csharp" style="color: inherit; text-decoration: inherit;">Regex<wbr>Match<wbr>Tuples</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List&lt;Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -685,28 +649,24 @@ the location in requests that you want AWS WAF to search, and other settings. Se
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Regex Match Set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regexmatchtuples_go">
 <a href="#state_regexmatchtuples_go" style="color: inherit; text-decoration: inherit;">Regex<wbr>Match<wbr>Tuples</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">[]Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -715,28 +675,24 @@ the location in requests that you want AWS WAF to search, and other settings. Se
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the Regex Match Set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regexmatchtuples_nodejs">
 <a href="#state_regexmatchtuples_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match<wbr>Tuples</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuple">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple[]</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -745,31 +701,24 @@ the location in requests that you want AWS WAF to search, and other settings. Se
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or description of the Regex Match Set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regex_match_tuples_python">
 <a href="#state_regex_match_tuples_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match_<wbr>tuples</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">List[Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple]</a></span>
+        <span class="property-type"><a href="#regexmatchsetregexmatchtuple">Sequence[Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests,
-the location in requests that you want AWS WAF to search, and other settings. See below.
+    <dd>{{% md %}}The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -779,20 +728,8 @@ the location in requests that you want AWS WAF to search, and other settings. Se
 ## Supporting Types
 
 
+
 <h4 id="regexmatchsetregexmatchtuple">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RegexMatchSetRegexMatchTuple">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RegexMatchSetRegexMatchTuple">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#RegexMatchSetRegexMatchTupleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#RegexMatchSetRegexMatchTupleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.RegexMatchSetRegexMatchTupleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.RegexMatchSetRegexMatchTuple.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -801,41 +738,37 @@ the location in requests that you want AWS WAF to search, and other settings. Se
             title="Required">
         <span id="fieldtomatch_csharp">
 <a href="#fieldtomatch_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuplefieldtomatch">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want to search, such as a specified header or a query string.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="regexpatternsetid_csharp">
 <a href="#regexpatternsetid_csharp" style="color: inherit; text-decoration: inherit;">Regex<wbr>Pattern<wbr>Set<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `WAF Regex Pattern Set`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="texttransformation_csharp">
 <a href="#texttransformation_csharp" style="color: inherit; text-decoration: inherit;">Text<wbr>Transformation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
 e.g. `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation)
 for all supported values.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -844,41 +777,37 @@ for all supported values.
             title="Required">
         <span id="fieldtomatch_go">
 <a href="#fieldtomatch_go" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuplefieldtomatch">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want to search, such as a specified header or a query string.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="regexpatternsetid_go">
 <a href="#regexpatternsetid_go" style="color: inherit; text-decoration: inherit;">Regex<wbr>Pattern<wbr>Set<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `WAF Regex Pattern Set`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="texttransformation_go">
 <a href="#texttransformation_go" style="color: inherit; text-decoration: inherit;">Text<wbr>Transformation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
 e.g. `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation)
 for all supported values.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -887,102 +816,78 @@ for all supported values.
             title="Required">
         <span id="fieldtomatch_nodejs">
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regexmatchsetregexmatchtuplefieldtomatch">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want to search, such as a specified header or a query string.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="regexpatternsetid_nodejs">
 <a href="#regexpatternsetid_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `WAF Regex Pattern Set`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="texttransformation_nodejs">
 <a href="#texttransformation_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
 e.g. `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation)
 for all supported values.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldtomatch_python">
-<a href="#fieldtomatch_python" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
-</span> 
+        <span id="field_to_match_python">
+<a href="#field_to_match_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>match</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regexmatchsetregexmatchtuplefieldtomatch">Dict[Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match]</a></span>
+        <span class="property-type"><a href="#regexmatchsetregexmatchtuplefieldtomatch">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The part of a web request that you want to search, such as a specified header or a query string.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="regexpatternsetid_python">
-<a href="#regexpatternsetid_python" style="color: inherit; text-decoration: inherit;">regex<wbr>Pattern<wbr>Set<wbr>Id</a>
-</span> 
+        <span id="regex_pattern_set_id_python">
+<a href="#regex_pattern_set_id_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>pattern_<wbr>set_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a `WAF Regex Pattern Set`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="texttransformation_python">
-<a href="#texttransformation_python" style="color: inherit; text-decoration: inherit;">text<wbr>Transformation</a>
-</span> 
+        <span id="text_transformation_python">
+<a href="#text_transformation_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformation</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Text transformations used to eliminate unusual formatting that attackers use in web requests in an effort to bypass AWS WAF.
 e.g. `CMD_LINE`, `HTML_ENTITY_DECODE` or `NONE`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_ByteMatchTuple.html#WAF-Type-ByteMatchTuple-TextTransformation)
 for all supported values.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="regexmatchsetregexmatchtuplefieldtomatch">Regex<wbr>Match<wbr>Set<wbr>Regex<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RegexMatchSetRegexMatchTupleFieldToMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RegexMatchSetRegexMatchTupleFieldToMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#RegexMatchSetRegexMatchTupleFieldToMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional?tab=doc#RegexMatchSetRegexMatchTupleFieldToMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Inputs.RegexMatchSetRegexMatchTupleFieldToMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.Outputs.RegexMatchSetRegexMatchTupleFieldToMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -991,31 +896,28 @@ for all supported values.
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string.
 e.g. `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="data_csharp">
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
 If `type` is any other value, omit this field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1024,31 +926,28 @@ If `type` is any other value, omit this field.
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string.
 e.g. `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="data_go">
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
 If `type` is any other value, omit this field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1057,31 +956,28 @@ If `type` is any other value, omit this field.
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string.
 e.g. `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="data_nodejs">
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
 If `type` is any other value, omit this field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1090,35 +986,36 @@ If `type` is any other value, omit this field.
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string.
 e.g. `HEADER`, `METHOD` or `BODY`.
 See [docs](http://docs.aws.amazon.com/waf/latest/APIReference/API_FieldToMatch.html)
 for all supported values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="data_python">
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When `type` is `HEADER`, enter the name of the header that you want to search, e.g. `User-Agent` or `Referer`.
 If `type` is any other value, omit this field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+WAF Regional Regex Match Set can be imported using the id, e.g.
 
-
-
+```sh
+ $ pulumi import aws:wafregional/regexMatchSet:RegexMatchSet example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
+```
 
 
 

@@ -15,6 +15,7 @@ Filters support regular expression for the account name, searches by clusterId.
 
 > **NOTE:** Available in v1.70.0+.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -38,18 +39,48 @@ class MyStack : Stack
         {
             DbClusterId = polardbClustersDs.Clusters[0].Id,
         })));
-        this.Ends = @default.Apply(@default => @default.Accounts[0].AccountName);
+        this.Account = @default.Apply(@default => @default.Accounts[0].AccountName);
     }
 
-    [Output("ends")]
-    public Output<string> Ends { get; set; }
+    [Output("account")]
+    public Output<string> Account { get; set; }
 }
 ```
 
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "pc-\\w+"
+		opt1 := "Running"
+		polardbClustersDs, err := polardb.GetClusters(ctx, &polardb.GetClustersArgs{
+			DescriptionRegex: &opt0,
+			Status:           &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_default, err := polardb.GetAccounts(ctx, &polardb.GetAccountsArgs{
+			DbClusterId: polardbClustersDs.Clusters[0].Id,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("account", _default.Accounts[0].AccountName)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -59,8 +90,8 @@ import pulumi_alicloud as alicloud
 
 polardb_clusters_ds = alicloud.polardb.get_clusters(description_regex="pc-\\w+",
     status="Running")
-default = alicloud.polardb.get_accounts(db_cluster_id=polardb_clusters_ds.clusters[0]["id"])
-pulumi.export("ends", default.accounts[0]["account_name"])
+default = alicloud.polardb.get_accounts(db_cluster_id=polardb_clusters_ds.clusters[0].id)
+pulumi.export("account", default.accounts[0].account_name)
 ```
 
 {{% /example %}}
@@ -78,7 +109,7 @@ const polardbClustersDs = alicloud.polardb.getClusters({
 const default = polardbClustersDs.then(polardbClustersDs => alicloud.polardb.getAccounts({
     dbClusterId: polardbClustersDs.clusters[0].id,
 }));
-export const ends = _default.then(_default => _default.accounts[0].accountName);
+export const account = _default.then(_default => _default.accounts[0].accountName);
 ```
 
 {{% /example %}}
@@ -97,7 +128,7 @@ export const ends = _default.then(_default => _default.accounts[0].accountName);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_accounts(</span>db_cluster_id=None<span class="p">, </span>name_regex=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_accounts(</span><span class="nx">db_cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccountsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -118,7 +149,6 @@ export const ends = _default.then(_default => _default.accounts[0].accountName);
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -126,27 +156,24 @@ The following arguments are supported:
             title="Required">
         <span id="dbclusterid_csharp">
 <a href="#dbclusterid_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The polarDB cluster ID. 
+    <dd>{{% md %}}The polarDB cluster ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by account name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -155,27 +182,24 @@ The following arguments are supported:
             title="Required">
         <span id="dbclusterid_go">
 <a href="#dbclusterid_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The polarDB cluster ID. 
+    <dd>{{% md %}}The polarDB cluster ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by account name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -184,27 +208,24 @@ The following arguments are supported:
             title="Required">
         <span id="dbclusterid_nodejs">
 <a href="#dbclusterid_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The polarDB cluster ID. 
+    <dd>{{% md %}}The polarDB cluster ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by account name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -213,30 +234,24 @@ The following arguments are supported:
             title="Required">
         <span id="db_cluster_id_python">
 <a href="#db_cluster_id_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The polarDB cluster ID. 
+    <dd>{{% md %}}The polarDB cluster ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by account name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -247,7 +262,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -255,58 +269,52 @@ The following output properties are available:
             title="">
         <span id="accounts_csharp">
 <a href="#accounts_csharp" style="color: inherit; text-decoration: inherit;">Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccount">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Outputs.<wbr>Get<wbr>Accounts<wbr>Account&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB cluster accounts. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dbclusterid_csharp">
 <a href="#dbclusterid_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Account name of the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -315,58 +323,52 @@ The following output properties are available:
             title="">
         <span id="accounts_go">
 <a href="#accounts_go" style="color: inherit; text-decoration: inherit;">Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccount">[]Get<wbr>Accounts<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB cluster accounts. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dbclusterid_go">
 <a href="#dbclusterid_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Account name of the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -375,58 +377,52 @@ The following output properties are available:
             title="">
         <span id="accounts_nodejs">
 <a href="#accounts_nodejs" style="color: inherit; text-decoration: inherit;">accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccount">Get<wbr>Accounts<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB cluster accounts. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dbclusterid_nodejs">
 <a href="#dbclusterid_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Account name of the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -435,61 +431,52 @@ The following output properties are available:
             title="">
         <span id="accounts_python">
 <a href="#accounts_python" style="color: inherit; text-decoration: inherit;">accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountsaccount">List[Get<wbr>Accounts<wbr>Account]</a></span>
+        <span class="property-type"><a href="#getaccountsaccount">Sequence[Get<wbr>Accounts<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB cluster accounts. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="db_cluster_id_python">
 <a href="#db_cluster_id_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Account name of the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -511,7 +498,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -519,71 +505,64 @@ The following output properties are available:
             title="Required">
         <span id="accountdescription_csharp">
 <a href="#accountdescription_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account description.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accountlockstate_csharp">
 <a href="#accountlockstate_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Lock<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account lock state, Valid values are `Lock`, `UnLock`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accountstatus_csharp">
 <a href="#accountstatus_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster address type.`Cluster`: the default address of the Cluster.`Primary`: Primary address.`Custom`: Custom cluster addresses.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accounttype_csharp">
 <a href="#accounttype_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account type, Valid values are `Normal`, `Super`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="databaseprivileges_csharp">
 <a href="#databaseprivileges_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Privileges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of database privilege. Each element contains the following attributes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -592,71 +571,64 @@ The following output properties are available:
             title="Required">
         <span id="accountdescription_go">
 <a href="#accountdescription_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account description.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accountlockstate_go">
 <a href="#accountlockstate_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Lock<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account lock state, Valid values are `Lock`, `UnLock`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accountstatus_go">
 <a href="#accountstatus_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster address type.`Cluster`: the default address of the Cluster.`Primary`: Primary address.`Custom`: Custom cluster addresses.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accounttype_go">
 <a href="#accounttype_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account type, Valid values are `Normal`, `Super`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="databaseprivileges_go">
 <a href="#databaseprivileges_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Privileges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">[]Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege</a></span>
     </dt>
     <dd>{{% md %}}A list of database privilege. Each element contains the following attributes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -665,147 +637,130 @@ The following output properties are available:
             title="Required">
         <span id="accountdescription_nodejs">
 <a href="#accountdescription_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account description.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accountlockstate_nodejs">
 <a href="#accountlockstate_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Lock<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account lock state, Valid values are `Lock`, `UnLock`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accountstatus_nodejs">
 <a href="#accountstatus_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster address type.`Cluster`: the default address of the Cluster.`Primary`: Primary address.`Custom`: Custom cluster addresses.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accounttype_nodejs">
 <a href="#accounttype_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account type, Valid values are `Normal`, `Super`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="databaseprivileges_nodejs">
 <a href="#databaseprivileges_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Privileges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege[]</a></span>
     </dt>
     <dd>{{% md %}}A list of database privilege. Each element contains the following attributes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="accountlockstate_python">
-<a href="#accountlockstate_python" style="color: inherit; text-decoration: inherit;">account<wbr>Lock<wbr>State</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Account lock state, Valid values are `Lock`, `UnLock`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accountstatus_python">
-<a href="#accountstatus_python" style="color: inherit; text-decoration: inherit;">account<wbr>Status</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Cluster address type.`Cluster`: the default address of the Cluster.`Primary`: Primary address.`Custom`: Custom cluster addresses.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="account_description_python">
 <a href="#account_description_python" style="color: inherit; text-decoration: inherit;">account_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Account description.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="account_lock_state_python">
+<a href="#account_lock_state_python" style="color: inherit; text-decoration: inherit;">account_<wbr>lock_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Account lock state, Valid values are `Lock`, `UnLock`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Account name.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="account_status_python">
+<a href="#account_status_python" style="color: inherit; text-decoration: inherit;">account_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Cluster address type.`Cluster`: the default address of the Cluster.`Primary`: Primary address.`Custom`: Custom cluster addresses.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="account_type_python">
 <a href="#account_type_python" style="color: inherit; text-decoration: inherit;">account_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Account type, Valid values are `Normal`, `Super`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="databaseprivileges_python">
-<a href="#databaseprivileges_python" style="color: inherit; text-decoration: inherit;">database<wbr>Privileges</a>
-</span> 
+        <span id="database_privileges_python">
+<a href="#database_privileges_python" style="color: inherit; text-decoration: inherit;">database_<wbr>privileges</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">List[Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege]</a></span>
+        <span class="property-type"><a href="#getaccountsaccountdatabaseprivilege">Sequence[Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of database privilege. Each element contains the following attributes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getaccountsaccountdatabaseprivilege">Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege</h4>
 {{% choosable language nodejs %}}
@@ -821,7 +776,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -829,27 +783,24 @@ The following output properties are available:
             title="Required">
         <span id="accountprivilege_csharp">
 <a href="#accountprivilege_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Privilege</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account privilege of database
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dbname_csharp">
 <a href="#dbname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account owned database name 
+    <dd>{{% md %}}The account owned database name
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -858,27 +809,24 @@ The following output properties are available:
             title="Required">
         <span id="accountprivilege_go">
 <a href="#accountprivilege_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Privilege</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account privilege of database
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dbname_go">
 <a href="#dbname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account owned database name 
+    <dd>{{% md %}}The account owned database name
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -887,27 +835,24 @@ The following output properties are available:
             title="Required">
         <span id="accountprivilege_nodejs">
 <a href="#accountprivilege_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Privilege</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account privilege of database
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dbname_nodejs">
 <a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account owned database name 
+    <dd>{{% md %}}The account owned database name
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -916,30 +861,24 @@ The following output properties are available:
             title="Required">
         <span id="account_privilege_python">
 <a href="#account_privilege_python" style="color: inherit; text-decoration: inherit;">account_<wbr>privilege</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Account privilege of database
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="db_name_python">
 <a href="#db_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The account owned database name 
+    <dd>{{% md %}}The account owned database name
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -952,6 +891,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

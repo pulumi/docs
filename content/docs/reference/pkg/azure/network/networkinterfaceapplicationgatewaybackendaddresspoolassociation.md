@@ -1,8 +1,8 @@
 
 ---
 title: "NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation"
-title_tag: "Resource NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation | Module network | Package Azure"
-meta_desc: "Explore the NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Manages the association between a Network Interface and a Application Gateway&#39;s Backend Address Pool."
+title_tag: "azure.network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation"
+meta_desc: "Documentation for the azure.network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -43,13 +43,19 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "10.0.1.0/24",
+            AddressPrefixes = 
+            {
+                "10.0.1.0/24",
+            },
         });
         var backend = new Azure.Network.Subnet("backend", new Azure.Network.SubnetArgs
         {
             ResourceGroupName = exampleResourceGroup.Name,
             VirtualNetworkName = exampleVirtualNetwork.Name,
-            AddressPrefix = "10.0.2.0/24",
+            AddressPrefixes = 
+            {
+                "10.0.2.0/24",
+            },
         });
         var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
         {
@@ -197,7 +203,9 @@ func main() {
 		frontend, err := network.NewSubnet(ctx, "frontend", &network.SubnetArgs{
 			ResourceGroupName:  exampleResourceGroup.Name,
 			VirtualNetworkName: exampleVirtualNetwork.Name,
-			AddressPrefix:      pulumi.String("10.0.1.0/24"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.1.0/24"),
+			},
 		})
 		if err != nil {
 			return err
@@ -205,7 +213,9 @@ func main() {
 		_, err = network.NewSubnet(ctx, "backend", &network.SubnetArgs{
 			ResourceGroupName:  exampleResourceGroup.Name,
 			VirtualNetworkName: exampleVirtualNetwork.Name,
-			AddressPrefix:      pulumi.String("10.0.2.0/24"),
+			AddressPrefixes: pulumi.StringArray{
+				pulumi.String("10.0.2.0/24"),
+			},
 		})
 		if err != nil {
 			return err
@@ -323,11 +333,11 @@ example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
 frontend = azure.network.Subnet("frontend",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="10.0.1.0/24")
+    address_prefixes=["10.0.1.0/24"])
 backend = azure.network.Subnet("backend",
     resource_group_name=example_resource_group.name,
     virtual_network_name=example_virtual_network.name,
-    address_prefix="10.0.2.0/24")
+    address_prefixes=["10.0.2.0/24"])
 example_public_ip = azure.network.PublicIp("examplePublicIp",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -341,58 +351,58 @@ request_routing_rule_name = example_virtual_network.name.apply(lambda name: f"{n
 network = azure.network.ApplicationGateway("network",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
-    sku={
-        "name": "Standard_Small",
-        "tier": "Standard",
-        "capacity": 2,
-    },
-    gateway_ip_configurations=[{
-        "name": "my-gateway-ip-configuration",
-        "subnet_id": frontend.id,
-    }],
-    frontend_ports=[{
-        "name": frontend_port_name,
-        "port": 80,
-    }],
-    frontend_ip_configurations=[{
-        "name": frontend_ip_configuration_name,
-        "public_ip_address_id": example_public_ip.id,
-    }],
-    backend_address_pools=[{
-        "name": backend_address_pool_name,
-    }],
-    backend_http_settings=[{
-        "name": http_setting_name,
-        "cookieBasedAffinity": "Disabled",
-        "port": 80,
-        "protocol": "Http",
-        "requestTimeout": 1,
-    }],
-    http_listeners=[{
-        "name": listener_name,
-        "frontend_ip_configuration_name": frontend_ip_configuration_name,
-        "frontendPortName": frontend_port_name,
-        "protocol": "Http",
-    }],
-    request_routing_rules=[{
-        "name": request_routing_rule_name,
-        "ruleType": "Basic",
-        "httpListenerName": listener_name,
-        "backendAddressPoolName": backend_address_pool_name,
-        "backendHttpSettingsName": http_setting_name,
-    }])
+    sku=azure.network.ApplicationGatewaySkuArgs(
+        name="Standard_Small",
+        tier="Standard",
+        capacity=2,
+    ),
+    gateway_ip_configurations=[azure.network.ApplicationGatewayGatewayIpConfigurationArgs(
+        name="my-gateway-ip-configuration",
+        subnet_id=frontend.id,
+    )],
+    frontend_ports=[azure.network.ApplicationGatewayFrontendPortArgs(
+        name=frontend_port_name,
+        port=80,
+    )],
+    frontend_ip_configurations=[azure.network.ApplicationGatewayFrontendIpConfigurationArgs(
+        name=frontend_ip_configuration_name,
+        public_ip_address_id=example_public_ip.id,
+    )],
+    backend_address_pools=[azure.network.ApplicationGatewayBackendAddressPoolArgs(
+        name=backend_address_pool_name,
+    )],
+    backend_http_settings=[azure.network.ApplicationGatewayBackendHttpSettingArgs(
+        name=http_setting_name,
+        cookie_based_affinity="Disabled",
+        port=80,
+        protocol="Http",
+        request_timeout=1,
+    )],
+    http_listeners=[azure.network.ApplicationGatewayHttpListenerArgs(
+        name=listener_name,
+        frontend_ip_configuration_name=frontend_ip_configuration_name,
+        frontend_port_name=frontend_port_name,
+        protocol="Http",
+    )],
+    request_routing_rules=[azure.network.ApplicationGatewayRequestRoutingRuleArgs(
+        name=request_routing_rule_name,
+        rule_type="Basic",
+        http_listener_name=listener_name,
+        backend_address_pool_name=backend_address_pool_name,
+        backend_http_settings_name=http_setting_name,
+    )])
 example_network_interface = azure.network.NetworkInterface("exampleNetworkInterface",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
-    ip_configurations=[{
-        "name": "testconfiguration1",
-        "subnet_id": frontend.id,
-        "privateIpAddressAllocation": "Dynamic",
-    }])
+    ip_configurations=[azure.network.NetworkInterfaceIpConfigurationArgs(
+        name="testconfiguration1",
+        subnet_id=frontend.id,
+        private_ip_address_allocation="Dynamic",
+    )])
 example_network_interface_application_gateway_backend_address_pool_association = azure.network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation("exampleNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation",
     network_interface_id=example_network_interface.id,
     ip_configuration_name="testconfiguration1",
-    backend_address_pool_id=network.backend_address_pools[0]["id"])
+    backend_address_pool_id=network.backend_address_pools[0].id)
 ```
 
 {{% /example %}}
@@ -412,12 +422,12 @@ const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNe
 const frontend = new azure.network.Subnet("frontend", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.0.1.0/24",
+    addressPrefixes: ["10.0.1.0/24"],
 });
 const backend = new azure.network.Subnet("backend", {
     resourceGroupName: exampleResourceGroup.name,
     virtualNetworkName: exampleVirtualNetwork.name,
-    addressPrefix: "10.0.2.0/24",
+    addressPrefixes: ["10.0.2.0/24"],
 });
 const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
     location: exampleResourceGroup.location,
@@ -500,7 +510,7 @@ const exampleNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation = n
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -508,11 +518,11 @@ const exampleNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation = n
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation">NewNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation">NewNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation.html">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs.html">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation.html">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs.html">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -523,7 +533,7 @@ const exampleNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation = n
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -592,7 +602,7 @@ const exampleNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation = n
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -631,7 +641,7 @@ const exampleNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation = n
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -672,7 +682,6 @@ The NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resource acc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -680,38 +689,34 @@ The NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resource acc
             title="Required">
         <span id="backendaddresspoolid_csharp">
 <a href="#backendaddresspoolid_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Gateway's Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ipconfigurationname_csharp">
 <a href="#ipconfigurationname_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkinterfaceid_csharp">
 <a href="#networkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -720,38 +725,34 @@ The NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resource acc
             title="Required">
         <span id="backendaddresspoolid_go">
 <a href="#backendaddresspoolid_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Gateway's Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ipconfigurationname_go">
 <a href="#ipconfigurationname_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkinterfaceid_go">
 <a href="#networkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -760,38 +761,34 @@ The NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resource acc
             title="Required">
         <span id="backendaddresspoolid_nodejs">
 <a href="#backendaddresspoolid_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Gateway's Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ipconfigurationname_nodejs">
 <a href="#ipconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkinterfaceid_nodejs">
 <a href="#networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -800,47 +797,39 @@ The NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resource acc
             title="Required">
         <span id="backend_address_pool_id_python">
 <a href="#backend_address_pool_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Gateway's Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ip_configuration_name_python">
 <a href="#ip_configuration_name_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_interface_id_python">
 <a href="#network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation resource produces the following output properties:
-
 
 
 
@@ -851,15 +840,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -868,15 +855,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -885,15 +870,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -902,18 +885,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -923,7 +901,7 @@ Get an existing NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -932,11 +910,11 @@ Get an existing NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkInterfaceApplicationGatewayBackendAddressPoolAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation.html">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState.html">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation.html">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState.html">NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1038,7 +1016,6 @@ Get an existing NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1046,38 +1023,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_backendaddresspoolid_csharp">
 <a href="#state_backendaddresspoolid_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Gateway's Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipconfigurationname_csharp">
 <a href="#state_ipconfigurationname_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaceid_csharp">
 <a href="#state_networkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1086,38 +1059,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_backendaddresspoolid_go">
 <a href="#state_backendaddresspoolid_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Gateway's Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipconfigurationname_go">
 <a href="#state_ipconfigurationname_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaceid_go">
 <a href="#state_networkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1126,38 +1095,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_backendaddresspoolid_nodejs">
 <a href="#state_backendaddresspoolid_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Gateway's Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipconfigurationname_nodejs">
 <a href="#state_ipconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaceid_nodejs">
 <a href="#state_networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1166,35 +1131,32 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_backend_address_pool_id_python">
 <a href="#state_backend_address_pool_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Gateway's Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ip_configuration_name_python">
 <a href="#state_ip_configuration_name_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_interface_id_python">
 <a href="#state_network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1202,8 +1164,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+Associations between Network Interfaces and Application Gateway Backend Address Pools can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/networkInterfaceApplicationGatewayBackendAddressPoolAssociation:NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation association1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/microsoft.network/networkInterfaces/nic1/ipConfigurations/example|/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Network/applicationGateways/gateway1/backendAddressPools/pool1
+```
 
 
 

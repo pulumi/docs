@@ -18,8 +18,16 @@ import {
   ChooserOptionStyle,
   ChooserType as ChooserType1,
 } from './components/chooser/chooser';
+import {
+  SourceKind,
+} from './components/convert/convert';
 
 export namespace Components {
+  interface PulumiBanner {
+    'dismissible': boolean;
+    'name': string;
+    'visible': boolean;
+  }
   interface PulumiChoosable {
     'mode': ChooserMode;
     'selection': ChooserKey;
@@ -34,18 +42,45 @@ export namespace Components {
     'selection': ChooserKey;
     'type': ChooserType;
   }
+  interface PulumiConvert {
+    'endpoint': string;
+    'examples': string;
+    'from': SourceKind;
+    'theme': string;
+  }
+  interface PulumiDatetime {
+    'class'?: string;
+    'date': string;
+  }
   interface PulumiExample {}
   interface PulumiExamples {}
+  interface PulumiGreenhouseJobsList {}
+  interface PulumiHubspotForm {
+    'class'?: string;
+    'formId': string;
+    'goToWebinarKey'?: string;
+  }
   interface PulumiRoot {}
   interface PulumiTooltip {
     'hide': () => Promise<unknown>;
     'show': () => Promise<unknown>;
   }
   interface PulumiTopButton {}
+  interface PulumiWebinarFormSelect {
+    'labelClass'?: string;
+    'selectClass'?: string;
+    'sessions': string;
+  }
 }
 
 declare global {
 
+
+  interface HTMLPulumiBannerElement extends Components.PulumiBanner, HTMLStencilElement {}
+  var HTMLPulumiBannerElement: {
+    prototype: HTMLPulumiBannerElement;
+    new (): HTMLPulumiBannerElement;
+  };
 
   interface HTMLPulumiChoosableElement extends Components.PulumiChoosable, HTMLStencilElement {}
   var HTMLPulumiChoosableElement: {
@@ -59,6 +94,18 @@ declare global {
     new (): HTMLPulumiChooserElement;
   };
 
+  interface HTMLPulumiConvertElement extends Components.PulumiConvert, HTMLStencilElement {}
+  var HTMLPulumiConvertElement: {
+    prototype: HTMLPulumiConvertElement;
+    new (): HTMLPulumiConvertElement;
+  };
+
+  interface HTMLPulumiDatetimeElement extends Components.PulumiDatetime, HTMLStencilElement {}
+  var HTMLPulumiDatetimeElement: {
+    prototype: HTMLPulumiDatetimeElement;
+    new (): HTMLPulumiDatetimeElement;
+  };
+
   interface HTMLPulumiExampleElement extends Components.PulumiExample, HTMLStencilElement {}
   var HTMLPulumiExampleElement: {
     prototype: HTMLPulumiExampleElement;
@@ -69,6 +116,18 @@ declare global {
   var HTMLPulumiExamplesElement: {
     prototype: HTMLPulumiExamplesElement;
     new (): HTMLPulumiExamplesElement;
+  };
+
+  interface HTMLPulumiGreenhouseJobsListElement extends Components.PulumiGreenhouseJobsList, HTMLStencilElement {}
+  var HTMLPulumiGreenhouseJobsListElement: {
+    prototype: HTMLPulumiGreenhouseJobsListElement;
+    new (): HTMLPulumiGreenhouseJobsListElement;
+  };
+
+  interface HTMLPulumiHubspotFormElement extends Components.PulumiHubspotForm, HTMLStencilElement {}
+  var HTMLPulumiHubspotFormElement: {
+    prototype: HTMLPulumiHubspotFormElement;
+    new (): HTMLPulumiHubspotFormElement;
   };
 
   interface HTMLPulumiRootElement extends Components.PulumiRoot, HTMLStencilElement {}
@@ -88,18 +147,35 @@ declare global {
     prototype: HTMLPulumiTopButtonElement;
     new (): HTMLPulumiTopButtonElement;
   };
+
+  interface HTMLPulumiWebinarFormSelectElement extends Components.PulumiWebinarFormSelect, HTMLStencilElement {}
+  var HTMLPulumiWebinarFormSelectElement: {
+    prototype: HTMLPulumiWebinarFormSelectElement;
+    new (): HTMLPulumiWebinarFormSelectElement;
+  };
   interface HTMLElementTagNameMap {
+    'pulumi-banner': HTMLPulumiBannerElement;
     'pulumi-choosable': HTMLPulumiChoosableElement;
     'pulumi-chooser': HTMLPulumiChooserElement;
+    'pulumi-convert': HTMLPulumiConvertElement;
+    'pulumi-datetime': HTMLPulumiDatetimeElement;
     'pulumi-example': HTMLPulumiExampleElement;
     'pulumi-examples': HTMLPulumiExamplesElement;
+    'pulumi-greenhouse-jobs-list': HTMLPulumiGreenhouseJobsListElement;
+    'pulumi-hubspot-form': HTMLPulumiHubspotFormElement;
     'pulumi-root': HTMLPulumiRootElement;
     'pulumi-tooltip': HTMLPulumiTooltipElement;
     'pulumi-top-button': HTMLPulumiTopButtonElement;
+    'pulumi-webinar-form-select': HTMLPulumiWebinarFormSelectElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface PulumiBanner {
+    'dismissible'?: boolean;
+    'name'?: string;
+    'visible'?: boolean;
+  }
   interface PulumiChoosable {
     'mode'?: ChooserMode;
     'selection'?: ChooserKey;
@@ -114,22 +190,49 @@ declare namespace LocalJSX {
     'selection'?: ChooserKey;
     'type'?: ChooserType;
   }
+  interface PulumiConvert {
+    'endpoint'?: string;
+    'examples'?: string;
+    'from'?: SourceKind;
+    'theme'?: string;
+  }
+  interface PulumiDatetime {
+    'class'?: string;
+    'date'?: string;
+  }
   interface PulumiExample {}
   interface PulumiExamples {}
+  interface PulumiGreenhouseJobsList {}
+  interface PulumiHubspotForm {
+    'class'?: string;
+    'formId'?: string;
+    'goToWebinarKey'?: string;
+  }
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;
   }
   interface PulumiTooltip {}
   interface PulumiTopButton {}
+  interface PulumiWebinarFormSelect {
+    'labelClass'?: string;
+    'selectClass'?: string;
+    'sessions'?: string;
+  }
 
   interface IntrinsicElements {
+    'pulumi-banner': PulumiBanner;
     'pulumi-choosable': PulumiChoosable;
     'pulumi-chooser': PulumiChooser;
+    'pulumi-convert': PulumiConvert;
+    'pulumi-datetime': PulumiDatetime;
     'pulumi-example': PulumiExample;
     'pulumi-examples': PulumiExamples;
+    'pulumi-greenhouse-jobs-list': PulumiGreenhouseJobsList;
+    'pulumi-hubspot-form': PulumiHubspotForm;
     'pulumi-root': PulumiRoot;
     'pulumi-tooltip': PulumiTooltip;
     'pulumi-top-button': PulumiTopButton;
+    'pulumi-webinar-form-select': PulumiWebinarFormSelect;
   }
 }
 
@@ -139,13 +242,19 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'pulumi-banner': LocalJSX.PulumiBanner & JSXBase.HTMLAttributes<HTMLPulumiBannerElement>;
       'pulumi-choosable': LocalJSX.PulumiChoosable & JSXBase.HTMLAttributes<HTMLPulumiChoosableElement>;
       'pulumi-chooser': LocalJSX.PulumiChooser & JSXBase.HTMLAttributes<HTMLPulumiChooserElement>;
+      'pulumi-convert': LocalJSX.PulumiConvert & JSXBase.HTMLAttributes<HTMLPulumiConvertElement>;
+      'pulumi-datetime': LocalJSX.PulumiDatetime & JSXBase.HTMLAttributes<HTMLPulumiDatetimeElement>;
       'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
+      'pulumi-greenhouse-jobs-list': LocalJSX.PulumiGreenhouseJobsList & JSXBase.HTMLAttributes<HTMLPulumiGreenhouseJobsListElement>;
+      'pulumi-hubspot-form': LocalJSX.PulumiHubspotForm & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
       'pulumi-tooltip': LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
       'pulumi-top-button': LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
+      'pulumi-webinar-form-select': LocalJSX.PulumiWebinarFormSelect & JSXBase.HTMLAttributes<HTMLPulumiWebinarFormSelectElement>;
     }
   }
 }

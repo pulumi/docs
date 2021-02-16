@@ -11,14 +11,19 @@ Explore the resources and functions of the fc module in the AliCloud package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="alias" title="Alias"><span class="symbol resource"></span>Alias</a></li>
+    <li><a href="customdomain" title="CustomDomain"><span class="symbol resource"></span>CustomDomain</a></li>
     <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
+    <li><a href="functionasyncinvokeconfig" title="FunctionAsyncInvokeConfig"><span class="symbol resource"></span>FunctionAsyncInvokeConfig</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
     <li><a href="trigger" title="Trigger"><span class="symbol resource"></span>Trigger</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcustomdomains" title="GetCustomDomains"><span class="symbol function"></span>GetCustomDomains</a></li>
     <li><a href="getfunctions" title="GetFunctions"><span class="symbol function"></span>GetFunctions</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
     <li><a href="getservices" title="GetServices"><span class="symbol function"></span>GetServices</a></li>
     <li><a href="gettriggers" title="GetTriggers"><span class="symbol function"></span>GetTriggers</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
@@ -31,26 +36,8 @@ Explore the resources and functions of the fc module in the AliCloud package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.FC.html" title="Pulumi.AliCloud.FC">Pulumi.AliCloud.FC</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc?tab=doc#" title="alicloud/fc">alicloud/fc</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/fc/#" title="@pulumi/alicloud/fc">@pulumi/alicloud/fc</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/fc" title="pulumi_alicloud/fc">pulumi_alicloud/fc</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

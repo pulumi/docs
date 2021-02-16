@@ -12,6 +12,7 @@ meta_desc: "Explore the GetConnections function of the vpn module, including exa
 
 The VPN connections data source lists lots of VPN connections resource information owned by an Alicloud account.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -44,7 +45,35 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpn"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "fake-cgw-id"
+		opt1 := "/tmp/vpnconn"
+		opt2 := "fake-vpn-id"
+		_, err := vpn.GetConnections(ctx, &vpn.GetConnectionsArgs{
+			CustomerGatewayId: &opt0,
+			Ids: []string{
+				"fake-conn-id",
+			},
+			OutputFile:   &opt1,
+			VpnGatewayId: &opt2,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -90,7 +119,7 @@ const foo = pulumi.output(alicloud.vpn.getConnections({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_connections(</span>customer_gateway_id=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_connections(</span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetConnectionsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -111,7 +140,6 @@ const foo = pulumi.output(alicloud.vpn.getConnections({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -119,60 +147,54 @@ The following arguments are supported:
             title="Optional">
         <span id="customergatewayid_csharp">
 <a href="#customergatewayid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}IDs of the VPN connections.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string of VPN connection name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Save the result to the file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpngatewayid_csharp">
 <a href="#vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -181,60 +203,54 @@ The following arguments are supported:
             title="Optional">
         <span id="customergatewayid_go">
 <a href="#customergatewayid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}IDs of the VPN connections.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string of VPN connection name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Save the result to the file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpngatewayid_go">
 <a href="#vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -243,60 +259,54 @@ The following arguments are supported:
             title="Optional">
         <span id="customergatewayid_nodejs">
 <a href="#customergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}IDs of the VPN connections.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string of VPN connection name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Save the result to the file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpngatewayid_nodejs">
 <a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -305,63 +315,54 @@ The following arguments are supported:
             title="Optional">
         <span id="customer_gateway_id_python">
 <a href="#customer_gateway_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>gateway_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}IDs of the VPN connections.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regex string of VPN connection name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Save the result to the file.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpn_gateway_id_python">
 <a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -372,7 +373,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -380,91 +380,82 @@ The following output properties are available:
             title="">
         <span id="connections_csharp">
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconnectionsconnection">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Outputs.<wbr>Get<wbr>Connections<wbr>Connection&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN connections. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Optional) IDs of the VPN connections.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Optional) names of the VPN connections.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="customergatewayid_csharp">
 <a href="#customergatewayid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPN customer gateway.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpngatewayid_csharp">
 <a href="#vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPN gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -473,91 +464,82 @@ The following output properties are available:
             title="">
         <span id="connections_go">
 <a href="#connections_go" style="color: inherit; text-decoration: inherit;">Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconnectionsconnection">[]Get<wbr>Connections<wbr>Connection</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN connections. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(Optional) IDs of the VPN connections.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(Optional) names of the VPN connections.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="customergatewayid_go">
 <a href="#customergatewayid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPN customer gateway.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpngatewayid_go">
 <a href="#vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPN gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -566,91 +548,82 @@ The following output properties are available:
             title="">
         <span id="connections_nodejs">
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconnectionsconnection">Get<wbr>Connections<wbr>Connection[]</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN connections. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) IDs of the VPN connections.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) names of the VPN connections.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="customergatewayid_nodejs">
 <a href="#customergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPN customer gateway.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpngatewayid_nodejs">
 <a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPN gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -659,94 +632,82 @@ The following output properties are available:
             title="">
         <span id="connections_python">
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnection">List[Get<wbr>Connections<wbr>Connection]</a></span>
+        <span class="property-type"><a href="#getconnectionsconnection">Sequence[Get<wbr>Connections<wbr>Connection]</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN connections. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) IDs of the VPN connections.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) names of the VPN connections.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="customer_gateway_id_python">
 <a href="#customer_gateway_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>gateway_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the VPN customer gateway.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpn_gateway_id_python">
 <a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the VPN gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -768,7 +729,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -776,124 +736,112 @@ The following output properties are available:
             title="Required">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="customergatewayid_csharp">
 <a href="#customergatewayid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="effectimmediately_csharp">
 <a href="#effectimmediately_csharp" style="color: inherit; text-decoration: inherit;">Effect<wbr>Immediately</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="localsubnet_csharp">
 <a href="#localsubnet_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local subnet of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="remotesubnet_csharp">
 <a href="#remotesubnet_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote subnet of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPN connection, valid value:ike_sa_not_established, ike_sa_established, ipsec_sa_not_established, ipsec_sa_established.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpngatewayid_csharp">
 <a href="#vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikeconfigs_csharp">
 <a href="#ikeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconnectionsconnectionikeconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Inputs.<wbr>Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecconfigs_csharp">
 <a href="#ipsecconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Inputs.<wbr>Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -902,124 +850,112 @@ The following output properties are available:
             title="Required">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="customergatewayid_go">
 <a href="#customergatewayid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="effectimmediately_go">
 <a href="#effectimmediately_go" style="color: inherit; text-decoration: inherit;">Effect<wbr>Immediately</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="localsubnet_go">
 <a href="#localsubnet_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local subnet of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="remotesubnet_go">
 <a href="#remotesubnet_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote subnet of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPN connection, valid value:ike_sa_not_established, ike_sa_established, ipsec_sa_not_established, ipsec_sa_established.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpngatewayid_go">
 <a href="#vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikeconfigs_go">
 <a href="#ikeconfigs_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconnectionsconnectionikeconfig">[]Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecconfigs_go">
 <a href="#ipsecconfigs_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">[]Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1028,124 +964,112 @@ The following output properties are available:
             title="Required">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="customergatewayid_nodejs">
 <a href="#customergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="effectimmediately_nodejs">
 <a href="#effectimmediately_nodejs" style="color: inherit; text-decoration: inherit;">effect<wbr>Immediately</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="localsubnet_nodejs">
 <a href="#localsubnet_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local subnet of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="remotesubnet_nodejs">
 <a href="#remotesubnet_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote subnet of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPN connection, valid value:ike_sa_not_established, ike_sa_established, ipsec_sa_not_established, ipsec_sa_established.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpngatewayid_nodejs">
 <a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikeconfigs_nodejs">
 <a href="#ikeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconnectionsconnectionikeconfig">Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecconfigs_nodejs">
 <a href="#ipsecconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1154,127 +1078,112 @@ The following output properties are available:
             title="Required">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="customer_gateway_id_python">
 <a href="#customer_gateway_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>gateway_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="effect_immediately_python">
 <a href="#effect_immediately_python" style="color: inherit; text-decoration: inherit;">effect_<wbr>immediately</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="local_subnet_python">
 <a href="#local_subnet_python" style="color: inherit; text-decoration: inherit;">local_<wbr>subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The local subnet of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="remotesubnet_python">
-<a href="#remotesubnet_python" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnet</a>
-</span> 
+        <span id="remote_subnet_python">
+<a href="#remote_subnet_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnet</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The remote subnet of the VPN connection.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the VPN connection, valid value:ike_sa_not_established, ike_sa_established, ipsec_sa_not_established, ipsec_sa_established.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpn_gateway_id_python">
 <a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ike_configs_python">
 <a href="#ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnectionikeconfig">List[Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getconnectionsconnectionikeconfig">Sequence[Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsec_configs_python">
 <a href="#ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">List[Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">Sequence[Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getconnectionsconnectionikeconfig">Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -1290,7 +1199,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1298,104 +1206,94 @@ The following output properties are available:
             title="Optional">
         <span id="ikeauthalg_csharp">
 <a href="#ikeauthalg_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Auth<wbr>Alg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikeencalg_csharp">
 <a href="#ikeencalg_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Enc<wbr>Alg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikelifetime_csharp">
 <a href="#ikelifetime_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Lifetime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikelocalid_csharp">
 <a href="#ikelocalid_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Local<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikemode_csharp">
 <a href="#ikemode_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The negotiation mode of IKE phase-one. 
+    <dd>{{% md %}}The negotiation mode of IKE phase-one.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikepfs_csharp">
 <a href="#ikepfs_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Pfs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikeremoteid_csharp">
 <a href="#ikeremoteid_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Remote<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikeversion_csharp">
 <a href="#ikeversion_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the IKE protocol. 
+    <dd>{{% md %}}The version of the IKE protocol.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="psk_csharp">
 <a href="#psk_csharp" style="color: inherit; text-decoration: inherit;">Psk</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1404,104 +1302,94 @@ The following output properties are available:
             title="Optional">
         <span id="ikeauthalg_go">
 <a href="#ikeauthalg_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Auth<wbr>Alg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikeencalg_go">
 <a href="#ikeencalg_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Enc<wbr>Alg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikelifetime_go">
 <a href="#ikelifetime_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Lifetime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikelocalid_go">
 <a href="#ikelocalid_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Local<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikemode_go">
 <a href="#ikemode_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The negotiation mode of IKE phase-one. 
+    <dd>{{% md %}}The negotiation mode of IKE phase-one.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikepfs_go">
 <a href="#ikepfs_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Pfs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikeremoteid_go">
 <a href="#ikeremoteid_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Remote<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikeversion_go">
 <a href="#ikeversion_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the IKE protocol. 
+    <dd>{{% md %}}The version of the IKE protocol.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="psk_go">
 <a href="#psk_go" style="color: inherit; text-decoration: inherit;">Psk</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1510,213 +1398,190 @@ The following output properties are available:
             title="Optional">
         <span id="ikeauthalg_nodejs">
 <a href="#ikeauthalg_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Auth<wbr>Alg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikeencalg_nodejs">
 <a href="#ikeencalg_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Enc<wbr>Alg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikelifetime_nodejs">
 <a href="#ikelifetime_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Lifetime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikelocalid_nodejs">
 <a href="#ikelocalid_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Local<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikemode_nodejs">
 <a href="#ikemode_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The negotiation mode of IKE phase-one. 
+    <dd>{{% md %}}The negotiation mode of IKE phase-one.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikepfs_nodejs">
 <a href="#ikepfs_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Pfs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikeremoteid_nodejs">
 <a href="#ikeremoteid_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Remote<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ikeversion_nodejs">
 <a href="#ikeversion_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the IKE protocol. 
+    <dd>{{% md %}}The version of the IKE protocol.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="psk_nodejs">
 <a href="#psk_nodejs" style="color: inherit; text-decoration: inherit;">psk</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ikeauthalg_python">
-<a href="#ikeauthalg_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Auth<wbr>Alg</a>
-</span> 
+        <span id="ike_auth_alg_python">
+<a href="#ike_auth_alg_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>auth_<wbr>alg</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ikeencalg_python">
-<a href="#ikeencalg_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Enc<wbr>Alg</a>
-</span> 
+        <span id="ike_enc_alg_python">
+<a href="#ike_enc_alg_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>enc_<wbr>alg</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-one negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ikelifetime_python">
-<a href="#ikelifetime_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Lifetime</a>
-</span> 
+        <span id="ike_lifetime_python">
+<a href="#ike_lifetime_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>lifetime</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ikelocalid_python">
-<a href="#ikelocalid_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Local<wbr>Id</a>
-</span> 
+        <span id="ike_local_id_python">
+<a href="#ike_local_id_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>local_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ikemode_python">
-<a href="#ikemode_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Mode</a>
-</span> 
+        <span id="ike_mode_python">
+<a href="#ike_mode_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>mode</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The negotiation mode of IKE phase-one. 
+    <dd>{{% md %}}The negotiation mode of IKE phase-one.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ikepfs_python">
-<a href="#ikepfs_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Pfs</a>
-</span> 
+        <span id="ike_pfs_python">
+<a href="#ike_pfs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>pfs</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ikeremoteid_python">
-<a href="#ikeremoteid_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Remote<wbr>Id</a>
-</span> 
+        <span id="ike_remote_id_python">
+<a href="#ike_remote_id_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>remote_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ikeversion_python">
-<a href="#ikeversion_python" style="color: inherit; text-decoration: inherit;">ike<wbr>Version</a>
-</span> 
+        <span id="ike_version_python">
+<a href="#ike_version_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>version</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the IKE protocol. 
+    <dd>{{% md %}}The version of the IKE protocol.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="psk_python">
 <a href="#psk_python" style="color: inherit; text-decoration: inherit;">psk</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getconnectionsconnectionipsecconfig">Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -1732,7 +1597,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1740,49 +1604,44 @@ The following output properties are available:
             title="Optional">
         <span id="ipsecauthalg_csharp">
 <a href="#ipsecauthalg_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Auth<wbr>Alg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-two negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecencalg_csharp">
 <a href="#ipsecencalg_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Enc<wbr>Alg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-two negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipseclifetime_csharp">
 <a href="#ipseclifetime_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Lifetime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecpfs_csharp">
 <a href="#ipsecpfs_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Pfs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1791,49 +1650,44 @@ The following output properties are available:
             title="Optional">
         <span id="ipsecauthalg_go">
 <a href="#ipsecauthalg_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Auth<wbr>Alg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-two negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecencalg_go">
 <a href="#ipsecencalg_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Enc<wbr>Alg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-two negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipseclifetime_go">
 <a href="#ipseclifetime_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Lifetime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecpfs_go">
 <a href="#ipsecpfs_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Pfs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1842,103 +1696,90 @@ The following output properties are available:
             title="Optional">
         <span id="ipsecauthalg_nodejs">
 <a href="#ipsecauthalg_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Auth<wbr>Alg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-two negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecencalg_nodejs">
 <a href="#ipsecencalg_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Enc<wbr>Alg</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-two negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipseclifetime_nodejs">
 <a href="#ipseclifetime_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Lifetime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecpfs_nodejs">
 <a href="#ipsecpfs_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Pfs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="ipsecauthalg_python">
-<a href="#ipsecauthalg_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Auth<wbr>Alg</a>
-</span> 
+        <span id="ipsec_auth_alg_python">
+<a href="#ipsec_auth_alg_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>auth_<wbr>alg</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authentication algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The authentication algorithm of phase-two negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ipsecencalg_python">
-<a href="#ipsecencalg_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Enc<wbr>Alg</a>
-</span> 
+        <span id="ipsec_enc_alg_python">
+<a href="#ipsec_enc_alg_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>enc_<wbr>alg</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm of phase-two negotiation. 
+    <dd>{{% md %}}The encryption algorithm of phase-two negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ipseclifetime_python">
-<a href="#ipseclifetime_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Lifetime</a>
-</span> 
+        <span id="ipsec_lifetime_python">
+<a href="#ipsec_lifetime_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>lifetime</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. 
+    <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="ipsecpfs_python">
-<a href="#ipsecpfs_python" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Pfs</a>
-</span> 
+        <span id="ipsec_pfs_python">
+<a href="#ipsec_pfs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>pfs</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. 
+    <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1951,6 +1792,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

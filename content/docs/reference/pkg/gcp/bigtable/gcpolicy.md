@@ -1,8 +1,8 @@
 
 ---
 title: "GCPolicy"
-title_tag: "Resource GCPolicy | Module bigtable | Package GCP"
-meta_desc: "Explore the GCPolicy resource of the bigtable module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a Google Cloud Bigtable GC Policy inside a family. For more information see"
+title_tag: "gcp.bigtable.GCPolicy"
+meta_desc: "Documentation for the gcp.bigtable.GCPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -14,6 +14,168 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
 [the official documentation](https://cloud.google.com/bigtable/) and
 [API](https://cloud.google.com/bigtable/docs/go/reference).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.BigTable.Instance("instance", new Gcp.BigTable.InstanceArgs
+        {
+            Clusters = 
+            {
+                new Gcp.BigTable.Inputs.InstanceClusterArgs
+                {
+                    ClusterId = "tf-instance-cluster",
+                    NumNodes = 3,
+                    StorageType = "HDD",
+                },
+            },
+        });
+        var table = new Gcp.BigTable.Table("table", new Gcp.BigTable.TableArgs
+        {
+            InstanceName = instance.Name,
+            ColumnFamilies = 
+            {
+                new Gcp.BigTable.Inputs.TableColumnFamilyArgs
+                {
+                    Family = "name",
+                },
+            },
+        });
+        var policy = new Gcp.BigTable.GCPolicy("policy", new Gcp.BigTable.GCPolicyArgs
+        {
+            InstanceName = instance.Name,
+            Table = table.Name,
+            ColumnFamily = "name",
+            MaxAge = new Gcp.BigTable.Inputs.GCPolicyMaxAgeArgs
+            {
+                Duration = "168h",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigtable"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := bigtable.NewInstance(ctx, "instance", &bigtable.InstanceArgs{
+			Clusters: bigtable.InstanceClusterArray{
+				&bigtable.InstanceClusterArgs{
+					ClusterId:   pulumi.String("tf-instance-cluster"),
+					NumNodes:    pulumi.Int(3),
+					StorageType: pulumi.String("HDD"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		table, err := bigtable.NewTable(ctx, "table", &bigtable.TableArgs{
+			InstanceName: instance.Name,
+			ColumnFamilies: bigtable.TableColumnFamilyArray{
+				&bigtable.TableColumnFamilyArgs{
+					Family: pulumi.String("name"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigtable.NewGCPolicy(ctx, "policy", &bigtable.GCPolicyArgs{
+			InstanceName: instance.Name,
+			Table:        table.Name,
+			ColumnFamily: pulumi.String("name"),
+			MaxAge: &bigtable.GCPolicyMaxAgeArgs{
+				Duration: pulumi.String("168h"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.bigtable.Instance("instance", clusters=[gcp.bigtable.InstanceClusterArgs(
+    cluster_id="tf-instance-cluster",
+    num_nodes=3,
+    storage_type="HDD",
+)])
+table = gcp.bigtable.Table("table",
+    instance_name=instance.name,
+    column_families=[gcp.bigtable.TableColumnFamilyArgs(
+        family="name",
+    )])
+policy = gcp.bigtable.GCPolicy("policy",
+    instance_name=instance.name,
+    table=table.name,
+    column_family="name",
+    max_age=gcp.bigtable.GCPolicyMaxAgeArgs(
+        duration="168h",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.bigtable.Instance("instance", {clusters: [{
+    clusterId: "tf-instance-cluster",
+    numNodes: 3,
+    storageType: "HDD",
+}]});
+const table = new gcp.bigtable.Table("table", {
+    instanceName: instance.name,
+    columnFamilies: [{
+        family: "name",
+    }],
+});
+const policy = new gcp.bigtable.GCPolicy("policy", {
+    instanceName: instance.name,
+    table: table.name,
+    columnFamily: "name",
+    maxAge: {
+        duration: "168h",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GCPolicy Resource {#create}
@@ -21,19 +183,19 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigtable/#GCPolicy">GCPolicy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigtable/#GCPolicyArgs">GCPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GCPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GCPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/bigtable/#GCPolicy">GCPolicy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>column_family=None<span class="p">, </span>instance_name=None<span class="p">, </span>max_ages=None<span class="p">, </span>max_versions=None<span class="p">, </span>mode=None<span class="p">, </span>project=None<span class="p">, </span>table=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GCPolicy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_age</span><span class="p">:</span> <span class="nx">Optional[GCPolicyMaxAgeArgs]</span> = None<span class="p">, </span><span class="nx">max_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GCPolicyMaxVersionArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicy">NewGCPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicyArgs">GCPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicy">GCPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGCPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GCPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GCPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.GCPolicy.html">GCPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.GCPolicyArgs.html">GCPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GCPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GCPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -44,7 +206,7 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -54,7 +216,7 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigtable/#GCPolicyArgs">GCPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">GCPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -103,7 +265,7 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -113,7 +275,7 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -123,7 +285,7 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicyArgs">GCPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">GCPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -133,7 +295,7 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -152,7 +314,7 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -162,7 +324,7 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.GCPolicyArgs.html">GCPolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">GCPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -185,12 +347,11 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
 
 ## GCPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -201,82 +362,74 @@ The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="columnfamily_csharp">
 <a href="#columnfamily_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column family.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancename_csharp">
 <a href="#instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="table_csharp">
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxages_csharp">
-<a href="#maxages_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ages</a>
-</span> 
+        <span id="maxage_csharp">
+<a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">List&lt;GCPolicy<wbr>Max<wbr>Age<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxversions_csharp">
 <a href="#maxversions_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gcpolicymaxversion">List&lt;GCPolicy<wbr>Max<wbr>Version<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all versions of a cell except for the most recent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -285,82 +438,74 @@ The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="columnfamily_go">
 <a href="#columnfamily_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column family.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancename_go">
 <a href="#instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="table_go">
 <a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxages_go">
-<a href="#maxages_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ages</a>
-</span> 
+        <span id="maxage_go">
+<a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">[]GCPolicy<wbr>Max<wbr>Age</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxversions_go">
 <a href="#maxversions_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gcpolicymaxversion">[]GCPolicy<wbr>Max<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all versions of a cell except for the most recent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -369,82 +514,74 @@ The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="columnfamily_nodejs">
 <a href="#columnfamily_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column family.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancename_nodejs">
 <a href="#instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="table_nodejs">
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxages_nodejs">
-<a href="#maxages_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ages</a>
-</span> 
+        <span id="maxage_nodejs">
+<a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age[]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxversions_nodejs">
 <a href="#maxversions_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gcpolicymaxversion">GCPolicy<wbr>Max<wbr>Version[]</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all versions of a cell except for the most recent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -453,91 +590,79 @@ The GCPolicy resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="column_family_python">
 <a href="#column_family_python" style="color: inherit; text-decoration: inherit;">column_<wbr>family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column family.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_name_python">
 <a href="#instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="table_python">
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="max_ages_python">
-<a href="#max_ages_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ages</a>
-</span> 
+        <span id="max_age_python">
+<a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">List[GCPolicy<wbr>Max<wbr>Age]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_versions_python">
 <a href="#max_versions_python" style="color: inherit; text-decoration: inherit;">max_<wbr>versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxversion">List[GCPolicy<wbr>Max<wbr>Version]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxversion">Sequence[GCPolicy<wbr>Max<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all versions of a cell except for the most recent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the GCPolicy resource produces the following output properties:
-
 
 
 
@@ -548,15 +673,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -565,15 +688,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -582,15 +703,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -599,18 +718,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -620,19 +734,20 @@ Get an existing GCPolicy resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigtable/#GCPolicyState">GCPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/bigtable/#GCPolicy">GCPolicy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GCPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GCPolicy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>column_family=None<span class="p">, </span>instance_name=None<span class="p">, </span>max_ages=None<span class="p">, </span>max_versions=None<span class="p">, </span>mode=None<span class="p">, </span>project=None<span class="p">, </span>table=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_family</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_age</span><span class="p">:</span> <span class="nx">Optional[GCPolicyMaxAgeArgs]</span> = None<span class="p">, </span><span class="nx">max_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[GCPolicyMaxVersionArgs]]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GCPolicy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGCPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicyState">GCPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicy">GCPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGCPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GCPolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GCPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.GCPolicy.html">GCPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.GCPolicyState.html">GCPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GCPolicy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GCPolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -734,7 +849,6 @@ Get an existing GCPolicy resource's state with the given name, ID, and optional 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -742,82 +856,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_columnfamily_csharp">
 <a href="#state_columnfamily_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column family.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancename_csharp">
 <a href="#state_instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_maxages_csharp">
-<a href="#state_maxages_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ages</a>
-</span> 
+        <span id="state_maxage_csharp">
+<a href="#state_maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">List&lt;GCPolicy<wbr>Max<wbr>Age<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxversions_csharp">
 <a href="#state_maxversions_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gcpolicymaxversion">List&lt;GCPolicy<wbr>Max<wbr>Version<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all versions of a cell except for the most recent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mode_csharp">
 <a href="#state_mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_table_csharp">
 <a href="#state_table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -826,82 +932,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_columnfamily_go">
 <a href="#state_columnfamily_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column family.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancename_go">
 <a href="#state_instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_maxages_go">
-<a href="#state_maxages_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ages</a>
-</span> 
+        <span id="state_maxage_go">
+<a href="#state_maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">[]GCPolicy<wbr>Max<wbr>Age</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxversions_go">
 <a href="#state_maxversions_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gcpolicymaxversion">[]GCPolicy<wbr>Max<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all versions of a cell except for the most recent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mode_go">
 <a href="#state_mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_table_go">
 <a href="#state_table_go" style="color: inherit; text-decoration: inherit;">Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -910,82 +1008,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_columnfamily_nodejs">
 <a href="#state_columnfamily_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column family.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancename_nodejs">
 <a href="#state_instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_maxages_nodejs">
-<a href="#state_maxages_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ages</a>
-</span> 
+        <span id="state_maxage_nodejs">
+<a href="#state_maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age[]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxversions_nodejs">
 <a href="#state_maxversions_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gcpolicymaxversion">GCPolicy<wbr>Max<wbr>Version[]</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all versions of a cell except for the most recent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mode_nodejs">
 <a href="#state_mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_table_nodejs">
 <a href="#state_table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -994,85 +1084,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_column_family_python">
 <a href="#state_column_family_python" style="color: inherit; text-decoration: inherit;">column_<wbr>family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column family.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_name_python">
 <a href="#state_instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_max_ages_python">
-<a href="#state_max_ages_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ages</a>
-</span> 
+        <span id="state_max_age_python">
+<a href="#state_max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxage">List[GCPolicy<wbr>Max<wbr>Age]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all cells older than the given age.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_max_versions_python">
 <a href="#state_max_versions_python" style="color: inherit; text-decoration: inherit;">max_<wbr>versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gcpolicymaxversion">List[GCPolicy<wbr>Max<wbr>Version]</a></span>
+        <span class="property-type"><a href="#gcpolicymaxversion">Sequence[GCPolicy<wbr>Max<wbr>Version<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}GC policy that applies to all versions of a cell except for the most recent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mode_python">
 <a href="#state_mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_table_python">
 <a href="#state_table_python" style="color: inherit; text-decoration: inherit;">table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1082,110 +1161,114 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="gcpolicymaxage">GCPolicy<wbr>Max<wbr>Age</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GCPolicyMaxAge">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GCPolicyMaxAge">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicyMaxAgeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicyMaxAgeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.Inputs.GCPolicyMaxAgeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.Outputs.GCPolicyMaxAge.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days before applying GC policy.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of duration{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="duration_csharp">
+<a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days before applying GC policy.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of duration{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="duration_go">
+<a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of days before applying GC policy.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of duration{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="duration_nodejs">
+<a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days before applying GC policy.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of duration{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="duration_python">
+<a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Duration before applying GC policy (ex. "8h"). This is required when `days` isn't set
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="gcpolicymaxversion">GCPolicy<wbr>Max<wbr>Version</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GCPolicyMaxVersion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GCPolicyMaxVersion">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicyMaxVersionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigtable?tab=doc#GCPolicyMaxVersionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.Inputs.GCPolicyMaxVersionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BigTable.Outputs.GCPolicyMaxVersion.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1194,16 +1277,14 @@ The following state arguments are supported:
             title="Required">
         <span id="number_csharp">
 <a href="#number_csharp" style="color: inherit; text-decoration: inherit;">Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of version before applying the GC policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1212,16 +1293,14 @@ The following state arguments are supported:
             title="Required">
         <span id="number_go">
 <a href="#number_go" style="color: inherit; text-decoration: inherit;">Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of version before applying the GC policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1230,16 +1309,14 @@ The following state arguments are supported:
             title="Required">
         <span id="number_nodejs">
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of version before applying the GC policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1248,20 +1325,18 @@ The following state arguments are supported:
             title="Required">
         <span id="number_python">
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of version before applying the GC policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
-
-
-
+This resource does not support import.
 
 
 
@@ -1273,6 +1348,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

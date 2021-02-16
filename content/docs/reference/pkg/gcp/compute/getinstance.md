@@ -15,6 +15,7 @@ Get information about a VM instance resource within GCE. For more information se
 and
 [API](https://cloud.google.com/compute/docs/reference/latest/instances).
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -46,7 +47,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -102,17 +103,17 @@ const appserver = pulumi.output(gcp.compute.getInstance({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GetInstanceArgs">GetInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GetInstanceResult">GetInstanceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstance<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_instance(</span>name=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>zone=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_instance(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetInstanceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#LookupInstanceArgs">LookupInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#LookupInstanceResult">LookupInstanceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupInstanceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupInstanceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupInstance` in the Go SDK.
 
@@ -121,14 +122,13 @@ const appserver = pulumi.output(gcp.compute.getInstance({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstance </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GetInstanceResult.html">GetInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GetInstanceArgs.html">GetInstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -138,53 +138,48 @@ The following arguments are supported:
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If `self_link` is provided, this value is ignored.  If neither `self_link`
 nor `project` are provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the instance. One of `name` or `self_link` must be provided.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone of the instance. If `self_link` is provided, this
 value is ignored.  If neither `self_link` nor `zone` are provided, the
 provider zone is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -193,53 +188,48 @@ provider zone is used.
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If `self_link` is provided, this value is ignored.  If neither `self_link`
 nor `project` are provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the instance. One of `name` or `self_link` must be provided.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone of the instance. If `self_link` is provided, this
 value is ignored.  If neither `self_link` nor `zone` are provided, the
 provider zone is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -248,53 +238,48 @@ provider zone is used.
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If `self_link` is provided, this value is ignored.  If neither `self_link`
 nor `project` are provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the instance. One of `name` or `self_link` must be provided.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone of the instance. If `self_link` is provided, this
 value is ignored.  If neither `self_link` nor `zone` are provided, the
 provider zone is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -303,56 +288,48 @@ provider zone is used.
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If `self_link` is provided, this value is ignored.  If neither `self_link`
 nor `project` are provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The self link of the instance. One of `name` or `self_link` must be provided.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone of the instance. If `self_link` is provided, this
 value is ignored.  If neither `self_link` nor `zone` are provided, the
 provider zone is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -363,7 +340,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -371,358 +347,333 @@ The following output properties are available:
             title="">
         <span id="allowstoppingforupdate_csharp">
 <a href="#allowstoppingforupdate_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Stopping<wbr>For<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="attacheddisks_csharp">
 <a href="#attacheddisks_csharp" style="color: inherit; text-decoration: inherit;">Attached<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceattacheddisk">List&lt;Get<wbr>Instance<wbr>Attached<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bootdisks_csharp">
 <a href="#bootdisks_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancebootdisk">List&lt;Get<wbr>Instance<wbr>Boot<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="canipforward_csharp">
 <a href="#canipforward_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Ip<wbr>Forward</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="confidentialinstanceconfigs_csharp">
+<a href="#confidentialinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">List&lt;Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="cpuplatform_csharp">
 <a href="#cpuplatform_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU platform used by this instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="currentstatus_csharp">
 <a href="#currentstatus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="deletionprotection_csharp">
 <a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether deletion protection is enabled on this instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="desiredstatus_csharp">
 <a href="#desiredstatus_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enabledisplay_csharp">
 <a href="#enabledisplay_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Display</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="guestaccelerators_csharp">
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceguestaccelerator">List&lt;Get<wbr>Instance<wbr>Guest<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-assigned unique identifier of this instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labelfingerprint_csharp">
 <a href="#labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the labels.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="machinetype_csharp">
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadatafingerprint_csharp">
 <a href="#metadatafingerprint_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadatastartupscript_csharp">
 <a href="#metadatastartupscript_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Startup<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mincpuplatform_csharp">
 <a href="#mincpuplatform_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancenetworkinterface">List&lt;Get<wbr>Instance<wbr>Network<wbr>Interface&gt;</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourcepolicies_csharp">
 <a href="#resourcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedulings_csharp">
 <a href="#schedulings_csharp" style="color: inherit; text-decoration: inherit;">Schedulings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancescheduling">List&lt;Get<wbr>Instance<wbr>Scheduling&gt;</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="scratchdisks_csharp">
 <a href="#scratchdisks_csharp" style="color: inherit; text-decoration: inherit;">Scratch<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancescratchdisk">List&lt;Get<wbr>Instance<wbr>Scratch<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serviceaccounts_csharp">
 <a href="#serviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceserviceaccount">List&lt;Get<wbr>Instance<wbr>Service<wbr>Account&gt;</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="shieldedinstanceconfigs_csharp">
 <a href="#shieldedinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceshieldedinstanceconfig">List&lt;Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tagsfingerprint_csharp">
 <a href="#tagsfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -731,358 +682,333 @@ The following output properties are available:
             title="">
         <span id="allowstoppingforupdate_go">
 <a href="#allowstoppingforupdate_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Stopping<wbr>For<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="attacheddisks_go">
 <a href="#attacheddisks_go" style="color: inherit; text-decoration: inherit;">Attached<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceattacheddisk">[]Get<wbr>Instance<wbr>Attached<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bootdisks_go">
 <a href="#bootdisks_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancebootdisk">[]Get<wbr>Instance<wbr>Boot<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="canipforward_go">
 <a href="#canipforward_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Ip<wbr>Forward</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="confidentialinstanceconfigs_go">
+<a href="#confidentialinstanceconfigs_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">[]Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="cpuplatform_go">
 <a href="#cpuplatform_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU platform used by this instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="currentstatus_go">
 <a href="#currentstatus_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="deletionprotection_go">
 <a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether deletion protection is enabled on this instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="desiredstatus_go">
 <a href="#desiredstatus_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enabledisplay_go">
 <a href="#enabledisplay_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Display</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="guestaccelerators_go">
 <a href="#guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceguestaccelerator">[]Get<wbr>Instance<wbr>Guest<wbr>Accelerator</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-assigned unique identifier of this instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labelfingerprint_go">
 <a href="#labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the labels.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="machinetype_go">
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadatafingerprint_go">
 <a href="#metadatafingerprint_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadatastartupscript_go">
 <a href="#metadatastartupscript_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Startup<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mincpuplatform_go">
 <a href="#mincpuplatform_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="networkinterfaces_go">
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancenetworkinterface">[]Get<wbr>Instance<wbr>Network<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourcepolicies_go">
 <a href="#resourcepolicies_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedulings_go">
 <a href="#schedulings_go" style="color: inherit; text-decoration: inherit;">Schedulings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancescheduling">[]Get<wbr>Instance<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="scratchdisks_go">
 <a href="#scratchdisks_go" style="color: inherit; text-decoration: inherit;">Scratch<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancescratchdisk">[]Get<wbr>Instance<wbr>Scratch<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serviceaccounts_go">
 <a href="#serviceaccounts_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceserviceaccount">[]Get<wbr>Instance<wbr>Service<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="shieldedinstanceconfigs_go">
 <a href="#shieldedinstanceconfigs_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceshieldedinstanceconfig">[]Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tagsfingerprint_go">
 <a href="#tagsfingerprint_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1091,358 +1017,333 @@ The following output properties are available:
             title="">
         <span id="allowstoppingforupdate_nodejs">
 <a href="#allowstoppingforupdate_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Stopping<wbr>For<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="attacheddisks_nodejs">
 <a href="#attacheddisks_nodejs" style="color: inherit; text-decoration: inherit;">attached<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceattacheddisk">Get<wbr>Instance<wbr>Attached<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bootdisks_nodejs">
 <a href="#bootdisks_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancebootdisk">Get<wbr>Instance<wbr>Boot<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="canipforward_nodejs">
 <a href="#canipforward_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Ip<wbr>Forward</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="confidentialinstanceconfigs_nodejs">
+<a href="#confidentialinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="cpuplatform_nodejs">
 <a href="#cpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU platform used by this instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="currentstatus_nodejs">
 <a href="#currentstatus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="deletionprotection_nodejs">
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether deletion protection is enabled on this instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="desiredstatus_nodejs">
 <a href="#desiredstatus_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enabledisplay_nodejs">
 <a href="#enabledisplay_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Display</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="guestaccelerators_nodejs">
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceguestaccelerator">Get<wbr>Instance<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-assigned unique identifier of this instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labelfingerprint_nodejs">
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the labels.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="machinetype_nodejs">
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadatafingerprint_nodejs">
 <a href="#metadatafingerprint_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadatastartupscript_nodejs">
 <a href="#metadatastartupscript_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Startup<wbr>Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mincpuplatform_nodejs">
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancenetworkinterface">Get<wbr>Instance<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourcepolicies_nodejs">
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedulings_nodejs">
 <a href="#schedulings_nodejs" style="color: inherit; text-decoration: inherit;">schedulings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancescheduling">Get<wbr>Instance<wbr>Scheduling[]</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="scratchdisks_nodejs">
 <a href="#scratchdisks_nodejs" style="color: inherit; text-decoration: inherit;">scratch<wbr>Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancescratchdisk">Get<wbr>Instance<wbr>Scratch<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serviceaccounts_nodejs">
 <a href="#serviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceserviceaccount">Get<wbr>Instance<wbr>Service<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="shieldedinstanceconfigs_nodejs">
 <a href="#shieldedinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceshieldedinstanceconfig">Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tagsfingerprint_nodejs">
 <a href="#tagsfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1451,361 +1352,333 @@ The following output properties are available:
             title="">
         <span id="allow_stopping_for_update_python">
 <a href="#allow_stopping_for_update_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>stopping_<wbr>for_<wbr>update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="attached_disks_python">
 <a href="#attached_disks_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceattacheddisk">List[Get<wbr>Instance<wbr>Attached<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#getinstanceattacheddisk">Sequence[Get<wbr>Instance<wbr>Attached<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="boot_disks_python">
 <a href="#boot_disks_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancebootdisk">List[Get<wbr>Instance<wbr>Boot<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#getinstancebootdisk">Sequence[Get<wbr>Instance<wbr>Boot<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="can_ip_forward_python">
 <a href="#can_ip_forward_python" style="color: inherit; text-decoration: inherit;">can_<wbr>ip_<wbr>forward</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="confidential_instance_configs_python">
+<a href="#confidential_instance_configs_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">Sequence[Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="cpu_platform_python">
 <a href="#cpu_platform_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPU platform used by this instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="current_status_python">
 <a href="#current_status_python" style="color: inherit; text-decoration: inherit;">current_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="deletion_protection_python">
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether deletion protection is enabled on this instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of the resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="desired_status_python">
 <a href="#desired_status_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enable_display_python">
 <a href="#enable_display_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>display</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="guest_accelerators_python">
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceguestaccelerator">List[Get<wbr>Instance<wbr>Guest<wbr>Accelerator]</a></span>
+        <span class="property-type"><a href="#getinstanceguestaccelerator">Sequence[Get<wbr>Instance<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server-assigned unique identifier of this instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="label_fingerprint_python">
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the labels.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="machine_type_python">
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadata_fingerprint_python">
 <a href="#metadata_fingerprint_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadata_startup_script_python">
 <a href="#metadata_startup_script_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>startup_<wbr>script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="min_cpu_platform_python">
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="network_interfaces_python">
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancenetworkinterface">List[Get<wbr>Instance<wbr>Network<wbr>Interface]</a></span>
+        <span class="property-type"><a href="#getinstancenetworkinterface">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resource_policies_python">
 <a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedulings_python">
 <a href="#schedulings_python" style="color: inherit; text-decoration: inherit;">schedulings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancescheduling">List[Get<wbr>Instance<wbr>Scheduling]</a></span>
+        <span class="property-type"><a href="#getinstancescheduling">Sequence[Get<wbr>Instance<wbr>Scheduling]</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="scratch_disks_python">
 <a href="#scratch_disks_python" style="color: inherit; text-decoration: inherit;">scratch_<wbr>disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancescratchdisk">List[Get<wbr>Instance<wbr>Scratch<wbr>Disk]</a></span>
+        <span class="property-type"><a href="#getinstancescratchdisk">Sequence[Get<wbr>Instance<wbr>Scratch<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="service_accounts_python">
 <a href="#service_accounts_python" style="color: inherit; text-decoration: inherit;">service_<wbr>accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceserviceaccount">List[Get<wbr>Instance<wbr>Service<wbr>Account]</a></span>
+        <span class="property-type"><a href="#getinstanceserviceaccount">Sequence[Get<wbr>Instance<wbr>Service<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="shielded_instance_configs_python">
 <a href="#shielded_instance_configs_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceshieldedinstanceconfig">List[Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getinstanceshieldedinstanceconfig">Sequence[Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_fingerprint_python">
 <a href="#tags_fingerprint_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1814,17 +1687,6 @@ The following output properties are available:
 
 
 <h4 id="getinstanceattacheddisk">Get<wbr>Instance<wbr>Attached<wbr>Disk</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceAttachedDisk">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceAttachedDisk">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceAttachedDisk.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -1835,69 +1697,62 @@ The following output properties are available:
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskencryptionkeyraw_csharp">
 <a href="#diskencryptionkeyraw_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskencryptionkeysha256_csharp">
 <a href="#diskencryptionkeysha256_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_csharp">
 <a href="#kmskeyselflink_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1906,69 +1761,62 @@ under `/dev/disk/by-id/`
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskencryptionkeyraw_go">
 <a href="#diskencryptionkeyraw_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskencryptionkeysha256_go">
 <a href="#diskencryptionkeysha256_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_go">
 <a href="#kmskeyselflink_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1977,69 +1825,62 @@ under `/dev/disk/by-id/`
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskencryptionkeyraw_nodejs">
 <a href="#diskencryptionkeyraw_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskencryptionkeysha256_nodejs">
 <a href="#diskencryptionkeysha256_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_nodejs">
 <a href="#kmskeyselflink_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2048,85 +1889,64 @@ under `/dev/disk/by-id/`
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="diskencryptionkeyraw_python">
-<a href="#diskencryptionkeyraw_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
-</span> 
+        <span id="disk_encryption_key_raw_python">
+<a href="#disk_encryption_key_raw_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>raw</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="diskencryptionkeysha256_python">
-<a href="#diskencryptionkeysha256_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
-</span> 
+        <span id="disk_encryption_key_sha256_python">
+<a href="#disk_encryption_key_sha256_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>sha256</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="kmskeyselflink_python">
-<a href="#kmskeyselflink_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
-</span> 
+        <span id="kms_key_self_link_python">
+<a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getinstancebootdisk">Get<wbr>Instance<wbr>Boot<wbr>Disk</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceBootDisk">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceBootDisk">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceBootDisk.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -2137,92 +1957,83 @@ under `/dev/disk/by-id/`
             title="Required">
         <span id="autodelete_csharp">
 <a href="#autodelete_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the disk will be auto-deleted when the instance is deleted.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskencryptionkeyraw_csharp">
 <a href="#diskencryptionkeyraw_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskencryptionkeysha256_csharp">
 <a href="#diskencryptionkeysha256_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="initializeparams_csharp">
 <a href="#initializeparams_csharp" style="color: inherit; text-decoration: inherit;">Initialize<wbr>Params</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancebootdiskinitializeparam">List&lt;Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Parameters with which a disk was created alongside the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_csharp">
 <a href="#kmskeyselflink_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2231,92 +2042,83 @@ Structure is documented below.
             title="Required">
         <span id="autodelete_go">
 <a href="#autodelete_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the disk will be auto-deleted when the instance is deleted.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskencryptionkeyraw_go">
 <a href="#diskencryptionkeyraw_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskencryptionkeysha256_go">
 <a href="#diskencryptionkeysha256_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="initializeparams_go">
 <a href="#initializeparams_go" style="color: inherit; text-decoration: inherit;">Initialize<wbr>Params</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancebootdiskinitializeparam">[]Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param</a></span>
     </dt>
     <dd>{{% md %}}Parameters with which a disk was created alongside the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_go">
 <a href="#kmskeyselflink_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2325,202 +2127,170 @@ Structure is documented below.
             title="Required">
         <span id="autodelete_nodejs">
 <a href="#autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the disk will be auto-deleted when the instance is deleted.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskencryptionkeyraw_nodejs">
 <a href="#diskencryptionkeyraw_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="diskencryptionkeysha256_nodejs">
 <a href="#diskencryptionkeysha256_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="initializeparams_nodejs">
 <a href="#initializeparams_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancebootdiskinitializeparam">Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param[]</a></span>
     </dt>
     <dd>{{% md %}}Parameters with which a disk was created alongside the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_nodejs">
 <a href="#kmskeyselflink_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="autodelete_python">
-<a href="#autodelete_python" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
-</span> 
+        <span id="auto_delete_python">
+<a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the disk will be auto-deleted when the instance is deleted.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="diskencryptionkeyraw_python">
-<a href="#diskencryptionkeyraw_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
-</span> 
+        <span id="disk_encryption_key_raw_python">
+<a href="#disk_encryption_key_raw_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>raw</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="diskencryptionkeysha256_python">
-<a href="#diskencryptionkeysha256_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
-</span> 
+        <span id="disk_encryption_key_sha256_python">
+<a href="#disk_encryption_key_sha256_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>sha256</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="initializeparams_python">
-<a href="#initializeparams_python" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
-</span> 
+        <span id="initialize_params_python">
+<a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancebootdiskinitializeparam">List[Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param]</a></span>
+        <span class="property-type"><a href="#getinstancebootdiskinitializeparam">Sequence[Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Parameters with which a disk was created alongside the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="kmskeyselflink_python">
-<a href="#kmskeyselflink_python" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
-</span> 
+        <span id="kms_key_self_link_python">
+<a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getinstancebootdiskinitializeparam">Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceBootDiskInitializeParam">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceBootDiskInitializeParam">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceBootDiskInitializeParam.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -2531,49 +2301,44 @@ Structure is documented below.
             title="Required">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image from which this disk was initialised.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image in gigabytes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2582,49 +2347,44 @@ Structure is documented below.
             title="Required">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image from which this disk was initialised.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image in gigabytes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2633,49 +2393,44 @@ Structure is documented below.
             title="Required">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image from which this disk was initialised.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the image in gigabytes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2684,65 +2439,110 @@ Structure is documented below.
             title="Required">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The image from which this disk was initialised.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image in gigabytes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="getinstanceconfidentialinstanceconfig">Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config</h4>
 
 
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-<h4 id="getinstanceguestaccelerator">Get<wbr>Instance<wbr>Guest<wbr>Accelerator</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceGuestAccelerator">output</a> API doc for this type.
+    <dt class="property-required"
+            title="Required">
+        <span id="enableconfidentialcompute_csharp">
+<a href="#enableconfidentialcompute_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceGuestAccelerator">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceGuestAccelerator.html">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enableconfidentialcompute_go">
+<a href="#enableconfidentialcompute_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enableconfidentialcompute_nodejs">
+<a href="#enableconfidentialcompute_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Confidential<wbr>Compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enable_confidential_compute_python">
+<a href="#enable_confidential_compute_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>confidential_<wbr>compute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getinstanceguestaccelerator">Get<wbr>Instance<wbr>Guest<wbr>Accelerator</h4>
 
 
 
@@ -2753,27 +2553,24 @@ Structure is documented below.
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2782,27 +2579,24 @@ Structure is documented below.
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2811,27 +2605,24 @@ Structure is documented below.
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2840,43 +2631,26 @@ Structure is documented below.
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getinstancenetworkinterface">Get<wbr>Instance<wbr>Network<wbr>Interface</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceNetworkInterface">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceNetworkInterface">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceNetworkInterface.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -2887,83 +2661,75 @@ Structure is documented below.
             title="Required">
         <span id="accessconfigs_csharp">
 <a href="#accessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">List&lt;Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="aliasipranges_csharp">
 <a href="#aliasipranges_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">List&lt;Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network attached to this interface.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkip_csharp">
 <a href="#networkip_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the subnetwork attached to this interface.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetworkproject_csharp">
 <a href="#subnetworkproject_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project in which the subnetwork belongs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2972,83 +2738,75 @@ instance can be accessed via the Internet. Structure documented below.
             title="Required">
         <span id="accessconfigs_go">
 <a href="#accessconfigs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">[]Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="aliasipranges_go">
 <a href="#aliasipranges_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">[]Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network attached to this interface.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkip_go">
 <a href="#networkip_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the subnetwork attached to this interface.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetworkproject_go">
 <a href="#subnetworkproject_go" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project in which the subnetwork belongs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3057,184 +2815,154 @@ instance can be accessed via the Internet. Structure documented below.
             title="Required">
         <span id="accessconfigs_nodejs">
 <a href="#accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="aliasipranges_nodejs">
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network attached to this interface.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkip_nodejs">
 <a href="#networkip_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the subnetwork attached to this interface.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetworkproject_nodejs">
 <a href="#subnetworkproject_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project in which the subnetwork belongs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="accessconfigs_python">
-<a href="#accessconfigs_python" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
-</span> 
+        <span id="access_configs_python">
+<a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">List[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getinstancenetworkinterfaceaccessconfig">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="aliasipranges_python">
-<a href="#aliasipranges_python" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
-</span> 
+        <span id="alias_ip_ranges_python">
+<a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">List[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range]</a></span>
+        <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network attached to this interface.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="networkip_python">
-<a href="#networkip_python" style="color: inherit; text-decoration: inherit;">network<wbr>Ip</a>
-</span> 
+        <span id="network_ip_python">
+<a href="#network_ip_python" style="color: inherit; text-decoration: inherit;">network_<wbr>ip</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the subnetwork attached to this interface.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="subnetworkproject_python">
-<a href="#subnetworkproject_python" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Project</a>
-</span> 
+        <span id="subnetwork_project_python">
+<a href="#subnetwork_project_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>project</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project in which the subnetwork belongs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getinstancenetworkinterfaceaccessconfig">Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceNetworkInterfaceAccessConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceNetworkInterfaceAccessConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceNetworkInterfaceAccessConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -3245,39 +2973,35 @@ instance can be accessed via the Internet. Structure documented below.
             title="Required">
         <span id="natip_csharp">
 <a href="#natip_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address that is be 1:1 mapped to the instance's
 network ip.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networktier_csharp">
 <a href="#networktier_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publicptrdomainname_csharp">
 <a href="#publicptrdomainname_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ptr<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS domain name for the public PTR record.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3286,39 +3010,35 @@ network ip.
             title="Required">
         <span id="natip_go">
 <a href="#natip_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address that is be 1:1 mapped to the instance's
 network ip.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networktier_go">
 <a href="#networktier_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publicptrdomainname_go">
 <a href="#publicptrdomainname_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ptr<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS domain name for the public PTR record.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3327,96 +3047,74 @@ network ip.
             title="Required">
         <span id="natip_nodejs">
 <a href="#natip_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address that is be 1:1 mapped to the instance's
 network ip.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networktier_nodejs">
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publicptrdomainname_nodejs">
 <a href="#publicptrdomainname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ptr<wbr>Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS domain name for the public PTR record.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="natip_python">
-<a href="#natip_python" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip</a>
-</span> 
+        <span id="nat_ip_python">
+<a href="#nat_ip_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address that is be 1:1 mapped to the instance's
 network ip.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_tier_python">
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="publicptrdomainname_python">
-<a href="#publicptrdomainname_python" style="color: inherit; text-decoration: inherit;">public<wbr>Ptr<wbr>Domain<wbr>Name</a>
-</span> 
+        <span id="public_ptr_domain_name_python">
+<a href="#public_ptr_domain_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ptr_<wbr>domain_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS domain name for the public PTR record.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getinstancenetworkinterfacealiasiprange">Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceNetworkInterfaceAliasIpRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceNetworkInterfaceAliasIpRange">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceNetworkInterfaceAliasIpRange.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -3427,29 +3125,26 @@ network ip.
             title="Required">
         <span id="ipcidrrange_csharp">
 <a href="#ipcidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP CIDR range represented by this alias IP range.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetworkrangename_csharp">
 <a href="#subnetworkrangename_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Range<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3458,29 +3153,26 @@ range.
             title="Required">
         <span id="ipcidrrange_go">
 <a href="#ipcidrrange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP CIDR range represented by this alias IP range.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetworkrangename_go">
 <a href="#subnetworkrangename_go" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Range<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3489,29 +3181,26 @@ range.
             title="Required">
         <span id="ipcidrrange_nodejs">
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP CIDR range represented by this alias IP range.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetworkrangename_nodejs">
 <a href="#subnetworkrangename_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Range<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3520,45 +3209,28 @@ range.
             title="Required">
         <span id="ip_cidr_range_python">
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP CIDR range represented by this alias IP range.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="subnetworkrangename_python">
-<a href="#subnetworkrangename_python" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Range<wbr>Name</a>
-</span> 
+        <span id="subnetwork_range_name_python">
+<a href="#subnetwork_range_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>range_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getinstancescheduling">Get<wbr>Instance<wbr>Scheduling</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceScheduling">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceScheduling">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceScheduling.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -3569,61 +3241,55 @@ range.
             title="Required">
         <span id="automaticrestart_csharp">
 <a href="#automaticrestart_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Restart</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="minnodecpus_csharp">
 <a href="#minnodecpus_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nodeaffinities_csharp">
 <a href="#nodeaffinities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">List&lt;Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="onhostmaintenance_csharp">
 <a href="#onhostmaintenance_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Host<wbr>Maintenance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes maintenance behavior for the
 instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="preemptible_csharp">
 <a href="#preemptible_csharp" style="color: inherit; text-decoration: inherit;">Preemptible</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the instance is preemptible.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3632,61 +3298,55 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="automaticrestart_go">
 <a href="#automaticrestart_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Restart</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="minnodecpus_go">
 <a href="#minnodecpus_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nodeaffinities_go">
 <a href="#nodeaffinities_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">[]Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="onhostmaintenance_go">
 <a href="#onhostmaintenance_go" style="color: inherit; text-decoration: inherit;">On<wbr>Host<wbr>Maintenance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes maintenance behavior for the
 instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="preemptible_go">
 <a href="#preemptible_go" style="color: inherit; text-decoration: inherit;">Preemptible</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the instance is preemptible.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3695,140 +3355,114 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="automaticrestart_nodejs">
 <a href="#automaticrestart_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Restart</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="minnodecpus_nodejs">
 <a href="#minnodecpus_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nodeaffinities_nodejs">
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="onhostmaintenance_nodejs">
 <a href="#onhostmaintenance_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes maintenance behavior for the
 instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="preemptible_nodejs">
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the instance is preemptible.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="automaticrestart_python">
-<a href="#automaticrestart_python" style="color: inherit; text-decoration: inherit;">automatic<wbr>Restart</a>
-</span> 
+        <span id="automatic_restart_python">
+<a href="#automatic_restart_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>restart</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="minnodecpus_python">
-<a href="#minnodecpus_python" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
-</span> 
+        <span id="min_node_cpus_python">
+<a href="#min_node_cpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>cpus</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="nodeaffinities_python">
-<a href="#nodeaffinities_python" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
-</span> 
+        <span id="node_affinities_python">
+<a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">List[Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity]</a></span>
+        <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">Sequence[Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="onhostmaintenance_python">
-<a href="#onhostmaintenance_python" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
-</span> 
+        <span id="on_host_maintenance_python">
+<a href="#on_host_maintenance_python" style="color: inherit; text-decoration: inherit;">on_<wbr>host_<wbr>maintenance</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes maintenance behavior for the
 instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="preemptible_python">
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the instance is preemptible.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getinstanceschedulingnodeaffinity">Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceSchedulingNodeAffinity">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceSchedulingNodeAffinity">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceSchedulingNodeAffinity.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -3839,35 +3473,31 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3876,35 +3506,31 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3913,35 +3539,31 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3950,51 +3572,33 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getinstancescratchdisk">Get<wbr>Instance<wbr>Scratch<wbr>Disk</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceScratchDisk">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceScratchDisk">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceScratchDisk.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -4005,16 +3609,14 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="interface_csharp">
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4023,16 +3625,14 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="interface_go">
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4041,16 +3641,14 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="interface_nodejs">
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4059,32 +3657,16 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="interface_python">
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getinstanceserviceaccount">Get<wbr>Instance<wbr>Service<wbr>Account</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceServiceAccount">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceServiceAccount">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceServiceAccount.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -4095,27 +3677,24 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account e-mail address.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of service scopes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4124,27 +3703,24 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account e-mail address.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of service scopes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4153,27 +3729,24 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account e-mail address.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service scopes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4182,43 +3755,26 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account e-mail address.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service scopes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getinstanceshieldedinstanceconfig">Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceShieldedInstanceConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#GetInstanceShieldedInstanceConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceShieldedInstanceConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -4229,35 +3785,31 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="enableintegritymonitoring_csharp">
 <a href="#enableintegritymonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Integrity<wbr>Monitoring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enablesecureboot_csharp">
 <a href="#enablesecureboot_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Secure<wbr>Boot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enablevtpm_csharp">
 <a href="#enablevtpm_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Vtpm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4266,35 +3818,31 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="enableintegritymonitoring_go">
 <a href="#enableintegritymonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Integrity<wbr>Monitoring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enablesecureboot_go">
 <a href="#enablesecureboot_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Secure<wbr>Boot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enablevtpm_go">
 <a href="#enablevtpm_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Vtpm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4303,75 +3851,64 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
             title="Required">
         <span id="enableintegritymonitoring_nodejs">
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enablesecureboot_nodejs">
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enablevtpm_nodejs">
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="enableintegritymonitoring_python">
-<a href="#enableintegritymonitoring_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
-</span> 
+        <span id="enable_integrity_monitoring_python">
+<a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="enablesecureboot_python">
-<a href="#enablesecureboot_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
-</span> 
+        <span id="enable_secure_boot_python">
+<a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="enablevtpm_python">
-<a href="#enablevtpm_python" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
-</span> 
+        <span id="enable_vtpm_python">
+<a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -4384,6 +3921,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

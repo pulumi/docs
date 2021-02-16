@@ -1,8 +1,8 @@
 
 ---
 title: "Tag"
-title_tag: "Resource Tag | Module datacatalog | Package GCP"
-meta_desc: "Explore the Tag resource of the datacatalog module, including examples, input properties, output properties, lookup functions, and supporting types. Tags are used to attach custom metadata to Data Catalog resources. Tags conform to the specifications within their tag template."
+title_tag: "gcp.datacatalog.Tag"
+meta_desc: "Documentation for the gcp.datacatalog.Tag resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -77,23 +77,23 @@ class MyStack : Stack
                     DisplayName = "PII type",
                     Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
                     {
-                        Enum_type = 
+                        EnumType = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeArgs
                         {
-                            { "allowed_values", 
+                            AllowedValues = 
                             {
-                                
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
                                 {
-                                    { "displayName", "EMAIL" },
+                                    DisplayName = "EMAIL",
                                 },
-                                
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
                                 {
-                                    { "displayName", "SOCIAL SECURITY NUMBER" },
+                                    DisplayName = "SOCIAL SECURITY NUMBER",
                                 },
-                                
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
                                 {
-                                    { "displayName", "NONE" },
+                                    DisplayName = "NONE",
                                 },
-                            } },
+                            },
                         },
                     },
                 },
@@ -125,7 +125,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -170,16 +170,16 @@ func main() {
 					FieldId:     pulumi.String("pii_type"),
 					DisplayName: pulumi.String("PII type"),
 					Type: &datacatalog.TagTemplateFieldTypeArgs{
-						Enum_type: pulumi.Map{
-							"allowed_values": pulumi.MapArray{
-								pulumi.Map{
-									"displayName": pulumi.String("EMAIL"),
+						EnumType: &datacatalog.TagTemplateFieldTypeEnumTypeArgs{
+							AllowedValues: datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArray{
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("EMAIL"),
 								},
-								pulumi.Map{
-									"displayName": pulumi.String("SOCIAL SECURITY NUMBER"),
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("SOCIAL SECURITY NUMBER"),
 								},
-								pulumi.Map{
-									"displayName": pulumi.String("NONE"),
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("NONE"),
 								},
 							},
 						},
@@ -227,49 +227,49 @@ tag_template = gcp.datacatalog.TagTemplate("tagTemplate",
     region="us-central1",
     display_name="Demo Tag Template",
     fields=[
-        {
-            "fieldId": "source",
-            "display_name": "Source of data asset",
-            "type": {
-                "primitiveType": "STRING",
-            },
-            "isRequired": True,
-        },
-        {
-            "fieldId": "num_rows",
-            "display_name": "Number of rows in the data asset",
-            "type": {
-                "primitiveType": "DOUBLE",
-            },
-        },
-        {
-            "fieldId": "pii_type",
-            "display_name": "PII type",
-            "type": {
-                "enum_type": {
-                    "allowed_values": [
-                        {
-                            "display_name": "EMAIL",
-                        },
-                        {
-                            "display_name": "SOCIAL SECURITY NUMBER",
-                        },
-                        {
-                            "display_name": "NONE",
-                        },
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="source",
+            display_name="Source of data asset",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                primitive_type="STRING",
+            ),
+            is_required=True,
+        ),
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="num_rows",
+            display_name="Number of rows in the data asset",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                primitive_type="DOUBLE",
+            ),
+        ),
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="pii_type",
+            display_name="PII type",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                enum_type=gcp.datacatalog.TagTemplateFieldTypeEnumTypeArgs(
+                    allowed_values=[
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="EMAIL",
+                        ),
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="SOCIAL SECURITY NUMBER",
+                        ),
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="NONE",
+                        ),
                     ],
-                },
-            },
-        },
+                ),
+            ),
+        ),
     ],
-    force_delete="false")
+    force_delete=False)
 basic_tag = gcp.datacatalog.Tag("basicTag",
     parent=entry.id,
     template=tag_template.id,
-    fields=[{
-        "fieldName": "source",
-        "stringValue": "my-string",
-    }])
+    fields=[gcp.datacatalog.TagFieldArgs(
+        field_name="source",
+        string_value="my-string",
+    )])
 ```
 
 {{% /example %}}
@@ -311,8 +311,8 @@ const tagTemplate = new gcp.datacatalog.TagTemplate("tagTemplate", {
             fieldId: "pii_type",
             displayName: "PII type",
             type: {
-                enum_type: {
-                    allowed_values: [
+                enumType: {
+                    allowedValues: [
                         {
                             displayName: "EMAIL",
                         },
@@ -401,23 +401,23 @@ class MyStack : Stack
                     DisplayName = "PII type",
                     Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
                     {
-                        Enum_type = 
+                        EnumType = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeArgs
                         {
-                            { "allowed_values", 
+                            AllowedValues = 
                             {
-                                
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
                                 {
-                                    { "displayName", "EMAIL" },
+                                    DisplayName = "EMAIL",
                                 },
-                                
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
                                 {
-                                    { "displayName", "SOCIAL SECURITY NUMBER" },
+                                    DisplayName = "SOCIAL SECURITY NUMBER",
                                 },
-                                
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
                                 {
-                                    { "displayName", "NONE" },
+                                    DisplayName = "NONE",
                                 },
-                            } },
+                            },
                         },
                     },
                 },
@@ -449,7 +449,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -503,16 +503,16 @@ func main() {
 					FieldId:     pulumi.String("pii_type"),
 					DisplayName: pulumi.String("PII type"),
 					Type: &datacatalog.TagTemplateFieldTypeArgs{
-						Enum_type: pulumi.Map{
-							"allowed_values": pulumi.MapArray{
-								pulumi.Map{
-									"displayName": pulumi.String("EMAIL"),
+						EnumType: &datacatalog.TagTemplateFieldTypeEnumTypeArgs{
+							AllowedValues: datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArray{
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("EMAIL"),
 								},
-								pulumi.Map{
-									"displayName": pulumi.String("SOCIAL SECURITY NUMBER"),
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("SOCIAL SECURITY NUMBER"),
 								},
-								pulumi.Map{
-									"displayName": pulumi.String("NONE"),
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("NONE"),
 								},
 							},
 						},
@@ -565,49 +565,49 @@ tag_template = gcp.datacatalog.TagTemplate("tagTemplate",
     region="us-central1",
     display_name="Demo Tag Template",
     fields=[
-        {
-            "fieldId": "source",
-            "display_name": "Source of data asset",
-            "type": {
-                "primitiveType": "STRING",
-            },
-            "isRequired": True,
-        },
-        {
-            "fieldId": "num_rows",
-            "display_name": "Number of rows in the data asset",
-            "type": {
-                "primitiveType": "DOUBLE",
-            },
-        },
-        {
-            "fieldId": "pii_type",
-            "display_name": "PII type",
-            "type": {
-                "enum_type": {
-                    "allowed_values": [
-                        {
-                            "display_name": "EMAIL",
-                        },
-                        {
-                            "display_name": "SOCIAL SECURITY NUMBER",
-                        },
-                        {
-                            "display_name": "NONE",
-                        },
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="source",
+            display_name="Source of data asset",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                primitive_type="STRING",
+            ),
+            is_required=True,
+        ),
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="num_rows",
+            display_name="Number of rows in the data asset",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                primitive_type="DOUBLE",
+            ),
+        ),
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="pii_type",
+            display_name="PII type",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                enum_type=gcp.datacatalog.TagTemplateFieldTypeEnumTypeArgs(
+                    allowed_values=[
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="EMAIL",
+                        ),
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="SOCIAL SECURITY NUMBER",
+                        ),
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="NONE",
+                        ),
                     ],
-                },
-            },
-        },
+                ),
+            ),
+        ),
     ],
-    force_delete="false")
+    force_delete=False)
 entry_group_tag = gcp.datacatalog.Tag("entryGroupTag",
     parent=entry_group.id,
     template=tag_template.id,
-    fields=[{
-        "fieldName": "source",
-        "stringValue": "my-string",
-    }])
+    fields=[gcp.datacatalog.TagFieldArgs(
+        field_name="source",
+        string_value="my-string",
+    )])
 ```
 
 {{% /example %}}
@@ -655,8 +655,8 @@ const tagTemplate = new gcp.datacatalog.TagTemplate("tagTemplate", {
             fieldId: "pii_type",
             displayName: "PII type",
             type: {
-                enum_type: {
-                    allowed_values: [
+                enumType: {
+                    allowedValues: [
                         {
                             displayName: "EMAIL",
                         },
@@ -775,23 +775,23 @@ class MyStack : Stack
                     DisplayName = "PII type",
                     Type = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeArgs
                     {
-                        Enum_type = 
+                        EnumType = new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeArgs
                         {
-                            { "allowed_values", 
+                            AllowedValues = 
                             {
-                                
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
                                 {
-                                    { "displayName", "EMAIL" },
+                                    DisplayName = "EMAIL",
                                 },
-                                
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
                                 {
-                                    { "displayName", "SOCIAL SECURITY NUMBER" },
+                                    DisplayName = "SOCIAL SECURITY NUMBER",
                                 },
-                                
+                                new Gcp.DataCatalog.Inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs
                                 {
-                                    { "displayName", "NONE" },
+                                    DisplayName = "NONE",
                                 },
-                            } },
+                            },
                         },
                     },
                 },
@@ -855,7 +855,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/datacatalog"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -901,16 +901,16 @@ func main() {
 					FieldId:     pulumi.String("pii_type"),
 					DisplayName: pulumi.String("PII type"),
 					Type: &datacatalog.TagTemplateFieldTypeArgs{
-						Enum_type: pulumi.Map{
-							"allowed_values": pulumi.MapArray{
-								pulumi.Map{
-									"displayName": pulumi.String("EMAIL"),
+						EnumType: &datacatalog.TagTemplateFieldTypeEnumTypeArgs{
+							AllowedValues: datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArray{
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("EMAIL"),
 								},
-								pulumi.Map{
-									"displayName": pulumi.String("SOCIAL SECURITY NUMBER"),
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("SOCIAL SECURITY NUMBER"),
 								},
-								pulumi.Map{
-									"displayName": pulumi.String("NONE"),
+								&datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs{
+									DisplayName: pulumi.String("NONE"),
 								},
 							},
 						},
@@ -944,7 +944,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = datacatalog.NewTag(ctx, "second-tag", &datacatalog.TagArgs{
+		_, err = datacatalog.NewTag(ctx, "second_tag", &datacatalog.TagArgs{
 			Parent:   entry.ID(),
 			Template: tagTemplate.ID(),
 			Fields: datacatalog.TagFieldArray{
@@ -1022,72 +1022,72 @@ tag_template = gcp.datacatalog.TagTemplate("tagTemplate",
     region="us-central1",
     display_name="Demo Tag Template",
     fields=[
-        {
-            "fieldId": "source",
-            "display_name": "Source of data asset",
-            "type": {
-                "primitiveType": "STRING",
-            },
-            "isRequired": True,
-        },
-        {
-            "fieldId": "num_rows",
-            "display_name": "Number of rows in the data asset",
-            "type": {
-                "primitiveType": "DOUBLE",
-            },
-        },
-        {
-            "fieldId": "pii_type",
-            "display_name": "PII type",
-            "type": {
-                "enum_type": {
-                    "allowed_values": [
-                        {
-                            "display_name": "EMAIL",
-                        },
-                        {
-                            "display_name": "SOCIAL SECURITY NUMBER",
-                        },
-                        {
-                            "display_name": "NONE",
-                        },
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="source",
+            display_name="Source of data asset",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                primitive_type="STRING",
+            ),
+            is_required=True,
+        ),
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="num_rows",
+            display_name="Number of rows in the data asset",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                primitive_type="DOUBLE",
+            ),
+        ),
+        gcp.datacatalog.TagTemplateFieldArgs(
+            field_id="pii_type",
+            display_name="PII type",
+            type=gcp.datacatalog.TagTemplateFieldTypeArgs(
+                enum_type=gcp.datacatalog.TagTemplateFieldTypeEnumTypeArgs(
+                    allowed_values=[
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="EMAIL",
+                        ),
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="SOCIAL SECURITY NUMBER",
+                        ),
+                        gcp.datacatalog.TagTemplateFieldTypeEnumTypeAllowedValueArgs(
+                            display_name="NONE",
+                        ),
                     ],
-                },
-            },
-        },
+                ),
+            ),
+        ),
     ],
-    force_delete="false")
+    force_delete=False)
 basic_tag = gcp.datacatalog.Tag("basicTag",
     parent=entry.id,
     template=tag_template.id,
     fields=[
-        {
-            "fieldName": "source",
-            "stringValue": "my-string",
-        },
-        {
-            "fieldName": "num_rows",
-            "doubleValue": 5,
-        },
-        {
-            "fieldName": "pii_type",
-            "enumValue": "EMAIL",
-        },
+        gcp.datacatalog.TagFieldArgs(
+            field_name="source",
+            string_value="my-string",
+        ),
+        gcp.datacatalog.TagFieldArgs(
+            field_name="num_rows",
+            double_value=5,
+        ),
+        gcp.datacatalog.TagFieldArgs(
+            field_name="pii_type",
+            enum_value="EMAIL",
+        ),
     ],
     column="address")
 second_tag = gcp.datacatalog.Tag("second-tag",
     parent=entry.id,
     template=tag_template.id,
     fields=[
-        {
-            "fieldName": "source",
-            "stringValue": "my-string",
-        },
-        {
-            "fieldName": "pii_type",
-            "enumValue": "NONE",
-        },
+        gcp.datacatalog.TagFieldArgs(
+            field_name="source",
+            string_value="my-string",
+        ),
+        gcp.datacatalog.TagFieldArgs(
+            field_name="pii_type",
+            enum_value="NONE",
+        ),
     ],
     column="first_name")
 ```
@@ -1168,8 +1168,8 @@ const tagTemplate = new gcp.datacatalog.TagTemplate("tagTemplate", {
             fieldId: "pii_type",
             displayName: "PII type",
             type: {
-                enum_type: {
-                    allowed_values: [
+                enumType: {
+                    allowedValues: [
                         {
                             displayName: "EMAIL",
                         },
@@ -1232,19 +1232,19 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datacatalog/#Tag">Tag</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datacatalog/#TagArgs">TagArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Tag</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TagArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/datacatalog/#Tag">Tag</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>column=None<span class="p">, </span>fields=None<span class="p">, </span>parent=None<span class="p">, </span>template=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Tag</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[TagFieldArgs]]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#Tag">NewTag</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#TagArgs">TagArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#Tag">Tag</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTag</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TagArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Tag</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Tag.html">Tag</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.TagArgs.html">TagArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Tag</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TagArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1255,7 +1255,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1265,7 +1265,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datacatalog/#TagArgs">TagArgs</a></span>
+        <span class="property-type"><a href="#inputs">TagArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1314,7 +1314,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -1324,7 +1324,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1334,7 +1334,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#TagArgs">TagArgs</a></span>
+        <span class="property-type"><a href="#inputs">TagArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1344,7 +1344,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -1363,7 +1363,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1373,7 +1373,7 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.TagArgs.html">TagArgs</a></span>
+        <span class="property-type"><a href="#inputs">TagArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1396,12 +1396,11 @@ const second_tag = new gcp.datacatalog.Tag("second-tag", {
 
 ## Tag Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Tag resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Tag resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1412,56 +1411,52 @@ The Tag resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="fields_csharp">
 <a href="#fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfield">List&lt;Tag<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
-Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.  Structure is documented below.
+Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="template_csharp">
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="column_csharp">
 <a href="#column_csharp" style="color: inherit; text-decoration: inherit;">Column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1470,56 +1465,52 @@ all entries in that group.
             title="Required">
         <span id="fields_go">
 <a href="#fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfield">[]Tag<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
-Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.  Structure is documented below.
+Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="template_go">
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="column_go">
 <a href="#column_go" style="color: inherit; text-decoration: inherit;">Column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1528,56 +1519,52 @@ all entries in that group.
             title="Required">
         <span id="fields_nodejs">
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfield">Tag<wbr>Field[]</a></span>
     </dt>
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
-Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.  Structure is documented below.
+Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="template_nodejs">
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="column_nodejs">
 <a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1586,65 +1573,57 @@ all entries in that group.
             title="Required">
         <span id="fields_python">
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfield">List[Tag<wbr>Field]</a></span>
+        <span class="property-type"><a href="#tagfield">Sequence[Tag<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
-Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.  Structure is documented below.
+Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="template_python">
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="column_python">
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Tag resource produces the following output properties:
-
 
 
 
@@ -1655,40 +1634,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag in URL format. Example:
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="templatedisplayname_csharp">
 <a href="#templatedisplayname_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Displayname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1697,40 +1672,36 @@ identifier. Note that this Tag may not actually be stored in the location in thi
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag in URL format. Example:
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="templatedisplayname_go">
 <a href="#templatedisplayname_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Displayname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1739,40 +1710,36 @@ identifier. Note that this Tag may not actually be stored in the location in thi
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag in URL format. Example:
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="templatedisplayname_nodejs">
 <a href="#templatedisplayname_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Displayname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1781,43 +1748,36 @@ identifier. Note that this Tag may not actually be stored in the location in thi
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag in URL format. Example:
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="template_displayname_python">
 <a href="#template_displayname_python" style="color: inherit; text-decoration: inherit;">template_<wbr>displayname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1827,19 +1787,20 @@ Get an existing Tag resource's state with the given name, ID, and optional extra
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datacatalog/#TagState">TagState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datacatalog/#Tag">Tag</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TagState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Tag</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>column=None<span class="p">, </span>fields=None<span class="p">, </span>name=None<span class="p">, </span>parent=None<span class="p">, </span>template=None<span class="p">, </span>template_displayname=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fields</span><span class="p">:</span> <span class="nx">Optional[Sequence[TagFieldArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_displayname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Tag</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTag<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#TagState">TagState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#Tag">Tag</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTag<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TagState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Tag</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Tag.html">Tag</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.TagState.html">TagState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Tag</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TagState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1941,7 +1902,6 @@ Get an existing Tag resource's state with the given name, ID, and optional extra
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1949,81 +1909,75 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_column_csharp">
 <a href="#state_column_csharp" style="color: inherit; text-decoration: inherit;">Column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fields_csharp">
 <a href="#state_fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfield">List&lt;Tag<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
-Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.  Structure is documented below.
+Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag in URL format. Example:
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_csharp">
 <a href="#state_template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_templatedisplayname_csharp">
 <a href="#state_templatedisplayname_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Displayname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2032,81 +1986,75 @@ This field cannot be modified after creation.
             title="Optional">
         <span id="state_column_go">
 <a href="#state_column_go" style="color: inherit; text-decoration: inherit;">Column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fields_go">
 <a href="#state_fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfield">[]Tag<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
-Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.  Structure is documented below.
+Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag in URL format. Example:
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_go">
 <a href="#state_template_go" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_templatedisplayname_go">
 <a href="#state_templatedisplayname_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Displayname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2115,81 +2063,75 @@ This field cannot be modified after creation.
             title="Optional">
         <span id="state_column_nodejs">
 <a href="#state_column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fields_nodejs">
 <a href="#state_fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfield">Tag<wbr>Field[]</a></span>
     </dt>
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
-Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.  Structure is documented below.
+Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag in URL format. Example:
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_nodejs">
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_templatedisplayname_nodejs">
 <a href="#state_templatedisplayname_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Displayname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2198,84 +2140,75 @@ This field cannot be modified after creation.
             title="Optional">
         <span id="state_column_python">
 <a href="#state_column_python" style="color: inherit; text-decoration: inherit;">column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an
 individual column based on that schema.
 For attaching a tag to a nested column, use `.` to separate the column names. Example:
 `outer_column.inner_column`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fields_python">
 <a href="#state_fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tagfield">List[Tag<wbr>Field]</a></span>
+        <span class="property-type"><a href="#tagfield">Sequence[Tag<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This maps the ID of a tag field to the value of and additional information about that field.
-Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.  Structure is documented below.
+Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag in URL format. Example:
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or
 projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated
 identifier. Note that this Tag may not actually be stored in the location in this name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to
 all entries in that group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_python">
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the tag template that this tag uses. Example:
 projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_displayname_python">
 <a href="#state_template_displayname_python" style="color: inherit; text-decoration: inherit;">template_<wbr>displayname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the tag template.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2285,20 +2218,8 @@ This field cannot be modified after creation.
 ## Supporting Types
 
 
+
 <h4 id="tagfield">Tag<wbr>Field</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TagField">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TagField">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#TagFieldArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datacatalog?tab=doc#TagFieldOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Inputs.TagFieldArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataCatalog.Outputs.TagField.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2307,97 +2228,89 @@ This field cannot be modified after creation.
             title="Required">
         <span id="fieldname_csharp">
 <a href="#fieldname_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boolvalue_csharp">
 <a href="#boolvalue_csharp" style="color: inherit; text-decoration: inherit;">Bool<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with boolean type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The display name of this field
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="doublevalue_csharp">
 <a href="#doublevalue_csharp" style="color: inherit; text-decoration: inherit;">Double<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with double type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enumvalue_csharp">
 <a href="#enumvalue_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.  Structure is documented below.
+    <dd>{{% md %}}Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 The order of this field with respect to other fields in this tag. For example, a higher value can indicate
 a more important field. The value can be negative. Multiple fields can have the same order, and field orders
 within a tag do not have to be sequential.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stringvalue_csharp">
 <a href="#stringvalue_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with string type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timestampvalue_csharp">
 <a href="#timestampvalue_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with timestamp type.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2406,97 +2319,89 @@ within a tag do not have to be sequential.
             title="Required">
         <span id="fieldname_go">
 <a href="#fieldname_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boolvalue_go">
 <a href="#boolvalue_go" style="color: inherit; text-decoration: inherit;">Bool<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with boolean type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The display name of this field
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="doublevalue_go">
 <a href="#doublevalue_go" style="color: inherit; text-decoration: inherit;">Double<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with double type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enumvalue_go">
 <a href="#enumvalue_go" style="color: inherit; text-decoration: inherit;">Enum<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.  Structure is documented below.
+    <dd>{{% md %}}Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 The order of this field with respect to other fields in this tag. For example, a higher value can indicate
 a more important field. The value can be negative. Multiple fields can have the same order, and field orders
 within a tag do not have to be sequential.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stringvalue_go">
 <a href="#stringvalue_go" style="color: inherit; text-decoration: inherit;">String<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with string type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timestampvalue_go">
 <a href="#timestampvalue_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with timestamp type.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2505,200 +2410,188 @@ within a tag do not have to be sequential.
             title="Required">
         <span id="fieldname_nodejs">
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boolvalue_nodejs">
 <a href="#boolvalue_nodejs" style="color: inherit; text-decoration: inherit;">bool<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with boolean type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The display name of this field
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="doublevalue_nodejs">
 <a href="#doublevalue_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with double type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enumvalue_nodejs">
 <a href="#enumvalue_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.  Structure is documented below.
+    <dd>{{% md %}}Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}-
 The order of this field with respect to other fields in this tag. For example, a higher value can indicate
 a more important field. The value can be negative. Multiple fields can have the same order, and field orders
 within a tag do not have to be sequential.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stringvalue_nodejs">
 <a href="#stringvalue_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with string type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timestampvalue_nodejs">
 <a href="#timestampvalue_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with timestamp type.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="fieldname_python">
-<a href="#fieldname_python" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
-</span> 
+        <span id="field_name_python">
+<a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="boolvalue_python">
-<a href="#boolvalue_python" style="color: inherit; text-decoration: inherit;">bool<wbr>Value</a>
-</span> 
+        <span id="bool_value_python">
+<a href="#bool_value_python" style="color: inherit; text-decoration: inherit;">bool_<wbr>value</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with boolean type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The display name of this field
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="doublevalue_python">
-<a href="#doublevalue_python" style="color: inherit; text-decoration: inherit;">double<wbr>Value</a>
-</span> 
+        <span id="double_value_python">
+<a href="#double_value_python" style="color: inherit; text-decoration: inherit;">double_<wbr>value</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with double type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="enumvalue_python">
-<a href="#enumvalue_python" style="color: inherit; text-decoration: inherit;">enum<wbr>Value</a>
-</span> 
+        <span id="enum_value_python">
+<a href="#enum_value_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>value</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.  Structure is documented below.
+    <dd>{{% md %}}Holds the value for a tag field with enum type. This value must be one of the allowed values in the definition of this enum.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 The order of this field with respect to other fields in this tag. For example, a higher value can indicate
 a more important field. The value can be negative. Multiple fields can have the same order, and field orders
 within a tag do not have to be sequential.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="stringvalue_python">
-<a href="#stringvalue_python" style="color: inherit; text-decoration: inherit;">string<wbr>Value</a>
-</span> 
+        <span id="string_value_python">
+<a href="#string_value_python" style="color: inherit; text-decoration: inherit;">string_<wbr>value</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with string type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="timestampvalue_python">
-<a href="#timestampvalue_python" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Value</a>
-</span> 
+        <span id="timestamp_value_python">
+<a href="#timestamp_value_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>value</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Holds the value for a tag field with timestamp type.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Tag can be imported using any of these accepted formats
 
-
-
+```sh
+ $ pulumi import gcp:datacatalog/tag:Tag default {{name}}
+```
 
 
 
@@ -2710,6 +2603,6 @@ within a tag do not have to be sequential.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

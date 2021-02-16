@@ -82,39 +82,39 @@ test = mongodbatlas.Cluster("test",
     provider_disk_iops=240,
     provider_instance_size_name="M30",
     replication_specs=[
-        {
-            "zoneName": "Zone 1",
-            "num_shards": 1,
-            "regionsConfigs": [{
-                "region_name": "EU_CENTRAL_1",
-                "electableNodes": 3,
-                "priority": 7,
-                "readOnlyNodes": 0,
-            }],
-        },
-        {
-            "zoneName": "Zone 2",
-            "num_shards": 1,
-            "regionsConfigs": [{
-                "region_name": "US_EAST_2",
-                "electableNodes": 3,
-                "priority": 7,
-                "readOnlyNodes": 0,
-            }],
-        },
+        mongodbatlas.ClusterReplicationSpecArgs(
+            zone_name="Zone 1",
+            num_shards=1,
+            regions_configs=[mongodbatlas.ClusterReplicationSpecRegionsConfigArgs(
+                region_name="EU_CENTRAL_1",
+                electable_nodes=3,
+                priority=7,
+                read_only_nodes=0,
+            )],
+        ),
+        mongodbatlas.ClusterReplicationSpecArgs(
+            zone_name="Zone 2",
+            num_shards=1,
+            regions_configs=[mongodbatlas.ClusterReplicationSpecRegionsConfigArgs(
+                region_name="US_EAST_2",
+                electable_nodes=3,
+                priority=7,
+                read_only_nodes=0,
+            )],
+        ),
     ])
 config = mongodbatlas.GlobalClusterConfig("config",
     project_id=test.project_id,
     cluster_name=test.name,
-    managed_namespaces=[{
-        "db": "mydata",
-        "collection": "publishers",
-        "customShardKey": "city",
-    }],
-    custom_zone_mappings=[{
-        "location": "CA",
-        "zone": "Zone 1",
-    }])
+    managed_namespaces=[mongodbatlas.GlobalClusterConfigManagedNamespaceArgs(
+        db="mydata",
+        collection="publishers",
+        custom_shard_key="city",
+    )],
+    custom_zone_mappings=[mongodbatlas.GlobalClusterConfigCustomZoneMappingArgs(
+        location="CA",
+        zone="Zone 1",
+    )])
 ```
 ```csharp
 using Pulumi;
@@ -199,6 +199,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -322,15 +323,15 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
 config = mongodbatlas.GlobalClusterConfig("config",
     project_id=mongodbatlas_cluster["test"]["project_id"],
     cluster_name=mongodbatlas_cluster["test"]["name"],
-    managed_namespaces=[{
-        "db": "mydata",
-        "collection": "publishers",
-        "customShardKey": "city",
-    }],
-    custom_zone_mappings=[{
-        "location": "CA",
-        "zone": "Zone 1",
-    }])
+    managed_namespaces=[mongodbatlas.GlobalClusterConfigManagedNamespaceArgs(
+        db="mydata",
+        collection="publishers",
+        custom_shard_key="city",
+    )],
+    custom_zone_mappings=[mongodbatlas.GlobalClusterConfigCustomZoneMappingArgs(
+        location="CA",
+        zone="Zone 1",
+    )])
 ```
 ```csharp
 using Pulumi;
@@ -386,6 +387,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas"
+	"github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -409,8 +411,8 @@ func main() {
 			return err
 		}
 		_, err = mongodbatlas.NewGlobalClusterConfig(ctx, "config", &mongodbatlas.GlobalClusterConfigArgs{
-			ProjectId:   pulumi.String(mongodbatlas_cluster.Test.Project_id),
-			ClusterName: pulumi.String(mongodbatlas_cluster.Test.Name),
+			ProjectId:   pulumi.Any(mongodbatlas_cluster.Test.Project_id),
+			ClusterName: pulumi.Any(mongodbatlas_cluster.Test.Name),
 			ManagedNamespaces: mongodbatlas.GlobalClusterConfigManagedNamespaceArray{
 				&mongodbatlas.GlobalClusterConfigManagedNamespaceArgs{
 					Db:             pulumi.String("mydata"),
@@ -440,19 +442,19 @@ func main() {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GlobalClusterConfig">GlobalClusterConfig</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GlobalClusterConfigArgs">GlobalClusterConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GlobalClusterConfig">GlobalClusterConfig</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GlobalClusterConfigArgs">GlobalClusterConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.GlobalClusterConfig">GlobalClusterConfig</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_name=None<span class="p">, </span>custom_zone_mappings=None<span class="p">, </span>managed_namespaces=None<span class="p">, </span>project_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.GlobalClusterConfig">GlobalClusterConfig</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_zone_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterConfigCustomZoneMappingArgs]]</span> = None<span class="p">, </span><span class="nx">managed_namespaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterConfigManagedNamespaceArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfig">NewGlobalClusterConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfigArgs">GlobalClusterConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfig">GlobalClusterConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfig">NewGlobalClusterConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfigArgs">GlobalClusterConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfig">GlobalClusterConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GlobalClusterConfig.html">GlobalClusterConfig</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GlobalClusterConfigArgs.html">GlobalClusterConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GlobalClusterConfig.html">GlobalClusterConfig</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GlobalClusterConfigArgs.html">GlobalClusterConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -463,7 +465,7 @@ func main() {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -532,7 +534,7 @@ func main() {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -571,7 +573,7 @@ func main() {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -612,7 +614,6 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -620,49 +621,44 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customzonemappings_csharp">
 <a href="#customzonemappings_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">List&lt;Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="managednamespaces_csharp">
 <a href="#managednamespaces_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">List&lt;Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -671,49 +667,44 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customzonemappings_go">
 <a href="#customzonemappings_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">[]Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="managednamespaces_go">
 <a href="#managednamespaces_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">[]Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -722,49 +713,44 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customzonemappings_nodejs">
 <a href="#customzonemappings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="managednamespaces_nodejs">
 <a href="#managednamespaces_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace[]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -773,58 +759,49 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_zone_mappings_python">
 <a href="#custom_zone_mappings_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">List[Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Sequence[Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="managed_namespaces_python">
 <a href="#managed_namespaces_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclusterconfigmanagednamespace">List[Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace]</a></span>
+        <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Sequence[Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the GlobalClusterConfig resource produces the following output properties:
-
 
 
 
@@ -835,26 +812,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="customzonemapping_csharp">
 <a href="#customzonemapping_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -863,26 +837,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="customzonemapping_go">
 <a href="#customzonemapping_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -891,26 +862,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="customzonemapping_nodejs">
 <a href="#customzonemapping_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -919,29 +887,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="custom_zone_mapping_python">
 <a href="#custom_zone_mapping_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -951,19 +913,20 @@ Get an existing GlobalClusterConfig resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GlobalClusterConfigState">GlobalClusterConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GlobalClusterConfig">GlobalClusterConfig</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GlobalClusterConfigState">GlobalClusterConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GlobalClusterConfig">GlobalClusterConfig</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_name=None<span class="p">, </span>custom_zone_mapping=None<span class="p">, </span>custom_zone_mappings=None<span class="p">, </span>managed_namespaces=None<span class="p">, </span>project_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_zone_mapping</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">custom_zone_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterConfigCustomZoneMappingArgs]]</span> = None<span class="p">, </span><span class="nx">managed_namespaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalClusterConfigManagedNamespaceArgs]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> GlobalClusterConfig</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalClusterConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfigState">GlobalClusterConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfig">GlobalClusterConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalClusterConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfigState">GlobalClusterConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfig">GlobalClusterConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GlobalClusterConfig.html">GlobalClusterConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..GlobalClusterConfigState.html">GlobalClusterConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GlobalClusterConfig.html">GlobalClusterConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..GlobalClusterConfigState.html">GlobalClusterConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1065,7 +1028,6 @@ Get an existing GlobalClusterConfig resource's state with the given name, ID, an
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1073,60 +1035,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_clustername_csharp">
 <a href="#state_clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customzonemapping_csharp">
 <a href="#state_customzonemapping_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customzonemappings_csharp">
 <a href="#state_customzonemappings_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">List&lt;Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_managednamespaces_csharp">
 <a href="#state_managednamespaces_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">List&lt;Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1135,60 +1091,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_clustername_go">
 <a href="#state_clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customzonemapping_go">
 <a href="#state_customzonemapping_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customzonemappings_go">
 <a href="#state_customzonemappings_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">[]Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_managednamespaces_go">
 <a href="#state_managednamespaces_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">[]Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1197,60 +1147,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_clustername_nodejs">
 <a href="#state_clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customzonemapping_nodejs">
 <a href="#state_customzonemapping_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customzonemappings_nodejs">
 <a href="#state_customzonemappings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_managednamespaces_nodejs">
 <a href="#state_managednamespaces_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace[]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1259,57 +1203,52 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cluster_name_python">
 <a href="#state_cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_custom_zone_mapping_python">
 <a href="#state_custom_zone_mapping_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_custom_zone_mappings_python">
 <a href="#state_custom_zone_mappings_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">List[Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping]</a></span>
+        <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Sequence[Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_managed_namespaces_python">
 <a href="#state_managed_namespaces_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globalclusterconfigmanagednamespace">List[Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace]</a></span>
+        <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Sequence[Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1318,11 +1257,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="globalclusterconfigcustomzonemapping">Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping</h4>
@@ -1333,11 +1269,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfigCustomZoneMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfigCustomZoneMappingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Inputs.GlobalClusterConfigCustomZoneMappingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GlobalClusterConfigCustomZoneMapping.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1347,27 +1282,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO location code to which you want to map a zone in your Global Cluster. You can find a list of all supported location codes [here](https://cloud.mongodb.com/static/atlas/country_iso_codes.txt).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone in your Global Cluster that you want to map to location.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1376,27 +1308,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO location code to which you want to map a zone in your Global Cluster. You can find a list of all supported location codes [here](https://cloud.mongodb.com/static/atlas/country_iso_codes.txt).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone in your Global Cluster that you want to map to location.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1405,27 +1334,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO location code to which you want to map a zone in your Global Cluster. You can find a list of all supported location codes [here](https://cloud.mongodb.com/static/atlas/country_iso_codes.txt).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone in your Global Cluster that you want to map to location.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1434,30 +1360,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ISO location code to which you want to map a zone in your Global Cluster. You can find a list of all supported location codes [here](https://cloud.mongodb.com/static/atlas/country_iso_codes.txt).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the zone in your Global Cluster that you want to map to location.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="globalclusterconfigmanagednamespace">Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace</h4>
 {{% choosable language nodejs %}}
@@ -1467,11 +1387,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfigManagedNamespaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GlobalClusterConfigManagedNamespaceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Inputs.GlobalClusterConfigManagedNamespaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GlobalClusterConfigManagedNamespace.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1481,38 +1400,34 @@ The following state arguments are supported:
             title="Required">
         <span id="collection_csharp">
 <a href="#collection_csharp" style="color: inherit; text-decoration: inherit;">Collection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the collection associated with the managed namespace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="customshardkey_csharp">
 <a href="#customshardkey_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shard<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom shard key for the collection. Global Clusters require a compound shard key consisting of a location field and a user-selected second key, the custom shard key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="db_csharp">
 <a href="#db_csharp" style="color: inherit; text-decoration: inherit;">Db</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database containing the collection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1521,38 +1436,34 @@ The following state arguments are supported:
             title="Required">
         <span id="collection_go">
 <a href="#collection_go" style="color: inherit; text-decoration: inherit;">Collection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the collection associated with the managed namespace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="customshardkey_go">
 <a href="#customshardkey_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shard<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom shard key for the collection. Global Clusters require a compound shard key consisting of a location field and a user-selected second key, the custom shard key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="db_go">
 <a href="#db_go" style="color: inherit; text-decoration: inherit;">Db</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database containing the collection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1561,38 +1472,34 @@ The following state arguments are supported:
             title="Required">
         <span id="collection_nodejs">
 <a href="#collection_nodejs" style="color: inherit; text-decoration: inherit;">collection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the collection associated with the managed namespace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="customshardkey_nodejs">
 <a href="#customshardkey_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Shard<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom shard key for the collection. Global Clusters require a compound shard key consisting of a location field and a user-selected second key, the custom shard key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="db_nodejs">
 <a href="#db_nodejs" style="color: inherit; text-decoration: inherit;">db</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database containing the collection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1601,42 +1508,44 @@ The following state arguments are supported:
             title="Required">
         <span id="collection_python">
 <a href="#collection_python" style="color: inherit; text-decoration: inherit;">collection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the collection associated with the managed namespace.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="customshardkey_python">
-<a href="#customshardkey_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Shard<wbr>Key</a>
-</span> 
+        <span id="custom_shard_key_python">
+<a href="#custom_shard_key_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>shard_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom shard key for the collection. Global Clusters require a compound shard key consisting of a location field and a user-selected second key, the custom shard key.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="db_python">
 <a href="#db_python" style="color: inherit; text-decoration: inherit;">db</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database containing the collection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Database users can be imported using project ID and cluster name, in the format `PROJECTID-CLUSTER_NAME`, e.g.
 
+```sh
+ $ pulumi import mongodbatlas:index/globalClusterConfig:GlobalClusterConfig config 1112222b3bf99403840e8934-my-cluster
+```
 
-
+ See detailed information for arguments and attributes[MongoDB API Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/)
 
 
 
@@ -1648,6 +1557,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mongodbatlas).</dd>
+	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 </dl>
 

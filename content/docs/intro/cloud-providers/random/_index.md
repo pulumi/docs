@@ -47,10 +47,21 @@ username = random.Pet("my-user-name")
 
 ```go
 import (
-  random "github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	random "github.com/pulumi/pulumi-random/sdk/v2/go/random"
 )
 
-username, _ := random.NewPet(ctx, "my-user-name", &random.PetArgs{})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		username, err := random.NewPet(ctx, "my-user-name", &random.PetArgs{})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

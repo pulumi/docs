@@ -71,7 +71,7 @@ in addition to [the `AutoScalingGroup` API documentation](
 
 Another way to create an ASG is to define it on an `awsx.ecs.Cluster` when auto-scaling the EC2 instances powering
 our ECS cluster. This is not necessary when using ECS "Fargate", but by defining an ASG, you have complete control
-over the scaling of your ECS cluster. For more information about ECS specifically, please see the associated
+over the scaling of your ECS cluster. For more information about ECS specifically, see the associated
 [Pulumi Crosswalk for AWS ECS documentation]({{< relref "ecs" >}}).
 
 To make this easier, the `awsx.ecs.Cluster` class offers a `createAutoScalingGroup` class that associates the newly
@@ -354,12 +354,12 @@ Other adjustment types are possible as well.  The full list is:
    more) details.  With "PercentChangeInCapacity", you can also specify the minimum number of
    instances to scale using the `minAdjustmentMagnitude` parameter.
 
-For more extensive information about step scaling, please see
+For more extensive information about step scaling, see
 [Simple and Step Scaling Policies for Amazon EC2 Auto Scaling](
 https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html).
 
 ## Additional Auto Scaling Resources
 
-For more information about Amazon Auto Scaling, please see the following:
+For more information about Amazon Auto Scaling, see the following:
 
 * [Amazon Auto Scaling homepage](https://aws.amazon.com/autoscaling/)

@@ -1,8 +1,8 @@
 
 ---
 title: "BandwidthLimit"
-title_tag: "Resource BandwidthLimit | Module cen | Package AliCloud"
-meta_desc: "Explore the BandwidthLimit resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN cross-regional interconnection bandwidth resource. To connect networks in different regions, you must set cross-region interconnection bandwidth after buying a bandwidth package. The total bandwidth set for all the interconnected regions of a bandwidth package cannot exceed the bandwidth of the bandwidth package. By default, 1 Kbps bandwidth is provided for connectivity test. To run normal business, you must buy a bandwidth package and set a proper interconnection bandwidth."
+title_tag: "alicloud.cen.BandwidthLimit"
+meta_desc: "Documentation for the alicloud.cen.BandwidthLimit resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -43,10 +43,16 @@ class MyStack : Stack
         var vpc1 = new AliCloud.Vpc.Network("vpc1", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "192.168.0.0/16",
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud.Fra,
         });
         var vpc2 = new AliCloud.Vpc.Network("vpc2", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "172.16.0.0/12",
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud.Sh,
         });
         var cen = new AliCloud.Cen.Instance("cen", new AliCloud.Cen.InstanceArgs
         {
@@ -63,29 +69,39 @@ class MyStack : Stack
         });
         var bwpAttach = new AliCloud.Cen.BandwidthPackageAttachment("bwpAttach", new AliCloud.Cen.BandwidthPackageAttachmentArgs
         {
-            BandwidthPackageId = bwp.Id,
             InstanceId = cen.Id,
+            BandwidthPackageId = bwp.Id,
         });
         var vpcAttach1 = new AliCloud.Cen.InstanceAttachment("vpcAttach1", new AliCloud.Cen.InstanceAttachmentArgs
         {
-            ChildInstanceId = vpc1.Id,
-            ChildInstanceRegionId = "eu-central-1",
             InstanceId = cen.Id,
+            ChildInstanceId = vpc1.Id,
+            ChildInstanceType = "VPC",
+            ChildInstanceRegionId = "eu-central-1",
         });
         var vpcAttach2 = new AliCloud.Cen.InstanceAttachment("vpcAttach2", new AliCloud.Cen.InstanceAttachmentArgs
         {
-            ChildInstanceId = vpc2.Id,
-            ChildInstanceRegionId = "cn-shanghai",
             InstanceId = cen.Id,
+            ChildInstanceId = vpc2.Id,
+            ChildInstanceType = "VPC",
+            ChildInstanceRegionId = "cn-shanghai",
         });
         var foo = new AliCloud.Cen.BandwidthLimit("foo", new AliCloud.Cen.BandwidthLimitArgs
         {
-            BandwidthLimit = 4,
             InstanceId = cen.Id,
             RegionIds = 
             {
                 "eu-central-1",
                 "cn-shanghai",
+            },
+            BandwidthLimit = 4,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                bwpAttach,
+                vpcAttach1,
+                vpcAttach2,
             },
         });
     }
@@ -96,7 +112,109 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/providers"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "tf-testAccCenBandwidthLimitConfig"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		_, err := providers.Newalicloud(ctx, "fra", &providers.alicloudArgs{
+			Region: pulumi.String("eu-central-1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = providers.Newalicloud(ctx, "sh", &providers.alicloudArgs{
+			Region: pulumi.String("cn-shanghai"),
+		})
+		if err != nil {
+			return err
+		}
+		vpc1, err := vpc.NewNetwork(ctx, "vpc1", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("192.168.0.0/16"),
+		}, pulumi.Provider(alicloud.Fra))
+		if err != nil {
+			return err
+		}
+		vpc2, err := vpc.NewNetwork(ctx, "vpc2", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		}, pulumi.Provider(alicloud.Sh))
+		if err != nil {
+			return err
+		}
+		cen, err := cen.NewInstance(ctx, "cen", &cen.InstanceArgs{
+			Description: pulumi.String("tf-testAccCenBandwidthLimitConfigDescription"),
+		})
+		if err != nil {
+			return err
+		}
+		bwp, err := cen.NewBandwidthPackage(ctx, "bwp", &cen.BandwidthPackageArgs{
+			Bandwidth: pulumi.Int(5),
+			GeographicRegionIds: pulumi.StringArray{
+				pulumi.String("Europe"),
+				pulumi.String("China"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		bwpAttach, err := cen.NewBandwidthPackageAttachment(ctx, "bwpAttach", &cen.BandwidthPackageAttachmentArgs{
+			InstanceId:         cen.ID(),
+			BandwidthPackageId: bwp.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		vpcAttach1, err := cen.NewInstanceAttachment(ctx, "vpcAttach1", &cen.InstanceAttachmentArgs{
+			InstanceId:            cen.ID(),
+			ChildInstanceId:       vpc1.ID(),
+			ChildInstanceType:     pulumi.String("VPC"),
+			ChildInstanceRegionId: pulumi.String("eu-central-1"),
+		})
+		if err != nil {
+			return err
+		}
+		vpcAttach2, err := cen.NewInstanceAttachment(ctx, "vpcAttach2", &cen.InstanceAttachmentArgs{
+			InstanceId:            cen.ID(),
+			ChildInstanceId:       vpc2.ID(),
+			ChildInstanceType:     pulumi.String("VPC"),
+			ChildInstanceRegionId: pulumi.String("cn-shanghai"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewBandwidthLimit(ctx, "foo", &cen.BandwidthLimitArgs{
+			InstanceId: cen.ID(),
+			RegionIds: pulumi.StringArray{
+				pulumi.String("eu-central-1"),
+				pulumi.String("cn-shanghai"),
+			},
+			BandwidthLimit: pulumi.Int(4),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			bwpAttach,
+			vpcAttach1,
+			vpcAttach2,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -111,8 +229,10 @@ if name is None:
     name = "tf-testAccCenBandwidthLimitConfig"
 fra = pulumi.providers.Alicloud("fra", region="eu-central-1")
 sh = pulumi.providers.Alicloud("sh", region="cn-shanghai")
-vpc1 = alicloud.vpc.Network("vpc1", cidr_block="192.168.0.0/16")
-vpc2 = alicloud.vpc.Network("vpc2", cidr_block="172.16.0.0/12")
+vpc1 = alicloud.vpc.Network("vpc1", cidr_block="192.168.0.0/16",
+opts=pulumi.ResourceOptions(provider=alicloud["fra"]))
+vpc2 = alicloud.vpc.Network("vpc2", cidr_block="172.16.0.0/12",
+opts=pulumi.ResourceOptions(provider=alicloud["sh"]))
 cen = alicloud.cen.Instance("cen", description="tf-testAccCenBandwidthLimitConfigDescription")
 bwp = alicloud.cen.BandwidthPackage("bwp",
     bandwidth=5,
@@ -121,23 +241,30 @@ bwp = alicloud.cen.BandwidthPackage("bwp",
         "China",
     ])
 bwp_attach = alicloud.cen.BandwidthPackageAttachment("bwpAttach",
-    bandwidth_package_id=bwp.id,
-    instance_id=cen.id)
+    instance_id=cen.id,
+    bandwidth_package_id=bwp.id)
 vpc_attach1 = alicloud.cen.InstanceAttachment("vpcAttach1",
+    instance_id=cen.id,
     child_instance_id=vpc1.id,
-    child_instance_region_id="eu-central-1",
-    instance_id=cen.id)
+    child_instance_type="VPC",
+    child_instance_region_id="eu-central-1")
 vpc_attach2 = alicloud.cen.InstanceAttachment("vpcAttach2",
+    instance_id=cen.id,
     child_instance_id=vpc2.id,
-    child_instance_region_id="cn-shanghai",
-    instance_id=cen.id)
+    child_instance_type="VPC",
+    child_instance_region_id="cn-shanghai")
 foo = alicloud.cen.BandwidthLimit("foo",
-    bandwidth_limit=4,
     instance_id=cen.id,
     region_ids=[
         "eu-central-1",
         "cn-shanghai",
-    ])
+    ],
+    bandwidth_limit=4,
+    opts=pulumi.ResourceOptions(depends_on=[
+            bwp_attach,
+            vpc_attach1,
+            vpc_attach2,
+        ]))
 ```
 
 {{% /example %}}
@@ -150,22 +277,15 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccCenBandwidthLimitConfig";
-
-const fra = new alicloud.Provider("fra", {
-    region: "eu-central-1",
+const fra = new alicloud.Provider("fra", {region: "eu-central-1"});
+const sh = new alicloud.Provider("sh", {region: "cn-shanghai"});
+const vpc1 = new alicloud.vpc.Network("vpc1", {cidrBlock: "192.168.0.0/16"}, {
+    provider: alicloud.fra,
 });
-const sh = new alicloud.Provider("sh", {
-    region: "cn-shanghai",
+const vpc2 = new alicloud.vpc.Network("vpc2", {cidrBlock: "172.16.0.0/12"}, {
+    provider: alicloud.sh,
 });
-const vpc1 = new alicloud.vpc.Network("vpc1", {
-    cidrBlock: "192.168.0.0/16",
-}, { provider: fra });
-const vpc2 = new alicloud.vpc.Network("vpc2", {
-    cidrBlock: "172.16.0.0/12",
-}, { provider: sh });
-const cen = new alicloud.cen.Instance("cen", {
-    description: "tf-testAccCenBandwidthLimitConfigDescription",
-});
+const cen = new alicloud.cen.Instance("cen", {description: "tf-testAccCenBandwidthLimitConfigDescription"});
 const bwp = new alicloud.cen.BandwidthPackage("bwp", {
     bandwidth: 5,
     geographicRegionIds: [
@@ -173,28 +293,36 @@ const bwp = new alicloud.cen.BandwidthPackage("bwp", {
         "China",
     ],
 });
-const bwpAttach = new alicloud.cen.BandwidthPackageAttachment("bwp_attach", {
+const bwpAttach = new alicloud.cen.BandwidthPackageAttachment("bwpAttach", {
+    instanceId: cen.id,
     bandwidthPackageId: bwp.id,
-    instanceId: cen.id,
 });
-const vpcAttach1 = new alicloud.cen.InstanceAttachment("vpc_attach_1", {
+const vpcAttach1 = new alicloud.cen.InstanceAttachment("vpcAttach1", {
+    instanceId: cen.id,
     childInstanceId: vpc1.id,
+    childInstanceType: "VPC",
     childInstanceRegionId: "eu-central-1",
-    instanceId: cen.id,
 });
-const vpcAttach2 = new alicloud.cen.InstanceAttachment("vpc_attach_2", {
-    childInstanceId: vpc2.id,
-    childInstanceRegionId: "cn-shanghai",
+const vpcAttach2 = new alicloud.cen.InstanceAttachment("vpcAttach2", {
     instanceId: cen.id,
+    childInstanceId: vpc2.id,
+    childInstanceType: "VPC",
+    childInstanceRegionId: "cn-shanghai",
 });
 const foo = new alicloud.cen.BandwidthLimit("foo", {
-    bandwidthLimit: 4,
     instanceId: cen.id,
     regionIds: [
         "eu-central-1",
         "cn-shanghai",
     ],
-}, { dependsOn: [bwpAttach, vpcAttach1, vpcAttach2] });
+    bandwidthLimit: 4,
+}, {
+    dependsOn: [
+        bwpAttach,
+        vpcAttach1,
+        vpcAttach2,
+    ],
+});
 ```
 
 {{% /example %}}
@@ -207,19 +335,19 @@ const foo = new alicloud.cen.BandwidthLimit("foo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthLimit">BandwidthLimit</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthLimitArgs">BandwidthLimitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthLimit">BandwidthLimit</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthLimitArgs">BandwidthLimitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.BandwidthLimit">BandwidthLimit</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>bandwidth_limit=None<span class="p">, </span>instance_id=None<span class="p">, </span>region_ids=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.BandwidthLimit">BandwidthLimit</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthLimit">NewBandwidthLimit</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthLimitArgs">BandwidthLimitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthLimit">BandwidthLimit</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthLimit">NewBandwidthLimit</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthLimitArgs">BandwidthLimitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthLimit">BandwidthLimit</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthLimit.html">BandwidthLimit</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthLimitArgs.html">BandwidthLimitArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthLimit.html">BandwidthLimit</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthLimitArgs.html">BandwidthLimitArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -230,7 +358,7 @@ const foo = new alicloud.cen.BandwidthLimit("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -299,7 +427,7 @@ const foo = new alicloud.cen.BandwidthLimit("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -338,7 +466,7 @@ const foo = new alicloud.cen.BandwidthLimit("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -379,7 +507,6 @@ The BandwidthLimit resource accepts the following [input]({{< relref "/docs/intr
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -387,38 +514,34 @@ The BandwidthLimit resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="limit_csharp">
 <a href="#limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth configured for the interconnected regions communication.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="regionids_csharp">
 <a href="#regionids_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of the two regions to interconnect. Must be two different regions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -427,38 +550,34 @@ The BandwidthLimit resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="bandwidthlimit_go">
 <a href="#bandwidthlimit_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth configured for the interconnected regions communication.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="regionids_go">
 <a href="#regionids_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of the two regions to interconnect. Must be two different regions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -467,38 +586,34 @@ The BandwidthLimit resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="bandwidthlimit_nodejs">
 <a href="#bandwidthlimit_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth configured for the interconnected regions communication.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="regionids_nodejs">
 <a href="#regionids_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the two regions to interconnect. Must be two different regions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -507,47 +622,39 @@ The BandwidthLimit resource accepts the following [input]({{< relref "/docs/intr
             title="Required">
         <span id="bandwidth_limit_python">
 <a href="#bandwidth_limit_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth configured for the interconnected regions communication.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="region_ids_python">
 <a href="#region_ids_python" style="color: inherit; text-decoration: inherit;">region_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the two regions to interconnect. Must be two different regions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the BandwidthLimit resource produces the following output properties:
-
 
 
 
@@ -558,15 +665,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -575,15 +680,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -592,15 +695,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -609,18 +710,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -630,19 +726,20 @@ Get an existing BandwidthLimit resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthLimitState">BandwidthLimitState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthLimit">BandwidthLimit</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthLimitState">BandwidthLimitState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthLimit">BandwidthLimit</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>bandwidth_limit=None<span class="p">, </span>instance_id=None<span class="p">, </span>region_ids=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> BandwidthLimit</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBandwidthLimit<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthLimitState">BandwidthLimitState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthLimit">BandwidthLimit</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBandwidthLimit<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthLimitState">BandwidthLimitState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#BandwidthLimit">BandwidthLimit</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthLimit.html">BandwidthLimit</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthLimitState.html">BandwidthLimitState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthLimit.html">BandwidthLimit</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.BandwidthLimitState.html">BandwidthLimitState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -744,7 +841,6 @@ Get an existing BandwidthLimit resource's state with the given name, ID, and opt
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -752,38 +848,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_instanceid_csharp">
 <a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_limit_csharp">
 <a href="#state_limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth configured for the interconnected regions communication.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regionids_csharp">
 <a href="#state_regionids_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of the two regions to interconnect. Must be two different regions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -792,38 +884,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bandwidthlimit_go">
 <a href="#state_bandwidthlimit_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth configured for the interconnected regions communication.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
 <a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regionids_go">
 <a href="#state_regionids_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of the two regions to interconnect. Must be two different regions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -832,38 +920,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bandwidthlimit_nodejs">
 <a href="#state_bandwidthlimit_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth configured for the interconnected regions communication.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regionids_nodejs">
 <a href="#state_regionids_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the two regions to interconnect. Must be two different regions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -872,35 +956,32 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bandwidth_limit_python">
 <a href="#state_bandwidth_limit_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth configured for the interconnected regions communication.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_ids_python">
 <a href="#state_region_ids_python" style="color: inherit; text-decoration: inherit;">region_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the two regions to interconnect. Must be two different regions.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -908,8 +989,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+CEN bandwidth limit can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cen/bandwidthLimit:BandwidthLimit example cen-abc123456:cn-beijing:eu-west-1
+```
 
 
 
@@ -921,6 +1008,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

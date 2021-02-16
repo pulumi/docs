@@ -1,8 +1,8 @@
 
 ---
 title: "OriginAccessIdentity"
-title_tag: "Resource OriginAccessIdentity | Module cloudfront | Package AWS"
-meta_desc: "Explore the OriginAccessIdentity resource of the cloudfront module, including examples, input properties, output properties, lookup functions, and supporting types. Creates an Amazon CloudFront origin access identity."
+title_tag: "aws.cloudfront.OriginAccessIdentity"
+meta_desc: "Documentation for the aws.cloudfront.OriginAccessIdentity resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -26,17 +26,48 @@ The below snippet demonstrates use with the `s3_origin_config` structure for the
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+// ... other configuration ...
+const example = new aws.cloudfront.Distribution("example", {origins: [{
+    s3OriginConfig: {
+        originAccessIdentity: aws_cloudfront_origin_access_identity.example.cloudfront_access_identity_path,
+    },
+}]});
 ```
 ```python
 import pulumi
+import pulumi_aws as aws
+
+# ... other configuration ...
+example = aws.cloudfront.Distribution("example", origins=[aws.cloudfront.DistributionOriginArgs(
+    s3_origin_config=aws.cloudfront.DistributionOriginS3OriginConfigArgs(
+        origin_access_identity=aws_cloudfront_origin_access_identity["example"]["cloudfront_access_identity_path"],
+    ),
+)])
 ```
 ```csharp
 using Pulumi;
+using Aws = Pulumi.Aws;
 
 class MyStack : Stack
 {
     public MyStack()
     {
+        // ... other configuration ...
+        var example = new Aws.CloudFront.Distribution("example", new Aws.CloudFront.DistributionArgs
+        {
+            Origins = 
+            {
+                new Aws.CloudFront.Inputs.DistributionOriginArgs
+                {
+                    S3OriginConfig = new Aws.CloudFront.Inputs.DistributionOriginS3OriginConfigArgs
+                    {
+                        OriginAccessIdentity = aws_cloudfront_origin_access_identity.Example.Cloudfront_access_identity_path,
+                    },
+                },
+            },
+        });
     }
 
 }
@@ -45,15 +76,121 @@ class MyStack : Stack
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudfront.NewDistribution(ctx, "example", &cloudfront.DistributionArgs{
+			Origins: cloudfront.DistributionOriginArray{
+				&cloudfront.DistributionOriginArgs{
+					S3OriginConfig: &cloudfront.DistributionOriginS3OriginConfigArgs{
+						OriginAccessIdentity: pulumi.Any(aws_cloudfront_origin_access_identity.Example.Cloudfront_access_identity_path),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
 		return nil
 	})
 }
 ```
+
+### Updating your bucket policy
+
+Note that the AWS API may translate the `s3_canonical_user_id` `CanonicalUser`
+principal into an `AWS` IAM ARN principal when supplied in an
+[`aws.s3.Bucket`][4] bucket policy, causing spurious diffs. If
+you see this behaviour, use the `iam_arn` instead:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const s3Policy = aws.iam.getPolicyDocument({
+    statements: [{
+        actions: ["s3:GetObject"],
+        resources: [`${aws_s3_bucket.example.arn}/*`],
+        principals: [{
+            type: "AWS",
+            identifiers: [aws_cloudfront_origin_access_identity.origin_access_identity.iam_arn],
+        }],
+    }],
+});
+const example = new aws.s3.BucketPolicy("example", {
+    bucket: aws_s3_bucket.example.id,
+    policy: s3Policy.then(s3Policy => s3Policy.json),
+});
+```
+```python
+import pulumi
+import pulumi_aws as aws
+
+s3_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    actions=["s3:GetObject"],
+    resources=[f"{aws_s3_bucket['example']['arn']}/*"],
+    principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+        type="AWS",
+        identifiers=[aws_cloudfront_origin_access_identity["origin_access_identity"]["iam_arn"]],
+    )],
+)])
+example = aws.s3.BucketPolicy("example",
+    bucket=aws_s3_bucket["example"]["id"],
+    policy=s3_policy.json)
+```
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var s3Policy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "s3:GetObject",
+                    },
+                    Resources = 
+                    {
+                        $"{aws_s3_bucket.Example.Arn}/*",
+                    },
+                    Principals = 
+                    {
+                        new Aws.Iam.Inputs.GetPolicyDocumentStatementPrincipalArgs
+                        {
+                            Type = "AWS",
+                            Identifiers = 
+                            {
+                                aws_cloudfront_origin_access_identity.Origin_access_identity.Iam_arn,
+                            },
+                        },
+                    },
+                },
+            },
+        }));
+        var example = new Aws.S3.BucketPolicy("example", new Aws.S3.BucketPolicyArgs
+        {
+            Bucket = aws_s3_bucket.Example.Id,
+            Policy = s3Policy.Apply(s3Policy => s3Policy.Json),
+        });
+    }
+
+}
+```
+
+[1]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html
+[2]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html
+[3]: https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html
+[4]: https://www.terraform.io/docs/providers/aws/r/s3_bucket.html
 
 {{% examples %}}
 ## Example Usage
@@ -135,19 +272,19 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#OriginAccessIdentity">OriginAccessIdentity</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#OriginAccessIdentityArgs">OriginAccessIdentityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OriginAccessIdentity</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">OriginAccessIdentityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudfront/#pulumi_aws.cloudfront.OriginAccessIdentity">OriginAccessIdentity</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>comment=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OriginAccessIdentity</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#OriginAccessIdentity">NewOriginAccessIdentity</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#OriginAccessIdentityArgs">OriginAccessIdentityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#OriginAccessIdentity">OriginAccessIdentity</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOriginAccessIdentity</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">OriginAccessIdentityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OriginAccessIdentity</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.OriginAccessIdentity.html">OriginAccessIdentity</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.OriginAccessIdentityArgs.html">OriginAccessIdentityArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OriginAccessIdentity</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OriginAccessIdentityArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -158,7 +295,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -168,7 +305,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#OriginAccessIdentityArgs">OriginAccessIdentityArgs</a></span>
+        <span class="property-type"><a href="#inputs">OriginAccessIdentityArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -227,7 +364,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -237,7 +374,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#OriginAccessIdentityArgs">OriginAccessIdentityArgs</a></span>
+        <span class="property-type"><a href="#inputs">OriginAccessIdentityArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -266,7 +403,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -276,7 +413,7 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.OriginAccessIdentityArgs.html">OriginAccessIdentityArgs</a></span>
+        <span class="property-type"><a href="#inputs">OriginAccessIdentityArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -299,12 +436,11 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
 
 ## OriginAccessIdentity Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The OriginAccessIdentity resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The OriginAccessIdentity resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -315,16 +451,14 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
             title="Optional">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -333,16 +467,14 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
             title="Optional">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -351,16 +483,14 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
             title="Optional">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -369,25 +499,19 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
             title="Optional">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the OriginAccessIdentity resource produces the following output properties:
-
 
 
 
@@ -398,77 +522,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="callerreference_csharp">
 <a href="#callerreference_csharp" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cloudfrontaccessidentitypath_csharp">
 <a href="#cloudfrontaccessidentitypath_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="iamarn_csharp">
 <a href="#iamarn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3canonicaluserid_csharp">
 <a href="#s3canonicaluserid_csharp" style="color: inherit; text-decoration: inherit;">S3Canonical<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -477,77 +594,70 @@ permission to an object in Amazon S3.
             title="">
         <span id="callerreference_go">
 <a href="#callerreference_go" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cloudfrontaccessidentitypath_go">
 <a href="#cloudfrontaccessidentitypath_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="iamarn_go">
 <a href="#iamarn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3canonicaluserid_go">
 <a href="#s3canonicaluserid_go" style="color: inherit; text-decoration: inherit;">S3Canonical<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -556,77 +666,70 @@ permission to an object in Amazon S3.
             title="">
         <span id="callerreference_nodejs">
 <a href="#callerreference_nodejs" style="color: inherit; text-decoration: inherit;">caller<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cloudfrontaccessidentitypath_nodejs">
 <a href="#cloudfrontaccessidentitypath_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="iamarn_nodejs">
 <a href="#iamarn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3canonicaluserid_nodejs">
 <a href="#s3canonicaluserid_nodejs" style="color: inherit; text-decoration: inherit;">s3Canonical<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -635,80 +738,70 @@ permission to an object in Amazon S3.
             title="">
         <span id="caller_reference_python">
 <a href="#caller_reference_python" style="color: inherit; text-decoration: inherit;">caller_<wbr>reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cloudfront_access_identity_path_python">
 <a href="#cloudfront_access_identity_path_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>access_<wbr>identity_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="iam_arn_python">
 <a href="#iam_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="s3_canonical_user_id_python">
 <a href="#s3_canonical_user_id_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>canonical_<wbr>user_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -718,19 +811,20 @@ Get an existing OriginAccessIdentity resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#OriginAccessIdentityState">OriginAccessIdentityState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#OriginAccessIdentity">OriginAccessIdentity</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">OriginAccessIdentityState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OriginAccessIdentity</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>caller_reference=None<span class="p">, </span>cloudfront_access_identity_path=None<span class="p">, </span>comment=None<span class="p">, </span>etag=None<span class="p">, </span>iam_arn=None<span class="p">, </span>s3_canonical_user_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">caller_reference</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudfront_access_identity_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">comment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_canonical_user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> OriginAccessIdentity</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOriginAccessIdentity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#OriginAccessIdentityState">OriginAccessIdentityState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#OriginAccessIdentity">OriginAccessIdentity</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOriginAccessIdentity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">OriginAccessIdentityState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OriginAccessIdentity</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.OriginAccessIdentity.html">OriginAccessIdentity</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.OriginAccessIdentityState.html">OriginAccessIdentityState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OriginAccessIdentity</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">OriginAccessIdentityState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -832,7 +926,6 @@ Get an existing OriginAccessIdentity resource's state with the given name, ID, a
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -840,78 +933,71 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_callerreference_csharp">
 <a href="#state_callerreference_csharp" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontaccessidentitypath_csharp">
 <a href="#state_cloudfrontaccessidentitypath_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_comment_csharp">
 <a href="#state_comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamarn_csharp">
 <a href="#state_iamarn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_s3canonicaluserid_csharp">
 <a href="#state_s3canonicaluserid_csharp" style="color: inherit; text-decoration: inherit;">S3Canonical<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -920,78 +1006,71 @@ permission to an object in Amazon S3.
             title="Optional">
         <span id="state_callerreference_go">
 <a href="#state_callerreference_go" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontaccessidentitypath_go">
 <a href="#state_cloudfrontaccessidentitypath_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_comment_go">
 <a href="#state_comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamarn_go">
 <a href="#state_iamarn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_s3canonicaluserid_go">
 <a href="#state_s3canonicaluserid_go" style="color: inherit; text-decoration: inherit;">S3Canonical<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1000,78 +1079,71 @@ permission to an object in Amazon S3.
             title="Optional">
         <span id="state_callerreference_nodejs">
 <a href="#state_callerreference_nodejs" style="color: inherit; text-decoration: inherit;">caller<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontaccessidentitypath_nodejs">
 <a href="#state_cloudfrontaccessidentitypath_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Access<wbr>Identity<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_comment_nodejs">
 <a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamarn_nodejs">
 <a href="#state_iamarn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_s3canonicaluserid_nodejs">
 <a href="#state_s3canonicaluserid_nodejs" style="color: inherit; text-decoration: inherit;">s3Canonical<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1080,75 +1152,69 @@ permission to an object in Amazon S3.
             title="Optional">
         <span id="state_caller_reference_python">
 <a href="#state_caller_reference_python" style="color: inherit; text-decoration: inherit;">caller_<wbr>reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the origin access identity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudfront_access_identity_path_python">
 <a href="#state_cloudfront_access_identity_path_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>access_<wbr>identity_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A shortcut to the full path for the
 origin access identity to use in CloudFront, see below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_comment_python">
 <a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional comment for the origin access identity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the origin access identity's information.
 For example: `E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iam_arn_python">
 <a href="#state_iam_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A pre-generated ARN for use in S3 bucket policies (see below).
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_s3_canonical_user_id_python">
 <a href="#state_s3_canonical_user_id_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>canonical_<wbr>user_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 canonical user ID for the origin
 access identity, which you use when giving the origin access identity read
 permission to an object in Amazon S3.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1156,8 +1222,14 @@ permission to an object in Amazon S3.
 
 
 
+## Import
 
 
+Cloudfront Origin Access Identities can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import aws:cloudfront/originAccessIdentity:OriginAccessIdentity origin_access E74FTE3AEXAMPLE
+```
 
 
 

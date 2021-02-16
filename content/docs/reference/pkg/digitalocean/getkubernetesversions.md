@@ -12,6 +12,7 @@ meta_desc: "Explore the GetKubernetesVersions function of the DigitalOcean packa
 
 Provides access to the available DigitalOcean Kubernetes Service versions.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -38,7 +39,27 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := digitalocean.GetKubernetesVersions(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("k8s-versions", example.ValidVersions)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -64,6 +85,218 @@ export const k8s_versions = example.then(example => example.validVersions);
 
 {{% /example %}}
 
+### Create a Kubernetes cluster using the most recent version available
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(DigitalOcean.GetKubernetesVersions.InvokeAsync());
+        var example_cluster = new DigitalOcean.KubernetesCluster("example-cluster", new DigitalOcean.KubernetesClusterArgs
+        {
+            Region = "lon1",
+            Version = example.Apply(example => example.LatestVersion),
+            NodePool = new DigitalOcean.Inputs.KubernetesClusterNodePoolArgs
+            {
+                Name = "default",
+                Size = "s-1vcpu-2gb",
+                NodeCount = 3,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := digitalocean.GetKubernetesVersions(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = digitalocean.NewKubernetesCluster(ctx, "example_cluster", &digitalocean.KubernetesClusterArgs{
+			Region:  pulumi.String("lon1"),
+			Version: pulumi.String(example.LatestVersion),
+			NodePool: &digitalocean.KubernetesClusterNodePoolArgs{
+				Name:      pulumi.String("default"),
+				Size:      pulumi.String("s-1vcpu-2gb"),
+				NodeCount: pulumi.Int(3),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+example = digitalocean.get_kubernetes_versions()
+example_cluster = digitalocean.KubernetesCluster("example-cluster",
+    region="lon1",
+    version=example.latest_version,
+    node_pool=digitalocean.KubernetesClusterNodePoolArgs(
+        name="default",
+        size="s-1vcpu-2gb",
+        node_count=3,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const example = digitalocean.getKubernetesVersions({});
+const example_cluster = new digitalocean.KubernetesCluster("example-cluster", {
+    region: "lon1",
+    version: example.then(example => example.latestVersion),
+    nodePool: {
+        name: "default",
+        size: "s-1vcpu-2gb",
+        nodeCount: 3,
+    },
+});
+```
+
+{{% /example %}}
+
+### Pin a Kubernetes cluster to a specific minor version
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using DigitalOcean = Pulumi.DigitalOcean;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = Output.Create(DigitalOcean.GetKubernetesVersions.InvokeAsync(new DigitalOcean.GetKubernetesVersionsArgs
+        {
+            VersionPrefix = "1.16.",
+        }));
+        var example_cluster = new DigitalOcean.KubernetesCluster("example-cluster", new DigitalOcean.KubernetesClusterArgs
+        {
+            Region = "lon1",
+            Version = example.Apply(example => example.LatestVersion),
+            NodePool = new DigitalOcean.Inputs.KubernetesClusterNodePoolArgs
+            {
+                Name = "default",
+                Size = "s-1vcpu-2gb",
+                NodeCount = 3,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean"
+	"github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "1.16."
+		example, err := digitalocean.GetKubernetesVersions(ctx, &digitalocean.GetKubernetesVersionsArgs{
+			VersionPrefix: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = digitalocean.NewKubernetesCluster(ctx, "example_cluster", &digitalocean.KubernetesClusterArgs{
+			Region:  pulumi.String("lon1"),
+			Version: pulumi.String(example.LatestVersion),
+			NodePool: &digitalocean.KubernetesClusterNodePoolArgs{
+				Name:      pulumi.String("default"),
+				Size:      pulumi.String("s-1vcpu-2gb"),
+				NodeCount: pulumi.Int(3),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_digitalocean as digitalocean
+
+example = digitalocean.get_kubernetes_versions(version_prefix="1.16.")
+example_cluster = digitalocean.KubernetesCluster("example-cluster",
+    region="lon1",
+    version=example.latest_version,
+    node_pool=digitalocean.KubernetesClusterNodePoolArgs(
+        name="default",
+        size="s-1vcpu-2gb",
+        node_count=3,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const example = digitalocean.getKubernetesVersions({
+    versionPrefix: "1.16.",
+});
+const example_cluster = new digitalocean.KubernetesCluster("example-cluster", {
+    region: "lon1",
+    version: example.then(example => example.latestVersion),
+    nodePool: {
+        name: "default",
+        size: "s-1vcpu-2gb",
+        nodeCount: 3,
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -78,12 +311,12 @@ export const k8s_versions = example.then(example => example.validVersions);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_kubernetes_versions(</span>version_prefix=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_kubernetes_versions(</span><span class="nx">version_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetKubernetesVersionsResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesVersions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetKubernetesVersionsArgs">GetKubernetesVersionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetKubernetesVersionsResult">GetKubernetesVersionsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesVersions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetKubernetesVersionsArgs">GetKubernetesVersionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetKubernetesVersionsResult">GetKubernetesVersionsResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -99,7 +332,6 @@ export const k8s_versions = example.then(example => example.validVersions);
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -107,16 +339,14 @@ The following arguments are supported:
             title="Optional">
         <span id="versionprefix_csharp">
 <a href="#versionprefix_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If provided, this provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
+    <dd>{{% md %}}If provided, the provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -125,16 +355,14 @@ The following arguments are supported:
             title="Optional">
         <span id="versionprefix_go">
 <a href="#versionprefix_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If provided, this provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
+    <dd>{{% md %}}If provided, the provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -143,16 +371,14 @@ The following arguments are supported:
             title="Optional">
         <span id="versionprefix_nodejs">
 <a href="#versionprefix_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If provided, this provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
+    <dd>{{% md %}}If provided, the provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -161,19 +387,14 @@ The following arguments are supported:
             title="Optional">
         <span id="version_prefix_python">
 <a href="#version_prefix_python" style="color: inherit; text-decoration: inherit;">version_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If provided, this provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
+    <dd>{{% md %}}If provided, the provider will only return versions that match the string prefix. For example, `1.15.` will match all 1.15.x series releases.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -184,7 +405,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -192,48 +412,43 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="latestversion_csharp">
 <a href="#latestversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The most recent version available.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="validversions_csharp">
 <a href="#validversions_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of available versions.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="versionprefix_csharp">
 <a href="#versionprefix_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -242,48 +457,43 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="latestversion_go">
 <a href="#latestversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The most recent version available.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="validversions_go">
 <a href="#validversions_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of available versions.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="versionprefix_go">
 <a href="#versionprefix_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -292,48 +502,43 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="latestversion_nodejs">
 <a href="#latestversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The most recent version available.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="validversions_nodejs">
 <a href="#validversions_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of available versions.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="versionprefix_nodejs">
 <a href="#versionprefix_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -342,51 +547,43 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="latest_version_python">
 <a href="#latest_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The most recent version available.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="valid_versions_python">
 <a href="#valid_versions_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>versions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of available versions.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_prefix_python">
 <a href="#version_prefix_python" style="color: inherit; text-decoration: inherit;">version_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -399,6 +596,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
+	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 </dl>
 

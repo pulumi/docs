@@ -1,8 +1,8 @@
 
 ---
 title: "RouterInterfaceConnection"
-title_tag: "Resource RouterInterfaceConnection | Module vpc | Package AliCloud"
-meta_desc: "Explore the RouterInterfaceConnection resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a VPC router interface connection resource to connect two router interfaces which are in two different VPCs."
+title_tag: "alicloud.vpc.RouterInterfaceConnection"
+meta_desc: "Documentation for the alicloud.vpc.RouterInterfaceConnection resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -45,37 +45,53 @@ class MyStack : Stack
         var barNetwork = new AliCloud.Vpc.Network("barNetwork", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "192.168.0.0/16",
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud,
         });
         var initiate = new AliCloud.Vpc.RouterInterface("initiate", new AliCloud.Vpc.RouterInterfaceArgs
         {
+            OppositeRegion = region,
+            RouterType = "VRouter",
+            RouterId = fooNetwork.RouterId,
+            Role = "InitiatingSide",
+            Specification = "Large.2",
             Description = name,
             InstanceChargeType = "PostPaid",
-            OppositeRegion = region,
-            Role = "InitiatingSide",
-            RouterId = fooNetwork.RouterId,
-            RouterType = "VRouter",
-            Specification = "Large.2",
         });
         var opposite = new AliCloud.Vpc.RouterInterface("opposite", new AliCloud.Vpc.RouterInterfaceArgs
         {
-            Description = $"{name}-opposite",
             OppositeRegion = region,
-            Role = "AcceptingSide",
-            RouterId = barNetwork.RouterId,
             RouterType = "VRouter",
+            RouterId = barNetwork.RouterId,
+            Role = "AcceptingSide",
             Specification = "Large.1",
+            Description = $"{name}-opposite",
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud,
+        });
+        var barRouterInterfaceConnection = new AliCloud.Vpc.RouterInterfaceConnection("barRouterInterfaceConnection", new AliCloud.Vpc.RouterInterfaceConnectionArgs
+        {
+            InterfaceId = opposite.Id,
+            OppositeInterfaceId = initiate.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud,
         });
         // A integrated router interface connection tunnel requires both InitiatingSide and AcceptingSide configuring opposite router interface.
         var fooRouterInterfaceConnection = new AliCloud.Vpc.RouterInterfaceConnection("fooRouterInterfaceConnection", new AliCloud.Vpc.RouterInterfaceConnectionArgs
         {
             InterfaceId = initiate.Id,
             OppositeInterfaceId = opposite.Id,
-        });
-        var barRouterInterfaceConnection = new AliCloud.Vpc.RouterInterfaceConnection("barRouterInterfaceConnection", new AliCloud.Vpc.RouterInterfaceConnectionArgs
+        }, new CustomResourceOptions
         {
-            InterfaceId = opposite.Id,
-            OppositeInterfaceId = initiate.Id,
+            DependsOn = 
+            {
+                barRouterInterfaceConnection,
+            },
         });
+        // The connection must start from the accepting side.
     }
 
 }
@@ -84,7 +100,84 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		region := "cn-hangzhou"
+		if param := cfg.Get("region"); param != "" {
+			region = param
+		}
+		name := "alicloudRouterInterfaceConnectionBasic"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		fooNetwork, err := vpc.NewNetwork(ctx, "fooNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		})
+		if err != nil {
+			return err
+		}
+		barNetwork, err := vpc.NewNetwork(ctx, "barNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("192.168.0.0/16"),
+		}, pulumi.Provider(alicloud))
+		if err != nil {
+			return err
+		}
+		initiate, err := vpc.NewRouterInterface(ctx, "initiate", &vpc.RouterInterfaceArgs{
+			OppositeRegion:     pulumi.String(region),
+			RouterType:         pulumi.String("VRouter"),
+			RouterId:           fooNetwork.RouterId,
+			Role:               pulumi.String("InitiatingSide"),
+			Specification:      pulumi.String("Large.2"),
+			Description:        pulumi.String(name),
+			InstanceChargeType: pulumi.String("PostPaid"),
+		})
+		if err != nil {
+			return err
+		}
+		opposite, err := vpc.NewRouterInterface(ctx, "opposite", &vpc.RouterInterfaceArgs{
+			OppositeRegion: pulumi.String(region),
+			RouterType:     pulumi.String("VRouter"),
+			RouterId:       barNetwork.RouterId,
+			Role:           pulumi.String("AcceptingSide"),
+			Specification:  pulumi.String("Large.1"),
+			Description:    pulumi.String(fmt.Sprintf("%v%v", name, "-opposite")),
+		}, pulumi.Provider(alicloud))
+		if err != nil {
+			return err
+		}
+		barRouterInterfaceConnection, err := vpc.NewRouterInterfaceConnection(ctx, "barRouterInterfaceConnection", &vpc.RouterInterfaceConnectionArgs{
+			InterfaceId:         opposite.ID(),
+			OppositeInterfaceId: initiate.ID(),
+		}, pulumi.Provider(alicloud))
+		if err != nil {
+			return err
+		}
+		_, err = vpc.NewRouterInterfaceConnection(ctx, "fooRouterInterfaceConnection", &vpc.RouterInterfaceConnectionArgs{
+			InterfaceId:         initiate.ID(),
+			OppositeInterfaceId: opposite.ID(),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			barRouterInterfaceConnection,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -100,29 +193,34 @@ name = config.get("name")
 if name is None:
     name = "alicloudRouterInterfaceConnectionBasic"
 foo_network = alicloud.vpc.Network("fooNetwork", cidr_block="172.16.0.0/12")
-bar_network = alicloud.vpc.Network("barNetwork", cidr_block="192.168.0.0/16")
+bar_network = alicloud.vpc.Network("barNetwork", cidr_block="192.168.0.0/16",
+opts=pulumi.ResourceOptions(provider=alicloud))
 initiate = alicloud.vpc.RouterInterface("initiate",
-    description=name,
-    instance_charge_type="PostPaid",
     opposite_region=region,
-    role="InitiatingSide",
+    router_type="VRouter",
     router_id=foo_network.router_id,
-    router_type="VRouter",
-    specification="Large.2")
+    role="InitiatingSide",
+    specification="Large.2",
+    description=name,
+    instance_charge_type="PostPaid")
 opposite = alicloud.vpc.RouterInterface("opposite",
-    description=f"{name}-opposite",
     opposite_region=region,
-    role="AcceptingSide",
-    router_id=bar_network.router_id,
     router_type="VRouter",
-    specification="Large.1")
+    router_id=bar_network.router_id,
+    role="AcceptingSide",
+    specification="Large.1",
+    description=f"{name}-opposite",
+    opts=pulumi.ResourceOptions(provider=alicloud))
+bar_router_interface_connection = alicloud.vpc.RouterInterfaceConnection("barRouterInterfaceConnection",
+    interface_id=opposite.id,
+    opposite_interface_id=initiate.id,
+    opts=pulumi.ResourceOptions(provider=alicloud))
 # A integrated router interface connection tunnel requires both InitiatingSide and AcceptingSide configuring opposite router interface.
 foo_router_interface_connection = alicloud.vpc.RouterInterfaceConnection("fooRouterInterfaceConnection",
     interface_id=initiate.id,
-    opposite_interface_id=opposite.id)
-bar_router_interface_connection = alicloud.vpc.RouterInterfaceConnection("barRouterInterfaceConnection",
-    interface_id=opposite.id,
-    opposite_interface_id=initiate.id)
+    opposite_interface_id=opposite.id,
+    opts=pulumi.ResourceOptions(depends_on=[bar_router_interface_connection]))
+# The connection must start from the accepting side.
 ```
 
 {{% /example %}}
@@ -136,39 +234,43 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const region = config.get("region") || "cn-hangzhou";
 const name = config.get("name") || "alicloudRouterInterfaceConnectionBasic";
-
-const fooNetwork = new alicloud.vpc.Network("foo", {
-    cidrBlock: "172.16.0.0/12",
-});
-const barNetwork = new alicloud.vpc.Network("bar", {
-    cidrBlock: "192.168.0.0/16",
+const fooNetwork = new alicloud.vpc.Network("fooNetwork", {cidrBlock: "172.16.0.0/12"});
+const barNetwork = new alicloud.vpc.Network("barNetwork", {cidrBlock: "192.168.0.0/16"}, {
+    provider: alicloud,
 });
 const initiate = new alicloud.vpc.RouterInterface("initiate", {
+    oppositeRegion: region,
+    routerType: "VRouter",
+    routerId: fooNetwork.routerId,
+    role: "InitiatingSide",
+    specification: "Large.2",
     description: name,
     instanceChargeType: "PostPaid",
-    oppositeRegion: region,
-    role: "InitiatingSide",
-    routerId: fooNetwork.routerId,
-    routerType: "VRouter",
-    specification: "Large.2",
 });
 const opposite = new alicloud.vpc.RouterInterface("opposite", {
-    description: `${name}-opposite`,
     oppositeRegion: region,
-    role: "AcceptingSide",
-    routerId: barNetwork.routerId,
     routerType: "VRouter",
+    routerId: barNetwork.routerId,
+    role: "AcceptingSide",
     specification: "Large.1",
+    description: `${name}-opposite`,
+}, {
+    provider: alicloud,
 });
-const barRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection("bar", {
+const barRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection("barRouterInterfaceConnection", {
     interfaceId: opposite.id,
     oppositeInterfaceId: initiate.id,
+}, {
+    provider: alicloud,
 });
 // A integrated router interface connection tunnel requires both InitiatingSide and AcceptingSide configuring opposite router interface.
-const fooRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection("foo", {
+const fooRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection("fooRouterInterfaceConnection", {
     interfaceId: initiate.id,
     oppositeInterfaceId: opposite.id,
-}, { dependsOn: [barRouterInterfaceConnection] });
+}, {
+    dependsOn: [barRouterInterfaceConnection],
+});
+// The connection must start from the accepting side.
 ```
 
 {{% /example %}}
@@ -181,19 +283,19 @@ const fooRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection(
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#RouterInterfaceConnection">RouterInterfaceConnection</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#RouterInterfaceConnectionArgs">RouterInterfaceConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#RouterInterfaceConnection">RouterInterfaceConnection</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#RouterInterfaceConnectionArgs">RouterInterfaceConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.RouterInterfaceConnection">RouterInterfaceConnection</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>interface_id=None<span class="p">, </span>opposite_interface_id=None<span class="p">, </span>opposite_interface_owner_id=None<span class="p">, </span>opposite_router_id=None<span class="p">, </span>opposite_router_type=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.RouterInterfaceConnection">RouterInterfaceConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_interface_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_router_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_router_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#RouterInterfaceConnection">NewRouterInterfaceConnection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#RouterInterfaceConnectionArgs">RouterInterfaceConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#RouterInterfaceConnection">RouterInterfaceConnection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#RouterInterfaceConnection">NewRouterInterfaceConnection</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#RouterInterfaceConnectionArgs">RouterInterfaceConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#RouterInterfaceConnection">RouterInterfaceConnection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.RouterInterfaceConnection.html">RouterInterfaceConnection</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.RouterInterfaceConnectionArgs.html">RouterInterfaceConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.RouterInterfaceConnection.html">RouterInterfaceConnection</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.RouterInterfaceConnectionArgs.html">RouterInterfaceConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -204,7 +306,7 @@ const fooRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection(
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -273,7 +375,7 @@ const fooRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection(
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -312,7 +414,7 @@ const fooRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection(
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -353,7 +455,6 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -361,59 +462,53 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
             title="Required">
         <span id="interfaceid_csharp">
 <a href="#interfaceid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="oppositeinterfaceid_csharp">
 <a href="#oppositeinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oppositeinterfaceownerid_csharp">
 <a href="#oppositeinterfaceownerid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oppositerouterid_csharp">
 <a href="#oppositerouterid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oppositeroutertype_csharp">
 <a href="#oppositeroutertype_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -422,59 +517,53 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
             title="Required">
         <span id="interfaceid_go">
 <a href="#interfaceid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="oppositeinterfaceid_go">
 <a href="#oppositeinterfaceid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oppositeinterfaceownerid_go">
 <a href="#oppositeinterfaceownerid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oppositerouterid_go">
 <a href="#oppositerouterid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oppositeroutertype_go">
 <a href="#oppositeroutertype_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -483,59 +572,53 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
             title="Required">
         <span id="interfaceid_nodejs">
 <a href="#interfaceid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="oppositeinterfaceid_nodejs">
 <a href="#oppositeinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oppositeinterfaceownerid_nodejs">
 <a href="#oppositeinterfaceownerid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oppositerouterid_nodejs">
 <a href="#oppositerouterid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oppositeroutertype_nodejs">
 <a href="#oppositeroutertype_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -544,68 +627,58 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
             title="Required">
         <span id="interface_id_python">
 <a href="#interface_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="opposite_interface_id_python">
 <a href="#opposite_interface_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="opposite_interface_owner_id_python">
 <a href="#opposite_interface_owner_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>owner_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="opposite_router_id_python">
 <a href="#opposite_router_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="opposite_router_type_python">
 <a href="#opposite_router_type_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the RouterInterfaceConnection resource produces the following output properties:
-
 
 
 
@@ -616,15 +689,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -633,15 +704,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -650,15 +719,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -667,18 +734,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -688,19 +750,20 @@ Get an existing RouterInterfaceConnection resource's state with the given name, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#RouterInterfaceConnectionState">RouterInterfaceConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#RouterInterfaceConnection">RouterInterfaceConnection</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#RouterInterfaceConnectionState">RouterInterfaceConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#RouterInterfaceConnection">RouterInterfaceConnection</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>interface_id=None<span class="p">, </span>opposite_interface_id=None<span class="p">, </span>opposite_interface_owner_id=None<span class="p">, </span>opposite_router_id=None<span class="p">, </span>opposite_router_type=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_interface_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_router_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opposite_router_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RouterInterfaceConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouterInterfaceConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#RouterInterfaceConnectionState">RouterInterfaceConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#RouterInterfaceConnection">RouterInterfaceConnection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouterInterfaceConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#RouterInterfaceConnectionState">RouterInterfaceConnectionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#RouterInterfaceConnection">RouterInterfaceConnection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.RouterInterfaceConnection.html">RouterInterfaceConnection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.RouterInterfaceConnectionState.html">RouterInterfaceConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.RouterInterfaceConnection.html">RouterInterfaceConnection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.RouterInterfaceConnectionState.html">RouterInterfaceConnectionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -802,7 +865,6 @@ Get an existing RouterInterfaceConnection resource's state with the given name, 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -810,59 +872,53 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_interfaceid_csharp">
 <a href="#state_interfaceid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oppositeinterfaceid_csharp">
 <a href="#state_oppositeinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oppositeinterfaceownerid_csharp">
 <a href="#state_oppositeinterfaceownerid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oppositerouterid_csharp">
 <a href="#state_oppositerouterid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oppositeroutertype_csharp">
 <a href="#state_oppositeroutertype_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -871,59 +927,53 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_interfaceid_go">
 <a href="#state_interfaceid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oppositeinterfaceid_go">
 <a href="#state_oppositeinterfaceid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oppositeinterfaceownerid_go">
 <a href="#state_oppositeinterfaceownerid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oppositerouterid_go">
 <a href="#state_oppositerouterid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oppositeroutertype_go">
 <a href="#state_oppositeroutertype_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -932,59 +982,53 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_interfaceid_nodejs">
 <a href="#state_interfaceid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oppositeinterfaceid_nodejs">
 <a href="#state_oppositeinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oppositeinterfaceownerid_nodejs">
 <a href="#state_oppositeinterfaceownerid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oppositerouterid_nodejs">
 <a href="#state_oppositerouterid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oppositeroutertype_nodejs">
 <a href="#state_oppositeroutertype_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -993,56 +1037,51 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_interface_id_python">
 <a href="#state_interface_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_opposite_interface_id_python">
 <a href="#state_opposite_interface_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_opposite_interface_owner_id_python">
 <a href="#state_opposite_interface_owner_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>owner_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_opposite_router_id_python">
 <a href="#state_opposite_router_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_opposite_router_type_python">
 <a href="#state_opposite_router_type_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1050,8 +1089,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+The router interface connection can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:vpc/routerInterfaceConnection:RouterInterfaceConnection foo ri-abc123456
+```
 
 
 
@@ -1063,6 +1108,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

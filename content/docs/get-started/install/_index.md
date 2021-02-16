@@ -15,7 +15,7 @@ NOTE: To update this page with a new binary release, do the following:
 - Update `content/docs/get-started/install/versions.md`
 -->
 
-This page contains detailed instructions for [installing Pulumi](#install-pulumi) on your machine. For links to detailed release notes, see the [Available Versions]({{< relref "versions" >}}) page.
+This page contains detailed instructions for [installing Pulumi](#installing-pulumi) on your machine. For links to detailed release notes, see the [Available Versions]({{< relref "versions" >}}) page.
 
 {{< get-started-note >}}
 
@@ -23,7 +23,7 @@ This page contains detailed instructions for [installing Pulumi](#install-pulumi
 
 {{< chooser os "macos,windows,linux" >}}
 
-{{% choosable os macos %}}
+{{< choosable os macos >}}
 
 macOS Sierra (10.12) or later is required.
 
@@ -66,9 +66,9 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 
 1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable os linux %}}
+{{< choosable os linux >}}
 
 ### Installation Script
 
@@ -91,21 +91,21 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 
 1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable os windows %}}
+{{< choosable os windows >}}
 
 Windows 8 and 10 are supported.
 
 ### Chocolatey
 
-You can install Pulumi through the [Chocolatey package manager](https://chocolatey.org):
+You can install Pulumi using elevated permissions through the [Chocolatey package manager](https://chocolatey.org):
 
 ```powershell
 > choco install pulumi
 ```
 
-This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`), will generate [shims](https://chocolatey.org/docs/features-shim) (usually `$($env:ChocolateyInstall)\bin`) that is added to your path.
+This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`) and generate the [shims](https://docs.chocolatey.org/en-us/features/shim) (usually `$($env:ChocolateyInstall)\bin`) to add Pulumi your path.
 
 Subsequent updates can be installed in the usual way:
 
@@ -137,7 +137,7 @@ Alternatively, you can install Pulumi manually.
 
 1. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{< /chooser >}}
 
@@ -145,10 +145,36 @@ Alternatively, you can install Pulumi manually.
 
 After installing Pulumi, verify everything is in working order by running the `pulumi` CLI:
 
+{{< chooser os "macos,windows,linux" >}}
+
+{{< choosable os macos >}}
+
 ```bash
 $ pulumi version
 v{{< latest-version >}}
 ```
+
+{{< /choosable >}}
+
+{{< choosable os linux >}}
+
+```bash
+$ pulumi version
+v{{< latest-version >}}
+```
+
+{{< /choosable >}}
+
+{{< choosable os windows >}}
+
+```bash
+> pulumi version
+v{{< latest-version >}}
+```
+
+{{< /choosable >}}
+
+{{< /chooser >}}
 
 ### Pulumi Not Found Error
 
@@ -158,6 +184,10 @@ If you get an error that `pulumi` could not be found, it means your path has not
 
 If a new version of Pulumi is available, the CLI produces the following example warning when running any of the available commands:
 
+{{< chooser os "macos,windows,linux" >}}
+
+{{< choosable os macos >}}
+
 ```
 warning: A new version of Pulumi is available. To upgrade from version '0.17.26' to '{{< latest-version >}}', run
    $ curl -sSL https://get.pulumi.com | sh
@@ -165,11 +195,89 @@ warning: A new version of Pulumi is available. To upgrade from version '0.17.26'
 or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.
 ```
 
+{{< /choosable >}}
+
+{{< choosable os linux >}}
+
+```
+warning: A new version of Pulumi is available. To upgrade from version '0.17.26' to '{{< latest-version >}}', run
+   $ curl -sSL https://get.pulumi.com | sh
+
+or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.
+```
+
+{{< /choosable >}}
+
+{{< choosable os windows >}}
+
+```
+warning: A new version of Pulumi is available. To upgrade from version '0.17.26' to '{{< latest-version >}}', run
+   > "%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1'))"
+
+or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.
+```
+
+{{< /choosable >}}
+
+{{< /chooser >}}
+
 {{< skip-version-check >}}
 
 ## Upgrading Pulumi
 
 If you are upgrading to Pulumi 2.0, please see our [migration guide]({{< relref "migrating-2.0" >}}).
+
+## Installing Previous Versions
+
+You can find the list of versions on the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
+
+{{< chooser os "macos,windows,linux" >}}
+
+{{< choosable os macos >}}
+
+### Installation Script
+
+```bash
+$ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
+```
+
+{{< /choosable >}}
+
+{{< choosable os linux >}}
+
+### Installation Script
+
+To install, run our installation script:
+
+```bash
+$ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
+```
+
+{{< /choosable >}}
+
+{{< choosable os windows >}}
+
+### Chocolatey
+
+You can specify a specific version with [Chocolatey package manager](https://chocolatey.org):
+
+```powershell
+> choco install pulumi --version <version>
+```
+
+### Installation Script
+
+1. Open a new command prompt window (**WIN+R**: `cmd.exe`):
+
+1. Run our installation script (replace `<version>` with the version number):
+
+```powershell
+> @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $version = '<version>'; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1')).Replace('${latestVersion}', $version)" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
+```
+
+{{< /choosable >}}
+
+{{< /chooser >}}
 
 ## Uninstalling Pulumi
 

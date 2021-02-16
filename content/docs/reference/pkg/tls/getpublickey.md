@@ -13,6 +13,7 @@ meta_desc: "Explore the GetPublicKey function of the TLS package, including exam
 Use this data source to get the public key from a PEM-encoded private key for use in other
 resources.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -81,12 +82,12 @@ const example = pulumi.output(tls.getPublicKey({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_public_key(</span>private_key_pem=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_public_key(</span><span class="nx">private_key_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetPublicKeyResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPublicKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#GetPublicKeyArgs">GetPublicKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#GetPublicKeyResult">GetPublicKeyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPublicKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v3/go/tls/?tab=doc#GetPublicKeyArgs">GetPublicKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v3/go/tls/?tab=doc#GetPublicKeyResult">GetPublicKeyResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -102,7 +103,6 @@ const example = pulumi.output(tls.getPublicKey({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -110,16 +110,14 @@ The following arguments are supported:
             title="Required">
         <span id="privatekeypem_csharp">
 <a href="#privatekeypem_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key to use. Currently-supported key types are "RSA" or "ECDSA".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -128,16 +126,14 @@ The following arguments are supported:
             title="Required">
         <span id="privatekeypem_go">
 <a href="#privatekeypem_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key to use. Currently-supported key types are "RSA" or "ECDSA".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -146,16 +142,14 @@ The following arguments are supported:
             title="Required">
         <span id="privatekeypem_nodejs">
 <a href="#privatekeypem_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key to use. Currently-supported key types are "RSA" or "ECDSA".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -164,19 +158,14 @@ The following arguments are supported:
             title="Required">
         <span id="private_key_pem_python">
 <a href="#private_key_pem_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key to use. Currently-supported key types are "RSA" or "ECDSA".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -187,7 +176,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -195,55 +183,51 @@ The following output properties are available:
             title="">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privatekeypem_csharp">
 <a href="#privatekeypem_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publickeyfingerprintmd5_csharp">
 <a href="#publickeyfingerprintmd5_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Fingerprint<wbr>Md5</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The md5 hash of the public key data in
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
 `public_key_openssh`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publickeyopenssh_csharp">
 <a href="#publickeyopenssh_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key data in OpenSSH `authorized_keys`
 format, if the selected private key format is compatible. All RSA keys
@@ -251,21 +235,18 @@ are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
 is selected.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publickeypem_csharp">
 <a href="#publickeypem_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -274,55 +255,51 @@ is selected.
             title="">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privatekeypem_go">
 <a href="#privatekeypem_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publickeyfingerprintmd5_go">
 <a href="#publickeyfingerprintmd5_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Fingerprint<wbr>Md5</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The md5 hash of the public key data in
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
 `public_key_openssh`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publickeyopenssh_go">
 <a href="#publickeyopenssh_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Openssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key data in OpenSSH `authorized_keys`
 format, if the selected private key format is compatible. All RSA keys
@@ -330,21 +307,18 @@ are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
 is selected.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publickeypem_go">
 <a href="#publickeypem_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -353,55 +327,51 @@ is selected.
             title="">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privatekeypem_nodejs">
 <a href="#privatekeypem_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publickeyfingerprintmd5_nodejs">
 <a href="#publickeyfingerprintmd5_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Fingerprint<wbr>Md5</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The md5 hash of the public key data in
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
 `public_key_openssh`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publickeyopenssh_nodejs">
 <a href="#publickeyopenssh_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Openssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key data in OpenSSH `authorized_keys`
 format, if the selected private key format is compatible. All RSA keys
@@ -409,21 +379,18 @@ are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
 is selected.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publickeypem_nodejs">
 <a href="#publickeypem_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -432,55 +399,51 @@ is selected.
             title="">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="private_key_pem_python">
 <a href="#private_key_pem_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="public_key_fingerprint_md5_python">
 <a href="#public_key_fingerprint_md5_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>fingerprint_<wbr>md5</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The md5 hash of the public key data in
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
 selected private key format is compatible, as per the rules for
 `public_key_openssh`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="public_key_openssh_python">
 <a href="#public_key_openssh_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>openssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public key data in OpenSSH `authorized_keys`
 format, if the selected private key format is compatible. All RSA keys
@@ -488,24 +451,18 @@ are supported, and ECDSA keys with curves "P256", "P384" and "P521"
 are supported. This attribute is empty if an incompatible ECDSA curve
 is selected.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="public_key_pem_python">
 <a href="#public_key_pem_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>pem</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

@@ -11,8 +11,10 @@ Explore the resources and functions of the appmesh module in the AWS package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="gatewayroute" title="GatewayRoute"><span class="symbol resource"></span>GatewayRoute</a></li>
     <li><a href="mesh" title="Mesh"><span class="symbol resource"></span>Mesh</a></li>
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
+    <li><a href="virtualgateway" title="VirtualGateway"><span class="symbol resource"></span>VirtualGateway</a></li>
     <li><a href="virtualnode" title="VirtualNode"><span class="symbol resource"></span>VirtualNode</a></li>
     <li><a href="virtualrouter" title="VirtualRouter"><span class="symbol resource"></span>VirtualRouter</a></li>
     <li><a href="virtualservice" title="VirtualService"><span class="symbol resource"></span>VirtualService</a></li>
@@ -27,24 +29,6 @@ Explore the resources and functions of the appmesh module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.html" title="Pulumi.Aws.AppMesh">Pulumi.Aws.AppMesh</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#" title="aws/appmesh">aws/appmesh</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#" title="@pulumi/aws/appmesh">@pulumi/aws/appmesh</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/appmesh" title="pulumi_aws/appmesh">pulumi_aws/appmesh</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

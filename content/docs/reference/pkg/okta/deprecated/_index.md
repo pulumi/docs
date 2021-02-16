@@ -43,26 +43,8 @@ Explore the resources and functions of the deprecated module in the Okta package
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
+	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.html" title="Pulumi.Okta.Deprecated">Pulumi.Okta.Deprecated</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#" title="okta/deprecated">okta/deprecated</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#" title="@pulumi/okta/deprecated">@pulumi/okta/deprecated</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_okta/deprecated" title="pulumi_okta/deprecated">pulumi_okta/deprecated</a></dd>
-
+	<dd>2.10.0</dd>
 </dl>
 

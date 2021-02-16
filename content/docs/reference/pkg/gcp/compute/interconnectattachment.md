@@ -1,8 +1,8 @@
 
 ---
 title: "InterconnectAttachment"
-title_tag: "Resource InterconnectAttachment | Module compute | Package GCP"
-meta_desc: "Explore the InterconnectAttachment resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an InterconnectAttachment (VLAN attachment) resource. For more"
+title_tag: "gcp.compute.InterconnectAttachment"
+meta_desc: "Documentation for the gcp.compute.InterconnectAttachment resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -48,14 +48,14 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		foobar, err := compute.NewRouter(ctx, "foobar", &compute.RouterArgs{
-			Network: pulumi.String(google_compute_network.Foobar.Name),
+			Network: pulumi.Any(google_compute_network.Foobar.Name),
 		})
 		if err != nil {
 			return err
@@ -110,19 +110,19 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InterconnectAttachment">InterconnectAttachment</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InterconnectAttachmentArgs">InterconnectAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#InterconnectAttachment">InterconnectAttachment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admin_enabled=None<span class="p">, </span>bandwidth=None<span class="p">, </span>candidate_subnets=None<span class="p">, </span>description=None<span class="p">, </span>edge_availability_domain=None<span class="p">, </span>interconnect=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>type=None<span class="p">, </span>vlan_tag8021q=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachment">NewInterconnectAttachment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachmentArgs">InterconnectAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachment">InterconnectAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInterconnectAttachment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InterconnectAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InterconnectAttachment.html">InterconnectAttachment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InterconnectAttachmentArgs.html">InterconnectAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">InterconnectAttachment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InterconnectAttachmentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -133,7 +133,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -143,7 +143,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InterconnectAttachmentArgs">InterconnectAttachmentArgs</a></span>
+        <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -192,7 +192,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -202,7 +202,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -212,7 +212,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachmentArgs">InterconnectAttachmentArgs</a></span>
+        <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -222,7 +222,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -241,7 +241,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -251,7 +251,7 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InterconnectAttachmentArgs.html">InterconnectAttachmentArgs</a></span>
+        <span class="property-type"><a href="#inputs">InterconnectAttachmentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -274,12 +274,11 @@ const onPrem = new gcp.compute.InterconnectAttachment("onPrem", {
 
 ## InterconnectAttachment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The InterconnectAttachment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The InterconnectAttachment resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -290,50 +289,48 @@ The InterconnectAttachment resource accepts the following [input]({{< relref "/d
             title="Required">
         <span id="router_csharp">
 <a href="#router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
 automatically connect the Interconnect to the network & region within which the
 Cloud Router is configured.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminenabled_csharp">
 <a href="#adminenabled_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidth_csharp">
 <a href="#bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="candidatesubnets_csharp">
 <a href="#candidatesubnets_csharp" style="color: inherit; text-decoration: inherit;">Candidate<wbr>Subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation
 of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
@@ -343,25 +340,23 @@ an unused /29 from the supplied candidate prefix(es). The request will
 fail if all possible /29s are in use on Google's edge. If not supplied,
 Google will randomly select an unused /29 from all of link-local space.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="edgeavailabilitydomain_csharp">
 <a href="#edgeavailabilitydomain_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Availability<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type
 PARTNER, at creation time. For improved reliability, customers should
@@ -370,27 +365,25 @@ selected availability domain will be provided to the Partner via the
 pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interconnect_csharp">
 <a href="#interconnect_csharp" style="color: inherit; text-decoration: inherit;">Interconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
@@ -399,57 +392,52 @@ name must be 1-63 characters long and match the regular expression
 lowercase letter, and all following characters must be a dash, lowercase
 letter, or digit, except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the regional interconnect attachment resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlantag8021q_csharp">
 <a href="#vlantag8021q_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Tag8021q</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -458,50 +446,48 @@ using PARTNER type this will be managed upstream.
             title="Required">
         <span id="router_go">
 <a href="#router_go" style="color: inherit; text-decoration: inherit;">Router</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
 automatically connect the Interconnect to the network & region within which the
 Cloud Router is configured.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminenabled_go">
 <a href="#adminenabled_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidth_go">
 <a href="#bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="candidatesubnets_go">
 <a href="#candidatesubnets_go" style="color: inherit; text-decoration: inherit;">Candidate<wbr>Subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation
 of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
@@ -511,25 +497,23 @@ an unused /29 from the supplied candidate prefix(es). The request will
 fail if all possible /29s are in use on Google's edge. If not supplied,
 Google will randomly select an unused /29 from all of link-local space.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="edgeavailabilitydomain_go">
 <a href="#edgeavailabilitydomain_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Availability<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type
 PARTNER, at creation time. For improved reliability, customers should
@@ -538,27 +522,25 @@ selected availability domain will be provided to the Partner via the
 pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interconnect_go">
 <a href="#interconnect_go" style="color: inherit; text-decoration: inherit;">Interconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
@@ -567,57 +549,52 @@ name must be 1-63 characters long and match the regular expression
 lowercase letter, and all following characters must be a dash, lowercase
 letter, or digit, except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the regional interconnect attachment resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlantag8021q_go">
 <a href="#vlantag8021q_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Tag8021q</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -626,50 +603,48 @@ using PARTNER type this will be managed upstream.
             title="Required">
         <span id="router_nodejs">
 <a href="#router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
 automatically connect the Interconnect to the network & region within which the
 Cloud Router is configured.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="adminenabled_nodejs">
 <a href="#adminenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidth_nodejs">
 <a href="#bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="candidatesubnets_nodejs">
 <a href="#candidatesubnets_nodejs" style="color: inherit; text-decoration: inherit;">candidate<wbr>Subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation
 of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
@@ -679,25 +654,23 @@ an unused /29 from the supplied candidate prefix(es). The request will
 fail if all possible /29s are in use on Google's edge. If not supplied,
 Google will randomly select an unused /29 from all of link-local space.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="edgeavailabilitydomain_nodejs">
 <a href="#edgeavailabilitydomain_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Availability<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type
 PARTNER, at creation time. For improved reliability, customers should
@@ -706,27 +679,25 @@ selected availability domain will be provided to the Partner via the
 pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interconnect_nodejs">
 <a href="#interconnect_nodejs" style="color: inherit; text-decoration: inherit;">interconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
@@ -735,57 +706,52 @@ name must be 1-63 characters long and match the regular expression
 lowercase letter, and all following characters must be a dash, lowercase
 letter, or digit, except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the regional interconnect attachment resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlantag8021q_nodejs">
 <a href="#vlantag8021q_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Tag8021q</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -794,50 +760,48 @@ using PARTNER type this will be managed upstream.
             title="Required">
         <span id="router_python">
 <a href="#router_python" style="color: inherit; text-decoration: inherit;">router</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
 automatically connect the Interconnect to the network & region within which the
 Cloud Router is configured.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="admin_enabled_python">
 <a href="#admin_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidth_python">
 <a href="#bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="candidate_subnets_python">
 <a href="#candidate_subnets_python" style="color: inherit; text-decoration: inherit;">candidate_<wbr>subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation
 of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
@@ -847,25 +811,23 @@ an unused /29 from the supplied candidate prefix(es). The request will
 fail if all possible /29s are in use on Google's edge. If not supplied,
 Google will randomly select an unused /29 from all of link-local space.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="edge_availability_domain_python">
 <a href="#edge_availability_domain_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>availability_<wbr>domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type
 PARTNER, at creation time. For improved reliability, customers should
@@ -874,27 +836,25 @@ selected availability domain will be provided to the Partner via the
 pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interconnect_python">
 <a href="#interconnect_python" style="color: inherit; text-decoration: inherit;">interconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
@@ -903,66 +863,57 @@ name must be 1-63 characters long and match the regular expression
 lowercase letter, and all following characters must be a dash, lowercase
 letter, or digit, except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where the regional interconnect attachment resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vlan_tag8021q_python">
 <a href="#vlan_tag8021q_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>tag8021q</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the InterconnectAttachment resource produces the following output properties:
-
 
 
 
@@ -973,118 +924,107 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="cloudrouteripaddress_csharp">
 <a href="#cloudrouteripaddress_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Router<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="customerrouteripaddress_csharp">
 <a href="#customerrouteripaddress_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Router<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="googlereferenceid_csharp">
 <a href="#googlereferenceid_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Reference<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity
 issues.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pairingkey_csharp">
 <a href="#pairingkey_csharp" style="color: inherit; text-decoration: inherit;">Pairing<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to
 initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="partnerasn_csharp">
 <a href="#partnerasn_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. Optional BGP ASN for the router that should be supplied by a
 layer 3 Partner if they configured BGP on behalf of the customer.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="privateinterconnectinfo_csharp">
-<a href="#privateinterconnectinfo_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Info</a>
-</span> 
+        <span id="privateinterconnectinfos_csharp">
+<a href="#privateinterconnectinfos_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Infos</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">List&lt;Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1093,118 +1033,107 @@ to is of type DEDICATED.
             title="">
         <span id="cloudrouteripaddress_go">
 <a href="#cloudrouteripaddress_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Router<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="customerrouteripaddress_go">
 <a href="#customerrouteripaddress_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Router<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="googlereferenceid_go">
 <a href="#googlereferenceid_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Reference<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity
 issues.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pairingkey_go">
 <a href="#pairingkey_go" style="color: inherit; text-decoration: inherit;">Pairing<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to
 initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="partnerasn_go">
 <a href="#partnerasn_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. Optional BGP ASN for the router that should be supplied by a
 layer 3 Partner if they configured BGP on behalf of the customer.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="privateinterconnectinfo_go">
-<a href="#privateinterconnectinfo_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Info</a>
-</span> 
+        <span id="privateinterconnectinfos_go">
+<a href="#privateinterconnectinfos_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Infos</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">[]Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1213,118 +1142,107 @@ to is of type DEDICATED.
             title="">
         <span id="cloudrouteripaddress_nodejs">
 <a href="#cloudrouteripaddress_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Router<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="customerrouteripaddress_nodejs">
 <a href="#customerrouteripaddress_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Router<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="googlereferenceid_nodejs">
 <a href="#googlereferenceid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Reference<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity
 issues.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pairingkey_nodejs">
 <a href="#pairingkey_nodejs" style="color: inherit; text-decoration: inherit;">pairing<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to
 initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="partnerasn_nodejs">
 <a href="#partnerasn_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. Optional BGP ASN for the router that should be supplied by a
 layer 3 Partner if they configured BGP on behalf of the customer.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="privateinterconnectinfo_nodejs">
-<a href="#privateinterconnectinfo_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Interconnect<wbr>Info</a>
-</span> 
+        <span id="privateinterconnectinfos_nodejs">
+<a href="#privateinterconnectinfos_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Interconnect<wbr>Infos</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1333,121 +1251,107 @@ to is of type DEDICATED.
             title="">
         <span id="cloud_router_ip_address_python">
 <a href="#cloud_router_ip_address_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>router_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="customer_router_ip_address_python">
 <a href="#customer_router_ip_address_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>router_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="google_reference_id_python">
 <a href="#google_reference_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>reference_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity
 issues.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pairing_key_python">
 <a href="#pairing_key_python" style="color: inherit; text-decoration: inherit;">pairing_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to
 initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="partner_asn_python">
 <a href="#partner_asn_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. Optional BGP ASN for the router that should be supplied by a
 layer 3 Partner if they configured BGP on behalf of the customer.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="private_interconnect_info_python">
-<a href="#private_interconnect_info_python" style="color: inherit; text-decoration: inherit;">private_<wbr>interconnect_<wbr>info</a>
-</span> 
+        <span id="private_interconnect_infos_python">
+<a href="#private_interconnect_infos_python" style="color: inherit; text-decoration: inherit;">private_<wbr>interconnect_<wbr>infos</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Dict[Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info]</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Sequence[Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info]</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1457,19 +1361,20 @@ Get an existing InterconnectAttachment resource's state with the given name, ID,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InterconnectAttachmentState">InterconnectAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#InterconnectAttachment">InterconnectAttachment</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InterconnectAttachmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">InterconnectAttachment</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admin_enabled=None<span class="p">, </span>bandwidth=None<span class="p">, </span>candidate_subnets=None<span class="p">, </span>cloud_router_ip_address=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>customer_router_ip_address=None<span class="p">, </span>description=None<span class="p">, </span>edge_availability_domain=None<span class="p">, </span>google_reference_id=None<span class="p">, </span>interconnect=None<span class="p">, </span>name=None<span class="p">, </span>pairing_key=None<span class="p">, </span>partner_asn=None<span class="p">, </span>private_interconnect_info=None<span class="p">, </span>project=None<span class="p">, </span>region=None<span class="p">, </span>router=None<span class="p">, </span>self_link=None<span class="p">, </span>state=None<span class="p">, </span>type=None<span class="p">, </span>vlan_tag8021q=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">candidate_subnets</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cloud_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_router_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edge_availability_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">google_reference_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interconnect</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pairing_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_interconnect_infos</span><span class="p">:</span> <span class="nx">Optional[Sequence[InterconnectAttachmentPrivateInterconnectInfoArgs]]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">router</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vlan_tag8021q</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> InterconnectAttachment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInterconnectAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachmentState">InterconnectAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachment">InterconnectAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInterconnectAttachment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InterconnectAttachmentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">InterconnectAttachment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InterconnectAttachment.html">InterconnectAttachment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.InterconnectAttachmentState.html">InterconnectAttachmentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">InterconnectAttachment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InterconnectAttachmentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1571,7 +1476,6 @@ Get an existing InterconnectAttachment resource's state with the given name, ID,
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1579,36 +1483,35 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_adminenabled_csharp">
 <a href="#state_adminenabled_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_csharp">
 <a href="#state_bandwidth_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_candidatesubnets_csharp">
 <a href="#state_candidatesubnets_csharp" style="color: inherit; text-decoration: inherit;">Candidate<wbr>Subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation
 of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
@@ -1618,58 +1521,53 @@ an unused /29 from the supplied candidate prefix(es). The request will
 fail if all possible /29s are in use on Google's edge. If not supplied,
 Google will randomly select an unused /29 from all of link-local space.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudrouteripaddress_csharp">
 <a href="#state_cloudrouteripaddress_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Router<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customerrouteripaddress_csharp">
 <a href="#state_customerrouteripaddress_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Router<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_edgeavailabilitydomain_csharp">
 <a href="#state_edgeavailabilitydomain_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Availability<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type
 PARTNER, at creation time. For improved reliability, customers should
@@ -1678,39 +1576,36 @@ selected availability domain will be provided to the Partner via the
 pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_googlereferenceid_csharp">
 <a href="#state_googlereferenceid_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Reference<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity
 issues.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_interconnect_csharp">
 <a href="#state_interconnect_csharp" style="color: inherit; text-decoration: inherit;">Interconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
@@ -1719,129 +1614,118 @@ name must be 1-63 characters long and match the regular expression
 lowercase letter, and all following characters must be a dash, lowercase
 letter, or digit, except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pairingkey_csharp">
 <a href="#state_pairingkey_csharp" style="color: inherit; text-decoration: inherit;">Pairing<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to
 initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_partnerasn_csharp">
 <a href="#state_partnerasn_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. Optional BGP ASN for the router that should be supplied by a
 layer 3 Partner if they configured BGP on behalf of the customer.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_privateinterconnectinfo_csharp">
-<a href="#state_privateinterconnectinfo_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Info</a>
-</span> 
+        <span id="state_privateinterconnectinfos_csharp">
+<a href="#state_privateinterconnectinfos_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Infos</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">List&lt;Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the regional interconnect attachment resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_router_csharp">
 <a href="#state_router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
 automatically connect the Interconnect to the network & region within which the
 Cloud Router is configured.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlantag8021q_csharp">
 <a href="#state_vlantag8021q_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Tag8021q</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1850,36 +1734,35 @@ using PARTNER type this will be managed upstream.
             title="Optional">
         <span id="state_adminenabled_go">
 <a href="#state_adminenabled_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_go">
 <a href="#state_bandwidth_go" style="color: inherit; text-decoration: inherit;">Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_candidatesubnets_go">
 <a href="#state_candidatesubnets_go" style="color: inherit; text-decoration: inherit;">Candidate<wbr>Subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation
 of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
@@ -1889,58 +1772,53 @@ an unused /29 from the supplied candidate prefix(es). The request will
 fail if all possible /29s are in use on Google's edge. If not supplied,
 Google will randomly select an unused /29 from all of link-local space.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudrouteripaddress_go">
 <a href="#state_cloudrouteripaddress_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Router<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customerrouteripaddress_go">
 <a href="#state_customerrouteripaddress_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Router<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_edgeavailabilitydomain_go">
 <a href="#state_edgeavailabilitydomain_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Availability<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type
 PARTNER, at creation time. For improved reliability, customers should
@@ -1949,39 +1827,36 @@ selected availability domain will be provided to the Partner via the
 pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_googlereferenceid_go">
 <a href="#state_googlereferenceid_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Reference<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity
 issues.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_interconnect_go">
 <a href="#state_interconnect_go" style="color: inherit; text-decoration: inherit;">Interconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
@@ -1990,129 +1865,118 @@ name must be 1-63 characters long and match the regular expression
 lowercase letter, and all following characters must be a dash, lowercase
 letter, or digit, except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pairingkey_go">
 <a href="#state_pairingkey_go" style="color: inherit; text-decoration: inherit;">Pairing<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to
 initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_partnerasn_go">
 <a href="#state_partnerasn_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. Optional BGP ASN for the router that should be supplied by a
 layer 3 Partner if they configured BGP on behalf of the customer.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_privateinterconnectinfo_go">
-<a href="#state_privateinterconnectinfo_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Info</a>
-</span> 
+        <span id="state_privateinterconnectinfos_go">
+<a href="#state_privateinterconnectinfos_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Interconnect<wbr>Infos</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">[]Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the regional interconnect attachment resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_router_go">
 <a href="#state_router_go" style="color: inherit; text-decoration: inherit;">Router</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
 automatically connect the Interconnect to the network & region within which the
 Cloud Router is configured.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlantag8021q_go">
 <a href="#state_vlantag8021q_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Tag8021q</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2121,36 +1985,35 @@ using PARTNER type this will be managed upstream.
             title="Optional">
         <span id="state_adminenabled_nodejs">
 <a href="#state_adminenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_nodejs">
 <a href="#state_bandwidth_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_candidatesubnets_nodejs">
 <a href="#state_candidatesubnets_nodejs" style="color: inherit; text-decoration: inherit;">candidate<wbr>Subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation
 of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
@@ -2160,58 +2023,53 @@ an unused /29 from the supplied candidate prefix(es). The request will
 fail if all possible /29s are in use on Google's edge. If not supplied,
 Google will randomly select an unused /29 from all of link-local space.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudrouteripaddress_nodejs">
 <a href="#state_cloudrouteripaddress_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Router<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customerrouteripaddress_nodejs">
 <a href="#state_customerrouteripaddress_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Router<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_edgeavailabilitydomain_nodejs">
 <a href="#state_edgeavailabilitydomain_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Availability<wbr>Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type
 PARTNER, at creation time. For improved reliability, customers should
@@ -2220,39 +2078,36 @@ selected availability domain will be provided to the Partner via the
 pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_googlereferenceid_nodejs">
 <a href="#state_googlereferenceid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Reference<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity
 issues.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_interconnect_nodejs">
 <a href="#state_interconnect_nodejs" style="color: inherit; text-decoration: inherit;">interconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
@@ -2261,129 +2116,118 @@ name must be 1-63 characters long and match the regular expression
 lowercase letter, and all following characters must be a dash, lowercase
 letter, or digit, except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pairingkey_nodejs">
 <a href="#state_pairingkey_nodejs" style="color: inherit; text-decoration: inherit;">pairing<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to
 initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_partnerasn_nodejs">
 <a href="#state_partnerasn_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. Optional BGP ASN for the router that should be supplied by a
 layer 3 Partner if they configured BGP on behalf of the customer.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_privateinterconnectinfo_nodejs">
-<a href="#state_privateinterconnectinfo_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Interconnect<wbr>Info</a>
-</span> 
+        <span id="state_privateinterconnectinfos_nodejs">
+<a href="#state_privateinterconnectinfos_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Interconnect<wbr>Infos</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the regional interconnect attachment resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_router_nodejs">
 <a href="#state_router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
 automatically connect the Interconnect to the network & region within which the
 Cloud Router is configured.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlantag8021q_nodejs">
 <a href="#state_vlantag8021q_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Tag8021q</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2392,36 +2236,35 @@ using PARTNER type this will be managed upstream.
             title="Optional">
         <span id="state_admin_enabled_python">
 <a href="#state_admin_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VLAN attachment is enabled or disabled.  When using
 PARTNER type this will Pre-Activate the interconnect attachment
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bandwidth_python">
 <a href="#state_bandwidth_python" style="color: inherit; text-decoration: inherit;">bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioned bandwidth capacity for the interconnect attachment.
 For attachments of type DEDICATED, the user can set the bandwidth.
 For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth.
 Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED,
 Defaults to BPS_10G
+Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_candidate_subnets_python">
 <a href="#state_candidate_subnets_python" style="color: inherit; text-decoration: inherit;">candidate_<wbr>subnets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Up to 16 candidate prefixes that can be used to restrict the allocation
 of cloudRouterIpAddress and customerRouterIpAddress for this attachment.
@@ -2431,58 +2274,53 @@ an unused /29 from the supplied candidate prefix(es). The request will
 fail if all possible /29s are in use on Google's edge. If not supplied,
 Google will randomly select an unused /29 from all of link-local space.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloud_router_ip_address_python">
 <a href="#state_cloud_router_ip_address_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>router_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customer_router_ip_address_python">
 <a href="#state_customer_router_ip_address_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>router_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_edge_availability_domain_python">
 <a href="#state_edge_availability_domain_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>availability_<wbr>domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired availability domain for the attachment. Only available for type
 PARTNER, at creation time. For improved reliability, customers should
@@ -2491,39 +2329,36 @@ selected availability domain will be provided to the Partner via the
 pairing key so that the provisioned circuit will lie in the specified
 domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_google_reference_id_python">
 <a href="#state_google_reference_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>reference_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google reference ID, to be used when raising support tickets with Google or otherwise to debug backend connectivity
 issues.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_interconnect_python">
 <a href="#state_interconnect_python" style="color: inherit; text-decoration: inherit;">interconnect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the underlying Interconnect object that this attachment's
 traffic will traverse through. Required if type is DEDICATED, must not
 be set if type is PARTNER.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The
 name must be 1-63 characters long, and comply with RFC1035. Specifically, the
@@ -2532,132 +2367,118 @@ name must be 1-63 characters long and match the regular expression
 lowercase letter, and all following characters must be a dash, lowercase
 letter, or digit, except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pairing_key_python">
 <a href="#state_pairing_key_python" style="color: inherit; text-decoration: inherit;">pairing_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. The opaque identifier of an PARTNER attachment used to
 initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_partner_asn_python">
 <a href="#state_partner_asn_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output only for type PARTNER. Not present for DEDICATED]. Optional BGP ASN for the router that should be supplied by a
 layer 3 Partner if they configured BGP on behalf of the customer.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_private_interconnect_info_python">
-<a href="#state_private_interconnect_info_python" style="color: inherit; text-decoration: inherit;">private_<wbr>interconnect_<wbr>info</a>
-</span> 
+        <span id="state_private_interconnect_infos_python">
+<a href="#state_private_interconnect_infos_python" style="color: inherit; text-decoration: inherit;">private_<wbr>interconnect_<wbr>infos</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Dict[Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info]</a></span>
+        <span class="property-type"><a href="#interconnectattachmentprivateinterconnectinfo">Sequence[Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached
 to is of type DEDICATED.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where the regional interconnect attachment resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_router_python">
 <a href="#state_router_python" style="color: inherit; text-decoration: inherit;">router</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
 automatically connect the Interconnect to the network & region within which the
 Cloud Router is configured.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Output Only] The current state of this attachment's functionality.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED.
+Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vlan_tag8021q_python">
 <a href="#state_vlan_tag8021q_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>tag8021q</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2667,20 +2488,8 @@ using PARTNER type this will be managed upstream.
 ## Supporting Types
 
 
+
 <h4 id="interconnectattachmentprivateinterconnectinfo">Interconnect<wbr>Attachment<wbr>Private<wbr>Interconnect<wbr>Info</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InterconnectAttachmentPrivateInterconnectInfo">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#InterconnectAttachmentPrivateInterconnectInfoOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.InterconnectAttachmentPrivateInterconnectInfo.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2689,15 +2498,13 @@ using PARTNER type this will be managed upstream.
             title="Optional">
         <span id="tag8021q_csharp">
 <a href="#tag8021q_csharp" style="color: inherit; text-decoration: inherit;">Tag8021q</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2706,15 +2513,13 @@ using PARTNER type this will be managed upstream.
             title="Optional">
         <span id="tag8021q_go">
 <a href="#tag8021q_go" style="color: inherit; text-decoration: inherit;">Tag8021q</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2723,15 +2528,13 @@ using PARTNER type this will be managed upstream.
             title="Optional">
         <span id="tag8021q_nodejs">
 <a href="#tag8021q_nodejs" style="color: inherit; text-decoration: inherit;">tag8021q</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2740,19 +2543,33 @@ using PARTNER type this will be managed upstream.
             title="Optional">
         <span id="tag8021q_python">
 <a href="#tag8021q_python" style="color: inherit; text-decoration: inherit;">tag8021q</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+InterconnectAttachment can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:compute/interconnectAttachment:InterconnectAttachment default projects/{{project}}/regions/{{region}}/interconnectAttachments/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:compute/interconnectAttachment:InterconnectAttachment default {{project}}/{{region}}/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:compute/interconnectAttachment:InterconnectAttachment default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/interconnectAttachment:InterconnectAttachment default {{name}}
+```
 
 
 
@@ -2764,6 +2581,6 @@ using PARTNER type this will be managed upstream.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

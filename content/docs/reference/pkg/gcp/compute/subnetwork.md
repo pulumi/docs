@@ -1,8 +1,8 @@
 
 ---
 title: "Subnetwork"
-title_tag: "Resource Subnetwork | Module compute | Package GCP"
-meta_desc: "Explore the Subnetwork resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A VPC network is a virtual version of the traditional physical networks"
+title_tag: "gcp.compute.Subnetwork"
+meta_desc: "Documentation for the gcp.compute.Subnetwork resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -35,7 +35,7 @@ of the network, even entire subnets, using firewall rules.
 
 To get more information about Subnetwork, see:
 
-* [API documentation](https://cloud.google.com/compute/docs/reference/rest/beta/subnetworks)
+* [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks)
 * How-to Guides
     * [Private Google Access](https://cloud.google.com/vpc/docs/configure-private-google-access)
     * [Cloud Networking](https://cloud.google.com/vpc/docs/using-vpc)
@@ -44,7 +44,7 @@ To get more information about Subnetwork, see:
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Subnetwork Internal L7lb
+### Subnetwork Basic
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -58,13 +58,19 @@ class MyStack : Stack
         {
             AutoCreateSubnetworks = false,
         });
-        var network_for_l7lb = new Gcp.Compute.Subnetwork("network-for-l7lb", new Gcp.Compute.SubnetworkArgs
+        var network_with_private_secondary_ip_ranges = new Gcp.Compute.Subnetwork("network-with-private-secondary-ip-ranges", new Gcp.Compute.SubnetworkArgs
         {
-            IpCidrRange = "10.0.0.0/22",
+            IpCidrRange = "10.2.0.0/16",
             Region = "us-central1",
-            Purpose = "INTERNAL_HTTPS_LOAD_BALANCER",
-            Role = "ACTIVE",
             Network = custom_test.Id,
+            SecondaryIpRanges = 
+            {
+                new Gcp.Compute.Inputs.SubnetworkSecondaryIpRangeArgs
+                {
+                    RangeName = "tf-test-secondary-range-update1",
+                    IpCidrRange = "192.168.10.0/24",
+                },
+            },
         });
     }
 
@@ -74,7 +80,41 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "custom_test", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "network_with_private_secondary_ip_ranges", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.2.0.0/16"),
+			Region:      pulumi.String("us-central1"),
+			Network:     custom_test.ID(),
+			SecondaryIpRanges: compute.SubnetworkSecondaryIpRangeArray{
+				&compute.SubnetworkSecondaryIpRangeArgs{
+					RangeName:   pulumi.String("tf-test-secondary-range-update1"),
+					IpCidrRange: pulumi.String("192.168.10.0/24"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -83,12 +123,14 @@ import pulumi
 import pulumi_gcp as gcp
 
 custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
-network_for_l7lb = gcp.compute.Subnetwork("network-for-l7lb",
-    ip_cidr_range="10.0.0.0/22",
+network_with_private_secondary_ip_ranges = gcp.compute.Subnetwork("network-with-private-secondary-ip-ranges",
+    ip_cidr_range="10.2.0.0/16",
     region="us-central1",
-    purpose="INTERNAL_HTTPS_LOAD_BALANCER",
-    role="ACTIVE",
-    network=custom_test.id)
+    network=custom_test.id,
+    secondary_ip_ranges=[gcp.compute.SubnetworkSecondaryIpRangeArgs(
+        range_name="tf-test-secondary-range-update1",
+        ip_cidr_range="192.168.10.0/24",
+    )])
 ```
 
 {{% /example %}}
@@ -100,12 +142,233 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const custom_test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false});
+const network_with_private_secondary_ip_ranges = new gcp.compute.Subnetwork("network-with-private-secondary-ip-ranges", {
+    ipCidrRange: "10.2.0.0/16",
+    region: "us-central1",
+    network: custom_test.id,
+    secondaryIpRanges: [{
+        rangeName: "tf-test-secondary-range-update1",
+        ipCidrRange: "192.168.10.0/24",
+    }],
+});
+```
+
+{{% /example %}}
+
+### Subnetwork Logging Config
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var custom_test = new Gcp.Compute.Network("custom-test", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var subnet_with_logging = new Gcp.Compute.Subnetwork("subnet-with-logging", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.2.0.0/16",
+            Region = "us-central1",
+            Network = custom_test.Id,
+            LogConfig = new Gcp.Compute.Inputs.SubnetworkLogConfigArgs
+            {
+                AggregationInterval = "INTERVAL_10_MIN",
+                FlowSampling = 0.5,
+                Metadata = "INCLUDE_ALL_METADATA",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "custom_test", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "subnet_with_logging", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.2.0.0/16"),
+			Region:      pulumi.String("us-central1"),
+			Network:     custom_test.ID(),
+			LogConfig: &compute.SubnetworkLogConfigArgs{
+				AggregationInterval: pulumi.String("INTERVAL_10_MIN"),
+				FlowSampling:        pulumi.Float64(0.5),
+				Metadata:            pulumi.String("INCLUDE_ALL_METADATA"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
+subnet_with_logging = gcp.compute.Subnetwork("subnet-with-logging",
+    ip_cidr_range="10.2.0.0/16",
+    region="us-central1",
+    network=custom_test.id,
+    log_config=gcp.compute.SubnetworkLogConfigArgs(
+        aggregation_interval="INTERVAL_10_MIN",
+        flow_sampling=0.5,
+        metadata="INCLUDE_ALL_METADATA",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const custom_test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false});
+const subnet_with_logging = new gcp.compute.Subnetwork("subnet-with-logging", {
+    ipCidrRange: "10.2.0.0/16",
+    region: "us-central1",
+    network: custom_test.id,
+    logConfig: {
+        aggregationInterval: "INTERVAL_10_MIN",
+        flowSampling: 0.5,
+        metadata: "INCLUDE_ALL_METADATA",
+    },
+});
+```
+
+{{% /example %}}
+
+### Subnetwork Internal L7lb
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var custom_test = new Gcp.Compute.Network("custom-test", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var network_for_l7lb = new Gcp.Compute.Subnetwork("network-for-l7lb", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.0.0/22",
+            Region = "us-central1",
+            Purpose = "INTERNAL_HTTPS_LOAD_BALANCER",
+            Role = "ACTIVE",
+            Network = custom_test.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "custom_test", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "network_for_l7lb", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.0.0/22"),
+			Region:      pulumi.String("us-central1"),
+			Purpose:     pulumi.String("INTERNAL_HTTPS_LOAD_BALANCER"),
+			Role:        pulumi.String("ACTIVE"),
+			Network:     custom_test.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False,
+opts=pulumi.ResourceOptions(provider=google_beta))
+network_for_l7lb = gcp.compute.Subnetwork("network-for-l7lb",
+    ip_cidr_range="10.0.0.0/22",
+    region="us-central1",
+    purpose="INTERNAL_HTTPS_LOAD_BALANCER",
+    role="ACTIVE",
+    network=custom_test.id,
+    opts=pulumi.ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const custom_test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false}, {
+    provider: google_beta,
+});
 const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
     ipCidrRange: "10.0.0.0/22",
     region: "us-central1",
     purpose: "INTERNAL_HTTPS_LOAD_BALANCER",
     role: "ACTIVE",
     network: custom_test.id,
+}, {
+    provider: google_beta,
 });
 ```
 
@@ -119,19 +382,19 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Subnetwork">Subnetwork</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SubnetworkArgs">SubnetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Subnetwork</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SubnetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#Subnetwork">Subnetwork</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>description=None<span class="p">, </span>ip_cidr_range=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>private_ip_google_access=None<span class="p">, </span>project=None<span class="p">, </span>purpose=None<span class="p">, </span>region=None<span class="p">, </span>role=None<span class="p">, </span>secondary_ip_ranges=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Subnetwork</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[SubnetworkLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_google_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetworkSecondaryIpRangeArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Subnetwork">NewSubnetwork</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkArgs">SubnetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Subnetwork">Subnetwork</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSubnetwork</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SubnetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Subnetwork</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Subnetwork.html">Subnetwork</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.SubnetworkArgs.html">SubnetworkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Subnetwork</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SubnetworkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -142,7 +405,7 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -152,7 +415,7 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SubnetworkArgs">SubnetworkArgs</a></span>
+        <span class="property-type"><a href="#inputs">SubnetworkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -201,7 +464,7 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -211,7 +474,7 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -221,7 +484,7 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkArgs">SubnetworkArgs</a></span>
+        <span class="property-type"><a href="#inputs">SubnetworkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -231,7 +494,7 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -250,7 +513,7 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -260,7 +523,7 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.SubnetworkArgs.html">SubnetworkArgs</a></span>
+        <span class="property-type"><a href="#inputs">SubnetworkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -283,12 +546,11 @@ const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
 
 ## Subnetwork Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -299,61 +561,58 @@ The Subnetwork resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="ipcidrrange_csharp">
 <a href="#ipcidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logconfig_csharp">
 <a href="#logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially
 creating the resource. The name must be 1-63 characters long, and
@@ -363,38 +622,45 @@ means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateipgoogleaccess_csharp">
 <a href="#privateipgoogleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipv6googleaccess_csharp">
+<a href="#privateipv6googleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="purpose_csharp">
 <a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
@@ -402,39 +668,38 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
 purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryipranges_csharp">
 <a href="#secondaryipranges_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">List&lt;Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
@@ -443,10 +708,8 @@ contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -455,61 +718,58 @@ to either primary or secondary ranges. Structure is documented below.
             title="Required">
         <span id="ipcidrrange_go">
 <a href="#ipcidrrange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logconfig_go">
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially
 creating the resource. The name must be 1-63 characters long, and
@@ -519,38 +779,45 @@ means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateipgoogleaccess_go">
 <a href="#privateipgoogleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipv6googleaccess_go">
+<a href="#privateipv6googleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="purpose_go">
 <a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
@@ -558,39 +825,38 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
 purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryipranges_go">
 <a href="#secondaryipranges_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">[]Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range</a></span>
     </dt>
@@ -599,10 +865,8 @@ contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -611,61 +875,58 @@ to either primary or secondary ranges. Structure is documented below.
             title="Required">
         <span id="ipcidrrange_nodejs">
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logconfig_nodejs">
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially
 creating the resource. The name must be 1-63 characters long, and
@@ -675,38 +936,45 @@ means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateipgoogleaccess_nodejs">
 <a href="#privateipgoogleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Google<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipv6googleaccess_nodejs">
+<a href="#privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="purpose_nodejs">
 <a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
@@ -714,39 +982,38 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
 purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryipranges_nodejs">
 <a href="#secondaryipranges_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Ip<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range[]</a></span>
     </dt>
@@ -755,10 +1022,8 @@ contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -767,61 +1032,58 @@ to either primary or secondary ranges. Structure is documented below.
             title="Required">
         <span id="ip_cidr_range_python">
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="log_config_python">
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetworklogconfig">Dict[Subnetwork<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially
 creating the resource. The name must be 1-63 characters long, and
@@ -831,38 +1093,45 @@ means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="private_ip_google_access_python">
 <a href="#private_ip_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>google_<wbr>access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ipv6_google_access_python">
+<a href="#private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="purpose_python">
 <a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
@@ -870,60 +1139,53 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
 purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondary_ip_ranges_python">
 <a href="#secondary_ip_ranges_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>ip_<wbr>ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetworksecondaryiprange">List[Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range]</a></span>
+        <span class="property-type"><a href="#subnetworksecondaryiprange">Sequence[Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Subnetwork resource produces the following output properties:
-
 
 
 
@@ -934,59 +1196,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="fingerprint_csharp">
 <a href="#fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="gatewayaddress_csharp">
 <a href="#gatewayaddress_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -995,59 +1251,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="fingerprint_go">
 <a href="#fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="gatewayaddress_go">
 <a href="#gatewayaddress_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1056,59 +1306,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="fingerprint_nodejs">
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="gatewayaddress_nodejs">
 <a href="#gatewayaddress_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1117,62 +1361,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="fingerprint_python">
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span id="gateway_address_python">
 <a href="#gateway_address_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1182,19 +1417,20 @@ Get an existing Subnetwork resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SubnetworkState">SubnetworkState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Subnetwork">Subnetwork</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SubnetworkState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Subnetwork</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>fingerprint=None<span class="p">, </span>gateway_address=None<span class="p">, </span>ip_cidr_range=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>private_ip_google_access=None<span class="p">, </span>project=None<span class="p">, </span>purpose=None<span class="p">, </span>region=None<span class="p">, </span>role=None<span class="p">, </span>secondary_ip_ranges=None<span class="p">, </span>self_link=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_cidr_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[SubnetworkLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_google_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">private_ipv6_google_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">purpose</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_ip_ranges</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetworkSecondaryIpRangeArgs]]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subnetwork</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnetwork<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkState">SubnetworkState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#Subnetwork">Subnetwork</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnetwork<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SubnetworkState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Subnetwork</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Subnetwork.html">Subnetwork</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.SubnetworkState.html">SubnetworkState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Subnetwork</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SubnetworkState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1296,7 +1532,6 @@ Get an existing Subnetwork resource's state with the given name, ID, and optiona
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1304,82 +1539,77 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_fingerprint_csharp">
 <a href="#state_fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gatewayaddress_csharp">
 <a href="#state_gatewayaddress_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipcidrrange_csharp">
 <a href="#state_ipcidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_csharp">
 <a href="#state_logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially
 creating the resource. The name must be 1-63 characters long, and
@@ -1389,50 +1619,56 @@ means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_privateipgoogleaccess_csharp">
 <a href="#state_privateipgoogleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_privateipv6googleaccess_csharp">
+<a href="#state_privateipv6googleaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_purpose_csharp">
 <a href="#state_purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
@@ -1440,39 +1676,38 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
 purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secondaryipranges_csharp">
 <a href="#state_secondaryipranges_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">List&lt;Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
@@ -1481,21 +1716,18 @@ contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1504,82 +1736,77 @@ to either primary or secondary ranges. Structure is documented below.
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_fingerprint_go">
 <a href="#state_fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gatewayaddress_go">
 <a href="#state_gatewayaddress_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipcidrrange_go">
 <a href="#state_ipcidrrange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_go">
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially
 creating the resource. The name must be 1-63 characters long, and
@@ -1589,50 +1816,56 @@ means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_privateipgoogleaccess_go">
 <a href="#state_privateipgoogleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Google<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_privateipv6googleaccess_go">
+<a href="#state_privateipv6googleaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_purpose_go">
 <a href="#state_purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
@@ -1640,39 +1873,38 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
 purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secondaryipranges_go">
 <a href="#state_secondaryipranges_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">[]Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range</a></span>
     </dt>
@@ -1681,21 +1913,18 @@ contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1704,82 +1933,77 @@ to either primary or secondary ranges. Structure is documented below.
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_fingerprint_nodejs">
 <a href="#state_fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gatewayaddress_nodejs">
 <a href="#state_gatewayaddress_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipcidrrange_nodejs">
 <a href="#state_ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_nodejs">
 <a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially
 creating the resource. The name must be 1-63 characters long, and
@@ -1789,50 +2013,56 @@ means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_privateipgoogleaccess_nodejs">
 <a href="#state_privateipgoogleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Google<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_privateipv6googleaccess_nodejs">
+<a href="#state_privateipv6googleaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ipv6Google<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_purpose_nodejs">
 <a href="#state_purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
@@ -1840,39 +2070,38 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
 purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secondaryipranges_nodejs">
 <a href="#state_secondaryipranges_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Ip<wbr>Ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subnetworksecondaryiprange">Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range[]</a></span>
     </dt>
@@ -1881,21 +2110,18 @@ contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1904,82 +2130,77 @@ to either primary or secondary ranges. Structure is documented below.
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_fingerprint_python">
 <a href="#state_fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is not useful for users, and has been removed as an output.{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gateway_address_python">
 <a href="#state_gateway_address_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routes to reach destination addresses outside this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ip_cidr_range_python">
 <a href="#state_ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_log_config_python">
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetworklogconfig">Dict[Subnetwork<wbr>Log<wbr>Config]</a></span>
+        <span class="property-type"><a href="#subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the `purpose` of this
-subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`  Structure is documented below.
+subnetwork is `INTERNAL_HTTPS_LOAD_BALANCER`
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource, provided by the client when initially
 creating the resource. The name must be 1-63 characters long, and
@@ -1989,50 +2210,56 @@ means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network this subnet belongs to.
 Only networks that are in the distributed mode can have subnetworks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_private_ip_google_access_python">
 <a href="#state_private_ip_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>google_<wbr>access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_private_ipv6_google_access_python">
+<a href="#state_private_ipv6_google_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ipv6_<wbr>google_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private IPv6 google access type for the VMs in this subnet.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_purpose_python">
 <a href="#state_purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The purpose of the resource. This field can be either PRIVATE
 or INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
@@ -2040,65 +2267,58 @@ INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing. If unspecified, the
 purpose defaults to PRIVATE.
 If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the role.
+Possible values are `INTERNAL_HTTPS_LOAD_BALANCER` and `PRIVATE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP region for this subnetwork.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role of subnetwork. Currently, this field is only used when
 purpose = INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE
 or BACKUP. An ACTIVE subnetwork is one that is currently being used
 for Internal HTTP(S) Load Balancing. A BACKUP subnetwork is one that
 is ready to be promoted to ACTIVE or is currently draining.
+Possible values are `ACTIVE` and `BACKUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secondary_ip_ranges_python">
 <a href="#state_secondary_ip_ranges_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>ip_<wbr>ranges</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetworksecondaryiprange">List[Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range]</a></span>
+        <span class="property-type"><a href="#subnetworksecondaryiprange">Sequence[Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
 to either primary or secondary ranges. Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2108,20 +2328,8 @@ to either primary or secondary ranges. Structure is documented below.
 ## Supporting Types
 
 
+
 <h4 id="subnetworklogconfig">Subnetwork<wbr>Log<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkLogConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubnetworkLogConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkLogConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.SubnetworkLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.SubnetworkLogConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2130,25 +2338,36 @@ to either primary or secondary ranges. Structure is documented below.
             title="Optional">
         <span id="aggregationinterval_csharp">
 <a href="#aggregationinterval_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Toggles the aggregation interval for collecting flow logs. Increasing the
 interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
-Possible values are INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN,
-INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN
+Default value is `INTERVAL_5_SEC`.
+Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filterexpr_csharp">
+<a href="#filterexpr_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Expr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
+https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
+The default value is 'true', which evaluates to include everything.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="flowsampling_csharp">
 <a href="#flowsampling_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 The value of the field must be in [0, 1]. Set the sampling rate of VPC
@@ -2156,23 +2375,33 @@ flow logs within the subnetwork where 1.0 means all collected logs are
 reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
 flow logs.
+Default value is `INCLUDE_ALL_METADATA`.
+Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadatafields_csharp">
+<a href="#metadatafields_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Fields</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of metadata fields that should be added to reported logs.
+Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2181,25 +2410,36 @@ flow logs.
             title="Optional">
         <span id="aggregationinterval_go">
 <a href="#aggregationinterval_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Toggles the aggregation interval for collecting flow logs. Increasing the
 interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
-Possible values are INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN,
-INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN
+Default value is `INTERVAL_5_SEC`.
+Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filterexpr_go">
+<a href="#filterexpr_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Expr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
+https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
+The default value is 'true', which evaluates to include everything.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="flowsampling_go">
 <a href="#flowsampling_go" style="color: inherit; text-decoration: inherit;">Flow<wbr>Sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 The value of the field must be in [0, 1]. Set the sampling rate of VPC
@@ -2207,23 +2447,33 @@ flow logs within the subnetwork where 1.0 means all collected logs are
 reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
 flow logs.
+Default value is `INCLUDE_ALL_METADATA`.
+Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadatafields_go">
+<a href="#metadatafields_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Fields</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of metadata fields that should be added to reported logs.
+Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2232,25 +2482,36 @@ flow logs.
             title="Optional">
         <span id="aggregationinterval_nodejs">
 <a href="#aggregationinterval_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Toggles the aggregation interval for collecting flow logs. Increasing the
 interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
-Possible values are INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN,
-INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN
+Default value is `INTERVAL_5_SEC`.
+Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filterexpr_nodejs">
+<a href="#filterexpr_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Expr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
+https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
+The default value is 'true', which evaluates to include everything.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="flowsampling_nodejs">
 <a href="#flowsampling_nodejs" style="color: inherit; text-decoration: inherit;">flow<wbr>Sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 The value of the field must be in [0, 1]. Set the sampling rate of VPC
@@ -2258,50 +2519,71 @@ flow logs within the subnetwork where 1.0 means all collected logs are
 reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
 flow logs.
+Default value is `INCLUDE_ALL_METADATA`.
+Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadatafields_nodejs">
+<a href="#metadatafields_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Fields</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of metadata fields that should be added to reported logs.
+Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="aggregationinterval_python">
-<a href="#aggregationinterval_python" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Interval</a>
-</span> 
+        <span id="aggregation_interval_python">
+<a href="#aggregation_interval_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>interval</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Toggles the aggregation interval for collecting flow logs. Increasing the
 interval time will reduce the amount of generated flow logs for long
 lasting connections. Default is an interval of 5 seconds per connection.
-Possible values are INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN,
-INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN
+Default value is `INTERVAL_5_SEC`.
+Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="flowsampling_python">
-<a href="#flowsampling_python" style="color: inherit; text-decoration: inherit;">flow<wbr>Sampling</a>
-</span> 
+        <span id="filter_expr_python">
+<a href="#filter_expr_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>expr</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Export filter used to define which VPC flow logs should be logged, as as CEL expression. See
+https://cloud.google.com/vpc/docs/flow-logs#filtering for details on how to format this field.
+The default value is 'true', which evaluates to include everything.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flow_sampling_python">
+<a href="#flow_sampling_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>sampling</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 The value of the field must be in [0, 1]. Set the sampling rate of VPC
@@ -2309,41 +2591,35 @@ flow logs within the subnetwork where 1.0 means all collected logs are
 reported and 0.0 means no logs are reported. Default is 0.5 which means
 half of all collected logs are reported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can only be specified if VPC flow logging for this subnetwork is enabled.
 Configures whether metadata fields should be added to the reported VPC
 flow logs.
+Default value is `INCLUDE_ALL_METADATA`.
+Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_fields_python">
+<a href="#metadata_fields_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>fields</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of metadata fields that should be added to reported logs.
+Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="subnetworksecondaryiprange">Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubnetworkSecondaryIpRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubnetworkSecondaryIpRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkSecondaryIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SubnetworkSecondaryIpRangeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.SubnetworkSecondaryIpRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.SubnetworkSecondaryIpRange.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2352,33 +2628,30 @@ flow logs.
             title="Required">
         <span id="ipcidrrange_csharp">
 <a href="#ipcidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rangename_csharp">
 <a href="#rangename_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name associated with this subnetwork secondary range, used
 when adding an alias IP range to a VM instance. The name must
 be 1-63 characters long, and comply with RFC1035. The name
 must be unique within the subnetwork.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2387,33 +2660,30 @@ must be unique within the subnetwork.
             title="Required">
         <span id="ipcidrrange_go">
 <a href="#ipcidrrange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rangename_go">
 <a href="#rangename_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name associated with this subnetwork secondary range, used
 when adding an alias IP range to a VM instance. The name must
 be 1-63 characters long, and comply with RFC1035. The name
 must be unique within the subnetwork.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2422,33 +2692,30 @@ must be unique within the subnetwork.
             title="Required">
         <span id="ipcidrrange_nodejs">
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rangename_nodejs">
 <a href="#rangename_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name associated with this subnetwork secondary range, used
 when adding an alias IP range to a VM instance. The name must
 be 1-63 characters long, and comply with RFC1035. The name
 must be unique within the subnetwork.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2457,37 +2724,50 @@ must be unique within the subnetwork.
             title="Required">
         <span id="ip_cidr_range_python">
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The range of IP addresses belonging to this subnetwork secondary
 range. Provide this property when you create the subnetwork.
 Ranges must be unique and non-overlapping with all primary and
 secondary IP ranges within a network. Only IPv4 is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="rangename_python">
-<a href="#rangename_python" style="color: inherit; text-decoration: inherit;">range<wbr>Name</a>
-</span> 
+        <span id="range_name_python">
+<a href="#range_name_python" style="color: inherit; text-decoration: inherit;">range_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name associated with this subnetwork secondary range, used
 when adding an alias IP range to a VM instance. The name must
 be 1-63 characters long, and comply with RFC1035. The name
 must be unique within the subnetwork.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Subnetwork can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:compute/subnetwork:Subnetwork default projects/{{project}}/regions/{{region}}/subnetworks/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:compute/subnetwork:Subnetwork default {{project}}/{{region}}/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:compute/subnetwork:Subnetwork default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/subnetwork:Subnetwork default {{name}}
+```
 
 
 
@@ -2499,6 +2779,6 @@ must be unique within the subnetwork.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

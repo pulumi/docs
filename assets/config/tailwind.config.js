@@ -71,6 +71,18 @@ const green = {
     900: "#155148",
 }
 
+const fuschia= {
+    100: "#fcdbff",
+    200: "#f5b9fd",
+    300: "#eb9efa",
+    400: "#d975f5",
+    500: "#c75ceb",
+    600: "#ab3ad4",
+    700: "#9135b6",
+    800: "#6c2f89",
+    900: brand.purple,
+};
+
 module.exports = {
     theme: {
         extend: {
@@ -99,6 +111,7 @@ module.exports = {
             blue,
             orange,
             green,
+            fuschia,
             transparent,
         },
         maxHeight: {

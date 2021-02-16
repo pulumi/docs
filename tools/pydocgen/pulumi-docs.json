@@ -44,6 +44,12 @@
       "terraform_provider_name": "azurerm"
     },
     {
+      "name": "Pulumi Azure NextGen",
+      "package_name": "pulumi_azure_nextgen",
+      "pulumi_provider_name": "azure-nextgen",
+      "terraform_provider_name": ""
+    },
+    {
       "name": "Pulumi Azure Active Directory",
       "package_name": "pulumi_azuread",
       "pulumi_provider_name": "azuread",
@@ -72,6 +78,12 @@
       "package_name": "pulumi_cloudamqp",
       "pulumi_provider_name": "cloudamqp",
       "terraform_provider_name": ""
+    },
+    {
+      "name": "Pulumi CloudInit",
+      "package_name": "pulumi_cloudinit",
+      "pulumi_provider_name": "cloudinit",
+      "terraform_provider_name": "cloudinit"
     },
     {
       "name": "Pulumi Consul",
@@ -152,6 +164,12 @@
       "terraform_provider_name": "openstack"
     },
     {
+      "name": "Pulumi OpsGenie",
+      "package_name": "pulumi_opsgenie",
+      "pulumi_provider_name": "opsgenie",
+      "terraform_provider_name": "opsgenie"
+    },
+    {
       "name": "Pulumi Okta",
       "package_name": "pulumi_okta",
       "pulumi_provider_name": "okta",
@@ -200,10 +218,10 @@
       "terraform_provider_name": "fastly"
     },
     {
-      "name": "Pulumi Packet",
-      "package_name": "pulumi_packet",
-      "pulumi_provider_name": "packet",
-      "terraform_provider_name": "packet"
+      "name": "Pulumi Equinix Metal",
+      "package_name": "pulumi_equinix_metal",
+      "pulumi_provider_name": "equinix-metal",
+      "terraform_provider_name": ""
     },
     {
       "name": "Pulumi Pagerduty",
@@ -294,6 +312,18 @@
       "package_name": "pulumi_akamai",
       "pulumi_provider_name": "akamai",
       "terraform_provider_name": "akamai"
+    },
+    {
+      "name": "Pulumi Venafi",
+      "package_name": "pulumi_venafi",
+      "pulumi_provider_name": "venafi",
+      "terraform_provider_name": "venafi"
+    },
+    {
+      "name": "Pulumi Splunk",
+      "package_name": "pulumi_splunk",
+      "pulumi_provider_name": "splunk",
+      "terraform_provider_name": "splunk"
     }
   ]
 }

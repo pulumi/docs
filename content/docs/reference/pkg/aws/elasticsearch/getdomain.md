@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDomain function of the elasticsearch module, includin
 
 Use this data source to get information about an Elasticsearch Domain
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -93,17 +94,17 @@ const myDomain = pulumi.output(aws.elasticsearch.getDomain({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDomain<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticsearch/#GetDomainArgs">GetDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticsearch/#GetDomainResult">GetDomainResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDomain<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDomainArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDomainResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_domain(</span>domain_name=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_domain(</span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDomainResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch?tab=doc#LookupDomainArgs">LookupDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch?tab=doc#LookupDomainResult">LookupDomainResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDomainArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDomainResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDomain` in the Go SDK.
 
@@ -112,14 +113,13 @@ const myDomain = pulumi.output(aws.elasticsearch.getDomain({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDomain </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticsearch.GetDomainResult.html">GetDomainResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.GetDomainArgs.html">GetDomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDomainResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDomainArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -129,27 +129,24 @@ The following arguments are supported:
             title="Required">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -158,27 +155,24 @@ The following arguments are supported:
             title="Required">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -187,27 +181,24 @@ The following arguments are supported:
             title="Required">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -216,30 +207,24 @@ The following arguments are supported:
             title="Required">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -250,7 +235,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -258,246 +242,223 @@ The following output properties are available:
             title="">
         <span id="accesspolicies_csharp">
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy document attached to the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="advancedoptions_csharp">
 <a href="#advancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="advancedsecurityoptions_csharp">
 <a href="#advancedsecurityoptions_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainadvancedsecurityoption">List&lt;Get<wbr>Domain<wbr>Advanced<wbr>Security<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}Status of the Elasticsearch domain's advanced security options. The block consists of the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="clusterconfigs_csharp">
 <a href="#clusterconfigs_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainclusterconfig">List&lt;Get<wbr>Domain<wbr>Cluster<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cognitooptions_csharp">
 <a href="#cognitooptions_csharp" style="color: inherit; text-decoration: inherit;">Cognito<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomaincognitooption">List&lt;Get<wbr>Domain<wbr>Cognito<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}Domain Amazon Cognito Authentication options for Kibana.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of the creation of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="deleted_csharp">
 <a href="#deleted_csharp" style="color: inherit; text-decoration: inherit;">Deleted</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of the deletion of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domainid_csharp">
 <a href="#domainid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ebsoptions_csharp">
 <a href="#ebsoptions_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainebsoption">List&lt;Get<wbr>Domain<wbr>Ebs<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}EBS Options for the instances in the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="elasticsearchversion_csharp">
 <a href="#elasticsearchversion_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ElasticSearch version for the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="encryptionatrests_csharp">
 <a href="#encryptionatrests_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>At<wbr>Rests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainencryptionatrest">List&lt;Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest&gt;</a></span>
     </dt>
     <dd>{{% md %}}Domain encryption at rest related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kibanaendpoint_csharp">
 <a href="#kibanaendpoint_csharp" style="color: inherit; text-decoration: inherit;">Kibana<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to access the Kibana application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="logpublishingoptions_csharp">
 <a href="#logpublishingoptions_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Publishing<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainlogpublishingoption">List&lt;Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}Domain log publishing related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nodetonodeencryptions_csharp">
 <a href="#nodetonodeencryptions_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>To<wbr>Node<wbr>Encryptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainnodetonodeencryption">List&lt;Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption&gt;</a></span>
     </dt>
     <dd>{{% md %}}Domain in transit encryption related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="processing_csharp">
 <a href="#processing_csharp" style="color: inherit; text-decoration: inherit;">Processing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of a configuration change in the domain.
 * `snapshot_options` – Domain snapshot related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="snapshotoptions_csharp">
 <a href="#snapshotoptions_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsnapshotoption">List&lt;Get<wbr>Domain<wbr>Snapshot<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpcoptions_csharp">
 <a href="#vpcoptions_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainvpcoption">List&lt;Get<wbr>Domain<wbr>Vpc<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}VPC Options for private Elasticsearch domains.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -506,246 +467,223 @@ The following output properties are available:
             title="">
         <span id="accesspolicies_go">
 <a href="#accesspolicies_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy document attached to the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="advancedoptions_go">
 <a href="#advancedoptions_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="advancedsecurityoptions_go">
 <a href="#advancedsecurityoptions_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainadvancedsecurityoption">[]Get<wbr>Domain<wbr>Advanced<wbr>Security<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Status of the Elasticsearch domain's advanced security options. The block consists of the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="clusterconfigs_go">
 <a href="#clusterconfigs_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainclusterconfig">[]Get<wbr>Domain<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cognitooptions_go">
 <a href="#cognitooptions_go" style="color: inherit; text-decoration: inherit;">Cognito<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomaincognitooption">[]Get<wbr>Domain<wbr>Cognito<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Domain Amazon Cognito Authentication options for Kibana.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of the creation of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="deleted_go">
 <a href="#deleted_go" style="color: inherit; text-decoration: inherit;">Deleted</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of the deletion of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domainid_go">
 <a href="#domainid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ebsoptions_go">
 <a href="#ebsoptions_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainebsoption">[]Get<wbr>Domain<wbr>Ebs<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}EBS Options for the instances in the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="elasticsearchversion_go">
 <a href="#elasticsearchversion_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ElasticSearch version for the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="encryptionatrests_go">
 <a href="#encryptionatrests_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>At<wbr>Rests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainencryptionatrest">[]Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest</a></span>
     </dt>
     <dd>{{% md %}}Domain encryption at rest related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kibanaendpoint_go">
 <a href="#kibanaendpoint_go" style="color: inherit; text-decoration: inherit;">Kibana<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to access the Kibana application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="logpublishingoptions_go">
 <a href="#logpublishingoptions_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Publishing<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainlogpublishingoption">[]Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Domain log publishing related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nodetonodeencryptions_go">
 <a href="#nodetonodeencryptions_go" style="color: inherit; text-decoration: inherit;">Node<wbr>To<wbr>Node<wbr>Encryptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainnodetonodeencryption">[]Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Domain in transit encryption related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="processing_go">
 <a href="#processing_go" style="color: inherit; text-decoration: inherit;">Processing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of a configuration change in the domain.
 * `snapshot_options` – Domain snapshot related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="snapshotoptions_go">
 <a href="#snapshotoptions_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsnapshotoption">[]Get<wbr>Domain<wbr>Snapshot<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpcoptions_go">
 <a href="#vpcoptions_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainvpcoption">[]Get<wbr>Domain<wbr>Vpc<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}VPC Options for private Elasticsearch domains.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -754,246 +692,223 @@ The following output properties are available:
             title="">
         <span id="accesspolicies_nodejs">
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy document attached to the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="advancedoptions_nodejs">
 <a href="#advancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="advancedsecurityoptions_nodejs">
 <a href="#advancedsecurityoptions_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Security<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainadvancedsecurityoption">Get<wbr>Domain<wbr>Advanced<wbr>Security<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Status of the Elasticsearch domain's advanced security options. The block consists of the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="clusterconfigs_nodejs">
 <a href="#clusterconfigs_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainclusterconfig">Get<wbr>Domain<wbr>Cluster<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cognitooptions_nodejs">
 <a href="#cognitooptions_nodejs" style="color: inherit; text-decoration: inherit;">cognito<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomaincognitooption">Get<wbr>Domain<wbr>Cognito<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Domain Amazon Cognito Authentication options for Kibana.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Status of the creation of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="deleted_nodejs">
 <a href="#deleted_nodejs" style="color: inherit; text-decoration: inherit;">deleted</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Status of the deletion of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domainid_nodejs">
 <a href="#domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ebsoptions_nodejs">
 <a href="#ebsoptions_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainebsoption">Get<wbr>Domain<wbr>Ebs<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}EBS Options for the instances in the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="elasticsearchversion_nodejs">
 <a href="#elasticsearchversion_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ElasticSearch version for the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="encryptionatrests_nodejs">
 <a href="#encryptionatrests_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>At<wbr>Rests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainencryptionatrest">Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest[]</a></span>
     </dt>
     <dd>{{% md %}}Domain encryption at rest related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kibanaendpoint_nodejs">
 <a href="#kibanaendpoint_nodejs" style="color: inherit; text-decoration: inherit;">kibana<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to access the Kibana application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="logpublishingoptions_nodejs">
 <a href="#logpublishingoptions_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Publishing<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainlogpublishingoption">Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Domain log publishing related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nodetonodeencryptions_nodejs">
 <a href="#nodetonodeencryptions_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>To<wbr>Node<wbr>Encryptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainnodetonodeencryption">Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption[]</a></span>
     </dt>
     <dd>{{% md %}}Domain in transit encryption related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="processing_nodejs">
 <a href="#processing_nodejs" style="color: inherit; text-decoration: inherit;">processing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Status of a configuration change in the domain.
 * `snapshot_options` – Domain snapshot related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="snapshotoptions_nodejs">
 <a href="#snapshotoptions_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainsnapshotoption">Get<wbr>Domain<wbr>Snapshot<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpcoptions_nodejs">
 <a href="#vpcoptions_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainvpcoption">Get<wbr>Domain<wbr>Vpc<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}VPC Options for private Elasticsearch domains.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1002,249 +917,223 @@ The following output properties are available:
             title="">
         <span id="access_policies_python">
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy document attached to the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="advanced_options_python">
 <a href="#advanced_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value string pairs to specify advanced configuration options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="advanced_security_options_python">
 <a href="#advanced_security_options_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>security_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainadvancedsecurityoption">List[Get<wbr>Domain<wbr>Advanced<wbr>Security<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getdomainadvancedsecurityoption">Sequence[Get<wbr>Domain<wbr>Advanced<wbr>Security<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}Status of the Elasticsearch domain's advanced security options. The block consists of the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cluster_configs_python">
 <a href="#cluster_configs_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainclusterconfig">List[Get<wbr>Domain<wbr>Cluster<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getdomainclusterconfig">Sequence[Get<wbr>Domain<wbr>Cluster<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="cognito_options_python">
 <a href="#cognito_options_python" style="color: inherit; text-decoration: inherit;">cognito_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomaincognitooption">List[Get<wbr>Domain<wbr>Cognito<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getdomaincognitooption">Sequence[Get<wbr>Domain<wbr>Cognito<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}Domain Amazon Cognito Authentication options for Kibana.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of the creation of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="deleted_python">
 <a href="#deleted_python" style="color: inherit; text-decoration: inherit;">deleted</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of the deletion of the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domain_id_python">
 <a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ebs_options_python">
 <a href="#ebs_options_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainebsoption">List[Get<wbr>Domain<wbr>Ebs<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getdomainebsoption">Sequence[Get<wbr>Domain<wbr>Ebs<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}EBS Options for the instances in the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="elasticsearch_version_python">
 <a href="#elasticsearch_version_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ElasticSearch version for the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="encryption_at_rests_python">
 <a href="#encryption_at_rests_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>at_<wbr>rests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainencryptionatrest">List[Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest]</a></span>
+        <span class="property-type"><a href="#getdomainencryptionatrest">Sequence[Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest]</a></span>
     </dt>
     <dd>{{% md %}}Domain encryption at rest related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kibana_endpoint_python">
 <a href="#kibana_endpoint_python" style="color: inherit; text-decoration: inherit;">kibana_<wbr>endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to access the Kibana application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="log_publishing_options_python">
 <a href="#log_publishing_options_python" style="color: inherit; text-decoration: inherit;">log_<wbr>publishing_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainlogpublishingoption">List[Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getdomainlogpublishingoption">Sequence[Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}Domain log publishing related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="node_to_node_encryptions_python">
 <a href="#node_to_node_encryptions_python" style="color: inherit; text-decoration: inherit;">node_<wbr>to_<wbr>node_<wbr>encryptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainnodetonodeencryption">List[Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption]</a></span>
+        <span class="property-type"><a href="#getdomainnodetonodeencryption">Sequence[Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption]</a></span>
     </dt>
     <dd>{{% md %}}Domain in transit encryption related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="processing_python">
 <a href="#processing_python" style="color: inherit; text-decoration: inherit;">processing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of a configuration change in the domain.
 * `snapshot_options` – Domain snapshot related options.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="snapshot_options_python">
 <a href="#snapshot_options_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainsnapshotoption">List[Get<wbr>Domain<wbr>Snapshot<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getdomainsnapshotoption">Sequence[Get<wbr>Domain<wbr>Snapshot<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags assigned to the domain.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpc_options_python">
 <a href="#vpc_options_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainvpcoption">List[Get<wbr>Domain<wbr>Vpc<wbr>Option]</a></span>
+        <span class="property-type"><a href="#getdomainvpcoption">Sequence[Get<wbr>Domain<wbr>Vpc<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}VPC Options for private Elasticsearch domains.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1253,17 +1142,6 @@ The following output properties are available:
 
 
 <h4 id="getdomainadvancedsecurityoption">Get<wbr>Domain<wbr>Advanced<wbr>Security<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainAdvancedSecurityOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch?tab=doc#GetDomainAdvancedSecurityOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.GetDomainAdvancedSecurityOption.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -1274,27 +1152,24 @@ The following output properties are available:
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="internaluserdatabaseenabled_csharp">
 <a href="#internaluserdatabaseenabled_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>User<wbr>Database<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the internal user database is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1303,27 +1178,24 @@ The following output properties are available:
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="internaluserdatabaseenabled_go">
 <a href="#internaluserdatabaseenabled_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>User<wbr>Database<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the internal user database is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1332,27 +1204,24 @@ The following output properties are available:
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="internaluserdatabaseenabled_nodejs">
 <a href="#internaluserdatabaseenabled_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>User<wbr>Database<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the internal user database is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1361,43 +1230,26 @@ The following output properties are available:
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="internaluserdatabaseenabled_python">
-<a href="#internaluserdatabaseenabled_python" style="color: inherit; text-decoration: inherit;">internal<wbr>User<wbr>Database<wbr>Enabled</a>
-</span> 
+        <span id="internal_user_database_enabled_python">
+<a href="#internal_user_database_enabled_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>user_<wbr>database_<wbr>enabled</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the internal user database is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getdomainclusterconfig">Get<wbr>Domain<wbr>Cluster<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainClusterConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch?tab=doc#GetDomainClusterConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.GetDomainClusterConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -1408,115 +1260,104 @@ The following output properties are available:
             title="Required">
         <span id="dedicatedmastercount_csharp">
 <a href="#dedicatedmastercount_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Master<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dedicatedmasterenabled_csharp">
 <a href="#dedicatedmasterenabled_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Master<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dedicatedmastertype_csharp">
 <a href="#dedicatedmastertype_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Master<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancecount_csharp">
 <a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type of data nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="warmcount_csharp">
 <a href="#warmcount_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of warm nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="warmtype_csharp">
 <a href="#warmtype_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneawarenessconfigs_csharp">
 <a href="#zoneawarenessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Awareness<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainclusterconfigzoneawarenessconfig">List&lt;Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing zone awareness settings.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneawarenessenabled_csharp">
 <a href="#zoneawarenessenabled_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Awareness<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warmenabled_csharp">
 <a href="#warmenabled_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates warm storage is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1525,115 +1366,104 @@ The following output properties are available:
             title="Required">
         <span id="dedicatedmastercount_go">
 <a href="#dedicatedmastercount_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Master<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dedicatedmasterenabled_go">
 <a href="#dedicatedmasterenabled_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Master<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dedicatedmastertype_go">
 <a href="#dedicatedmastertype_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Master<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancecount_go">
 <a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type of data nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="warmcount_go">
 <a href="#warmcount_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of warm nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="warmtype_go">
 <a href="#warmtype_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneawarenessconfigs_go">
 <a href="#zoneawarenessconfigs_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Awareness<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainclusterconfigzoneawarenessconfig">[]Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing zone awareness settings.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneawarenessenabled_go">
 <a href="#zoneawarenessenabled_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Awareness<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warmenabled_go">
 <a href="#warmenabled_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates warm storage is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1642,248 +1472,212 @@ The following output properties are available:
             title="Required">
         <span id="dedicatedmastercount_nodejs">
 <a href="#dedicatedmastercount_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dedicatedmasterenabled_nodejs">
 <a href="#dedicatedmasterenabled_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dedicatedmastertype_nodejs">
 <a href="#dedicatedmastertype_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancecount_nodejs">
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type of data nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="warmcount_nodejs">
 <a href="#warmcount_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of warm nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="warmtype_nodejs">
 <a href="#warmtype_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneawarenessconfigs_nodejs">
 <a href="#zoneawarenessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdomainclusterconfigzoneawarenessconfig">Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing zone awareness settings.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneawarenessenabled_nodejs">
 <a href="#zoneawarenessenabled_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warmenabled_nodejs">
 <a href="#warmenabled_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates warm storage is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="dedicatedmastercount_python">
-<a href="#dedicatedmastercount_python" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Count</a>
-</span> 
+        <span id="dedicated_master_count_python">
+<a href="#dedicated_master_count_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="dedicatedmasterenabled_python">
-<a href="#dedicatedmasterenabled_python" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Enabled</a>
-</span> 
+        <span id="dedicated_master_enabled_python">
+<a href="#dedicated_master_enabled_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>enabled</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="dedicatedmastertype_python">
-<a href="#dedicatedmastertype_python" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Type</a>
-</span> 
+        <span id="dedicated_master_type_python">
+<a href="#dedicated_master_type_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_count_python">
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance type of data nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="warmcount_python">
-<a href="#warmcount_python" style="color: inherit; text-decoration: inherit;">warm<wbr>Count</a>
-</span> 
+        <span id="warm_count_python">
+<a href="#warm_count_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of warm nodes in the cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="warmtype_python">
-<a href="#warmtype_python" style="color: inherit; text-decoration: inherit;">warm<wbr>Type</a>
-</span> 
+        <span id="warm_type_python">
+<a href="#warm_type_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="zoneawarenessconfigs_python">
-<a href="#zoneawarenessconfigs_python" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Configs</a>
-</span> 
+        <span id="zone_awareness_configs_python">
+<a href="#zone_awareness_configs_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>awareness_<wbr>configs</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdomainclusterconfigzoneawarenessconfig">List[Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config]</a></span>
+        <span class="property-type"><a href="#getdomainclusterconfigzoneawarenessconfig">Sequence[Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing zone awareness settings.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="zoneawarenessenabled_python">
-<a href="#zoneawarenessenabled_python" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Enabled</a>
-</span> 
+        <span id="zone_awareness_enabled_python">
+<a href="#zone_awareness_enabled_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>awareness_<wbr>enabled</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="warmenabled_python">
-<a href="#warmenabled_python" style="color: inherit; text-decoration: inherit;">warm<wbr>Enabled</a>
-</span> 
+        <span id="warm_enabled_python">
+<a href="#warm_enabled_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>enabled</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates warm storage is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getdomainclusterconfigzoneawarenessconfig">Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainClusterConfigZoneAwarenessConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch?tab=doc#GetDomainClusterConfigZoneAwarenessConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.GetDomainClusterConfigZoneAwarenessConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -1894,16 +1688,14 @@ The following output properties are available:
             title="Required">
         <span id="availabilityzonecount_csharp">
 <a href="#availabilityzonecount_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1912,16 +1704,14 @@ The following output properties are available:
             title="Required">
         <span id="availabilityzonecount_go">
 <a href="#availabilityzonecount_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1930,50 +1720,32 @@ The following output properties are available:
             title="Required">
         <span id="availabilityzonecount_nodejs">
 <a href="#availabilityzonecount_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="availabilityzonecount_python">
-<a href="#availabilityzonecount_python" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Count</a>
-</span> 
+        <span id="availability_zone_count_python">
+<a href="#availability_zone_count_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getdomaincognitooption">Get<wbr>Domain<wbr>Cognito<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainCognitoOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch?tab=doc#GetDomainCognitoOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.GetDomainCognitoOption.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -1984,49 +1756,44 @@ The following output properties are available:
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="identitypoolid_csharp">
 <a href="#identitypoolid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity pool used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Role with the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="userpoolid_csharp">
 <a href="#userpoolid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito User pool used by the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2035,49 +1802,44 @@ The following output properties are available:
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="identitypoolid_go">
 <a href="#identitypoolid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity pool used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Role with the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="userpoolid_go">
 <a href="#userpoolid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito User pool used by the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2086,49 +1848,44 @@ The following output properties are available:
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="identitypoolid_nodejs">
 <a href="#identitypoolid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity pool used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Role with the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="userpoolid_nodejs">
 <a href="#userpoolid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito User pool used by the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2137,65 +1894,46 @@ The following output properties are available:
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="identity_pool_id_python">
 <a href="#identity_pool_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>pool_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity pool used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM Role with the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="user_pool_id_python">
 <a href="#user_pool_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cognito User pool used by the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getdomainebsoption">Get<wbr>Domain<wbr>Ebs<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainEbsOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch?tab=doc#GetDomainEbsOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.GetDomainEbsOption.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -2206,50 +1944,44 @@ The following output properties are available:
             title="Required">
         <span id="ebsenabled_csharp">
 <a href="#ebsenabled_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether EBS volumes are attached to data nodes in the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iops_csharp">
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes
-attached to data nodes.
+    <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2258,50 +1990,44 @@ attached to data nodes.
             title="Required">
         <span id="ebsenabled_go">
 <a href="#ebsenabled_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether EBS volumes are attached to data nodes in the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iops_go">
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes
-attached to data nodes.
+    <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumesize_go">
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2310,118 +2036,92 @@ attached to data nodes.
             title="Required">
         <span id="ebsenabled_nodejs">
 <a href="#ebsenabled_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether EBS volumes are attached to data nodes in the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iops_nodejs">
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes
-attached to data nodes.
+    <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="ebsenabled_python">
-<a href="#ebsenabled_python" style="color: inherit; text-decoration: inherit;">ebs<wbr>Enabled</a>
-</span> 
+        <span id="ebs_enabled_python">
+<a href="#ebs_enabled_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>enabled</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether EBS volumes are attached to data nodes in the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iops_python">
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes
-attached to data nodes.
+    <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of EBS volumes attached to data nodes.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of EBS volumes attached to data nodes.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getdomainencryptionatrest">Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainEncryptionAtRest">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch?tab=doc#GetDomainEncryptionAtRest">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.GetDomainEncryptionAtRest.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -2432,27 +2132,24 @@ attached to data nodes.
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS key id used to encrypt data at rest.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2461,27 +2158,24 @@ attached to data nodes.
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS key id used to encrypt data at rest.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2490,27 +2184,24 @@ attached to data nodes.
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS key id used to encrypt data at rest.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2519,43 +2210,26 @@ attached to data nodes.
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The KMS key id used to encrypt data at rest.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getdomainlogpublishingoption">Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainLogPublishingOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch?tab=doc#GetDomainLogPublishingOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.GetDomainLogPublishingOption.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -2566,38 +2240,34 @@ attached to data nodes.
             title="Required">
         <span id="cloudwatchloggrouparn_csharp">
 <a href="#cloudwatchloggrouparn_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch Log Group where the logs are published.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="logtype_csharp">
 <a href="#logtype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Elasticsearch log being published.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2606,38 +2276,34 @@ attached to data nodes.
             title="Required">
         <span id="cloudwatchloggrouparn_go">
 <a href="#cloudwatchloggrouparn_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch Log Group where the logs are published.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="logtype_go">
 <a href="#logtype_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Elasticsearch log being published.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2646,38 +2312,34 @@ attached to data nodes.
             title="Required">
         <span id="cloudwatchloggrouparn_nodejs">
 <a href="#cloudwatchloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch Log Group where the logs are published.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="logtype_nodejs">
 <a href="#logtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Elasticsearch log being published.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2686,54 +2348,36 @@ attached to data nodes.
             title="Required">
         <span id="cloudwatch_log_group_arn_python">
 <a href="#cloudwatch_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>log_<wbr>group_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CloudWatch Log Group where the logs are published.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="logtype_python">
-<a href="#logtype_python" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
-</span> 
+        <span id="log_type_python">
+<a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Elasticsearch log being published.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getdomainnodetonodeencryption">Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainNodeToNodeEncryption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch?tab=doc#GetDomainNodeToNodeEncryption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.GetDomainNodeToNodeEncryption.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -2744,16 +2388,14 @@ attached to data nodes.
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2762,16 +2404,14 @@ attached to data nodes.
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2780,16 +2420,14 @@ attached to data nodes.
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2798,32 +2436,16 @@ attached to data nodes.
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getdomainsnapshotoption">Get<wbr>Domain<wbr>Snapshot<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainSnapshotOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch?tab=doc#GetDomainSnapshotOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.GetDomainSnapshotOption.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -2834,17 +2456,14 @@ attached to data nodes.
             title="Required">
         <span id="automatedsnapshotstarthour_csharp">
 <a href="#automatedsnapshotstarthour_csharp" style="color: inherit; text-decoration: inherit;">Automated<wbr>Snapshot<wbr>Start<wbr>Hour</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Hour during which the service takes an automated daily
-snapshot of the indices in the domain.
+    <dd>{{% md %}}Hour during which the service takes an automated daily snapshot of the indices in the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2853,17 +2472,14 @@ snapshot of the indices in the domain.
             title="Required">
         <span id="automatedsnapshotstarthour_go">
 <a href="#automatedsnapshotstarthour_go" style="color: inherit; text-decoration: inherit;">Automated<wbr>Snapshot<wbr>Start<wbr>Hour</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Hour during which the service takes an automated daily
-snapshot of the indices in the domain.
+    <dd>{{% md %}}Hour during which the service takes an automated daily snapshot of the indices in the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2872,52 +2488,32 @@ snapshot of the indices in the domain.
             title="Required">
         <span id="automatedsnapshotstarthour_nodejs">
 <a href="#automatedsnapshotstarthour_nodejs" style="color: inherit; text-decoration: inherit;">automated<wbr>Snapshot<wbr>Start<wbr>Hour</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Hour during which the service takes an automated daily
-snapshot of the indices in the domain.
+    <dd>{{% md %}}Hour during which the service takes an automated daily snapshot of the indices in the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="automatedsnapshotstarthour_python">
-<a href="#automatedsnapshotstarthour_python" style="color: inherit; text-decoration: inherit;">automated<wbr>Snapshot<wbr>Start<wbr>Hour</a>
-</span> 
+        <span id="automated_snapshot_start_hour_python">
+<a href="#automated_snapshot_start_hour_python" style="color: inherit; text-decoration: inherit;">automated_<wbr>snapshot_<wbr>start_<wbr>hour</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Hour during which the service takes an automated daily
-snapshot of the indices in the domain.
+    <dd>{{% md %}}Hour during which the service takes an automated daily snapshot of the indices in the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="getdomainvpcoption">Get<wbr>Domain<wbr>Vpc<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainVpcOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticsearch?tab=doc#GetDomainVpcOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticSearch.Outputs.GetDomainVpcOption.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -2928,49 +2524,44 @@ snapshot of the indices in the domain.
             title="Required">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC used by the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2979,49 +2570,44 @@ snapshot of the indices in the domain.
             title="Required">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC used by the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3030,49 +2616,44 @@ snapshot of the indices in the domain.
             title="Required">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC used by the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3081,52 +2662,44 @@ snapshot of the indices in the domain.
             title="Required">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC used by the domain.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

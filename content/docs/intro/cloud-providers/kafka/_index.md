@@ -66,15 +66,25 @@ topic = kafka.Topic("topic",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  kafka "github.com/pulumi/pulumi-kafka/sdk/v2/go/kafka"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	kafka "github.com/pulumi/pulumi-kafka/sdk/v2/go/kafka"
 )
 
-topic, _ := kafka.NewTopic(ctx, "topic", &kafka.TopicArgs{
-  Name:              pulumi.String("sample-topic"),
-  ReplicationFactor: pulumi.Int(1),
-  Partitions:        pulumi.Int(4),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		topic, err := kafka.NewTopic(ctx, "topic", &kafka.TopicArgs{
+			Name:              pulumi.String("sample-topic"),
+			ReplicationFactor: pulumi.Int(1),
+			Partitions:        pulumi.Int(4),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

@@ -22,6 +22,7 @@ A Pulumi package for creating and managing auth0 cloud resources.
     <li><a href="emailtemplate" title="EmailTemplate"><span class="symbol resource"></span>EmailTemplate</a></li>
     <li><a href="globalclient" title="GlobalClient"><span class="symbol resource"></span>GlobalClient</a></li>
     <li><a href="hook" title="Hook"><span class="symbol resource"></span>Hook</a></li>
+    <li><a href="logstream" title="LogStream"><span class="symbol resource"></span>LogStream</a></li>
     <li><a href="prompt" title="Prompt"><span class="symbol resource"></span>Prompt</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="resourceserver" title="ResourceServer"><span class="symbol resource"></span>ResourceServer</a></li>
@@ -39,26 +40,8 @@ A Pulumi package for creating and managing auth0 cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`auth0` Terraform Provider](https://github.com/terraform-providers/terraform-provider-auth0).</dd>
+	<dd>This Pulumi package is based on the [`auth0` Terraform Provider](https://github.com/alexkappa/terraform-provider-auth0).</dd>
 	<dt>Version</dt>
-	<dd>1.0.2</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.html" title="Pulumi.Auth0">Pulumi.Auth0</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#" title="auth0">auth0</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#" title="@pulumi/auth0">@pulumi/auth0</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_auth0" title="pulumi_auth0">pulumi_auth0</a></dd>
-
+	<dd>1.8.0</dd>
 </dl>
 

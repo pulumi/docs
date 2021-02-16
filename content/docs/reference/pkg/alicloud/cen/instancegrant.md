@@ -1,8 +1,8 @@
 
 ---
 title: "InstanceGrant"
-title_tag: "Resource InstanceGrant | Module cen | Package AliCloud"
-meta_desc: "Explore the InstanceGrant resource of the cen module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CEN child instance grant resource, which allow you to authorize a VPC or VBR to a CEN of a different account."
+title_tag: "alicloud.cen.InstanceGrant"
+meta_desc: "Documentation for the alicloud.cen.InstanceGrant resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -43,23 +43,40 @@ class MyStack : Stack
         var name = config.Get("name") ?? "tf-testAccCenInstanceGrantBasic";
         var cen = new AliCloud.Cen.Instance("cen", new AliCloud.Cen.InstanceArgs
         {
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud.Account2,
         });
         var vpc = new AliCloud.Vpc.Network("vpc", new AliCloud.Vpc.NetworkArgs
         {
             CidrBlock = "192.168.0.0/16",
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud.Account1,
         });
         var fooInstanceGrant = new AliCloud.Cen.InstanceGrant("fooInstanceGrant", new AliCloud.Cen.InstanceGrantArgs
         {
             CenId = cen.Id,
-            CenOwnerId = "uid2",
             ChildInstanceId = vpc.Id,
+            CenOwnerId = "uid2",
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud.Account1,
         });
         var fooInstanceAttachment = new AliCloud.Cen.InstanceAttachment("fooInstanceAttachment", new AliCloud.Cen.InstanceAttachmentArgs
         {
-            ChildInstanceId = vpc.Id,
-            ChildInstanceOwnerId = "uid1",
-            ChildInstanceRegionId = "cn-qingdao",
             InstanceId = cen.Id,
+            ChildInstanceId = vpc.Id,
+            ChildInstanceType = "VPC",
+            ChildInstanceRegionId = "cn-qingdao",
+            ChildInstanceOwnerId = "uid1",
+        }, new CustomResourceOptions
+        {
+            Provider = alicloud.Account2,
+            DependsOn = 
+            {
+                fooInstanceGrant,
+            },
         });
     }
 
@@ -69,7 +86,73 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/providers"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := providers.Newalicloud(ctx, "account1", &providers.alicloudArgs{
+			AccessKey: pulumi.String("access123"),
+			SecretKey: pulumi.String("secret123"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = providers.Newalicloud(ctx, "account2", &providers.alicloudArgs{
+			AccessKey: pulumi.String("access456"),
+			SecretKey: pulumi.String("secret456"),
+		})
+		if err != nil {
+			return err
+		}
+		cfg := config.New(ctx, "")
+		name := "tf-testAccCenInstanceGrantBasic"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		cen, err := cen.NewInstance(ctx, "cen", nil, pulumi.Provider(alicloud.Account2))
+		if err != nil {
+			return err
+		}
+		vpc, err := vpc.NewNetwork(ctx, "vpc", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("192.168.0.0/16"),
+		}, pulumi.Provider(alicloud.Account1))
+		if err != nil {
+			return err
+		}
+		fooInstanceGrant, err := cen.NewInstanceGrant(ctx, "fooInstanceGrant", &cen.InstanceGrantArgs{
+			CenId:           cen.ID(),
+			ChildInstanceId: vpc.ID(),
+			CenOwnerId:      pulumi.String("uid2"),
+		}, pulumi.Provider(alicloud.Account1))
+		if err != nil {
+			return err
+		}
+		_, err = cen.NewInstanceAttachment(ctx, "fooInstanceAttachment", &cen.InstanceAttachmentArgs{
+			InstanceId:            cen.ID(),
+			ChildInstanceId:       vpc.ID(),
+			ChildInstanceType:     pulumi.String("VPC"),
+			ChildInstanceRegionId: pulumi.String("cn-qingdao"),
+			ChildInstanceOwnerId:  pulumi.Int("uid1"),
+		}, pulumi.Provider(alicloud.Account2), pulumi.DependsOn([]pulumi.Resource{
+			fooInstanceGrant,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -89,17 +172,22 @@ config = pulumi.Config()
 name = config.get("name")
 if name is None:
     name = "tf-testAccCenInstanceGrantBasic"
-cen = alicloud.cen.Instance("cen")
-vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/16")
+cen = alicloud.cen.Instance("cen", opts=pulumi.ResourceOptions(provider=alicloud["account2"]))
+vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/16",
+opts=pulumi.ResourceOptions(provider=alicloud["account1"]))
 foo_instance_grant = alicloud.cen.InstanceGrant("fooInstanceGrant",
     cen_id=cen.id,
-    cen_owner_id="uid2",
-    child_instance_id=vpc.id)
-foo_instance_attachment = alicloud.cen.InstanceAttachment("fooInstanceAttachment",
     child_instance_id=vpc.id,
-    child_instance_owner_id="uid1",
+    cen_owner_id="uid2",
+    opts=pulumi.ResourceOptions(provider=alicloud["account1"]))
+foo_instance_attachment = alicloud.cen.InstanceAttachment("fooInstanceAttachment",
+    instance_id=cen.id,
+    child_instance_id=vpc.id,
+    child_instance_type="VPC",
     child_instance_region_id="cn-qingdao",
-    instance_id=cen.id)
+    child_instance_owner_id="uid1",
+    opts=pulumi.ResourceOptions(provider=alicloud["account2"],
+        depends_on=[foo_instance_grant]))
 ```
 
 {{% /example %}}
@@ -110,9 +198,6 @@ foo_instance_attachment = alicloud.cen.InstanceAttachment("fooInstanceAttachment
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const config = new pulumi.Config();
-const name = config.get("name") || "tf-testAccCenInstanceGrantBasic";
-
 // Create a new instance-grant and use it to grant one child instance of account1 to a new CEN of account 2.
 const account1 = new alicloud.Provider("account1", {
     accessKey: "access123",
@@ -122,21 +207,31 @@ const account2 = new alicloud.Provider("account2", {
     accessKey: "access456",
     secretKey: "secret456",
 });
-const cen = new alicloud.cen.Instance("cen", {}, { provider: account2 });
-const vpc = new alicloud.vpc.Network("vpc", {
-    cidrBlock: "192.168.0.0/16",
-}, { provider: account1 });
-const fooInstanceGrant = new alicloud.cen.InstanceGrant("foo", {
+const config = new pulumi.Config();
+const name = config.get("name") || "tf-testAccCenInstanceGrantBasic";
+const cen = new alicloud.cen.Instance("cen", {}, {
+    provider: alicloud.account2,
+});
+const vpc = new alicloud.vpc.Network("vpc", {cidrBlock: "192.168.0.0/16"}, {
+    provider: alicloud.account1,
+});
+const fooInstanceGrant = new alicloud.cen.InstanceGrant("fooInstanceGrant", {
     cenId: cen.id,
+    childInstanceId: vpc.id,
     cenOwnerId: "uid2",
-    childInstanceId: vpc.id,
-}, { provider: account1 });
-const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
-    childInstanceId: vpc.id,
-    childInstanceOwnerId: "uid1",
-    childInstanceRegionId: "cn-qingdao",
+}, {
+    provider: alicloud.account1,
+});
+const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("fooInstanceAttachment", {
     instanceId: cen.id,
-}, { provider: account2, dependsOn: [fooInstanceGrant] });
+    childInstanceId: vpc.id,
+    childInstanceType: "VPC",
+    childInstanceRegionId: "cn-qingdao",
+    childInstanceOwnerId: "uid1",
+}, {
+    provider: alicloud.account2,
+    dependsOn: [fooInstanceGrant],
+});
 ```
 
 {{% /example %}}
@@ -149,19 +244,19 @@ const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#InstanceGrant">InstanceGrant</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#InstanceGrantArgs">InstanceGrantArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#InstanceGrant">InstanceGrant</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#InstanceGrantArgs">InstanceGrantArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.InstanceGrant">InstanceGrant</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cen_id=None<span class="p">, </span>cen_owner_id=None<span class="p">, </span>child_instance_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cen/#pulumi_alicloud.cen.InstanceGrant">InstanceGrant</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">child_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#InstanceGrant">NewInstanceGrant</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#InstanceGrantArgs">InstanceGrantArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#InstanceGrant">InstanceGrant</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#InstanceGrant">NewInstanceGrant</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#InstanceGrantArgs">InstanceGrantArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#InstanceGrant">InstanceGrant</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.InstanceGrant.html">InstanceGrant</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.InstanceGrantArgs.html">InstanceGrantArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.InstanceGrant.html">InstanceGrant</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.InstanceGrantArgs.html">InstanceGrantArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -172,7 +267,7 @@ const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -241,7 +336,7 @@ const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -280,7 +375,7 @@ const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -321,7 +416,6 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -329,38 +423,34 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="cenid_csharp">
 <a href="#cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cenownerid_csharp">
 <a href="#cenownerid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner UID of the  CEN which the child instance granted to.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="childinstanceid_csharp">
 <a href="#childinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to grant.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -369,38 +459,34 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="cenid_go">
 <a href="#cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cenownerid_go">
 <a href="#cenownerid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner UID of the  CEN which the child instance granted to.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="childinstanceid_go">
 <a href="#childinstanceid_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to grant.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -409,38 +495,34 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="cenid_nodejs">
 <a href="#cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cenownerid_nodejs">
 <a href="#cenownerid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner UID of the  CEN which the child instance granted to.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="childinstanceid_nodejs">
 <a href="#childinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to grant.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -449,47 +531,39 @@ The InstanceGrant resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="cen_id_python">
 <a href="#cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cen_owner_id_python">
 <a href="#cen_owner_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>owner_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner UID of the  CEN which the child instance granted to.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="child_instance_id_python">
 <a href="#child_instance_id_python" style="color: inherit; text-decoration: inherit;">child_<wbr>instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to grant.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the InstanceGrant resource produces the following output properties:
-
 
 
 
@@ -500,15 +574,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -517,15 +589,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -534,15 +604,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -551,18 +619,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -572,19 +635,20 @@ Get an existing InstanceGrant resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#InstanceGrantState">InstanceGrantState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#InstanceGrant">InstanceGrant</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#InstanceGrantState">InstanceGrantState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#InstanceGrant">InstanceGrant</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cen_id=None<span class="p">, </span>cen_owner_id=None<span class="p">, </span>child_instance_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cen_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cen_owner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">child_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> InstanceGrant</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceGrant<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#InstanceGrantState">InstanceGrantState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#InstanceGrant">InstanceGrant</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceGrant<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#InstanceGrantState">InstanceGrantState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#InstanceGrant">InstanceGrant</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.InstanceGrant.html">InstanceGrant</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.InstanceGrantState.html">InstanceGrantState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.InstanceGrant.html">InstanceGrant</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.InstanceGrantState.html">InstanceGrantState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -686,7 +750,6 @@ Get an existing InstanceGrant resource's state with the given name, ID, and opti
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -694,38 +757,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cenid_csharp">
 <a href="#state_cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cenownerid_csharp">
 <a href="#state_cenownerid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner UID of the  CEN which the child instance granted to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_childinstanceid_csharp">
 <a href="#state_childinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to grant.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -734,38 +793,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cenid_go">
 <a href="#state_cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cenownerid_go">
 <a href="#state_cenownerid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner UID of the  CEN which the child instance granted to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_childinstanceid_go">
 <a href="#state_childinstanceid_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to grant.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -774,38 +829,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cenid_nodejs">
 <a href="#state_cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cenownerid_nodejs">
 <a href="#state_cenownerid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Owner<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner UID of the  CEN which the child instance granted to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_childinstanceid_nodejs">
 <a href="#state_childinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Instance<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to grant.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -814,35 +865,32 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cen_id_python">
 <a href="#state_cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cen_owner_id_python">
 <a href="#state_cen_owner_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>owner_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner UID of the  CEN which the child instance granted to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_child_instance_id_python">
 <a href="#state_child_instance_id_python" style="color: inherit; text-decoration: inherit;">child_<wbr>instance_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to grant.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -850,8 +898,14 @@ The following state arguments are supported:
 
 
 
+## Import
 
 
+CEN instance can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cen/instanceGrant:InstanceGrant example cen-abc123456:vpc-abc123456:uid123456
+```
 
 
 
@@ -863,6 +917,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

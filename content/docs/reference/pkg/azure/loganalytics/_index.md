@@ -11,9 +11,15 @@ Explore the resources and functions of the loganalytics module in the Azure pack
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="clustercustomermanagedkey" title="ClusterCustomerManagedKey"><span class="symbol resource"></span>ClusterCustomerManagedKey</a></li>
+    <li><a href="dataexportrule" title="DataExportRule"><span class="symbol resource"></span>DataExportRule</a></li>
     <li><a href="datasourcewindowsevent" title="DataSourceWindowsEvent"><span class="symbol resource"></span>DataSourceWindowsEvent</a></li>
     <li><a href="datasourcewindowsperformancecounter" title="DataSourceWindowsPerformanceCounter"><span class="symbol resource"></span>DataSourceWindowsPerformanceCounter</a></li>
     <li><a href="linkedservice" title="LinkedService"><span class="symbol resource"></span>LinkedService</a></li>
+    <li><a href="linkedstorageaccount" title="LinkedStorageAccount"><span class="symbol resource"></span>LinkedStorageAccount</a></li>
+    <li><a href="savedsearch" title="SavedSearch"><span class="symbol resource"></span>SavedSearch</a></li>
+    <li><a href="storageinsights" title="StorageInsights"><span class="symbol resource"></span>StorageInsights</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -25,7 +31,7 @@ Explore the resources and functions of the loganalytics module in the Azure pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.17.0</dd>
+	<dd>3.46.0</dd>
 </dl>
 
 

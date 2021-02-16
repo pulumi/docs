@@ -5,7 +5,7 @@ meta_desc: An overview of how to use Node.js languages like JavaScript and TypeS
 menu:
   intro:
     parent: languages
-    weight: 3
+    weight: 1
 
 aliases: ["/docs/reference/javascript/"]
 ---
@@ -30,6 +30,10 @@ $ pulumi new javascript
 ```
 
 This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}), a `package.json` file for dependencies, and an `index.js` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml`.
+
+## Pulumi Programming Model
+
+The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with JavaScript and Pulumi, and the [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
 
 ## Entrypoint
 
@@ -130,7 +134,7 @@ is what tells Node.js and NPM what packages you depend on, where to find your co
 }
 ```
 
-You can customize this however you'd like, such as adding test scripts, npm package dependencies, etc.  For more information on `package.json`, please refer to [the NPM documentation](https://docs.npmjs.com/files/package.json).
+You can customize this however you'd like, such as adding test scripts, npm package dependencies, etc.  For more information on `package.json`, refer to [the NPM documentation](https://docs.npmjs.com/files/package.json).
 
 ### 2. Install dependencies
 

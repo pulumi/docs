@@ -48,6 +48,14 @@
     }
 }
 
+.btn-purple-transparent {
+    @apply bg-transparent border-purple-500 text-purple-500;
+
+    &:hover {
+        @apply bg-purple-500 text-white border-purple-500;
+    }
+}
+
 .btn-white {
     @apply bg-white text-gray-900 border-white;
 

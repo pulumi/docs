@@ -13,11 +13,13 @@ Explore the resources and functions of the cfg module in the AWS package.
 <ul class="api">
     <li><a href="aggregateauthorization" title="AggregateAuthorization"><span class="symbol resource"></span>AggregateAuthorization</a></li>
     <li><a href="configurationaggregator" title="ConfigurationAggregator"><span class="symbol resource"></span>ConfigurationAggregator</a></li>
+    <li><a href="conformancepack" title="ConformancePack"><span class="symbol resource"></span>ConformancePack</a></li>
     <li><a href="deliverychannel" title="DeliveryChannel"><span class="symbol resource"></span>DeliveryChannel</a></li>
     <li><a href="organizationcustomrule" title="OrganizationCustomRule"><span class="symbol resource"></span>OrganizationCustomRule</a></li>
     <li><a href="organizationmanagedrule" title="OrganizationManagedRule"><span class="symbol resource"></span>OrganizationManagedRule</a></li>
     <li><a href="recorder" title="Recorder"><span class="symbol resource"></span>Recorder</a></li>
     <li><a href="recorderstatus" title="RecorderStatus"><span class="symbol resource"></span>RecorderStatus</a></li>
+    <li><a href="remediationconfiguration" title="RemediationConfiguration"><span class="symbol resource"></span>RemediationConfiguration</a></li>
     <li><a href="rule" title="Rule"><span class="symbol resource"></span>Rule</a></li>
 </ul>
 
@@ -30,24 +32,6 @@ Explore the resources and functions of the cfg module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.html" title="Pulumi.Aws.Cfg">Pulumi.Aws.Cfg</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cfg?tab=doc#" title="aws/cfg">aws/cfg</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#" title="@pulumi/aws/cfg">@pulumi/aws/cfg</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/cfg" title="pulumi_aws/cfg">pulumi_aws/cfg</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

@@ -27,26 +27,8 @@ Explore the resources and functions of the identityplatform module in the GCP pa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.IdentityPlatform.html" title="Pulumi.Gcp.IdentityPlatform">Pulumi.Gcp.IdentityPlatform</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/identityplatform?tab=doc#" title="gcp/identityplatform">gcp/identityplatform</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/identityplatform/#" title="@pulumi/gcp/identityplatform">@pulumi/gcp/identityplatform</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/identityplatform" title="pulumi_gcp/identityplatform">pulumi_gcp/identityplatform</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

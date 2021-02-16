@@ -243,7 +243,7 @@ const cluster = new eks.Cluster("my-cluster", {
 export const kubeconfig = cluster.kubeconfig;
 ```
 
-For a full list of options that you may set on your cluster, please [see the API documentation](
+For a full list of options that you may set on your cluster, see the [API documentation](
 {{< relref "/docs/reference/pkg/nodejs/pulumi/eks#ClusterOptions" >}}). Many common cases are described below.
 
 ## Configuring Your EKS Cluster's Networking
@@ -397,7 +397,7 @@ export const kubeconfig = cluster.kubeconfig;
 
 After configuring such a cluster, we would then want to ensure our workload's pods are scheduled correctly on the
 right nodes. To do so, you will use a combination of node selectors, taints, and/or tolerances. For more information,
-please see [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) and
+see [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/) and
 [Taints and Tolerances](https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/).
 
 ## Managing EKS Cluster Authentication with IAM
@@ -412,13 +412,13 @@ admins, automation accounts (for CI/CD), and production roles, and supply them t
 placing them in the `aws-auth` ConfigMap for your cluster automatically. Pulumi also lets you configure Kubernetes
 objects, so that can also then create the RBAC cluster role bindings in your cluster to tie everything together.
 
-For a complete example of this in action, please see
+For a complete example of this in action, see
 [Simplifying Kubernetes RBAC in Amazon EKS]({{< relref "simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages" >}}).
 
 ## Deploying Kubernetes Apps to Your EKS Cluster
 
-Pulumi supports the entire Kubernetes object model in the [@pulumi/kubernetes]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
-package. For more information on these object types, including Deployments, Services, and Pods, please see
+Pulumi supports the entire Kubernetes object model in the [@pulumi/kubernetes]({{< relref "/docs/reference/pkg/kubernetes" >}})
+package. For more information on these object types, including Deployments, Services, and Pods, see
 [Understanding Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/).
 
 With Pulumi, you describe your desired Kubernetes configuration, and `pulumi up` will diff between the current
@@ -544,9 +544,9 @@ Specifying your Kubernetes object configurations in Pulumi lets you take advanta
 like variables, loops, conditionals, functions, and classes. It is possible, however, to deploy existing Kubernetes
 YAML. The two approaches can be mixed, which is useful when converting an existing project.
 
-The [`ConfigFile` class]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes/yaml#ConfigFile" >}}) can be
+The [`ConfigFile` class]({{< relref "/docs/reference/pkg/kubernetes/yaml/configfile" >}}) can be
 used to deploy a single YAML file, whereas the [`ConfigGroup` class](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes/yaml#ConfigFile" >}}) can deploy
+{{< relref "/docs/reference/pkg/kubernetes/yaml/configgroup" >}}) can deploy
 a collection of files, either from a set of files or in-memory representations.
 
 For example, imagine we have a directory, `yaml/`, containing the full YAML for the [Kubernetes Guestbook application](
@@ -571,7 +571,7 @@ export const frontendIp = guestbook.getResource("v1/Service", "frontend", "spec"
 ```
 
 The `ConfigFile` and `ConfigGroup` classes both support a [`transformations` property](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes#ConfigGroup-transformations" >}}) which can be used to ["monkey patch"](
+{{< relref "/docs/reference/pkg/kubernetes#transformations_nodejs" >}}) which can be used to ["monkey patch"](
 https://en.wikipedia.org/wiki/Monkey_patch) Kubernetes configuration on the fly. This can be used to rewrite
 configuration to include additional services (like Envoy sidecars), inject tags, and so on.
 
@@ -626,7 +626,7 @@ import * as k8s from "@pulumi/kubernetes";
 const cluster = new eks.Cluster("my-cluster");
 
 // Deploy Wordpress into our cluster.
-const wordpress = new k8s.helm.v2.Chart("wordpress", {
+const wordpress = new k8s.helm.v3.Chart("wordpress", {
     repo: "stable",
     chart: "wordpress",
     values: {
@@ -654,7 +654,7 @@ depending on this, however, as it is an implementation detail of the chart and w
 As mentioned, there are other ways to fetch the chart's contents. For example, we can use a custom repo:
 
 ```typescript
-const chart = new k8s.helm.v2.Chart("empty", {
+const chart = new k8s.helm.v3.Chart("empty", {
     chart: "raw",
     version: "0.1.0",
     fetchOpts: {
@@ -666,7 +666,7 @@ const chart = new k8s.helm.v2.Chart("empty", {
 Or, we can use a tarball fetched from a web URL:
 
 ```typescript
-const chart = new k8s.helm.v2.Chart("empty1", {
+const chart = new k8s.helm.v3.Chart("empty1", {
     chart: "https://kubernetes-charts-incubator.storage.googleapis.com/raw-0.1.0.tgz",
 });
 ```
@@ -729,13 +729,13 @@ const service = new k8s.core.v1.Service(`${appName}-svc`, {
 export const url = service.status.loadBalancer.ingress[0].hostname;
 ```
 
-For more information about ECR, please see [the Pulumi Crosswalk for AWS ECR documentation]({{< relref "ecr" >}}).
+For more information about ECR, see [the Pulumi Crosswalk for AWS ECR documentation]({{< relref "ecr" >}}).
 
 ## Additional EKS Resources
 
-For more information about Kubernetes and EKS, please see the following:
+For more information about Kubernetes and EKS, see the following:
 
-* [Pulumi Kubernetes API Documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetes" >}})
+* [Pulumi Kubernetes API Documentation]({{< relref "/docs/reference/pkg/kubernetes" >}})
 * [Pulumi EKS API Documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks" >}})
 * [Amazon Elastic Kubernetes Service homepage](https://aws.amazon.com/eks/)
 * [Kubernetes Documentation](https://kubernetes.io)

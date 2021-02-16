@@ -17,6 +17,36 @@ The current stable version of Pulumi is **{{< latest-version >}}**.
         </tr>
     </thead>
     <tbody>
+        {{< changelog-table-row version="2.20.0" date="2021-02-03" >}}
+        {{< changelog-table-row version="2.19.0" date="2021-01-28" >}}
+        {{< changelog-table-row version="2.18.2" date="2021-01-22" >}}
+        {{< changelog-table-row version="2.18.1" date="2021-01-21" >}}
+        {{< changelog-table-row version="2.17.2" date="2021-01-15" >}}
+        {{< changelog-table-row version="2.17.1" date="2021-01-13" >}}
+        {{< changelog-table-row version="2.17.0" date="2021-01-06" >}}
+        {{< changelog-table-row version="2.16.2" date="2020-12-23" >}}
+        {{< changelog-table-row version="2.16.1" date="2020-12-23" >}}
+        {{< changelog-table-row version="2.16.0" date="2020-12-21" >}}
+        {{< changelog-table-row version="2.15.6" date="2020-12-12" >}}
+        {{< changelog-table-row version="2.15.5" date="2020-12-11" >}}
+        {{< changelog-table-row version="2.15.4" date="2020-12-08" >}}
+        {{< changelog-table-row version="2.15.3" date="2020-12-07" >}}
+        {{< changelog-table-row version="2.15.2" date="2020-12-07" >}}
+        {{< changelog-table-row version="2.15.1" date="2020-12-04" >}}
+        {{< changelog-table-row version="2.15.0" date="2020-12-02" >}}
+        {{< changelog-table-row version="2.14.0" date="2020-11-18" >}}
+        {{< changelog-table-row version="2.13.2" date="2020-11-06" >}}
+        {{< changelog-table-row version="2.13.1" date="2020-11-06" >}}
+        {{< changelog-table-row version="2.13.0" date="2020-11-04" >}}
+        {{< changelog-table-row version="2.12.1" date="2020-10-23" >}}
+        {{< changelog-table-row version="2.12.0" date="2020-10-14" >}}
+        {{< changelog-table-row version="2.11.2" date="2020-10-01" >}}
+        {{< changelog-table-row version="2.11.1" date="2020-10-01" >}}
+        {{< changelog-table-row version="2.10.2" date="2020-09-21" >}}
+        {{< changelog-table-row version="2.10.1" date="2020-09-16" >}}
+        {{< changelog-table-row version="2.10.0" date="2020-09-10" >}}
+        {{< changelog-table-row version="2.9.2" date="2020-08-31" >}}
+        {{< changelog-table-row version="2.9.1" date="2020-08-27" >}}
         {{< changelog-table-row version="2.9.0" date="2020-08-19" >}}
         {{< changelog-table-row version="2.8.2" date="2020-08-07" >}}
         {{< changelog-table-row version="2.8.1" date="2020-08-05" >}}

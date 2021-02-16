@@ -11,6 +11,9 @@ Explore the resources and functions of the dns module in the AliCloud package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="alidnsdomain" title="AlidnsDomain"><span class="symbol resource"></span>AlidnsDomain</a></li>
+    <li><a href="alidnsdomainattachment" title="AlidnsDomainAttachment"><span class="symbol resource"></span>AlidnsDomainAttachment</a></li>
+    <li><a href="alidnsinstance" title="AlidnsInstance"><span class="symbol resource"></span>AlidnsInstance</a></li>
     <li><a href="alidnsrecord" title="AlidnsRecord"><span class="symbol resource"></span>AlidnsRecord</a></li>
     <li><a href="ddosbgpinstance" title="DdosBgpInstance"><span class="symbol resource"></span>DdosBgpInstance</a></li>
     <li><a href="ddoscooinstance" title="DdosCooInstance"><span class="symbol resource"></span>DdosCooInstance</a></li>
@@ -26,6 +29,8 @@ Explore the resources and functions of the dns module in the AliCloud package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getalidnsdomaingroups" title="GetAlidnsDomainGroups"><span class="symbol function"></span>GetAlidnsDomainGroups</a></li>
+    <li><a href="getalidnsdomains" title="GetAlidnsDomains"><span class="symbol function"></span>GetAlidnsDomains</a></li>
+    <li><a href="getalidnsinstances" title="GetAlidnsInstances"><span class="symbol function"></span>GetAlidnsInstances</a></li>
     <li><a href="getalidnsrecords" title="GetAlidnsRecords"><span class="symbol function"></span>GetAlidnsRecords</a></li>
     <li><a href="getdomaingroups" title="GetDomainGroups"><span class="symbol function"></span>GetDomainGroups</a></li>
     <li><a href="getdomainrecords" title="GetDomainRecords"><span class="symbol function"></span>GetDomainRecords</a></li>
@@ -44,26 +49,8 @@ Explore the resources and functions of the dns module in the AliCloud package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Dns.html" title="Pulumi.AliCloud.Dns">Pulumi.AliCloud.Dns</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dns?tab=doc#" title="alicloud/dns">alicloud/dns</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dns/#" title="@pulumi/alicloud/dns">@pulumi/alicloud/dns</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/dns" title="pulumi_alicloud/dns">pulumi_alicloud/dns</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

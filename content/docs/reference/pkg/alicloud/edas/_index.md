@@ -17,6 +17,8 @@ Explore the resources and functions of the edas module in the AliCloud package.
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="deploygroup" title="DeployGroup"><span class="symbol resource"></span>DeployGroup</a></li>
     <li><a href="instanceclusterattachment" title="InstanceClusterAttachment"><span class="symbol resource"></span>InstanceClusterAttachment</a></li>
+    <li><a href="k8sapplication" title="K8sApplication"><span class="symbol resource"></span>K8sApplication</a></li>
+    <li><a href="k8scluster" title="K8sCluster"><span class="symbol resource"></span>K8sCluster</a></li>
     <li><a href="slbattachment" title="SlbAttachment"><span class="symbol resource"></span>SlbAttachment</a></li>
 </ul>
 
@@ -25,6 +27,7 @@ Explore the resources and functions of the edas module in the AliCloud package.
     <li><a href="getapplications" title="GetApplications"><span class="symbol function"></span>GetApplications</a></li>
     <li><a href="getclusters" title="GetClusters"><span class="symbol function"></span>GetClusters</a></li>
     <li><a href="getdeploygroups" title="GetDeployGroups"><span class="symbol function"></span>GetDeployGroups</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -34,26 +37,8 @@ Explore the resources and functions of the edas module in the AliCloud package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Edas.html" title="Pulumi.AliCloud.Edas">Pulumi.AliCloud.Edas</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/edas?tab=doc#" title="alicloud/edas">alicloud/edas</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/edas/#" title="@pulumi/alicloud/edas">@pulumi/alicloud/edas</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/edas" title="pulumi_alicloud/edas">pulumi_alicloud/edas</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

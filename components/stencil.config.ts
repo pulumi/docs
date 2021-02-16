@@ -6,6 +6,7 @@ export const config: Config = {
     enableCache: false,
     devServer: {
         openBrowser: false,
+        reloadStrategy: "pageReload",
     },
     outputTargets: [
         {

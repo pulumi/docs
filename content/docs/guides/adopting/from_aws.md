@@ -456,7 +456,7 @@ From here, you can change the template body and/or surrounding code, rerun `pulu
 
 Now let's see how to actually migrate your CloudFormation resources fully to Pulumi. This requires rewriting the CloudFormation JSON or YAML as real code, either entirely, or one resource at a time. Because you can query stack outputs and provide stack parameters in code, you can more easily intermingle CloudFormation-managed resources alongside Pulumi ones. Cyclic dependencies, of course, cannot be expressed, since the CloudFormation stack is seen as one opaque resource to Pulumi.
 
-> Because Pulumi's AWS resource model doesn't match CloudFormation's resource projections exactly, there is no tool currently available to automate this translation. A good apraoch is to copy the CloudFormation template definition into your code and then rewrite it to your language of choice, translating resource and property names as appropriate.
+> Because Pulumi's AWS resource model doesn't match CloudFormation's resource projections exactly, there is no tool currently available to automate this translation. A good approach is to copy the CloudFormation template definition into your code and then rewrite it to your language of choice, translating resource and property names as appropriate.
 
 Note that you can always skip the intermediate step of deploying your CloudFormation stack using Pulumi and go straight to migrating your resources. For large stacks, however, doing this in multiple incremental steps can help minimize disruption and allow you to do this migration more slowly over time.
 

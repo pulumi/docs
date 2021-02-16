@@ -14,10 +14,8 @@ Once you’ve validated the behavior of your policies, an organization administr
 1. From within the Policy Pack directory, run the following command to publish your pack:
 
     ```sh
-    $ pulumi policy publish [org-name]
+    $ pulumi policy publish <org-name>
     ```
-
-    The `[org-name]` is optional. If not specified, the pack will be published to your user account.
 
     The output will tell you what version of the Policy Pack you just published. The Pulumi service provides a monotonic version number for Policy Packs.
 
@@ -29,7 +27,7 @@ Once you’ve validated the behavior of your policies, an organization administr
     Published as version 1.0.0
     ```
 
-    The Policy Pack version is specified in the `package.json` file for TypeScript/JavaScript (Node.js) packs. A version can only be used one time and once published the version can never be used by that Policy Pack again.
+    The Policy Pack version is specified in the `package.json` file for TypeScript/JavaScript (Node.js) packs and in the `PulumiPolicy.yaml` file for Python packs. A version can only be used one time and once published the version can never be used by that Policy Pack again.
 
 <!-- markdownlint-disable ul -->
 1. You can enable this Policy Pack to your organization’s default Policy Group by running:

@@ -1,8 +1,8 @@
 
 ---
 title: "DomainMapping"
-title_tag: "Resource DomainMapping | Module cloudrun | Package GCP"
-meta_desc: "Explore the DomainMapping resource of the cloudrun module, including examples, input properties, output properties, lookup functions, and supporting types. Resource to hold the state and status of a user&#39;s domain mapping."
+title_tag: "gcp.cloudrun.DomainMapping"
+meta_desc: "Documentation for the gcp.cloudrun.DomainMapping resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -14,7 +14,7 @@ Resource to hold the state and status of a user's domain mapping.
 
 To get more information about DomainMapping, see:
 
-* [API documentation](https://cloud.google.com/run/docs/reference/rest/v1alpha1/projects.locations.domainmappings)
+* [API documentation](https://cloud.google.com/run/docs/reference/rest/v1/projects.locations.domainmappings)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/run/docs/mapping-custom-domains)
 
@@ -47,7 +47,7 @@ class MyStack : Stack
                     {
                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
                         {
-                            Image = "gcr.io/cloudrun/hello",
+                            Image = "us-docker.pkg.dev/cloudrun/container/hello",
                         },
                     },
                 },
@@ -77,7 +77,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,7 +92,7 @@ func main() {
 				Spec: &cloudrun.ServiceTemplateSpecArgs{
 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
 						&cloudrun.ServiceTemplateSpecContainerArgs{
-							Image: pulumi.String("gcr.io/cloudrun/hello"),
+							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
 						},
 					},
 				},
@@ -127,24 +127,24 @@ import pulumi_gcp as gcp
 
 default_service = gcp.cloudrun.Service("defaultService",
     location="us-central1",
-    metadata={
-        "namespace": "my-project-name",
-    },
-    template={
-        "spec": {
-            "containers": [{
-                "image": "gcr.io/cloudrun/hello",
-            }],
-        },
-    })
+    metadata=gcp.cloudrun.ServiceMetadataArgs(
+        namespace="my-project-name",
+    ),
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                image="us-docker.pkg.dev/cloudrun/container/hello",
+            )],
+        ),
+    ))
 default_domain_mapping = gcp.cloudrun.DomainMapping("defaultDomainMapping",
     location="us-central1",
-    metadata={
-        "namespace": "my-project-name",
-    },
-    spec={
-        "routeName": default_service.name,
-    })
+    metadata=gcp.cloudrun.DomainMappingMetadataArgs(
+        namespace="my-project-name",
+    ),
+    spec=gcp.cloudrun.DomainMappingSpecArgs(
+        route_name=default_service.name,
+    ))
 ```
 
 {{% /example %}}
@@ -163,7 +163,7 @@ const defaultService = new gcp.cloudrun.Service("defaultService", {
     template: {
         spec: {
             containers: [{
-                image: "gcr.io/cloudrun/hello",
+                image: "us-docker.pkg.dev/cloudrun/container/hello",
             }],
         },
     },
@@ -189,19 +189,19 @@ const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMappin
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMapping">DomainMapping</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMappingArgs">DomainMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DomainMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudrun/#DomainMapping">DomainMapping</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>spec=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DomainMapping</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[DomainMappingMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[DomainMappingSpecArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMapping">NewDomainMapping</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingArgs">DomainMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMapping">DomainMapping</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomainMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DomainMapping</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.DomainMapping.html">DomainMapping</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.DomainMappingArgs.html">DomainMappingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DomainMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DomainMappingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -212,7 +212,7 @@ const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMappin
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -222,7 +222,7 @@ const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMappin
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMappingArgs">DomainMappingArgs</a></span>
+        <span class="property-type"><a href="#inputs">DomainMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -271,7 +271,7 @@ const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMappin
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -281,7 +281,7 @@ const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMappin
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -291,7 +291,7 @@ const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMappin
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingArgs">DomainMappingArgs</a></span>
+        <span class="property-type"><a href="#inputs">DomainMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,7 +301,7 @@ const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMappin
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -320,7 +320,7 @@ const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMappin
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -330,7 +330,7 @@ const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMappin
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.DomainMappingArgs.html">DomainMappingArgs</a></span>
+        <span class="property-type"><a href="#inputs">DomainMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -353,12 +353,11 @@ const defaultDomainMapping = new gcp.cloudrun.DomainMapping("defaultDomainMappin
 
 ## DomainMapping Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DomainMapping resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The DomainMapping resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -369,61 +368,57 @@ The DomainMapping resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="spec_csharp">
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}The spec for this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -432,61 +427,57 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="spec_go">
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}The spec for this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -495,61 +486,57 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="spec_nodejs">
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}The spec for this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -558,70 +545,62 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingmetadata">Dict[Domain<wbr>Mapping<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="spec_python">
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingspec">Dict[Domain<wbr>Mapping<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}The spec for this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the DomainMapping resource produces the following output properties:
-
 
 
 
@@ -632,26 +611,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+        <span id="statuses_csharp">
+<a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">List&lt;Domain<wbr>Mapping<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -660,26 +636,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+        <span id="statuses_go">
+<a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">[]Domain<wbr>Mapping<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -688,26 +661,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+        <span id="statuses_nodejs">
+<a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -716,29 +686,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+        <span id="statuses_python">
+<a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Dict[Domain<wbr>Mapping<wbr>Status]</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">Sequence[Domain<wbr>Mapping<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -748,19 +712,20 @@ Get an existing DomainMapping resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMappingState">DomainMappingState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#DomainMapping">DomainMapping</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainMappingState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DomainMapping</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>spec=None<span class="p">, </span>status=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[DomainMappingMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[DomainMappingSpecArgs]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DomainMappingStatusArgs]]</span> = None<span class="p">) -&gt;</span> DomainMapping</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainMapping<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingState">DomainMappingState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMapping">DomainMapping</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainMapping<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DomainMappingState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DomainMapping</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.DomainMapping.html">DomainMapping</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.DomainMappingState.html">DomainMappingState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DomainMapping</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DomainMappingState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -862,7 +827,6 @@ Get an existing DomainMapping resource's state with the given name, ID, and opti
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -870,72 +834,67 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_csharp">
 <a href="#state_spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}The spec for this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_csharp">
-<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+        <span id="state_statuses_csharp">
+<a href="#state_statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -944,72 +903,67 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_go">
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}The spec for this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_go">
-<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+        <span id="state_statuses_go">
+<a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">[]Domain<wbr>Mapping<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1018,72 +972,67 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_nodejs">
 <a href="#state_spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}The spec for this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_nodejs">
-<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+        <span id="state_statuses_nodejs">
+<a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1092,75 +1041,67 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingmetadata">Dict[Domain<wbr>Mapping<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Metadata associated with this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}Metadata associated with this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_python">
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingspec">Dict[Domain<wbr>Mapping<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#domainmappingspec">Domain<wbr>Mapping<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The spec for this DomainMapping.  Structure is documented below.
+    <dd>{{% md %}}The spec for this DomainMapping.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_python">
-<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+        <span id="state_statuses_python">
+<a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatus">Dict[Domain<wbr>Mapping<wbr>Status]</a></span>
+        <span class="property-type"><a href="#domainmappingstatus">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1170,20 +1111,8 @@ If it is not provided, the provider project is used.
 ## Supporting Types
 
 
+
 <h4 id="domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingMetadata">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingMetadata">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingMetadataOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.DomainMappingMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingMetadata.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1192,44 +1121,38 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_csharp">
 <a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1238,14 +1161,13 @@ A sequence number representing a specific generation of the desired state.
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceversion_csharp">
 <a href="#resourceversion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -1256,36 +1178,32 @@ particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uid_csharp">
 <a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1294,44 +1212,38 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_go">
 <a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1340,14 +1252,13 @@ A sequence number representing a specific generation of the desired state.
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceversion_go">
 <a href="#resourceversion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -1358,36 +1269,32 @@ particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uid_go">
 <a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1396,44 +1303,38 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_nodejs">
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1442,14 +1343,13 @@ A sequence number representing a specific generation of the desired state.
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceversion_nodejs">
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -1460,36 +1360,32 @@ particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uid_nodejs">
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1498,60 +1394,53 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_python">
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="resourceversion_python">
-<a href="#resourceversion_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
-</span> 
+        <span id="resource_version_python">
+<a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -1562,54 +1451,34 @@ particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uid_python">
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="domainmappingspec">Domain<wbr>Mapping<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.DomainMappingSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1618,42 +1487,40 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Required">
         <span id="routename_csharp">
 <a href="#routename_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Run Service that this DomainMapping applies to.
 The route must exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificatemode_csharp">
 <a href="#certificatemode_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of the certificate.
+Default value is `AUTOMATIC`.
+Possible values are `NONE` and `AUTOMATIC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceoverride_csharp">
 <a href="#forceoverride_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the mapping will override any mapping set before this spec was set.
 It is recommended that the user leaves this empty to receive an error
 warning about a potential conflict and only set it once the respective UI
 has given such a warning.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1662,42 +1529,40 @@ has given such a warning.
             title="Required">
         <span id="routename_go">
 <a href="#routename_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Run Service that this DomainMapping applies to.
 The route must exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificatemode_go">
 <a href="#certificatemode_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of the certificate.
+Default value is `AUTOMATIC`.
+Possible values are `NONE` and `AUTOMATIC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceoverride_go">
 <a href="#forceoverride_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the mapping will override any mapping set before this spec was set.
 It is recommended that the user leaves this empty to receive an error
 warning about a potential conflict and only set it once the respective UI
 has given such a warning.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1706,104 +1571,84 @@ has given such a warning.
             title="Required">
         <span id="routename_nodejs">
 <a href="#routename_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Run Service that this DomainMapping applies to.
 The route must exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificatemode_nodejs">
 <a href="#certificatemode_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of the certificate.
+Default value is `AUTOMATIC`.
+Possible values are `NONE` and `AUTOMATIC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceoverride_nodejs">
 <a href="#forceoverride_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set, the mapping will override any mapping set before this spec was set.
 It is recommended that the user leaves this empty to receive an error
 warning about a potential conflict and only set it once the respective UI
 has given such a warning.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="routename_python">
-<a href="#routename_python" style="color: inherit; text-decoration: inherit;">route<wbr>Name</a>
-</span> 
+        <span id="route_name_python">
+<a href="#route_name_python" style="color: inherit; text-decoration: inherit;">route_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Run Service that this DomainMapping applies to.
 The route must exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="certificatemode_python">
-<a href="#certificatemode_python" style="color: inherit; text-decoration: inherit;">certificate<wbr>Mode</a>
-</span> 
+        <span id="certificate_mode_python">
+<a href="#certificate_mode_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>mode</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode of the certificate.
+Default value is `AUTOMATIC`.
+Possible values are `NONE` and `AUTOMATIC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="forceoverride_python">
-<a href="#forceoverride_python" style="color: inherit; text-decoration: inherit;">force<wbr>Override</a>
-</span> 
+        <span id="force_override_python">
+<a href="#force_override_python" style="color: inherit; text-decoration: inherit;">force_<wbr>override</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the mapping will override any mapping set before this spec was set.
 It is recommended that the user leaves this empty to receive an error
 warning about a potential conflict and only set it once the respective UI
 has given such a warning.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="domainmappingstatus">Domain<wbr>Mapping<wbr>Status</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingStatus">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingStatusOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingStatus.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1812,45 +1657,40 @@ has given such a warning.
             title="Optional">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatuscondition">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mappedroutename_csharp">
 <a href="#mappedroutename_csharp" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Route<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="observedgeneration_csharp">
 <a href="#observedgeneration_csharp" style="color: inherit; text-decoration: inherit;">Observed<wbr>Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcerecords_csharp">
 <a href="#resourcerecords_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatusresourcerecord">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1859,45 +1699,40 @@ has given such a warning.
             title="Optional">
         <span id="conditions_go">
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatuscondition">[]Domain<wbr>Mapping<wbr>Status<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mappedroutename_go">
 <a href="#mappedroutename_go" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Route<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="observedgeneration_go">
 <a href="#observedgeneration_go" style="color: inherit; text-decoration: inherit;">Observed<wbr>Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcerecords_go">
 <a href="#resourcerecords_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatusresourcerecord">[]Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1906,45 +1741,40 @@ has given such a warning.
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatuscondition">Domain<wbr>Mapping<wbr>Status<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mappedroutename_nodejs">
 <a href="#mappedroutename_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Route<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="observedgeneration_nodejs">
 <a href="#observedgeneration_nodejs" style="color: inherit; text-decoration: inherit;">observed<wbr>Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcerecords_nodejs">
 <a href="#resourcerecords_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatusresourcerecord">Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1953,63 +1783,42 @@ has given such a warning.
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatuscondition">List[Domain<wbr>Mapping<wbr>Status<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#domainmappingstatuscondition">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="mappedroutename_python">
-<a href="#mappedroutename_python" style="color: inherit; text-decoration: inherit;">mapped<wbr>Route<wbr>Name</a>
-</span> 
+        <span id="mapped_route_name_python">
+<a href="#mapped_route_name_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>route_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="observedgeneration_python">
-<a href="#observedgeneration_python" style="color: inherit; text-decoration: inherit;">observed<wbr>Generation</a>
-</span> 
+        <span id="observed_generation_python">
+<a href="#observed_generation_python" style="color: inherit; text-decoration: inherit;">observed_<wbr>generation</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resource_records_python">
 <a href="#resource_records_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainmappingstatusresourcerecord">List[Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record]</a></span>
+        <span class="property-type"><a href="#domainmappingstatusresourcerecord">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="domainmappingstatuscondition">Domain<wbr>Mapping<wbr>Status<wbr>Condition</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingStatusCondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingStatusConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingStatusCondition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2018,45 +1827,40 @@ has given such a warning.
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reason_csharp">
 <a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2065,45 +1869,40 @@ has given such a warning.
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reason_go">
 <a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2112,45 +1911,40 @@ has given such a warning.
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reason_nodejs">
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2159,63 +1953,42 @@ has given such a warning.
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reason_python">
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="domainmappingstatusresourcerecord">Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingStatusResourceRecord">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#DomainMappingStatusResourceRecordOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.DomainMappingStatusResourceRecord.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2224,36 +1997,32 @@ has given such a warning.
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rrdata_csharp">
 <a href="#rrdata_csharp" style="color: inherit; text-decoration: inherit;">Rrdata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2262,36 +2031,32 @@ has given such a warning.
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rrdata_go">
 <a href="#rrdata_go" style="color: inherit; text-decoration: inherit;">Rrdata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2300,36 +2065,32 @@ has given such a warning.
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rrdata_nodejs">
 <a href="#rrdata_nodejs" style="color: inherit; text-decoration: inherit;">rrdata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2338,40 +2099,48 @@ has given such a warning.
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rrdata_python">
 <a href="#rrdata_python" style="color: inherit; text-decoration: inherit;">rrdata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+DomainMapping can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:cloudrun/domainMapping:DomainMapping default locations/{{location}}/namespaces/{{project}}/domainmappings/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:cloudrun/domainMapping:DomainMapping default {{location}}/{{project}}/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:cloudrun/domainMapping:DomainMapping default {{location}}/{{name}}
+```
 
 
 
@@ -2383,6 +2152,6 @@ has given such a warning.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

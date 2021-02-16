@@ -23,7 +23,7 @@ release = '{{ input.project.release }}'
 
 extensions = [
     'sphinx.ext.autodoc',
-    'markdown_docstring', # see markdown_docstring.py for the implementation of this extension
+    'markdown_docstring',  # see markdown_docstring.py for the implementation of this extension
 ]
 
 # Add any paths that contain templates here, relative to this directory.

@@ -1,8 +1,8 @@
 
 ---
 title: "KubernetesAutoscaler"
-title_tag: "Resource KubernetesAutoscaler | Module cs | Package AliCloud"
-meta_desc: "Explore the KubernetesAutoscaler resource of the cs module, including examples, input properties, output properties, lookup functions, and supporting types. This resource will help you to manager cluster-autoscaler in Kubernetes Cluster. "
+title_tag: "alicloud.cs.KubernetesAutoscaler"
+meta_desc: "Documentation for the alicloud.cs.KubernetesAutoscaler resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -20,6 +20,7 @@ This resource will help you to manager cluster-autoscaler in Kubernetes Cluster.
 
 > **NOTE:** Available in 1.65.0+.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -34,21 +35,72 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @default = new AliCloud.CS.KubernetesAutoscaler("default", new AliCloud.CS.KubernetesAutoscalerArgs
+        var config = new Config();
+        var name = config.Get("name") ?? "autoscaler";
+        var defaultNetworks = Output.Create(AliCloud.Vpc.GetNetworks.InvokeAsync());
+        var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
         {
-            ClusterId = @var.Cluster_id,
-            CoolDownDuration = @var.Cool_down_duration,
-            DeferScaleInDuration = @var.Defer_scale_in_duration,
+            Owners = "system",
+            NameRegex = "^centos_7",
+            MostRecent = true,
+        }));
+        var defaultManagedKubernetesClusters = Output.Create(AliCloud.CS.GetManagedKubernetesClusters.InvokeAsync());
+        var defaultInstanceTypes = Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+        {
+            CpuCoreCount = 2,
+            MemorySize = 4,
+        }));
+        var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
+        {
+            VpcId = defaultNetworks.Apply(defaultNetworks => defaultNetworks.Vpcs[0].Id),
+        });
+        var defaultScalingGroup = new AliCloud.Ess.ScalingGroup("defaultScalingGroup", new AliCloud.Ess.ScalingGroupArgs
+        {
+            ScalingGroupName = name,
+            MinSize = @var.Min_size,
+            MaxSize = @var.Max_size,
+            VswitchIds = 
+            {
+                defaultNetworks.Apply(defaultNetworks => defaultNetworks.Vpcs[0].VswitchIds[0]),
+            },
+            RemovalPolicies = 
+            {
+                "OldestInstance",
+                "NewestInstance",
+            },
+        });
+        var defaultScalingConfiguration = new AliCloud.Ess.ScalingConfiguration("defaultScalingConfiguration", new AliCloud.Ess.ScalingConfigurationArgs
+        {
+            ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
+            SecurityGroupId = defaultSecurityGroup.Id,
+            ScalingGroupId = defaultScalingGroup.Id,
+            InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
+            InternetChargeType = "PayByTraffic",
+            ForceDelete = true,
+            Enable = true,
+            Active = true,
+        });
+        var defaultKubernetesAutoscaler = new AliCloud.CS.KubernetesAutoscaler("defaultKubernetesAutoscaler", new AliCloud.CS.KubernetesAutoscalerArgs
+        {
+            ClusterId = defaultManagedKubernetesClusters.Apply(defaultManagedKubernetesClusters => defaultManagedKubernetesClusters.Clusters[0].Id),
             Nodepools = 
             {
                 new AliCloud.CS.Inputs.KubernetesAutoscalerNodepoolArgs
                 {
-                    Id = "scaling_group_id",
+                    Id = defaultScalingGroup.Id,
                     Labels = "a=b",
-                    Taints = "c=d:NoSchedule",
                 },
             },
             Utilization = @var.Utilization,
+            CoolDownDuration = @var.Cool_down_duration,
+            DeferScaleInDuration = @var.Defer_scale_in_duration,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                alicloud_ess_scaling_group.Defalut,
+                defaultScalingConfiguration,
+            },
         });
     }
 
@@ -58,7 +110,110 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "autoscaler"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		defaultNetworks, err := vpc.GetNetworks(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		opt0 := "system"
+		opt1 := "^centos_7"
+		opt2 := true
+		defaultImages, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
+			Owners:     &opt0,
+			NameRegex:  &opt1,
+			MostRecent: &opt2,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultManagedKubernetesClusters, err := cs.GetManagedKubernetesClusters(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		opt3 := 2
+		opt4 := 4
+		defaultInstanceTypes, err := ecs.GetInstanceTypes(ctx, &ecs.GetInstanceTypesArgs{
+			CpuCoreCount: &opt3,
+			MemorySize:   &opt4,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultSecurityGroup, err := ecs.NewSecurityGroup(ctx, "defaultSecurityGroup", &ecs.SecurityGroupArgs{
+			VpcId: pulumi.String(defaultNetworks.Vpcs[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		defaultScalingGroup, err := ess.NewScalingGroup(ctx, "defaultScalingGroup", &ess.ScalingGroupArgs{
+			ScalingGroupName: pulumi.String(name),
+			MinSize:          pulumi.Any(_var.Min_size),
+			MaxSize:          pulumi.Any(_var.Max_size),
+			VswitchIds: pulumi.StringArray{
+				pulumi.String(defaultNetworks.Vpcs[0].VswitchIds[0]),
+			},
+			RemovalPolicies: pulumi.StringArray{
+				pulumi.String("OldestInstance"),
+				pulumi.String("NewestInstance"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultScalingConfiguration, err := ess.NewScalingConfiguration(ctx, "defaultScalingConfiguration", &ess.ScalingConfigurationArgs{
+			ImageId:            pulumi.String(defaultImages.Images[0].Id),
+			SecurityGroupId:    defaultSecurityGroup.ID(),
+			ScalingGroupId:     defaultScalingGroup.ID(),
+			InstanceType:       pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
+			InternetChargeType: pulumi.String("PayByTraffic"),
+			ForceDelete:        pulumi.Bool(true),
+			Enable:             pulumi.Bool(true),
+			Active:             pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cs.NewKubernetesAutoscaler(ctx, "defaultKubernetesAutoscaler", &cs.KubernetesAutoscalerArgs{
+			ClusterId: pulumi.String(defaultManagedKubernetesClusters.Clusters[0].Id),
+			Nodepools: cs.KubernetesAutoscalerNodepoolArray{
+				&cs.KubernetesAutoscalerNodepoolArgs{
+					Id:     defaultScalingGroup.ID(),
+					Labels: pulumi.String("a=b"),
+				},
+			},
+			Utilization:          pulumi.Any(_var.Utilization),
+			CoolDownDuration:     pulumi.Any(_var.Cool_down_duration),
+			DeferScaleInDuration: pulumi.Any(_var.Defer_scale_in_duration),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			alicloud_ess_scaling_group.Defalut,
+			defaultScalingConfiguration,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -66,16 +221,49 @@ Coming soon!
 import pulumi
 import pulumi_alicloud as alicloud
 
-default = alicloud.cs.KubernetesAutoscaler("default",
-    cluster_id=var["cluster_id"],
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "autoscaler"
+default_networks = alicloud.vpc.get_networks()
+default_images = alicloud.ecs.get_images(owners="system",
+    name_regex="^centos_7",
+    most_recent=True)
+default_managed_kubernetes_clusters = alicloud.cs.get_managed_kubernetes_clusters()
+default_instance_types = alicloud.ecs.get_instance_types(cpu_core_count=2,
+    memory_size=4)
+default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_networks.vpcs[0].id)
+default_scaling_group = alicloud.ess.ScalingGroup("defaultScalingGroup",
+    scaling_group_name=name,
+    min_size=var["min_size"],
+    max_size=var["max_size"],
+    vswitch_ids=[default_networks.vpcs[0].vswitch_ids[0]],
+    removal_policies=[
+        "OldestInstance",
+        "NewestInstance",
+    ])
+default_scaling_configuration = alicloud.ess.ScalingConfiguration("defaultScalingConfiguration",
+    image_id=default_images.images[0].id,
+    security_group_id=default_security_group.id,
+    scaling_group_id=default_scaling_group.id,
+    instance_type=default_instance_types.instance_types[0].id,
+    internet_charge_type="PayByTraffic",
+    force_delete=True,
+    enable=True,
+    active=True)
+default_kubernetes_autoscaler = alicloud.cs.KubernetesAutoscaler("defaultKubernetesAutoscaler",
+    cluster_id=default_managed_kubernetes_clusters.clusters[0].id,
+    nodepools=[alicloud.cs.KubernetesAutoscalerNodepoolArgs(
+        id=default_scaling_group.id,
+        labels="a=b",
+    )],
+    utilization=var["utilization"],
     cool_down_duration=var["cool_down_duration"],
     defer_scale_in_duration=var["defer_scale_in_duration"],
-    nodepools=[{
-        "id": "scaling_group_id",
-        "labels": "a=b",
-        "taints": "c=d:NoSchedule",
-    }],
-    utilization=var["utilization"])
+    opts=pulumi.ResourceOptions(depends_on=[
+            alicloud_ess_scaling_group["defalut"],
+            default_scaling_configuration,
+        ]))
 ```
 
 {{% /example %}}
@@ -86,16 +274,54 @@ default = alicloud.cs.KubernetesAutoscaler("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("default", {
-    clusterId: var_cluster_id,
-    coolDownDuration: var_cool_down_duration,
-    deferScaleInDuration: var_defer_scale_in_duration,
+const config = new pulumi.Config();
+const name = config.get("name") || "autoscaler";
+const defaultNetworks = alicloud.vpc.getNetworks({});
+const defaultImages = alicloud.ecs.getImages({
+    owners: "system",
+    nameRegex: "^centos_7",
+    mostRecent: true,
+});
+const defaultManagedKubernetesClusters = alicloud.cs.getManagedKubernetesClusters({});
+const defaultInstanceTypes = alicloud.ecs.getInstanceTypes({
+    cpuCoreCount: 2,
+    memorySize: 4,
+});
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("defaultSecurityGroup", {vpcId: defaultNetworks.then(defaultNetworks => defaultNetworks.vpcs[0].id)});
+const defaultScalingGroup = new alicloud.ess.ScalingGroup("defaultScalingGroup", {
+    scalingGroupName: name,
+    minSize: _var.min_size,
+    maxSize: _var.max_size,
+    vswitchIds: [defaultNetworks.then(defaultNetworks => defaultNetworks.vpcs[0].vswitchIds[0])],
+    removalPolicies: [
+        "OldestInstance",
+        "NewestInstance",
+    ],
+});
+const defaultScalingConfiguration = new alicloud.ess.ScalingConfiguration("defaultScalingConfiguration", {
+    imageId: defaultImages.then(defaultImages => defaultImages.images[0].id),
+    securityGroupId: defaultSecurityGroup.id,
+    scalingGroupId: defaultScalingGroup.id,
+    instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.instanceTypes[0].id),
+    internetChargeType: "PayByTraffic",
+    forceDelete: true,
+    enable: true,
+    active: true,
+});
+const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaultKubernetesAutoscaler", {
+    clusterId: defaultManagedKubernetesClusters.then(defaultManagedKubernetesClusters => defaultManagedKubernetesClusters.clusters[0].id),
     nodepools: [{
-        id: "scaling_group_id",
+        id: defaultScalingGroup.id,
         labels: "a=b",
-        taints: "c=d:NoSchedule",
     }],
-    utilization: var_utilization,
+    utilization: _var.utilization,
+    coolDownDuration: _var.cool_down_duration,
+    deferScaleInDuration: _var.defer_scale_in_duration,
+}, {
+    dependsOn: [
+        alicloud_ess_scaling_group.defalut,
+        defaultScalingConfiguration,
+    ],
 });
 ```
 
@@ -109,19 +335,19 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#KubernetesAutoscaler">KubernetesAutoscaler</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#KubernetesAutoscalerArgs">KubernetesAutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#KubernetesAutoscaler">KubernetesAutoscaler</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#KubernetesAutoscalerArgs">KubernetesAutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.KubernetesAutoscaler">KubernetesAutoscaler</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>cluster_id=None<span class="p">, </span>cool_down_duration=None<span class="p">, </span>defer_scale_in_duration=None<span class="p">, </span>nodepools=None<span class="p">, </span>use_ecs_ram_role_token=None<span class="p">, </span>utilization=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/cs/#pulumi_alicloud.cs.KubernetesAutoscaler">KubernetesAutoscaler</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cool_down_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defer_scale_in_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nodepools</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesAutoscalerNodepoolArgs]]</span> = None<span class="p">, </span><span class="nx">use_ecs_ram_role_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">utilization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesAutoscaler">NewKubernetesAutoscaler</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesAutoscalerArgs">KubernetesAutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesAutoscaler">KubernetesAutoscaler</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesAutoscaler">NewKubernetesAutoscaler</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesAutoscalerArgs">KubernetesAutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesAutoscaler">KubernetesAutoscaler</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.KubernetesAutoscaler.html">KubernetesAutoscaler</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.KubernetesAutoscalerArgs.html">KubernetesAutoscalerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.KubernetesAutoscaler.html">KubernetesAutoscaler</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.KubernetesAutoscalerArgs.html">KubernetesAutoscalerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -132,7 +358,7 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -201,7 +427,7 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -240,7 +466,7 @@ const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaul
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -281,7 +507,6 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -289,74 +514,66 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cooldownduration_csharp">
 <a href="#cooldownduration_csharp" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deferscaleinduration_csharp">
 <a href="#deferscaleinduration_csharp" style="color: inherit; text-decoration: inherit;">Defer<wbr>Scale<wbr>In<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="utilization_csharp">
 <a href="#utilization_csharp" style="color: inherit; text-decoration: inherit;">Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nodepools_csharp">
 <a href="#nodepools_csharp" style="color: inherit; text-decoration: inherit;">Nodepools</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useecsramroletoken_csharp">
 <a href="#useecsramroletoken_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ecs<wbr>Ram<wbr>Role<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -365,74 +582,66 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cooldownduration_go">
 <a href="#cooldownduration_go" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deferscaleinduration_go">
 <a href="#deferscaleinduration_go" style="color: inherit; text-decoration: inherit;">Defer<wbr>Scale<wbr>In<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="utilization_go">
 <a href="#utilization_go" style="color: inherit; text-decoration: inherit;">Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nodepools_go">
 <a href="#nodepools_go" style="color: inherit; text-decoration: inherit;">Nodepools</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">[]Kubernetes<wbr>Autoscaler<wbr>Nodepool</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useecsramroletoken_go">
 <a href="#useecsramroletoken_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ecs<wbr>Ram<wbr>Role<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -441,74 +650,66 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cooldownduration_nodejs">
 <a href="#cooldownduration_nodejs" style="color: inherit; text-decoration: inherit;">cool<wbr>Down<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deferscaleinduration_nodejs">
 <a href="#deferscaleinduration_nodejs" style="color: inherit; text-decoration: inherit;">defer<wbr>Scale<wbr>In<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="utilization_nodejs">
 <a href="#utilization_nodejs" style="color: inherit; text-decoration: inherit;">utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nodepools_nodejs">
 <a href="#nodepools_nodejs" style="color: inherit; text-decoration: inherit;">nodepools</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool[]</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useecsramroletoken_nodejs">
 <a href="#useecsramroletoken_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ecs<wbr>Ram<wbr>Role<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -517,83 +718,71 @@ The KubernetesAutoscaler resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cool_down_duration_python">
 <a href="#cool_down_duration_python" style="color: inherit; text-decoration: inherit;">cool_<wbr>down_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="defer_scale_in_duration_python">
 <a href="#defer_scale_in_duration_python" style="color: inherit; text-decoration: inherit;">defer_<wbr>scale_<wbr>in_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="utilization_python">
 <a href="#utilization_python" style="color: inherit; text-decoration: inherit;">utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nodepools_python">
 <a href="#nodepools_python" style="color: inherit; text-decoration: inherit;">nodepools</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesautoscalernodepool">List[Kubernetes<wbr>Autoscaler<wbr>Nodepool]</a></span>
+        <span class="property-type"><a href="#kubernetesautoscalernodepool">Sequence[Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_ecs_ram_role_token_python">
 <a href="#use_ecs_ram_role_token_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ecs_<wbr>ram_<wbr>role_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the KubernetesAutoscaler resource produces the following output properties:
-
 
 
 
@@ -604,15 +793,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -621,15 +808,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -638,15 +823,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -655,18 +838,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -676,19 +854,20 @@ Get an existing KubernetesAutoscaler resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#KubernetesAutoscalerState">KubernetesAutoscalerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#KubernetesAutoscaler">KubernetesAutoscaler</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#KubernetesAutoscalerState">KubernetesAutoscalerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#KubernetesAutoscaler">KubernetesAutoscaler</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_id=None<span class="p">, </span>cool_down_duration=None<span class="p">, </span>defer_scale_in_duration=None<span class="p">, </span>nodepools=None<span class="p">, </span>use_ecs_ram_role_token=None<span class="p">, </span>utilization=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cool_down_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">defer_scale_in_duration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nodepools</span><span class="p">:</span> <span class="nx">Optional[Sequence[KubernetesAutoscalerNodepoolArgs]]</span> = None<span class="p">, </span><span class="nx">use_ecs_ram_role_token</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">utilization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KubernetesAutoscaler</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesAutoscaler<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesAutoscalerState">KubernetesAutoscalerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesAutoscaler">KubernetesAutoscaler</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesAutoscaler<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesAutoscalerState">KubernetesAutoscalerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesAutoscaler">KubernetesAutoscaler</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.KubernetesAutoscaler.html">KubernetesAutoscaler</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.KubernetesAutoscalerState.html">KubernetesAutoscalerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.KubernetesAutoscaler.html">KubernetesAutoscaler</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.KubernetesAutoscalerState.html">KubernetesAutoscalerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -790,7 +969,6 @@ Get an existing KubernetesAutoscaler resource's state with the given name, ID, a
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -798,74 +976,66 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_clusterid_csharp">
 <a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cooldownduration_csharp">
 <a href="#state_cooldownduration_csharp" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deferscaleinduration_csharp">
 <a href="#state_deferscaleinduration_csharp" style="color: inherit; text-decoration: inherit;">Defer<wbr>Scale<wbr>In<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nodepools_csharp">
 <a href="#state_nodepools_csharp" style="color: inherit; text-decoration: inherit;">Nodepools</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_useecsramroletoken_csharp">
 <a href="#state_useecsramroletoken_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ecs<wbr>Ram<wbr>Role<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_utilization_csharp">
 <a href="#state_utilization_csharp" style="color: inherit; text-decoration: inherit;">Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -874,74 +1044,66 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_clusterid_go">
 <a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cooldownduration_go">
 <a href="#state_cooldownduration_go" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deferscaleinduration_go">
 <a href="#state_deferscaleinduration_go" style="color: inherit; text-decoration: inherit;">Defer<wbr>Scale<wbr>In<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nodepools_go">
 <a href="#state_nodepools_go" style="color: inherit; text-decoration: inherit;">Nodepools</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">[]Kubernetes<wbr>Autoscaler<wbr>Nodepool</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_useecsramroletoken_go">
 <a href="#state_useecsramroletoken_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ecs<wbr>Ram<wbr>Role<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_utilization_go">
 <a href="#state_utilization_go" style="color: inherit; text-decoration: inherit;">Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -950,74 +1112,66 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_clusterid_nodejs">
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cooldownduration_nodejs">
 <a href="#state_cooldownduration_nodejs" style="color: inherit; text-decoration: inherit;">cool<wbr>Down<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deferscaleinduration_nodejs">
 <a href="#state_deferscaleinduration_nodejs" style="color: inherit; text-decoration: inherit;">defer<wbr>Scale<wbr>In<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nodepools_nodejs">
 <a href="#state_nodepools_nodejs" style="color: inherit; text-decoration: inherit;">nodepools</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool[]</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_useecsramroletoken_nodejs">
 <a href="#state_useecsramroletoken_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ecs<wbr>Ram<wbr>Role<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_utilization_nodejs">
 <a href="#state_utilization_nodejs" style="color: inherit; text-decoration: inherit;">utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1026,71 +1180,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cluster_id_python">
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of kubernetes cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cool_down_duration_python">
 <a href="#state_cool_down_duration_python" style="color: inherit; text-decoration: inherit;">cool_<wbr>down_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.  
+    <dd>{{% md %}}The cool_down_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defer_scale_in_duration_python">
 <a href="#state_defer_scale_in_duration_python" style="color: inherit; text-decoration: inherit;">defer_<wbr>scale_<wbr>in_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The defer_scale_in_duration option of cluster-autoscaler.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nodepools_python">
 <a href="#state_nodepools_python" style="color: inherit; text-decoration: inherit;">nodepools</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kubernetesautoscalernodepool">List[Kubernetes<wbr>Autoscaler<wbr>Nodepool]</a></span>
+        <span class="property-type"><a href="#kubernetesautoscalernodepool">Sequence[Kubernetes<wbr>Autoscaler<wbr>Nodepool<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}
-* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
+    <dd>{{% md %}}* `nodepools.id` - (Required) The scaling group id of the groups configured for cluster-autoscaler.
 * `nodepools.taints` - (Required) The taints for the nodes in scaling group.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_use_ecs_ram_role_token_python">
 <a href="#state_use_ecs_ram_role_token_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ecs_<wbr>ram_<wbr>role_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_utilization_python">
 <a href="#state_utilization_python" style="color: inherit; text-decoration: inherit;">utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The utilization option of cluster-autoscaler.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1099,11 +1246,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="kubernetesautoscalernodepool">Kubernetes<wbr>Autoscaler<wbr>Nodepool</h4>
@@ -1114,11 +1258,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesAutoscalerNodepoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#KubernetesAutoscalerNodepoolOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Inputs.KubernetesAutoscalerNodepoolArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.KubernetesAutoscalerNodepool.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1128,35 +1271,31 @@ The following state arguments are supported:
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="taints_csharp">
 <a href="#taints_csharp" style="color: inherit; text-decoration: inherit;">Taints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1165,35 +1304,31 @@ The following state arguments are supported:
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="taints_go">
 <a href="#taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1202,35 +1337,31 @@ The following state arguments are supported:
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="taints_nodejs">
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1239,41 +1370,31 @@ The following state arguments are supported:
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="taints_python">
 <a href="#taints_python" style="color: inherit; text-decoration: inherit;">taints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
@@ -1283,6 +1404,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

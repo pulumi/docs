@@ -1,8 +1,8 @@
 
 ---
 title: "NetworkAclEntries"
-title_tag: "Resource NetworkAclEntries | Module vpc | Package AliCloud"
-meta_desc: "Explore the NetworkAclEntries resource of the vpc module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a network acl entries resource to create ingress and egress entries."
+title_tag: "alicloud.vpc.NetworkAclEntries"
+meta_desc: "Documentation for the alicloud.vpc.NetworkAclEntries resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -17,6 +17,7 @@ Provides a network acl entries resource to create ingress and egress entries.
 > **NOTE:** It doesn't support concurrency and the order of the ingress and egress entries determines the priority.
 
 > **NOTE:** Using this resource need to open a whitelist.
+
 
 {{% examples %}}
 ## Example Usage
@@ -48,9 +49,9 @@ class MyStack : Stack
         });
         var defaultSwitch = new AliCloud.Vpc.Switch("defaultSwitch", new AliCloud.Vpc.SwitchArgs
         {
-            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
-            CidrBlock = "172.16.0.0/21",
             VpcId = defaultNetwork.Id,
+            CidrBlock = "172.16.0.0/21",
+            AvailabilityZone = defaultZones.Apply(defaultZones => defaultZones.Zones[0].Id),
         });
         var defaultNetworkAclAttachment = new AliCloud.Vpc.NetworkAclAttachment("defaultNetworkAclAttachment", new AliCloud.Vpc.NetworkAclAttachmentArgs
         {
@@ -66,33 +67,33 @@ class MyStack : Stack
         });
         var defaultNetworkAclEntries = new AliCloud.Vpc.NetworkAclEntries("defaultNetworkAclEntries", new AliCloud.Vpc.NetworkAclEntriesArgs
         {
-            Egresses = 
-            {
-                new AliCloud.Vpc.Inputs.NetworkAclEntriesEgressArgs
-                {
-                    Description = name,
-                    DestinationCidrIp = "0.0.0.0/32",
-                    EntryType = "custom",
-                    Name = name,
-                    Policy = "accept",
-                    Port = "-1/-1",
-                    Protocol = "all",
-                },
-            },
+            NetworkAclId = defaultNetworkAcl.Id,
             Ingresses = 
             {
                 new AliCloud.Vpc.Inputs.NetworkAclEntriesIngressArgs
                 {
-                    Description = name,
-                    EntryType = "custom",
-                    Name = name,
-                    Policy = "accept",
-                    Port = "-1/-1",
                     Protocol = "all",
+                    Port = "-1/-1",
                     SourceCidrIp = "0.0.0.0/32",
+                    Name = name,
+                    EntryType = "custom",
+                    Policy = "accept",
+                    Description = name,
                 },
             },
-            NetworkAclId = defaultNetworkAcl.Id,
+            Egresses = 
+            {
+                new AliCloud.Vpc.Inputs.NetworkAclEntriesEgressArgs
+                {
+                    Protocol = "all",
+                    Port = "-1/-1",
+                    DestinationCidrIp = "0.0.0.0/32",
+                    Name = name,
+                    EntryType = "custom",
+                    Policy = "accept",
+                    Description = name,
+                },
+            },
         });
     }
 
@@ -102,7 +103,96 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		name := "NetworkAclEntries"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		opt0 := "VSwitch"
+		defaultZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableResourceCreation: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := vpc.NewNetwork(ctx, "defaultNetwork", &vpc.NetworkArgs{
+			CidrBlock: pulumi.String("172.16.0.0/12"),
+		})
+		if err != nil {
+			return err
+		}
+		defaultNetworkAcl, err := vpc.NewNetworkAcl(ctx, "defaultNetworkAcl", &vpc.NetworkAclArgs{
+			VpcId: defaultNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSwitch, err := vpc.NewSwitch(ctx, "defaultSwitch", &vpc.SwitchArgs{
+			VpcId:            defaultNetwork.ID(),
+			CidrBlock:        pulumi.String("172.16.0.0/21"),
+			AvailabilityZone: pulumi.String(defaultZones.Zones[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = vpc.NewNetworkAclAttachment(ctx, "defaultNetworkAclAttachment", &vpc.NetworkAclAttachmentArgs{
+			NetworkAclId: defaultNetworkAcl.ID(),
+			Resources: vpc.NetworkAclAttachmentResourceArray{
+				&vpc.NetworkAclAttachmentResourceArgs{
+					ResourceId:   defaultSwitch.ID(),
+					ResourceType: pulumi.String("VSwitch"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = vpc.NewNetworkAclEntries(ctx, "defaultNetworkAclEntries", &vpc.NetworkAclEntriesArgs{
+			NetworkAclId: defaultNetworkAcl.ID(),
+			Ingresses: vpc.NetworkAclEntriesIngressArray{
+				&vpc.NetworkAclEntriesIngressArgs{
+					Protocol:     pulumi.String("all"),
+					Port:         pulumi.String("-1/-1"),
+					SourceCidrIp: pulumi.String("0.0.0.0/32"),
+					Name:         pulumi.String(name),
+					EntryType:    pulumi.String("custom"),
+					Policy:       pulumi.String("accept"),
+					Description:  pulumi.String(name),
+				},
+			},
+			Egresses: vpc.NetworkAclEntriesEgressArray{
+				&vpc.NetworkAclEntriesEgressArgs{
+					Protocol:          pulumi.String("all"),
+					Port:              pulumi.String("-1/-1"),
+					DestinationCidrIp: pulumi.String("0.0.0.0/32"),
+					Name:              pulumi.String(name),
+					EntryType:         pulumi.String("custom"),
+					Policy:            pulumi.String("accept"),
+					Description:       pulumi.String(name),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -118,35 +208,35 @@ default_zones = alicloud.get_zones(available_resource_creation="VSwitch")
 default_network = alicloud.vpc.Network("defaultNetwork", cidr_block="172.16.0.0/12")
 default_network_acl = alicloud.vpc.NetworkAcl("defaultNetworkAcl", vpc_id=default_network.id)
 default_switch = alicloud.vpc.Switch("defaultSwitch",
-    availability_zone=default_zones.zones[0]["id"],
+    vpc_id=default_network.id,
     cidr_block="172.16.0.0/21",
-    vpc_id=default_network.id)
+    availability_zone=default_zones.zones[0].id)
 default_network_acl_attachment = alicloud.vpc.NetworkAclAttachment("defaultNetworkAclAttachment",
     network_acl_id=default_network_acl.id,
-    resources=[{
-        "resourceId": default_switch.id,
-        "resourceType": "VSwitch",
-    }])
+    resources=[alicloud.vpc.NetworkAclAttachmentResourceArgs(
+        resource_id=default_switch.id,
+        resource_type="VSwitch",
+    )])
 default_network_acl_entries = alicloud.vpc.NetworkAclEntries("defaultNetworkAclEntries",
-    egresses=[{
-        "description": name,
-        "destinationCidrIp": "0.0.0.0/32",
-        "entryType": "custom",
-        "name": name,
-        "policy": "accept",
-        "port": "-1/-1",
-        "protocol": "all",
-    }],
-    ingresses=[{
-        "description": name,
-        "entryType": "custom",
-        "name": name,
-        "policy": "accept",
-        "port": "-1/-1",
-        "protocol": "all",
-        "source_cidr_ip": "0.0.0.0/32",
-    }],
-    network_acl_id=default_network_acl.id)
+    network_acl_id=default_network_acl.id,
+    ingresses=[alicloud.vpc.NetworkAclEntriesIngressArgs(
+        protocol="all",
+        port="-1/-1",
+        source_cidr_ip="0.0.0.0/32",
+        name=name,
+        entry_type="custom",
+        policy="accept",
+        description=name,
+    )],
+    egresses=[alicloud.vpc.NetworkAclEntriesEgressArgs(
+        protocol="all",
+        port="-1/-1",
+        destination_cidr_ip="0.0.0.0/32",
+        name=name,
+        entry_type="custom",
+        policy="accept",
+        description=name,
+    )])
 ```
 
 {{% /example %}}
@@ -159,48 +249,43 @@ import * as alicloud from "@pulumi/alicloud";
 
 const config = new pulumi.Config();
 const name = config.get("name") || "NetworkAclEntries";
-
-const defaultZones = pulumi.output(alicloud.getZones({
+const defaultZones = alicloud.getZones({
     availableResourceCreation: "VSwitch",
-}, { async: true }));
-const defaultNetwork = new alicloud.vpc.Network("default", {
-    cidrBlock: "172.16.0.0/12",
 });
-const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("default", {
+const defaultNetwork = new alicloud.vpc.Network("defaultNetwork", {cidrBlock: "172.16.0.0/12"});
+const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("defaultNetworkAcl", {vpcId: defaultNetwork.id});
+const defaultSwitch = new alicloud.vpc.Switch("defaultSwitch", {
     vpcId: defaultNetwork.id,
-});
-const defaultSwitch = new alicloud.vpc.Switch("default", {
-    availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "172.16.0.0/21",
-    vpcId: defaultNetwork.id,
+    availabilityZone: defaultZones.then(defaultZones => defaultZones.zones[0].id),
 });
-const defaultNetworkAclAttachment = new alicloud.vpc.NetworkAclAttachment("default", {
+const defaultNetworkAclAttachment = new alicloud.vpc.NetworkAclAttachment("defaultNetworkAclAttachment", {
     networkAclId: defaultNetworkAcl.id,
     resources: [{
         resourceId: defaultSwitch.id,
         resourceType: "VSwitch",
     }],
 });
-const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
-    egresses: [{
-        description: name,
-        destinationCidrIp: "0.0.0.0/32",
-        entryType: "custom",
-        name: name,
-        policy: "accept",
-        port: "-1/-1",
-        protocol: "all",
-    }],
-    ingresses: [{
-        description: name,
-        entryType: "custom",
-        name: name,
-        policy: "accept",
-        port: "-1/-1",
-        protocol: "all",
-        sourceCidrIp: "0.0.0.0/32",
-    }],
+const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("defaultNetworkAclEntries", {
     networkAclId: defaultNetworkAcl.id,
+    ingresses: [{
+        protocol: "all",
+        port: "-1/-1",
+        sourceCidrIp: "0.0.0.0/32",
+        name: name,
+        entryType: "custom",
+        policy: "accept",
+        description: name,
+    }],
+    egresses: [{
+        protocol: "all",
+        port: "-1/-1",
+        destinationCidrIp: "0.0.0.0/32",
+        name: name,
+        entryType: "custom",
+        policy: "accept",
+        description: name,
+    }],
 });
 ```
 
@@ -214,19 +299,19 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclEntries">NetworkAclEntries</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclEntriesArgs">NetworkAclEntriesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclEntries">NetworkAclEntries</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclEntriesArgs">NetworkAclEntriesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.NetworkAclEntries">NetworkAclEntries</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>egresses=None<span class="p">, </span>ingresses=None<span class="p">, </span>network_acl_id=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/vpc/#pulumi_alicloud.vpc.NetworkAclEntries">NetworkAclEntries</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">egresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAclEntriesEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAclEntriesIngressArgs]]</span> = None<span class="p">, </span><span class="nx">network_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntries">NewNetworkAclEntries</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntriesArgs">NetworkAclEntriesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntries">NetworkAclEntries</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntries">NewNetworkAclEntries</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntriesArgs">NetworkAclEntriesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntries">NetworkAclEntries</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.NetworkAclEntries.html">NetworkAclEntries</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.NetworkAclEntriesArgs.html">NetworkAclEntriesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.NetworkAclEntries.html">NetworkAclEntries</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.NetworkAclEntriesArgs.html">NetworkAclEntriesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -237,7 +322,7 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -306,7 +391,7 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -345,7 +430,7 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -386,7 +471,6 @@ The NetworkAclEntries resource accepts the following [input]({{< relref "/docs/i
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -394,38 +478,34 @@ The NetworkAclEntries resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="networkaclid_csharp">
 <a href="#networkaclid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egresses_csharp">
 <a href="#egresses_csharp" style="color: inherit; text-decoration: inherit;">Egresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclentriesegress">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Entries<wbr>Egress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingresses_csharp">
 <a href="#ingresses_csharp" style="color: inherit; text-decoration: inherit;">Ingresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclentriesingress">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Entries<wbr>Ingress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -434,38 +514,34 @@ The NetworkAclEntries resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="networkaclid_go">
 <a href="#networkaclid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egresses_go">
 <a href="#egresses_go" style="color: inherit; text-decoration: inherit;">Egresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclentriesegress">[]Network<wbr>Acl<wbr>Entries<wbr>Egress</a></span>
     </dt>
     <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingresses_go">
 <a href="#ingresses_go" style="color: inherit; text-decoration: inherit;">Ingresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclentriesingress">[]Network<wbr>Acl<wbr>Entries<wbr>Ingress</a></span>
     </dt>
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -474,38 +550,34 @@ The NetworkAclEntries resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="networkaclid_nodejs">
 <a href="#networkaclid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egresses_nodejs">
 <a href="#egresses_nodejs" style="color: inherit; text-decoration: inherit;">egresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclentriesegress">Network<wbr>Acl<wbr>Entries<wbr>Egress[]</a></span>
     </dt>
     <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingresses_nodejs">
 <a href="#ingresses_nodejs" style="color: inherit; text-decoration: inherit;">ingresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclentriesingress">Network<wbr>Acl<wbr>Entries<wbr>Ingress[]</a></span>
     </dt>
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -514,47 +586,39 @@ The NetworkAclEntries resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="network_acl_id_python">
 <a href="#network_acl_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="egresses_python">
 <a href="#egresses_python" style="color: inherit; text-decoration: inherit;">egresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesegress">List[Network<wbr>Acl<wbr>Entries<wbr>Egress]</a></span>
+        <span class="property-type"><a href="#networkaclentriesegress">Sequence[Network<wbr>Acl<wbr>Entries<wbr>Egress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ingresses_python">
 <a href="#ingresses_python" style="color: inherit; text-decoration: inherit;">ingresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesingress">List[Network<wbr>Acl<wbr>Entries<wbr>Ingress]</a></span>
+        <span class="property-type"><a href="#networkaclentriesingress">Sequence[Network<wbr>Acl<wbr>Entries<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the NetworkAclEntries resource produces the following output properties:
-
 
 
 
@@ -565,15 +629,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -582,15 +644,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -599,15 +659,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -616,18 +674,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -637,19 +690,20 @@ Get an existing NetworkAclEntries resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclEntriesState">NetworkAclEntriesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclEntries">NetworkAclEntries</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclEntriesState">NetworkAclEntriesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclEntries">NetworkAclEntries</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>egresses=None<span class="p">, </span>ingresses=None<span class="p">, </span>network_acl_id=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">egresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAclEntriesEgressArgs]]</span> = None<span class="p">, </span><span class="nx">ingresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[NetworkAclEntriesIngressArgs]]</span> = None<span class="p">, </span><span class="nx">network_acl_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> NetworkAclEntries</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkAclEntries<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntriesState">NetworkAclEntriesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntries">NetworkAclEntries</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkAclEntries<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntriesState">NetworkAclEntriesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntries">NetworkAclEntries</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.NetworkAclEntries.html">NetworkAclEntries</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.NetworkAclEntriesState.html">NetworkAclEntriesState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.NetworkAclEntries.html">NetworkAclEntries</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.NetworkAclEntriesState.html">NetworkAclEntriesState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -751,7 +805,6 @@ Get an existing NetworkAclEntries resource's state with the given name, ID, and 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -759,38 +812,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_egresses_csharp">
 <a href="#state_egresses_csharp" style="color: inherit; text-decoration: inherit;">Egresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclentriesegress">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Entries<wbr>Egress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingresses_csharp">
 <a href="#state_ingresses_csharp" style="color: inherit; text-decoration: inherit;">Ingresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclentriesingress">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Entries<wbr>Ingress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkaclid_csharp">
 <a href="#state_networkaclid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -799,38 +848,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_egresses_go">
 <a href="#state_egresses_go" style="color: inherit; text-decoration: inherit;">Egresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclentriesegress">[]Network<wbr>Acl<wbr>Entries<wbr>Egress</a></span>
     </dt>
     <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingresses_go">
 <a href="#state_ingresses_go" style="color: inherit; text-decoration: inherit;">Ingresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclentriesingress">[]Network<wbr>Acl<wbr>Entries<wbr>Ingress</a></span>
     </dt>
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkaclid_go">
 <a href="#state_networkaclid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -839,38 +884,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_egresses_nodejs">
 <a href="#state_egresses_nodejs" style="color: inherit; text-decoration: inherit;">egresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclentriesegress">Network<wbr>Acl<wbr>Entries<wbr>Egress[]</a></span>
     </dt>
     <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingresses_nodejs">
 <a href="#state_ingresses_nodejs" style="color: inherit; text-decoration: inherit;">ingresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclentriesingress">Network<wbr>Acl<wbr>Entries<wbr>Ingress[]</a></span>
     </dt>
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkaclid_nodejs">
 <a href="#state_networkaclid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acl<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -879,35 +920,32 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_egresses_python">
 <a href="#state_egresses_python" style="color: inherit; text-decoration: inherit;">egresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesegress">List[Network<wbr>Acl<wbr>Entries<wbr>Egress]</a></span>
+        <span class="property-type"><a href="#networkaclentriesegress">Sequence[Network<wbr>Acl<wbr>Entries<wbr>Egress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ingresses_python">
 <a href="#state_ingresses_python" style="color: inherit; text-decoration: inherit;">ingresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesingress">List[Network<wbr>Acl<wbr>Entries<wbr>Ingress]</a></span>
+        <span class="property-type"><a href="#networkaclentriesingress">Sequence[Network<wbr>Acl<wbr>Entries<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_acl_id_python">
 <a href="#state_network_acl_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acl_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -916,11 +954,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="networkaclentriesegress">Network<wbr>Acl<wbr>Entries<wbr>Egress</h4>
@@ -931,11 +966,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntriesEgressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntriesEgressOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.Inputs.NetworkAclEntriesEgressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.Outputs.NetworkAclEntriesEgress.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -945,82 +979,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationcidrip_csharp">
 <a href="#destinationcidrip_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination ip of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="entrytype_csharp">
 <a href="#entrytype_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1029,82 +1055,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationcidrip_go">
 <a href="#destinationcidrip_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination ip of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="entrytype_go">
 <a href="#entrytype_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1113,82 +1131,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationcidrip_nodejs">
 <a href="#destinationcidrip_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination ip of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="entrytype_nodejs">
 <a href="#entrytype_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1197,85 +1207,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="destinationcidrip_python">
-<a href="#destinationcidrip_python" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr<wbr>Ip</a>
-</span> 
+        <span id="destination_cidr_ip_python">
+<a href="#destination_cidr_ip_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr_<wbr>ip</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination ip of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="entrytype_python">
-<a href="#entrytype_python" style="color: inherit; text-decoration: inherit;">entry<wbr>Type</a>
-</span> 
+        <span id="entry_type_python">
+<a href="#entry_type_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="networkaclentriesingress">Network<wbr>Acl<wbr>Entries<wbr>Ingress</h4>
 {{% choosable language nodejs %}}
@@ -1285,11 +1284,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntriesIngressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc?tab=doc#NetworkAclEntriesIngressOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.Inputs.NetworkAclEntriesIngressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpc.Outputs.NetworkAclEntriesIngress.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1299,82 +1297,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="entrytype_csharp">
 <a href="#entrytype_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcecidrip_csharp">
 <a href="#sourcecidrip_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source ip of the ingress entry.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1383,82 +1373,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="entrytype_go">
 <a href="#entrytype_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcecidrip_go">
 <a href="#sourcecidrip_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source ip of the ingress entry.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1467,82 +1449,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="entrytype_nodejs">
 <a href="#entrytype_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcecidrip_nodejs">
 <a href="#sourcecidrip_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source ip of the ingress entry.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1551,88 +1525,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="entrytype_python">
-<a href="#entrytype_python" style="color: inherit; text-decoration: inherit;">entry<wbr>Type</a>
-</span> 
+        <span id="entry_type_python">
+<a href="#entry_type_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_cidr_ip_python">
 <a href="#source_cidr_ip_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source ip of the ingress entry.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
@@ -1642,6 +1602,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

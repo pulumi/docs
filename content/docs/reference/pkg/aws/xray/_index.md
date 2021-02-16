@@ -11,6 +11,8 @@ Explore the resources and functions of the xray module in the AWS package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="encryptionconfig" title="EncryptionConfig"><span class="symbol resource"></span>EncryptionConfig</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="samplingrule" title="SamplingRule"><span class="symbol resource"></span>SamplingRule</a></li>
 </ul>
 
@@ -23,24 +25,6 @@ Explore the resources and functions of the xray module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Xray.html" title="Pulumi.Aws.Xray">Pulumi.Aws.Xray</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/xray?tab=doc#" title="aws/xray">aws/xray</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/xray/#" title="@pulumi/aws/xray">@pulumi/aws/xray</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/xray" title="pulumi_aws/xray">pulumi_aws/xray</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

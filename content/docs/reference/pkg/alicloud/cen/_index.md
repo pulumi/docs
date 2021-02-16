@@ -21,6 +21,7 @@ Explore the resources and functions of the cen module in the AliCloud package.
     <li><a href="privatezone" title="PrivateZone"><span class="symbol resource"></span>PrivateZone</a></li>
     <li><a href="routeentry" title="RouteEntry"><span class="symbol resource"></span>RouteEntry</a></li>
     <li><a href="routemap" title="RouteMap"><span class="symbol resource"></span>RouteMap</a></li>
+    <li><a href="routeservice" title="RouteService"><span class="symbol resource"></span>RouteService</a></li>
     <li><a href="vbrhealthcheck" title="VbrHealthCheck"><span class="symbol resource"></span>VbrHealthCheck</a></li>
 </ul>
 
@@ -29,11 +30,14 @@ Explore the resources and functions of the cen module in the AliCloud package.
     <li><a href="getbandwidthlimits" title="GetBandwidthLimits"><span class="symbol function"></span>GetBandwidthLimits</a></li>
     <li><a href="getbandwidthpackages" title="GetBandwidthPackages"><span class="symbol function"></span>GetBandwidthPackages</a></li>
     <li><a href="getflowlogs" title="GetFlowlogs"><span class="symbol function"></span>GetFlowlogs</a></li>
+    <li><a href="getinstanceattachments" title="GetInstanceAttachments"><span class="symbol function"></span>GetInstanceAttachments</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
     <li><a href="getprivatezones" title="GetPrivateZones"><span class="symbol function"></span>GetPrivateZones</a></li>
     <li><a href="getregionrouteentries" title="GetRegionRouteEntries"><span class="symbol function"></span>GetRegionRouteEntries</a></li>
     <li><a href="getrouteentries" title="GetRouteEntries"><span class="symbol function"></span>GetRouteEntries</a></li>
     <li><a href="getroutemaps" title="GetRouteMaps"><span class="symbol function"></span>GetRouteMaps</a></li>
+    <li><a href="getrouteservices" title="GetRouteServices"><span class="symbol function"></span>GetRouteServices</a></li>
+    <li><a href="getvbrhealthchecks" title="GetVbrHealthChecks"><span class="symbol function"></span>GetVbrHealthChecks</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -43,26 +47,8 @@ Explore the resources and functions of the cen module in the AliCloud package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cen.html" title="Pulumi.AliCloud.Cen">Pulumi.AliCloud.Cen</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cen?tab=doc#" title="alicloud/cen">alicloud/cen</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#" title="@pulumi/alicloud/cen">@pulumi/alicloud/cen</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/cen" title="pulumi_alicloud/cen">pulumi_alicloud/cen</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

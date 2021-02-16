@@ -261,9 +261,7 @@ const principalServer = new azuread.ServicePrincipal(`${name}-sp-server`, {
 });
 
 // Export outputs.
-export const resourceGroupName = resourceGroup.name;
 export const adServerAppId = applicationServer.applicationId;
-export const adServerAppSecret = spPasswordServer.value;
 ```
 
 ## Create an IAM Client Application and ServicePrincipal
@@ -307,7 +305,6 @@ const principalClient = new azuread.ServicePrincipal(`${name}-sp-client`, {
 
 // Export outputs.
 export const adClientAppId = applicationClient.applicationId;
-export const adClientAppSecret = spPasswordClient.value;
 ```
 
 [azure-ad-aks]: https://docs.microsoft.com/en-us/azure/aks/azure-ad-integration
@@ -333,7 +330,8 @@ the `roles/editor` role, and authenticate as the ServiceAccount to use with the 
 ```bash
 $ gcloud iam service-accounts create my-service-account --description MyServiceAccount --display-name MyServiceAccount
 $ gcloud iam service-accounts keys create ~/key.json --iam-account my-service-account@pulumi-development.iam.gserviceaccount.com
-$ gcloud projects add-iam-policy-binding pulumi-development  --member serviceAccount:my-service-account@pulumi-development.iam.gserviceaccount.com --role roles/editor --role roles/container.clusterAdmin
+$ gcloud projects add-iam-policy-binding pulumi-development --member serviceAccount:my-service-account@pulumi-development.iam.gserviceaccount.com --role roles/editor
+$ gcloud projects add-iam-policy-binding pulumi-development --member serviceAccount:my-service-account@pulumi-development.iam.gserviceaccount.com --role roles/container.clusterAdmin
 $ gcloud auth activate-service-account --key-file ~/key.json
 ```
 

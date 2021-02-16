@@ -19,6 +19,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="accountteam" title="AccountTeam"><span class="symbol resource"></span>AccountTeam</a></li>
     <li><a href="accountteammember" title="AccountTeamMember"><span class="symbol resource"></span>AccountTeamMember</a></li>
     <li><a href="accountteamproject" title="AccountTeamProject"><span class="symbol resource"></span>AccountTeamProject</a></li>
+    <li><a href="billinggroup" title="BillingGroup"><span class="symbol resource"></span>BillingGroup</a></li>
     <li><a href="cassandra" title="Cassandra"><span class="symbol resource"></span>Cassandra</a></li>
     <li><a href="connectionpool" title="ConnectionPool"><span class="symbol resource"></span>ConnectionPool</a></li>
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
@@ -34,6 +35,8 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="kafkaschema" title="KafkaSchema"><span class="symbol resource"></span>KafkaSchema</a></li>
     <li><a href="kafkaschemaconfiguration" title="KafkaSchemaConfiguration"><span class="symbol resource"></span>KafkaSchemaConfiguration</a></li>
     <li><a href="kafkatopic" title="KafkaTopic"><span class="symbol resource"></span>KafkaTopic</a></li>
+    <li><a href="m3aggregator" title="M3Aggregator"><span class="symbol resource"></span>M3Aggregator</a></li>
+    <li><a href="m3db" title="M3Db"><span class="symbol resource"></span>M3Db</a></li>
     <li><a href="mirrormakerreplicationflow" title="MirrorMakerReplicationFlow"><span class="symbol resource"></span>MirrorMakerReplicationFlow</a></li>
     <li><a href="mysql" title="MySql"><span class="symbol resource"></span>MySql</a></li>
     <li><a href="pg" title="Pg"><span class="symbol resource"></span>Pg</a></li>
@@ -72,6 +75,8 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="getkafkaschema" title="GetKafkaSchema"><span class="symbol function"></span>GetKafkaSchema</a></li>
     <li><a href="getkafkaschemaconfiguration" title="GetKafkaSchemaConfiguration"><span class="symbol function"></span>GetKafkaSchemaConfiguration</a></li>
     <li><a href="getkafkatopic" title="GetKafkaTopic"><span class="symbol function"></span>GetKafkaTopic</a></li>
+    <li><a href="getm3aggregator" title="GetM3Aggregator"><span class="symbol function"></span>GetM3Aggregator</a></li>
+    <li><a href="getm3db" title="GetM3Db"><span class="symbol function"></span>GetM3Db</a></li>
     <li><a href="getmirrormakerreplicationflow" title="GetMirrorMakerReplicationFlow"><span class="symbol function"></span>GetMirrorMakerReplicationFlow</a></li>
     <li><a href="getmysql" title="GetMySql"><span class="symbol function"></span>GetMySql</a></li>
     <li><a href="getpg" title="GetPg"><span class="symbol function"></span>GetPg</a></li>
@@ -80,6 +85,7 @@ A Pulumi package for creating and managing Aiven cloud resources.
     <li><a href="getprojectvpc" title="GetProjectVpc"><span class="symbol function"></span>GetProjectVpc</a></li>
     <li><a href="getredis" title="GetRedis"><span class="symbol function"></span>GetRedis</a></li>
     <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+    <li><a href="getservicecomponent" title="GetServiceComponent"><span class="symbol function"></span>GetServiceComponent</a></li>
     <li><a href="getserviceintegration" title="GetServiceIntegration"><span class="symbol function"></span>GetServiceIntegration</a></li>
     <li><a href="getserviceintegrationendpoint" title="GetServiceIntegrationEndpoint"><span class="symbol function"></span>GetServiceIntegrationEndpoint</a></li>
     <li><a href="getserviceuser" title="GetServiceUser"><span class="symbol function"></span>GetServiceUser</a></li>
@@ -96,24 +102,6 @@ A Pulumi package for creating and managing Aiven cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
 	<dt>Version</dt>
-	<dd>3.0.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.html" title="Pulumi.Aiven">Pulumi.Aiven</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#" title="aiven">aiven</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#" title="@pulumi/aiven">@pulumi/aiven</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aiven" title="pulumi_aiven">pulumi_aiven</a></dd>
-
+	<dd>3.4.3</dd>
 </dl>
 

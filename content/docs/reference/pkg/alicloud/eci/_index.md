@@ -11,12 +11,14 @@ Explore the resources and functions of the eci module in the AliCloud package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="containergroup" title="ContainerGroup"><span class="symbol resource"></span>ContainerGroup</a></li>
     <li><a href="imagecache" title="ImageCache"><span class="symbol resource"></span>ImageCache</a></li>
     <li><a href="openapiimagecache" title="OpenApiImageCache"><span class="symbol resource"></span>OpenApiImageCache</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcontainergroups" title="GetContainerGroups"><span class="symbol function"></span>GetContainerGroups</a></li>
     <li><a href="getimagecaches" title="GetImageCaches"><span class="symbol function"></span>GetImageCaches</a></li>
 </ul>
 
@@ -27,26 +29,8 @@ Explore the resources and functions of the eci module in the AliCloud package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.html" title="Pulumi.AliCloud.Eci">Pulumi.AliCloud.Eci</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#" title="alicloud/eci">alicloud/eci</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/eci/#" title="@pulumi/alicloud/eci">@pulumi/alicloud/eci</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/eci" title="pulumi_alicloud/eci">pulumi_alicloud/eci</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

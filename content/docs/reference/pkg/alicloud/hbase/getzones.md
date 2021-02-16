@@ -14,6 +14,7 @@ This data source provides availability zones for HBase that can be accessed by a
 
 > **NOTE:** Available in v1.73.0+.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -29,7 +30,6 @@ class MyStack : Stack
     public MyStack()
     {
         var zonesIds = Output.Create(AliCloud.Hbase.GetZones.InvokeAsync());
-        // Create an HBase instance with the first matched zone
         var hbase = new AliCloud.Hbase.Instance("hbase", new AliCloud.Hbase.InstanceArgs
         {
             ZoneId = zonesIds.Apply(zonesIds => zonesIds.Zones[0].Id),
@@ -43,7 +43,31 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		zonesIds, err := hbase.GetZones(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = hbase.NewInstance(ctx, "hbase", &hbase.InstanceArgs{
+			ZoneId: pulumi.String(zonesIds.Zones[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -52,8 +76,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 zones_ids = alicloud.hbase.get_zones()
-# Create an HBase instance with the first matched zone
-hbase = alicloud.hbase.Instance("hbase", zone_id=zones_ids.zones[0]["id"])
+hbase = alicloud.hbase.Instance("hbase", zone_id=zones_ids.zones[0].id)
 # Other properties...
 ```
 
@@ -66,7 +89,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const zonesIds = alicloud.hbase.getZones({});
-// Create an HBase instance with the first matched zone
 const hbase = new alicloud.hbase.Instance("hbase", {zoneId: zonesIds.then(zonesIds => zonesIds.zones[0].id)});
 // Other properties...
 ```
@@ -87,7 +109,7 @@ const hbase = new alicloud.hbase.Instance("hbase", {zoneId: zonesIds.then(zonesI
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_zones(</span>multi=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_zones(</span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetZonesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -108,121 +130,65 @@ const hbase = new alicloud.hbase.Instance("hbase", {zoneId: zonesIds.then(zonesI
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="multi_csharp">
-<a href="#multi_csharp" style="color: inherit; text-decoration: inherit;">Multi</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Indicate whether the zones can be used in a multi AZ configuration. Default to `false`. Multi AZ is usually used to launch HBase instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="multi_go">
-<a href="#multi_go" style="color: inherit; text-decoration: inherit;">Multi</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Indicate whether the zones can be used in a multi AZ configuration. Default to `false`. Multi AZ is usually used to launch HBase instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="multi_nodejs">
-<a href="#multi_nodejs" style="color: inherit; text-decoration: inherit;">multi</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Indicate whether the zones can be used in a multi AZ configuration. Default to `false`. Multi AZ is usually used to launch HBase instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="multi_python">
-<a href="#multi_python" style="color: inherit; text-decoration: inherit;">multi</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Indicate whether the zones can be used in a multi AZ configuration. Default to `false`. Multi AZ is usually used to launch HBase instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -233,7 +199,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -241,58 +206,43 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of zone IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zones_csharp">
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Outputs.<wbr>Get<wbr>Zones<wbr>Zone&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of availability zones. Each element contains the following attributes:
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="multi_csharp">
-<a href="#multi_csharp" style="color: inherit; text-decoration: inherit;">Multi</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -301,58 +251,43 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of zone IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zones_go">
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">[]Get<wbr>Zones<wbr>Zone</a></span>
     </dt>
     <dd>{{% md %}}A list of availability zones. Each element contains the following attributes:
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="multi_go">
-<a href="#multi_go" style="color: inherit; text-decoration: inherit;">Multi</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -361,58 +296,43 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of zone IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zones_nodejs">
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzoneszone">Get<wbr>Zones<wbr>Zone[]</a></span>
     </dt>
     <dd>{{% md %}}A list of availability zones. Each element contains the following attributes:
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="multi_nodejs">
-<a href="#multi_nodejs" style="color: inherit; text-decoration: inherit;">multi</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -421,61 +341,43 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of zone IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zones_python">
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getzoneszone">List[Get<wbr>Zones<wbr>Zone]</a></span>
+        <span class="property-type"><a href="#getzoneszone">Sequence[Get<wbr>Zones<wbr>Zone]</a></span>
     </dt>
     <dd>{{% md %}}A list of availability zones. Each element contains the following attributes:
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="multi_python">
-<a href="#multi_python" style="color: inherit; text-decoration: inherit;">multi</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -497,7 +399,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -505,27 +406,24 @@ The following output properties are available:
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="multizoneids_csharp">
 <a href="#multizoneids_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Zone<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of zone ids in which the multi zone.
+    <dd>{{% md %}}A list of zone ids in which the multi zone. Removed from v1.99.0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -534,27 +432,24 @@ The following output properties are available:
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="multizoneids_go">
 <a href="#multizoneids_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Zone<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of zone ids in which the multi zone.
+    <dd>{{% md %}}A list of zone ids in which the multi zone. Removed from v1.99.0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -563,27 +458,24 @@ The following output properties are available:
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="multizoneids_nodejs">
 <a href="#multizoneids_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Zone<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of zone ids in which the multi zone.
+    <dd>{{% md %}}A list of zone ids in which the multi zone. Removed from v1.99.0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -592,30 +484,24 @@ The following output properties are available:
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="multizoneids_python">
-<a href="#multizoneids_python" style="color: inherit; text-decoration: inherit;">multi<wbr>Zone<wbr>Ids</a>
-</span> 
+        <span id="multi_zone_ids_python">
+<a href="#multi_zone_ids_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>zone_<wbr>ids</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of zone ids in which the multi zone.
+    <dd>{{% md %}}A list of zone ids in which the multi zone. Removed from v1.99.0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -628,6 +514,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

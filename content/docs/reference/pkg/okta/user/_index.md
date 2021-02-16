@@ -14,12 +14,14 @@ Explore the resources and functions of the user module in the Okta package.
     <li><a href="baseschema" title="BaseSchema"><span class="symbol resource"></span>BaseSchema</a></li>
     <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
+    <li><a href="usertype" title="UserType"><span class="symbol resource"></span>UserType</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
     <li><a href="getuserprofilemappingsource" title="GetUserProfileMappingSource"><span class="symbol function"></span>GetUserProfileMappingSource</a></li>
+    <li><a href="getusertype" title="GetUserType"><span class="symbol function"></span>GetUserType</a></li>
     <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
@@ -30,26 +32,8 @@ Explore the resources and functions of the user module in the Okta package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
+	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.User.html" title="Pulumi.Okta.User">Pulumi.Okta.User</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#" title="okta/user">okta/user</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/user/#" title="@pulumi/okta/user">@pulumi/okta/user</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_okta/user" title="pulumi_okta/user">pulumi_okta/user</a></dd>
-
+	<dd>2.10.0</dd>
 </dl>
 

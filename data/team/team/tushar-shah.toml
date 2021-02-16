@@ -1,0 +1,10 @@
+id = "tushar-shah"
+name = "Tushar Shah"
+title = "Senior Customer Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "tusharshahrs"
+linkedin = "tusharrshah"

@@ -1,8 +1,8 @@
 
 ---
 title: "Policy"
-title_tag: "Resource Policy | Module binaryauthorization | Package GCP"
-meta_desc: "Explore the Policy resource of the binaryauthorization module, including examples, input properties, output properties, lookup functions, and supporting types. A policy for container image binary authorization."
+title_tag: "gcp.binaryauthorization.Policy"
+meta_desc: "Documentation for the gcp.binaryauthorization.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -18,6 +18,345 @@ To get more information about Policy, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/binary-authorization/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Binary Authorization Policy Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var note = new Gcp.ContainerAnalysis.Note("note", new Gcp.ContainerAnalysis.NoteArgs
+        {
+            AttestationAuthority = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs
+            {
+                Hint = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs
+                {
+                    HumanReadableName = "My attestor",
+                },
+            },
+        });
+        var attestor = new Gcp.BinaryAuthorization.Attestor("attestor", new Gcp.BinaryAuthorization.AttestorArgs
+        {
+            AttestationAuthorityNote = new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNoteArgs
+            {
+                NoteReference = note.Name,
+            },
+        });
+        var policy = new Gcp.BinaryAuthorization.Policy("policy", new Gcp.BinaryAuthorization.PolicyArgs
+        {
+            AdmissionWhitelistPatterns = 
+            {
+                new Gcp.BinaryAuthorization.Inputs.PolicyAdmissionWhitelistPatternArgs
+                {
+                    NamePattern = "gcr.io/google_containers/*",
+                },
+            },
+            DefaultAdmissionRule = new Gcp.BinaryAuthorization.Inputs.PolicyDefaultAdmissionRuleArgs
+            {
+                EvaluationMode = "ALWAYS_ALLOW",
+                EnforcementMode = "ENFORCED_BLOCK_AND_AUDIT_LOG",
+            },
+            ClusterAdmissionRules = 
+            {
+                new Gcp.BinaryAuthorization.Inputs.PolicyClusterAdmissionRuleArgs
+                {
+                    Cluster = "us-central1-a.prod-cluster",
+                    EvaluationMode = "REQUIRE_ATTESTATION",
+                    EnforcementMode = "ENFORCED_BLOCK_AND_AUDIT_LOG",
+                    RequireAttestationsBies = 
+                    {
+                        attestor.Name,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/binaryauthorization"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		note, err := containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
+			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
+				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
+					HumanReadableName: pulumi.String("My attestor"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		attestor, err := binaryauthorization.NewAttestor(ctx, "attestor", &binaryauthorization.AttestorArgs{
+			AttestationAuthorityNote: &binaryauthorization.AttestorAttestationAuthorityNoteArgs{
+				NoteReference: note.Name,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = binaryauthorization.NewPolicy(ctx, "policy", &binaryauthorization.PolicyArgs{
+			AdmissionWhitelistPatterns: binaryauthorization.PolicyAdmissionWhitelistPatternArray{
+				&binaryauthorization.PolicyAdmissionWhitelistPatternArgs{
+					NamePattern: pulumi.String("gcr.io/google_containers/*"),
+				},
+			},
+			DefaultAdmissionRule: &binaryauthorization.PolicyDefaultAdmissionRuleArgs{
+				EvaluationMode:  pulumi.String("ALWAYS_ALLOW"),
+				EnforcementMode: pulumi.String("ENFORCED_BLOCK_AND_AUDIT_LOG"),
+			},
+			ClusterAdmissionRules: binaryauthorization.PolicyClusterAdmissionRuleArray{
+				&binaryauthorization.PolicyClusterAdmissionRuleArgs{
+					Cluster:         pulumi.String("us-central1-a.prod-cluster"),
+					EvaluationMode:  pulumi.String("REQUIRE_ATTESTATION"),
+					EnforcementMode: pulumi.String("ENFORCED_BLOCK_AND_AUDIT_LOG"),
+					RequireAttestationsBies: pulumi.StringArray{
+						attestor.Name,
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+note = gcp.containeranalysis.Note("note", attestation_authority=gcp.containeranalysis.NoteAttestationAuthorityArgs(
+    hint=gcp.containeranalysis.NoteAttestationAuthorityHintArgs(
+        human_readable_name="My attestor",
+    ),
+))
+attestor = gcp.binaryauthorization.Attestor("attestor", attestation_authority_note=gcp.binaryauthorization.AttestorAttestationAuthorityNoteArgs(
+    note_reference=note.name,
+))
+policy = gcp.binaryauthorization.Policy("policy",
+    admission_whitelist_patterns=[gcp.binaryauthorization.PolicyAdmissionWhitelistPatternArgs(
+        name_pattern="gcr.io/google_containers/*",
+    )],
+    default_admission_rule=gcp.binaryauthorization.PolicyDefaultAdmissionRuleArgs(
+        evaluation_mode="ALWAYS_ALLOW",
+        enforcement_mode="ENFORCED_BLOCK_AND_AUDIT_LOG",
+    ),
+    cluster_admission_rules=[gcp.binaryauthorization.PolicyClusterAdmissionRuleArgs(
+        cluster="us-central1-a.prod-cluster",
+        evaluation_mode="REQUIRE_ATTESTATION",
+        enforcement_mode="ENFORCED_BLOCK_AND_AUDIT_LOG",
+        require_attestations_bies=[attestor.name],
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const note = new gcp.containeranalysis.Note("note", {attestationAuthority: {
+    hint: {
+        humanReadableName: "My attestor",
+    },
+}});
+const attestor = new gcp.binaryauthorization.Attestor("attestor", {attestationAuthorityNote: {
+    noteReference: note.name,
+}});
+const policy = new gcp.binaryauthorization.Policy("policy", {
+    admissionWhitelistPatterns: [{
+        namePattern: "gcr.io/google_containers/*",
+    }],
+    defaultAdmissionRule: {
+        evaluationMode: "ALWAYS_ALLOW",
+        enforcementMode: "ENFORCED_BLOCK_AND_AUDIT_LOG",
+    },
+    clusterAdmissionRules: [{
+        cluster: "us-central1-a.prod-cluster",
+        evaluationMode: "REQUIRE_ATTESTATION",
+        enforcementMode: "ENFORCED_BLOCK_AND_AUDIT_LOG",
+        requireAttestationsBies: [attestor.name],
+    }],
+});
+```
+
+{{% /example %}}
+
+### Binary Authorization Policy Global Evaluation
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var note = new Gcp.ContainerAnalysis.Note("note", new Gcp.ContainerAnalysis.NoteArgs
+        {
+            AttestationAuthority = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityArgs
+            {
+                Hint = new Gcp.ContainerAnalysis.Inputs.NoteAttestationAuthorityHintArgs
+                {
+                    HumanReadableName = "My attestor",
+                },
+            },
+        });
+        var attestor = new Gcp.BinaryAuthorization.Attestor("attestor", new Gcp.BinaryAuthorization.AttestorArgs
+        {
+            AttestationAuthorityNote = new Gcp.BinaryAuthorization.Inputs.AttestorAttestationAuthorityNoteArgs
+            {
+                NoteReference = note.Name,
+            },
+        });
+        var policy = new Gcp.BinaryAuthorization.Policy("policy", new Gcp.BinaryAuthorization.PolicyArgs
+        {
+            DefaultAdmissionRule = new Gcp.BinaryAuthorization.Inputs.PolicyDefaultAdmissionRuleArgs
+            {
+                EvaluationMode = "REQUIRE_ATTESTATION",
+                EnforcementMode = "ENFORCED_BLOCK_AND_AUDIT_LOG",
+                RequireAttestationsBies = 
+                {
+                    attestor.Name,
+                },
+            },
+            GlobalPolicyEvaluationMode = "ENABLE",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/binaryauthorization"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/containeranalysis"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		note, err := containeranalysis.NewNote(ctx, "note", &containeranalysis.NoteArgs{
+			AttestationAuthority: &containeranalysis.NoteAttestationAuthorityArgs{
+				Hint: &containeranalysis.NoteAttestationAuthorityHintArgs{
+					HumanReadableName: pulumi.String("My attestor"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		attestor, err := binaryauthorization.NewAttestor(ctx, "attestor", &binaryauthorization.AttestorArgs{
+			AttestationAuthorityNote: &binaryauthorization.AttestorAttestationAuthorityNoteArgs{
+				NoteReference: note.Name,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = binaryauthorization.NewPolicy(ctx, "policy", &binaryauthorization.PolicyArgs{
+			DefaultAdmissionRule: &binaryauthorization.PolicyDefaultAdmissionRuleArgs{
+				EvaluationMode:  pulumi.String("REQUIRE_ATTESTATION"),
+				EnforcementMode: pulumi.String("ENFORCED_BLOCK_AND_AUDIT_LOG"),
+				RequireAttestationsBies: pulumi.StringArray{
+					attestor.Name,
+				},
+			},
+			GlobalPolicyEvaluationMode: pulumi.String("ENABLE"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+note = gcp.containeranalysis.Note("note", attestation_authority=gcp.containeranalysis.NoteAttestationAuthorityArgs(
+    hint=gcp.containeranalysis.NoteAttestationAuthorityHintArgs(
+        human_readable_name="My attestor",
+    ),
+))
+attestor = gcp.binaryauthorization.Attestor("attestor", attestation_authority_note=gcp.binaryauthorization.AttestorAttestationAuthorityNoteArgs(
+    note_reference=note.name,
+))
+policy = gcp.binaryauthorization.Policy("policy",
+    default_admission_rule=gcp.binaryauthorization.PolicyDefaultAdmissionRuleArgs(
+        evaluation_mode="REQUIRE_ATTESTATION",
+        enforcement_mode="ENFORCED_BLOCK_AND_AUDIT_LOG",
+        require_attestations_bies=[attestor.name],
+    ),
+    global_policy_evaluation_mode="ENABLE")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const note = new gcp.containeranalysis.Note("note", {attestationAuthority: {
+    hint: {
+        humanReadableName: "My attestor",
+    },
+}});
+const attestor = new gcp.binaryauthorization.Attestor("attestor", {attestationAuthorityNote: {
+    noteReference: note.name,
+}});
+const policy = new gcp.binaryauthorization.Policy("policy", {
+    defaultAdmissionRule: {
+        evaluationMode: "REQUIRE_ATTESTATION",
+        enforcementMode: "ENFORCED_BLOCK_AND_AUDIT_LOG",
+        requireAttestationsBies: [attestor.name],
+    },
+    globalPolicyEvaluationMode: "ENABLE",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Policy Resource {#create}
@@ -25,19 +364,19 @@ To get more information about Policy, see:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#Policy">Policy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/binaryauthorization/#Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>admission_whitelist_patterns=None<span class="p">, </span>cluster_admission_rules=None<span class="p">, </span>default_admission_rule=None<span class="p">, </span>description=None<span class="p">, </span>global_policy_evaluation_mode=None<span class="p">, </span>project=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admission_whitelist_patterns</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyAdmissionWhitelistPatternArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_admission_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyClusterAdmissionRuleArgs]]</span> = None<span class="p">, </span><span class="nx">default_admission_rule</span><span class="p">:</span> <span class="nx">Optional[PolicyDefaultAdmissionRuleArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_policy_evaluation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#Policy">NewPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Policy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Policy.html">Policy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.PolicyArgs.html">PolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -48,7 +387,7 @@ To get more information about Policy, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -58,7 +397,7 @@ To get more information about Policy, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#PolicyArgs">PolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -107,7 +446,7 @@ To get more information about Policy, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -117,7 +456,7 @@ To get more information about Policy, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -127,7 +466,7 @@ To get more information about Policy, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyArgs">PolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -137,7 +476,7 @@ To get more information about Policy, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -156,7 +495,7 @@ To get more information about Policy, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -166,7 +505,7 @@ To get more information about Policy, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.PolicyArgs.html">PolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -189,12 +528,11 @@ To get more information about Policy, see:
 
 ## Policy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Policy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Policy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -205,32 +543,32 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="defaultadmissionrule_csharp">
 <a href="#defaultadmissionrule_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="admissionwhitelistpatterns_csharp">
 <a href="#admissionwhitelistpatterns_csharp" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">List&lt;Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusteradmissionrules_csharp">
 <a href="#clusteradmissionrules_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">List&lt;Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -240,46 +578,42 @@ to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="globalpolicyevaluationmode_csharp">
 <a href="#globalpolicyevaluationmode_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -288,32 +622,32 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="defaultadmissionrule_go">
 <a href="#defaultadmissionrule_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="admissionwhitelistpatterns_go">
 <a href="#admissionwhitelistpatterns_go" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">[]Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusteradmissionrules_go">
 <a href="#clusteradmissionrules_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">[]Policy<wbr>Cluster<wbr>Admission<wbr>Rule</a></span>
     </dt>
@@ -323,46 +657,42 @@ to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="globalpolicyevaluationmode_go">
 <a href="#globalpolicyevaluationmode_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -371,32 +701,32 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="defaultadmissionrule_nodejs">
 <a href="#defaultadmissionrule_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Admission<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="admissionwhitelistpatterns_nodejs">
 <a href="#admissionwhitelistpatterns_nodejs" style="color: inherit; text-decoration: inherit;">admission<wbr>Whitelist<wbr>Patterns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern[]</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusteradmissionrules_nodejs">
 <a href="#clusteradmissionrules_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Admission<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">Policy<wbr>Cluster<wbr>Admission<wbr>Rule[]</a></span>
     </dt>
@@ -406,46 +736,42 @@ to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="globalpolicyevaluationmode_nodejs">
 <a href="#globalpolicyevaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -454,34 +780,34 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="default_admission_rule_python">
 <a href="#default_admission_rule_python" style="color: inherit; text-decoration: inherit;">default_<wbr>admission_<wbr>rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">Dict[Policy<wbr>Default<wbr>Admission<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="admission_whitelist_patterns_python">
 <a href="#admission_whitelist_patterns_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>whitelist_<wbr>patterns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern]</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">Sequence[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cluster_admission_rules_python">
 <a href="#cluster_admission_rules_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admission_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">List[Policy<wbr>Cluster<wbr>Admission<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">Sequence[Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
@@ -489,55 +815,47 @@ to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="global_policy_evaluation_mode_python">
 <a href="#global_policy_evaluation_mode_python" style="color: inherit; text-decoration: inherit;">global_<wbr>policy_<wbr>evaluation_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Policy resource produces the following output properties:
-
 
 
 
@@ -548,15 +866,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -565,15 +881,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -582,15 +896,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -599,18 +911,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -620,19 +927,20 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/binaryauthorization/#Policy">Policy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Policy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>admission_whitelist_patterns=None<span class="p">, </span>cluster_admission_rules=None<span class="p">, </span>default_admission_rule=None<span class="p">, </span>description=None<span class="p">, </span>global_policy_evaluation_mode=None<span class="p">, </span>project=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admission_whitelist_patterns</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyAdmissionWhitelistPatternArgs]]</span> = None<span class="p">, </span><span class="nx">cluster_admission_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicyClusterAdmissionRuleArgs]]</span> = None<span class="p">, </span><span class="nx">default_admission_rule</span><span class="p">:</span> <span class="nx">Optional[PolicyDefaultAdmissionRuleArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">global_policy_evaluation_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Policy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.PolicyState.html">PolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Policy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -734,7 +1042,6 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -742,20 +1049,20 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_admissionwhitelistpatterns_csharp">
 <a href="#state_admissionwhitelistpatterns_csharp" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">List&lt;Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusteradmissionrules_csharp">
 <a href="#state_clusteradmissionrules_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">List&lt;Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
@@ -765,58 +1072,54 @@ to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultadmissionrule_csharp">
 <a href="#state_defaultadmissionrule_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_globalpolicyevaluationmode_csharp">
 <a href="#state_globalpolicyevaluationmode_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -825,20 +1128,20 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_admissionwhitelistpatterns_go">
 <a href="#state_admissionwhitelistpatterns_go" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">[]Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusteradmissionrules_go">
 <a href="#state_clusteradmissionrules_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">[]Policy<wbr>Cluster<wbr>Admission<wbr>Rule</a></span>
     </dt>
@@ -848,58 +1151,54 @@ to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultadmissionrule_go">
 <a href="#state_defaultadmissionrule_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_globalpolicyevaluationmode_go">
 <a href="#state_globalpolicyevaluationmode_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -908,20 +1207,20 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_admissionwhitelistpatterns_nodejs">
 <a href="#state_admissionwhitelistpatterns_nodejs" style="color: inherit; text-decoration: inherit;">admission<wbr>Whitelist<wbr>Patterns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyadmissionwhitelistpattern">Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern[]</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusteradmissionrules_nodejs">
 <a href="#state_clusteradmissionrules_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Admission<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policyclusteradmissionrule">Policy<wbr>Cluster<wbr>Admission<wbr>Rule[]</a></span>
     </dt>
@@ -931,58 +1230,54 @@ to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultadmissionrule_nodejs">
 <a href="#state_defaultadmissionrule_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Admission<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_globalpolicyevaluationmode_nodejs">
 <a href="#state_globalpolicyevaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -991,22 +1286,22 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_admission_whitelist_patterns_python">
 <a href="#state_admission_whitelist_patterns_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>whitelist_<wbr>patterns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyadmissionwhitelistpattern">List[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern]</a></span>
+        <span class="property-type"><a href="#policyadmissionwhitelistpattern">Sequence[Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A whitelist of image patterns to exclude from admission rules. If an
 image's name matches a whitelist pattern, the image's admission
-requests will always be permitted regardless of your admission rules.  Structure is documented below.
+requests will always be permitted regardless of your admission rules.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cluster_admission_rules_python">
 <a href="#state_cluster_admission_rules_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admission_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policyclusteradmissionrule">List[Policy<wbr>Cluster<wbr>Admission<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#policyclusteradmissionrule">Sequence[Policy<wbr>Cluster<wbr>Admission<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
@@ -1014,61 +1309,54 @@ to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_default_admission_rule_python">
 <a href="#state_default_admission_rule_python" style="color: inherit; text-decoration: inherit;">default_<wbr>admission_<wbr>rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policydefaultadmissionrule">Dict[Policy<wbr>Default<wbr>Admission<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
-rule.  Structure is documented below.
+rule.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_global_policy_evaluation_mode_python">
 <a href="#state_global_policy_evaluation_mode_python" style="color: inherit; text-decoration: inherit;">global_<wbr>policy_<wbr>evaluation_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
+Possible values are `ENABLE` and `DISABLE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1078,20 +1366,8 @@ If it is not provided, the provider project is used.
 ## Supporting Types
 
 
+
 <h4 id="policyadmissionwhitelistpattern">Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyAdmissionWhitelistPattern">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyAdmissionWhitelistPattern">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyAdmissionWhitelistPatternArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyAdmissionWhitelistPatternOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyAdmissionWhitelistPatternArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.PolicyAdmissionWhitelistPattern.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1100,19 +1376,17 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="namepattern_csharp">
 <a href="#namepattern_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An image name pattern to whitelist, in the form
 `registry/path/to/image`. This supports a trailing * as a
 wildcard, but this is allowed only in text after the registry/
 part.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1121,19 +1395,17 @@ part.
             title="Required">
         <span id="namepattern_go">
 <a href="#namepattern_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An image name pattern to whitelist, in the form
 `registry/path/to/image`. This supports a trailing * as a
 wildcard, but this is allowed only in text after the registry/
 part.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1142,58 +1414,38 @@ part.
             title="Required">
         <span id="namepattern_nodejs">
 <a href="#namepattern_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An image name pattern to whitelist, in the form
 `registry/path/to/image`. This supports a trailing * as a
 wildcard, but this is allowed only in text after the registry/
 part.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="namepattern_python">
-<a href="#namepattern_python" style="color: inherit; text-decoration: inherit;">name<wbr>Pattern</a>
-</span> 
+        <span id="name_pattern_python">
+<a href="#name_pattern_python" style="color: inherit; text-decoration: inherit;">name_<wbr>pattern</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An image name pattern to whitelist, in the form
 `registry/path/to/image`. This supports a trailing * as a
 wildcard, but this is allowed only in text after the registry/
 part.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="policyclusteradmissionrule">Policy<wbr>Cluster<wbr>Admission<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyClusterAdmissionRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyClusterAdmissionRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyClusterAdmissionRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyClusterAdmissionRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyClusterAdmissionRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.PolicyClusterAdmissionRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1202,42 +1454,41 @@ part.
             title="Required">
         <span id="cluster_csharp">
 <a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enforcementmode_csharp">
 <a href="#enforcementmode_csharp" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="evaluationmode_csharp">
 <a href="#evaluationmode_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requireattestationsbies_csharp">
 <a href="#requireattestationsbies_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Attestations<wbr>Bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
@@ -1248,10 +1499,8 @@ request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1260,42 +1509,41 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
             title="Required">
         <span id="cluster_go">
 <a href="#cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enforcementmode_go">
 <a href="#enforcementmode_go" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="evaluationmode_go">
 <a href="#evaluationmode_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requireattestationsbies_go">
 <a href="#requireattestationsbies_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Attestations<wbr>Bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
@@ -1306,10 +1554,8 @@ request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1318,42 +1564,41 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
             title="Required">
         <span id="cluster_nodejs">
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enforcementmode_nodejs">
 <a href="#enforcementmode_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="evaluationmode_nodejs">
 <a href="#evaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requireattestationsbies_nodejs">
 <a href="#requireattestationsbies_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
@@ -1364,10 +1609,8 @@ request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1376,42 +1619,41 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
             title="Required">
         <span id="cluster_python">
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="enforcementmode_python">
-<a href="#enforcementmode_python" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
-</span> 
+        <span id="enforcement_mode_python">
+<a href="#enforcement_mode_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>mode</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="evaluationmode_python">
-<a href="#evaluationmode_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
-</span> 
+        <span id="evaluation_mode_python">
+<a href="#evaluation_mode_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>mode</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="requireattestationsbies_python">
-<a href="#requireattestationsbies_python" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
-</span> 
+        <span id="require_attestations_bies_python">
+<a href="#require_attestations_bies_python" style="color: inherit; text-decoration: inherit;">require_<wbr>attestations_<wbr>bies</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
@@ -1422,28 +1664,10 @@ request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#PolicyDefaultAdmissionRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#PolicyDefaultAdmissionRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyDefaultAdmissionRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/binaryauthorization?tab=doc#PolicyDefaultAdmissionRuleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Inputs.PolicyDefaultAdmissionRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.BinaryAuthorization.Outputs.PolicyDefaultAdmissionRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1452,31 +1676,31 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
             title="Required">
         <span id="enforcementmode_csharp">
 <a href="#enforcementmode_csharp" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="evaluationmode_csharp">
 <a href="#evaluationmode_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requireattestationsbies_csharp">
 <a href="#requireattestationsbies_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Attestations<wbr>Bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
@@ -1487,10 +1711,8 @@ request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1499,31 +1721,31 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
             title="Required">
         <span id="enforcementmode_go">
 <a href="#enforcementmode_go" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="evaluationmode_go">
 <a href="#evaluationmode_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requireattestationsbies_go">
 <a href="#requireattestationsbies_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Attestations<wbr>Bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
@@ -1534,10 +1756,8 @@ request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1546,31 +1766,31 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
             title="Required">
         <span id="enforcementmode_nodejs">
 <a href="#enforcementmode_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="evaluationmode_nodejs">
 <a href="#evaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requireattestationsbies_nodejs">
 <a href="#requireattestationsbies_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
@@ -1581,43 +1801,41 @@ request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="enforcementmode_python">
-<a href="#enforcementmode_python" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
-</span> 
+        <span id="enforcement_mode_python">
+<a href="#enforcement_mode_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>mode</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
+Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="evaluationmode_python">
-<a href="#evaluationmode_python" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
-</span> 
+        <span id="evaluation_mode_python">
+<a href="#evaluation_mode_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>mode</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
+Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="requireattestationsbies_python">
-<a href="#requireattestationsbies_python" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
-</span> 
+        <span id="require_attestations_bies_python">
+<a href="#require_attestations_bies_python" style="color: inherit; text-decoration: inherit;">require_<wbr>attestations_<wbr>bies</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The resource names of the attestors that must attest to a
 container image. If the attestor is in a different project from the
@@ -1628,14 +1846,20 @@ request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Policy can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:binaryauthorization/policy:Policy default projects/{{project}}
+```
 
-
+```sh
+ $ pulumi import gcp:binaryauthorization/policy:Policy default {{project}}
+```
 
 
 
@@ -1647,6 +1871,6 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

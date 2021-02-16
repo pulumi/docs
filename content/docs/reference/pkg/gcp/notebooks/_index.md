@@ -13,6 +13,9 @@ Explore the resources and functions of the notebooks module in the GCP package.
 <ul class="api">
     <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="instanceiambinding" title="InstanceIamBinding"><span class="symbol resource"></span>InstanceIamBinding</a></li>
+    <li><a href="instanceiammember" title="InstanceIamMember"><span class="symbol resource"></span>InstanceIamMember</a></li>
+    <li><a href="instanceiampolicy" title="InstanceIamPolicy"><span class="symbol resource"></span>InstanceIamPolicy</a></li>
     <li><a href="location" title="Location"><span class="symbol resource"></span>Location</a></li>
 </ul>
 
@@ -23,26 +26,8 @@ Explore the resources and functions of the notebooks module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Notebooks.html" title="Pulumi.Gcp.Notebooks">Pulumi.Gcp.Notebooks</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/notebooks?tab=doc#" title="gcp/notebooks">gcp/notebooks</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/notebooks/#" title="@pulumi/gcp/notebooks">@pulumi/gcp/notebooks</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/notebooks" title="pulumi_gcp/notebooks">pulumi_gcp/notebooks</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

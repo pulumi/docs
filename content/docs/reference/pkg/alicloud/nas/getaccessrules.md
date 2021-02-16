@@ -12,8 +12,45 @@ meta_desc: "Explore the GetAccessRules function of the nas module, including exa
 
 This data source provides AccessRule available to the user.
 
-> NOTE: Available in 1.35.0+
+> **NOTE**: Available in 1.35.0+
 
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const foo = pulumi.output(alicloud.nas.getAccessRules({
+    accessGroupName: "tf-testAccAccessGroupsdatasource",
+    rwAccess: "RDWR",
+    sourceCidrIp: "168.1.1.0/16",
+    userAccess: "no_squash",
+}, { async: true }));
+
+export const alicloudNasAccessRulesId = foo.rules[0].id;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Using GetAccessRules {#using}
@@ -27,7 +64,7 @@ This data source provides AccessRule available to the user.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_access_rules(</span>access_group_name=None<span class="p">, </span>ids=None<span class="p">, </span>output_file=None<span class="p">, </span>rw_access=None<span class="p">, </span>source_cidr_ip=None<span class="p">, </span>user_access=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_access_rules(</span><span class="nx">access_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rw_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_cidr_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_access</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccessRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -48,7 +85,6 @@ This data source provides AccessRule available to the user.
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -56,70 +92,63 @@ The following arguments are supported:
             title="Required">
         <span id="accessgroupname_csharp">
 <a href="#accessgroupname_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific AccessGroupName.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of rule IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rwaccess_csharp">
 <a href="#rwaccess_csharp" style="color: inherit; text-decoration: inherit;">Rw<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcecidrip_csharp">
 <a href="#sourcecidrip_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useraccess_csharp">
 <a href="#useraccess_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -128,70 +157,63 @@ The following arguments are supported:
             title="Required">
         <span id="accessgroupname_go">
 <a href="#accessgroupname_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific AccessGroupName.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of rule IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rwaccess_go">
 <a href="#rwaccess_go" style="color: inherit; text-decoration: inherit;">Rw<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcecidrip_go">
 <a href="#sourcecidrip_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useraccess_go">
 <a href="#useraccess_go" style="color: inherit; text-decoration: inherit;">User<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -200,70 +222,63 @@ The following arguments are supported:
             title="Required">
         <span id="accessgroupname_nodejs">
 <a href="#accessgroupname_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific AccessGroupName.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of rule IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rwaccess_nodejs">
 <a href="#rwaccess_nodejs" style="color: inherit; text-decoration: inherit;">rw<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcecidrip_nodejs">
 <a href="#sourcecidrip_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useraccess_nodejs">
 <a href="#useraccess_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -272,73 +287,63 @@ The following arguments are supported:
             title="Required">
         <span id="access_group_name_python">
 <a href="#access_group_name_python" style="color: inherit; text-decoration: inherit;">access_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific AccessGroupName.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of rule IDs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rw_access_python">
 <a href="#rw_access_python" style="color: inherit; text-decoration: inherit;">rw_<wbr>access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_cidr_ip_python">
 <a href="#source_cidr_ip_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_access_python">
 <a href="#user_access_python" style="color: inherit; text-decoration: inherit;">user_<wbr>access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -349,7 +354,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -357,91 +361,82 @@ The following output properties are available:
             title="">
         <span id="accessgroupname_csharp">
 <a href="#accessgroupname_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access rule id>` before 1.53.0).
+    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access_rule_id>` before 1.53.0).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccessrulesrule">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Nas.<wbr>Outputs.<wbr>Get<wbr>Access<wbr>Rules<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessRules. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rwaccess_csharp">
 <a href="#rwaccess_csharp" style="color: inherit; text-decoration: inherit;">Rw<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RWAccess of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sourcecidrip_csharp">
 <a href="#sourcecidrip_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SourceCidrIp of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="useraccess_csharp">
 <a href="#useraccess_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UserAccess of the AccessRule
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -450,91 +445,82 @@ The following output properties are available:
             title="">
         <span id="accessgroupname_go">
 <a href="#accessgroupname_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access rule id>` before 1.53.0).
+    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access_rule_id>` before 1.53.0).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccessrulesrule">[]Get<wbr>Access<wbr>Rules<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessRules. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rwaccess_go">
 <a href="#rwaccess_go" style="color: inherit; text-decoration: inherit;">Rw<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RWAccess of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sourcecidrip_go">
 <a href="#sourcecidrip_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SourceCidrIp of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="useraccess_go">
 <a href="#useraccess_go" style="color: inherit; text-decoration: inherit;">User<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UserAccess of the AccessRule
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -543,91 +529,82 @@ The following output properties are available:
             title="">
         <span id="accessgroupname_nodejs">
 <a href="#accessgroupname_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access rule id>` before 1.53.0).
+    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access_rule_id>` before 1.53.0).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccessrulesrule">Get<wbr>Access<wbr>Rules<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessRules. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rwaccess_nodejs">
 <a href="#rwaccess_nodejs" style="color: inherit; text-decoration: inherit;">rw<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RWAccess of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sourcecidrip_nodejs">
 <a href="#sourcecidrip_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SourceCidrIp of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="useraccess_nodejs">
 <a href="#useraccess_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UserAccess of the AccessRule
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -636,94 +613,82 @@ The following output properties are available:
             title="">
         <span id="access_group_name_python">
 <a href="#access_group_name_python" style="color: inherit; text-decoration: inherit;">access_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access rule id>` before 1.53.0).
+    <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access_rule_id>` before 1.53.0).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccessrulesrule">List[Get<wbr>Access<wbr>Rules<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getaccessrulesrule">Sequence[Get<wbr>Access<wbr>Rules<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessRules. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rw_access_python">
 <a href="#rw_access_python" style="color: inherit; text-decoration: inherit;">rw_<wbr>access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RWAccess of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="source_cidr_ip_python">
 <a href="#source_cidr_ip_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SourceCidrIp of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="user_access_python">
 <a href="#user_access_python" style="color: inherit; text-decoration: inherit;">user_<wbr>access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UserAccess of the AccessRule
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -745,7 +710,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -753,60 +717,54 @@ The following output properties are available:
             title="Required">
         <span id="accessruleid_csharp">
 <a href="#accessruleid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Rule<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AccessRuleId of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rwaccess_csharp">
 <a href="#rwaccess_csharp" style="color: inherit; text-decoration: inherit;">Rw<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourcecidrip_csharp">
 <a href="#sourcecidrip_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="useraccess_csharp">
 <a href="#useraccess_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -815,60 +773,54 @@ The following output properties are available:
             title="Required">
         <span id="accessruleid_go">
 <a href="#accessruleid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Rule<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AccessRuleId of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rwaccess_go">
 <a href="#rwaccess_go" style="color: inherit; text-decoration: inherit;">Rw<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourcecidrip_go">
 <a href="#sourcecidrip_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="useraccess_go">
 <a href="#useraccess_go" style="color: inherit; text-decoration: inherit;">User<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -877,60 +829,54 @@ The following output properties are available:
             title="Required">
         <span id="accessruleid_nodejs">
 <a href="#accessruleid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Rule<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AccessRuleId of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rwaccess_nodejs">
 <a href="#rwaccess_nodejs" style="color: inherit; text-decoration: inherit;">rw<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourcecidrip_nodejs">
 <a href="#sourcecidrip_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr<wbr>Ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="useraccess_nodejs">
 <a href="#useraccess_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Access</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -939,63 +885,54 @@ The following output properties are available:
             title="Required">
         <span id="access_rule_id_python">
 <a href="#access_rule_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>rule_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AccessRuleId of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the AccessRule.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="rwaccess_python">
-<a href="#rwaccess_python" style="color: inherit; text-decoration: inherit;">rw<wbr>Access</a>
-</span> 
+        <span id="rw_access_python">
+<a href="#rw_access_python" style="color: inherit; text-decoration: inherit;">rw_<wbr>access</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific RWAccess. 
+    <dd>{{% md %}}Filter results by a specific RWAccess.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_cidr_ip_python">
 <a href="#source_cidr_ip_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
+    <dd>{{% md %}}Filter results by a specific SourceCidrIp.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="useraccess_python">
-<a href="#useraccess_python" style="color: inherit; text-decoration: inherit;">user<wbr>Access</a>
-</span> 
+        <span id="user_access_python">
+<a href="#user_access_python" style="color: inherit; text-decoration: inherit;">user_<wbr>access</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific UserAccess. 
+    <dd>{{% md %}}Filter results by a specific UserAccess.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1008,6 +945,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

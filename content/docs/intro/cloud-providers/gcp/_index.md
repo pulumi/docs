@@ -70,7 +70,16 @@ bucket = storage.Bucket('my-bucket')
 ```go
 import "github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage"
 
-bucket, _ := storage.NewBucket(ctx, "my-bucket", nil)
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bucket, err := storage.NewBucket(ctx, "my-bucket", nil)
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
 ```
 
 {{% /choosable %}}

@@ -163,7 +163,7 @@ Policy Packs run:
 Permalink: https://app.pulumi.com/spara/elasticsearch/dev/previews/bb6df58f-69aa-485a-99a4-d076bc067b84
 ```
 
-AWSGuard flagged two recommended Elasticsearch best practices, encryption and deploying only within a VPC and not publically. By enabling encryption at rest, unauthorized users cannot read data in Elasticseach clusters, storage, indices, and log files. By enabling Elasticsearch’s built-in encryption, your deployment follows recommended practices that comply with [HIPAA](https://aspe.hhs.gov/report/health-insurance-portability-and-accountability-act-1996) and [GDPR](https://eugdpr.org/). AWS VPCs can keep the network traffic between your applications and Elasticsearch cluster within your infrastructure’s network and not over the public internet. Isolating Elasticsearch within your infrastructure can help mitigate the likelihood of data exposure.
+AWSGuard flagged two recommended Elasticsearch best practices, encryption and deploying only within a VPC and not publically. By enabling encryption at rest, unauthorized users cannot read data in Elasticseach clusters, storage, indices, and log files. By enabling Elasticsearch’s built-in encryption, your deployment follows recommended practices that comply with [HIPAA](https://aspe.hhs.gov/report/health-insurance-portability-and-accountability-act-1996) and [GDPR](https://gdprinfo.eu/). AWS VPCs can keep the network traffic between your applications and Elasticsearch cluster within your infrastructure’s network and not over the public internet. Isolating Elasticsearch within your infrastructure can help mitigate the likelihood of data exposure.
 
 ## CrossGuard available in Pulumi 2.0
 

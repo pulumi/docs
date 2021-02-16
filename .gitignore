@@ -46,3 +46,18 @@ redirects.txt
 
 # Ignore the temporary directory created for Sentry releases.
 sentry-release
+
+# Ignore language-specific SDK docs for providers.
+content/docs/reference/pkg/nodejs
+!content/docs/reference/pkg/nodejs/pulumi/awsx
+!content/docs/reference/pkg/nodejs/pulumi/cloud
+!content/docs/reference/pkg/nodejs/pulumi/eks
+!content/docs/reference/pkg/nodejs/pulumi/kunernetesx
+!content/docs/reference/pkg/nodejs/pulumi/policy
+!content/docs/reference/pkg/nodejs/pulumi/pulumi
+!content/docs/reference/pkg/nodejs/pulumi/terraform
+
+content/docs/reference/pkg/python
+!content/docs/reference/pkg/python/pulumi/pulumi_pulumi
+!content/docs/reference/pkg/python/pulumi/pulumi_policy
+!content/docs/reference/pkg/python/pulumi/pulumi_terraform

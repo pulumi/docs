@@ -1,8 +1,8 @@
 
 ---
 title: "Deployment"
-title_tag: "Resource Deployment | Module deploymentmanager | Package GCP"
-meta_desc: "Explore the Deployment resource of the deploymentmanager module, including examples, input properties, output properties, lookup functions, and supporting types. A collection of resources that are deployed and managed together using"
+title_tag: "gcp.deploymentmanager.Deployment"
+meta_desc: "Documentation for the gcp.deploymentmanager.Deployment resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -24,6 +24,92 @@ deployments in preview as recreate-only for any update operation other
 than actually deploying an in-preview deployment (i.e. `preview=true` to
 `preview=false`).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Deployment Manager Deployment Basic
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var deployment = new Gcp.DeploymentManager.Deployment("deployment", new Gcp.DeploymentManager.DeploymentArgs
+        {
+            Target = new Gcp.DeploymentManager.Inputs.DeploymentTargetArgs
+            {
+                Config = new Gcp.DeploymentManager.Inputs.DeploymentTargetConfigArgs
+                {
+                    Content = File.ReadAllText("path/to/config.yml"),
+                },
+            },
+            Labels = 
+            {
+                new Gcp.DeploymentManager.Inputs.DeploymentLabelArgs
+                {
+                    Key = "foo",
+                    Value = "bar",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+deployment = gcp.deploymentmanager.Deployment("deployment",
+    target=gcp.deploymentmanager.DeploymentTargetArgs(
+        config=gcp.deploymentmanager.DeploymentTargetConfigArgs(
+            content=(lambda path: open(path).read())("path/to/config.yml"),
+        ),
+    ),
+    labels=[gcp.deploymentmanager.DeploymentLabelArgs(
+        key="foo",
+        value="bar",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const deployment = new gcp.deploymentmanager.Deployment("deployment", {
+    target: {
+        config: {
+            content: fs.readFileSync("path/to/config.yml"),
+        },
+    },
+    labels: [{
+        key: "foo",
+        value: "bar",
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Deployment Resource {#create}
@@ -31,19 +117,19 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/deploymentmanager/#Deployment">Deployment</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/deploymentmanager/#DeploymentArgs">DeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/deploymentmanager/#Deployment">Deployment</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>create_policy=None<span class="p">, </span>delete_policy=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>preview=None<span class="p">, </span>project=None<span class="p">, </span>target=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentLabelArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[DeploymentTargetArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#Deployment">NewDeployment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentArgs">DeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#Deployment">Deployment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDeployment</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Deployment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Deployment.html">Deployment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.DeploymentArgs.html">DeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Deployment</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -54,7 +140,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -64,7 +150,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/deploymentmanager/#DeploymentArgs">DeploymentArgs</a></span>
+        <span class="property-type"><a href="#inputs">DeploymentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -113,7 +199,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -123,7 +209,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -133,7 +219,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentArgs">DeploymentArgs</a></span>
+        <span class="property-type"><a href="#inputs">DeploymentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -143,7 +229,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -162,7 +248,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -172,7 +258,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.DeploymentArgs.html">DeploymentArgs</a></span>
+        <span class="property-type"><a href="#inputs">DeploymentArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -195,12 +281,11 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
 
 ## Deployment Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Deployment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Deployment resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -211,36 +296,37 @@ The Deployment resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createpolicy_csharp">
 <a href="#createpolicy_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
 create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deletepolicy_csharp">
 <a href="#deletepolicy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
 Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
@@ -248,75 +334,71 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">List&lt;Deployment<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preview_csharp">
 <a href="#preview_csharp" style="color: inherit; text-decoration: inherit;">Preview</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -325,36 +407,37 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createpolicy_go">
 <a href="#createpolicy_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
 create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deletepolicy_go">
 <a href="#deletepolicy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
 Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
@@ -362,75 +445,71 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">[]Deployment<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preview_go">
 <a href="#preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -439,36 +518,37 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createpolicy_nodejs">
 <a href="#createpolicy_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
 create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deletepolicy_nodejs">
 <a href="#deletepolicy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
 Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
@@ -476,75 +556,71 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">Deployment<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preview_nodejs">
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -553,36 +629,37 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttarget">Dict[Deployment<wbr>Target]</a></span>
+        <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_policy_python">
 <a href="#create_policy_python" style="color: inherit; text-decoration: inherit;">create_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
 create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="delete_policy_python">
 <a href="#delete_policy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
 Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
@@ -590,84 +667,76 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentlabel">List[Deployment<wbr>Label]</a></span>
+        <span class="property-type"><a href="#deploymentlabel">Sequence[Deployment<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preview_python">
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Deployment resource produces the following output properties:
-
 
 
 
@@ -678,48 +747,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="deploymentid_csharp">
 <a href="#deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="manifest_csharp">
 <a href="#manifest_csharp" style="color: inherit; text-decoration: inherit;">Manifest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -728,48 +792,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="deploymentid_go">
 <a href="#deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="manifest_go">
 <a href="#manifest_go" style="color: inherit; text-decoration: inherit;">Manifest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -778,48 +837,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="deploymentid_nodejs">
 <a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="manifest_nodejs">
 <a href="#manifest_nodejs" style="color: inherit; text-decoration: inherit;">manifest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -828,51 +882,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="deployment_id_python">
 <a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="manifest_python">
 <a href="#manifest_python" style="color: inherit; text-decoration: inherit;">manifest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -882,19 +928,20 @@ Get an existing Deployment resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/deploymentmanager/#DeploymentState">DeploymentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/deploymentmanager/#Deployment">Deployment</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DeploymentState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Deployment</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>create_policy=None<span class="p">, </span>delete_policy=None<span class="p">, </span>deployment_id=None<span class="p">, </span>description=None<span class="p">, </span>labels=None<span class="p">, </span>manifest=None<span class="p">, </span>name=None<span class="p">, </span>preview=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>target=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">create_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deployment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeploymentLabelArgs]]</span> = None<span class="p">, </span><span class="nx">manifest</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preview</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[DeploymentTargetArgs]</span> = None<span class="p">) -&gt;</span> Deployment</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeployment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentState">DeploymentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#Deployment">Deployment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeployment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DeploymentState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Deployment</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Deployment.html">Deployment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.DeploymentState.html">DeploymentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Deployment</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DeploymentState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -996,7 +1043,6 @@ Get an existing Deployment resource's state with the given name, ID, and optiona
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1004,24 +1050,25 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_createpolicy_csharp">
 <a href="#state_createpolicy_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
 create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deletepolicy_csharp">
 <a href="#state_deletepolicy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
 Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
@@ -1029,120 +1076,113 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_csharp">
 <a href="#state_deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">List&lt;Deployment<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_manifest_csharp">
 <a href="#state_manifest_csharp" style="color: inherit; text-decoration: inherit;">Manifest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preview_csharp">
 <a href="#state_preview_csharp" style="color: inherit; text-decoration: inherit;">Preview</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_target_csharp">
 <a href="#state_target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1151,24 +1191,25 @@ configuration and relevant templates.  Structure is documented below.
             title="Optional">
         <span id="state_createpolicy_go">
 <a href="#state_createpolicy_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
 create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deletepolicy_go">
 <a href="#state_deletepolicy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
 Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
@@ -1176,120 +1217,113 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_go">
 <a href="#state_deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">[]Deployment<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_manifest_go">
 <a href="#state_manifest_go" style="color: inherit; text-decoration: inherit;">Manifest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preview_go">
 <a href="#state_preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_target_go">
 <a href="#state_target_go" style="color: inherit; text-decoration: inherit;">Target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1298,24 +1332,25 @@ configuration and relevant templates.  Structure is documented below.
             title="Optional">
         <span id="state_createpolicy_nodejs">
 <a href="#state_createpolicy_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
 create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deletepolicy_nodejs">
 <a href="#state_deletepolicy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
 Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
@@ -1323,120 +1358,113 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_nodejs">
 <a href="#state_deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymentlabel">Deployment<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_manifest_nodejs">
 <a href="#state_manifest_nodejs" style="color: inherit; text-decoration: inherit;">manifest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preview_nodejs">
 <a href="#state_preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_target_nodejs">
 <a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1445,24 +1473,25 @@ configuration and relevant templates.  Structure is documented below.
             title="Optional">
         <span id="state_create_policy_python">
 <a href="#state_create_policy_python" style="color: inherit; text-decoration: inherit;">create_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for creating new resources. Only used on
 create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
 `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
 the deployment will fail. Note that updating this field does not
 actually affect the deployment, just how it is updated.
+Default value is `CREATE_OR_ACQUIRE`.
+Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_delete_policy_python">
 <a href="#state_delete_policy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the policy to use for deleting new resources on update/delete.
 Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
@@ -1470,123 +1499,113 @@ resource is deleted after removal from Deployment Manager. If
 `ABANDON`, the resource is only removed from Deployment Manager
 and is not actually deleted. Note that updating this field does not
 actually change the deployment, just how it is updated.
+Default value is `DELETE`.
+Possible values are `ABANDON` and `DELETE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deployment_id_python">
 <a href="#state_deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional user-provided description of deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentlabel">List[Deployment<wbr>Label]</a></span>
+        <span class="property-type"><a href="#deploymentlabel">Sequence[Deployment<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Key-value pairs to apply to this labels.  Structure is documented below.
+    <dd>{{% md %}}Key-value pairs to apply to this labels.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_manifest_python">
 <a href="#state_manifest_python" style="color: inherit; text-decoration: inherit;">manifest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. URL of the manifest representing the last manifest that was successfully deployed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preview_python">
 <a href="#state_preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, a deployment is created with "shell" resources
 that are not actually instantiated. This allows you to preview a
 deployment. It can be updated to false to actually deploy
 with real resources.
-~>**NOTE**: Deployment Manager does not allow update
+~>**NOTE:** Deployment Manager does not allow update
 of a deployment in preview (unless updating to preview=false). Thus,
 the provider will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. Server defined URL for the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_target_python">
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttarget">Dict[Deployment<wbr>Target]</a></span>
+        <span class="property-type"><a href="#deploymenttarget">Deployment<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters that define your deployment, including the deployment
-configuration and relevant templates.  Structure is documented below.
+configuration and relevant templates.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1596,20 +1615,8 @@ configuration and relevant templates.  Structure is documented below.
 ## Supporting Types
 
 
+
 <h4 id="deploymentlabel">Deployment<wbr>Label</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DeploymentLabel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DeploymentLabel">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentLabelOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Inputs.DeploymentLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Outputs.DeploymentLabel.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1618,27 +1625,24 @@ configuration and relevant templates.  Structure is documented below.
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key for label.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of label.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1647,27 +1651,24 @@ configuration and relevant templates.  Structure is documented below.
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key for label.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of label.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1676,27 +1677,24 @@ configuration and relevant templates.  Structure is documented below.
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key for label.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of label.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1705,45 +1703,26 @@ configuration and relevant templates.  Structure is documented below.
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key for label.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of label.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="deploymenttarget">Deployment<wbr>Target</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DeploymentTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DeploymentTarget">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Inputs.DeploymentTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Outputs.DeploymentTarget.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1752,29 +1731,28 @@ configuration and relevant templates.  Structure is documented below.
             title="Required">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The root configuration file to use for this deployment.  Structure is documented below.
+    <dd>{{% md %}}The root configuration file to use for this deployment.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imports_csharp">
 <a href="#imports_csharp" style="color: inherit; text-decoration: inherit;">Imports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetimport">List&lt;Deployment<wbr>Target<wbr>Import<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies import files for this configuration. This can be
 used to import templates or other files. For example, you might
-import a text file in order to use the file in a template.  Structure is documented below.
+import a text file in order to use the file in a template.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1783,29 +1761,28 @@ import a text file in order to use the file in a template.  Structure is documen
             title="Required">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The root configuration file to use for this deployment.  Structure is documented below.
+    <dd>{{% md %}}The root configuration file to use for this deployment.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imports_go">
 <a href="#imports_go" style="color: inherit; text-decoration: inherit;">Imports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetimport">[]Deployment<wbr>Target<wbr>Import</a></span>
     </dt>
     <dd>{{% md %}}Specifies import files for this configuration. This can be
 used to import templates or other files. For example, you might
-import a text file in order to use the file in a template.  Structure is documented below.
+import a text file in order to use the file in a template.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1814,29 +1791,28 @@ import a text file in order to use the file in a template.  Structure is documen
             title="Required">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The root configuration file to use for this deployment.  Structure is documented below.
+    <dd>{{% md %}}The root configuration file to use for this deployment.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imports_nodejs">
 <a href="#imports_nodejs" style="color: inherit; text-decoration: inherit;">imports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#deploymenttargetimport">Deployment<wbr>Target<wbr>Import[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies import files for this configuration. This can be
 used to import templates or other files. For example, you might
-import a text file in order to use the file in a template.  Structure is documented below.
+import a text file in order to use the file in a template.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1845,47 +1821,30 @@ import a text file in order to use the file in a template.  Structure is documen
             title="Required">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttargetconfig">Dict[Deployment<wbr>Target<wbr>Config]</a></span>
+        <span class="property-type"><a href="#deploymenttargetconfig">Deployment<wbr>Target<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The root configuration file to use for this deployment.  Structure is documented below.
+    <dd>{{% md %}}The root configuration file to use for this deployment.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="imports_python">
 <a href="#imports_python" style="color: inherit; text-decoration: inherit;">imports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymenttargetimport">List[Deployment<wbr>Target<wbr>Import]</a></span>
+        <span class="property-type"><a href="#deploymenttargetimport">Sequence[Deployment<wbr>Target<wbr>Import<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies import files for this configuration. This can be
 used to import templates or other files. For example, you might
-import a text file in order to use the file in a template.  Structure is documented below.
+import a text file in order to use the file in a template.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="deploymenttargetconfig">Deployment<wbr>Target<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DeploymentTargetConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DeploymentTargetConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentTargetConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentTargetConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Inputs.DeploymentTargetConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Outputs.DeploymentTargetConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1894,16 +1853,14 @@ import a text file in order to use the file in a template.  Structure is documen
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1912,16 +1869,14 @@ import a text file in order to use the file in a template.  Structure is documen
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1930,16 +1885,14 @@ import a text file in order to use the file in a template.  Structure is documen
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1948,34 +1901,16 @@ import a text file in order to use the file in a template.  Structure is documen
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="deploymenttargetimport">Deployment<wbr>Target<wbr>Import</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DeploymentTargetImport">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DeploymentTargetImport">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentTargetImportArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/deploymentmanager?tab=doc#DeploymentTargetImportOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Inputs.DeploymentTargetImportArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DeploymentManager.Outputs.DeploymentTargetImport.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1984,28 +1919,25 @@ import a text file in order to use the file in a template.  Structure is documen
             title="Optional">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2014,28 +1946,25 @@ configuration.
             title="Optional">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2044,28 +1973,25 @@ configuration.
             title="Optional">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2074,32 +2000,41 @@ configuration.
             title="Optional">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full contents of the template that you want to import.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the template to import, as declared in the YAML
 configuration.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Deployment can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:deploymentmanager/deployment:Deployment default projects/{{project}}/deployments/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:deploymentmanager/deployment:Deployment default {{project}}/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:deploymentmanager/deployment:Deployment default {{name}}
+```
 
 
 
@@ -2111,6 +2046,6 @@ configuration.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

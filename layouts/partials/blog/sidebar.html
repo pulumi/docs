@@ -30,7 +30,7 @@
                 {{ if $tag }}
                     <li>
                         <a data-track="blog-tag-{{ $tag | urlize }}" class="tag tag-blog text-xs {{ if eq (lower $tag) (urlize ((lower $.Title))) }} active {{ end }}" href="{{ .Page.Permalink }}">
-                            {{ $tag | urlize }}
+                            {{ $tag }}
                         </a>
                     </li>
                 {{ end }}

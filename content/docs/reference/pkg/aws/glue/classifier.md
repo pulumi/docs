@@ -1,8 +1,8 @@
 
 ---
 title: "Classifier"
-title_tag: "Resource Classifier | Module glue | Package AWS"
-meta_desc: "Explore the Classifier resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue Classifier resource."
+title_tag: "aws.glue.Classifier"
+meta_desc: "Documentation for the aws.glue.Classifier resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -90,17 +90,17 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.glue.Classifier("example", csv_classifier={
-    "allowSingleColumn": False,
-    "containsHeader": "PRESENT",
-    "delimiter": ",",
-    "disableValueTrimming": False,
-    "headers": [
+example = aws.glue.Classifier("example", csv_classifier=aws.glue.ClassifierCsvClassifierArgs(
+    allow_single_column=False,
+    contains_header="PRESENT",
+    delimiter=",",
+    disable_value_trimming=False,
+    headers=[
         "example1",
         "example2",
     ],
-    "quoteSymbol": "'",
-})
+    quote_symbol="'",
+))
 ```
 
 {{% /example %}}
@@ -185,10 +185,10 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.glue.Classifier("example", grok_classifier={
-    "classification": "example",
-    "grokPattern": "example",
-})
+example = aws.glue.Classifier("example", grok_classifier=aws.glue.ClassifierGrokClassifierArgs(
+    classification="example",
+    grok_pattern="example",
+))
 ```
 
 {{% /example %}}
@@ -264,9 +264,9 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.glue.Classifier("example", json_classifier={
-    "jsonPath": "example",
-})
+example = aws.glue.Classifier("example", json_classifier=aws.glue.ClassifierJsonClassifierArgs(
+    json_path="example",
+))
 ```
 
 {{% /example %}}
@@ -343,10 +343,10 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.glue.Classifier("example", xml_classifier={
-    "classification": "example",
-    "rowTag": "example",
-})
+example = aws.glue.Classifier("example", xml_classifier=aws.glue.ClassifierXmlClassifierArgs(
+    classification="example",
+    row_tag="example",
+))
 ```
 
 {{% /example %}}
@@ -375,19 +375,19 @@ const example = new aws.glue.Classifier("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Classifier">Classifier</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#ClassifierArgs">ClassifierArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Classifier</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClassifierArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Classifier">Classifier</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>csv_classifier=None<span class="p">, </span>grok_classifier=None<span class="p">, </span>json_classifier=None<span class="p">, </span>name=None<span class="p">, </span>xml_classifier=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Classifier</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">csv_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierCsvClassifierArgs]</span> = None<span class="p">, </span><span class="nx">grok_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierGrokClassifierArgs]</span> = None<span class="p">, </span><span class="nx">json_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierJsonClassifierArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">xml_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierXmlClassifierArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Classifier">NewClassifier</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#ClassifierArgs">ClassifierArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Classifier">Classifier</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClassifier</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClassifierArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Classifier</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Classifier.html">Classifier</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.ClassifierArgs.html">ClassifierArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Classifier</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClassifierArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -398,7 +398,7 @@ const example = new aws.glue.Classifier("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -408,7 +408,7 @@ const example = new aws.glue.Classifier("example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#ClassifierArgs">ClassifierArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClassifierArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -467,7 +467,7 @@ const example = new aws.glue.Classifier("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -477,7 +477,7 @@ const example = new aws.glue.Classifier("example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#ClassifierArgs">ClassifierArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClassifierArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -506,7 +506,7 @@ const example = new aws.glue.Classifier("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -516,7 +516,7 @@ const example = new aws.glue.Classifier("example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.ClassifierArgs.html">ClassifierArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClassifierArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -539,12 +539,11 @@ const example = new aws.glue.Classifier("example", {
 
 ## Classifier Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Classifier resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Classifier resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -555,60 +554,54 @@ The Classifier resource accepts the following [input]({{< relref "/docs/intro/co
             title="Optional">
         <span id="csvclassifier_csharp">
 <a href="#csvclassifier_csharp" style="color: inherit; text-decoration: inherit;">Csv<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for Csv content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grokclassifier_csharp">
 <a href="#grokclassifier_csharp" style="color: inherit; text-decoration: inherit;">Grok<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier that uses grok patterns. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="jsonclassifier_csharp">
 <a href="#jsonclassifier_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for JSON content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the classifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="xmlclassifier_csharp">
 <a href="#xmlclassifier_csharp" style="color: inherit; text-decoration: inherit;">Xml<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for XML content. Defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -617,60 +610,54 @@ The Classifier resource accepts the following [input]({{< relref "/docs/intro/co
             title="Optional">
         <span id="csvclassifier_go">
 <a href="#csvclassifier_go" style="color: inherit; text-decoration: inherit;">Csv<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier for Csv content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grokclassifier_go">
 <a href="#grokclassifier_go" style="color: inherit; text-decoration: inherit;">Grok<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier that uses grok patterns. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="jsonclassifier_go">
 <a href="#jsonclassifier_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier for JSON content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the classifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="xmlclassifier_go">
 <a href="#xmlclassifier_go" style="color: inherit; text-decoration: inherit;">Xml<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier for XML content. Defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -679,60 +666,54 @@ The Classifier resource accepts the following [input]({{< relref "/docs/intro/co
             title="Optional">
         <span id="csvclassifier_nodejs">
 <a href="#csvclassifier_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier for Csv content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grokclassifier_nodejs">
 <a href="#grokclassifier_nodejs" style="color: inherit; text-decoration: inherit;">grok<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier that uses grok patterns. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="jsonclassifier_nodejs">
 <a href="#jsonclassifier_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier for JSON content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the classifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="xmlclassifier_nodejs">
 <a href="#xmlclassifier_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier for XML content. Defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -741,69 +722,59 @@ The Classifier resource accepts the following [input]({{< relref "/docs/intro/co
             title="Optional">
         <span id="csv_classifier_python">
 <a href="#csv_classifier_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifiercsvclassifier">Dict[Classifier<wbr>Csv<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for Csv content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grok_classifier_python">
 <a href="#grok_classifier_python" style="color: inherit; text-decoration: inherit;">grok_<wbr>classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifiergrokclassifier">Dict[Classifier<wbr>Grok<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier that uses grok patterns. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="json_classifier_python">
 <a href="#json_classifier_python" style="color: inherit; text-decoration: inherit;">json_<wbr>classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifierjsonclassifier">Dict[Classifier<wbr>Json<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for JSON content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the classifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="xml_classifier_python">
 <a href="#xml_classifier_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifierxmlclassifier">Dict[Classifier<wbr>Xml<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for XML content. Defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Classifier resource produces the following output properties:
-
 
 
 
@@ -814,15 +785,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -831,15 +800,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -848,15 +815,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -865,18 +830,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -886,19 +846,20 @@ Get an existing Classifier resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#ClassifierState">ClassifierState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Classifier">Classifier</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClassifierState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Classifier</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>csv_classifier=None<span class="p">, </span>grok_classifier=None<span class="p">, </span>json_classifier=None<span class="p">, </span>name=None<span class="p">, </span>xml_classifier=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">csv_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierCsvClassifierArgs]</span> = None<span class="p">, </span><span class="nx">grok_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierGrokClassifierArgs]</span> = None<span class="p">, </span><span class="nx">json_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierJsonClassifierArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">xml_classifier</span><span class="p">:</span> <span class="nx">Optional[ClassifierXmlClassifierArgs]</span> = None<span class="p">) -&gt;</span> Classifier</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClassifier<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#ClassifierState">ClassifierState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Classifier">Classifier</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClassifier<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClassifierState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Classifier</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Classifier.html">Classifier</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.ClassifierState.html">ClassifierState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Classifier</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClassifierState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1000,7 +961,6 @@ Get an existing Classifier resource's state with the given name, ID, and optiona
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1008,60 +968,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_csvclassifier_csharp">
 <a href="#state_csvclassifier_csharp" style="color: inherit; text-decoration: inherit;">Csv<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for Csv content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_grokclassifier_csharp">
 <a href="#state_grokclassifier_csharp" style="color: inherit; text-decoration: inherit;">Grok<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier that uses grok patterns. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jsonclassifier_csharp">
 <a href="#state_jsonclassifier_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for JSON content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the classifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_xmlclassifier_csharp">
 <a href="#state_xmlclassifier_csharp" style="color: inherit; text-decoration: inherit;">Xml<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for XML content. Defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1070,60 +1024,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_csvclassifier_go">
 <a href="#state_csvclassifier_go" style="color: inherit; text-decoration: inherit;">Csv<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier for Csv content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_grokclassifier_go">
 <a href="#state_grokclassifier_go" style="color: inherit; text-decoration: inherit;">Grok<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier that uses grok patterns. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jsonclassifier_go">
 <a href="#state_jsonclassifier_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier for JSON content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the classifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_xmlclassifier_go">
 <a href="#state_xmlclassifier_go" style="color: inherit; text-decoration: inherit;">Xml<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier for XML content. Defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1132,60 +1080,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_csvclassifier_nodejs">
 <a href="#state_csvclassifier_nodejs" style="color: inherit; text-decoration: inherit;">csv<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier for Csv content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_grokclassifier_nodejs">
 <a href="#state_grokclassifier_nodejs" style="color: inherit; text-decoration: inherit;">grok<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier that uses grok patterns. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jsonclassifier_nodejs">
 <a href="#state_jsonclassifier_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier for JSON content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the classifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_xmlclassifier_nodejs">
 <a href="#state_xmlclassifier_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier</a></span>
     </dt>
     <dd>{{% md %}}A classifier for XML content. Defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1194,63 +1136,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_csv_classifier_python">
 <a href="#state_csv_classifier_python" style="color: inherit; text-decoration: inherit;">csv_<wbr>classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifiercsvclassifier">Dict[Classifier<wbr>Csv<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for Csv content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_grok_classifier_python">
 <a href="#state_grok_classifier_python" style="color: inherit; text-decoration: inherit;">grok_<wbr>classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifiergrokclassifier">Dict[Classifier<wbr>Grok<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier that uses grok patterns. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_json_classifier_python">
 <a href="#state_json_classifier_python" style="color: inherit; text-decoration: inherit;">json_<wbr>classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifierjsonclassifier">Dict[Classifier<wbr>Json<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for JSON content. Defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the classifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_xml_classifier_python">
 <a href="#state_xml_classifier_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>classifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#classifierxmlclassifier">Dict[Classifier<wbr>Xml<wbr>Classifier]</a></span>
+        <span class="property-type"><a href="#classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A classifier for XML content. Defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1260,20 +1193,8 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="classifiercsvclassifier">Classifier<wbr>Csv<wbr>Classifier</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierCsvClassifier">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClassifierCsvClassifier">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#ClassifierCsvClassifierArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#ClassifierCsvClassifierOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.ClassifierCsvClassifierArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.ClassifierCsvClassifier.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1282,71 +1203,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="allowsinglecolumn_csharp">
 <a href="#allowsinglecolumn_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Single<wbr>Column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the processing of files that contain only one column.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containsheader_csharp">
 <a href="#containsheader_csharp" style="color: inherit; text-decoration: inherit;">Contains<wbr>Header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the CSV file contains a header. This can be one of "ABSENT", "PRESENT", or "UNKNOWN".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="delimiter_csharp">
 <a href="#delimiter_csharp" style="color: inherit; text-decoration: inherit;">Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The delimiter used in the Csv to separate columns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablevaluetrimming_csharp">
 <a href="#disablevaluetrimming_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Value<wbr>Trimming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to trim column values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of strings representing column names.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="quotesymbol_csharp">
 <a href="#quotesymbol_csharp" style="color: inherit; text-decoration: inherit;">Quote<wbr>Symbol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1355,71 +1269,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="allowsinglecolumn_go">
 <a href="#allowsinglecolumn_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Single<wbr>Column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the processing of files that contain only one column.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containsheader_go">
 <a href="#containsheader_go" style="color: inherit; text-decoration: inherit;">Contains<wbr>Header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the CSV file contains a header. This can be one of "ABSENT", "PRESENT", or "UNKNOWN".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="delimiter_go">
 <a href="#delimiter_go" style="color: inherit; text-decoration: inherit;">Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The delimiter used in the Csv to separate columns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablevaluetrimming_go">
 <a href="#disablevaluetrimming_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Value<wbr>Trimming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to trim column values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of strings representing column names.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="quotesymbol_go">
 <a href="#quotesymbol_go" style="color: inherit; text-decoration: inherit;">Quote<wbr>Symbol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1428,162 +1335,132 @@ The following state arguments are supported:
             title="Optional">
         <span id="allowsinglecolumn_nodejs">
 <a href="#allowsinglecolumn_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Single<wbr>Column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the processing of files that contain only one column.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containsheader_nodejs">
 <a href="#containsheader_nodejs" style="color: inherit; text-decoration: inherit;">contains<wbr>Header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the CSV file contains a header. This can be one of "ABSENT", "PRESENT", or "UNKNOWN".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="delimiter_nodejs">
 <a href="#delimiter_nodejs" style="color: inherit; text-decoration: inherit;">delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The delimiter used in the Csv to separate columns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablevaluetrimming_nodejs">
 <a href="#disablevaluetrimming_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Value<wbr>Trimming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to trim column values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of strings representing column names.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="quotesymbol_nodejs">
 <a href="#quotesymbol_nodejs" style="color: inherit; text-decoration: inherit;">quote<wbr>Symbol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="allowsinglecolumn_python">
-<a href="#allowsinglecolumn_python" style="color: inherit; text-decoration: inherit;">allow<wbr>Single<wbr>Column</a>
-</span> 
+        <span id="allow_single_column_python">
+<a href="#allow_single_column_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>single_<wbr>column</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the processing of files that contain only one column.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="containsheader_python">
-<a href="#containsheader_python" style="color: inherit; text-decoration: inherit;">contains<wbr>Header</a>
-</span> 
+        <span id="contains_header_python">
+<a href="#contains_header_python" style="color: inherit; text-decoration: inherit;">contains_<wbr>header</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the CSV file contains a header. This can be one of "ABSENT", "PRESENT", or "UNKNOWN".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="delimiter_python">
 <a href="#delimiter_python" style="color: inherit; text-decoration: inherit;">delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The delimiter used in the Csv to separate columns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="disablevaluetrimming_python">
-<a href="#disablevaluetrimming_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Value<wbr>Trimming</a>
-</span> 
+        <span id="disable_value_trimming_python">
+<a href="#disable_value_trimming_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>value_<wbr>trimming</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to trim column values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of strings representing column names.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="quotesymbol_python">
-<a href="#quotesymbol_python" style="color: inherit; text-decoration: inherit;">quote<wbr>Symbol</a>
-</span> 
+        <span id="quote_symbol_python">
+<a href="#quote_symbol_python" style="color: inherit; text-decoration: inherit;">quote_<wbr>symbol</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="classifiergrokclassifier">Classifier<wbr>Grok<wbr>Classifier</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierGrokClassifier">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClassifierGrokClassifier">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#ClassifierGrokClassifierArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#ClassifierGrokClassifierOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.ClassifierGrokClassifierArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.ClassifierGrokClassifier.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1592,38 +1469,34 @@ The following state arguments are supported:
             title="Required">
         <span id="classification_csharp">
 <a href="#classification_csharp" style="color: inherit; text-decoration: inherit;">Classification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier of the data format that the classifier matches.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="grokpattern_csharp">
 <a href="#grokpattern_csharp" style="color: inherit; text-decoration: inherit;">Grok<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grok pattern used by this classifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custompatterns_csharp">
 <a href="#custompatterns_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Patterns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom grok patterns used by this classifier.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1632,38 +1505,34 @@ The following state arguments are supported:
             title="Required">
         <span id="classification_go">
 <a href="#classification_go" style="color: inherit; text-decoration: inherit;">Classification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier of the data format that the classifier matches.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="grokpattern_go">
 <a href="#grokpattern_go" style="color: inherit; text-decoration: inherit;">Grok<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grok pattern used by this classifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custompatterns_go">
 <a href="#custompatterns_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Patterns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom grok patterns used by this classifier.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1672,38 +1541,34 @@ The following state arguments are supported:
             title="Required">
         <span id="classification_nodejs">
 <a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier of the data format that the classifier matches.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="grokpattern_nodejs">
 <a href="#grokpattern_nodejs" style="color: inherit; text-decoration: inherit;">grok<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grok pattern used by this classifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custompatterns_nodejs">
 <a href="#custompatterns_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Patterns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom grok patterns used by this classifier.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1712,56 +1577,36 @@ The following state arguments are supported:
             title="Required">
         <span id="classification_python">
 <a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier of the data format that the classifier matches.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="grokpattern_python">
-<a href="#grokpattern_python" style="color: inherit; text-decoration: inherit;">grok<wbr>Pattern</a>
-</span> 
+        <span id="grok_pattern_python">
+<a href="#grok_pattern_python" style="color: inherit; text-decoration: inherit;">grok_<wbr>pattern</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The grok pattern used by this classifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="custompatterns_python">
-<a href="#custompatterns_python" style="color: inherit; text-decoration: inherit;">custom<wbr>Patterns</a>
-</span> 
+        <span id="custom_patterns_python">
+<a href="#custom_patterns_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>patterns</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom grok patterns used by this classifier.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="classifierjsonclassifier">Classifier<wbr>Json<wbr>Classifier</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierJsonClassifier">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClassifierJsonClassifier">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#ClassifierJsonClassifierArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#ClassifierJsonClassifierOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.ClassifierJsonClassifierArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.ClassifierJsonClassifier.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1770,16 +1615,14 @@ The following state arguments are supported:
             title="Required">
         <span id="jsonpath_csharp">
 <a href="#jsonpath_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A `JsonPath` string defining the JSON data for the classifier to classify. AWS Glue supports a subset of `JsonPath`, as described in [Writing JsonPath Custom Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1788,16 +1631,14 @@ The following state arguments are supported:
             title="Required">
         <span id="jsonpath_go">
 <a href="#jsonpath_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A `JsonPath` string defining the JSON data for the classifier to classify. AWS Glue supports a subset of `JsonPath`, as described in [Writing JsonPath Custom Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1806,52 +1647,32 @@ The following state arguments are supported:
             title="Required">
         <span id="jsonpath_nodejs">
 <a href="#jsonpath_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A `JsonPath` string defining the JSON data for the classifier to classify. AWS Glue supports a subset of `JsonPath`, as described in [Writing JsonPath Custom Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="jsonpath_python">
-<a href="#jsonpath_python" style="color: inherit; text-decoration: inherit;">json<wbr>Path</a>
-</span> 
+        <span id="json_path_python">
+<a href="#json_path_python" style="color: inherit; text-decoration: inherit;">json_<wbr>path</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A `JsonPath` string defining the JSON data for the classifier to classify. AWS Glue supports a subset of `JsonPath`, as described in [Writing JsonPath Custom Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="classifierxmlclassifier">Classifier<wbr>Xml<wbr>Classifier</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ClassifierXmlClassifier">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ClassifierXmlClassifier">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#ClassifierXmlClassifierArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#ClassifierXmlClassifierOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.ClassifierXmlClassifierArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.ClassifierXmlClassifier.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1860,27 +1681,24 @@ The following state arguments are supported:
             title="Required">
         <span id="classification_csharp">
 <a href="#classification_csharp" style="color: inherit; text-decoration: inherit;">Classification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier of the data format that the classifier matches.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rowtag_csharp">
 <a href="#rowtag_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by `/>`). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, `<row item_a="A" item_b="B"></row>` is okay, but `<row item_a="A" item_b="B" />` is not).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1889,27 +1707,24 @@ The following state arguments are supported:
             title="Required">
         <span id="classification_go">
 <a href="#classification_go" style="color: inherit; text-decoration: inherit;">Classification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier of the data format that the classifier matches.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rowtag_go">
 <a href="#rowtag_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by `/>`). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, `<row item_a="A" item_b="B"></row>` is okay, but `<row item_a="A" item_b="B" />` is not).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1918,27 +1733,24 @@ The following state arguments are supported:
             title="Required">
         <span id="classification_nodejs">
 <a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier of the data format that the classifier matches.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rowtag_nodejs">
 <a href="#rowtag_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by `/>`). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, `<row item_a="A" item_b="B"></row>` is okay, but `<row item_a="A" item_b="B" />` is not).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1947,31 +1759,32 @@ The following state arguments are supported:
             title="Required">
         <span id="classification_python">
 <a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier of the data format that the classifier matches.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="rowtag_python">
-<a href="#rowtag_python" style="color: inherit; text-decoration: inherit;">row<wbr>Tag</a>
-</span> 
+        <span id="row_tag_python">
+<a href="#row_tag_python" style="color: inherit; text-decoration: inherit;">row_<wbr>tag</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by `/>`). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, `<row item_a="A" item_b="B"></row>` is okay, but `<row item_a="A" item_b="B" />` is not).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Glue Classifiers can be imported using their name, e.g.
 
-
-
+```sh
+ $ pulumi import aws:glue/classifier:Classifier MyClassifier MyClassifier
+```
 
 
 

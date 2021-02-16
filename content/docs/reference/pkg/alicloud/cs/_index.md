@@ -13,9 +13,11 @@ Explore the resources and functions of the cs module in the AliCloud package.
 <ul class="api">
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="edgekubernetes" title="EdgeKubernetes"><span class="symbol resource"></span>EdgeKubernetes</a></li>
     <li><a href="kubernetes" title="Kubernetes"><span class="symbol resource"></span>Kubernetes</a></li>
     <li><a href="kubernetesautoscaler" title="KubernetesAutoscaler"><span class="symbol resource"></span>KubernetesAutoscaler</a></li>
     <li><a href="managedkubernetes" title="ManagedKubernetes"><span class="symbol resource"></span>ManagedKubernetes</a></li>
+    <li><a href="nodepool" title="NodePool"><span class="symbol resource"></span>NodePool</a></li>
     <li><a href="registryenterprisenamespace" title="RegistryEnterpriseNamespace"><span class="symbol resource"></span>RegistryEnterpriseNamespace</a></li>
     <li><a href="registryenterpriserepo" title="RegistryEnterpriseRepo"><span class="symbol resource"></span>RegistryEnterpriseRepo</a></li>
     <li><a href="registryenterprisesyncrule" title="RegistryEnterpriseSyncRule"><span class="symbol resource"></span>RegistryEnterpriseSyncRule</a></li>
@@ -25,6 +27,8 @@ Explore the resources and functions of the cs module in the AliCloud package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getackservice" title="GetAckService"><span class="symbol function"></span>GetAckService</a></li>
+    <li><a href="getedgekubernetesclusters" title="GetEdgeKubernetesClusters"><span class="symbol function"></span>GetEdgeKubernetesClusters</a></li>
     <li><a href="getkubernetesclusters" title="GetKubernetesClusters"><span class="symbol function"></span>GetKubernetesClusters</a></li>
     <li><a href="getmanagedkubernetesclusters" title="GetManagedKubernetesClusters"><span class="symbol function"></span>GetManagedKubernetesClusters</a></li>
     <li><a href="getregistryenterpriseinstances" title="GetRegistryEnterpriseInstances"><span class="symbol function"></span>GetRegistryEnterpriseInstances</a></li>
@@ -41,26 +45,8 @@ Explore the resources and functions of the cs module in the AliCloud package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.html" title="Pulumi.AliCloud.CS">Pulumi.AliCloud.CS</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#" title="alicloud/cs">alicloud/cs</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#" title="@pulumi/alicloud/cs">@pulumi/alicloud/cs</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/cs" title="pulumi_alicloud/cs">pulumi_alicloud/cs</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

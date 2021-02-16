@@ -21,26 +21,8 @@ Explore the resources and functions of the datafusion module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.html" title="Pulumi.Gcp.DataFusion">Pulumi.Gcp.DataFusion</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#" title="gcp/datafusion">gcp/datafusion</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datafusion/#" title="@pulumi/gcp/datafusion">@pulumi/gcp/datafusion</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/datafusion" title="pulumi_gcp/datafusion">pulumi_gcp/datafusion</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

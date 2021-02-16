@@ -59,13 +59,23 @@ group = azad.Group("my-group",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  azad "github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	azad "github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
 )
 
-group, _ := azad.NewGroup(ctx, "my-group", &azad.GroupArgs{
-  Name: pulumi.String("my-group"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		group, err := azad.NewGroup(ctx, "my-group", &azad.GroupArgs{
+			Name: pulumi.String("my-group"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

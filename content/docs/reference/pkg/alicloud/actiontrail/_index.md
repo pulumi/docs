@@ -12,6 +12,7 @@ Explore the resources and functions of the actiontrail module in the AliCloud pa
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="trail" title="Trail"><span class="symbol resource"></span>Trail</a></li>
+    <li><a href="traildeprecated" title="TrailDeprecated"><span class="symbol resource"></span>TrailDeprecated</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -22,6 +23,7 @@ Explore the resources and functions of the actiontrail module in the AliCloud pa
     <li><a href="getsaslusers" title="GetSaslUsers"><span class="symbol function"></span>GetSaslUsers</a></li>
     <li><a href="gettopics" title="GetTopics"><span class="symbol function"></span>GetTopics</a></li>
     <li><a href="gettrails" title="GetTrails"><span class="symbol function"></span>GetTrails</a></li>
+    <li><a href="gettrailsdeprecated" title="GetTrailsDeprecated"><span class="symbol function"></span>GetTrailsDeprecated</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -31,26 +33,8 @@ Explore the resources and functions of the actiontrail module in the AliCloud pa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ActionTrail.html" title="Pulumi.AliCloud.ActionTrail">Pulumi.AliCloud.ActionTrail</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/actiontrail?tab=doc#" title="alicloud/actiontrail">alicloud/actiontrail</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/actiontrail/#" title="@pulumi/alicloud/actiontrail">@pulumi/alicloud/actiontrail</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/actiontrail" title="pulumi_alicloud/actiontrail">pulumi_alicloud/actiontrail</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

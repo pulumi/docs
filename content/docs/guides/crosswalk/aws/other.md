@@ -15,7 +15,7 @@ aliases: ["/docs/reference/crosswalk/aws/other/"]
 
 Pulumi Crosswalk for AWS supports all AWS services, not just those with dedicated articles in this User Guide.
 This includes services like DynamoDB, EC2, S3, and RDS, to name a few, and includes support for all of their features.
-If your favorite service isn't listed here, please contact us by [filing an issue in the docs repo](
+If your favorite service isn't listed here, contact us by [filing an issue in the docs repo](
 https://github.com/pulumi/docs) or by [joining the Pulumi Community Slack channel](https://slack.pulumi.com).
 
 ## Index of Services
@@ -148,7 +148,7 @@ tbody tr td:first-child {
 
 ## Additional AWS Resources
 
-For more information about using Pulumi with AWS, please see the following:
+For more information about using Pulumi with AWS, see the following:
 
 * [Pulumi AWS Get Started guide]({{< relref "/docs/get-started/aws" >}})
 * [Pulumi AWS API documentation]({{< relref "/docs/reference/pkg/aws" >}})

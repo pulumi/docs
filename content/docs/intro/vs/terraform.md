@@ -11,7 +11,7 @@ aliases: ["/docs/reference/vs/terraform/"]
 ---
 
 Terraform and Pulumi hold a lot of similarities, but they differ in a few key ways. This page helps provide a rundown of the differences. First, Pulumi is like Terraform, in that you create, deploy, and manage infrastructure as code on any cloud. But where
-Terraform requires the use of a custom programming language, however, Pulumi allows you to use familiar general purpose languages and tools to accomplish the same goals. Like Terraform, Pulumi is
+Terraform requires the use of a custom programming language, Pulumi allows you to use familiar general purpose languages and tools to accomplish the same goals. Like Terraform, Pulumi is
 [open source on GitHub](https://github.com/pulumi/pulumi) and is [free to use]({{< relref "/docs/get-started" >}}).
 
 ## Summary
@@ -44,7 +44,7 @@ The major differences between Terraform and Pulumi are as follows:
    scenarios that cannot be expressed with Terraform. This includes Prometheus-based canaries, automatic Envoy
    sidecar injection, and more. Pulumi is a proud member of the Cloud Native Computing Foundation (CNCF).
 
-For some concrete examples of these differences, please see our article, [From Terraform to Infrastructure as Software](
+For some concrete examples of these differences, see our article, [From Terraform to Infrastructure as Software](
 {{< relref "from-terraform-to-infrastructure-as-software" >}}).
 
 ## Using Terraform Providers
@@ -59,7 +59,7 @@ contributions from many cloud and infrastructure leaders across the industry, ou
 Most Pulumi users don't need to know about this detail, however we are proud to be building on the work of others,
 and contributing our own open source back to this vibrant ecosystem, and thought you should know.
 
-In the event you'd like to add new providers, or understand how this integration works, please check out the
+In the event you'd like to add new providers, or understand how this integration works, check out the
 [Pulumi Terraform bridge repo](https://github.com/pulumi/pulumi-terraform-bridge).  This bridge is fully open source and
 makes it easy to create new Pulumi providers out of existing Terraform Providers.
 

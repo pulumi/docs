@@ -12,9 +12,13 @@ Explore the resources and functions of the accesscontextmanager module in the GC
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="accesslevel" title="AccessLevel"><span class="symbol resource"></span>AccessLevel</a></li>
+    <li><a href="accesslevelcondition" title="AccessLevelCondition"><span class="symbol resource"></span>AccessLevelCondition</a></li>
+    <li><a href="accesslevels" title="AccessLevels"><span class="symbol resource"></span>AccessLevels</a></li>
     <li><a href="accesspolicy" title="AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
+    <li><a href="gcpuseraccessbinding" title="GcpUserAccessBinding"><span class="symbol resource"></span>GcpUserAccessBinding</a></li>
     <li><a href="serviceperimeter" title="ServicePerimeter"><span class="symbol resource"></span>ServicePerimeter</a></li>
     <li><a href="serviceperimeterresource" title="ServicePerimeterResource"><span class="symbol resource"></span>ServicePerimeterResource</a></li>
+    <li><a href="serviceperimeters" title="ServicePerimeters"><span class="symbol resource"></span>ServicePerimeters</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -24,26 +28,8 @@ Explore the resources and functions of the accesscontextmanager module in the GC
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AccessContextManager.html" title="Pulumi.Gcp.AccessContextManager">Pulumi.Gcp.AccessContextManager</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/accesscontextmanager?tab=doc#" title="gcp/accesscontextmanager">gcp/accesscontextmanager</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/accesscontextmanager/#" title="@pulumi/gcp/accesscontextmanager">@pulumi/gcp/accesscontextmanager</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/accesscontextmanager" title="pulumi_gcp/accesscontextmanager">pulumi_gcp/accesscontextmanager</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

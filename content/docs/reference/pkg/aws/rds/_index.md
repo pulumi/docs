@@ -21,6 +21,9 @@ Explore the resources and functions of the rds module in the AWS package.
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
     <li><a href="optiongroup" title="OptionGroup"><span class="symbol resource"></span>OptionGroup</a></li>
     <li><a href="parametergroup" title="ParameterGroup"><span class="symbol resource"></span>ParameterGroup</a></li>
+    <li><a href="proxy" title="Proxy"><span class="symbol resource"></span>Proxy</a></li>
+    <li><a href="proxydefaulttargetgroup" title="ProxyDefaultTargetGroup"><span class="symbol resource"></span>ProxyDefaultTargetGroup</a></li>
+    <li><a href="proxytarget" title="ProxyTarget"><span class="symbol resource"></span>ProxyTarget</a></li>
     <li><a href="roleassociation" title="RoleAssociation"><span class="symbol resource"></span>RoleAssociation</a></li>
     <li><a href="securitygroup" title="SecurityGroup"><span class="symbol resource"></span>SecurityGroup</a></li>
     <li><a href="snapshot" title="Snapshot"><span class="symbol resource"></span>Snapshot</a></li>
@@ -29,11 +32,15 @@ Explore the resources and functions of the rds module in the AWS package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
     <li><a href="getclustersnapshot" title="GetClusterSnapshot"><span class="symbol function"></span>GetClusterSnapshot</a></li>
+    <li><a href="getengineversion" title="GetEngineVersion"><span class="symbol function"></span>GetEngineVersion</a></li>
     <li><a href="geteventcategories" title="GetEventCategories"><span class="symbol function"></span>GetEventCategories</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getorderabledbinstance" title="GetOrderableDbInstance"><span class="symbol function"></span>GetOrderableDbInstance</a></li>
     <li><a href="getsnapshot" title="GetSnapshot"><span class="symbol function"></span>GetSnapshot</a></li>
+    <li><a href="getsubnetgroup" title="GetSubnetGroup"><span class="symbol function"></span>GetSubnetGroup</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -45,24 +52,6 @@ Explore the resources and functions of the rds module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.html" title="Pulumi.Aws.Rds">Pulumi.Aws.Rds</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#" title="aws/rds">aws/rds</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#" title="@pulumi/aws/rds">@pulumi/aws/rds</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/rds" title="pulumi_aws/rds">pulumi_aws/rds</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

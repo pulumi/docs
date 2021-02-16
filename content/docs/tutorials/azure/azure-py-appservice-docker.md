@@ -1,7 +1,7 @@
 ---
-title: "Azure App Service Cunning Docker Containers on Linux | Python"
-h1: "Azure App Service Cunning Docker Containers on Linux"
-linktitle: "Azure App Service Cunning Docker Containers on Linux"
+title: "Azure App Service Running Docker Containers on Linux | Python"
+h1: "Azure App Service Running Docker Containers on Linux"
+linktitle: "Azure App Service Running Docker Containers on Linux"
 no_edit_this_page: true
 ---
 
@@ -47,6 +47,12 @@ The example deploys an existing image from Docker Hub
     $ pip3 install -r requirements.txt
     ```
 
+1. Specify the Azure location to use:
+
+    ```bash
+    $ pulumi config set azure:location WestUS
+    ```
+
 1. Run `pulumi up` to preview and deploy changes:
 
     ```bash
@@ -70,5 +76,4 @@ The example deploys an existing image from Docker Hub
     $ curl "$(pulumi stack output hello_endpoint)"
     Hello, world!
     ```
-    
 

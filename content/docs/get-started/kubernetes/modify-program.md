@@ -209,7 +209,7 @@ func main() {
         }
 
         template := deployment.Spec.ApplyT(func(v *appsv1.DeploymentSpec) *corev1.PodTemplateSpec {
-            return v.Template
+            return &v.Template
         }).(corev1.PodTemplateSpecPtrOutput)
 
         meta := template.ApplyT(func(v *corev1.PodTemplateSpec) *metav1.ObjectMeta { return v.Metadata }).(metav1.ObjectMetaPtrOutput)

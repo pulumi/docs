@@ -19,17 +19,20 @@ A Pulumi package for creating and managing linode cloud resources.
     <li><a href="firewall" title="Firewall"><span class="symbol resource"></span>Firewall</a></li>
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
     <li><a href="instance" title="Instance"><span class="symbol resource"></span>Instance</a></li>
+    <li><a href="instanceip" title="InstanceIp"><span class="symbol resource"></span>InstanceIp</a></li>
     <li><a href="lkecluster" title="LkeCluster"><span class="symbol resource"></span>LkeCluster</a></li>
     <li><a href="nodebalancer" title="NodeBalancer"><span class="symbol resource"></span>NodeBalancer</a></li>
     <li><a href="nodebalancerconfig" title="NodeBalancerConfig"><span class="symbol resource"></span>NodeBalancerConfig</a></li>
     <li><a href="nodebalancernode" title="NodeBalancerNode"><span class="symbol resource"></span>NodeBalancerNode</a></li>
     <li><a href="objectstoragebucket" title="ObjectStorageBucket"><span class="symbol resource"></span>ObjectStorageBucket</a></li>
     <li><a href="objectstoragekey" title="ObjectStorageKey"><span class="symbol resource"></span>ObjectStorageKey</a></li>
+    <li><a href="objectstorageobject" title="ObjectStorageObject"><span class="symbol resource"></span>ObjectStorageObject</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="rdns" title="Rdns"><span class="symbol resource"></span>Rdns</a></li>
     <li><a href="sshkey" title="SshKey"><span class="symbol resource"></span>SshKey</a></li>
     <li><a href="stackscript" title="StackScript"><span class="symbol resource"></span>StackScript</a></li>
     <li><a href="token" title="Token"><span class="symbol resource"></span>Token</a></li>
+    <li><a href="vlan" title="Vlan"><span class="symbol resource"></span>Vlan</a></li>
     <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
 </ul>
 
@@ -57,9 +60,9 @@ A Pulumi package for creating and managing linode cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/terraform-providers/terraform-provider-linode).</dd>
+	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
 	<dt>Version</dt>
-	<dd>2.4.4</dd>
+	<dd>2.9.0</dd>
 </dl>
 
 

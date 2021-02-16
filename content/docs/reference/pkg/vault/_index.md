@@ -14,6 +14,7 @@ A Pulumi package for creating and managing vault cloud resources.
 
 <h2 id="modules">Modules</h2>
 <ul class="api">
+    <li><a href="ad/" title="ad"><span class="symbol module"></span>ad</a></li>
     <li><a href="alicloud/" title="alicloud"><span class="symbol module"></span>alicloud</a></li>
     <li><a href="approle/" title="appRole"><span class="symbol module"></span>appRole</a></li>
     <li><a href="aws/" title="aws"><span class="symbol module"></span>aws</a></li>
@@ -32,6 +33,7 @@ A Pulumi package for creating and managing vault cloud resources.
     <li><a href="rabbitmq/" title="rabbitMq"><span class="symbol module"></span>rabbitMq</a></li>
     <li><a href="ssh/" title="ssh"><span class="symbol module"></span>ssh</a></li>
     <li><a href="tokenauth/" title="tokenauth"><span class="symbol module"></span>tokenauth</a></li>
+    <li><a href="transform/" title="transform"><span class="symbol module"></span>transform</a></li>
     <li><a href="transit/" title="transit"><span class="symbol module"></span>transit</a></li>
 </ul>
 
@@ -44,8 +46,12 @@ A Pulumi package for creating and managing vault cloud resources.
     <li><a href="mfaduo" title="MfaDuo"><span class="symbol resource"></span>MfaDuo</a></li>
     <li><a href="mount" title="Mount"><span class="symbol resource"></span>Mount</a></li>
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
+    <li><a href="nomadsecretbackend" title="NomadSecretBackend"><span class="symbol resource"></span>NomadSecretBackend</a></li>
+    <li><a href="nomadsecretrole" title="NomadSecretRole"><span class="symbol resource"></span>NomadSecretRole</a></li>
+    <li><a href="passwordpolicy" title="PasswordPolicy"><span class="symbol resource"></span>PasswordPolicy</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="quotaratelimit" title="QuotaRateLimit"><span class="symbol resource"></span>QuotaRateLimit</a></li>
     <li><a href="rgppolicy" title="RgpPolicy"><span class="symbol resource"></span>RgpPolicy</a></li>
     <li><a href="token" title="Token"><span class="symbol resource"></span>Token</a></li>
 </ul>
@@ -53,6 +59,7 @@ A Pulumi package for creating and managing vault cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getauthbackend" title="GetAuthBackend"><span class="symbol function"></span>GetAuthBackend</a></li>
+    <li><a href="getnomadaccesstoken" title="GetNomadAccessToken"><span class="symbol function"></span>GetNomadAccessToken</a></li>
     <li><a href="getpolicydocument" title="GetPolicyDocument"><span class="symbol function"></span>GetPolicyDocument</a></li>
 </ul>
 
@@ -63,9 +70,9 @@ A Pulumi package for creating and managing vault cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 
 
@@ -76,7 +83,7 @@ A Pulumi package for creating and managing vault cloud resources.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.html" title="Pulumi.Vault">Pulumi.Vault</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/?tab=doc#" title="vault">vault</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#" title="vault">vault</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/#" title="@pulumi/vault">@pulumi/vault</a></dd>

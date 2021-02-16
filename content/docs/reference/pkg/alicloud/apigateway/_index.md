@@ -23,6 +23,7 @@ Explore the resources and functions of the apigateway module in the AliCloud pac
     <li><a href="getapis" title="GetApis"><span class="symbol function"></span>GetApis</a></li>
     <li><a href="getapps" title="GetApps"><span class="symbol function"></span>GetApps</a></li>
     <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,26 +33,8 @@ Explore the resources and functions of the apigateway module in the AliCloud pac
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ApiGateway.html" title="Pulumi.AliCloud.ApiGateway">Pulumi.AliCloud.ApiGateway</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/apigateway?tab=doc#" title="alicloud/apigateway">alicloud/apigateway</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/apigateway/#" title="@pulumi/alicloud/apigateway">@pulumi/alicloud/apigateway</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/apigateway" title="pulumi_alicloud/apigateway">pulumi_alicloud/apigateway</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

@@ -14,6 +14,7 @@ This data source provides a list of EDAS application in an Alibaba Cloud account
 
 > **NOTE:** Available in 1.82.0+
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -47,7 +48,32 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/edas"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "application.txt"
+		applications, err := edas.GetApplications(ctx, &edas.GetApplicationsArgs{
+			Ids: []string{
+				"xxx",
+			},
+			OutputFile: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("firstApplicationName", applications.Applications[0].AppName)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -57,7 +83,7 @@ import pulumi_alicloud as alicloud
 
 applications = alicloud.edas.get_applications(ids=["xxx"],
     output_file="application.txt")
-pulumi.export("firstApplicationName", applications.applications[0]["appName"])
+pulumi.export("firstApplicationName", applications.applications[0].app_name)
 ```
 
 {{% /example %}}
@@ -91,7 +117,7 @@ export const firstApplicationName = applications.then(applications => applicatio
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_applications(</span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_applications(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetApplicationsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -112,7 +138,6 @@ export const firstApplicationName = applications.then(applications => applicatio
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -120,37 +145,33 @@ The following arguments are supported:
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}An ids string to filter results by the application id. 
+    <dd>{{% md %}}An ids string to filter results by the application id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the application name. 
+    <dd>{{% md %}}A regex string to filter results by the application name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -159,37 +180,33 @@ The following arguments are supported:
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}An ids string to filter results by the application id. 
+    <dd>{{% md %}}An ids string to filter results by the application id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the application name. 
+    <dd>{{% md %}}A regex string to filter results by the application name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -198,37 +215,33 @@ The following arguments are supported:
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}An ids string to filter results by the application id. 
+    <dd>{{% md %}}An ids string to filter results by the application id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the application name. 
+    <dd>{{% md %}}A regex string to filter results by the application name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -237,40 +250,33 @@ The following arguments are supported:
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}An ids string to filter results by the application id. 
+    <dd>{{% md %}}An ids string to filter results by the application id.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A regex string to filter results by the application name. 
+    <dd>{{% md %}}A regex string to filter results by the application name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -281,7 +287,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -289,69 +294,62 @@ The following output properties are available:
             title="">
         <span id="applications_csharp">
 <a href="#applications_csharp" style="color: inherit; text-decoration: inherit;">Applications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationsapplication">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Edas.<wbr>Outputs.<wbr>Get<wbr>Applications<wbr>Application&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of applications.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of application IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of applications names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -360,69 +358,62 @@ The following output properties are available:
             title="">
         <span id="applications_go">
 <a href="#applications_go" style="color: inherit; text-decoration: inherit;">Applications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationsapplication">[]Get<wbr>Applications<wbr>Application</a></span>
     </dt>
     <dd>{{% md %}}A list of applications.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of application IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of applications names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -431,69 +422,62 @@ The following output properties are available:
             title="">
         <span id="applications_nodejs">
 <a href="#applications_nodejs" style="color: inherit; text-decoration: inherit;">applications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getapplicationsapplication">Get<wbr>Applications<wbr>Application[]</a></span>
     </dt>
     <dd>{{% md %}}A list of applications.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of application IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of applications names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -502,72 +486,62 @@ The following output properties are available:
             title="">
         <span id="applications_python">
 <a href="#applications_python" style="color: inherit; text-decoration: inherit;">applications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getapplicationsapplication">List[Get<wbr>Applications<wbr>Application]</a></span>
+        <span class="property-type"><a href="#getapplicationsapplication">Sequence[Get<wbr>Applications<wbr>Application]</a></span>
     </dt>
     <dd>{{% md %}}A list of applications.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of application IDs.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of applications names.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -589,7 +563,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -597,159 +570,74 @@ The following output properties are available:
             title="Required">
         <span id="appid_csharp">
 <a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application that you want to deploy.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="appname_csharp">
 <a href="#appname_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your EDAS application. Only letters '-' '_' and numbers are allowed. The length cannot exceed 36 characters.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="applicationtype_csharp">
 <a href="#applicationtype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the package for the deployment of the application that you want to create. The valid values are: WAR and JAR. We strongly recommend you to set this parameter when creating the application.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="buildpackageid_csharp">
 <a href="#buildpackageid_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Package<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The package ID of Enterprise Distributed Application Service (EDAS) Container.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster that you want to create the application.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clustertype_csharp">
 <a href="#clustertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The type of the cluster that you want to create. Valid values: 1: Swarm cluster. 2: ECS cluster. 3: Kubernates cluster.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="createtime_csharp">
-<a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Application's creation time.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckurl_csharp">
-<a href="#healthcheckurl_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Url</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The URL for health checking of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancecount_csharp">
-<a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of instances.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="regionid_csharp">
 <a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the namespace the application belongs to.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="runninginstancecount_csharp">
-<a href="#runninginstancecount_csharp" style="color: inherit; text-decoration: inherit;">Running<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of running instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbid_csharp">
-<a href="#slbid_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the SLB instance that is going to be bound.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbip_csharp">
-<a href="#slbip_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The IP address that is allocated to the bound SLB instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbport_csharp">
-<a href="#slbport_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}The port of intranet SLB.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -758,159 +646,74 @@ The following output properties are available:
             title="Required">
         <span id="appid_go">
 <a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application that you want to deploy.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="appname_go">
 <a href="#appname_go" style="color: inherit; text-decoration: inherit;">App<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your EDAS application. Only letters '-' '_' and numbers are allowed. The length cannot exceed 36 characters.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="applicationtype_go">
 <a href="#applicationtype_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the package for the deployment of the application that you want to create. The valid values are: WAR and JAR. We strongly recommend you to set this parameter when creating the application.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="buildpackageid_go">
 <a href="#buildpackageid_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Package<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The package ID of Enterprise Distributed Application Service (EDAS) Container.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster that you want to create the application.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clustertype_go">
 <a href="#clustertype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The type of the cluster that you want to create. Valid values: 1: Swarm cluster. 2: ECS cluster. 3: Kubernates cluster.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="createtime_go">
-<a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Application's creation time.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckurl_go">
-<a href="#healthcheckurl_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Url</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The URL for health checking of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancecount_go">
-<a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of instances.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="regionid_go">
 <a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the namespace the application belongs to.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="runninginstancecount_go">
-<a href="#runninginstancecount_go" style="color: inherit; text-decoration: inherit;">Running<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Number of running instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbid_go">
-<a href="#slbid_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the SLB instance that is going to be bound.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbip_go">
-<a href="#slbip_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The IP address that is allocated to the bound SLB instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbport_go">
-<a href="#slbport_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}The port of intranet SLB.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -919,323 +722,150 @@ The following output properties are available:
             title="Required">
         <span id="appid_nodejs">
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application that you want to deploy.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="appname_nodejs">
 <a href="#appname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your EDAS application. Only letters '-' '_' and numbers are allowed. The length cannot exceed 36 characters.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="applicationtype_nodejs">
 <a href="#applicationtype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the package for the deployment of the application that you want to create. The valid values are: WAR and JAR. We strongly recommend you to set this parameter when creating the application.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="buildpackageid_nodejs">
 <a href="#buildpackageid_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Package<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The package ID of Enterprise Distributed Application Service (EDAS) Container.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster that you want to create the application.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clustertype_nodejs">
 <a href="#clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The type of the cluster that you want to create. Valid values: 1: Swarm cluster. 2: ECS cluster. 3: Kubernates cluster.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="createtime_nodejs">
-<a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Application's creation time.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="healthcheckurl_nodejs">
-<a href="#healthcheckurl_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Url</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The URL for health checking of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancecount_nodejs">
-<a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Number of instances.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="regionid_nodejs">
 <a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the namespace the application belongs to.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="runninginstancecount_nodejs">
-<a href="#runninginstancecount_nodejs" style="color: inherit; text-decoration: inherit;">running<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Number of running instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbid_nodejs">
-<a href="#slbid_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the SLB instance that is going to be bound.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbip_nodejs">
-<a href="#slbip_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The IP address that is allocated to the bound SLB instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbport_nodejs">
-<a href="#slbport_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}The port of intranet SLB.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="appname_python">
-<a href="#appname_python" style="color: inherit; text-decoration: inherit;">app<wbr>Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The name of your EDAS application. Only letters '-' '_' and numbers are allowed. The length cannot exceed 36 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the application that you want to deploy.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="applicationtype_python">
-<a href="#applicationtype_python" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
-</span> 
+        <span id="app_name_python">
+<a href="#app_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of your EDAS application. Only letters '-' '_' and numbers are allowed. The length cannot exceed 36 characters.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="application_type_python">
+<a href="#application_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the package for the deployment of the application that you want to create. The valid values are: WAR and JAR. We strongly recommend you to set this parameter when creating the application.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="buildpackageid_python">
-<a href="#buildpackageid_python" style="color: inherit; text-decoration: inherit;">build<wbr>Package<wbr>Id</a>
-</span> 
+        <span id="build_package_id_python">
+<a href="#build_package_id_python" style="color: inherit; text-decoration: inherit;">build_<wbr>package_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The package ID of Enterprise Distributed Application Service (EDAS) Container.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster that you want to create the application.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_type_python">
 <a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The type of the cluster that you want to create. Valid values: 1: Swarm cluster. 2: ECS cluster. 3: Kubernates cluster.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="create_time_python">
-<a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+        <span id="region_id_python">
+<a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Application's creation time.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="health_check_url_python">
-<a href="#health_check_url_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>url</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The URL for health checking of the application.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="instancecount_python">
-<a href="#instancecount_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Number of instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="regionid_python">
-<a href="#regionid_python" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the namespace the application belongs to.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="runninginstancecount_python">
-<a href="#runninginstancecount_python" style="color: inherit; text-decoration: inherit;">running<wbr>Instance<wbr>Count</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Number of running instances.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slbport_python">
-<a href="#slbport_python" style="color: inherit; text-decoration: inherit;">slb<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The port of intranet SLB.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slb_id_python">
-<a href="#slb_id_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the SLB instance that is going to be bound.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="slb_ip_python">
-<a href="#slb_ip_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>ip</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The IP address that is allocated to the bound SLB instance.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1248,6 +878,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

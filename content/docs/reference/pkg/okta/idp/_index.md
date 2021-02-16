@@ -20,6 +20,7 @@ Explore the resources and functions of the idp module in the Okta package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getmetadatasaml" title="GetMetadataSaml"><span class="symbol function"></span>GetMetadataSaml</a></li>
+    <li><a href="getoidc" title="GetOidc"><span class="symbol function"></span>GetOidc</a></li>
     <li><a href="getsaml" title="GetSaml"><span class="symbol function"></span>GetSaml</a></li>
 </ul>
 
@@ -30,26 +31,8 @@ Explore the resources and functions of the idp module in the Okta package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
+	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Idp.html" title="Pulumi.Okta.Idp">Pulumi.Okta.Idp</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/idp?tab=doc#" title="okta/idp">okta/idp</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/idp/#" title="@pulumi/okta/idp">@pulumi/okta/idp</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_okta/idp" title="pulumi_okta/idp">pulumi_okta/idp</a></dd>
-
+	<dd>2.10.0</dd>
 </dl>
 

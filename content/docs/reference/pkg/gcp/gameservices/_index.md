@@ -18,6 +18,11 @@ Explore the resources and functions of the gameservices module in the GCP packag
     <li><a href="realm" title="Realm"><span class="symbol resource"></span>Realm</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getgameserverdeploymentrollout" title="GetGameServerDeploymentRollout"><span class="symbol function"></span>GetGameServerDeploymentRollout</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -25,26 +30,8 @@ Explore the resources and functions of the gameservices module in the GCP packag
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.html" title="Pulumi.Gcp.GameServices">Pulumi.Gcp.GameServices</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#" title="gcp/gameservices">gcp/gameservices</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#" title="@pulumi/gcp/gameservices">@pulumi/gcp/gameservices</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/gameservices" title="pulumi_gcp/gameservices">pulumi_gcp/gameservices</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

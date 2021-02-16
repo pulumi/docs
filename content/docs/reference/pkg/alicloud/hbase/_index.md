@@ -16,6 +16,7 @@ Explore the resources and functions of the hbase module in the AliCloud package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getinstancetypes" title="GetInstanceTypes"><span class="symbol function"></span>GetInstanceTypes</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
@@ -27,26 +28,8 @@ Explore the resources and functions of the hbase module in the AliCloud package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.html" title="Pulumi.AliCloud.Hbase">Pulumi.AliCloud.Hbase</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#" title="alicloud/hbase">alicloud/hbase</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/hbase/#" title="@pulumi/alicloud/hbase">@pulumi/alicloud/hbase</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/hbase" title="pulumi_alicloud/hbase">pulumi_alicloud/hbase</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 

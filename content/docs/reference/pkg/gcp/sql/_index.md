@@ -20,7 +20,9 @@ Explore the resources and functions of the sql module in the GCP package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getbackuprun" title="GetBackupRun"><span class="symbol function"></span>GetBackupRun</a></li>
     <li><a href="getcacerts" title="GetCaCerts"><span class="symbol function"></span>GetCaCerts</a></li>
+    <li><a href="getdatabaseinstance" title="GetDatabaseInstance"><span class="symbol function"></span>GetDatabaseInstance</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,26 +32,8 @@ Explore the resources and functions of the sql module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.html" title="Pulumi.Gcp.Sql">Pulumi.Gcp.Sql</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#" title="gcp/sql">gcp/sql</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#" title="@pulumi/gcp/sql">@pulumi/gcp/sql</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/sql" title="pulumi_gcp/sql">pulumi_gcp/sql</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

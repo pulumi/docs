@@ -1,8 +1,8 @@
 
 ---
 title: "FlexibleAppVersion"
-title_tag: "Resource FlexibleAppVersion | Module appengine | Package GCP"
-meta_desc: "Explore the FlexibleAppVersion resource of the appengine module, including examples, input properties, output properties, lookup functions, and supporting types. Flexible App Version resource to create a new version of flexible GAE Application. Based on Google Compute Engine,"
+title_tag: "gcp.appengine.FlexibleAppVersion"
+meta_desc: "Documentation for the gcp.appengine.FlexibleAppVersion resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -24,6 +24,378 @@ To get more information about FlexibleAppVersion, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/flexible)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### App Engine Flexible App Version
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myProject = new Gcp.Organizations.Project("myProject", new Gcp.Organizations.ProjectArgs
+        {
+            ProjectId = "appeng-flex",
+            OrgId = "123456789",
+            BillingAccount = "000000-0000000-0000000-000000",
+        });
+        var app = new Gcp.AppEngine.Application("app", new Gcp.AppEngine.ApplicationArgs
+        {
+            Project = myProject.ProjectId,
+            LocationId = "us-central",
+        });
+        var service = new Gcp.Projects.Service("service", new Gcp.Projects.ServiceArgs
+        {
+            Project = myProject.ProjectId,
+            Service = "appengineflex.googleapis.com",
+            DisableDependentServices = false,
+        });
+        var gaeApi = new Gcp.Projects.IAMMember("gaeApi", new Gcp.Projects.IAMMemberArgs
+        {
+            Project = service.Project,
+            Role = "roles/compute.networkUser",
+            Member = myProject.Number.Apply(number => $"serviceAccount:service-{number}@gae-api-prod.google.com.iam.gserviceaccount.com"),
+        });
+        var bucket = new Gcp.Storage.Bucket("bucket", new Gcp.Storage.BucketArgs
+        {
+            Project = myProject.ProjectId,
+        });
+        var @object = new Gcp.Storage.BucketObject("object", new Gcp.Storage.BucketObjectArgs
+        {
+            Bucket = bucket.Name,
+            Source = new FileAsset("./test-fixtures/appengine/hello-world.zip"),
+        });
+        var myappV1 = new Gcp.AppEngine.FlexibleAppVersion("myappV1", new Gcp.AppEngine.FlexibleAppVersionArgs
+        {
+            VersionId = "v1",
+            Project = gaeApi.Project,
+            Service = "default",
+            Runtime = "nodejs",
+            Entrypoint = new Gcp.AppEngine.Inputs.FlexibleAppVersionEntrypointArgs
+            {
+                Shell = "node ./app.js",
+            },
+            Deployment = new Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentArgs
+            {
+                Zip = new Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentZipArgs
+                {
+                    SourceUrl = Output.Tuple(bucket.Name, @object.Name).Apply(values =>
+                    {
+                        var bucketName = values.Item1;
+                        var objectName = values.Item2;
+                        return $"https://storage.googleapis.com/{bucketName}/{objectName}";
+                    }),
+                },
+            },
+            LivenessCheck = new Gcp.AppEngine.Inputs.FlexibleAppVersionLivenessCheckArgs
+            {
+                Path = "/",
+            },
+            ReadinessCheck = new Gcp.AppEngine.Inputs.FlexibleAppVersionReadinessCheckArgs
+            {
+                Path = "/",
+            },
+            EnvVariables = 
+            {
+                { "port", "8080" },
+            },
+            Handlers = 
+            {
+                new Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerArgs
+                {
+                    UrlRegex = ".*\\/my-path\\/*",
+                    SecurityLevel = "SECURE_ALWAYS",
+                    Login = "LOGIN_REQUIRED",
+                    AuthFailAction = "AUTH_FAIL_ACTION_REDIRECT",
+                    StaticFiles = new Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerStaticFilesArgs
+                    {
+                        Path = "my-other-path",
+                        UploadPathRegex = ".*\\/my-path\\/*",
+                    },
+                },
+            },
+            AutomaticScaling = new Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingArgs
+            {
+                CoolDownPeriod = "120s",
+                CpuUtilization = new Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingCpuUtilizationArgs
+                {
+                    TargetUtilization = 0.5,
+                },
+            },
+            NoopOnDestroy = true,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		myProject, err := organizations.NewProject(ctx, "myProject", &organizations.ProjectArgs{
+			ProjectId:      pulumi.String("appeng-flex"),
+			OrgId:          pulumi.String("123456789"),
+			BillingAccount: pulumi.String("000000-0000000-0000000-000000"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appengine.NewApplication(ctx, "app", &appengine.ApplicationArgs{
+			Project:    myProject.ProjectId,
+			LocationId: pulumi.String("us-central"),
+		})
+		if err != nil {
+			return err
+		}
+		service, err := projects.NewService(ctx, "service", &projects.ServiceArgs{
+			Project:                  myProject.ProjectId,
+			Service:                  pulumi.String("appengineflex.googleapis.com"),
+			DisableDependentServices: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		gaeApi, err := projects.NewIAMMember(ctx, "gaeApi", &projects.IAMMemberArgs{
+			Project: service.Project,
+			Role:    pulumi.String("roles/compute.networkUser"),
+			Member: myProject.Number.ApplyT(func(number string) (string, error) {
+				return fmt.Sprintf("%v%v%v", "serviceAccount:service-", number, "@gae-api-prod.google.com.iam.gserviceaccount.com"), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		bucket, err := storage.NewBucket(ctx, "bucket", &storage.BucketArgs{
+			Project: myProject.ProjectId,
+		})
+		if err != nil {
+			return err
+		}
+		object, err := storage.NewBucketObject(ctx, "object", &storage.BucketObjectArgs{
+			Bucket: bucket.Name,
+			Source: pulumi.NewFileAsset("./test-fixtures/appengine/hello-world.zip"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appengine.NewFlexibleAppVersion(ctx, "myappV1", &appengine.FlexibleAppVersionArgs{
+			VersionId: pulumi.String("v1"),
+			Project:   gaeApi.Project,
+			Service:   pulumi.String("default"),
+			Runtime:   pulumi.String("nodejs"),
+			Entrypoint: &appengine.FlexibleAppVersionEntrypointArgs{
+				Shell: pulumi.String("node ./app.js"),
+			},
+			Deployment: &appengine.FlexibleAppVersionDeploymentArgs{
+				Zip: &appengine.FlexibleAppVersionDeploymentZipArgs{
+					SourceUrl: pulumi.All(bucket.Name, object.Name).ApplyT(func(_args []interface{}) (string, error) {
+						bucketName := _args[0].(string)
+						objectName := _args[1].(string)
+						return fmt.Sprintf("%v%v%v%v", "https://storage.googleapis.com/", bucketName, "/", objectName), nil
+					}).(pulumi.StringOutput),
+				},
+			},
+			LivenessCheck: &appengine.FlexibleAppVersionLivenessCheckArgs{
+				Path: pulumi.String("/"),
+			},
+			ReadinessCheck: &appengine.FlexibleAppVersionReadinessCheckArgs{
+				Path: pulumi.String("/"),
+			},
+			EnvVariables: pulumi.StringMap{
+				"port": pulumi.String("8080"),
+			},
+			Handlers: appengine.FlexibleAppVersionHandlerArray{
+				&appengine.FlexibleAppVersionHandlerArgs{
+					UrlRegex:       pulumi.String(".*\\/my-path\\/*"),
+					SecurityLevel:  pulumi.String("SECURE_ALWAYS"),
+					Login:          pulumi.String("LOGIN_REQUIRED"),
+					AuthFailAction: pulumi.String("AUTH_FAIL_ACTION_REDIRECT"),
+					StaticFiles: &appengine.FlexibleAppVersionHandlerStaticFilesArgs{
+						Path:            pulumi.String("my-other-path"),
+						UploadPathRegex: pulumi.String(".*\\/my-path\\/*"),
+					},
+				},
+			},
+			AutomaticScaling: &appengine.FlexibleAppVersionAutomaticScalingArgs{
+				CoolDownPeriod: pulumi.String("120s"),
+				CpuUtilization: &appengine.FlexibleAppVersionAutomaticScalingCpuUtilizationArgs{
+					TargetUtilization: pulumi.Float64(0.5),
+				},
+			},
+			NoopOnDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_project = gcp.organizations.Project("myProject",
+    project_id="appeng-flex",
+    org_id="123456789",
+    billing_account="000000-0000000-0000000-000000")
+app = gcp.appengine.Application("app",
+    project=my_project.project_id,
+    location_id="us-central")
+service = gcp.projects.Service("service",
+    project=my_project.project_id,
+    service="appengineflex.googleapis.com",
+    disable_dependent_services=False)
+gae_api = gcp.projects.IAMMember("gaeApi",
+    project=service.project,
+    role="roles/compute.networkUser",
+    member=my_project.number.apply(lambda number: f"serviceAccount:service-{number}@gae-api-prod.google.com.iam.gserviceaccount.com"))
+bucket = gcp.storage.Bucket("bucket", project=my_project.project_id)
+object = gcp.storage.BucketObject("object",
+    bucket=bucket.name,
+    source=pulumi.FileAsset("./test-fixtures/appengine/hello-world.zip"))
+myapp_v1 = gcp.appengine.FlexibleAppVersion("myappV1",
+    version_id="v1",
+    project=gae_api.project,
+    service="default",
+    runtime="nodejs",
+    entrypoint=gcp.appengine.FlexibleAppVersionEntrypointArgs(
+        shell="node ./app.js",
+    ),
+    deployment=gcp.appengine.FlexibleAppVersionDeploymentArgs(
+        zip=gcp.appengine.FlexibleAppVersionDeploymentZipArgs(
+            source_url=pulumi.Output.all(bucket.name, object.name).apply(lambda bucketName, objectName: f"https://storage.googleapis.com/{bucket_name}/{object_name}"),
+        ),
+    ),
+    liveness_check=gcp.appengine.FlexibleAppVersionLivenessCheckArgs(
+        path="/",
+    ),
+    readiness_check=gcp.appengine.FlexibleAppVersionReadinessCheckArgs(
+        path="/",
+    ),
+    env_variables={
+        "port": "8080",
+    },
+    handlers=[gcp.appengine.FlexibleAppVersionHandlerArgs(
+        url_regex=".*\\/my-path\\/*",
+        security_level="SECURE_ALWAYS",
+        login="LOGIN_REQUIRED",
+        auth_fail_action="AUTH_FAIL_ACTION_REDIRECT",
+        static_files=gcp.appengine.FlexibleAppVersionHandlerStaticFilesArgs(
+            path="my-other-path",
+            upload_path_regex=".*\\/my-path\\/*",
+        ),
+    )],
+    automatic_scaling=gcp.appengine.FlexibleAppVersionAutomaticScalingArgs(
+        cool_down_period="120s",
+        cpu_utilization=gcp.appengine.FlexibleAppVersionAutomaticScalingCpuUtilizationArgs(
+            target_utilization=0.5,
+        ),
+    ),
+    noop_on_destroy=True)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myProject = new gcp.organizations.Project("myProject", {
+    projectId: "appeng-flex",
+    orgId: "123456789",
+    billingAccount: "000000-0000000-0000000-000000",
+});
+const app = new gcp.appengine.Application("app", {
+    project: myProject.projectId,
+    locationId: "us-central",
+});
+const service = new gcp.projects.Service("service", {
+    project: myProject.projectId,
+    service: "appengineflex.googleapis.com",
+    disableDependentServices: false,
+});
+const gaeApi = new gcp.projects.IAMMember("gaeApi", {
+    project: service.project,
+    role: "roles/compute.networkUser",
+    member: pulumi.interpolate`serviceAccount:service-${myProject.number}@gae-api-prod.google.com.iam.gserviceaccount.com`,
+});
+const bucket = new gcp.storage.Bucket("bucket", {project: myProject.projectId});
+const object = new gcp.storage.BucketObject("object", {
+    bucket: bucket.name,
+    source: new pulumi.asset.FileAsset("./test-fixtures/appengine/hello-world.zip"),
+});
+const myappV1 = new gcp.appengine.FlexibleAppVersion("myappV1", {
+    versionId: "v1",
+    project: gaeApi.project,
+    service: "default",
+    runtime: "nodejs",
+    entrypoint: {
+        shell: "node ./app.js",
+    },
+    deployment: {
+        zip: {
+            sourceUrl: pulumi.interpolate`https://storage.googleapis.com/${bucket.name}/${object.name}`,
+        },
+    },
+    livenessCheck: {
+        path: "/",
+    },
+    readinessCheck: {
+        path: "/",
+    },
+    envVariables: {
+        port: "8080",
+    },
+    handlers: [{
+        urlRegex: ".*\\/my-path\\/*",
+        securityLevel: "SECURE_ALWAYS",
+        login: "LOGIN_REQUIRED",
+        authFailAction: "AUTH_FAIL_ACTION_REDIRECT",
+        staticFiles: {
+            path: "my-other-path",
+            uploadPathRegex: ".*\\/my-path\\/*",
+        },
+    }],
+    automaticScaling: {
+        coolDownPeriod: "120s",
+        cpuUtilization: {
+            targetUtilization: 0.5,
+        },
+    },
+    noopOnDestroy: true,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FlexibleAppVersion Resource {#create}
@@ -31,19 +403,19 @@ To get more information about FlexibleAppVersion, see:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FlexibleAppVersion">FlexibleAppVersion</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FlexibleAppVersionArgs">FlexibleAppVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FlexibleAppVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FlexibleAppVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#FlexibleAppVersion">FlexibleAppVersion</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_config=None<span class="p">, </span>automatic_scaling=None<span class="p">, </span>beta_settings=None<span class="p">, </span>default_expiration=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>endpoints_api_service=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>inbound_services=None<span class="p">, </span>instance_class=None<span class="p">, </span>liveness_check=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>network=None<span class="p">, </span>nobuild_files_regex=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>readiness_check=None<span class="p">, </span>resources=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>runtime_channel=None<span class="p">, </span>runtime_main_executable_path=None<span class="p">, </span>service=None<span class="p">, </span>serving_status=None<span class="p">, </span>version_id=None<span class="p">, </span>vpc_access_connector=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FlexibleAppVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_config</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionApiConfigArgs]</span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">beta_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">endpoints_api_service</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEndpointsApiServiceArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[Sequence[FlexibleAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">liveness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionLivenessCheckArgs]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionNetworkArgs]</span> = None<span class="p">, </span><span class="nx">nobuild_files_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readiness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionReadinessCheckArgs]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionResourcesArgs]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_main_executable_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersion">NewFlexibleAppVersion</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionArgs">FlexibleAppVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersion">FlexibleAppVersion</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFlexibleAppVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FlexibleAppVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FlexibleAppVersion</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersion.html">FlexibleAppVersion</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersionArgs.html">FlexibleAppVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FlexibleAppVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FlexibleAppVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -54,7 +426,7 @@ To get more information about FlexibleAppVersion, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -64,7 +436,7 @@ To get more information about FlexibleAppVersion, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FlexibleAppVersionArgs">FlexibleAppVersionArgs</a></span>
+        <span class="property-type"><a href="#inputs">FlexibleAppVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -113,7 +485,7 @@ To get more information about FlexibleAppVersion, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -123,7 +495,7 @@ To get more information about FlexibleAppVersion, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -133,7 +505,7 @@ To get more information about FlexibleAppVersion, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionArgs">FlexibleAppVersionArgs</a></span>
+        <span class="property-type"><a href="#inputs">FlexibleAppVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -143,7 +515,7 @@ To get more information about FlexibleAppVersion, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -162,7 +534,7 @@ To get more information about FlexibleAppVersion, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -172,7 +544,7 @@ To get more information about FlexibleAppVersion, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersionArgs.html">FlexibleAppVersionArgs</a></span>
+        <span class="property-type"><a href="#inputs">FlexibleAppVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -195,12 +567,11 @@ To get more information about FlexibleAppVersion, see:
 
 ## FlexibleAppVersion Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The FlexibleAppVersion resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The FlexibleAppVersion resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -211,321 +582,307 @@ The FlexibleAppVersion resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="livenesscheck_csharp">
 <a href="#livenesscheck_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="readinesscheck_csharp">
 <a href="#readinesscheck_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="runtime_csharp">
 <a href="#runtime_csharp" style="color: inherit; text-decoration: inherit;">Runtime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="service_csharp">
+<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AppEngine service resource
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="apiconfig_csharp">
 <a href="#apiconfig_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="automaticscaling_csharp">
 <a href="#automaticscaling_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="betasettings_csharp">
 <a href="#betasettings_csharp" style="color: inherit; text-decoration: inherit;">Beta<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Metadata settings that are supplied to this version to enable beta runtime features.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultexpiration_csharp">
 <a href="#defaultexpiration_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteserviceondestroy_csharp">
 <a href="#deleteserviceondestroy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Service<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deployment_csharp">
 <a href="#deployment_csharp" style="color: inherit; text-decoration: inherit;">Deployment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointsapiservice_csharp">
 <a href="#endpointsapiservice_csharp" style="color: inherit; text-decoration: inherit;">Endpoints<wbr>Api<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="entrypoint_csharp">
 <a href="#entrypoint_csharp" style="color: inherit; text-decoration: inherit;">Entrypoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="envvariables_csharp">
 <a href="#envvariables_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>Variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="handlers_csharp">
 <a href="#handlers_csharp" style="color: inherit; text-decoration: inherit;">Handlers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionhandler">List&lt;Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inboundservices_csharp">
 <a href="#inboundservices_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instanceclass_csharp">
 <a href="#instanceclass_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
 ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manualscaling_csharp">
 <a href="#manualscaling_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nobuildfilesregex_csharp">
 <a href="#nobuildfilesregex_csharp" style="color: inherit; text-decoration: inherit;">Nobuild<wbr>Files<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noopondestroy_csharp">
 <a href="#noopondestroy_csharp" style="color: inherit; text-decoration: inherit;">Noop<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the application version will not be deleted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtimeapiversion_csharp">
 <a href="#runtimeapiversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Api<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtimechannel_csharp">
 <a href="#runtimechannel_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The channel of the runtime to use. Only available for some runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtimemainexecutablepath_csharp">
 <a href="#runtimemainexecutablepath_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Main<wbr>Executable<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path or name of the app's main executable.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="service_csharp">
-<a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}AppEngine service resource
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servingstatus_csharp">
 <a href="#servingstatus_csharp" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionid_csharp">
 <a href="#versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
 Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpcaccessconnector_csharp">
 <a href="#vpcaccessconnector_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Access<wbr>Connector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -534,321 +891,307 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
             title="Required">
         <span id="livenesscheck_go">
 <a href="#livenesscheck_go" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="readinesscheck_go">
 <a href="#readinesscheck_go" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="runtime_go">
 <a href="#runtime_go" style="color: inherit; text-decoration: inherit;">Runtime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="service_go">
+<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AppEngine service resource
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="apiconfig_go">
 <a href="#apiconfig_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="automaticscaling_go">
 <a href="#automaticscaling_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="betasettings_go">
 <a href="#betasettings_go" style="color: inherit; text-decoration: inherit;">Beta<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata settings that are supplied to this version to enable beta runtime features.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultexpiration_go">
 <a href="#defaultexpiration_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteserviceondestroy_go">
 <a href="#deleteserviceondestroy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Service<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deployment_go">
 <a href="#deployment_go" style="color: inherit; text-decoration: inherit;">Deployment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointsapiservice_go">
 <a href="#endpointsapiservice_go" style="color: inherit; text-decoration: inherit;">Endpoints<wbr>Api<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="entrypoint_go">
 <a href="#entrypoint_go" style="color: inherit; text-decoration: inherit;">Entrypoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="envvariables_go">
 <a href="#envvariables_go" style="color: inherit; text-decoration: inherit;">Env<wbr>Variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="handlers_go">
 <a href="#handlers_go" style="color: inherit; text-decoration: inherit;">Handlers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionhandler">[]Flexible<wbr>App<wbr>Version<wbr>Handler</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inboundservices_go">
 <a href="#inboundservices_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instanceclass_go">
 <a href="#instanceclass_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
 ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manualscaling_go">
 <a href="#manualscaling_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nobuildfilesregex_go">
 <a href="#nobuildfilesregex_go" style="color: inherit; text-decoration: inherit;">Nobuild<wbr>Files<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noopondestroy_go">
 <a href="#noopondestroy_go" style="color: inherit; text-decoration: inherit;">Noop<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the application version will not be deleted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtimeapiversion_go">
 <a href="#runtimeapiversion_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Api<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtimechannel_go">
 <a href="#runtimechannel_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The channel of the runtime to use. Only available for some runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtimemainexecutablepath_go">
 <a href="#runtimemainexecutablepath_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Main<wbr>Executable<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path or name of the app's main executable.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="service_go">
-<a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}AppEngine service resource
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servingstatus_go">
 <a href="#servingstatus_go" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionid_go">
 <a href="#versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
 Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpcaccessconnector_go">
 <a href="#vpcaccessconnector_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Access<wbr>Connector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -857,321 +1200,307 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
             title="Required">
         <span id="livenesscheck_nodejs">
 <a href="#livenesscheck_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="readinesscheck_nodejs">
 <a href="#readinesscheck_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="runtime_nodejs">
 <a href="#runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="service_nodejs">
+<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AppEngine service resource
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="apiconfig_nodejs">
 <a href="#apiconfig_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="automaticscaling_nodejs">
 <a href="#automaticscaling_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="betasettings_nodejs">
 <a href="#betasettings_nodejs" style="color: inherit; text-decoration: inherit;">beta<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata settings that are supplied to this version to enable beta runtime features.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultexpiration_nodejs">
 <a href="#defaultexpiration_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteserviceondestroy_nodejs">
 <a href="#deleteserviceondestroy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Service<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deployment_nodejs">
 <a href="#deployment_nodejs" style="color: inherit; text-decoration: inherit;">deployment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointsapiservice_nodejs">
 <a href="#endpointsapiservice_nodejs" style="color: inherit; text-decoration: inherit;">endpoints<wbr>Api<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="entrypoint_nodejs">
 <a href="#entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entrypoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="envvariables_nodejs">
 <a href="#envvariables_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="handlers_nodejs">
 <a href="#handlers_nodejs" style="color: inherit; text-decoration: inherit;">handlers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionhandler">Flexible<wbr>App<wbr>Version<wbr>Handler[]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inboundservices_nodejs">
 <a href="#inboundservices_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instanceclass_nodejs">
 <a href="#instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
 ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manualscaling_nodejs">
 <a href="#manualscaling_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nobuildfilesregex_nodejs">
 <a href="#nobuildfilesregex_nodejs" style="color: inherit; text-decoration: inherit;">nobuild<wbr>Files<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noopondestroy_nodejs">
 <a href="#noopondestroy_nodejs" style="color: inherit; text-decoration: inherit;">noop<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the application version will not be deleted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtimeapiversion_nodejs">
 <a href="#runtimeapiversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Api<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtimechannel_nodejs">
 <a href="#runtimechannel_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The channel of the runtime to use. Only available for some runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtimemainexecutablepath_nodejs">
 <a href="#runtimemainexecutablepath_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Main<wbr>Executable<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path or name of the app's main executable.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="service_nodejs">
-<a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}AppEngine service resource
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servingstatus_nodejs">
 <a href="#servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionid_nodejs">
 <a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
 Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpcaccessconnector_nodejs">
 <a href="#vpcaccessconnector_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Access<wbr>Connector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1180,330 +1509,312 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
             title="Required">
         <span id="liveness_check_python">
 <a href="#liveness_check_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionlivenesscheck">Dict[Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check]</a></span>
+        <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="readiness_check_python">
 <a href="#readiness_check_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionreadinesscheck">Dict[Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check]</a></span>
+        <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="runtime_python">
 <a href="#runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="service_python">
+<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}AppEngine service resource
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="api_config_python">
 <a href="#api_config_python" style="color: inherit; text-decoration: inherit;">api_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionapiconfig">Dict[Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config]</a></span>
+        <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="automatic_scaling_python">
 <a href="#automatic_scaling_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscaling">Dict[Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling]</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="beta_settings_python">
 <a href="#beta_settings_python" style="color: inherit; text-decoration: inherit;">beta_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata settings that are supplied to this version to enable beta runtime features.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_expiration_python">
 <a href="#default_expiration_python" style="color: inherit; text-decoration: inherit;">default_<wbr>expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="delete_service_on_destroy_python">
 <a href="#delete_service_on_destroy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>service_<wbr>on_<wbr>destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deployment_python">
 <a href="#deployment_python" style="color: inherit; text-decoration: inherit;">deployment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeployment">Dict[Flexible<wbr>App<wbr>Version<wbr>Deployment]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpoints_api_service_python">
 <a href="#endpoints_api_service_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>api_<wbr>service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Dict[Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service]</a></span>
+        <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="entrypoint_python">
 <a href="#entrypoint_python" style="color: inherit; text-decoration: inherit;">entrypoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionentrypoint">Dict[Flexible<wbr>App<wbr>Version<wbr>Entrypoint]</a></span>
+        <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="env_variables_python">
 <a href="#env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="handlers_python">
 <a href="#handlers_python" style="color: inherit; text-decoration: inherit;">handlers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandler">List[Flexible<wbr>App<wbr>Version<wbr>Handler]</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">Sequence[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inbound_services_python">
 <a href="#inbound_services_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_class_python">
 <a href="#instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
 ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="manual_scaling_python">
 <a href="#manual_scaling_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionmanualscaling">Dict[Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling]</a></span>
+        <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionnetwork">Dict[Flexible<wbr>App<wbr>Version<wbr>Network]</a></span>
+        <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nobuild_files_regex_python">
 <a href="#nobuild_files_regex_python" style="color: inherit; text-decoration: inherit;">nobuild_<wbr>files_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noop_on_destroy_python">
 <a href="#noop_on_destroy_python" style="color: inherit; text-decoration: inherit;">noop_<wbr>on_<wbr>destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the application version will not be deleted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionresources">Dict[Flexible<wbr>App<wbr>Version<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtime_api_version_python">
 <a href="#runtime_api_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>api_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtime_channel_python">
 <a href="#runtime_channel_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The channel of the runtime to use. Only available for some runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runtime_main_executable_path_python">
 <a href="#runtime_main_executable_path_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>main_<wbr>executable_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path or name of the app's main executable.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="service_python">
-<a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}AppEngine service resource
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serving_status_python">
 <a href="#serving_status_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_id_python">
 <a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
 Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vpc_access_connector_python">
 <a href="#vpc_access_connector_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>access_<wbr>connector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Dict[Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector]</a></span>
+        <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the FlexibleAppVersion resource produces the following output properties:
-
 
 
 
@@ -1514,26 +1825,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1542,26 +1850,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1570,26 +1875,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1598,29 +1900,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1630,19 +1926,20 @@ Get an existing FlexibleAppVersion resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FlexibleAppVersionState">FlexibleAppVersionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FlexibleAppVersion">FlexibleAppVersion</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FlexibleAppVersionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">FlexibleAppVersion</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_config=None<span class="p">, </span>automatic_scaling=None<span class="p">, </span>beta_settings=None<span class="p">, </span>default_expiration=None<span class="p">, </span>delete_service_on_destroy=None<span class="p">, </span>deployment=None<span class="p">, </span>endpoints_api_service=None<span class="p">, </span>entrypoint=None<span class="p">, </span>env_variables=None<span class="p">, </span>handlers=None<span class="p">, </span>inbound_services=None<span class="p">, </span>instance_class=None<span class="p">, </span>liveness_check=None<span class="p">, </span>manual_scaling=None<span class="p">, </span>name=None<span class="p">, </span>network=None<span class="p">, </span>nobuild_files_regex=None<span class="p">, </span>noop_on_destroy=None<span class="p">, </span>project=None<span class="p">, </span>readiness_check=None<span class="p">, </span>resources=None<span class="p">, </span>runtime=None<span class="p">, </span>runtime_api_version=None<span class="p">, </span>runtime_channel=None<span class="p">, </span>runtime_main_executable_path=None<span class="p">, </span>service=None<span class="p">, </span>serving_status=None<span class="p">, </span>version_id=None<span class="p">, </span>vpc_access_connector=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_config</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionApiConfigArgs]</span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">beta_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">endpoints_api_service</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEndpointsApiServiceArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[Sequence[FlexibleAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">liveness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionLivenessCheckArgs]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionNetworkArgs]</span> = None<span class="p">, </span><span class="nx">nobuild_files_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readiness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionReadinessCheckArgs]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionResourcesArgs]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_main_executable_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">) -&gt;</span> FlexibleAppVersion</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFlexibleAppVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionState">FlexibleAppVersionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersion">FlexibleAppVersion</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFlexibleAppVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FlexibleAppVersionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FlexibleAppVersion</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersion.html">FlexibleAppVersion</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersionState.html">FlexibleAppVersionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">FlexibleAppVersion</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FlexibleAppVersionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1744,7 +2041,6 @@ Get an existing FlexibleAppVersion resource's state with the given name, ID, and
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1752,332 +2048,317 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_apiconfig_csharp">
 <a href="#state_apiconfig_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_automaticscaling_csharp">
 <a href="#state_automaticscaling_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_betasettings_csharp">
 <a href="#state_betasettings_csharp" style="color: inherit; text-decoration: inherit;">Beta<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Metadata settings that are supplied to this version to enable beta runtime features.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultexpiration_csharp">
 <a href="#state_defaultexpiration_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deleteserviceondestroy_csharp">
 <a href="#state_deleteserviceondestroy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Service<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deployment_csharp">
 <a href="#state_deployment_csharp" style="color: inherit; text-decoration: inherit;">Deployment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpointsapiservice_csharp">
 <a href="#state_endpointsapiservice_csharp" style="color: inherit; text-decoration: inherit;">Endpoints<wbr>Api<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_entrypoint_csharp">
 <a href="#state_entrypoint_csharp" style="color: inherit; text-decoration: inherit;">Entrypoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_envvariables_csharp">
 <a href="#state_envvariables_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>Variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_handlers_csharp">
 <a href="#state_handlers_csharp" style="color: inherit; text-decoration: inherit;">Handlers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionhandler">List&lt;Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inboundservices_csharp">
 <a href="#state_inboundservices_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceclass_csharp">
 <a href="#state_instanceclass_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
 ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_livenesscheck_csharp">
 <a href="#state_livenesscheck_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_manualscaling_csharp">
 <a href="#state_manualscaling_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nobuildfilesregex_csharp">
 <a href="#state_nobuildfilesregex_csharp" style="color: inherit; text-decoration: inherit;">Nobuild<wbr>Files<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_noopondestroy_csharp">
 <a href="#state_noopondestroy_csharp" style="color: inherit; text-decoration: inherit;">Noop<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the application version will not be deleted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_readinesscheck_csharp">
 <a href="#state_readinesscheck_csharp" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resources_csharp">
 <a href="#state_resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_csharp">
 <a href="#state_runtime_csharp" style="color: inherit; text-decoration: inherit;">Runtime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtimeapiversion_csharp">
 <a href="#state_runtimeapiversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Api<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtimechannel_csharp">
 <a href="#state_runtimechannel_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The channel of the runtime to use. Only available for some runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtimemainexecutablepath_csharp">
 <a href="#state_runtimemainexecutablepath_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Main<wbr>Executable<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path or name of the app's main executable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_csharp">
 <a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AppEngine service resource
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servingstatus_csharp">
 <a href="#state_servingstatus_csharp" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_versionid_csharp">
 <a href="#state_versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
 Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vpcaccessconnector_csharp">
 <a href="#state_vpcaccessconnector_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Access<wbr>Connector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2086,332 +2367,317 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
             title="Optional">
         <span id="state_apiconfig_go">
 <a href="#state_apiconfig_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_automaticscaling_go">
 <a href="#state_automaticscaling_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_betasettings_go">
 <a href="#state_betasettings_go" style="color: inherit; text-decoration: inherit;">Beta<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata settings that are supplied to this version to enable beta runtime features.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultexpiration_go">
 <a href="#state_defaultexpiration_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deleteserviceondestroy_go">
 <a href="#state_deleteserviceondestroy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Service<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deployment_go">
 <a href="#state_deployment_go" style="color: inherit; text-decoration: inherit;">Deployment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpointsapiservice_go">
 <a href="#state_endpointsapiservice_go" style="color: inherit; text-decoration: inherit;">Endpoints<wbr>Api<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_entrypoint_go">
 <a href="#state_entrypoint_go" style="color: inherit; text-decoration: inherit;">Entrypoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_envvariables_go">
 <a href="#state_envvariables_go" style="color: inherit; text-decoration: inherit;">Env<wbr>Variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_handlers_go">
 <a href="#state_handlers_go" style="color: inherit; text-decoration: inherit;">Handlers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionhandler">[]Flexible<wbr>App<wbr>Version<wbr>Handler</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inboundservices_go">
 <a href="#state_inboundservices_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceclass_go">
 <a href="#state_instanceclass_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
 ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_livenesscheck_go">
 <a href="#state_livenesscheck_go" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_manualscaling_go">
 <a href="#state_manualscaling_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nobuildfilesregex_go">
 <a href="#state_nobuildfilesregex_go" style="color: inherit; text-decoration: inherit;">Nobuild<wbr>Files<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_noopondestroy_go">
 <a href="#state_noopondestroy_go" style="color: inherit; text-decoration: inherit;">Noop<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the application version will not be deleted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_readinesscheck_go">
 <a href="#state_readinesscheck_go" style="color: inherit; text-decoration: inherit;">Readiness<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resources_go">
 <a href="#state_resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_go">
 <a href="#state_runtime_go" style="color: inherit; text-decoration: inherit;">Runtime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtimeapiversion_go">
 <a href="#state_runtimeapiversion_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Api<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtimechannel_go">
 <a href="#state_runtimechannel_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The channel of the runtime to use. Only available for some runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtimemainexecutablepath_go">
 <a href="#state_runtimemainexecutablepath_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Main<wbr>Executable<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path or name of the app's main executable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AppEngine service resource
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servingstatus_go">
 <a href="#state_servingstatus_go" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_versionid_go">
 <a href="#state_versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
 Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vpcaccessconnector_go">
 <a href="#state_vpcaccessconnector_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Access<wbr>Connector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2420,332 +2686,317 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
             title="Optional">
         <span id="state_apiconfig_nodejs">
 <a href="#state_apiconfig_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_automaticscaling_nodejs">
 <a href="#state_automaticscaling_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_betasettings_nodejs">
 <a href="#state_betasettings_nodejs" style="color: inherit; text-decoration: inherit;">beta<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata settings that are supplied to this version to enable beta runtime features.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultexpiration_nodejs">
 <a href="#state_defaultexpiration_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deleteserviceondestroy_nodejs">
 <a href="#state_deleteserviceondestroy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Service<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deployment_nodejs">
 <a href="#state_deployment_nodejs" style="color: inherit; text-decoration: inherit;">deployment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpointsapiservice_nodejs">
 <a href="#state_endpointsapiservice_nodejs" style="color: inherit; text-decoration: inherit;">endpoints<wbr>Api<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_entrypoint_nodejs">
 <a href="#state_entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entrypoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_envvariables_nodejs">
 <a href="#state_envvariables_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_handlers_nodejs">
 <a href="#state_handlers_nodejs" style="color: inherit; text-decoration: inherit;">handlers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionhandler">Flexible<wbr>App<wbr>Version<wbr>Handler[]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inboundservices_nodejs">
 <a href="#state_inboundservices_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceclass_nodejs">
 <a href="#state_instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
 ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_livenesscheck_nodejs">
 <a href="#state_livenesscheck_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_manualscaling_nodejs">
 <a href="#state_manualscaling_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nobuildfilesregex_nodejs">
 <a href="#state_nobuildfilesregex_nodejs" style="color: inherit; text-decoration: inherit;">nobuild<wbr>Files<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_noopondestroy_nodejs">
 <a href="#state_noopondestroy_nodejs" style="color: inherit; text-decoration: inherit;">noop<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the application version will not be deleted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_readinesscheck_nodejs">
 <a href="#state_readinesscheck_nodejs" style="color: inherit; text-decoration: inherit;">readiness<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resources_nodejs">
 <a href="#state_resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_nodejs">
 <a href="#state_runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtimeapiversion_nodejs">
 <a href="#state_runtimeapiversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Api<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtimechannel_nodejs">
 <a href="#state_runtimechannel_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The channel of the runtime to use. Only available for some runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtimemainexecutablepath_nodejs">
 <a href="#state_runtimemainexecutablepath_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Main<wbr>Executable<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path or name of the app's main executable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AppEngine service resource
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servingstatus_nodejs">
 <a href="#state_servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_versionid_nodejs">
 <a href="#state_versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
 Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vpcaccessconnector_nodejs">
 <a href="#state_vpcaccessconnector_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Access<wbr>Connector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2754,335 +3005,317 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
             title="Optional">
         <span id="state_api_config_python">
 <a href="#state_api_config_python" style="color: inherit; text-decoration: inherit;">api_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionapiconfig">Dict[Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config]</a></span>
+        <span class="property-type"><a href="#flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.  Structure is documented below.
+    <dd>{{% md %}}Serving configuration for Google Cloud Endpoints.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_automatic_scaling_python">
 <a href="#state_automatic_scaling_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscaling">Dict[Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling]</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.  Structure is documented below.
+    <dd>{{% md %}}Automatic scaling is based on request rate, response latencies, and other application metrics.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_beta_settings_python">
 <a href="#state_beta_settings_python" style="color: inherit; text-decoration: inherit;">beta_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata settings that are supplied to this version to enable beta runtime features.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_default_expiration_python">
 <a href="#state_default_expiration_python" style="color: inherit; text-decoration: inherit;">default_<wbr>expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration that static files should be cached by web proxies and browsers.
 Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_delete_service_on_destroy_python">
 <a href="#state_delete_service_on_destroy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>service_<wbr>on_<wbr>destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the service will be deleted if it is the last version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deployment_python">
 <a href="#state_deployment_python" style="color: inherit; text-decoration: inherit;">deployment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeployment">Dict[Flexible<wbr>App<wbr>Version<wbr>Deployment]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_api_service_python">
 <a href="#state_endpoints_api_service_python" style="color: inherit; text-decoration: inherit;">endpoints_<wbr>api_<wbr>service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Dict[Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service]</a></span>
+        <span class="property-type"><a href="#flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Code and application artifacts that make up this version.  Structure is documented below.
+    <dd>{{% md %}}Code and application artifacts that make up this version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_entrypoint_python">
 <a href="#state_entrypoint_python" style="color: inherit; text-decoration: inherit;">entrypoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionentrypoint">Dict[Flexible<wbr>App<wbr>Version<wbr>Entrypoint]</a></span>
+        <span class="property-type"><a href="#flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The entrypoint for the application.  Structure is documented below.
+    <dd>{{% md %}}The entrypoint for the application.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_env_variables_python">
 <a href="#state_env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_handlers_python">
 <a href="#state_handlers_python" style="color: inherit; text-decoration: inherit;">handlers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandler">List[Flexible<wbr>App<wbr>Version<wbr>Handler]</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandler">Sequence[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An ordered list of URL-matching patterns that should be applied to incoming requests.
-The first matching URL handles the request and other request handlers are not attempted.  Structure is documented below.
+The first matching URL handles the request and other request handlers are not attempted.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inbound_services_python">
 <a href="#state_inbound_services_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Before an application can receive email or XMPP messages, the application must be configured to enable the service.
+    <dd>{{% md %}}A list of the types of messages that this application is able to receive.
+Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_class_python">
 <a href="#state_instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance class that is used to run this version. Valid values are
 AutomaticScaling: F1, F2, F4, F4_1G
 ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_liveness_check_python">
 <a href="#state_liveness_check_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionlivenesscheck">Dict[Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check]</a></span>
+        <span class="property-type"><a href="#flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.  Structure is documented below.
+    <dd>{{% md %}}Health checking configuration for VM instances. Unhealthy instances are killed and replaced with new instances.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_manual_scaling_python">
 <a href="#state_manual_scaling_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>scaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionmanualscaling">Dict[Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling]</a></span>
+        <span class="property-type"><a href="#flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.  Structure is documented below.
+    <dd>{{% md %}}A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionnetwork">Dict[Flexible<wbr>App<wbr>Version<wbr>Network]</a></span>
+        <span class="property-type"><a href="#flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Extra network settings  Structure is documented below.
+    <dd>{{% md %}}Extra network settings
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nobuild_files_regex_python">
 <a href="#state_nobuild_files_regex_python" style="color: inherit; text-decoration: inherit;">nobuild_<wbr>files_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_noop_on_destroy_python">
 <a href="#state_noop_on_destroy_python" style="color: inherit; text-decoration: inherit;">noop_<wbr>on_<wbr>destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the application version will not be deleted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_readiness_check_python">
 <a href="#state_readiness_check_python" style="color: inherit; text-decoration: inherit;">readiness_<wbr>check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionreadinesscheck">Dict[Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check]</a></span>
+        <span class="property-type"><a href="#flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.  Structure is documented below.
+    <dd>{{% md %}}Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resources_python">
 <a href="#state_resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionresources">Dict[Flexible<wbr>App<wbr>Version<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Machine resources for a version.  Structure is documented below.
+    <dd>{{% md %}}Machine resources for a version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_python">
 <a href="#state_runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Desired runtime. Example python27.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_api_version_python">
 <a href="#state_runtime_api_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>api_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard//config/appref
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_channel_python">
 <a href="#state_runtime_channel_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>channel</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The channel of the runtime to use. Only available for some runtimes.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_runtime_main_executable_path_python">
 <a href="#state_runtime_main_executable_path_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>main_<wbr>executable_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path or name of the app's main executable.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AppEngine service resource
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serving_status_python">
 <a href="#state_serving_status_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current serving status of this version. Only the versions with a SERVING status create instances and can be billed.
+Default value is `SERVING`.
+Possible values are `SERVING` and `STOPPED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_id_python">
 <a href="#state_version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens.
 Reserved names,"default", "latest", and any name with the prefix "ah-".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vpc_access_connector_python">
 <a href="#state_vpc_access_connector_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>access_<wbr>connector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Dict[Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector]</a></span>
+        <span class="property-type"><a href="#flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Enables VPC connectivity for standard apps.  Structure is documented below.
+    <dd>{{% md %}}Enables VPC connectivity for standard apps.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -3092,20 +3325,8 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
 ## Supporting Types
 
 
+
 <h4 id="flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionApiConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionApiConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionApiConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionApiConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionApiConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionApiConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3114,60 +3335,59 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
             title="Required">
         <span id="script_csharp">
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authfailaction_csharp">
 <a href="#authfailaction_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Fail<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securitylevel_csharp">
 <a href="#securitylevel_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to serve the endpoint at.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3176,60 +3396,59 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
             title="Required">
         <span id="script_go">
 <a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authfailaction_go">
 <a href="#authfailaction_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Fail<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securitylevel_go">
 <a href="#securitylevel_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to serve the endpoint at.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3238,60 +3457,59 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
             title="Required">
         <span id="script_nodejs">
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authfailaction_nodejs">
 <a href="#authfailaction_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Fail<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securitylevel_nodejs">
 <a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to serve the endpoint at.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3300,78 +3518,61 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
             title="Required">
         <span id="script_python">
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="authfailaction_python">
-<a href="#authfailaction_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Fail<wbr>Action</a>
-</span> 
+        <span id="auth_fail_action_python">
+<a href="#auth_fail_action_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>fail_<wbr>action</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="securitylevel_python">
-<a href="#securitylevel_python" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
-</span> 
+        <span id="security_level_python">
+<a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to serve the endpoint at.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionAutomaticScaling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionAutomaticScaling">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScaling.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3380,140 +3581,131 @@ Reserved names,"default", "latest", and any name with the prefix "ah-".
             title="Required">
         <span id="cpuutilization_csharp">
 <a href="#cpuutilization_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by CPU usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by CPU usage.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cooldownperiod_csharp">
 <a href="#cooldownperiod_csharp" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period that the Autoscaler should wait before it starts collecting information from a new instance.
 This prevents the autoscaler from collecting information when the instance is initializing,
 during which the collected usage would not be reliable. Default: 120s
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskutilization_csharp">
 <a href="#diskutilization_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by disk usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by disk usage.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentrequests_csharp">
 <a href="#maxconcurrentrequests_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
 Defaults to a runtime-specific value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxidleinstances_csharp">
 <a href="#maxidleinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of idle instances that should be maintained for this version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxpendinglatency_csharp">
 <a href="#maxpendinglatency_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pending<wbr>Latency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxtotalinstances_csharp">
 <a href="#maxtotalinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances that should be started to handle requests for this version. Default: 20
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minidleinstances_csharp">
 <a href="#minidleinstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Idle<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minpendinglatency_csharp">
 <a href="#minpendinglatency_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Pending<wbr>Latency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mintotalinstances_csharp">
 <a href="#mintotalinstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Total<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of running instances that should be maintained for this version. Default: 2
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkutilization_csharp">
 <a href="#networkutilization_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by network usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by network usage.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestutilization_csharp">
 <a href="#requestutilization_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by request utilization.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by request utilization.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3522,140 +3714,131 @@ Defaults to a runtime-specific value.
             title="Required">
         <span id="cpuutilization_go">
 <a href="#cpuutilization_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by CPU usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by CPU usage.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cooldownperiod_go">
 <a href="#cooldownperiod_go" style="color: inherit; text-decoration: inherit;">Cool<wbr>Down<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period that the Autoscaler should wait before it starts collecting information from a new instance.
 This prevents the autoscaler from collecting information when the instance is initializing,
 during which the collected usage would not be reliable. Default: 120s
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskutilization_go">
 <a href="#diskutilization_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by disk usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by disk usage.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentrequests_go">
 <a href="#maxconcurrentrequests_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
 Defaults to a runtime-specific value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxidleinstances_go">
 <a href="#maxidleinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of idle instances that should be maintained for this version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxpendinglatency_go">
 <a href="#maxpendinglatency_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pending<wbr>Latency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxtotalinstances_go">
 <a href="#maxtotalinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances that should be started to handle requests for this version. Default: 20
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minidleinstances_go">
 <a href="#minidleinstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Idle<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minpendinglatency_go">
 <a href="#minpendinglatency_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Pending<wbr>Latency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mintotalinstances_go">
 <a href="#mintotalinstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Total<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of running instances that should be maintained for this version. Default: 2
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkutilization_go">
 <a href="#networkutilization_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by network usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by network usage.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestutilization_go">
 <a href="#requestutilization_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by request utilization.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by request utilization.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3664,300 +3847,266 @@ Defaults to a runtime-specific value.
             title="Required">
         <span id="cpuutilization_nodejs">
 <a href="#cpuutilization_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by CPU usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by CPU usage.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cooldownperiod_nodejs">
 <a href="#cooldownperiod_nodejs" style="color: inherit; text-decoration: inherit;">cool<wbr>Down<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period that the Autoscaler should wait before it starts collecting information from a new instance.
 This prevents the autoscaler from collecting information when the instance is initializing,
 during which the collected usage would not be reliable. Default: 120s
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskutilization_nodejs">
 <a href="#diskutilization_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by disk usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by disk usage.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentrequests_nodejs">
 <a href="#maxconcurrentrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
 Defaults to a runtime-specific value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxidleinstances_nodejs">
 <a href="#maxidleinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of idle instances that should be maintained for this version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxpendinglatency_nodejs">
 <a href="#maxpendinglatency_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Latency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxtotalinstances_nodejs">
 <a href="#maxtotalinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Total<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances that should be started to handle requests for this version. Default: 20
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minidleinstances_nodejs">
 <a href="#minidleinstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Idle<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minpendinglatency_nodejs">
 <a href="#minpendinglatency_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Pending<wbr>Latency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mintotalinstances_nodejs">
 <a href="#mintotalinstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Total<wbr>Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of running instances that should be maintained for this version. Default: 2
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkutilization_nodejs">
 <a href="#networkutilization_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by network usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by network usage.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestutilization_nodejs">
 <a href="#requestutilization_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by request utilization.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by request utilization.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="cpuutilization_python">
-<a href="#cpuutilization_python" style="color: inherit; text-decoration: inherit;">cpu<wbr>Utilization</a>
-</span> 
+        <span id="cpu_utilization_python">
+<a href="#cpu_utilization_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>utilization</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Dict[Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization]</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by CPU usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by CPU usage.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="cooldownperiod_python">
-<a href="#cooldownperiod_python" style="color: inherit; text-decoration: inherit;">cool<wbr>Down<wbr>Period</a>
-</span> 
+        <span id="cool_down_period_python">
+<a href="#cool_down_period_python" style="color: inherit; text-decoration: inherit;">cool_<wbr>down_<wbr>period</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time period that the Autoscaler should wait before it starts collecting information from a new instance.
 This prevents the autoscaler from collecting information when the instance is initializing,
 during which the collected usage would not be reliable. Default: 120s
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="diskutilization_python">
-<a href="#diskutilization_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Utilization</a>
-</span> 
+        <span id="disk_utilization_python">
+<a href="#disk_utilization_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>utilization</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Dict[Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization]</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by disk usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by disk usage.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxconcurrentrequests_python">
-<a href="#maxconcurrentrequests_python" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Requests</a>
-</span> 
+        <span id="max_concurrent_requests_python">
+<a href="#max_concurrent_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>requests</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
 Defaults to a runtime-specific value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxidleinstances_python">
-<a href="#maxidleinstances_python" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Instances</a>
-</span> 
+        <span id="max_idle_instances_python">
+<a href="#max_idle_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>instances</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of idle instances that should be maintained for this version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxpendinglatency_python">
-<a href="#maxpendinglatency_python" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Latency</a>
-</span> 
+        <span id="max_pending_latency_python">
+<a href="#max_pending_latency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>latency</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxtotalinstances_python">
-<a href="#maxtotalinstances_python" style="color: inherit; text-decoration: inherit;">max<wbr>Total<wbr>Instances</a>
-</span> 
+        <span id="max_total_instances_python">
+<a href="#max_total_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>total_<wbr>instances</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of instances that should be started to handle requests for this version. Default: 20
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="minidleinstances_python">
-<a href="#minidleinstances_python" style="color: inherit; text-decoration: inherit;">min<wbr>Idle<wbr>Instances</a>
-</span> 
+        <span id="min_idle_instances_python">
+<a href="#min_idle_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>idle_<wbr>instances</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="minpendinglatency_python">
-<a href="#minpendinglatency_python" style="color: inherit; text-decoration: inherit;">min<wbr>Pending<wbr>Latency</a>
-</span> 
+        <span id="min_pending_latency_python">
+<a href="#min_pending_latency_python" style="color: inherit; text-decoration: inherit;">min_<wbr>pending_<wbr>latency</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="mintotalinstances_python">
-<a href="#mintotalinstances_python" style="color: inherit; text-decoration: inherit;">min<wbr>Total<wbr>Instances</a>
-</span> 
+        <span id="min_total_instances_python">
+<a href="#min_total_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>total_<wbr>instances</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of running instances that should be maintained for this version. Default: 2
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="networkutilization_python">
-<a href="#networkutilization_python" style="color: inherit; text-decoration: inherit;">network<wbr>Utilization</a>
-</span> 
+        <span id="network_utilization_python">
+<a href="#network_utilization_python" style="color: inherit; text-decoration: inherit;">network_<wbr>utilization</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Dict[Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization]</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by network usage.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by network usage.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="requestutilization_python">
-<a href="#requestutilization_python" style="color: inherit; text-decoration: inherit;">request<wbr>Utilization</a>
-</span> 
+        <span id="request_utilization_python">
+<a href="#request_utilization_python" style="color: inherit; text-decoration: inherit;">request_<wbr>utilization</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Dict[Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization]</a></span>
+        <span class="property-type"><a href="#flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Target scaling by request utilization.  Structure is documented below.
+    <dd>{{% md %}}Target scaling by request utilization.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionAutomaticScalingCpuUtilization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionAutomaticScalingCpuUtilization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingCpuUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingCpuUtilizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingCpuUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScalingCpuUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3966,27 +4115,24 @@ Defaults to a runtime-specific value.
             title="Required">
         <span id="targetutilization_csharp">
 <a href="#targetutilization_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aggregationwindowlength_csharp">
 <a href="#aggregationwindowlength_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Window<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Period of time over which CPU utilization is calculated.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3995,27 +4141,24 @@ Defaults to a runtime-specific value.
             title="Required">
         <span id="targetutilization_go">
 <a href="#targetutilization_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aggregationwindowlength_go">
 <a href="#aggregationwindowlength_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Window<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Period of time over which CPU utilization is calculated.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4024,74 +4167,52 @@ Defaults to a runtime-specific value.
             title="Required">
         <span id="targetutilization_nodejs">
 <a href="#targetutilization_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aggregationwindowlength_nodejs">
 <a href="#aggregationwindowlength_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Window<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Period of time over which CPU utilization is calculated.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="targetutilization_python">
-<a href="#targetutilization_python" style="color: inherit; text-decoration: inherit;">target<wbr>Utilization</a>
-</span> 
+        <span id="target_utilization_python">
+<a href="#target_utilization_python" style="color: inherit; text-decoration: inherit;">target_<wbr>utilization</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="aggregationwindowlength_python">
-<a href="#aggregationwindowlength_python" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Window<wbr>Length</a>
-</span> 
+        <span id="aggregation_window_length_python">
+<a href="#aggregation_window_length_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>window_<wbr>length</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Period of time over which CPU utilization is calculated.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionAutomaticScalingDiskUtilization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionAutomaticScalingDiskUtilization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingDiskUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingDiskUtilizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingDiskUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScalingDiskUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4100,49 +4221,44 @@ Defaults to a runtime-specific value.
             title="Optional">
         <span id="targetreadbytespersecond_csharp">
 <a href="#targetreadbytespersecond_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Read<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target bytes read per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetreadopspersecond_csharp">
 <a href="#targetreadopspersecond_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Read<wbr>Ops<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target ops read per seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetwritebytespersecond_csharp">
 <a href="#targetwritebytespersecond_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Write<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target bytes written per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetwriteopspersecond_csharp">
 <a href="#targetwriteopspersecond_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Write<wbr>Ops<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target ops written per second.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4151,49 +4267,44 @@ Defaults to a runtime-specific value.
             title="Optional">
         <span id="targetreadbytespersecond_go">
 <a href="#targetreadbytespersecond_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Read<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target bytes read per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetreadopspersecond_go">
 <a href="#targetreadopspersecond_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Read<wbr>Ops<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target ops read per seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetwritebytespersecond_go">
 <a href="#targetwritebytespersecond_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Write<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target bytes written per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetwriteopspersecond_go">
 <a href="#targetwriteopspersecond_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Write<wbr>Ops<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target ops written per second.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4202,118 +4313,92 @@ Defaults to a runtime-specific value.
             title="Optional">
         <span id="targetreadbytespersecond_nodejs">
 <a href="#targetreadbytespersecond_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Read<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target bytes read per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetreadopspersecond_nodejs">
 <a href="#targetreadopspersecond_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Read<wbr>Ops<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target ops read per seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetwritebytespersecond_nodejs">
 <a href="#targetwritebytespersecond_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Write<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target bytes written per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetwriteopspersecond_nodejs">
 <a href="#targetwriteopspersecond_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Write<wbr>Ops<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target ops written per second.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetreadbytespersecond_python">
-<a href="#targetreadbytespersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Read<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+        <span id="target_read_bytes_per_second_python">
+<a href="#target_read_bytes_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>read_<wbr>bytes_<wbr>per_<wbr>second</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target bytes read per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="targetreadopspersecond_python">
-<a href="#targetreadopspersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Read<wbr>Ops<wbr>Per<wbr>Second</a>
-</span> 
+        <span id="target_read_ops_per_second_python">
+<a href="#target_read_ops_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>read_<wbr>ops_<wbr>per_<wbr>second</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target ops read per seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="targetwritebytespersecond_python">
-<a href="#targetwritebytespersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Write<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+        <span id="target_write_bytes_per_second_python">
+<a href="#target_write_bytes_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>write_<wbr>bytes_<wbr>per_<wbr>second</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target bytes written per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="targetwriteopspersecond_python">
-<a href="#targetwriteopspersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Write<wbr>Ops<wbr>Per<wbr>Second</a>
-</span> 
+        <span id="target_write_ops_per_second_python">
+<a href="#target_write_ops_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>write_<wbr>ops_<wbr>per_<wbr>second</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target ops written per second.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionAutomaticScalingNetworkUtilization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionAutomaticScalingNetworkUtilization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingNetworkUtilizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScalingNetworkUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4322,49 +4407,44 @@ Defaults to a runtime-specific value.
             title="Optional">
         <span id="targetreceivedbytespersecond_csharp">
 <a href="#targetreceivedbytespersecond_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Received<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target bytes received per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetreceivedpacketspersecond_csharp">
 <a href="#targetreceivedpacketspersecond_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Received<wbr>Packets<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target packets received per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetsentbytespersecond_csharp">
 <a href="#targetsentbytespersecond_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Sent<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target bytes sent per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetsentpacketspersecond_csharp">
 <a href="#targetsentpacketspersecond_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Sent<wbr>Packets<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target packets sent per second.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4373,49 +4453,44 @@ Defaults to a runtime-specific value.
             title="Optional">
         <span id="targetreceivedbytespersecond_go">
 <a href="#targetreceivedbytespersecond_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Received<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target bytes received per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetreceivedpacketspersecond_go">
 <a href="#targetreceivedpacketspersecond_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Received<wbr>Packets<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target packets received per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetsentbytespersecond_go">
 <a href="#targetsentbytespersecond_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Sent<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target bytes sent per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetsentpacketspersecond_go">
 <a href="#targetsentpacketspersecond_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Sent<wbr>Packets<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target packets sent per second.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4424,118 +4499,92 @@ Defaults to a runtime-specific value.
             title="Optional">
         <span id="targetreceivedbytespersecond_nodejs">
 <a href="#targetreceivedbytespersecond_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Received<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target bytes received per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetreceivedpacketspersecond_nodejs">
 <a href="#targetreceivedpacketspersecond_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Received<wbr>Packets<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target packets received per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetsentbytespersecond_nodejs">
 <a href="#targetsentbytespersecond_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Sent<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target bytes sent per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetsentpacketspersecond_nodejs">
 <a href="#targetsentpacketspersecond_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Sent<wbr>Packets<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target packets sent per second.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetreceivedbytespersecond_python">
-<a href="#targetreceivedbytespersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Received<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+        <span id="target_received_bytes_per_second_python">
+<a href="#target_received_bytes_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>received_<wbr>bytes_<wbr>per_<wbr>second</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target bytes received per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="targetreceivedpacketspersecond_python">
-<a href="#targetreceivedpacketspersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Received<wbr>Packets<wbr>Per<wbr>Second</a>
-</span> 
+        <span id="target_received_packets_per_second_python">
+<a href="#target_received_packets_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>received_<wbr>packets_<wbr>per_<wbr>second</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target packets received per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsentbytespersecond_python">
-<a href="#targetsentbytespersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Sent<wbr>Bytes<wbr>Per<wbr>Second</a>
-</span> 
+        <span id="target_sent_bytes_per_second_python">
+<a href="#target_sent_bytes_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>sent_<wbr>bytes_<wbr>per_<wbr>second</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target bytes sent per second.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="targetsentpacketspersecond_python">
-<a href="#targetsentpacketspersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Sent<wbr>Packets<wbr>Per<wbr>Second</a>
-</span> 
+        <span id="target_sent_packets_per_second_python">
+<a href="#target_sent_packets_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>sent_<wbr>packets_<wbr>per_<wbr>second</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target packets sent per second.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionAutomaticScalingRequestUtilization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionAutomaticScalingRequestUtilization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingRequestUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingRequestUtilizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingRequestUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScalingRequestUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4544,27 +4593,24 @@ Defaults to a runtime-specific value.
             title="Optional">
         <span id="targetconcurrentrequests_csharp">
 <a href="#targetconcurrentrequests_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Concurrent<wbr>Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Target number of concurrent requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetrequestcountpersecond_csharp">
 <a href="#targetrequestcountpersecond_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Request<wbr>Count<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target requests per second.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4573,27 +4619,24 @@ Defaults to a runtime-specific value.
             title="Optional">
         <span id="targetconcurrentrequests_go">
 <a href="#targetconcurrentrequests_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Concurrent<wbr>Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Target number of concurrent requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetrequestcountpersecond_go">
 <a href="#targetrequestcountpersecond_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Request<wbr>Count<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target requests per second.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4602,74 +4645,52 @@ Defaults to a runtime-specific value.
             title="Optional">
         <span id="targetconcurrentrequests_nodejs">
 <a href="#targetconcurrentrequests_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Concurrent<wbr>Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target number of concurrent requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetrequestcountpersecond_nodejs">
 <a href="#targetrequestcountpersecond_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Request<wbr>Count<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Target requests per second.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="targetconcurrentrequests_python">
-<a href="#targetconcurrentrequests_python" style="color: inherit; text-decoration: inherit;">target<wbr>Concurrent<wbr>Requests</a>
-</span> 
+        <span id="target_concurrent_requests_python">
+<a href="#target_concurrent_requests_python" style="color: inherit; text-decoration: inherit;">target_<wbr>concurrent_<wbr>requests</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Target number of concurrent requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="targetrequestcountpersecond_python">
-<a href="#targetrequestcountpersecond_python" style="color: inherit; text-decoration: inherit;">target<wbr>Request<wbr>Count<wbr>Per<wbr>Second</a>
-</span> 
+        <span id="target_request_count_per_second_python">
+<a href="#target_request_count_per_second_python" style="color: inherit; text-decoration: inherit;">target_<wbr>request_<wbr>count_<wbr>per_<wbr>second</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Target requests per second.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionDeployment">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionDeployment">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeployment.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4678,50 +4699,49 @@ Defaults to a runtime-specific value.
             title="Optional">
         <span id="cloudbuildoptions_csharp">
 <a href="#cloudbuildoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Build<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.  Structure is documented below.
+    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Docker image for the container that runs the version.  Structure is documented below.
+    <dd>{{% md %}}The Docker image for the container that runs the version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="files_csharp">
 <a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentfile">List&lt;Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-All files must be readable using the credentials supplied with this call.  Structure is documented below.
+All files must be readable using the credentials supplied with this call.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zip_csharp">
 <a href="#zip_csharp" style="color: inherit; text-decoration: inherit;">Zip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Zip File  Structure is documented below.
+    <dd>{{% md %}}Zip File
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4730,50 +4750,49 @@ All files must be readable using the credentials supplied with this call.  Struc
             title="Optional">
         <span id="cloudbuildoptions_go">
 <a href="#cloudbuildoptions_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Build<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.  Structure is documented below.
+    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container</a></span>
     </dt>
-    <dd>{{% md %}}The Docker image for the container that runs the version.  Structure is documented below.
+    <dd>{{% md %}}The Docker image for the container that runs the version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="files_go">
 <a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentfile">[]Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-All files must be readable using the credentials supplied with this call.  Structure is documented below.
+All files must be readable using the credentials supplied with this call.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zip_go">
 <a href="#zip_go" style="color: inherit; text-decoration: inherit;">Zip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
-    <dd>{{% md %}}Zip File  Structure is documented below.
+    <dd>{{% md %}}Zip File
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4782,120 +4801,102 @@ All files must be readable using the credentials supplied with this call.  Struc
             title="Optional">
         <span id="cloudbuildoptions_nodejs">
 <a href="#cloudbuildoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Build<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.  Structure is documented below.
+    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container</a></span>
     </dt>
-    <dd>{{% md %}}The Docker image for the container that runs the version.  Structure is documented below.
+    <dd>{{% md %}}The Docker image for the container that runs the version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="files_nodejs">
 <a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentfile">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File[]</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-All files must be readable using the credentials supplied with this call.  Structure is documented below.
+All files must be readable using the credentials supplied with this call.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zip_nodejs">
 <a href="#zip_nodejs" style="color: inherit; text-decoration: inherit;">zip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</a></span>
     </dt>
-    <dd>{{% md %}}Zip File  Structure is documented below.
+    <dd>{{% md %}}Zip File
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="cloudbuildoptions_python">
-<a href="#cloudbuildoptions_python" style="color: inherit; text-decoration: inherit;">cloud<wbr>Build<wbr>Options</a>
-</span> 
+        <span id="cloud_build_options_python">
+<a href="#cloud_build_options_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>build_<wbr>options</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Dict[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.  Structure is documented below.
+    <dd>{{% md %}}Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Dict[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Docker image for the container that runs the version.  Structure is documented below.
+    <dd>{{% md %}}The Docker image for the container that runs the version.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="files_python">
 <a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentfile">List[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentfile">Sequence[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-All files must be readable using the credentials supplied with this call.  Structure is documented below.
+All files must be readable using the credentials supplied with this call.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zip_python">
 <a href="#zip_python" style="color: inherit; text-decoration: inherit;">zip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversiondeploymentzip">Dict[Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip]</a></span>
+        <span class="property-type"><a href="#flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Zip File  Structure is documented below.
+    <dd>{{% md %}}Zip File
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionDeploymentCloudBuildOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionDeploymentCloudBuildOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentCloudBuildOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentCloudBuildOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentCloudBuildOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeploymentCloudBuildOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4904,28 +4905,25 @@ All files must be readable using the credentials supplied with this call.  Struc
             title="Required">
         <span id="appyamlpath_csharp">
 <a href="#appyamlpath_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Yaml<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the yaml file used in deployment, used to determine runtime configuration details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudbuildtimeout_csharp">
 <a href="#cloudbuildtimeout_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Build<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4934,28 +4932,25 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Required">
         <span id="appyamlpath_go">
 <a href="#appyamlpath_go" style="color: inherit; text-decoration: inherit;">App<wbr>Yaml<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the yaml file used in deployment, used to determine runtime configuration details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudbuildtimeout_go">
 <a href="#cloudbuildtimeout_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Build<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4964,76 +4959,54 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Required">
         <span id="appyamlpath_nodejs">
 <a href="#appyamlpath_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Yaml<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the yaml file used in deployment, used to determine runtime configuration details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudbuildtimeout_nodejs">
 <a href="#cloudbuildtimeout_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Build<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="appyamlpath_python">
-<a href="#appyamlpath_python" style="color: inherit; text-decoration: inherit;">app<wbr>Yaml<wbr>Path</a>
-</span> 
+        <span id="app_yaml_path_python">
+<a href="#app_yaml_path_python" style="color: inherit; text-decoration: inherit;">app_<wbr>yaml_<wbr>path</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the yaml file used in deployment, used to determine runtime configuration details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="cloudbuildtimeout_python">
-<a href="#cloudbuildtimeout_python" style="color: inherit; text-decoration: inherit;">cloud<wbr>Build<wbr>Timeout</a>
-</span> 
+        <span id="cloud_build_timeout_python">
+<a href="#cloud_build_timeout_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>build_<wbr>timeout</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionDeploymentContainer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionDeploymentContainer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentContainerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentContainerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentContainerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeploymentContainer.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5042,17 +5015,15 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Required">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest.
 Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5061,17 +5032,15 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
             title="Required">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest.
 Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5080,17 +5049,15 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
             title="Required">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest.
 Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5099,35 +5066,17 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
             title="Required">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest.
 Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversiondeploymentfile">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionDeploymentFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionDeploymentFile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentFileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeploymentFile.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5136,38 +5085,34 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceurl_csharp">
 <a href="#sourceurl_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source URL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sha1sum_csharp">
 <a href="#sha1sum_csharp" style="color: inherit; text-decoration: inherit;">Sha1Sum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SHA1 checksum of the file
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5176,38 +5121,34 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceurl_go">
 <a href="#sourceurl_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source URL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sha1sum_go">
 <a href="#sha1sum_go" style="color: inherit; text-decoration: inherit;">Sha1Sum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SHA1 checksum of the file
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5216,38 +5157,34 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceurl_nodejs">
 <a href="#sourceurl_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source URL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sha1sum_nodejs">
 <a href="#sha1sum_nodejs" style="color: inherit; text-decoration: inherit;">sha1Sum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SHA1 checksum of the file
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5256,56 +5193,36 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="sourceurl_python">
-<a href="#sourceurl_python" style="color: inherit; text-decoration: inherit;">source<wbr>Url</a>
-</span> 
+        <span id="source_url_python">
+<a href="#source_url_python" style="color: inherit; text-decoration: inherit;">source_<wbr>url</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source URL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="sha1sum_python">
-<a href="#sha1sum_python" style="color: inherit; text-decoration: inherit;">sha1Sum</a>
-</span> 
+        <span id="sha1_sum_python">
+<a href="#sha1_sum_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>sum</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SHA1 checksum of the file
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionDeploymentZip">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionDeploymentZip">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentZipArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentZipOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentZipArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeploymentZip.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5314,27 +5231,24 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
             title="Required">
         <span id="sourceurl_csharp">
 <a href="#sourceurl_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source URL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filescount_csharp">
 <a href="#filescount_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}files count
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5343,27 +5257,24 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
             title="Required">
         <span id="sourceurl_go">
 <a href="#sourceurl_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source URL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filescount_go">
 <a href="#filescount_go" style="color: inherit; text-decoration: inherit;">Files<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}files count
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5372,74 +5283,52 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
             title="Required">
         <span id="sourceurl_nodejs">
 <a href="#sourceurl_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source URL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filescount_nodejs">
 <a href="#filescount_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}files count
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="sourceurl_python">
-<a href="#sourceurl_python" style="color: inherit; text-decoration: inherit;">source<wbr>Url</a>
-</span> 
+        <span id="source_url_python">
+<a href="#source_url_python" style="color: inherit; text-decoration: inherit;">source_<wbr>url</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source URL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="filescount_python">
-<a href="#filescount_python" style="color: inherit; text-decoration: inherit;">files<wbr>Count</a>
-</span> 
+        <span id="files_count_python">
+<a href="#files_count_python" style="color: inherit; text-decoration: inherit;">files_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}files count
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionEndpointsApiService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionEndpointsApiService">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionEndpointsApiServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionEndpointsApiServiceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionEndpointsApiServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionEndpointsApiService.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5448,20 +5337,19 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configid_csharp">
 <a href="#configid_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
 By default, the rollout strategy for Endpoints is "FIXED". This means that Endpoints starts up with a particular configuration ID.
@@ -5470,32 +5358,30 @@ and is required in this case.
 Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
 the configuration ID. In this case, configId must be omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabletracesampling_csharp">
 <a href="#disabletracesampling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Trace<wbr>Sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable trace sampling. By default, this is set to false for enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolloutstrategy_csharp">
 <a href="#rolloutstrategy_csharp" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Strategy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+Default value is `FIXED`.
+Possible values are `FIXED` and `MANAGED`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5504,20 +5390,19 @@ the configuration ID. In this case, configId must be omitted.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configid_go">
 <a href="#configid_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
 By default, the rollout strategy for Endpoints is "FIXED". This means that Endpoints starts up with a particular configuration ID.
@@ -5526,32 +5411,30 @@ and is required in this case.
 Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
 the configuration ID. In this case, configId must be omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabletracesampling_go">
 <a href="#disabletracesampling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Trace<wbr>Sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable trace sampling. By default, this is set to false for enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolloutstrategy_go">
 <a href="#rolloutstrategy_go" style="color: inherit; text-decoration: inherit;">Rollout<wbr>Strategy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+Default value is `FIXED`.
+Possible values are `FIXED` and `MANAGED`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5560,20 +5443,19 @@ the configuration ID. In this case, configId must be omitted.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configid_nodejs">
 <a href="#configid_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
 By default, the rollout strategy for Endpoints is "FIXED". This means that Endpoints starts up with a particular configuration ID.
@@ -5582,32 +5464,30 @@ and is required in this case.
 Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
 the configuration ID. In this case, configId must be omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabletracesampling_nodejs">
 <a href="#disabletracesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Trace<wbr>Sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or disable trace sampling. By default, this is set to false for enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolloutstrategy_nodejs">
 <a href="#rolloutstrategy_nodejs" style="color: inherit; text-decoration: inherit;">rollout<wbr>Strategy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+Default value is `FIXED`.
+Possible values are `FIXED` and `MANAGED`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5616,20 +5496,19 @@ the configuration ID. In this case, configId must be omitted.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_id_python">
 <a href="#config_id_python" style="color: inherit; text-decoration: inherit;">config_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
 By default, the rollout strategy for Endpoints is "FIXED". This means that Endpoints starts up with a particular configuration ID.
@@ -5638,50 +5517,32 @@ and is required in this case.
 Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
 the configuration ID. In this case, configId must be omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="disabletracesampling_python">
-<a href="#disabletracesampling_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Trace<wbr>Sampling</a>
-</span> 
+        <span id="disable_trace_sampling_python">
+<a href="#disable_trace_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>trace_<wbr>sampling</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable trace sampling. By default, this is set to false for enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="rolloutstrategy_python">
-<a href="#rolloutstrategy_python" style="color: inherit; text-decoration: inherit;">rollout<wbr>Strategy</a>
-</span> 
+        <span id="rollout_strategy_python">
+<a href="#rollout_strategy_python" style="color: inherit; text-decoration: inherit;">rollout_<wbr>strategy</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoints rollout strategy. If FIXED, configId must be specified. If MANAGED, configId must be omitted.
+Default value is `FIXED`.
+Possible values are `FIXED` and `MANAGED`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionEntrypoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionEntrypoint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionEntrypointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionEntrypointOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionEntrypointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionEntrypoint.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5690,16 +5551,14 @@ the configuration ID. In this case, configId must be omitted.
             title="Required">
         <span id="shell_csharp">
 <a href="#shell_csharp" style="color: inherit; text-decoration: inherit;">Shell</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format should be a shell command that can be fed to bash -c.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5708,16 +5567,14 @@ the configuration ID. In this case, configId must be omitted.
             title="Required">
         <span id="shell_go">
 <a href="#shell_go" style="color: inherit; text-decoration: inherit;">Shell</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format should be a shell command that can be fed to bash -c.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5726,16 +5583,14 @@ the configuration ID. In this case, configId must be omitted.
             title="Required">
         <span id="shell_nodejs">
 <a href="#shell_nodejs" style="color: inherit; text-decoration: inherit;">shell</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format should be a shell command that can be fed to bash -c.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5744,34 +5599,16 @@ the configuration ID. In this case, configId must be omitted.
             title="Required">
         <span id="shell_python">
 <a href="#shell_python" style="color: inherit; text-decoration: inherit;">shell</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format should be a shell command that can be fed to bash -c.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionhandler">Flexible<wbr>App<wbr>Version<wbr>Handler</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionHandler">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionHandler">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionHandler.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5780,84 +5617,83 @@ the configuration ID. In this case, configId must be omitted.
             title="Optional">
         <span id="authfailaction_csharp">
 <a href="#authfailaction_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Fail<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirecthttpresponsecode_csharp">
 <a href="#redirecthttpresponsecode_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Http<wbr>Response<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="script_csharp">
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securitylevel_csharp">
 <a href="#securitylevel_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="staticfiles_csharp">
 <a href="#staticfiles_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Files</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
-Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+Static file handlers describe which files in the application directory are static files, and which URLs serve them.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="urlregex_csharp">
 <a href="#urlregex_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
 All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5866,84 +5702,83 @@ All URLs that begin with this prefix are handled by this handler, using the port
             title="Optional">
         <span id="authfailaction_go">
 <a href="#authfailaction_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Fail<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirecthttpresponsecode_go">
 <a href="#redirecthttpresponsecode_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Http<wbr>Response<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="script_go">
 <a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securitylevel_go">
 <a href="#securitylevel_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="staticfiles_go">
 <a href="#staticfiles_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Files</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
-Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+Static file handlers describe which files in the application directory are static files, and which URLs serve them.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="urlregex_go">
 <a href="#urlregex_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
 All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5952,188 +5787,170 @@ All URLs that begin with this prefix are handled by this handler, using the port
             title="Optional">
         <span id="authfailaction_nodejs">
 <a href="#authfailaction_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Fail<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirecthttpresponsecode_nodejs">
 <a href="#redirecthttpresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http<wbr>Response<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="script_nodejs">
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="securitylevel_nodejs">
 <a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="staticfiles_nodejs">
 <a href="#staticfiles_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Files</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
-Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+Static file handlers describe which files in the application directory are static files, and which URLs serve them.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="urlregex_nodejs">
 <a href="#urlregex_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
 All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="authfailaction_python">
-<a href="#authfailaction_python" style="color: inherit; text-decoration: inherit;">auth<wbr>Fail<wbr>Action</a>
-</span> 
+        <span id="auth_fail_action_python">
+<a href="#auth_fail_action_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>fail_<wbr>action</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action to take when users access resources that require authentication.
+Default value is `AUTH_FAIL_ACTION_REDIRECT`.
+Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Level of login required to access this resource.
+Default value is `LOGIN_OPTIONAL`.
+Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="redirecthttpresponsecode_python">
-<a href="#redirecthttpresponsecode_python" style="color: inherit; text-decoration: inherit;">redirect<wbr>Http<wbr>Response<wbr>Code</a>
-</span> 
+        <span id="redirect_http_response_code_python">
+<a href="#redirect_http_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>http_<wbr>response_<wbr>code</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}30x code to use when performing redirects for the secure field.
+Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="script_python">
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandlerscript">Dict[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script]</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="securitylevel_python">
-<a href="#securitylevel_python" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
-</span> 
+        <span id="security_level_python">
+<a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Security (HTTPS) enforcement for this URL.
+Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="staticfiles_python">
-<a href="#staticfiles_python" style="color: inherit; text-decoration: inherit;">static<wbr>Files</a>
-</span> 
+        <span id="static_files_python">
+<a href="#static_files_python" style="color: inherit; text-decoration: inherit;">static_<wbr>files</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Dict[Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files]</a></span>
+        <span class="property-type"><a href="#flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
-Static file handlers describe which files in the application directory are static files, and which URLs serve them.  Structure is documented below.
+Static file handlers describe which files in the application directory are static files, and which URLs serve them.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="urlregex_python">
-<a href="#urlregex_python" style="color: inherit; text-decoration: inherit;">url<wbr>Regex</a>
-</span> 
+        <span id="url_regex_python">
+<a href="#url_regex_python" style="color: inherit; text-decoration: inherit;">url_<wbr>regex</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
 All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionHandlerScript">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionHandlerScript">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerScriptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerScriptOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerScriptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionHandlerScript.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6142,16 +5959,14 @@ All URLs that begin with this prefix are handled by this handler, using the port
             title="Required">
         <span id="scriptpath_csharp">
 <a href="#scriptpath_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6160,16 +5975,14 @@ All URLs that begin with this prefix are handled by this handler, using the port
             title="Required">
         <span id="scriptpath_go">
 <a href="#scriptpath_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6178,52 +5991,32 @@ All URLs that begin with this prefix are handled by this handler, using the port
             title="Required">
         <span id="scriptpath_nodejs">
 <a href="#scriptpath_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="scriptpath_python">
-<a href="#scriptpath_python" style="color: inherit; text-decoration: inherit;">script<wbr>Path</a>
-</span> 
+        <span id="script_path_python">
+<a href="#script_path_python" style="color: inherit; text-decoration: inherit;">script_<wbr>path</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the script from the application root directory.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionHandlerStaticFiles">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionHandlerStaticFiles">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerStaticFilesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerStaticFilesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerStaticFilesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionHandlerStaticFiles.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6232,89 +6025,81 @@ All URLs that begin with this prefix are handled by this handler, using the port
             title="Optional">
         <span id="applicationreadable_csharp">
 <a href="#applicationreadable_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Readable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are
 uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
 uploads are charged against both your code and static data storage resource quotas.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiration_csharp">
 <a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
 Default is '0s'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpheaders_csharp">
 <a href="#httpheaders_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
 An object containing a list of "key:value" value pairs.".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mimetype_csharp">
 <a href="#mimetype_csharp" style="color: inherit; text-decoration: inherit;">Mime<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MIME type used to serve all files served by this handler.
 Defaults to file-specific MIME types, which are derived from each file's filename extension.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
 The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requirematchingfile_csharp">
 <a href="#requirematchingfile_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Matching<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uploadpathregex_csharp">
 <a href="#uploadpathregex_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Path<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6323,89 +6108,81 @@ The path can refer to text matched in groupings in the URL pattern.
             title="Optional">
         <span id="applicationreadable_go">
 <a href="#applicationreadable_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Readable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are
 uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
 uploads are charged against both your code and static data storage resource quotas.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiration_go">
 <a href="#expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
 Default is '0s'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpheaders_go">
 <a href="#httpheaders_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
 An object containing a list of "key:value" value pairs.".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mimetype_go">
 <a href="#mimetype_go" style="color: inherit; text-decoration: inherit;">Mime<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MIME type used to serve all files served by this handler.
 Defaults to file-specific MIME types, which are derived from each file's filename extension.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
 The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requirematchingfile_go">
 <a href="#requirematchingfile_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Matching<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uploadpathregex_go">
 <a href="#uploadpathregex_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Path<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6414,198 +6191,166 @@ The path can refer to text matched in groupings in the URL pattern.
             title="Optional">
         <span id="applicationreadable_nodejs">
 <a href="#applicationreadable_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Readable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are
 uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
 uploads are charged against both your code and static data storage resource quotas.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiration_nodejs">
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
 Default is '0s'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpheaders_nodejs">
 <a href="#httpheaders_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
 An object containing a list of "key:value" value pairs.".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mimetype_nodejs">
 <a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MIME type used to serve all files served by this handler.
 Defaults to file-specific MIME types, which are derived from each file's filename extension.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
 The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requirematchingfile_nodejs">
 <a href="#requirematchingfile_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Matching<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uploadpathregex_nodejs">
 <a href="#uploadpathregex_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Path<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="applicationreadable_python">
-<a href="#applicationreadable_python" style="color: inherit; text-decoration: inherit;">application<wbr>Readable</a>
-</span> 
+        <span id="application_readable_python">
+<a href="#application_readable_python" style="color: inherit; text-decoration: inherit;">application_<wbr>readable</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether files should also be uploaded as code data. By default, files declared in static file handlers are
 uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
 uploads are charged against both your code and static data storage resource quotas.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiration_python">
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time a static file served by this handler should be cached by web proxies and browsers.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
 Default is '0s'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="httpheaders_python">
-<a href="#httpheaders_python" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
-</span> 
+        <span id="http_headers_python">
+<a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}HTTP headers to use for all responses from these URLs.
 An object containing a list of "key:value" value pairs.".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="mimetype_python">
-<a href="#mimetype_python" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
-</span> 
+        <span id="mime_type_python">
+<a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MIME type used to serve all files served by this handler.
 Defaults to file-specific MIME types, which are derived from each file's filename extension.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
 The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="requirematchingfile_python">
-<a href="#requirematchingfile_python" style="color: inherit; text-decoration: inherit;">require<wbr>Matching<wbr>File</a>
-</span> 
+        <span id="require_matching_file_python">
+<a href="#require_matching_file_python" style="color: inherit; text-decoration: inherit;">require_<wbr>matching_<wbr>file</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this handler should match the request if the file referenced by the handler does not exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="uploadpathregex_python">
-<a href="#uploadpathregex_python" style="color: inherit; text-decoration: inherit;">upload<wbr>Path<wbr>Regex</a>
-</span> 
+        <span id="upload_path_regex_python">
+<a href="#upload_path_regex_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>path_<wbr>regex</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Regular expression that matches the file paths for all files that should be referenced by this handler.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionLivenessCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionLivenessCheck">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionLivenessCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionLivenessCheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionLivenessCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionLivenessCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6614,83 +6359,75 @@ The path can refer to text matched in groupings in the URL pattern.
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
 The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="checkinterval_csharp">
 <a href="#checkinterval_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interval between health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failurethreshold_csharp">
 <a href="#failurethreshold_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="initialdelay_csharp">
 <a href="#initialdelay_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial delay before starting to execute the checks. Default: "300s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successthreshold_csharp">
 <a href="#successthreshold_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of consecutive successful checks required before considering the VM healthy. Default: 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time before the check is considered failed. Default: "4s"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6699,83 +6436,75 @@ The path can refer to text matched in groupings in the URL pattern.
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
 The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="checkinterval_go">
 <a href="#checkinterval_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interval between health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failurethreshold_go">
 <a href="#failurethreshold_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="initialdelay_go">
 <a href="#initialdelay_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial delay before starting to execute the checks. Default: "300s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successthreshold_go">
 <a href="#successthreshold_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of consecutive successful checks required before considering the VM healthy. Default: 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time before the check is considered failed. Default: "4s"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6784,83 +6513,75 @@ The path can refer to text matched in groupings in the URL pattern.
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
 The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="checkinterval_nodejs">
 <a href="#checkinterval_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interval between health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failurethreshold_nodejs">
 <a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="initialdelay_nodejs">
 <a href="#initialdelay_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial delay before starting to execute the checks. Default: "300s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successthreshold_nodejs">
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of consecutive successful checks required before considering the VM healthy. Default: 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time before the check is considered failed. Default: "4s"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6869,101 +6590,77 @@ The path can refer to text matched in groupings in the URL pattern.
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
 The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="checkinterval_python">
-<a href="#checkinterval_python" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
-</span> 
+        <span id="check_interval_python">
+<a href="#check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Interval between health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="failurethreshold_python">
-<a href="#failurethreshold_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
-</span> 
+        <span id="failure_threshold_python">
+<a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="initialdelay_python">
-<a href="#initialdelay_python" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay</a>
-</span> 
+        <span id="initial_delay_python">
+<a href="#initial_delay_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The initial delay before starting to execute the checks. Default: "300s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="successthreshold_python">
-<a href="#successthreshold_python" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
-</span> 
+        <span id="success_threshold_python">
+<a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of consecutive successful checks required before considering the VM healthy. Default: 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time before the check is considered failed. Default: "4s"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionManualScaling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionManualScaling">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionManualScalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionManualScalingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionManualScalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionManualScaling.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6972,18 +6669,16 @@ The path can refer to text matched in groupings in the URL pattern.
             title="Required">
         <span id="instances_csharp">
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of instances to assign to the service at the start.
 **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
 Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6992,18 +6687,16 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
             title="Required">
         <span id="instances_go">
 <a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of instances to assign to the service at the start.
 **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
 Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7012,18 +6705,16 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
             title="Required">
         <span id="instances_nodejs">
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of instances to assign to the service at the start.
 **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
 Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7032,36 +6723,18 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
             title="Required">
         <span id="instances_python">
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of instances to assign to the service at the start.
 **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
 Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manual_scaling"[0].instances]` to prevent drift detection.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionNetworkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionNetwork.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7070,53 +6743,49 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forwardedports_csharp">
 <a href="#forwardedports_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancetag_csharp">
 <a href="#instancetag_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag to apply to the instance during creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_csharp">
 <a href="#sessionaffinity_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable session affinity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.
 If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range.
@@ -7124,10 +6793,8 @@ If the network that the instance is being created in is an auto Subnet Mode Netw
 If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork.
 If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7136,53 +6803,49 @@ If specified, the subnetwork must exist in the same region as the App Engine fle
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forwardedports_go">
 <a href="#forwardedports_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancetag_go">
 <a href="#instancetag_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag to apply to the instance during creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_go">
 <a href="#sessionaffinity_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable session affinity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.
 If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range.
@@ -7190,10 +6853,8 @@ If the network that the instance is being created in is an auto Subnet Mode Netw
 If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork.
 If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7202,53 +6863,49 @@ If specified, the subnetwork must exist in the same region as the App Engine fle
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forwardedports_nodejs">
 <a href="#forwardedports_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancetag_nodejs">
 <a href="#instancetag_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag to apply to the instance during creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_nodejs">
 <a href="#sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable session affinity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.
 If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range.
@@ -7256,10 +6913,8 @@ If the network that the instance is being created in is an auto Subnet Mode Netw
 If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork.
 If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7268,53 +6923,49 @@ If specified, the subnetwork must exist in the same region as the App Engine fle
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="forwardedports_python">
-<a href="#forwardedports_python" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Ports</a>
-</span> 
+        <span id="forwarded_ports_python">
+<a href="#forwarded_ports_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>ports</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="instancetag_python">
-<a href="#instancetag_python" style="color: inherit; text-decoration: inherit;">instance<wbr>Tag</a>
-</span> 
+        <span id="instance_tag_python">
+<a href="#instance_tag_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tag</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tag to apply to the instance during creation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="session_affinity_python">
 <a href="#session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable session affinity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.
 If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range.
@@ -7322,28 +6973,10 @@ If the network that the instance is being created in is an auto Subnet Mode Netw
 If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork.
 If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionReadinessCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionReadinessCheck">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionReadinessCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionReadinessCheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionReadinessCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionReadinessCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7352,84 +6985,76 @@ If specified, the subnetwork must exist in the same region as the App Engine fle
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
 The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="appstarttimeout_csharp">
 <a href="#appstarttimeout_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Start<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A maximum time limit on application initialization, measured from moment the application successfully
 replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="checkinterval_csharp">
 <a href="#checkinterval_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interval between health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failurethreshold_csharp">
 <a href="#failurethreshold_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successthreshold_csharp">
 <a href="#successthreshold_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of consecutive successful checks required before considering the VM healthy. Default: 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time before the check is considered failed. Default: "4s"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7438,84 +7063,76 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
 The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="appstarttimeout_go">
 <a href="#appstarttimeout_go" style="color: inherit; text-decoration: inherit;">App<wbr>Start<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A maximum time limit on application initialization, measured from moment the application successfully
 replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="checkinterval_go">
 <a href="#checkinterval_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interval between health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failurethreshold_go">
 <a href="#failurethreshold_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successthreshold_go">
 <a href="#successthreshold_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of consecutive successful checks required before considering the VM healthy. Default: 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time before the check is considered failed. Default: "4s"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7524,84 +7141,76 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
 The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="appstarttimeout_nodejs">
 <a href="#appstarttimeout_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Start<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A maximum time limit on application initialization, measured from moment the application successfully
 replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="checkinterval_nodejs">
 <a href="#checkinterval_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Interval between health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failurethreshold_nodejs">
 <a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successthreshold_nodejs">
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of consecutive successful checks required before considering the VM healthy. Default: 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time before the check is considered failed. Default: "4s"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7610,102 +7219,78 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the static files matched by the URL pattern, from the application root directory.
 The path can refer to text matched in groupings in the URL pattern.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="appstarttimeout_python">
-<a href="#appstarttimeout_python" style="color: inherit; text-decoration: inherit;">app<wbr>Start<wbr>Timeout</a>
-</span> 
+        <span id="app_start_timeout_python">
+<a href="#app_start_timeout_python" style="color: inherit; text-decoration: inherit;">app_<wbr>start_<wbr>timeout</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A maximum time limit on application initialization, measured from moment the application successfully
 replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="checkinterval_python">
-<a href="#checkinterval_python" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
-</span> 
+        <span id="check_interval_python">
+<a href="#check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Interval between health checks.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="failurethreshold_python">
-<a href="#failurethreshold_python" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
-</span> 
+        <span id="failure_threshold_python">
+<a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="successthreshold_python">
-<a href="#successthreshold_python" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
-</span> 
+        <span id="success_threshold_python">
+<a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of consecutive successful checks required before considering the VM healthy. Default: 2.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time before the check is considered failed. Default: "4s"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionResources">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionResources">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionResourcesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionResourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionResources.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7714,49 +7299,45 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Optional">
         <span id="cpu_csharp">
 <a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of CPU cores needed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskgb_csharp">
 <a href="#diskgb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Disk size (GB) needed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorygb_csharp">
 <a href="#memorygb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Memory (GB) needed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="volumes_csharp">
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresourcesvolume">List&lt;Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.  Structure is documented below.
+    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7765,49 +7346,45 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Optional">
         <span id="cpu_go">
 <a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of CPU cores needed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskgb_go">
 <a href="#diskgb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Disk size (GB) needed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorygb_go">
 <a href="#memorygb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Memory (GB) needed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="volumes_go">
 <a href="#volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresourcesvolume">[]Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume</a></span>
     </dt>
-    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.  Structure is documented below.
+    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7816,49 +7393,45 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Optional">
         <span id="cpu_nodejs">
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of CPU cores needed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskgb_nodejs">
 <a href="#diskgb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Disk size (GB) needed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="memorygb_nodejs">
 <a href="#memorygb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Memory (GB) needed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="volumes_nodejs">
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexibleappversionresourcesvolume">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume[]</a></span>
     </dt>
-    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.  Structure is documented below.
+    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7867,67 +7440,47 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Optional">
         <span id="cpu_python">
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of CPU cores needed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="diskgb_python">
-<a href="#diskgb_python" style="color: inherit; text-decoration: inherit;">disk<wbr>Gb</a>
-</span> 
+        <span id="disk_gb_python">
+<a href="#disk_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>gb</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Disk size (GB) needed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="memorygb_python">
-<a href="#memorygb_python" style="color: inherit; text-decoration: inherit;">memory<wbr>Gb</a>
-</span> 
+        <span id="memory_gb_python">
+<a href="#memory_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>gb</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Memory (GB) needed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="volumes_python">
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flexibleappversionresourcesvolume">List[Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume]</a></span>
+        <span class="property-type"><a href="#flexibleappversionresourcesvolume">Sequence[Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.  Structure is documented below.
+    <dd>{{% md %}}List of ports, or port pairs, to forward from the virtual machine to the application container.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionresourcesvolume">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionResourcesVolume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionResourcesVolume">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionResourcesVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionResourcesVolumeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionResourcesVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionResourcesVolume.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7936,38 +7489,34 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizegb_csharp">
 <a href="#sizegb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Volume size in gigabytes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Underlying volume type, e.g. 'tmpfs'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7976,38 +7525,34 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizegb_go">
 <a href="#sizegb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Volume size in gigabytes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Underlying volume type, e.g. 'tmpfs'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8016,38 +7561,34 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizegb_nodejs">
 <a href="#sizegb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Volume size in gigabytes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Underlying volume type, e.g. 'tmpfs'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8056,56 +7597,36 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="sizegb_python">
-<a href="#sizegb_python" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
-</span> 
+        <span id="size_gb_python">
+<a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Volume size in gigabytes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="volumetype_python">
-<a href="#volumetype_python" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Underlying volume type, e.g. 'tmpfs'.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionVpcAccessConnector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionVpcAccessConnector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionVpcAccessConnectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/appengine?tab=doc#FlexibleAppVersionVpcAccessConnectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionVpcAccessConnectorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionVpcAccessConnector.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8114,16 +7635,14 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8132,16 +7651,14 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8150,16 +7667,14 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8168,20 +7683,30 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+FlexibleAppVersion can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:appengine/flexibleAppVersion:FlexibleAppVersion default apps/{{project}}/services/{{service}}/versions/{{version_id}}
+```
 
+```sh
+ $ pulumi import gcp:appengine/flexibleAppVersion:FlexibleAppVersion default {{project}}/{{service}}/{{version_id}}
+```
 
+```sh
+ $ pulumi import gcp:appengine/flexibleAppVersion:FlexibleAppVersion default {{service}}/{{version_id}}
+```
 
 
 
@@ -8193,6 +7718,6 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Policy"
-title_tag: "Resource Policy | Module appautoscaling | Package AWS"
-meta_desc: "Explore the Policy resource of the appautoscaling module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Application AutoScaling Policy resource."
+title_tag: "aws.appautoscaling.Policy"
+meta_desc: "Documentation for the aws.appautoscaling.Policy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -115,12 +115,12 @@ dynamodb_table_read_policy = aws.appautoscaling.Policy("dynamodbTableReadPolicy"
     resource_id=dynamodb_table_read_target.resource_id,
     scalable_dimension=dynamodb_table_read_target.scalable_dimension,
     service_namespace=dynamodb_table_read_target.service_namespace,
-    target_tracking_scaling_policy_configuration={
-        "predefinedMetricSpecification": {
-            "predefinedMetricType": "DynamoDBReadCapacityUtilization",
-        },
-        "targetValue": 70,
-    })
+    target_tracking_scaling_policy_configuration=aws.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationArgs(
+        predefined_metric_specification=aws.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs(
+            predefined_metric_type="DynamoDBReadCapacityUtilization",
+        ),
+        target_value=70,
+    ))
 ```
 
 {{% /example %}}
@@ -264,15 +264,15 @@ ecs_policy = aws.appautoscaling.Policy("ecsPolicy",
     resource_id=ecs_target.resource_id,
     scalable_dimension=ecs_target.scalable_dimension,
     service_namespace=ecs_target.service_namespace,
-    step_scaling_policy_configuration={
-        "adjustment_type": "ChangeInCapacity",
-        "cooldown": 60,
-        "metric_aggregation_type": "Maximum",
-        "step_adjustments": [{
+    step_scaling_policy_configuration=aws.appautoscaling.PolicyStepScalingPolicyConfigurationArgs(
+        adjustment_type="ChangeInCapacity",
+        cooldown=60,
+        metric_aggregation_type="Maximum",
+        step_adjustments=[{
             "metricIntervalUpperBound": 0,
             "scaling_adjustment": -1,
         }],
-    })
+    ))
 ```
 
 {{% /example %}}
@@ -491,14 +491,14 @@ replicas_policy = aws.appautoscaling.Policy("replicasPolicy",
     scalable_dimension=replicas_target.scalable_dimension,
     resource_id=replicas_target.resource_id,
     policy_type="TargetTrackingScaling",
-    target_tracking_scaling_policy_configuration={
-        "predefinedMetricSpecification": {
-            "predefinedMetricType": "RDSReaderAverageCPUUtilization",
-        },
-        "targetValue": 75,
-        "scaleInCooldown": 300,
-        "scaleOutCooldown": 300,
-    })
+    target_tracking_scaling_policy_configuration=aws.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationArgs(
+        predefined_metric_specification=aws.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs(
+            predefined_metric_type="RDSReaderAverageCPUUtilization",
+        ),
+        target_value=75,
+        scale_in_cooldown=300,
+        scale_out_cooldown=300,
+    ))
 ```
 
 {{% /example %}}
@@ -534,6 +534,144 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicasPolicy", {
 
 {{% /example %}}
 
+### MSK / Kafka Autoscaling
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mskTarget = new Aws.AppAutoScaling.Target("mskTarget", new Aws.AppAutoScaling.TargetArgs
+        {
+            ServiceNamespace = "kafka",
+            ScalableDimension = "kafka:broker-storage:VolumeSize",
+            ResourceId = aws_msk_cluster.Example.Arn,
+            MinCapacity = 1,
+            MaxCapacity = 8,
+        });
+        var targets = new Aws.AppAutoScaling.Policy("targets", new Aws.AppAutoScaling.PolicyArgs
+        {
+            ServiceNamespace = mskTarget.ServiceNamespace,
+            ScalableDimension = mskTarget.ScalableDimension,
+            ResourceId = mskTarget.ResourceId,
+            PolicyType = "TargetTrackingScaling",
+            TargetTrackingScalingPolicyConfiguration = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs
+            {
+                PredefinedMetricSpecification = new Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs
+                {
+                    PredefinedMetricType = "KafkaBrokerStorageUtilization",
+                },
+                TargetValue = 55,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mskTarget, err := appautoscaling.NewTarget(ctx, "mskTarget", &appautoscaling.TargetArgs{
+			ServiceNamespace:  pulumi.String("kafka"),
+			ScalableDimension: pulumi.String("kafka:broker-storage:VolumeSize"),
+			ResourceId:        pulumi.Any(aws_msk_cluster.Example.Arn),
+			MinCapacity:       pulumi.Int(1),
+			MaxCapacity:       pulumi.Int(8),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = appautoscaling.NewPolicy(ctx, "targets", &appautoscaling.PolicyArgs{
+			ServiceNamespace:  mskTarget.ServiceNamespace,
+			ScalableDimension: mskTarget.ScalableDimension,
+			ResourceId:        mskTarget.ResourceId,
+			PolicyType:        pulumi.String("TargetTrackingScaling"),
+			TargetTrackingScalingPolicyConfiguration: &appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationArgs{
+				PredefinedMetricSpecification: &appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs{
+					PredefinedMetricType: pulumi.String("KafkaBrokerStorageUtilization"),
+				},
+				TargetValue: pulumi.Float64(55),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+msk_target = aws.appautoscaling.Target("mskTarget",
+    service_namespace="kafka",
+    scalable_dimension="kafka:broker-storage:VolumeSize",
+    resource_id=aws_msk_cluster["example"]["arn"],
+    min_capacity=1,
+    max_capacity=8)
+targets = aws.appautoscaling.Policy("targets",
+    service_namespace=msk_target.service_namespace,
+    scalable_dimension=msk_target.scalable_dimension,
+    resource_id=msk_target.resource_id,
+    policy_type="TargetTrackingScaling",
+    target_tracking_scaling_policy_configuration=aws.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationArgs(
+        predefined_metric_specification=aws.appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs(
+            predefined_metric_type="KafkaBrokerStorageUtilization",
+        ),
+        target_value=55,
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const mskTarget = new aws.appautoscaling.Target("mskTarget", {
+    serviceNamespace: "kafka",
+    scalableDimension: "kafka:broker-storage:VolumeSize",
+    resourceId: aws_msk_cluster.example.arn,
+    minCapacity: 1,
+    maxCapacity: 8,
+});
+const targets = new aws.appautoscaling.Policy("targets", {
+    serviceNamespace: mskTarget.serviceNamespace,
+    scalableDimension: mskTarget.scalableDimension,
+    resourceId: mskTarget.resourceId,
+    policyType: "TargetTrackingScaling",
+    targetTrackingScalingPolicyConfiguration: {
+        predefinedMetricSpecification: {
+            predefinedMetricType: "KafkaBrokerStorageUtilization",
+        },
+        targetValue: 55,
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -542,19 +680,19 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicasPolicy", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#Policy">Policy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appautoscaling/#pulumi_aws.appautoscaling.Policy">Policy</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>name=None<span class="p">, </span>policy_type=None<span class="p">, </span>resource_id=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>service_namespace=None<span class="p">, </span>step_scaling_policy_configuration=None<span class="p">, </span>target_tracking_scaling_policy_configuration=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scalable_dimension</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_scaling_policy_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyStepScalingPolicyConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">target_tracking_scaling_policy_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyTargetTrackingScalingPolicyConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#Policy">NewPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Policy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Policy.html">Policy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.PolicyArgs.html">PolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -565,7 +703,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicasPolicy", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -575,7 +713,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicasPolicy", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#PolicyArgs">PolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -634,7 +772,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicasPolicy", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -644,7 +782,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicasPolicy", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -673,7 +811,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicasPolicy", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -683,7 +821,7 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicasPolicy", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.PolicyArgs.html">PolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -706,12 +844,11 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicasPolicy", {
 
 ## Policy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Policy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Policy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -722,82 +859,74 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalabledimension_csharp">
 <a href="#scalabledimension_csharp" style="color: inherit; text-decoration: inherit;">Scalable<wbr>Dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servicenamespace_csharp">
 <a href="#servicenamespace_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policytype_csharp">
 <a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type. Valid values are `StepScaling` and `TargetTrackingScaling`. Defaults to `StepScaling`. Certain services only support only one policy type. For more information see the [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stepscalingpolicyconfiguration_csharp">
 <a href="#stepscalingpolicyconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targettrackingscalingpolicyconfiguration_csharp">
 <a href="#targettrackingscalingpolicyconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -806,82 +935,74 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalabledimension_go">
 <a href="#scalabledimension_go" style="color: inherit; text-decoration: inherit;">Scalable<wbr>Dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servicenamespace_go">
 <a href="#servicenamespace_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policytype_go">
 <a href="#policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type. Valid values are `StepScaling` and `TargetTrackingScaling`. Defaults to `StepScaling`. Certain services only support only one policy type. For more information see the [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stepscalingpolicyconfiguration_go">
 <a href="#stepscalingpolicyconfiguration_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targettrackingscalingpolicyconfiguration_go">
 <a href="#targettrackingscalingpolicyconfiguration_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -890,82 +1011,74 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalabledimension_nodejs">
 <a href="#scalabledimension_nodejs" style="color: inherit; text-decoration: inherit;">scalable<wbr>Dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servicenamespace_nodejs">
 <a href="#servicenamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policytype_nodejs">
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type. Valid values are `StepScaling` and `TargetTrackingScaling`. Defaults to `StepScaling`. Certain services only support only one policy type. For more information see the [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stepscalingpolicyconfiguration_nodejs">
 <a href="#stepscalingpolicyconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targettrackingscalingpolicyconfiguration_nodejs">
 <a href="#targettrackingscalingpolicyconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -974,91 +1087,79 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalable_dimension_python">
 <a href="#scalable_dimension_python" style="color: inherit; text-decoration: inherit;">scalable_<wbr>dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_namespace_python">
 <a href="#service_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_type_python">
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy type. Valid values are `StepScaling` and `TargetTrackingScaling`. Defaults to `StepScaling`. Certain services only support only one policy type. For more information see the [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="step_scaling_policy_configuration_python">
 <a href="#step_scaling_policy_configuration_python" style="color: inherit; text-decoration: inherit;">step_<wbr>scaling_<wbr>policy_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_tracking_scaling_policy_configuration_python">
 <a href="#target_tracking_scaling_policy_configuration_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Policy resource produces the following output properties:
-
 
 
 
@@ -1069,26 +1170,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1097,26 +1195,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1125,26 +1220,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1153,29 +1245,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1185,19 +1271,20 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#Policy">Policy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Policy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>name=None<span class="p">, </span>policy_type=None<span class="p">, </span>resource_id=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>service_namespace=None<span class="p">, </span>step_scaling_policy_configuration=None<span class="p">, </span>target_tracking_scaling_policy_configuration=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scalable_dimension</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">step_scaling_policy_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyStepScalingPolicyConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">target_tracking_scaling_policy_configuration</span><span class="p">:</span> <span class="nx">Optional[PolicyTargetTrackingScalingPolicyConfigurationArgs]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Policy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.PolicyState.html">PolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Policy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1299,7 +1386,6 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1307,93 +1393,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policytype_csharp">
 <a href="#state_policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type. Valid values are `StepScaling` and `TargetTrackingScaling`. Defaults to `StepScaling`. Certain services only support only one policy type. For more information see the [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_csharp">
 <a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalabledimension_csharp">
 <a href="#state_scalabledimension_csharp" style="color: inherit; text-decoration: inherit;">Scalable<wbr>Dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicenamespace_csharp">
 <a href="#state_servicenamespace_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stepscalingpolicyconfiguration_csharp">
 <a href="#state_stepscalingpolicyconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targettrackingscalingpolicyconfiguration_csharp">
 <a href="#state_targettrackingscalingpolicyconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1402,93 +1479,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policytype_go">
 <a href="#state_policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type. Valid values are `StepScaling` and `TargetTrackingScaling`. Defaults to `StepScaling`. Certain services only support only one policy type. For more information see the [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_go">
 <a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalabledimension_go">
 <a href="#state_scalabledimension_go" style="color: inherit; text-decoration: inherit;">Scalable<wbr>Dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicenamespace_go">
 <a href="#state_servicenamespace_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stepscalingpolicyconfiguration_go">
 <a href="#state_stepscalingpolicyconfiguration_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targettrackingscalingpolicyconfiguration_go">
 <a href="#state_targettrackingscalingpolicyconfiguration_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1497,93 +1565,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policytype_nodejs">
 <a href="#state_policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type. Valid values are `StepScaling` and `TargetTrackingScaling`. Defaults to `StepScaling`. Certain services only support only one policy type. For more information see the [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_nodejs">
 <a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalabledimension_nodejs">
 <a href="#state_scalabledimension_nodejs" style="color: inherit; text-decoration: inherit;">scalable<wbr>Dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicenamespace_nodejs">
 <a href="#state_servicenamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stepscalingpolicyconfiguration_nodejs">
 <a href="#state_stepscalingpolicyconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_targettrackingscalingpolicyconfiguration_nodejs">
 <a href="#state_targettrackingscalingpolicyconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1592,96 +1651,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_type_python">
 <a href="#state_policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy type. Valid values are `StepScaling` and `TargetTrackingScaling`. Defaults to `StepScaling`. Certain services only support only one policy type. For more information see the [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resource_id_python">
 <a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalable_dimension_python">
 <a href="#state_scalable_dimension_python" style="color: inherit; text-decoration: inherit;">scalable_<wbr>dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_namespace_python">
 <a href="#state_service_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_step_scaling_policy_configuration_python">
 <a href="#state_step_scaling_policy_configuration_python" style="color: inherit; text-decoration: inherit;">step_<wbr>scaling_<wbr>policy_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_target_tracking_scaling_policy_configuration_python">
 <a href="#state_target_tracking_scaling_policy_configuration_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1691,20 +1738,8 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepScalingPolicyConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyStepScalingPolicyConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyStepScalingPolicyConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1713,60 +1748,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="adjustmenttype_csharp">
 <a href="#adjustmenttype_csharp" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
 <a href="#cooldown_csharp" style="color: inherit; text-decoration: inherit;">Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricaggregationtype_csharp">
 <a href="#metricaggregationtype_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Aggregation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minadjustmentmagnitude_csharp">
 <a href="#minadjustmentmagnitude_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Adjustment<wbr>Magnitude</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number to adjust your scalable dimension as a result of a scaling activity. If the adjustment type is PercentChangeInCapacity, the scaling policy changes the scalable dimension of the scalable target by this amount.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stepadjustments_csharp">
 <a href="#stepadjustments_csharp" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">List&lt;Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage scaling. These have the following structure:
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1775,60 +1804,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="adjustmenttype_go">
 <a href="#adjustmenttype_go" style="color: inherit; text-decoration: inherit;">Adjustment<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
 <a href="#cooldown_go" style="color: inherit; text-decoration: inherit;">Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricaggregationtype_go">
 <a href="#metricaggregationtype_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Aggregation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minadjustmentmagnitude_go">
 <a href="#minadjustmentmagnitude_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Adjustment<wbr>Magnitude</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number to adjust your scalable dimension as a result of a scaling activity. If the adjustment type is PercentChangeInCapacity, the scaling policy changes the scalable dimension of the scalable target by this amount.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stepadjustments_go">
 <a href="#stepadjustments_go" style="color: inherit; text-decoration: inherit;">Step<wbr>Adjustments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">[]Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage scaling. These have the following structure:
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1837,60 +1860,54 @@ The following state arguments are supported:
             title="Optional">
         <span id="adjustmenttype_nodejs">
 <a href="#adjustmenttype_nodejs" style="color: inherit; text-decoration: inherit;">adjustment<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
 <a href="#cooldown_nodejs" style="color: inherit; text-decoration: inherit;">cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricaggregationtype_nodejs">
 <a href="#metricaggregationtype_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Aggregation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minadjustmentmagnitude_nodejs">
 <a href="#minadjustmentmagnitude_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Adjustment<wbr>Magnitude</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number to adjust your scalable dimension as a result of a scaling activity. If the adjustment type is PercentChangeInCapacity, the scaling policy changes the scalable dimension of the scalable target by this amount.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stepadjustments_nodejs">
 <a href="#stepadjustments_nodejs" style="color: inherit; text-decoration: inherit;">step<wbr>Adjustments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment[]</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage scaling. These have the following structure:
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1899,78 +1916,56 @@ The following state arguments are supported:
             title="Optional">
         <span id="adjustment_type_python">
 <a href="#adjustment_type_python" style="color: inherit; text-decoration: inherit;">adjustment_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
 <a href="#cooldown_python" style="color: inherit; text-decoration: inherit;">cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metric_aggregation_type_python">
 <a href="#metric_aggregation_type_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>aggregation_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="min_adjustment_magnitude_python">
 <a href="#min_adjustment_magnitude_python" style="color: inherit; text-decoration: inherit;">min_<wbr>adjustment_<wbr>magnitude</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number to adjust your scalable dimension as a result of a scaling activity. If the adjustment type is PercentChangeInCapacity, the scaling policy changes the scalable dimension of the scalable target by this amount.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="step_adjustments_python">
 <a href="#step_adjustments_python" style="color: inherit; text-decoration: inherit;">step_<wbr>adjustments</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">List[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment]</a></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">Sequence[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage scaling. These have the following structure:
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="policystepscalingpolicyconfigurationstepadjustment">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepScalingPolicyConfigurationStepAdjustment">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyStepScalingPolicyConfigurationStepAdjustment">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationStepAdjustmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationStepAdjustmentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyStepScalingPolicyConfigurationStepAdjustmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyStepScalingPolicyConfigurationStepAdjustment.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1979,38 +1974,34 @@ The following state arguments are supported:
             title="Required">
         <span id="scalingadjustment_csharp">
 <a href="#scalingadjustment_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of members by which to scale, when the adjustment bounds are breached. A positive value scales up. A negative value scales down.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricintervallowerbound_csharp">
 <a href="#metricintervallowerbound_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Interval<wbr>Lower<wbr>Bound</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricintervalupperbound_csharp">
 <a href="#metricintervalupperbound_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Interval<wbr>Upper<wbr>Bound</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upper bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as infinity. The upper bound must be greater than the lower bound.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2019,38 +2010,34 @@ The following state arguments are supported:
             title="Required">
         <span id="scalingadjustment_go">
 <a href="#scalingadjustment_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of members by which to scale, when the adjustment bounds are breached. A positive value scales up. A negative value scales down.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricintervallowerbound_go">
 <a href="#metricintervallowerbound_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Interval<wbr>Lower<wbr>Bound</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricintervalupperbound_go">
 <a href="#metricintervalupperbound_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Interval<wbr>Upper<wbr>Bound</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upper bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as infinity. The upper bound must be greater than the lower bound.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2059,38 +2046,34 @@ The following state arguments are supported:
             title="Required">
         <span id="scalingadjustment_nodejs">
 <a href="#scalingadjustment_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of members by which to scale, when the adjustment bounds are breached. A positive value scales up. A negative value scales down.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricintervallowerbound_nodejs">
 <a href="#metricintervallowerbound_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Interval<wbr>Lower<wbr>Bound</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metricintervalupperbound_nodejs">
 <a href="#metricintervalupperbound_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Interval<wbr>Upper<wbr>Bound</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upper bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as infinity. The upper bound must be greater than the lower bound.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2099,56 +2082,36 @@ The following state arguments are supported:
             title="Required">
         <span id="scaling_adjustment_python">
 <a href="#scaling_adjustment_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of members by which to scale, when the adjustment bounds are breached. A positive value scales up. A negative value scales down.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="metricintervallowerbound_python">
-<a href="#metricintervallowerbound_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Interval<wbr>Lower<wbr>Bound</a>
-</span> 
+        <span id="metric_interval_lower_bound_python">
+<a href="#metric_interval_lower_bound_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>interval_<wbr>lower_<wbr>bound</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="metricintervalupperbound_python">
-<a href="#metricintervalupperbound_python" style="color: inherit; text-decoration: inherit;">metric<wbr>Interval<wbr>Upper<wbr>Bound</a>
-</span> 
+        <span id="metric_interval_upper_bound_python">
+<a href="#metric_interval_upper_bound_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>interval_<wbr>upper_<wbr>bound</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The upper bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as infinity. The upper bound must be greater than the lower bound.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingScalingPolicyConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2157,71 +2120,64 @@ The following state arguments are supported:
             title="Required">
         <span id="targetvalue_csharp">
 <a href="#targetvalue_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customizedmetricspecification_csharp">
 <a href="#customizedmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Customized<wbr>Metric<wbr>Specification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablescalein_csharp">
 <a href="#disablescalein_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Scale<wbr>In</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled. If the value is true, scale in is disabled and the target tracking policy won't remove capacity from the scalable resource. Otherwise, scale in is enabled and the target tracking policy can remove capacity from the scalable resource. The default value is `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="predefinedmetricspecification_csharp">
 <a href="#predefinedmetricspecification_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Specification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaleincooldown_csharp">
 <a href="#scaleincooldown_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaleoutcooldown_csharp">
 <a href="#scaleoutcooldown_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Out<wbr>Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale out activity completes before another scale out activity can start.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2230,71 +2186,64 @@ The following state arguments are supported:
             title="Required">
         <span id="targetvalue_go">
 <a href="#targetvalue_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customizedmetricspecification_go">
 <a href="#customizedmetricspecification_go" style="color: inherit; text-decoration: inherit;">Customized<wbr>Metric<wbr>Specification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablescalein_go">
 <a href="#disablescalein_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Scale<wbr>In</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled. If the value is true, scale in is disabled and the target tracking policy won't remove capacity from the scalable resource. Otherwise, scale in is enabled and the target tracking policy can remove capacity from the scalable resource. The default value is `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="predefinedmetricspecification_go">
 <a href="#predefinedmetricspecification_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Specification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaleincooldown_go">
 <a href="#scaleincooldown_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaleoutcooldown_go">
 <a href="#scaleoutcooldown_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Out<wbr>Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale out activity completes before another scale out activity can start.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2303,162 +2252,132 @@ The following state arguments are supported:
             title="Required">
         <span id="targetvalue_nodejs">
 <a href="#targetvalue_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customizedmetricspecification_nodejs">
 <a href="#customizedmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">customized<wbr>Metric<wbr>Specification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablescalein_nodejs">
 <a href="#disablescalein_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Scale<wbr>In</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled. If the value is true, scale in is disabled and the target tracking policy won't remove capacity from the scalable resource. Otherwise, scale in is enabled and the target tracking policy can remove capacity from the scalable resource. The default value is `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="predefinedmetricspecification_nodejs">
 <a href="#predefinedmetricspecification_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Specification</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaleincooldown_nodejs">
 <a href="#scaleincooldown_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>In<wbr>Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaleoutcooldown_nodejs">
 <a href="#scaleoutcooldown_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Out<wbr>Cooldown</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale out activity completes before another scale out activity can start.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="targetvalue_python">
-<a href="#targetvalue_python" style="color: inherit; text-decoration: inherit;">target<wbr>Value</a>
-</span> 
+        <span id="target_value_python">
+<a href="#target_value_python" style="color: inherit; text-decoration: inherit;">target_<wbr>value</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The target value for the metric.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="customizedmetricspecification_python">
-<a href="#customizedmetricspecification_python" style="color: inherit; text-decoration: inherit;">customized<wbr>Metric<wbr>Specification</a>
-</span> 
+        <span id="customized_metric_specification_python">
+<a href="#customized_metric_specification_python" style="color: inherit; text-decoration: inherit;">customized_<wbr>metric_<wbr>specification</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="disablescalein_python">
-<a href="#disablescalein_python" style="color: inherit; text-decoration: inherit;">disable<wbr>Scale<wbr>In</a>
-</span> 
+        <span id="disable_scale_in_python">
+<a href="#disable_scale_in_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>scale_<wbr>in</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether scale in by the target tracking policy is disabled. If the value is true, scale in is disabled and the target tracking policy won't remove capacity from the scalable resource. Otherwise, scale in is enabled and the target tracking policy can remove capacity from the scalable resource. The default value is `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="predefinedmetricspecification_python">
-<a href="#predefinedmetricspecification_python" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Specification</a>
-</span> 
+        <span id="predefined_metric_specification_python">
+<a href="#predefined_metric_specification_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>specification</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification]</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. See supported fields below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="scaleincooldown_python">
-<a href="#scaleincooldown_python" style="color: inherit; text-decoration: inherit;">scale<wbr>In<wbr>Cooldown</a>
-</span> 
+        <span id="scale_in_cooldown_python">
+<a href="#scale_in_cooldown_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>in_<wbr>cooldown</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale in activity completes before another scale in activity can start.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="scaleoutcooldown_python">
-<a href="#scaleoutcooldown_python" style="color: inherit; text-decoration: inherit;">scale<wbr>Out<wbr>Cooldown</a>
-</span> 
+        <span id="scale_out_cooldown_python">
+<a href="#scale_out_cooldown_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>out_<wbr>cooldown</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, after a scale out activity completes before another scale out activity can start.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2467,60 +2386,54 @@ The following state arguments are supported:
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="statistic_csharp">
 <a href="#statistic_csharp" style="color: inherit; text-decoration: inherit;">Statistic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List&lt;Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unit_csharp">
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2529,60 +2442,54 @@ The following state arguments are supported:
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="statistic_go">
 <a href="#statistic_go" style="color: inherit; text-decoration: inherit;">Statistic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">[]Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unit_go">
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2591,60 +2498,54 @@ The following state arguments are supported:
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="statistic_nodejs">
 <a href="#statistic_nodejs" style="color: inherit; text-decoration: inherit;">statistic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unit_nodejs">
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2653,78 +2554,56 @@ The following state arguments are supported:
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the metric.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace of the metric.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="statistic_python">
 <a href="#statistic_python" style="color: inherit; text-decoration: inherit;">statistic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The statistic of the metric. Valid values: `Average`, `Minimum`, `Maximum`, `SampleCount`, and `Sum`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension]</a></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">Sequence[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unit_python">
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit of the metric.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2733,27 +2612,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the dimension.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2762,27 +2638,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the dimension.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2791,27 +2664,24 @@ The following state arguments are supported:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the dimension.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2820,45 +2690,26 @@ The following state arguments are supported:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the dimension.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Inputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.Outputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2867,27 +2718,24 @@ The following state arguments are supported:
             title="Required">
         <span id="predefinedmetrictype_csharp">
 <a href="#predefinedmetrictype_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcelabel_csharp">
 <a href="#resourcelabel_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.
+    <dd>{{% md %}}Reserved for future use. Must be less than or equal to 1023 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2896,27 +2744,24 @@ The following state arguments are supported:
             title="Required">
         <span id="predefinedmetrictype_go">
 <a href="#predefinedmetrictype_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Metric<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcelabel_go">
 <a href="#resourcelabel_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.
+    <dd>{{% md %}}Reserved for future use. Must be less than or equal to 1023 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2925,60 +2770,58 @@ The following state arguments are supported:
             title="Required">
         <span id="predefinedmetrictype_nodejs">
 <a href="#predefinedmetrictype_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcelabel_nodejs">
 <a href="#resourcelabel_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.
+    <dd>{{% md %}}Reserved for future use. Must be less than or equal to 1023 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="predefinedmetrictype_python">
-<a href="#predefinedmetrictype_python" style="color: inherit; text-decoration: inherit;">predefined<wbr>Metric<wbr>Type</a>
-</span> 
+        <span id="predefined_metric_type_python">
+<a href="#predefined_metric_type_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>metric_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcelabel_python">
-<a href="#resourcelabel_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Label</a>
-</span> 
+        <span id="resource_label_python">
+<a href="#resource_label_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>label</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.
+    <dd>{{% md %}}Reserved for future use. Must be less than or equal to 1023 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Application AutoScaling Policy can be imported using the `service-namespace` , `resource-id`, `scalable-dimension` and `policy-name` separated by `/`.
 
-
-
+```sh
+ $ pulumi import aws:appautoscaling/policy:Policy test-policy service-namespace/resource-id/scalable-dimension/policy-name
+```
 
 
 

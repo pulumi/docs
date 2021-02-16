@@ -1,8 +1,8 @@
 
 ---
 title: "Authorizer"
-title_tag: "Resource Authorizer | Module apigatewayv2 | Package AWS"
-meta_desc: "Explore the Authorizer resource of the apigatewayv2 module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Amazon API Gateway Version 2 authorizer."
+title_tag: "aws.apigatewayv2.Authorizer"
+meta_desc: "Documentation for the aws.apigatewayv2.Authorizer resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -182,10 +182,10 @@ example = aws.apigatewayv2.Authorizer("example",
     api_id=aws_apigatewayv2_api["example"]["id"],
     authorizer_type="JWT",
     identity_sources=["$request.header.Authorization"],
-    jwt_configuration={
-        "audiences": ["example"],
-        "issuer": f"https://{aws_cognito_user_pool['example']['endpoint']}",
-    })
+    jwt_configuration=aws.apigatewayv2.AuthorizerJwtConfigurationArgs(
+        audiences=["example"],
+        issuer=f"https://{aws_cognito_user_pool['example']['endpoint']}",
+    ))
 ```
 
 {{% /example %}}
@@ -217,19 +217,19 @@ const example = new aws.apigatewayv2.Authorizer("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigatewayv2/#Authorizer">Authorizer</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigatewayv2/#AuthorizerArgs">AuthorizerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Authorizer</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AuthorizerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigatewayv2/#pulumi_aws.apigatewayv2.Authorizer">Authorizer</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_id=None<span class="p">, </span>authorizer_credentials_arn=None<span class="p">, </span>authorizer_type=None<span class="p">, </span>authorizer_uri=None<span class="p">, </span>identity_sources=None<span class="p">, </span>jwt_configuration=None<span class="p">, </span>name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Authorizer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorizer_credentials_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorizer_payload_format_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorizer_result_ttl_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">authorizer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorizer_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_simple_responses</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">jwt_configuration</span><span class="p">:</span> <span class="nx">Optional[AuthorizerJwtConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#Authorizer">NewAuthorizer</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#AuthorizerArgs">AuthorizerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#Authorizer">Authorizer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAuthorizer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AuthorizerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Authorizer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Authorizer.html">Authorizer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.AuthorizerArgs.html">AuthorizerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Authorizer</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AuthorizerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -240,7 +240,7 @@ const example = new aws.apigatewayv2.Authorizer("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -250,7 +250,7 @@ const example = new aws.apigatewayv2.Authorizer("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigatewayv2/#AuthorizerArgs">AuthorizerArgs</a></span>
+        <span class="property-type"><a href="#inputs">AuthorizerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -309,7 +309,7 @@ const example = new aws.apigatewayv2.Authorizer("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -319,7 +319,7 @@ const example = new aws.apigatewayv2.Authorizer("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#AuthorizerArgs">AuthorizerArgs</a></span>
+        <span class="property-type"><a href="#inputs">AuthorizerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -348,7 +348,7 @@ const example = new aws.apigatewayv2.Authorizer("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -358,7 +358,7 @@ const example = new aws.apigatewayv2.Authorizer("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.AuthorizerArgs.html">AuthorizerArgs</a></span>
+        <span class="property-type"><a href="#inputs">AuthorizerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -381,12 +381,11 @@ const example = new aws.apigatewayv2.Authorizer("example", {
 
 ## Authorizer Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Authorizer resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Authorizer resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -397,90 +396,116 @@ The Authorizer resource accepts the following [input]({{< relref "/docs/intro/co
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="authorizertype_csharp">
 <a href="#authorizertype_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer type. Valid values: `JWT`, `REQUEST`.
-For WebSocket APIs, specify `REQUEST` for a Lambda function using incoming request parameters.
+Specify `REQUEST` for a Lambda function using incoming request parameters.
 For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizercredentialsarn_csharp">
+<a href="#authorizercredentialsarn_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Credentials<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The required credentials as an IAM role for API Gateway to invoke the authorizer.
+Supported only for `REQUEST` authorizers.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizerpayloadformatversion_csharp">
+<a href="#authorizerpayloadformatversion_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Payload<wbr>Format<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+Valid values: `1.0`, `2.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizerresultttlinseconds_csharp">
+<a href="#authorizerresultttlinseconds_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Result<wbr>Ttl<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+Supported only for HTTP API Lambda authorizers.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizeruri_csharp">
+<a href="#authorizeruri_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
+For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
+Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablesimpleresponses_csharp">
+<a href="#enablesimpleresponses_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Simple<wbr>Responses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+Supported only for HTTP APIs.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="identitysources_csharp">
 <a href="#identitysources_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identity sources for which authorization is requested.
 For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
 For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="authorizercredentialsarn_csharp">
-<a href="#authorizercredentialsarn_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Credentials<wbr>Arn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The required credentials as an IAM role for API Gateway to invoke the authorizer.
-Supported only for `REQUEST` authorizers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="authorizeruri_csharp">
-<a href="#authorizeruri_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Uri</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
-For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
-Supported only for `REQUEST` authorizers.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="jwtconfiguration_csharp">
 <a href="#jwtconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the authorizer.
+    <dd>{{% md %}}The name of the authorizer. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -489,90 +514,116 @@ Supported only for HTTP APIs.
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="authorizertype_go">
 <a href="#authorizertype_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer type. Valid values: `JWT`, `REQUEST`.
-For WebSocket APIs, specify `REQUEST` for a Lambda function using incoming request parameters.
+Specify `REQUEST` for a Lambda function using incoming request parameters.
 For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizercredentialsarn_go">
+<a href="#authorizercredentialsarn_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Credentials<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The required credentials as an IAM role for API Gateway to invoke the authorizer.
+Supported only for `REQUEST` authorizers.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizerpayloadformatversion_go">
+<a href="#authorizerpayloadformatversion_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Payload<wbr>Format<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+Valid values: `1.0`, `2.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizerresultttlinseconds_go">
+<a href="#authorizerresultttlinseconds_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Result<wbr>Ttl<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+Supported only for HTTP API Lambda authorizers.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizeruri_go">
+<a href="#authorizeruri_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
+For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
+Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablesimpleresponses_go">
+<a href="#enablesimpleresponses_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Simple<wbr>Responses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+Supported only for HTTP APIs.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="identitysources_go">
 <a href="#identitysources_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The identity sources for which authorization is requested.
 For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
 For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="authorizercredentialsarn_go">
-<a href="#authorizercredentialsarn_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Credentials<wbr>Arn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The required credentials as an IAM role for API Gateway to invoke the authorizer.
-Supported only for `REQUEST` authorizers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="authorizeruri_go">
-<a href="#authorizeruri_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Uri</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
-For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
-Supported only for `REQUEST` authorizers.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="jwtconfiguration_go">
 <a href="#jwtconfiguration_go" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the authorizer.
+    <dd>{{% md %}}The name of the authorizer. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -581,90 +632,116 @@ Supported only for HTTP APIs.
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="authorizertype_nodejs">
 <a href="#authorizertype_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer type. Valid values: `JWT`, `REQUEST`.
-For WebSocket APIs, specify `REQUEST` for a Lambda function using incoming request parameters.
+Specify `REQUEST` for a Lambda function using incoming request parameters.
 For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizercredentialsarn_nodejs">
+<a href="#authorizercredentialsarn_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Credentials<wbr>Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The required credentials as an IAM role for API Gateway to invoke the authorizer.
+Supported only for `REQUEST` authorizers.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizerpayloadformatversion_nodejs">
+<a href="#authorizerpayloadformatversion_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Payload<wbr>Format<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+Valid values: `1.0`, `2.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizerresultttlinseconds_nodejs">
+<a href="#authorizerresultttlinseconds_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Result<wbr>Ttl<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+Supported only for HTTP API Lambda authorizers.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizeruri_nodejs">
+<a href="#authorizeruri_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
+For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
+Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablesimpleresponses_nodejs">
+<a href="#enablesimpleresponses_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Simple<wbr>Responses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+Supported only for HTTP APIs.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="identitysources_nodejs">
 <a href="#identitysources_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identity sources for which authorization is requested.
 For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
 For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="authorizercredentialsarn_nodejs">
-<a href="#authorizercredentialsarn_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Credentials<wbr>Arn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The required credentials as an IAM role for API Gateway to invoke the authorizer.
-Supported only for `REQUEST` authorizers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="authorizeruri_nodejs">
-<a href="#authorizeruri_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Uri</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
-For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
-Supported only for `REQUEST` authorizers.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="jwtconfiguration_nodejs">
 <a href="#jwtconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the authorizer.
+    <dd>{{% md %}}The name of the authorizer. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -673,99 +750,121 @@ Supported only for HTTP APIs.
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API identifier.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="authorizer_type_python">
 <a href="#authorizer_type_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authorizer type. Valid values: `JWT`, `REQUEST`.
-For WebSocket APIs, specify `REQUEST` for a Lambda function using incoming request parameters.
+Specify `REQUEST` for a Lambda function using incoming request parameters.
 For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizer_credentials_arn_python">
+<a href="#authorizer_credentials_arn_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>credentials_<wbr>arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The required credentials as an IAM role for API Gateway to invoke the authorizer.
+Supported only for `REQUEST` authorizers.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizer_payload_format_version_python">
+<a href="#authorizer_payload_format_version_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>payload_<wbr>format_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+Valid values: `1.0`, `2.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizer_result_ttl_in_seconds_python">
+<a href="#authorizer_result_ttl_in_seconds_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>result_<wbr>ttl_<wbr>in_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+Supported only for HTTP API Lambda authorizers.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authorizer_uri_python">
+<a href="#authorizer_uri_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
+For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
+Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_simple_responses_python">
+<a href="#enable_simple_responses_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>simple_<wbr>responses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+Supported only for HTTP APIs.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="identity_sources_python">
 <a href="#identity_sources_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identity sources for which authorization is requested.
 For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
 For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="authorizer_credentials_arn_python">
-<a href="#authorizer_credentials_arn_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>credentials_<wbr>arn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The required credentials as an IAM role for API Gateway to invoke the authorizer.
-Supported only for `REQUEST` authorizers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="authorizer_uri_python">
-<a href="#authorizer_uri_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>uri</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
-For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
-Supported only for `REQUEST` authorizers.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="jwt_configuration_python">
 <a href="#jwt_configuration_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizerjwtconfiguration">Dict[Authorizer<wbr>Jwt<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the authorizer.
+    <dd>{{% md %}}The name of the authorizer. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Authorizer resource produces the following output properties:
-
 
 
 
@@ -776,15 +875,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -793,15 +890,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -810,15 +905,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -827,18 +920,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -848,19 +936,20 @@ Get an existing Authorizer resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigatewayv2/#AuthorizerState">AuthorizerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigatewayv2/#Authorizer">Authorizer</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AuthorizerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Authorizer</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_id=None<span class="p">, </span>authorizer_credentials_arn=None<span class="p">, </span>authorizer_type=None<span class="p">, </span>authorizer_uri=None<span class="p">, </span>identity_sources=None<span class="p">, </span>jwt_configuration=None<span class="p">, </span>name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorizer_credentials_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorizer_payload_format_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorizer_result_ttl_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">authorizer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">authorizer_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_simple_responses</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">identity_sources</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">jwt_configuration</span><span class="p">:</span> <span class="nx">Optional[AuthorizerJwtConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Authorizer</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthorizer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#AuthorizerState">AuthorizerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#Authorizer">Authorizer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthorizer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AuthorizerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Authorizer</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Authorizer.html">Authorizer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.AuthorizerState.html">AuthorizerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Authorizer</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AuthorizerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -962,7 +1051,6 @@ Get an existing Authorizer resource's state with the given name, ID, and optiona
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -970,90 +1058,116 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_apiid_csharp">
 <a href="#state_apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizercredentialsarn_csharp">
 <a href="#state_authorizercredentialsarn_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Credentials<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The required credentials as an IAM role for API Gateway to invoke the authorizer.
 Supported only for `REQUEST` authorizers.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_authorizerpayloadformatversion_csharp">
+<a href="#state_authorizerpayloadformatversion_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Payload<wbr>Format<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+Valid values: `1.0`, `2.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_authorizerresultttlinseconds_csharp">
+<a href="#state_authorizerresultttlinseconds_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Result<wbr>Ttl<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+Supported only for HTTP API Lambda authorizers.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizertype_csharp">
 <a href="#state_authorizertype_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer type. Valid values: `JWT`, `REQUEST`.
-For WebSocket APIs, specify `REQUEST` for a Lambda function using incoming request parameters.
+Specify `REQUEST` for a Lambda function using incoming request parameters.
 For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizeruri_csharp">
 <a href="#state_authorizeruri_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
 For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
-Supported only for `REQUEST` authorizers.
+Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablesimpleresponses_csharp">
+<a href="#state_enablesimpleresponses_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Simple<wbr>Responses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+Supported only for HTTP APIs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_identitysources_csharp">
 <a href="#state_identitysources_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identity sources for which authorization is requested.
 For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
 For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jwtconfiguration_csharp">
 <a href="#state_jwtconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the authorizer.
+    <dd>{{% md %}}The name of the authorizer. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1062,90 +1176,116 @@ Supported only for HTTP APIs.
             title="Optional">
         <span id="state_apiid_go">
 <a href="#state_apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizercredentialsarn_go">
 <a href="#state_authorizercredentialsarn_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Credentials<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The required credentials as an IAM role for API Gateway to invoke the authorizer.
 Supported only for `REQUEST` authorizers.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_authorizerpayloadformatversion_go">
+<a href="#state_authorizerpayloadformatversion_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Payload<wbr>Format<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+Valid values: `1.0`, `2.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_authorizerresultttlinseconds_go">
+<a href="#state_authorizerresultttlinseconds_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Result<wbr>Ttl<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+Supported only for HTTP API Lambda authorizers.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizertype_go">
 <a href="#state_authorizertype_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer type. Valid values: `JWT`, `REQUEST`.
-For WebSocket APIs, specify `REQUEST` for a Lambda function using incoming request parameters.
+Specify `REQUEST` for a Lambda function using incoming request parameters.
 For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizeruri_go">
 <a href="#state_authorizeruri_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
 For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
-Supported only for `REQUEST` authorizers.
+Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablesimpleresponses_go">
+<a href="#state_enablesimpleresponses_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Simple<wbr>Responses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+Supported only for HTTP APIs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_identitysources_go">
 <a href="#state_identitysources_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The identity sources for which authorization is requested.
 For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
 For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jwtconfiguration_go">
 <a href="#state_jwtconfiguration_go" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the authorizer.
+    <dd>{{% md %}}The name of the authorizer. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1154,90 +1294,116 @@ Supported only for HTTP APIs.
             title="Optional">
         <span id="state_apiid_nodejs">
 <a href="#state_apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizercredentialsarn_nodejs">
 <a href="#state_authorizercredentialsarn_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Credentials<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The required credentials as an IAM role for API Gateway to invoke the authorizer.
 Supported only for `REQUEST` authorizers.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_authorizerpayloadformatversion_nodejs">
+<a href="#state_authorizerpayloadformatversion_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Payload<wbr>Format<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+Valid values: `1.0`, `2.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_authorizerresultttlinseconds_nodejs">
+<a href="#state_authorizerresultttlinseconds_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Result<wbr>Ttl<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+Supported only for HTTP API Lambda authorizers.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizertype_nodejs">
 <a href="#state_authorizertype_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer type. Valid values: `JWT`, `REQUEST`.
-For WebSocket APIs, specify `REQUEST` for a Lambda function using incoming request parameters.
+Specify `REQUEST` for a Lambda function using incoming request parameters.
 For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizeruri_nodejs">
 <a href="#state_authorizeruri_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
 For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
-Supported only for `REQUEST` authorizers.
+Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablesimpleresponses_nodejs">
+<a href="#state_enablesimpleresponses_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Simple<wbr>Responses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+Supported only for HTTP APIs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_identitysources_nodejs">
 <a href="#state_identitysources_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identity sources for which authorization is requested.
 For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
 For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jwtconfiguration_nodejs">
 <a href="#state_jwtconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the authorizer.
+    <dd>{{% md %}}The name of the authorizer. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1246,93 +1412,116 @@ Supported only for HTTP APIs.
             title="Optional">
         <span id="state_api_id_python">
 <a href="#state_api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API identifier.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizer_credentials_arn_python">
 <a href="#state_authorizer_credentials_arn_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>credentials_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The required credentials as an IAM role for API Gateway to invoke the authorizer.
 Supported only for `REQUEST` authorizers.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_authorizer_payload_format_version_python">
+<a href="#state_authorizer_payload_format_version_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>payload_<wbr>format_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+Valid values: `1.0`, `2.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_authorizer_result_ttl_in_seconds_python">
+<a href="#state_authorizer_result_ttl_in_seconds_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>result_<wbr>ttl_<wbr>in_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+Supported only for HTTP API Lambda authorizers.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizer_type_python">
 <a href="#state_authorizer_type_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authorizer type. Valid values: `JWT`, `REQUEST`.
-For WebSocket APIs, specify `REQUEST` for a Lambda function using incoming request parameters.
+Specify `REQUEST` for a Lambda function using incoming request parameters.
 For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizer_uri_python">
 <a href="#state_authorizer_uri_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authorizer's Uniform Resource Identifier (URI).
 For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invoke_arn` attribute of the `aws.lambda.Function` resource.
-Supported only for `REQUEST` authorizers.
+Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_simple_responses_python">
+<a href="#state_enable_simple_responses_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>simple_<wbr>responses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+Supported only for HTTP APIs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_identity_sources_python">
 <a href="#state_identity_sources_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identity sources for which authorization is requested.
 For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
 For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_jwt_configuration_python">
 <a href="#state_jwt_configuration_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authorizerjwtconfiguration">Dict[Authorizer<wbr>Jwt<wbr>Configuration]</a></span>
+        <span class="property-type"><a href="#authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the authorizer.
+    <dd>{{% md %}}The name of the authorizer. Must be between 1 and 128 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1342,20 +1531,8 @@ Supported only for HTTP APIs.
 ## Supporting Types
 
 
+
 <h4 id="authorizerjwtconfiguration">Authorizer<wbr>Jwt<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AuthorizerJwtConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AuthorizerJwtConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#AuthorizerJwtConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2?tab=doc#AuthorizerJwtConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Inputs.AuthorizerJwtConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGatewayV2.Outputs.AuthorizerJwtConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1364,27 +1541,24 @@ Supported only for HTTP APIs.
             title="Optional">
         <span id="audiences_csharp">
 <a href="#audiences_csharp" style="color: inherit; text-decoration: inherit;">Audiences</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issuer_csharp">
 <a href="#issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base domain of the identity provider that issues JSON Web Tokens, such as the `endpoint` attribute of the `aws.cognito.UserPool` resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1393,27 +1567,24 @@ Supported only for HTTP APIs.
             title="Optional">
         <span id="audiences_go">
 <a href="#audiences_go" style="color: inherit; text-decoration: inherit;">Audiences</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issuer_go">
 <a href="#issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base domain of the identity provider that issues JSON Web Tokens, such as the `endpoint` attribute of the `aws.cognito.UserPool` resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1422,27 +1593,24 @@ Supported only for HTTP APIs.
             title="Optional">
         <span id="audiences_nodejs">
 <a href="#audiences_nodejs" style="color: inherit; text-decoration: inherit;">audiences</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issuer_nodejs">
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base domain of the identity provider that issues JSON Web Tokens, such as the `endpoint` attribute of the `aws.cognito.UserPool` resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1451,31 +1619,32 @@ Supported only for HTTP APIs.
             title="Optional">
         <span id="audiences_python">
 <a href="#audiences_python" style="color: inherit; text-decoration: inherit;">audiences</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the intended recipients of the JWT. A valid JWT must provide an aud that matches at least one entry in this list.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issuer_python">
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base domain of the identity provider that issues JSON Web Tokens, such as the `endpoint` attribute of the `aws.cognito.UserPool` resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+`aws_apigatewayv2_authorizer` can be imported by using the API identifier and authorizer identifier, e.g.
 
-
-
+```sh
+ $ pulumi import aws:apigatewayv2/authorizer:Authorizer example aabbccddee/1122334
+```
 
 
 

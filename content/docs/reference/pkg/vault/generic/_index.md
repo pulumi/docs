@@ -27,9 +27,9 @@ Explore the resources and functions of the generic module in the Vault package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 
 
@@ -40,7 +40,7 @@ Explore the resources and functions of the generic module in the Vault package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Generic.html" title="Pulumi.Vault.Generic">Pulumi.Vault.Generic</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/generic?tab=doc#" title="vault/generic">vault/generic</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/generic?tab=doc#" title="vault/generic">vault/generic</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/generic/#" title="@pulumi/vault/generic">@pulumi/vault/generic</a></dd>

@@ -11,14 +11,19 @@ Explore the resources and functions of the cloudfront module in the AWS package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="cachepolicy" title="CachePolicy"><span class="symbol resource"></span>CachePolicy</a></li>
     <li><a href="distribution" title="Distribution"><span class="symbol resource"></span>Distribution</a></li>
     <li><a href="originaccessidentity" title="OriginAccessIdentity"><span class="symbol resource"></span>OriginAccessIdentity</a></li>
+    <li><a href="originrequestpolicy" title="OriginRequestPolicy"><span class="symbol resource"></span>OriginRequestPolicy</a></li>
     <li><a href="publickey" title="PublicKey"><span class="symbol resource"></span>PublicKey</a></li>
+    <li><a href="realtimelogconfig" title="RealtimeLogConfig"><span class="symbol resource"></span>RealtimeLogConfig</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getcachepolicy" title="GetCachePolicy"><span class="symbol function"></span>GetCachePolicy</a></li>
     <li><a href="getdistribution" title="GetDistribution"><span class="symbol function"></span>GetDistribution</a></li>
+    <li><a href="getoriginrequestpolicy" title="GetOriginRequestPolicy"><span class="symbol function"></span>GetOriginRequestPolicy</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,24 +35,6 @@ Explore the resources and functions of the cloudfront module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudFront.html" title="Pulumi.Aws.CloudFront">Pulumi.Aws.CloudFront</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudfront?tab=doc#" title="aws/cloudfront">aws/cloudfront</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#" title="@pulumi/aws/cloudfront">@pulumi/aws/cloudfront</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/cloudfront" title="pulumi_aws/cloudfront">pulumi_aws/cloudfront</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

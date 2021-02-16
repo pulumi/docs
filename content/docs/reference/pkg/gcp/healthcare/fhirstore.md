@@ -1,8 +1,8 @@
 
 ---
 title: "FhirStore"
-title_tag: "Resource FhirStore | Module healthcare | Package GCP"
-meta_desc: "Explore the FhirStore resource of the healthcare module, including examples, input properties, output properties, lookup functions, and supporting types. A FhirStore is a datastore inside a Healthcare dataset that conforms to the FHIR (https://www.hl7.org/fhir/STU3/)"
+title_tag: "gcp.healthcare.FhirStore"
+meta_desc: "Documentation for the gcp.healthcare.FhirStore resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -19,6 +19,364 @@ To get more information about FhirStore, see:
 * How-to Guides
     * [Creating a FHIR store](https://cloud.google.com/healthcare/docs/how-tos/fhir)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Healthcare Fhir Store Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+        {
+            Location = "us-central1",
+        });
+        var @default = new Gcp.Healthcare.FhirStore("default", new Gcp.Healthcare.FhirStoreArgs
+        {
+            Dataset = dataset.Id,
+            Version = "R4",
+            EnableUpdateCreate = false,
+            DisableReferentialIntegrity = false,
+            DisableResourceVersioning = false,
+            EnableHistoryImport = false,
+            NotificationConfig = new Gcp.Healthcare.Inputs.FhirStoreNotificationConfigArgs
+            {
+                PubsubTopic = topic.Id,
+            },
+            Labels = 
+            {
+                { "label1", "labelvalue1" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		topic, err := pubsub.NewTopic(ctx, "topic", nil)
+		if err != nil {
+			return err
+		}
+		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+			Location: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = healthcare.NewFhirStore(ctx, "_default", &healthcare.FhirStoreArgs{
+			Dataset:                     dataset.ID(),
+			Version:                     pulumi.String("R4"),
+			EnableUpdateCreate:          pulumi.Bool(false),
+			DisableReferentialIntegrity: pulumi.Bool(false),
+			DisableResourceVersioning:   pulumi.Bool(false),
+			EnableHistoryImport:         pulumi.Bool(false),
+			NotificationConfig: &healthcare.FhirStoreNotificationConfigArgs{
+				PubsubTopic: topic.ID(),
+			},
+			Labels: pulumi.StringMap{
+				"label1": pulumi.String("labelvalue1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+topic = gcp.pubsub.Topic("topic")
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+default = gcp.healthcare.FhirStore("default",
+    dataset=dataset.id,
+    version="R4",
+    enable_update_create=False,
+    disable_referential_integrity=False,
+    disable_resource_versioning=False,
+    enable_history_import=False,
+    notification_config=gcp.healthcare.FhirStoreNotificationConfigArgs(
+        pubsub_topic=topic.id,
+    ),
+    labels={
+        "label1": "labelvalue1",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const topic = new gcp.pubsub.Topic("topic", {});
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+const _default = new gcp.healthcare.FhirStore("default", {
+    dataset: dataset.id,
+    version: "R4",
+    enableUpdateCreate: false,
+    disableReferentialIntegrity: false,
+    disableResourceVersioning: false,
+    enableHistoryImport: false,
+    notificationConfig: {
+        pubsubTopic: topic.id,
+    },
+    labels: {
+        label1: "labelvalue1",
+    },
+});
+```
+
+{{% /example %}}
+
+### Healthcare Fhir Store Streaming Config
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+        {
+            Location = "us-central1",
+        });
+        var bqDataset = new Gcp.BigQuery.Dataset("bqDataset", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "bq_example_dataset",
+            FriendlyName = "test",
+            Description = "This is a test description",
+            Location = "US",
+            DeleteContentsOnDestroy = true,
+        });
+        var @default = new Gcp.Healthcare.FhirStore("default", new Gcp.Healthcare.FhirStoreArgs
+        {
+            Dataset = dataset.Id,
+            Version = "R4",
+            EnableUpdateCreate = false,
+            DisableReferentialIntegrity = false,
+            DisableResourceVersioning = false,
+            EnableHistoryImport = false,
+            Labels = 
+            {
+                { "label1", "labelvalue1" },
+            },
+            StreamConfigs = 
+            {
+                new Gcp.Healthcare.Inputs.FhirStoreStreamConfigArgs
+                {
+                    ResourceTypes = 
+                    {
+                        "Observation",
+                    },
+                    BigqueryDestination = new Gcp.Healthcare.Inputs.FhirStoreStreamConfigBigqueryDestinationArgs
+                    {
+                        DatasetUri = Output.Tuple(bqDataset.Project, bqDataset.DatasetId).Apply(values =>
+                        {
+                            var project = values.Item1;
+                            var datasetId = values.Item2;
+                            return $"bq://{project}.{datasetId}";
+                        }),
+                        SchemaConfig = new Gcp.Healthcare.Inputs.FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs
+                        {
+                            RecursiveStructureDepth = 3,
+                        },
+                    },
+                },
+            },
+        });
+        var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+        {
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+			Location: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		bqDataset, err := bigquery.NewDataset(ctx, "bqDataset", &bigquery.DatasetArgs{
+			DatasetId:               pulumi.String("bq_example_dataset"),
+			FriendlyName:            pulumi.String("test"),
+			Description:             pulumi.String("This is a test description"),
+			Location:                pulumi.String("US"),
+			DeleteContentsOnDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = healthcare.NewFhirStore(ctx, "_default", &healthcare.FhirStoreArgs{
+			Dataset:                     dataset.ID(),
+			Version:                     pulumi.String("R4"),
+			EnableUpdateCreate:          pulumi.Bool(false),
+			DisableReferentialIntegrity: pulumi.Bool(false),
+			DisableResourceVersioning:   pulumi.Bool(false),
+			EnableHistoryImport:         pulumi.Bool(false),
+			Labels: pulumi.StringMap{
+				"label1": pulumi.String("labelvalue1"),
+			},
+			StreamConfigs: healthcare.FhirStoreStreamConfigArray{
+				&healthcare.FhirStoreStreamConfigArgs{
+					ResourceTypes: pulumi.StringArray{
+						pulumi.String("Observation"),
+					},
+					BigqueryDestination: &healthcare.FhirStoreStreamConfigBigqueryDestinationArgs{
+						DatasetUri: pulumi.All(bqDataset.Project, bqDataset.DatasetId).ApplyT(func(_args []interface{}) (string, error) {
+							project := _args[0].(string)
+							datasetId := _args[1].(string)
+							return fmt.Sprintf("%v%v%v%v", "bq://", project, ".", datasetId), nil
+						}).(pulumi.StringOutput),
+						SchemaConfig: &healthcare.FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs{
+							RecursiveStructureDepth: pulumi.Int(3),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewTopic(ctx, "topic", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+bq_dataset = gcp.bigquery.Dataset("bqDataset",
+    dataset_id="bq_example_dataset",
+    friendly_name="test",
+    description="This is a test description",
+    location="US",
+    delete_contents_on_destroy=True)
+default = gcp.healthcare.FhirStore("default",
+    dataset=dataset.id,
+    version="R4",
+    enable_update_create=False,
+    disable_referential_integrity=False,
+    disable_resource_versioning=False,
+    enable_history_import=False,
+    labels={
+        "label1": "labelvalue1",
+    },
+    stream_configs=[gcp.healthcare.FhirStoreStreamConfigArgs(
+        resource_types=["Observation"],
+        bigquery_destination=gcp.healthcare.FhirStoreStreamConfigBigqueryDestinationArgs(
+            dataset_uri=pulumi.Output.all(bq_dataset.project, bq_dataset.dataset_id).apply(lambda project, dataset_id: f"bq://{project}.{dataset_id}"),
+            schema_config=gcp.healthcare.FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs(
+                recursive_structure_depth=3,
+            ),
+        ),
+    )])
+topic = gcp.pubsub.Topic("topic")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+const bqDataset = new gcp.bigquery.Dataset("bqDataset", {
+    datasetId: "bq_example_dataset",
+    friendlyName: "test",
+    description: "This is a test description",
+    location: "US",
+    deleteContentsOnDestroy: true,
+});
+const _default = new gcp.healthcare.FhirStore("default", {
+    dataset: dataset.id,
+    version: "R4",
+    enableUpdateCreate: false,
+    disableReferentialIntegrity: false,
+    disableResourceVersioning: false,
+    enableHistoryImport: false,
+    labels: {
+        label1: "labelvalue1",
+    },
+    streamConfigs: [{
+        resourceTypes: ["Observation"],
+        bigqueryDestination: {
+            datasetUri: pulumi.interpolate`bq://${bqDataset.project}.${bqDataset.datasetId}`,
+            schemaConfig: {
+                recursiveStructureDepth: 3,
+            },
+        },
+    }],
+});
+const topic = new gcp.pubsub.Topic("topic", {});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FhirStore Resource {#create}
@@ -26,19 +384,19 @@ To get more information about FhirStore, see:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#FhirStore">FhirStore</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#FhirStoreArgs">FhirStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FhirStore</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FhirStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/healthcare/#FhirStore">FhirStore</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dataset=None<span class="p">, </span>disable_referential_integrity=None<span class="p">, </span>disable_resource_versioning=None<span class="p">, </span>enable_history_import=None<span class="p">, </span>enable_update_create=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>stream_configs=None<span class="p">, </span>version=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FhirStore</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_referential_integrity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disable_resource_versioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_history_import</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_update_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[FhirStoreNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">stream_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[FhirStoreStreamConfigArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStore">NewFhirStore</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreArgs">FhirStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStore">FhirStore</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFhirStore</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FhirStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FhirStore</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStore.html">FhirStore</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStoreArgs.html">FhirStoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FhirStore</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FhirStoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -49,7 +407,7 @@ To get more information about FhirStore, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -59,7 +417,7 @@ To get more information about FhirStore, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#FhirStoreArgs">FhirStoreArgs</a></span>
+        <span class="property-type"><a href="#inputs">FhirStoreArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -108,7 +466,7 @@ To get more information about FhirStore, see:
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -118,7 +476,7 @@ To get more information about FhirStore, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -128,7 +486,7 @@ To get more information about FhirStore, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreArgs">FhirStoreArgs</a></span>
+        <span class="property-type"><a href="#inputs">FhirStoreArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -138,7 +496,7 @@ To get more information about FhirStore, see:
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -157,7 +515,7 @@ To get more information about FhirStore, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -167,7 +525,7 @@ To get more information about FhirStore, see:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStoreArgs.html">FhirStoreArgs</a></span>
+        <span class="property-type"><a href="#inputs">FhirStoreArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -190,12 +548,11 @@ To get more information about FhirStore, see:
 
 ## FhirStore Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The FhirStore resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The FhirStore resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -206,21 +563,20 @@ The FhirStore resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablereferentialintegrity_csharp">
 <a href="#disablereferentialintegrity_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Referential<wbr>Integrity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
 creation. The default value is false, meaning that the API will enforce referential integrity and fail the
@@ -229,14 +585,13 @@ will skip referential integrity check. Consequently, operations that rely on ref
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disableresourceversioning_csharp">
 <a href="#disableresourceversioning_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Resource<wbr>Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
 of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
@@ -245,14 +600,13 @@ cannot be updated. If set to true, no historical versions will be kept. The serv
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablehistoryimport_csharp">
 <a href="#enablehistoryimport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>History<wbr>Import</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
 versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
@@ -261,14 +615,13 @@ will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableupdatecreate_csharp">
 <a href="#enableupdatecreate_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Update<wbr>Create</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
 operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
@@ -277,12 +630,11 @@ logs with appropriate levels of care if client-specified resource IDs contain se
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -295,35 +647,33 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationconfig_csharp">
 <a href="#notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="streamconfigs_csharp">
 <a href="#streamconfigs_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfig">List&lt;Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -332,23 +682,23 @@ this FHIR store. Each store is allowed to have up to 10 streaming configs. After
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -357,21 +707,20 @@ the order of dozens of seconds) is expected before the results show up in the st
             title="Required">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablereferentialintegrity_go">
 <a href="#disablereferentialintegrity_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Referential<wbr>Integrity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
 creation. The default value is false, meaning that the API will enforce referential integrity and fail the
@@ -380,14 +729,13 @@ will skip referential integrity check. Consequently, operations that rely on ref
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disableresourceversioning_go">
 <a href="#disableresourceversioning_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Resource<wbr>Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
 of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
@@ -396,14 +744,13 @@ cannot be updated. If set to true, no historical versions will be kept. The serv
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablehistoryimport_go">
 <a href="#enablehistoryimport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>History<wbr>Import</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
 versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
@@ -412,14 +759,13 @@ will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableupdatecreate_go">
 <a href="#enableupdatecreate_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Update<wbr>Create</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
 operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
@@ -428,12 +774,11 @@ logs with appropriate levels of care if client-specified resource IDs contain se
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -446,35 +791,33 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationconfig_go">
 <a href="#notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="streamconfigs_go">
 <a href="#streamconfigs_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfig">[]Fhir<wbr>Store<wbr>Stream<wbr>Config</a></span>
     </dt>
@@ -483,23 +826,23 @@ this FHIR store. Each store is allowed to have up to 10 streaming configs. After
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -508,21 +851,20 @@ the order of dozens of seconds) is expected before the results show up in the st
             title="Required">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablereferentialintegrity_nodejs">
 <a href="#disablereferentialintegrity_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Referential<wbr>Integrity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
 creation. The default value is false, meaning that the API will enforce referential integrity and fail the
@@ -531,14 +873,13 @@ will skip referential integrity check. Consequently, operations that rely on ref
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disableresourceversioning_nodejs">
 <a href="#disableresourceversioning_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Resource<wbr>Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
 of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
@@ -547,14 +888,13 @@ cannot be updated. If set to true, no historical versions will be kept. The serv
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablehistoryimport_nodejs">
 <a href="#enablehistoryimport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>History<wbr>Import</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
 versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
@@ -563,14 +903,13 @@ will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableupdatecreate_nodejs">
 <a href="#enableupdatecreate_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Update<wbr>Create</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
 operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
@@ -579,12 +918,11 @@ logs with appropriate levels of care if client-specified resource IDs contain se
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -597,35 +935,33 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationconfig_nodejs">
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="streamconfigs_nodejs">
 <a href="#streamconfigs_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config[]</a></span>
     </dt>
@@ -634,23 +970,23 @@ this FHIR store. Each store is allowed to have up to 10 streaming configs. After
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -659,21 +995,20 @@ the order of dozens of seconds) is expected before the results show up in the st
             title="Required">
         <span id="dataset_python">
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disable_referential_integrity_python">
 <a href="#disable_referential_integrity_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>referential_<wbr>integrity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
 creation. The default value is false, meaning that the API will enforce referential integrity and fail the
@@ -682,14 +1017,13 @@ will skip referential integrity check. Consequently, operations that rely on ref
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disable_resource_versioning_python">
 <a href="#disable_resource_versioning_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>resource_<wbr>versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
 of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
@@ -698,14 +1032,13 @@ cannot be updated. If set to true, no historical versions will be kept. The serv
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_history_import_python">
 <a href="#enable_history_import_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>history_<wbr>import</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
 versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
@@ -714,14 +1047,13 @@ will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_update_create_python">
 <a href="#enable_update_create_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>update_<wbr>create</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
 operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
@@ -730,14 +1062,13 @@ logs with appropriate levels of care if client-specified resource IDs contain se
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores.
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
@@ -748,69 +1079,63 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notification_config_python">
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorenotificationconfig">Dict[Fhir<wbr>Store<wbr>Notification<wbr>Config]</a></span>
+        <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stream_configs_python">
 <a href="#stream_configs_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfig">List[Fhir<wbr>Store<wbr>Stream<wbr>Config]</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">Sequence[Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
 this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the FhirStore resource produces the following output properties:
-
 
 
 
@@ -821,26 +1146,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -849,26 +1171,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -877,26 +1196,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -905,29 +1221,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -937,19 +1247,20 @@ Get an existing FhirStore resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#FhirStoreState">FhirStoreState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#FhirStore">FhirStore</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FhirStoreState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">FhirStore</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>dataset=None<span class="p">, </span>disable_referential_integrity=None<span class="p">, </span>disable_resource_versioning=None<span class="p">, </span>enable_history_import=None<span class="p">, </span>enable_update_create=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>notification_config=None<span class="p">, </span>self_link=None<span class="p">, </span>stream_configs=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dataset</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_referential_integrity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disable_resource_versioning</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_history_import</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_update_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_config</span><span class="p">:</span> <span class="nx">Optional[FhirStoreNotificationConfigArgs]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stream_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[FhirStoreStreamConfigArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> FhirStore</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFhirStore<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreState">FhirStoreState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStore">FhirStore</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFhirStore<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FhirStoreState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FhirStore</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStore.html">FhirStore</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.FhirStoreState.html">FhirStoreState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">FhirStore</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FhirStoreState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1051,7 +1362,6 @@ Get an existing FhirStore resource's state with the given name, ID, and optional
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1059,21 +1369,20 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_dataset_csharp">
 <a href="#state_dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disablereferentialintegrity_csharp">
 <a href="#state_disablereferentialintegrity_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Referential<wbr>Integrity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
 creation. The default value is false, meaning that the API will enforce referential integrity and fail the
@@ -1082,14 +1391,13 @@ will skip referential integrity check. Consequently, operations that rely on ref
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disableresourceversioning_csharp">
 <a href="#state_disableresourceversioning_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Resource<wbr>Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
 of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
@@ -1098,14 +1406,13 @@ cannot be updated. If set to true, no historical versions will be kept. The serv
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablehistoryimport_csharp">
 <a href="#state_enablehistoryimport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>History<wbr>Import</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
 versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
@@ -1114,14 +1421,13 @@ will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enableupdatecreate_csharp">
 <a href="#state_enableupdatecreate_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Update<wbr>Create</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
 operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
@@ -1130,12 +1436,11 @@ logs with appropriate levels of care if client-specified resource IDs contain se
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1148,46 +1453,43 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notificationconfig_csharp">
 <a href="#state_notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_streamconfigs_csharp">
 <a href="#state_streamconfigs_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfig">List&lt;Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -1196,23 +1498,23 @@ this FHIR store. Each store is allowed to have up to 10 streaming configs. After
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1221,21 +1523,20 @@ the order of dozens of seconds) is expected before the results show up in the st
             title="Optional">
         <span id="state_dataset_go">
 <a href="#state_dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disablereferentialintegrity_go">
 <a href="#state_disablereferentialintegrity_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Referential<wbr>Integrity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
 creation. The default value is false, meaning that the API will enforce referential integrity and fail the
@@ -1244,14 +1545,13 @@ will skip referential integrity check. Consequently, operations that rely on ref
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disableresourceversioning_go">
 <a href="#state_disableresourceversioning_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Resource<wbr>Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
 of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
@@ -1260,14 +1560,13 @@ cannot be updated. If set to true, no historical versions will be kept. The serv
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablehistoryimport_go">
 <a href="#state_enablehistoryimport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>History<wbr>Import</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
 versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
@@ -1276,14 +1575,13 @@ will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enableupdatecreate_go">
 <a href="#state_enableupdatecreate_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Update<wbr>Create</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
 operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
@@ -1292,12 +1590,11 @@ logs with appropriate levels of care if client-specified resource IDs contain se
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1310,46 +1607,43 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notificationconfig_go">
 <a href="#state_notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_streamconfigs_go">
 <a href="#state_streamconfigs_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfig">[]Fhir<wbr>Store<wbr>Stream<wbr>Config</a></span>
     </dt>
@@ -1358,23 +1652,23 @@ this FHIR store. Each store is allowed to have up to 10 streaming configs. After
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1383,21 +1677,20 @@ the order of dozens of seconds) is expected before the results show up in the st
             title="Optional">
         <span id="state_dataset_nodejs">
 <a href="#state_dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disablereferentialintegrity_nodejs">
 <a href="#state_disablereferentialintegrity_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Referential<wbr>Integrity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
 creation. The default value is false, meaning that the API will enforce referential integrity and fail the
@@ -1406,14 +1699,13 @@ will skip referential integrity check. Consequently, operations that rely on ref
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disableresourceversioning_nodejs">
 <a href="#state_disableresourceversioning_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Resource<wbr>Versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
 of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
@@ -1422,14 +1714,13 @@ cannot be updated. If set to true, no historical versions will be kept. The serv
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablehistoryimport_nodejs">
 <a href="#state_enablehistoryimport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>History<wbr>Import</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
 versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
@@ -1438,14 +1729,13 @@ will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enableupdatecreate_nodejs">
 <a href="#state_enableupdatecreate_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Update<wbr>Create</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
 operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
@@ -1454,12 +1744,11 @@ logs with appropriate levels of care if client-specified resource IDs contain se
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1472,46 +1761,43 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notificationconfig_nodejs">
 <a href="#state_notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_streamconfigs_nodejs">
 <a href="#state_streamconfigs_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config[]</a></span>
     </dt>
@@ -1520,23 +1806,23 @@ this FHIR store. Each store is allowed to have up to 10 streaming configs. After
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1545,21 +1831,20 @@ the order of dozens of seconds) is expected before the results show up in the st
             title="Optional">
         <span id="state_dataset_python">
 <a href="#state_dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disable_referential_integrity_python">
 <a href="#state_disable_referential_integrity_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>referential_<wbr>integrity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
 creation. The default value is false, meaning that the API will enforce referential integrity and fail the
@@ -1568,14 +1853,13 @@ will skip referential integrity check. Consequently, operations that rely on ref
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disable_resource_versioning_python">
 <a href="#state_disable_resource_versioning_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>resource_<wbr>versioning</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation
 of FHIR store. If set to false, which is the default behavior, all write operations will cause historical
@@ -1584,14 +1868,13 @@ cannot be updated. If set to true, no historical versions will be kept. The serv
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enable_history_import_python">
 <a href="#state_enable_history_import_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>history_<wbr>import</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow the bulk import API to accept history bundles and directly insert historical resource
 versions into the FHIR store. Importing resource histories creates resource interactions that appear to have
@@ -1600,14 +1883,13 @@ will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enable_update_create_python">
 <a href="#state_enable_update_create_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>update_<wbr>create</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this FHIR store has the updateCreate capability. This determines if the client can use an Update
 operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through
@@ -1616,14 +1898,13 @@ logs with appropriate levels of care if client-specified resource IDs contain se
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}User-supplied key-value pairs used to organize FHIR stores.
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must
@@ -1634,74 +1915,68 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notification_config_python">
 <a href="#state_notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorenotificationconfig">Dict[Fhir<wbr>Store<wbr>Notification<wbr>Config]</a></span>
+        <span class="property-type"><a href="#fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A nested object resource  Structure is documented below.
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stream_configs_python">
 <a href="#state_stream_configs_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfig">List[Fhir<wbr>Store<wbr>Stream<wbr>Config]</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfig">Sequence[Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of streaming configs that configure the destinations of streaming export for every resource mutation in
 this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next
 resource mutation is streamed to the new location in addition to the existing ones. When a location is removed
 from the list, the server stops streaming to that location. Before adding a new config, you must add the required
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
-the order of dozens of seconds) is expected before the results show up in the streaming destination.  Structure is documented below.
+the order of dozens of seconds) is expected before the results show up in the streaming destination.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FHIR specification version.
+Default value is `STU3`.
+Possible values are `DSTU2`, `STU3`, and `R4`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1711,20 +1986,8 @@ the order of dozens of seconds) is expected before the results show up in the st
 ## Supporting Types
 
 
+
 <h4 id="fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FhirStoreNotificationConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FhirStoreNotificationConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreNotificationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreNotificationConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.FhirStoreNotificationConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.FhirStoreNotificationConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1733,9 +1996,9 @@ the order of dozens of seconds) is expected before the results show up in the st
             title="Required">
         <span id="pubsubtopic_csharp">
 <a href="#pubsubtopic_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
 PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
@@ -1744,10 +2007,8 @@ was published. Notifications are only sent if the topic is non-empty. Topic name
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1756,9 +2017,9 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
             title="Required">
         <span id="pubsubtopic_go">
 <a href="#pubsubtopic_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
 PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
@@ -1767,10 +2028,8 @@ was published. Notifications are only sent if the topic is non-empty. Topic name
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1779,9 +2038,9 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
             title="Required">
         <span id="pubsubtopic_nodejs">
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
 PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
@@ -1790,21 +2049,19 @@ was published. Notifications are only sent if the topic is non-empty. Topic name
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="pubsubtopic_python">
-<a href="#pubsubtopic_python" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
-</span> 
+        <span id="pubsub_topic_python">
+<a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
 PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
@@ -1813,28 +2070,10 @@ was published. Notifications are only sent if the topic is non-empty. Topic name
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="fhirstorestreamconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FhirStoreStreamConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FhirStoreStreamConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreStreamConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreStreamConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.FhirStoreStreamConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.FhirStoreStreamConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1843,7 +2082,7 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
             title="Required">
         <span id="bigquerydestination_csharp">
 <a href="#bigquerydestination_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
     </dt>
@@ -1851,25 +2090,23 @@ Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that s
 The output is organized in one table per resource type. The server reuses the existing tables (if any) that
 are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
 resource type, the server attempts to create one.
-See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.  Structure is documented below.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcetypes_csharp">
 <a href="#resourcetypes_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See
 https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
 an empty list as an intent to stream all the supported resource types in this FHIR store.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1878,7 +2115,7 @@ an empty list as an intent to stream all the supported resource types in this FH
             title="Required">
         <span id="bigquerydestination_go">
 <a href="#bigquerydestination_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
     </dt>
@@ -1886,25 +2123,23 @@ an empty list as an intent to stream all the supported resource types in this FH
 The output is organized in one table per resource type. The server reuses the existing tables (if any) that
 are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
 resource type, the server attempts to create one.
-See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.  Structure is documented below.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcetypes_go">
 <a href="#resourcetypes_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See
 https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
 an empty list as an intent to stream all the supported resource types in this FHIR store.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1913,7 +2148,7 @@ an empty list as an intent to stream all the supported resource types in this FH
             title="Required">
         <span id="bigquerydestination_nodejs">
 <a href="#bigquerydestination_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</a></span>
     </dt>
@@ -1921,78 +2156,58 @@ an empty list as an intent to stream all the supported resource types in this FH
 The output is organized in one table per resource type. The server reuses the existing tables (if any) that
 are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
 resource type, the server attempts to create one.
-See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.  Structure is documented below.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcetypes_nodejs">
 <a href="#resourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See
 https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
 an empty list as an intent to stream all the supported resource types in this FHIR store.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="bigquerydestination_python">
-<a href="#bigquerydestination_python" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
-</span> 
+        <span id="bigquery_destination_python">
+<a href="#bigquery_destination_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>destination</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Dict[Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination]</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The destination BigQuery structure that contains both the dataset location and corresponding schema config.
 The output is organized in one table per resource type. The server reuses the existing tables (if any) that
 are named after the resource types, e.g. "Patient", "Observation". When there is no existing table for a given
 resource type, the server attempts to create one.
-See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.  Structure is documented below.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="resourcetypes_python">
-<a href="#resourcetypes_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
-</span> 
+        <span id="resource_types_python">
+<a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See
 https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
 an empty list as an intent to stream all the supported resource types in this FHIR store.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FhirStoreStreamConfigBigqueryDestination">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FhirStoreStreamConfigBigqueryDestination">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreStreamConfigBigqueryDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreStreamConfigBigqueryDestinationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.FhirStoreStreamConfigBigqueryDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.FhirStoreStreamConfigBigqueryDestination.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2001,27 +2216,25 @@ an empty list as an intent to stream all the supported resource types in this FH
             title="Required">
         <span id="dataseturi_csharp">
 <a href="#dataseturi_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="schemaconfig_csharp">
 <a href="#schemaconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration for the exported BigQuery schema.  Structure is documented below.
+    <dd>{{% md %}}The configuration for the exported BigQuery schema.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2030,27 +2243,25 @@ an empty list as an intent to stream all the supported resource types in this FH
             title="Required">
         <span id="dataseturi_go">
 <a href="#dataseturi_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="schemaconfig_go">
 <a href="#schemaconfig_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The configuration for the exported BigQuery schema.  Structure is documented below.
+    <dd>{{% md %}}The configuration for the exported BigQuery schema.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2059,74 +2270,54 @@ an empty list as an intent to stream all the supported resource types in this FH
             title="Required">
         <span id="dataseturi_nodejs">
 <a href="#dataseturi_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="schemaconfig_nodejs">
 <a href="#schemaconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}The configuration for the exported BigQuery schema.  Structure is documented below.
+    <dd>{{% md %}}The configuration for the exported BigQuery schema.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="dataseturi_python">
-<a href="#dataseturi_python" style="color: inherit; text-decoration: inherit;">dataset<wbr>Uri</a>
-</span> 
+        <span id="dataset_uri_python">
+<a href="#dataset_uri_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>uri</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="schemaconfig_python">
-<a href="#schemaconfig_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Config</a>
-</span> 
+        <span id="schema_config_python">
+<a href="#schema_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>config</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Dict[Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config]</a></span>
+        <span class="property-type"><a href="#fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The configuration for the exported BigQuery schema.  Structure is documented below.
+    <dd>{{% md %}}The configuration for the exported BigQuery schema.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FhirStoreStreamConfigBigqueryDestinationSchemaConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FhirStoreStreamConfigBigqueryDestinationSchemaConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/healthcare?tab=doc#FhirStoreStreamConfigBigqueryDestinationSchemaConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Inputs.FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.Outputs.FhirStoreStreamConfigBigqueryDestinationSchemaConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2135,32 +2326,31 @@ an empty list as an intent to stream all the supported resource types in this FH
             title="Required">
         <span id="recursivestructuredepth_csharp">
 <a href="#recursivestructuredepth_csharp" style="color: inherit; text-decoration: inherit;">Recursive<wbr>Structure<wbr>Depth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
 resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
 concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
 value 2. The maximum depth allowed is 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schematype_csharp">
 <a href="#schematype_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Only ANALYTICS is supported at this time.
 * ANALYTICS: Analytics schema defined by the FHIR community.
 See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+Default value is `ANALYTICS`.
+Possible values are `ANALYTICS`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2169,32 +2359,31 @@ See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
             title="Required">
         <span id="recursivestructuredepth_go">
 <a href="#recursivestructuredepth_go" style="color: inherit; text-decoration: inherit;">Recursive<wbr>Structure<wbr>Depth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
 resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
 concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
 value 2. The maximum depth allowed is 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schematype_go">
 <a href="#schematype_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Only ANALYTICS is supported at this time.
 * ANALYTICS: Analytics schema defined by the FHIR community.
 See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+Default value is `ANALYTICS`.
+Possible values are `ANALYTICS`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2203,70 +2392,76 @@ See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
             title="Required">
         <span id="recursivestructuredepth_nodejs">
 <a href="#recursivestructuredepth_nodejs" style="color: inherit; text-decoration: inherit;">recursive<wbr>Structure<wbr>Depth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
 resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
 concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
 value 2. The maximum depth allowed is 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schematype_nodejs">
 <a href="#schematype_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Only ANALYTICS is supported at this time.
 * ANALYTICS: Analytics schema defined by the FHIR community.
 See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+Default value is `ANALYTICS`.
+Possible values are `ANALYTICS`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="recursivestructuredepth_python">
-<a href="#recursivestructuredepth_python" style="color: inherit; text-decoration: inherit;">recursive<wbr>Structure<wbr>Depth</a>
-</span> 
+        <span id="recursive_structure_depth_python">
+<a href="#recursive_structure_depth_python" style="color: inherit; text-decoration: inherit;">recursive_<wbr>structure_<wbr>depth</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
 resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
 concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
 value 2. The maximum depth allowed is 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="schematype_python">
-<a href="#schematype_python" style="color: inherit; text-decoration: inherit;">schema<wbr>Type</a>
-</span> 
+        <span id="schema_type_python">
+<a href="#schema_type_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>type</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the output schema type. Only ANALYTICS is supported at this time.
 * ANALYTICS: Analytics schema defined by the FHIR community.
 See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
+Default value is `ANALYTICS`.
+Possible values are `ANALYTICS`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+FhirStore can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:healthcare/fhirStore:FhirStore default {{dataset}}/fhirStores/{{name}}
+```
 
-
+```sh
+ $ pulumi import gcp:healthcare/fhirStore:FhirStore default {{dataset}}/{{name}}
+```
 
 
 
@@ -2278,6 +2473,6 @@ See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

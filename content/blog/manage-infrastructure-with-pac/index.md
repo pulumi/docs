@@ -17,7 +17,7 @@ In an [earlier article]({{< relref "/blog/getting-started-with-pac" >}}), we int
 
 <!--more-->
 
-[Gareth Rushgrove](http://twitter.com/garethr) said in a QCon [presentation](https://www.infoq.com/presentations/policy-as-code/):
+[Gareth Rushgrove](https://twitter.com/garethr) said in a QCon [presentation](https://www.infoq.com/presentations/policy-as-code/):
 
 > “My policy kit doesn’t need to just be about bits on disk and packages, and files, and my SSH config, and my firewall rules, and my network rules. It can be about my cloud instances and how they’re actually configured and set up at the API level. Ultimately, there’s an API somewhere, and I have a bunch of resources, and I want to set some policies about them.”
 

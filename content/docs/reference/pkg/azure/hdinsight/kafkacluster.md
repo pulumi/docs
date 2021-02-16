@@ -1,8 +1,8 @@
 
 ---
 title: "KafkaCluster"
-title_tag: "Resource KafkaCluster | Module hdinsight | Package Azure"
-meta_desc: "Explore the KafkaCluster resource of the hdinsight module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a HDInsight Kafka Cluster."
+title_tag: "azure.hdinsight.KafkaCluster"
+meta_desc: "Documentation for the azure.hdinsight.KafkaCluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -202,38 +202,38 @@ example_kafka_cluster = azure.hdinsight.KafkaCluster("exampleKafkaCluster",
     location=example_resource_group.location,
     cluster_version="4.0",
     tier="Standard",
-    component_version={
-        "kafka": "2.1",
-    },
-    gateway={
-        "enabled": True,
-        "username": "acctestusrgw",
-        "password": "Password123!",
-    },
-    storage_accounts=[{
-        "storage_container_id": example_container.id,
-        "storage_account_key": example_account.primary_access_key,
-        "isDefault": True,
-    }],
-    roles={
-        "headNode": {
-            "vm_size": "Standard_D3_V2",
-            "username": "acctestusrvm",
-            "password": "AccTestvdSC4daf986!",
-        },
-        "workerNode": {
-            "vm_size": "Standard_D3_V2",
-            "username": "acctestusrvm",
-            "password": "AccTestvdSC4daf986!",
-            "numberOfDisksPerNode": 3,
-            "targetInstanceCount": 3,
-        },
-        "zookeeperNode": {
-            "vm_size": "Standard_D3_V2",
-            "username": "acctestusrvm",
-            "password": "AccTestvdSC4daf986!",
-        },
-    })
+    component_version=azure.hdinsight.KafkaClusterComponentVersionArgs(
+        kafka="2.1",
+    ),
+    gateway=azure.hdinsight.KafkaClusterGatewayArgs(
+        enabled=True,
+        username="acctestusrgw",
+        password="Password123!",
+    ),
+    storage_accounts=[azure.hdinsight.KafkaClusterStorageAccountArgs(
+        storage_container_id=example_container.id,
+        storage_account_key=example_account.primary_access_key,
+        is_default=True,
+    )],
+    roles=azure.hdinsight.KafkaClusterRolesArgs(
+        head_node=azure.hdinsight.KafkaClusterRolesHeadNodeArgs(
+            vm_size="Standard_D3_V2",
+            username="acctestusrvm",
+            password="AccTestvdSC4daf986!",
+        ),
+        worker_node=azure.hdinsight.KafkaClusterRolesWorkerNodeArgs(
+            vm_size="Standard_D3_V2",
+            username="acctestusrvm",
+            password="AccTestvdSC4daf986!",
+            number_of_disks_per_node=3,
+            target_instance_count=3,
+        ),
+        zookeeper_node=azure.hdinsight.KafkaClusterRolesZookeeperNodeArgs(
+            vm_size="Standard_D3_V2",
+            username="acctestusrvm",
+            password="AccTestvdSC4daf986!",
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -305,19 +305,19 @@ const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("exampleKafkaCluste
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/hdinsight/#KafkaCluster">KafkaCluster</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/hdinsight/#KafkaClusterArgs">KafkaClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/hdinsight/#KafkaCluster">KafkaCluster</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/hdinsight/#KafkaClusterArgs">KafkaClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hdinsight/#pulumi_azure.hdinsight.KafkaCluster">KafkaCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterComponentVersion]]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterGateway]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterMetastores]]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterMonitor]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterRoles]]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterStorageAccountGen2]]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[KafkaClusterStorageAccount]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/hdinsight/#pulumi_azure.hdinsight.KafkaCluster">KafkaCluster</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterComponentVersionArgs]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterGatewayArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMetastoresArgs]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMonitorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_proxy</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterRestProxyArgs]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterRolesArgs]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterStorageAccountGen2Args]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaClusterStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaCluster">NewKafkaCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterArgs">KafkaClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaCluster">KafkaCluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaCluster">NewKafkaCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterArgs">KafkaClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaCluster">KafkaCluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.KafkaCluster.html">KafkaCluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.KafkaClusterArgs.html">KafkaClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.KafkaCluster.html">KafkaCluster</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.KafkaClusterArgs.html">KafkaClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -328,7 +328,7 @@ const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("exampleKafkaCluste
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -397,7 +397,7 @@ const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("exampleKafkaCluste
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -436,7 +436,7 @@ const exampleKafkaCluster = new azure.hdinsight.KafkaCluster("exampleKafkaCluste
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -477,7 +477,6 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -485,158 +484,153 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="clusterversion_csharp">
 <a href="#clusterversion_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="componentversion_csharp">
 <a href="#componentversion_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="gateway_csharp">
 <a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metastores_csharp">
 <a href="#metastores_csharp" style="color: inherit; text-decoration: inherit;">Metastores</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monitor_csharp">
 <a href="#monitor_csharp" style="color: inherit; text-decoration: inherit;">Monitor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restproxy_csharp">
+<a href="#restproxy_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `rest_proxy` block as defined below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccountgen2_csharp">
 <a href="#storageaccountgen2_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Gen2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_csharp">
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterstorageaccount">List&lt;Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlsminversion_csharp">
 <a href="#tlsminversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -645,158 +639,153 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="clusterversion_go">
 <a href="#clusterversion_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="componentversion_go">
 <a href="#componentversion_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="gateway_go">
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metastores_go">
 <a href="#metastores_go" style="color: inherit; text-decoration: inherit;">Metastores</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monitor_go">
 <a href="#monitor_go" style="color: inherit; text-decoration: inherit;">Monitor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restproxy_go">
+<a href="#restproxy_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy</a></span>
+    </dt>
+    <dd>{{% md %}}A `rest_proxy` block as defined below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccountgen2_go">
 <a href="#storageaccountgen2_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Gen2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_go">
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterstorageaccount">[]Kafka<wbr>Cluster<wbr>Storage<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlsminversion_go">
 <a href="#tlsminversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -805,158 +794,153 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="clusterversion_nodejs">
 <a href="#clusterversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="componentversion_nodejs">
 <a href="#componentversion_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="gateway_nodejs">
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metastores_nodejs">
 <a href="#metastores_nodejs" style="color: inherit; text-decoration: inherit;">metastores</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monitor_nodejs">
 <a href="#monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restproxy_nodejs">
+<a href="#restproxy_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy</a></span>
+    </dt>
+    <dd>{{% md %}}A `rest_proxy` block as defined below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccountgen2_nodejs">
 <a href="#storageaccountgen2_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Gen2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_nodejs">
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterstorageaccount">Kafka<wbr>Cluster<wbr>Storage<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlsminversion_nodejs">
 <a href="#tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -965,167 +949,158 @@ The KafkaCluster resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="cluster_version_python">
 <a href="#cluster_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="component_version_python">
 <a href="#component_version_python" style="color: inherit; text-decoration: inherit;">component_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustercomponentversion">Dict[Kafka<wbr>Cluster<wbr>Component<wbr>Version]</a></span>
+        <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="gateway_python">
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustergateway">Dict[Kafka<wbr>Cluster<wbr>Gateway]</a></span>
+        <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroles">Dict[Kafka<wbr>Cluster<wbr>Roles]</a></span>
+        <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metastores_python">
 <a href="#metastores_python" style="color: inherit; text-decoration: inherit;">metastores</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastores">Dict[Kafka<wbr>Cluster<wbr>Metastores]</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monitor_python">
 <a href="#monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermonitor">Dict[Kafka<wbr>Cluster<wbr>Monitor]</a></span>
+        <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rest_proxy_python">
+<a href="#rest_proxy_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `rest_proxy` block as defined below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storage_account_gen2_python">
 <a href="#storage_account_gen2_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>gen2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Dict[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2]</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_accounts_python">
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccount">List[Kafka<wbr>Cluster<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccount">Sequence[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tls_min_version_python">
 <a href="#tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the KafkaCluster resource produces the following output properties:
-
 
 
 
@@ -1136,37 +1111,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="httpsendpoint_csharp">
 <a href="#httpsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="kafkarestproxyendpoint_csharp">
+<a href="#kafkarestproxyendpoint_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Proxy<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Kafka Cluster.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sshendpoint_csharp">
 <a href="#sshendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1175,37 +1156,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="httpsendpoint_go">
 <a href="#httpsendpoint_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="kafkarestproxyendpoint_go">
+<a href="#kafkarestproxyendpoint_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Proxy<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Kafka Cluster.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sshendpoint_go">
 <a href="#sshendpoint_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1214,37 +1201,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="httpsendpoint_nodejs">
 <a href="#httpsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="kafkarestproxyendpoint_nodejs">
+<a href="#kafkarestproxyendpoint_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest<wbr>Proxy<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Kafka Cluster.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sshendpoint_nodejs">
 <a href="#sshendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1253,40 +1246,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="https_endpoint_python">
 <a href="#https_endpoint_python" style="color: inherit; text-decoration: inherit;">https_<wbr>endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="kafka_rest_proxy_endpoint_python">
+<a href="#kafka_rest_proxy_endpoint_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>proxy_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Kafka Cluster.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="ssh_endpoint_python">
 <a href="#ssh_endpoint_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1296,20 +1292,20 @@ Get an existing KafkaCluster resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/hdinsight/#KafkaClusterState">KafkaClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/hdinsight/#KafkaCluster">KafkaCluster</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/hdinsight/#KafkaClusterState">KafkaClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/hdinsight/#KafkaCluster">KafkaCluster</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterComponentVersion]]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterGateway]]</span> = None<span class="p">, </span><span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterMetastores]]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterMonitor]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterRoles]]</span> = None<span class="p">, </span><span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[Dict[KafkaClusterStorageAccountGen2]]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[List[KafkaClusterStorageAccount]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Dict[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KafkaCluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">component_version</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterComponentVersionArgs]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterGatewayArgs]</span> = None<span class="p">, </span><span class="nx">https_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_rest_proxy_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metastores</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMetastoresArgs]</span> = None<span class="p">, </span><span class="nx">monitor</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterMonitorArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rest_proxy</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterRestProxyArgs]</span> = None<span class="p">, </span><span class="nx">roles</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterRolesArgs]</span> = None<span class="p">, </span><span class="nx">ssh_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_gen2</span><span class="p">:</span> <span class="nx">Optional[KafkaClusterStorageAccountGen2Args]</span> = None<span class="p">, </span><span class="nx">storage_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaClusterStorageAccountArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tls_min_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> KafkaCluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKafkaCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterState">KafkaClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaCluster">KafkaCluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKafkaCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterState">KafkaClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaCluster">KafkaCluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.KafkaCluster.html">KafkaCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.KafkaClusterState.html">KafkaClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.KafkaCluster.html">KafkaCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.KafkaClusterState.html">KafkaClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1411,7 +1407,6 @@ Get an existing KafkaCluster resource's state with the given name, ID, and optio
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1419,180 +1414,183 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_clusterversion_csharp">
 <a href="#state_clusterversion_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_componentversion_csharp">
 <a href="#state_componentversion_csharp" style="color: inherit; text-decoration: inherit;">Component<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gateway_csharp">
 <a href="#state_gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_httpsendpoint_csharp">
 <a href="#state_httpsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kafkarestproxyendpoint_csharp">
+<a href="#state_kafkarestproxyendpoint_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Proxy<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Kafka Cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metastores_csharp">
 <a href="#state_metastores_csharp" style="color: inherit; text-decoration: inherit;">Metastores</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_monitor_csharp">
 <a href="#state_monitor_csharp" style="color: inherit; text-decoration: inherit;">Monitor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_restproxy_csharp">
+<a href="#state_restproxy_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `rest_proxy` block as defined below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_roles_csharp">
 <a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sshendpoint_csharp">
 <a href="#state_sshendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountgen2_csharp">
 <a href="#state_storageaccountgen2_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Gen2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageaccounts_csharp">
 <a href="#state_storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterstorageaccount">List&lt;Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tier_csharp">
 <a href="#state_tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlsminversion_csharp">
 <a href="#state_tlsminversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1601,180 +1599,183 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_clusterversion_go">
 <a href="#state_clusterversion_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_componentversion_go">
 <a href="#state_componentversion_go" style="color: inherit; text-decoration: inherit;">Component<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gateway_go">
 <a href="#state_gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_httpsendpoint_go">
 <a href="#state_httpsendpoint_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kafkarestproxyendpoint_go">
+<a href="#state_kafkarestproxyendpoint_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Proxy<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Kafka Cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metastores_go">
 <a href="#state_metastores_go" style="color: inherit; text-decoration: inherit;">Metastores</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_monitor_go">
 <a href="#state_monitor_go" style="color: inherit; text-decoration: inherit;">Monitor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_restproxy_go">
+<a href="#state_restproxy_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy</a></span>
+    </dt>
+    <dd>{{% md %}}A `rest_proxy` block as defined below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_roles_go">
 <a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sshendpoint_go">
 <a href="#state_sshendpoint_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountgen2_go">
 <a href="#state_storageaccountgen2_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Gen2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageaccounts_go">
 <a href="#state_storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterstorageaccount">[]Kafka<wbr>Cluster<wbr>Storage<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tier_go">
 <a href="#state_tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlsminversion_go">
 <a href="#state_tlsminversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1783,180 +1784,183 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_clusterversion_nodejs">
 <a href="#state_clusterversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_componentversion_nodejs">
 <a href="#state_componentversion_nodejs" style="color: inherit; text-decoration: inherit;">component<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gateway_nodejs">
 <a href="#state_gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_httpsendpoint_nodejs">
 <a href="#state_httpsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kafkarestproxyendpoint_nodejs">
+<a href="#state_kafkarestproxyendpoint_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest<wbr>Proxy<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Kafka Cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metastores_nodejs">
 <a href="#state_metastores_nodejs" style="color: inherit; text-decoration: inherit;">metastores</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_monitor_nodejs">
 <a href="#state_monitor_nodejs" style="color: inherit; text-decoration: inherit;">monitor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_restproxy_nodejs">
+<a href="#state_restproxy_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy</a></span>
+    </dt>
+    <dd>{{% md %}}A `rest_proxy` block as defined below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_roles_nodejs">
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sshendpoint_nodejs">
 <a href="#state_sshendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountgen2_nodejs">
 <a href="#state_storageaccountgen2_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Gen2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storageaccounts_nodejs">
 <a href="#state_storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterstorageaccount">Kafka<wbr>Cluster<wbr>Storage<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tier_nodejs">
 <a href="#state_tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlsminversion_nodejs">
 <a href="#state_tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1965,177 +1969,181 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_cluster_version_python">
 <a href="#state_cluster_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Version of HDInsights which should be used for this Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_component_version_python">
 <a href="#state_component_version_python" style="color: inherit; text-decoration: inherit;">component_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustercomponentversion">Dict[Kafka<wbr>Cluster<wbr>Component<wbr>Version]</a></span>
+        <span class="property-type"><a href="#kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `component_version` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_gateway_python">
 <a href="#state_gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustergateway">Dict[Kafka<wbr>Cluster<wbr>Gateway]</a></span>
+        <span class="property-type"><a href="#kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `gateway` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_https_endpoint_python">
 <a href="#state_https_endpoint_python" style="color: inherit; text-decoration: inherit;">https_<wbr>endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_kafka_rest_proxy_endpoint_python">
+<a href="#state_kafka_rest_proxy_endpoint_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>proxy_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Kafka Rest Proxy Endpoint for this HDInsight Kafka Cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Azure Region which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metastores_python">
 <a href="#state_metastores_python" style="color: inherit; text-decoration: inherit;">metastores</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastores">Dict[Kafka<wbr>Cluster<wbr>Metastores]</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `metastores` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_monitor_python">
 <a href="#state_monitor_python" style="color: inherit; text-decoration: inherit;">monitor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermonitor">Dict[Kafka<wbr>Cluster<wbr>Monitor]</a></span>
+        <span class="property-type"><a href="#kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `monitor` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_rest_proxy_python">
+<a href="#state_rest_proxy_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>proxy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `rest_proxy` block as defined below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_roles_python">
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroles">Dict[Kafka<wbr>Cluster<wbr>Roles]</a></span>
+        <span class="property-type"><a href="#kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `roles` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ssh_endpoint_python">
 <a href="#state_ssh_endpoint_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSH Connectivity Endpoint for this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storage_account_gen2_python">
 <a href="#state_storage_account_gen2_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>gen2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Dict[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2]</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_account_gen2` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_storage_accounts_python">
 <a href="#state_storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterstorageaccount">List[Kafka<wbr>Cluster<wbr>Storage<wbr>Account]</a></span>
+        <span class="property-type"><a href="#kafkaclusterstorageaccount">Sequence[Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Tags which should be assigned to this HDInsight Kafka Cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tier_python">
 <a href="#state_tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Tier which should be used for this HDInsight Kafka Cluster. Possible values are `Standard` or `Premium`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tls_min_version_python">
 <a href="#state_tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2144,11 +2152,8 @@ The following state arguments are supported:
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="kafkaclustercomponentversion">Kafka<wbr>Cluster<wbr>Component<wbr>Version</h4>
@@ -2159,11 +2164,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterComponentVersionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterComponentVersionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterComponentVersionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterComponentVersion.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2173,16 +2177,14 @@ The following state arguments are supported:
             title="Required">
         <span id="kafka_csharp">
 <a href="#kafka_csharp" style="color: inherit; text-decoration: inherit;">Kafka</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Kafka which should be used for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2191,16 +2193,14 @@ The following state arguments are supported:
             title="Required">
         <span id="kafka_go">
 <a href="#kafka_go" style="color: inherit; text-decoration: inherit;">Kafka</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Kafka which should be used for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2209,16 +2209,14 @@ The following state arguments are supported:
             title="Required">
         <span id="kafka_nodejs">
 <a href="#kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Kafka which should be used for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2227,19 +2225,14 @@ The following state arguments are supported:
             title="Required">
         <span id="kafka_python">
 <a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Kafka which should be used for this HDInsight Kafka Cluster. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="kafkaclustergateway">Kafka<wbr>Cluster<wbr>Gateway</h4>
 {{% choosable language nodejs %}}
@@ -2249,11 +2242,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterGatewayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterGatewayOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterGatewayArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterGateway.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2263,38 +2255,34 @@ The following state arguments are supported:
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used for the Ambari Portal.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username used for the Ambari Portal. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Ambari portal enabled? The HDInsight API doesn't support disabling gateway anymore.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}HDInsight doesn&#39;t support disabling gateway anymore{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2303,38 +2291,34 @@ The following state arguments are supported:
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used for the Ambari Portal.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username used for the Ambari Portal. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Ambari portal enabled? The HDInsight API doesn't support disabling gateway anymore.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}HDInsight doesn&#39;t support disabling gateway anymore{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2343,38 +2327,34 @@ The following state arguments are supported:
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used for the Ambari Portal.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username used for the Ambari Portal. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the Ambari portal enabled? The HDInsight API doesn't support disabling gateway anymore.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}HDInsight doesn&#39;t support disabling gateway anymore{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2383,41 +2363,34 @@ The following state arguments are supported:
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password used for the Ambari Portal.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username used for the Ambari Portal. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Ambari portal enabled? The HDInsight API doesn't support disabling gateway anymore.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}HDInsight doesn&#39;t support disabling gateway anymore{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="kafkaclustermetastores">Kafka<wbr>Cluster<wbr>Metastores</h4>
 {{% choosable language nodejs %}}
@@ -2427,11 +2400,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterMetastoresArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterMetastoresOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterMetastoresArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterMetastores.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2441,38 +2413,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="ambari_csharp">
 <a href="#ambari_csharp" style="color: inherit; text-decoration: inherit;">Ambari</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastoresambari">Kafka<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hive_csharp">
 <a href="#hive_csharp" style="color: inherit; text-decoration: inherit;">Hive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastoreshive">Kafka<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oozie_csharp">
 <a href="#oozie_csharp" style="color: inherit; text-decoration: inherit;">Oozie</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastoresoozie">Kafka<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2481,38 +2449,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="ambari_go">
 <a href="#ambari_go" style="color: inherit; text-decoration: inherit;">Ambari</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastoresambari">Kafka<wbr>Cluster<wbr>Metastores<wbr>Ambari</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hive_go">
 <a href="#hive_go" style="color: inherit; text-decoration: inherit;">Hive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastoreshive">Kafka<wbr>Cluster<wbr>Metastores<wbr>Hive</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oozie_go">
 <a href="#oozie_go" style="color: inherit; text-decoration: inherit;">Oozie</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastoresoozie">Kafka<wbr>Cluster<wbr>Metastores<wbr>Oozie</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2521,38 +2485,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="ambari_nodejs">
 <a href="#ambari_nodejs" style="color: inherit; text-decoration: inherit;">ambari</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastoresambari">Kafka<wbr>Cluster<wbr>Metastores<wbr>Ambari</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hive_nodejs">
 <a href="#hive_nodejs" style="color: inherit; text-decoration: inherit;">hive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastoreshive">Kafka<wbr>Cluster<wbr>Metastores<wbr>Hive</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oozie_nodejs">
 <a href="#oozie_nodejs" style="color: inherit; text-decoration: inherit;">oozie</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclustermetastoresoozie">Kafka<wbr>Cluster<wbr>Metastores<wbr>Oozie</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2561,41 +2521,34 @@ The following state arguments are supported:
             title="Optional">
         <span id="ambari_python">
 <a href="#ambari_python" style="color: inherit; text-decoration: inherit;">ambari</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastoresambari">Dict[Kafka<wbr>Cluster<wbr>Metastores<wbr>Ambari]</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastoresambari">Kafka<wbr>Cluster<wbr>Metastores<wbr>Ambari<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `ambari` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hive_python">
 <a href="#hive_python" style="color: inherit; text-decoration: inherit;">hive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastoreshive">Dict[Kafka<wbr>Cluster<wbr>Metastores<wbr>Hive]</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastoreshive">Kafka<wbr>Cluster<wbr>Metastores<wbr>Hive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hive` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oozie_python">
 <a href="#oozie_python" style="color: inherit; text-decoration: inherit;">oozie</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclustermetastoresoozie">Dict[Kafka<wbr>Cluster<wbr>Metastores<wbr>Oozie]</a></span>
+        <span class="property-type"><a href="#kafkaclustermetastoresoozie">Kafka<wbr>Cluster<wbr>Metastores<wbr>Oozie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oozie` block as defined below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="kafkaclustermetastoresambari">Kafka<wbr>Cluster<wbr>Metastores<wbr>Ambari</h4>
 {{% choosable language nodejs %}}
@@ -2605,11 +2558,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterMetastoresAmbariArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterMetastoresAmbariOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterMetastoresAmbariArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterMetastoresAmbari.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2619,49 +2571,44 @@ The following state arguments are supported:
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Ambari metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_csharp">
 <a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Ambari metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2670,49 +2617,44 @@ The following state arguments are supported:
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Ambari metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_go">
 <a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Ambari metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2721,49 +2663,44 @@ The following state arguments are supported:
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Ambari metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_nodejs">
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Ambari metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2772,52 +2709,44 @@ The following state arguments are supported:
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The external Ambari metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_python">
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Ambari metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The external Ambari metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="kafkaclustermetastoreshive">Kafka<wbr>Cluster<wbr>Metastores<wbr>Hive</h4>
 {{% choosable language nodejs %}}
@@ -2827,11 +2756,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterMetastoresHiveArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterMetastoresHiveOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterMetastoresHiveArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterMetastoresHive.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2841,49 +2769,44 @@ The following state arguments are supported:
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_csharp">
 <a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2892,49 +2815,44 @@ The following state arguments are supported:
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_go">
 <a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2943,49 +2861,44 @@ The following state arguments are supported:
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_nodejs">
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2994,52 +2907,44 @@ The following state arguments are supported:
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_python">
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Hive metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The external Hive metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="kafkaclustermetastoresoozie">Kafka<wbr>Cluster<wbr>Metastores<wbr>Oozie</h4>
 {{% choosable language nodejs %}}
@@ -3049,11 +2954,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterMetastoresOozieArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterMetastoresOozieOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterMetastoresOozieArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterMetastoresOozie.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3063,49 +2967,44 @@ The following state arguments are supported:
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_csharp">
 <a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3114,49 +3013,44 @@ The following state arguments are supported:
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_go">
 <a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3165,49 +3059,44 @@ The following state arguments are supported:
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_nodejs">
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3216,52 +3105,44 @@ The following state arguments are supported:
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL database.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL server admin password.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_python">
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The external Oozie metastore's existing SQL server admin username.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="kafkaclustermonitor">Kafka<wbr>Cluster<wbr>Monitor</h4>
 {{% choosable language nodejs %}}
@@ -3271,11 +3152,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterMonitorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterMonitorOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterMonitorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterMonitor.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3285,27 +3165,24 @@ The following state arguments are supported:
             title="Required">
         <span id="loganalyticsworkspaceid_csharp">
 <a href="#loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace ID.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primarykey_csharp">
 <a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3314,27 +3191,24 @@ The following state arguments are supported:
             title="Required">
         <span id="loganalyticsworkspaceid_go">
 <a href="#loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace ID.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primarykey_go">
 <a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3343,27 +3217,24 @@ The following state arguments are supported:
             title="Required">
         <span id="loganalyticsworkspaceid_nodejs">
 <a href="#loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace ID.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primarykey_nodejs">
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3372,30 +3243,102 @@ The following state arguments are supported:
             title="Required">
         <span id="log_analytics_workspace_id_python">
 <a href="#log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace ID.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primary_key_python">
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Operations Management Suite (OMS) workspace key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="kafkaclusterrestproxy">Kafka<wbr>Cluster<wbr>Rest<wbr>Proxy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterRestProxy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterRestProxy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterRestProxyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterRestProxyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterRestProxyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterRestProxy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="securitygroupid_csharp">
+<a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Security Group ID.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securitygroupid_go">
+<a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Security Group ID.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="securitygroupid_nodejs">
+<a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Security Group ID.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="security_group_id_python">
+<a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Azure Active Directory Security Group ID.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="kafkaclusterroles">Kafka<wbr>Cluster<wbr>Roles</h4>
 {{% choosable language nodejs %}}
@@ -3405,11 +3348,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterRolesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterRolesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterRolesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterRoles.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3419,38 +3361,44 @@ The following state arguments are supported:
             title="Required">
         <span id="headnode_csharp">
 <a href="#headnode_csharp" style="color: inherit; text-decoration: inherit;">Head<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterrolesheadnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workernode_csharp">
 <a href="#workernode_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterrolesworkernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zookeepernode_csharp">
 <a href="#zookeepernode_csharp" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterroleszookeepernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkamanagementnode_csharp">
+<a href="#kafkamanagementnode_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Management<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkaclusterroleskafkamanagementnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Kafka<wbr>Management<wbr>Node<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `kafka_management_node` block as defined below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3459,38 +3407,44 @@ The following state arguments are supported:
             title="Required">
         <span id="headnode_go">
 <a href="#headnode_go" style="color: inherit; text-decoration: inherit;">Head<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterrolesheadnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workernode_go">
 <a href="#workernode_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterrolesworkernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zookeepernode_go">
 <a href="#zookeepernode_go" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterroleszookeepernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkamanagementnode_go">
+<a href="#kafkamanagementnode_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Management<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkaclusterroleskafkamanagementnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Kafka<wbr>Management<wbr>Node</a></span>
+    </dt>
+    <dd>{{% md %}}A `kafka_management_node` block as defined below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3499,81 +3453,90 @@ The following state arguments are supported:
             title="Required">
         <span id="headnode_nodejs">
 <a href="#headnode_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterrolesheadnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workernode_nodejs">
 <a href="#workernode_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterrolesworkernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zookeepernode_nodejs">
 <a href="#zookeepernode_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkaclusterroleszookeepernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkamanagementnode_nodejs">
+<a href="#kafkamanagementnode_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Management<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkaclusterroleskafkamanagementnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Kafka<wbr>Management<wbr>Node</a></span>
+    </dt>
+    <dd>{{% md %}}A `kafka_management_node` block as defined below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="headnode_python">
-<a href="#headnode_python" style="color: inherit; text-decoration: inherit;">head<wbr>Node</a>
-</span> 
+        <span id="head_node_python">
+<a href="#head_node_python" style="color: inherit; text-decoration: inherit;">head_<wbr>node</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterrolesheadnode">Dict[Kafka<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node]</a></span>
+        <span class="property-type"><a href="#kafkaclusterrolesheadnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `head_node` block as defined above.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="workernode_python">
-<a href="#workernode_python" style="color: inherit; text-decoration: inherit;">worker<wbr>Node</a>
-</span> 
+        <span id="worker_node_python">
+<a href="#worker_node_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>node</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterrolesworkernode">Dict[Kafka<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node]</a></span>
+        <span class="property-type"><a href="#kafkaclusterrolesworkernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `worker_node` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="zookeepernode_python">
-<a href="#zookeepernode_python" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Node</a>
-</span> 
+        <span id="zookeeper_node_python">
+<a href="#zookeeper_node_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>node</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#kafkaclusterroleszookeepernode">Dict[Kafka<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node]</a></span>
+        <span class="property-type"><a href="#kafkaclusterroleszookeepernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `zookeeper_node` block as defined below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_management_node_python">
+<a href="#kafka_management_node_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>management_<wbr>node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkaclusterroleskafkamanagementnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Kafka<wbr>Management<wbr>Node<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `kafka_management_node` block as defined below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="kafkaclusterrolesheadnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</h4>
 {{% choosable language nodejs %}}
@@ -3583,11 +3546,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterRolesHeadNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterRolesHeadNodeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterRolesHeadNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterRolesHeadNode.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3597,71 +3559,64 @@ The following state arguments are supported:
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkeys_csharp">
 <a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Head Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_csharp">
 <a href="#virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Head Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3670,71 +3625,64 @@ The following state arguments are supported:
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkeys_go">
 <a href="#sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Head Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_go">
 <a href="#virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Head Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3743,71 +3691,64 @@ The following state arguments are supported:
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkeys_nodejs">
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Head Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_nodejs">
 <a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Head Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3816,74 +3757,342 @@ The following state arguments are supported:
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
-</span> 
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Head Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Head Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_network_id_python">
 <a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Head Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="kafkaclusterroleskafkamanagementnode">Kafka<wbr>Cluster<wbr>Roles<wbr>Kafka<wbr>Management<wbr>Node</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KafkaClusterRolesKafkaManagementNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KafkaClusterRolesKafkaManagementNode">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterRolesKafkaManagementNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterRolesKafkaManagementNodeOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterRolesKafkaManagementNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterRolesKafkaManagementNode.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Username of the local administrator for the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="vmsize_csharp">
+<a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Password associated with the local administrator for the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sshkeys_csharp">
+<a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Kafka Management Nodes should be provisioned within. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkid_csharp">
+<a href="#virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Network where the Kafka Management Nodes should be provisioned within. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Username of the local administrator for the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="vmsize_go">
+<a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Password associated with the local administrator for the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sshkeys_go">
+<a href="#sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Kafka Management Nodes should be provisioned within. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkid_go">
+<a href="#virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Network where the Kafka Management Nodes should be provisioned within. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Username of the local administrator for the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="vmsize_nodejs">
+<a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Password associated with the local administrator for the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sshkeys_nodejs">
+<a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Kafka Management Nodes should be provisioned within. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualnetworkid_nodejs">
+<a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Network where the Kafka Management Nodes should be provisioned within. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Username of the local administrator for the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="vm_size_python">
+<a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Password associated with the local administrator for the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Kafka Management Nodes. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Kafka Management Nodes should be provisioned within. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_network_id_python">
+<a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Network where the Kafka Management Nodes should be provisioned within. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="kafkaclusterrolesworkernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</h4>
 {{% choosable language nodejs %}}
@@ -3893,11 +4102,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterRolesWorkerNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterRolesWorkerNodeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterRolesWorkerNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterRolesWorkerNode.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3907,104 +4115,94 @@ The following state arguments are supported:
             title="Required">
         <span id="numberofdiskspernode_csharp">
 <a href="#numberofdiskspernode_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Disks<wbr>Per<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Data Disks which should be assigned to each Worker Node, which can be between 1 and 8. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetinstancecount_csharp">
 <a href="#targetinstancecount_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances which should be run for the Worker Nodes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="mininstancecount_csharp">
 <a href="#mininstancecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances which should be run for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been deprecated from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkeys_csharp">
 <a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_csharp">
 <a href="#virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4013,104 +4211,94 @@ The following state arguments are supported:
             title="Required">
         <span id="numberofdiskspernode_go">
 <a href="#numberofdiskspernode_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Disks<wbr>Per<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Data Disks which should be assigned to each Worker Node, which can be between 1 and 8. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetinstancecount_go">
 <a href="#targetinstancecount_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances which should be run for the Worker Nodes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="mininstancecount_go">
 <a href="#mininstancecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances which should be run for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been deprecated from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkeys_go">
 <a href="#sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_go">
 <a href="#virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4119,213 +4307,190 @@ The following state arguments are supported:
             title="Required">
         <span id="numberofdiskspernode_nodejs">
 <a href="#numberofdiskspernode_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Disks<wbr>Per<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of Data Disks which should be assigned to each Worker Node, which can be between 1 and 8. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetinstancecount_nodejs">
 <a href="#targetinstancecount_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances which should be run for the Worker Nodes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="mininstancecount_nodejs">
 <a href="#mininstancecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances which should be run for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been deprecated from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkeys_nodejs">
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_nodejs">
 <a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="numberofdiskspernode_python">
-<a href="#numberofdiskspernode_python" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Disks<wbr>Per<wbr>Node</a>
-</span> 
+        <span id="number_of_disks_per_node_python">
+<a href="#number_of_disks_per_node_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>disks_<wbr>per_<wbr>node</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Data Disks which should be assigned to each Worker Node, which can be between 1 and 8. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="targetinstancecount_python">
-<a href="#targetinstancecount_python" style="color: inherit; text-decoration: inherit;">target<wbr>Instance<wbr>Count</a>
-</span> 
+        <span id="target_instance_count_python">
+<a href="#target_instance_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>instance_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances which should be run for the Worker Nodes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="mininstancecount_python">
-<a href="#mininstancecount_python" style="color: inherit; text-decoration: inherit;">min<wbr>Instance<wbr>Count</a>
-</span> 
+        <span id="min_instance_count_python">
+<a href="#min_instance_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instance_<wbr>count</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances which should be run for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been deprecated from the API and will be removed in version 3.0 of the provider{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
-</span> 
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Worker Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_network_id_python">
 <a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Worker Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="kafkaclusterroleszookeepernode">Kafka<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</h4>
 {{% choosable language nodejs %}}
@@ -4335,11 +4500,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterRolesZookeeperNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterRolesZookeeperNodeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterRolesZookeeperNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterRolesZookeeperNode.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4349,71 +4513,64 @@ The following state arguments are supported:
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkeys_csharp">
 <a href="#sshkeys_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_csharp">
 <a href="#virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4422,71 +4579,64 @@ The following state arguments are supported:
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkeys_go">
 <a href="#sshkeys_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_go">
 <a href="#virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4495,71 +4645,64 @@ The following state arguments are supported:
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkeys_nodejs">
 <a href="#sshkeys_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_nodejs">
 <a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4568,74 +4711,64 @@ The following state arguments are supported:
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Username of the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="sshkeys_python">
-<a href="#sshkeys_python" style="color: inherit; text-decoration: inherit;">ssh<wbr>Keys</a>
-</span> 
+        <span id="ssh_keys_python">
+<a href="#ssh_keys_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>keys</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of SSH Keys which should be used for the local administrator on the Zookeeper Nodes. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet within the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_network_id_python">
 <a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="kafkaclusterstorageaccount">Kafka<wbr>Cluster<wbr>Storage<wbr>Account</h4>
 {{% choosable language nodejs %}}
@@ -4645,11 +4778,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterStorageAccountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterStorageAccountOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterStorageAccountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterStorageAccount.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4659,38 +4791,34 @@ The following state arguments are supported:
             title="Required">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageaccountkey_csharp">
 <a href="#storageaccountkey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storagecontainerid_csharp">
 <a href="#storagecontainerid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Container. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4699,38 +4827,34 @@ The following state arguments are supported:
             title="Required">
         <span id="isdefault_go">
 <a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageaccountkey_go">
 <a href="#storageaccountkey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storagecontainerid_go">
 <a href="#storagecontainerid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Container<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Container. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4739,81 +4863,70 @@ The following state arguments are supported:
             title="Required">
         <span id="isdefault_nodejs">
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageaccountkey_nodejs">
 <a href="#storageaccountkey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storagecontainerid_nodejs">
 <a href="#storagecontainerid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Container<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Container. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="isdefault_python">
-<a href="#isdefault_python" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
-</span> 
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storage_account_key_python">
 <a href="#storage_account_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storage_container_id_python">
 <a href="#storage_container_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>container_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Container. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="kafkaclusterstorageaccountgen2">Kafka<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</h4>
 {{% choosable language nodejs %}}
@@ -4823,11 +4936,10 @@ The following state arguments are supported:
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterStorageAccountGen2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/hdinsight?tab=doc#KafkaClusterStorageAccountGen2Output">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Inputs.KafkaClusterStorageAccountGen2Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.HDInsight.Outputs.KafkaClusterStorageAccountGen2.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4837,49 +4949,44 @@ The following state arguments are supported:
             title="Required">
         <span id="filesystemid_csharp">
 <a href="#filesystemid_csharp" style="color: inherit; text-decoration: inherit;">Filesystem<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="managedidentityresourceid_csharp">
 <a href="#managedidentityresourceid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of Managed Identity to use for accessing the Gen2 filesystem. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageresourceid_csharp">
 <a href="#storageresourceid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4888,49 +4995,44 @@ The following state arguments are supported:
             title="Required">
         <span id="filesystemid_go">
 <a href="#filesystemid_go" style="color: inherit; text-decoration: inherit;">Filesystem<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="isdefault_go">
 <a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="managedidentityresourceid_go">
 <a href="#managedidentityresourceid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Identity<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of Managed Identity to use for accessing the Gen2 filesystem. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageresourceid_go">
 <a href="#storageresourceid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4939,104 +5041,98 @@ The following state arguments are supported:
             title="Required">
         <span id="filesystemid_nodejs">
 <a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">filesystem<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="isdefault_nodejs">
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="managedidentityresourceid_nodejs">
 <a href="#managedidentityresourceid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Identity<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of Managed Identity to use for accessing the Gen2 filesystem. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageresourceid_nodejs">
 <a href="#storageresourceid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="filesystemid_python">
-<a href="#filesystemid_python" style="color: inherit; text-decoration: inherit;">filesystem<wbr>Id</a>
-</span> 
+        <span id="filesystem_id_python">
+<a href="#filesystem_id_python" style="color: inherit; text-decoration: inherit;">filesystem_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Gen2 Filesystem. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="isdefault_python">
-<a href="#isdefault_python" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
-</span> 
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="managedidentityresourceid_python">
-<a href="#managedidentityresourceid_python" style="color: inherit; text-decoration: inherit;">managed<wbr>Identity<wbr>Resource<wbr>Id</a>
-</span> 
+        <span id="managed_identity_resource_id_python">
+<a href="#managed_identity_resource_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>identity_<wbr>resource_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of Managed Identity to use for accessing the Gen2 filesystem. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
-        <span id="storageresourceid_python">
-<a href="#storageresourceid_python" style="color: inherit; text-decoration: inherit;">storage<wbr>Resource<wbr>Id</a>
-</span> 
+        <span id="storage_resource_id_python">
+<a href="#storage_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>resource_<wbr>id</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Storage Account. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+HDInsight Kafka Clusters can be imported using the `resource id`, e.g.
 
-
-
+```sh
+ $ pulumi import azure:hdinsight/kafkaCluster:KafkaCluster example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.HDInsight/clusters/cluster1
+```
 
 
 

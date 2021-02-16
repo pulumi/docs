@@ -11,6 +11,8 @@ Explore the resources and functions of the projects module in the GCP package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="accessapprovalsettings" title="AccessApprovalSettings"><span class="symbol resource"></span>AccessApprovalSettings</a></li>
+    <li><a href="defaultserviceaccounts" title="DefaultServiceAccounts"><span class="symbol resource"></span>DefaultServiceAccounts</a></li>
     <li><a href="iamauditconfig" title="IAMAuditConfig"><span class="symbol resource"></span>IAMAuditConfig</a></li>
     <li><a href="iambinding" title="IAMBinding"><span class="symbol resource"></span>IAMBinding</a></li>
     <li><a href="iamcustomrole" title="IAMCustomRole"><span class="symbol resource"></span>IAMCustomRole</a></li>
@@ -18,6 +20,7 @@ Explore the resources and functions of the projects module in the GCP package.
     <li><a href="iampolicy" title="IAMPolicy"><span class="symbol resource"></span>IAMPolicy</a></li>
     <li><a href="organizationpolicy" title="OrganizationPolicy"><span class="symbol resource"></span>OrganizationPolicy</a></li>
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
+    <li><a href="serviceidentity" title="ServiceIdentity"><span class="symbol resource"></span>ServiceIdentity</a></li>
     <li><a href="usageexportbucket" title="UsageExportBucket"><span class="symbol resource"></span>UsageExportBucket</a></li>
 </ul>
 
@@ -34,26 +37,8 @@ Explore the resources and functions of the projects module in the GCP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Projects.html" title="Pulumi.Gcp.Projects">Pulumi.Gcp.Projects</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/projects?tab=doc#" title="gcp/projects">gcp/projects</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/projects/#" title="@pulumi/gcp/projects">@pulumi/gcp/projects</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp/projects" title="pulumi_gcp/projects">pulumi_gcp/projects</a></dd>
-
+	<dd>4.11.0</dd>
 </dl>
 

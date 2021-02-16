@@ -49,7 +49,7 @@ Updating (dev):
  +   └─ azure:storage:Account     storage         created
 
 Outputs:
-    connectionString: "DefaultEndpointsProtocol=https;AccountName=storage1b3018e9;AccountKey=...;EndpointSuffix=core.windows.net"
+    connectionString: "[secret]"
 
 Resources:
     + 3 created
@@ -58,6 +58,8 @@ Duration: 26s
 ```
 
 The storage account's connection string that we exported is shown as a [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}).
+
+{{< console-note >}}
 
 Next, we'll make some modifications to the program.
 

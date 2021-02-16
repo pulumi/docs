@@ -15,7 +15,7 @@ before it can be used to create resources.
 
 Once obtained, there are two ways to communicate your authorization tokens to Pulumi:
 
-1. Set the environment variable `PACKET_AUTH_TOKEN`:
+1. Set the environment variable `LINODE_TOKEN`:
 
     ```bash
     $ export LINODE_TOKEN=XXXXXXXXXXXXXX

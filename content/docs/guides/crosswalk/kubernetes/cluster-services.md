@@ -237,7 +237,7 @@ const fluentdCloudWatchLogGroup = new aws.cloudwatch.LogGroup(name);
 export let fluentdCloudWatchLogGroupName = fluentdCloudWatchLogGroup.name;
 
 // Deploy fluentd-cloudwatch using the Helm chart.
-const fluentdCloudwatch = new k8s.helm.v2.Chart(name,
+const fluentdCloudwatch = new k8s.helm.v3.Chart(name,
     {
         namespace: config.clusterSvcsNamespaceName,
         chart: "fluentd-cloudwatch",

@@ -132,7 +132,7 @@ const triggerSchedule = aws.cloudwatch.onSchedule(
     "keyRotatorScheduler", "rate(1 hour)", lambdaCallbackFn);
 ```
 
-When writing reusable infrastructure components in Pulumi however, it is helpful to organize things into a [custom resource]({{< ref "/docs/intro/concepts/programming-model#custom-resources" >}}).
+When writing reusable infrastructure components in Pulumi however, it is helpful to organize things into a [custom resource]({{< ref "/docs/intro/concepts/resources#custom-resources" >}}).
 
 For example, we can bundle together the AWS Lambda, CloudWatcn schedule, and the associated IAM policies into a single conceptual resource `AccessKeyRotator`. Bundling resources allows for the code reuse.
 

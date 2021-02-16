@@ -12,6 +12,7 @@ meta_desc: "Explore the GetIpRanges function of the GitHub package, including ex
 
 Use this data source to retrieve information about GitHub's IP addresses.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -39,7 +40,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-github/sdk/go/github"
+	"github.com/pulumi/pulumi-github/sdk/v3/go/github/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,12 +92,12 @@ const test = pulumi.output(github.getIpRanges({ async: true }));
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_ip_ranges(</span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ip_ranges(</span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIpRangesResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/go/github/?tab=doc#GetIpRangesResult">GetIpRangesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v3/go/github/?tab=doc#GetIpRangesResult">GetIpRangesResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -116,7 +117,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -124,60 +124,54 @@ The following output properties are available:
             title="">
         <span id="gits_csharp">
 <a href="#gits_csharp" style="color: inherit; text-decoration: inherit;">Gits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the Git servers.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hooks_csharp">
 <a href="#hooks_csharp" style="color: inherit; text-decoration: inherit;">Hooks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the addresses that incoming service hooks will originate from.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="importers_csharp">
 <a href="#importers_csharp" style="color: inherit; text-decoration: inherit;">Importers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Importer.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pages_csharp">
 <a href="#pages_csharp" style="color: inherit; text-decoration: inherit;">Pages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Pages.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -186,60 +180,54 @@ The following output properties are available:
             title="">
         <span id="gits_go">
 <a href="#gits_go" style="color: inherit; text-decoration: inherit;">Gits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the Git servers.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hooks_go">
 <a href="#hooks_go" style="color: inherit; text-decoration: inherit;">Hooks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the addresses that incoming service hooks will originate from.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="importers_go">
 <a href="#importers_go" style="color: inherit; text-decoration: inherit;">Importers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Importer.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pages_go">
 <a href="#pages_go" style="color: inherit; text-decoration: inherit;">Pages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Pages.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -248,60 +236,54 @@ The following output properties are available:
             title="">
         <span id="gits_nodejs">
 <a href="#gits_nodejs" style="color: inherit; text-decoration: inherit;">gits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the Git servers.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hooks_nodejs">
 <a href="#hooks_nodejs" style="color: inherit; text-decoration: inherit;">hooks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the addresses that incoming service hooks will originate from.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="importers_nodejs">
 <a href="#importers_nodejs" style="color: inherit; text-decoration: inherit;">importers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Importer.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pages_nodejs">
 <a href="#pages_nodejs" style="color: inherit; text-decoration: inherit;">pages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Pages.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -310,63 +292,54 @@ The following output properties are available:
             title="">
         <span id="gits_python">
 <a href="#gits_python" style="color: inherit; text-decoration: inherit;">gits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the Git servers.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hooks_python">
 <a href="#hooks_python" style="color: inherit; text-decoration: inherit;">hooks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the addresses that incoming service hooks will originate from.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="importers_python">
 <a href="#importers_python" style="color: inherit; text-decoration: inherit;">importers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Importer.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pages_python">
 <a href="#pages_python" style="color: inherit; text-decoration: inherit;">pages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An Array of IP addresses in CIDR format specifying the A records for GitHub Pages.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

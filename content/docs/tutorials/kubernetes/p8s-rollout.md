@@ -51,7 +51,7 @@ can see `canary-example-app` and `canary-staging-app` created.
 1. If you haven't already, follow the steps in [Pulumi Installation and Setup][install] and
    [Configuring Pulumi Kubernetes][configuration] to get setup with Pulumi and Kubernetes.
 
-1. Download the example code [here](https://github.com/pulumi/examples/tree/master/kubernetes-ts-staged-rollout-with-prometheus).
+1. Download the [example code](https://github.com/pulumi/examples/tree/master/kubernetes-ts-staged-rollout-with-prometheus).
 
 1. Now, install dependencies:
 

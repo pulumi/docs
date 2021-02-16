@@ -1,8 +1,8 @@
 
 ---
 title: "Route"
-title_tag: "Resource Route | Module appmesh | Package AWS"
-meta_desc: "Explore the Route resource of the appmesh module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS App Mesh route resource."
+title_tag: "aws.appmesh.Route"
+meta_desc: "Documentation for the aws.appmesh.Route resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -116,25 +116,25 @@ import pulumi_aws as aws
 serviceb = aws.appmesh.Route("serviceb",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
     virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
-    spec={
-        "httpRoute": {
-            "match": {
-                "prefix": "/",
-            },
-            "action": {
-                "weightedTargets": [
-                    {
-                        "virtualNode": aws_appmesh_virtual_node["serviceb1"]["name"],
-                        "weight": 90,
-                    },
-                    {
-                        "virtualNode": aws_appmesh_virtual_node["serviceb2"]["name"],
-                        "weight": 10,
-                    },
+    spec=aws.appmesh.RouteSpecArgs(
+        http_route=aws.appmesh.RouteSpecHttpRouteArgs(
+            match=aws.appmesh.RouteSpecHttpRouteMatchArgs(
+                prefix="/",
+            ),
+            action=aws.appmesh.RouteSpecHttpRouteActionArgs(
+                weighted_targets=[
+                    aws.appmesh.RouteSpecHttpRouteActionWeightedTargetArgs(
+                        virtual_node=aws_appmesh_virtual_node["serviceb1"]["name"],
+                        weight=90,
+                    ),
+                    aws.appmesh.RouteSpecHttpRouteActionWeightedTargetArgs(
+                        virtual_node=aws_appmesh_virtual_node["serviceb2"]["name"],
+                        weight=10,
+                    ),
                 ],
-            },
-        },
-    })
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -286,27 +286,27 @@ import pulumi_aws as aws
 serviceb = aws.appmesh.Route("serviceb",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
     virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
-    spec={
-        "httpRoute": {
-            "match": {
-                "method": "POST",
-                "prefix": "/",
-                "scheme": "https",
-                "headers": [{
-                    "name": "clientRequestId",
-                    "match": {
-                        "prefix": "123",
-                    },
-                }],
-            },
-            "action": {
-                "weightedTargets": [{
-                    "virtualNode": aws_appmesh_virtual_node["serviceb"]["name"],
-                    "weight": 100,
-                }],
-            },
-        },
-    })
+    spec=aws.appmesh.RouteSpecArgs(
+        http_route=aws.appmesh.RouteSpecHttpRouteArgs(
+            match=aws.appmesh.RouteSpecHttpRouteMatchArgs(
+                method="POST",
+                prefix="/",
+                scheme="https",
+                headers=[aws.appmesh.RouteSpecHttpRouteMatchHeaderArgs(
+                    name="clientRequestId",
+                    match=aws.appmesh.RouteSpecHttpRouteMatchHeaderMatchArgs(
+                        prefix="123",
+                    ),
+                )],
+            ),
+            action=aws.appmesh.RouteSpecHttpRouteActionArgs(
+                weighted_targets=[aws.appmesh.RouteSpecHttpRouteActionWeightedTargetArgs(
+                    virtual_node=aws_appmesh_virtual_node["serviceb"]["name"],
+                    weight=100,
+                )],
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -332,6 +332,180 @@ const serviceb = new aws.appmesh.Route("serviceb", {
                         prefix: "123",
                     },
                 }],
+            },
+            action: {
+                weightedTargets: [{
+                    virtualNode: aws_appmesh_virtual_node.serviceb.name,
+                    weight: 100,
+                }],
+            },
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+### Retry Policy
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceb = new Aws.AppMesh.Route("serviceb", new Aws.AppMesh.RouteArgs
+        {
+            MeshName = aws_appmesh_mesh.Simple.Id,
+            VirtualRouterName = aws_appmesh_virtual_router.Serviceb.Name,
+            Spec = new Aws.AppMesh.Inputs.RouteSpecArgs
+            {
+                HttpRoute = new Aws.AppMesh.Inputs.RouteSpecHttpRouteArgs
+                {
+                    Match = new Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchArgs
+                    {
+                        Prefix = "/",
+                    },
+                    RetryPolicy = new Aws.AppMesh.Inputs.RouteSpecHttpRouteRetryPolicyArgs
+                    {
+                        HttpRetryEvents = 
+                        {
+                            "server-error",
+                        },
+                        MaxRetries = 1,
+                        PerRetryTimeout = new Aws.AppMesh.Inputs.RouteSpecHttpRouteRetryPolicyPerRetryTimeoutArgs
+                        {
+                            Unit = "s",
+                            Value = 15,
+                        },
+                    },
+                    Action = new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs
+                    {
+                        WeightedTargets = 
+                        {
+                            new Aws.AppMesh.Inputs.RouteSpecHttpRouteActionWeightedTargetArgs
+                            {
+                                VirtualNode = aws_appmesh_virtual_node.Serviceb.Name,
+                                Weight = 100,
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := appmesh.NewRoute(ctx, "serviceb", &appmesh.RouteArgs{
+			MeshName:          pulumi.Any(aws_appmesh_mesh.Simple.Id),
+			VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
+			Spec: &appmesh.RouteSpecArgs{
+				HttpRoute: &appmesh.RouteSpecHttpRouteArgs{
+					Match: &appmesh.RouteSpecHttpRouteMatchArgs{
+						Prefix: pulumi.String("/"),
+					},
+					RetryPolicy: &appmesh.RouteSpecHttpRouteRetryPolicyArgs{
+						HttpRetryEvents: pulumi.StringArray{
+							pulumi.String("server-error"),
+						},
+						MaxRetries: pulumi.Int(1),
+						PerRetryTimeout: &appmesh.RouteSpecHttpRouteRetryPolicyPerRetryTimeoutArgs{
+							Unit:  pulumi.String("s"),
+							Value: pulumi.Int(15),
+						},
+					},
+					Action: &appmesh.RouteSpecHttpRouteActionArgs{
+						WeightedTargets: appmesh.RouteSpecHttpRouteActionWeightedTargetArray{
+							&appmesh.RouteSpecHttpRouteActionWeightedTargetArgs{
+								VirtualNode: pulumi.Any(aws_appmesh_virtual_node.Serviceb.Name),
+								Weight:      pulumi.Int(100),
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+serviceb = aws.appmesh.Route("serviceb",
+    mesh_name=aws_appmesh_mesh["simple"]["id"],
+    virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
+    spec=aws.appmesh.RouteSpecArgs(
+        http_route=aws.appmesh.RouteSpecHttpRouteArgs(
+            match=aws.appmesh.RouteSpecHttpRouteMatchArgs(
+                prefix="/",
+            ),
+            retry_policy=aws.appmesh.RouteSpecHttpRouteRetryPolicyArgs(
+                http_retry_events=["server-error"],
+                max_retries=1,
+                per_retry_timeout=aws.appmesh.RouteSpecHttpRouteRetryPolicyPerRetryTimeoutArgs(
+                    unit="s",
+                    value=15,
+                ),
+            ),
+            action=aws.appmesh.RouteSpecHttpRouteActionArgs(
+                weighted_targets=[aws.appmesh.RouteSpecHttpRouteActionWeightedTargetArgs(
+                    virtual_node=aws_appmesh_virtual_node["serviceb"]["name"],
+                    weight=100,
+                )],
+            ),
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const serviceb = new aws.appmesh.Route("serviceb", {
+    meshName: aws_appmesh_mesh.simple.id,
+    virtualRouterName: aws_appmesh_virtual_router.serviceb.name,
+    spec: {
+        httpRoute: {
+            match: {
+                prefix: "/",
+            },
+            retryPolicy: {
+                httpRetryEvents: ["server-error"],
+                maxRetries: 1,
+                perRetryTimeout: {
+                    unit: "s",
+                    value: 15,
+                },
             },
             action: {
                 weightedTargets: [{
@@ -430,16 +604,16 @@ import pulumi_aws as aws
 serviceb = aws.appmesh.Route("serviceb",
     mesh_name=aws_appmesh_mesh["simple"]["id"],
     virtual_router_name=aws_appmesh_virtual_router["serviceb"]["name"],
-    spec={
-        "tcpRoute": {
-            "action": {
-                "weightedTargets": [{
-                    "virtualNode": aws_appmesh_virtual_node["serviceb1"]["name"],
-                    "weight": 100,
-                }],
-            },
-        },
-    })
+    spec=aws.appmesh.RouteSpecArgs(
+        tcp_route=aws.appmesh.RouteSpecTcpRouteArgs(
+            action=aws.appmesh.RouteSpecTcpRouteActionArgs(
+                weighted_targets=[aws.appmesh.RouteSpecTcpRouteActionWeightedTargetArgs(
+                    virtual_node=aws_appmesh_virtual_node["serviceb1"]["name"],
+                    weight=100,
+                )],
+            ),
+        ),
+    ))
 ```
 
 {{% /example %}}
@@ -476,19 +650,19 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#Route">Route</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Route</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/appmesh/#pulumi_aws.appmesh.Route">Route</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_router_name=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Route</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[RouteSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_router_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#Route">NewRoute</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRoute</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Route.html">Route</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.RouteArgs.html">RouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Route</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RouteArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -499,7 +673,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -509,7 +683,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#RouteArgs">RouteArgs</a></span>
+        <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -568,7 +742,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -578,7 +752,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteArgs">RouteArgs</a></span>
+        <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -607,7 +781,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -617,7 +791,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.RouteArgs.html">RouteArgs</a></span>
+        <span class="property-type"><a href="#inputs">RouteArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -640,12 +814,11 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 
 ## Route Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Route resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Route resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -656,60 +829,64 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="meshname_csharp">
 <a href="#meshname_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="spec_csharp">
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespec">Route<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtualroutername_csharp">
 <a href="#virtualroutername_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Router<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="meshowner_csharp">
+<a href="#meshowner_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -718,60 +895,64 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="meshname_go">
 <a href="#meshname_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="spec_go">
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespec">Route<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtualroutername_go">
 <a href="#virtualroutername_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Router<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="meshowner_go">
+<a href="#meshowner_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -780,60 +961,64 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="meshname_nodejs">
 <a href="#meshname_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="spec_nodejs">
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespec">Route<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtualroutername_nodejs">
 <a href="#virtualroutername_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Router<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="meshowner_nodejs">
+<a href="#meshowner_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -842,69 +1027,69 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="mesh_name_python">
 <a href="#mesh_name_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="spec_python">
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Dict[Route<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtual_router_name_python">
 <a href="#virtual_router_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>router_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mesh_owner_python">
+<a href="#mesh_owner_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Route resource produces the following output properties:
-
 
 
 
@@ -915,48 +1100,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastupdateddate_csharp">
 <a href="#lastupdateddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="resourceowner_csharp">
+<a href="#resourceowner_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -965,48 +1155,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastupdateddate_go">
 <a href="#lastupdateddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="resourceowner_go">
+<a href="#resourceowner_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1015,48 +1210,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastupdateddate_nodejs">
 <a href="#lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="resourceowner_nodejs">
+<a href="#resourceowner_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1065,51 +1265,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_updated_date_python">
 <a href="#last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="resource_owner_python">
+<a href="#resource_owner_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1119,19 +1321,20 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#Route">Route</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RouteState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Route</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>created_date=None<span class="p">, </span>last_updated_date=None<span class="p">, </span>mesh_name=None<span class="p">, </span>name=None<span class="p">, </span>spec=None<span class="p">, </span>tags=None<span class="p">, </span>virtual_router_name=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">last_updated_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mesh_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spec</span><span class="p">:</span> <span class="nx">Optional[RouteSpecArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_router_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Route</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteState">RouteState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RouteState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Route</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Route.html">Route</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.RouteState.html">RouteState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Route</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RouteState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1233,7 +1436,6 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1241,93 +1443,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createddate_csharp">
 <a href="#state_createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastupdateddate_csharp">
 <a href="#state_lastupdateddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_meshname_csharp">
 <a href="#state_meshname_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_meshowner_csharp">
+<a href="#state_meshowner_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourceowner_csharp">
+<a href="#state_resourceowner_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_csharp">
 <a href="#state_spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespec">Route<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualroutername_csharp">
 <a href="#state_virtualroutername_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Router<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1336,93 +1549,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createddate_go">
 <a href="#state_createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastupdateddate_go">
 <a href="#state_lastupdateddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_meshname_go">
 <a href="#state_meshname_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_meshowner_go">
+<a href="#state_meshowner_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourceowner_go">
+<a href="#state_resourceowner_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_go">
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespec">Route<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualroutername_go">
 <a href="#state_virtualroutername_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Router<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1431,93 +1655,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createddate_nodejs">
 <a href="#state_createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastupdateddate_nodejs">
 <a href="#state_lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_meshname_nodejs">
 <a href="#state_meshname_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_meshowner_nodejs">
+<a href="#state_meshowner_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourceowner_nodejs">
+<a href="#state_resourceowner_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_nodejs">
 <a href="#state_spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespec">Route<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtualroutername_nodejs">
 <a href="#state_virtualroutername_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Router<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1526,96 +1761,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_created_date_python">
 <a href="#state_created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_last_updated_date_python">
 <a href="#state_last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mesh_name_python">
 <a href="#state_mesh_name_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
+    <dd>{{% md %}}The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mesh_owner_python">
+<a href="#state_mesh_owner_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name to use for the route.
+    <dd>{{% md %}}The name to use for the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resource_owner_python">
+<a href="#state_resource_owner_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource owner's AWS account ID.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_spec_python">
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Dict[Route<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_virtual_router_name_python">
 <a href="#state_virtual_router_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>router_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
+    <dd>{{% md %}}The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1625,202 +1868,238 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="routespec">Route<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
+        <span id="grpcroute_csharp">
+<a href="#grpcroute_csharp" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Route</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroute">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The gRPC routing information for the route.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http2route_csharp">
+<a href="#http2route_csharp" style="color: inherit; text-decoration: inherit;">Http2Route</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2route">Route<wbr>Spec<wbr>Http2Route<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP/2 routing information for the route.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="httproute_csharp">
 <a href="#httproute_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Route</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP routing information for the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for the route, between `0` and `1000`.
 Routes are matched based on the specified value, where `0` is the highest priority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tcproute_csharp">
 <a href="#tcproute_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Route</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TCP routing information for the route.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
+        <span id="grpcroute_go">
+<a href="#grpcroute_go" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Route</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroute">Route<wbr>Spec<wbr>Grpc<wbr>Route</a></span>
+    </dt>
+    <dd>{{% md %}}The gRPC routing information for the route.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http2route_go">
+<a href="#http2route_go" style="color: inherit; text-decoration: inherit;">Http2Route</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2route">Route<wbr>Spec<wbr>Http2Route</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP/2 routing information for the route.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="httproute_go">
 <a href="#httproute_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Route</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The HTTP routing information for the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for the route, between `0` and `1000`.
 Routes are matched based on the specified value, where `0` is the highest priority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tcproute_go">
 <a href="#tcproute_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Route</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The TCP routing information for the route.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
+        <span id="grpcroute_nodejs">
+<a href="#grpcroute_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Route</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroute">Route<wbr>Spec<wbr>Grpc<wbr>Route</a></span>
+    </dt>
+    <dd>{{% md %}}The gRPC routing information for the route.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http2route_nodejs">
+<a href="#http2route_nodejs" style="color: inherit; text-decoration: inherit;">http2Route</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2route">Route<wbr>Spec<wbr>Http2Route</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP/2 routing information for the route.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="httproute_nodejs">
 <a href="#httproute_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Route</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The HTTP routing information for the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority for the route, between `0` and `1000`.
 Routes are matched based on the specified value, where `0` is the highest priority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tcproute_nodejs">
 <a href="#tcproute_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Route</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The TCP routing information for the route.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="httproute_python">
-<a href="#httproute_python" style="color: inherit; text-decoration: inherit;">http<wbr>Route</a>
-</span> 
+        <span id="grpc_route_python">
+<a href="#grpc_route_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>route</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproute">Dict[Route<wbr>Spec<wbr>Http<wbr>Route]</a></span>
+        <span class="property-type"><a href="#routespecgrpcroute">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The gRPC routing information for the route.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http2_route_python">
+<a href="#http2_route_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>route</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2route">Route<wbr>Spec<wbr>Http2Route<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP/2 routing information for the route.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_route_python">
+<a href="#http_route_python" style="color: inherit; text-decoration: inherit;">http_<wbr>route</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP routing information for the route.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for the route, between `0` and `1000`.
 Routes are matched based on the specified value, where `0` is the highest priority.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="tcproute_python">
-<a href="#tcproute_python" style="color: inherit; text-decoration: inherit;">tcp<wbr>Route</a>
-</span> 
+        <span id="tcp_route_python">
+<a href="#tcp_route_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>route</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcproute">Dict[Route<wbr>Spec<wbr>Tcp<wbr>Route]</a></span>
+        <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TCP routing information for the route.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
-<h4 id="routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttpRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRoute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRoute.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
+<h4 id="routespecgrpcroute">Route<wbr>Spec<wbr>Grpc<wbr>Route</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1829,27 +2108,44 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteaction">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="match_csharp">
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The criteria for determining an HTTP request match.
+    <dd>{{% md %}}The criteria for determining an gRPC request match.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_csharp">
+<a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcrouteretrypolicy">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1858,27 +2154,44 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteaction">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="match_go">
 <a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match</a></span>
     </dt>
-    <dd>{{% md %}}The criteria for determining an HTTP request match.
+    <dd>{{% md %}}The criteria for determining an gRPC request match.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_go">
+<a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcrouteretrypolicy">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1887,27 +2200,44 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteaction">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="match_nodejs">
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match</a></span>
     </dt>
-    <dd>{{% md %}}The criteria for determining an HTTP request match.
+    <dd>{{% md %}}The criteria for determining an gRPC request match.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_nodejs">
+<a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcrouteretrypolicy">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1916,45 +2246,46 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteaction">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action]</a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteaction">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="match_python">
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematch">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match]</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The criteria for determining an HTTP request match.
+    <dd>{{% md %}}The criteria for determining an gRPC request match.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retry_policy_python">
+<a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcrouteretrypolicy">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
-
-
-
-
-<h4 id="routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttpRouteAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRouteAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
+<h4 id="routespecgrpcrouteaction">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1963,17 +2294,15 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Required">
         <span id="weightedtargets_csharp">
 <a href="#weightedtargets_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">List&lt;Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteactionweightedtarget">List&lt;Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1982,17 +2311,15 @@ You can specify one or more targets and their relative weights with which to dis
             title="Required">
         <span id="weightedtargets_go">
 <a href="#weightedtargets_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">[]Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteactionweightedtarget">[]Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2001,54 +2328,34 @@ You can specify one or more targets and their relative weights with which to dis
             title="Required">
         <span id="weightedtargets_nodejs">
 <a href="#weightedtargets_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteactionweightedtarget">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="weightedtargets_python">
-<a href="#weightedtargets_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Targets</a>
-</span> 
+        <span id="weighted_targets_python">
+<a href="#weighted_targets_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>targets</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">List[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target]</a></span>
+        <span class="property-type"><a href="#routespecgrpcrouteactionweightedtarget">Sequence[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
-<h4 id="routespechttprouteactionweightedtarget">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttpRouteActionWeightedTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRouteActionWeightedTarget">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionWeightedTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteActionWeightedTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteActionWeightedTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteActionWeightedTarget.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
+<h4 id="routespecgrpcrouteactionweightedtarget">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2057,27 +2364,24 @@ You can specify one or more targets and their relative weights with which to dis
             title="Required">
         <span id="virtualnode_csharp">
 <a href="#virtualnode_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2086,27 +2390,24 @@ You can specify one or more targets and their relative weights with which to dis
             title="Required">
         <span id="virtualnode_go">
 <a href="#virtualnode_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2115,300 +2416,242 @@ You can specify one or more targets and their relative weights with which to dis
             title="Required">
         <span id="virtualnode_nodejs">
 <a href="#virtualnode_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnode_python">
-<a href="#virtualnode_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
-</span> 
+        <span id="virtual_node_python">
+<a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
-<h4 id="routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttpRouteMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRouteMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
+<h4 id="routespecgrpcroutematch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadatas_csharp">
+<a href="#metadatas_csharp" style="color: inherit; text-decoration: inherit;">Metadatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadata">List&lt;Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The data to match from the gRPC request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="methodname_csharp">
+<a href="#methodname_csharp" style="color: inherit; text-decoration: inherit;">Method<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method name to match from the request. If you specify a name, you must also specify a `service_name`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the path with which to match requests.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="headers_csharp">
-<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
-</span> 
+        <span id="servicename_csharp">
+<a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheader">List&lt;Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args&gt;</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client request headers to match on.
+    <dd>{{% md %}}The fully qualified domain name for the service to match from the request.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="method_csharp">
-<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="scheme_csharp">
-<a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadatas_go">
+<a href="#metadatas_go" style="color: inherit; text-decoration: inherit;">Metadatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadata">[]Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata</a></span>
+    </dt>
+    <dd>{{% md %}}The data to match from the gRPC request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="methodname_go">
+<a href="#methodname_go" style="color: inherit; text-decoration: inherit;">Method<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method name to match from the request. If you specify a name, you must also specify a `service_name`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the path with which to match requests.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="headers_go">
-<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
-</span> 
+        <span id="servicename_go">
+<a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheader">[]Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client request headers to match on.
+    <dd>{{% md %}}The fully qualified domain name for the service to match from the request.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="method_go">
-<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="scheme_go">
-<a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadatas_nodejs">
+<a href="#metadatas_nodejs" style="color: inherit; text-decoration: inherit;">metadatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadata">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata[]</a></span>
+    </dt>
+    <dd>{{% md %}}The data to match from the gRPC request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="methodname_nodejs">
+<a href="#methodname_nodejs" style="color: inherit; text-decoration: inherit;">method<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method name to match from the request. If you specify a name, you must also specify a `service_name`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the path with which to match requests.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="headers_nodejs">
-<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
-</span> 
+        <span id="servicename_nodejs">
+<a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheader">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header[]</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client request headers to match on.
+    <dd>{{% md %}}The fully qualified domain name for the service to match from the request.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="method_nodejs">
-<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="scheme_nodejs">
-<a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadatas_python">
+<a href="#metadatas_python" style="color: inherit; text-decoration: inherit;">metadatas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadata">Sequence[Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The data to match from the gRPC request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="method_name_python">
+<a href="#method_name_python" style="color: inherit; text-decoration: inherit;">method_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The method name to match from the request. If you specify a name, you must also specify a `service_name`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the path with which to match requests.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="headers_python">
-<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
-</span> 
+        <span id="service_name_python">
+<a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheader">List[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header]</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client request headers to match on.
+    <dd>{{% md %}}The fully qualified domain name for the service to match from the request.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="method_python">
-<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="scheme_python">
-<a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
-<h4 id="routespechttproutematchheader">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttpRouteMatchHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRouteMatchHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
+<h4 id="routespecgrpcroutematchmetadata">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2417,38 +2660,34 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+    <dd>{{% md %}}The name of the route. Must be between 1 and 50 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="invert_csharp">
 <a href="#invert_csharp" style="color: inherit; text-decoration: inherit;">Invert</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` criteria. Default is `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="match_csharp">
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+    <dd>{{% md %}}The data to match from the request.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2457,38 +2696,34 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+    <dd>{{% md %}}The name of the route. Must be between 1 and 50 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="invert_go">
 <a href="#invert_go" style="color: inherit; text-decoration: inherit;">Invert</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` criteria. Default is `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="match_go">
 <a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match</a></span>
     </dt>
-    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+    <dd>{{% md %}}The data to match from the request.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2497,38 +2732,34 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+    <dd>{{% md %}}The name of the route. Must be between 1 and 50 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="invert_nodejs">
 <a href="#invert_nodejs" style="color: inherit; text-decoration: inherit;">invert</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` criteria. Default is `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="match_nodejs">
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match</a></span>
     </dt>
-    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+    <dd>{{% md %}}The data to match from the request.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2537,56 +2768,36 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+    <dd>{{% md %}}The name of the route. Must be between 1 and 50 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="invert_python">
 <a href="#invert_python" style="color: inherit; text-decoration: inherit;">invert</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` criteria. Default is `false`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="match_python">
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatch">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match]</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+    <dd>{{% md %}}The data to match from the request.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
-<h4 id="routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttpRouteMatchHeaderMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRouteMatchHeaderMatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderMatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeaderMatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
+<h4 id="routespecgrpcroutematchmetadatamatch">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2595,61 +2806,55 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span id="exact_csharp">
 <a href="#exact_csharp" style="color: inherit; text-decoration: inherit;">Exact</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The header value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the path with which to match requests.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_csharp">
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatchrange">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Range<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
+    <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_csharp">
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The header value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suffix_csharp">
 <a href="#suffix_csharp" style="color: inherit; text-decoration: inherit;">Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The header value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2658,61 +2863,55 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span id="exact_go">
 <a href="#exact_go" style="color: inherit; text-decoration: inherit;">Exact</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The header value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the path with which to match requests.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_go">
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatchrange">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
+    <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_go">
 <a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The header value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suffix_go">
 <a href="#suffix_go" style="color: inherit; text-decoration: inherit;">Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The header value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2721,61 +2920,55 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span id="exact_nodejs">
 <a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The header value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the path with which to match requests.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_nodejs">
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatchrange">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Range</a></span>
     </dt>
-    <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
+    <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_nodejs">
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The header value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suffix_nodejs">
 <a href="#suffix_nodejs" style="color: inherit; text-decoration: inherit;">suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The header value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2784,79 +2977,57 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span id="exact_python">
 <a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The header value sent by the client must match the specified value exactly.
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the path with which to match requests.
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_python">
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range]</a></span>
+        <span class="property-type"><a href="#routespecgrpcroutematchmetadatamatchrange">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Range<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The object that specifies the range of numbers that the header value sent by the client must be included in.
+    <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_python">
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The header value sent by the client must include the specified characters.
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="suffix_python">
 <a href="#suffix_python" style="color: inherit; text-decoration: inherit;">suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The header value sent by the client must end with the specified characters.
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
-<h4 id="routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecHttpRouteMatchHeaderMatchRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecHttpRouteMatchHeaderMatchRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecHttpRouteMatchHeaderMatchRangeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecHttpRouteMatchHeaderMatchRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecHttpRouteMatchHeaderMatchRange.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
+<h4 id="routespecgrpcroutematchmetadatamatchrange">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Match<wbr>Metadata<wbr>Match<wbr>Range</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2865,27 +3036,24 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="end_csharp">
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end of the range.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start of the range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2894,27 +3062,24 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="end_go">
 <a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end of the range.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start of the range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2923,27 +3088,24 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="end_nodejs">
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The end of the range.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The start of the range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2952,45 +3114,688 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="end_python">
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end of the range.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start of the range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="routespecgrpcrouteretrypolicy">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy</h4>
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-
-
-<h4 id="routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecTcpRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecTcpRoute">output</a> API doc for this type.
+    <dt class="property-required"
+            title="Required">
+        <span id="maxretries_csharp">
+<a href="#maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of retries.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="perretrytimeout_csharp">
+<a href="#perretrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcrouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per-retry timeout.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpcretryevents_csharp">
+<a href="#grpcretryevents_csharp" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of gRPC retry events.
+Valid values: `cancelled`, `deadline-exceeded`, `internal`, `resource-exhausted`, `unavailable`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpretryevents_csharp">
+<a href="#httpretryevents_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of HTTP retry events.
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcpretryevents_csharp">
+<a href="#tcpretryevents_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteOutput">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxretries_go">
+<a href="#maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of retries.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="perretrytimeout_go">
+<a href="#perretrytimeout_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcrouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The per-retry timeout.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpcretryevents_go">
+<a href="#grpcretryevents_go" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of gRPC retry events.
+Valid values: `cancelled`, `deadline-exceeded`, `internal`, `resource-exhausted`, `unavailable`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpretryevents_go">
+<a href="#httpretryevents_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of HTTP retry events.
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcpretryevents_go">
+<a href="#tcpretryevents_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxretries_nodejs">
+<a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of retries.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="perretrytimeout_nodejs">
+<a href="#perretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcrouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The per-retry timeout.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpcretryevents_nodejs">
+<a href="#grpcretryevents_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of gRPC retry events.
+Valid values: `cancelled`, `deadline-exceeded`, `internal`, `resource-exhausted`, `unavailable`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpretryevents_nodejs">
+<a href="#httpretryevents_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of HTTP retry events.
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcpretryevents_nodejs">
+<a href="#tcpretryevents_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_retries_python">
+<a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of retries.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="per_retry_timeout_python">
+<a href="#per_retry_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>retry_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcrouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per-retry timeout.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpc_retry_events_python">
+<a href="#grpc_retry_events_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>retry_<wbr>events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of gRPC retry events.
+Valid values: `cancelled`, `deadline-exceeded`, `internal`, `resource-exhausted`, `unavailable`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_retry_events_python">
+<a href="#http_retry_events_python" style="color: inherit; text-decoration: inherit;">http_<wbr>retry_<wbr>events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of HTTP retry events.
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcp_retry_events_python">
+<a href="#tcp_retry_events_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>retry_<wbr>events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespecgrpcrouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout</h4>
+
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRoute.html">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Retry value.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Retry value.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Retry value.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Retry value.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespecgrpcroutetimeout">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutidle">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_csharp">
+<a href="#perrequest_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutperrequest">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutidle">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_go">
+<a href="#perrequest_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutperrequest">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutidle">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_nodejs">
+<a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutperrequest">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutidle">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="per_request_python">
+<a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespecgrpcroutetimeoutperrequest">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespecgrpcroutetimeoutidle">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Idle</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespecgrpcroutetimeoutperrequest">Route<wbr>Spec<wbr>Grpc<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttp2route">Route<wbr>Spec<wbr>Http2Route</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2999,16 +3804,44 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Args</a></span>
+        <span class="property-type"><a href="#routespechttp2routeaction">Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="match_csharp">
+<a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematch">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining an gRPC request match.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_csharp">
+<a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routeretrypolicy">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3017,16 +3850,44 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#routespechttp2routeaction">Route<wbr>Spec<wbr>Http2Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="match_go">
+<a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematch">Route<wbr>Spec<wbr>Http2Route<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining an gRPC request match.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_go">
+<a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routeretrypolicy">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3035,16 +3896,44 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#routespechttp2routeaction">Route<wbr>Spec<wbr>Http2Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="match_nodejs">
+<a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematch">Route<wbr>Spec<wbr>Http2Route<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining an gRPC request match.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_nodejs">
+<a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routeretrypolicy">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3053,34 +3942,46 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteaction">Dict[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action]</a></span>
+        <span class="property-type"><a href="#routespechttp2routeaction">Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
-
+    <dt class="property-required"
+            title="Required">
+        <span id="match_python">
+<a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematch">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining an gRPC request match.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retry_policy_python">
+<a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routeretrypolicy">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
-
-
-
-
-<h4 id="routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecTcpRouteAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecTcpRouteAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRouteAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
+<h4 id="routespechttp2routeaction">Route<wbr>Spec<wbr>Http2Route<wbr>Action</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3089,17 +3990,15 @@ This parameter must always start with /, which by itself matches all requests to
             title="Required">
         <span id="weightedtargets_csharp">
 <a href="#weightedtargets_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">List&lt;Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#routespechttp2routeactionweightedtarget">List&lt;Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3108,17 +4007,15 @@ You can specify one or more targets and their relative weights with which to dis
             title="Required">
         <span id="weightedtargets_go">
 <a href="#weightedtargets_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">[]Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</a></span>
+        <span class="property-type"><a href="#routespechttp2routeactionweightedtarget">[]Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Weighted<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3127,54 +4024,34 @@ You can specify one or more targets and their relative weights with which to dis
             title="Required">
         <span id="weightedtargets_nodejs">
 <a href="#weightedtargets_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Targets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target[]</a></span>
+        <span class="property-type"><a href="#routespechttp2routeactionweightedtarget">Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Weighted<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="weightedtargets_python">
-<a href="#weightedtargets_python" style="color: inherit; text-decoration: inherit;">weighted<wbr>Targets</a>
-</span> 
+        <span id="weighted_targets_python">
+<a href="#weighted_targets_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>targets</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">List[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target]</a></span>
+        <span class="property-type"><a href="#routespechttp2routeactionweightedtarget">Sequence[Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
 You can specify one or more targets and their relative weights with which to distribute traffic.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
-<h4 id="routespectcprouteactionweightedtarget">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RouteSpecTcpRouteActionWeightedTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RouteSpecTcpRouteActionWeightedTarget">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionWeightedTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#RouteSpecTcpRouteActionWeightedTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.RouteSpecTcpRouteActionWeightedTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.RouteSpecTcpRouteActionWeightedTarget.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
+<h4 id="routespechttp2routeactionweightedtarget">Route<wbr>Spec<wbr>Http2Route<wbr>Action<wbr>Weighted<wbr>Target</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3183,27 +4060,24 @@ You can specify one or more targets and their relative weights with which to dis
             title="Required">
         <span id="virtualnode_csharp">
 <a href="#virtualnode_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3212,27 +4086,24 @@ You can specify one or more targets and their relative weights with which to dis
             title="Required">
         <span id="virtualnode_go">
 <a href="#virtualnode_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3241,60 +4112,3456 @@ You can specify one or more targets and their relative weights with which to dis
             title="Required">
         <span id="virtualnode_nodejs">
 <a href="#virtualnode_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="virtualnode_python">
-<a href="#virtualnode_python" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
-</span> 
+        <span id="virtual_node_python">
+<a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The virtual node to associate with the weighted target.
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="routespechttp2routematch">Route<wbr>Spec<wbr>Http2Route<wbr>Match</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematchheader">List&lt;Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The client request headers to match on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="method_csharp">
+<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheme_csharp">
+<a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematchheader">[]Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}The client request headers to match on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="method_go">
+<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheme_go">
+<a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematchheader">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}The client request headers to match on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="method_nodejs">
+<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheme_nodejs">
+<a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematchheader">Sequence[Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The client request headers to match on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="method_python">
+<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheme_python">
+<a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttp2routematchheader">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invert_csharp">
+<a href="#invert_csharp" style="color: inherit; text-decoration: inherit;">Invert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_csharp">
+<a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematchheadermatch">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invert_go">
+<a href="#invert_go" style="color: inherit; text-decoration: inherit;">Invert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_go">
+<a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematchheadermatch">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invert_nodejs">
+<a href="#invert_nodejs" style="color: inherit; text-decoration: inherit;">invert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_nodejs">
+<a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematchheadermatch">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invert_python">
+<a href="#invert_python" style="color: inherit; text-decoration: inherit;">invert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_python">
+<a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematchheadermatch">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttp2routematchheadermatch">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exact_csharp">
+<a href="#exact_csharp" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_csharp">
+<a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematchheadermatchrange">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regex_csharp">
+<a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="suffix_csharp">
+<a href="#suffix_csharp" style="color: inherit; text-decoration: inherit;">Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exact_go">
+<a href="#exact_go" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_go">
+<a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematchheadermatchrange">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regex_go">
+<a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="suffix_go">
+<a href="#suffix_go" style="color: inherit; text-decoration: inherit;">Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exact_nodejs">
+<a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_nodejs">
+<a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematchheadermatchrange">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regex_nodejs">
+<a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="suffix_nodejs">
+<a href="#suffix_nodejs" style="color: inherit; text-decoration: inherit;">suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exact_python">
+<a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_python">
+<a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routematchheadermatchrange">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regex_python">
+<a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="suffix_python">
+<a href="#suffix_python" style="color: inherit; text-decoration: inherit;">suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttp2routematchheadermatchrange">Route<wbr>Spec<wbr>Http2Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The end of the range.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The start of the range.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The end of the range.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The start of the range.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The end of the range.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The start of the range.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The end of the range.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The start of the range.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttp2routeretrypolicy">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxretries_csharp">
+<a href="#maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of retries.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="perretrytimeout_csharp">
+<a href="#perretrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routeretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per-retry timeout.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpretryevents_csharp">
+<a href="#httpretryevents_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of HTTP retry events.
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcpretryevents_csharp">
+<a href="#tcpretryevents_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxretries_go">
+<a href="#maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of retries.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="perretrytimeout_go">
+<a href="#perretrytimeout_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routeretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The per-retry timeout.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpretryevents_go">
+<a href="#httpretryevents_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of HTTP retry events.
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcpretryevents_go">
+<a href="#tcpretryevents_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxretries_nodejs">
+<a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of retries.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="perretrytimeout_nodejs">
+<a href="#perretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routeretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The per-retry timeout.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpretryevents_nodejs">
+<a href="#httpretryevents_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of HTTP retry events.
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcpretryevents_nodejs">
+<a href="#tcpretryevents_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_retries_python">
+<a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of retries.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="per_retry_timeout_python">
+<a href="#per_retry_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>retry_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routeretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per-retry timeout.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_retry_events_python">
+<a href="#http_retry_events_python" style="color: inherit; text-decoration: inherit;">http_<wbr>retry_<wbr>events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of HTTP retry events.
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcp_retry_events_python">
+<a href="#tcp_retry_events_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>retry_<wbr>events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttp2routeretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Retry value.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Retry value.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Retry value.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Retry value.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttp2routetimeout">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutidle">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_csharp">
+<a href="#perrequest_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutperrequest">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutidle">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_go">
+<a href="#perrequest_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutperrequest">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutidle">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_nodejs">
+<a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutperrequest">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutidle">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="per_request_python">
+<a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttp2routetimeoutperrequest">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttp2routetimeoutidle">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Idle</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttp2routetimeoutperrequest">Route<wbr>Spec<wbr>Http2Route<wbr>Timeout<wbr>Per<wbr>Request</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take if a match is determined.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="match_csharp">
+<a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining an HTTP request match.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_csharp">
+<a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteretrypolicy">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take if a match is determined.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="match_go">
+<a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining an HTTP request match.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_go">
+<a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteretrypolicy">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take if a match is determined.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="match_nodejs">
+<a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining an HTTP request match.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_nodejs">
+<a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteretrypolicy">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take if a match is determined.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="match_python">
+<a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The criteria for determining an HTTP request match.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retry_policy_python">
+<a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteretrypolicy">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The retry policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttprouteaction">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="weightedtargets_csharp">
+<a href="#weightedtargets_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">List&lt;Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="weightedtargets_go">
+<a href="#weightedtargets_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">[]Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="weightedtargets_nodejs">
+<a href="#weightedtargets_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target[]</a></span>
+    </dt>
+    <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="weighted_targets_python">
+<a href="#weighted_targets_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteactionweightedtarget">Sequence[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttprouteactionweightedtarget">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnode_csharp">
+<a href="#virtualnode_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnode_go">
+<a href="#virtualnode_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnode_nodejs">
+<a href="#virtualnode_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtual_node_python">
+<a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttproutematch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_csharp">
+<a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheader">List&lt;Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The client request headers to match on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="method_csharp">
+<a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheme_csharp">
+<a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_go">
+<a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheader">[]Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header</a></span>
+    </dt>
+    <dd>{{% md %}}The client request headers to match on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="method_go">
+<a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheme_go">
+<a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_nodejs">
+<a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheader">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}The client request headers to match on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="method_nodejs">
+<a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheme_nodejs">
+<a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_python">
+<a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheader">Sequence[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The client request headers to match on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="method_python">
+<a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scheme_python">
+<a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttproutematchheader">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invert_csharp">
+<a href="#invert_csharp" style="color: inherit; text-decoration: inherit;">Invert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_csharp">
+<a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invert_go">
+<a href="#invert_go" style="color: inherit; text-decoration: inherit;">Invert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_go">
+<a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invert_nodejs">
+<a href="#invert_nodejs" style="color: inherit; text-decoration: inherit;">invert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_nodejs">
+<a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="invert_python">
+<a href="#invert_python" style="color: inherit; text-decoration: inherit;">invert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="match_python">
+<a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exact_csharp">
+<a href="#exact_csharp" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_csharp">
+<a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_csharp">
+<a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regex_csharp">
+<a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="suffix_csharp">
+<a href="#suffix_csharp" style="color: inherit; text-decoration: inherit;">Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exact_go">
+<a href="#exact_go" style="color: inherit; text-decoration: inherit;">Exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_go">
+<a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_go">
+<a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regex_go">
+<a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="suffix_go">
+<a href="#suffix_go" style="color: inherit; text-decoration: inherit;">Suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exact_nodejs">
+<a href="#exact_nodejs" style="color: inherit; text-decoration: inherit;">exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_nodejs">
+<a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_nodejs">
+<a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
+    </dt>
+    <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regex_nodejs">
+<a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="suffix_nodejs">
+<a href="#suffix_nodejs" style="color: inherit; text-decoration: inherit;">suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="exact_python">
+<a href="#exact_python" style="color: inherit; text-decoration: inherit;">exact</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="prefix_python">
+<a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must begin with the specified characters. Must be between 1 and 255 characters in length.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_python">
+<a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The object that specifies the range of numbers that the value sent by the client must be included in.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="regex_python">
+<a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must include the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="suffix_python">
+<a href="#suffix_python" style="color: inherit; text-decoration: inherit;">suffix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value sent by the client must end with the specified characters. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The end of the range.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The start of the range.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The end of the range.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The start of the range.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The end of the range.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The start of the range.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The end of the range.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The start of the range.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttprouteretrypolicy">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxretries_csharp">
+<a href="#maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of retries.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="perretrytimeout_csharp">
+<a href="#perretrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per-retry timeout.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpretryevents_csharp">
+<a href="#httpretryevents_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of HTTP retry events.
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcpretryevents_csharp">
+<a href="#tcpretryevents_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxretries_go">
+<a href="#maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of retries.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="perretrytimeout_go">
+<a href="#perretrytimeout_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The per-retry timeout.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpretryevents_go">
+<a href="#httpretryevents_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of HTTP retry events.
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcpretryevents_go">
+<a href="#tcpretryevents_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxretries_nodejs">
+<a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of retries.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="perretrytimeout_nodejs">
+<a href="#perretrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Retry<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The per-retry timeout.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpretryevents_nodejs">
+<a href="#httpretryevents_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of HTTP retry events.
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcpretryevents_nodejs">
+<a href="#tcpretryevents_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Retry<wbr>Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_retries_python">
+<a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of retries.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="per_retry_timeout_python">
+<a href="#per_retry_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>retry_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttprouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per-retry timeout.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_retry_events_python">
+<a href="#http_retry_events_python" style="color: inherit; text-decoration: inherit;">http_<wbr>retry_<wbr>events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of HTTP retry events.
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+Valid values: `client-error` (HTTP status code 409), `gateway-error` (HTTP status codes 502, 503, and 504), `server-error` (HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511), `stream-error` (retry on refused stream).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tcp_retry_events_python">
+<a href="#tcp_retry_events_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>retry_<wbr>events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of TCP retry events. The only valid value is `connection-error`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttprouteretrypolicyperretrytimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Retry<wbr>Policy<wbr>Per<wbr>Retry<wbr>Timeout</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Retry value.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Retry value.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Retry value.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Retry unit. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Retry value.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttproutetimeout">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutidle">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_csharp">
+<a href="#perrequest_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutperrequest">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutidle">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_go">
+<a href="#perrequest_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutperrequest">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutidle">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="perrequest_nodejs">
+<a href="#perrequest_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutperrequest">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutidle">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="per_request_python">
+<a href="#per_request_python" style="color: inherit; text-decoration: inherit;">per_<wbr>request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutetimeoutperrequest">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The per request timeout.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttproutetimeoutidle">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Idle</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespechttproutetimeoutperrequest">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Timeout<wbr>Per<wbr>Request</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take if a match is determined.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeout">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take if a match is determined.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeout">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take if a match is determined.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeout">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The action to take if a match is determined.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeout">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The types of timeouts.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespectcprouteaction">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="weightedtargets_csharp">
+<a href="#weightedtargets_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">List&lt;Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="weightedtargets_go">
+<a href="#weightedtargets_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">[]Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</a></span>
+    </dt>
+    <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="weightedtargets_nodejs">
+<a href="#weightedtargets_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target[]</a></span>
+    </dt>
+    <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="weighted_targets_python">
+<a href="#weighted_targets_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcprouteactionweightedtarget">Sequence[Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The targets that traffic is routed to when a request matches the route.
+You can specify one or more targets and their relative weights with which to distribute traffic.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespectcprouteactionweightedtarget">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Action<wbr>Weighted<wbr>Target</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnode_csharp">
+<a href="#virtualnode_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnode_go">
+<a href="#virtualnode_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnode_nodejs">
+<a href="#virtualnode_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtual_node_python">
+<a href="#virtual_node_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>node</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The relative weight of the weighted target. An integer between 0 and 100.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespectcproutetimeout">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_csharp">
+<a href="#idle_csharp" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeoutidle">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_go">
+<a href="#idle_go" style="color: inherit; text-decoration: inherit;">Idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeoutidle">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_nodejs">
+<a href="#idle_nodejs" style="color: inherit; text-decoration: inherit;">idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeoutidle">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_python">
+<a href="#idle_python" style="color: inherit; text-decoration: inherit;">idle</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespectcproutetimeoutidle">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="routespectcproutetimeoutidle">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Timeout<wbr>Idle</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_csharp">
+<a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_go">
+<a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_nodejs">
+<a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="unit_python">
+<a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unit of time. Valid values: `ms`, `s`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of time units. Minimum value of `0`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+## Import
 
 
+App Mesh virtual routes can be imported using `mesh_name` and `virtual_router_name` together with the route's `name`, e.g.
 
+```sh
+ $ pulumi import aws:appmesh/route:Route serviceb simpleapp/serviceB/serviceB-route
+```
 
+ [1]/docs/providers/aws/index.html
 
 
 

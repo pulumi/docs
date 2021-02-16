@@ -326,7 +326,7 @@ let getValue(output: Output<'a>): 'a =
 
 {{% /choosable %}}
 
-To learn more about outputs, read [this article]({{< relref "/docs/intro/concepts/programming-model#stack-outputs" >}}).
+To learn more about outputs, read [this article]({{< relref "/docs/intro/concepts/stack#outputs" >}}).
 
 ## First Test
 
@@ -605,7 +605,7 @@ What's going on, and why is it `null`?
 
 I defined the account name like this: `ResourceGroupName = resourceGroup.Name`. However, if we look closely, the `resourceGroup` resource doesn't have an input property `Name` defined. `www-prod-rg` is a logical name for Pulumi deployment, not the physical name of the resource.
 
-Under normal circumstances, the Pulumi engine would use the logical name to produce the physical name of the resource group automatically (see [resource names]({{< relref "/docs/intro/concepts/programming-model#names" >}}) for details). However, my mocks don't do that.
+Under normal circumstances, the Pulumi engine would use the logical name to produce the physical name of the resource group automatically (see [resource names]({{< relref "/docs/intro/concepts/resources#names" >}}) for details). However, my mocks don't do that.
 
 That's a good reason to change the `Mocks` implementation. I add the following lines to the `NewResourceAsync` method.
 

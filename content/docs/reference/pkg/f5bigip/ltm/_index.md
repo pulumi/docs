@@ -37,6 +37,14 @@ Explore the resources and functions of the ltm module in the f5 BIG-IP package.
     <li><a href="virtualserver" title="VirtualServer"><span class="symbol resource"></span>VirtualServer</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getdatagroup" title="GetDataGroup"><span class="symbol function"></span>GetDataGroup</a></li>
+    <li><a href="getirule" title="GetIrule"><span class="symbol function"></span>GetIrule</a></li>
+    <li><a href="getmonitor" title="GetMonitor"><span class="symbol function"></span>GetMonitor</a></li>
+    <li><a href="getpool" title="GetPool"><span class="symbol function"></span>GetPool</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -44,9 +52,9 @@ Explore the resources and functions of the ltm module in the f5 BIG-IP package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
 	<dt>Version</dt>
-	<dd>2.3.0</dd>
+	<dd>2.8.0</dd>
 </dl>
 
 

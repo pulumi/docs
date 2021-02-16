@@ -14,6 +14,7 @@ Gets Object IDs or UPNs for multiple Azure Active Directory users.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Read directory data` within the `Windows Azure Active Directory` API.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread"
+	"github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -108,31 +109,30 @@ const users = pulumi.output(azuread.getUsers({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getUsers<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetUsersArgs">GetUsersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetUsersResult">GetUsersResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getUsers<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetUsersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetUsersResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_users(</span>ignore_missing=None<span class="p">, </span>mail_nicknames=None<span class="p">, </span>object_ids=None<span class="p">, </span>user_principal_names=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_users(</span><span class="nx">ignore_missing</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mail_nicknames</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">object_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_principal_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetUsersResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUsers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetUsersArgs">GetUsersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetUsersResult">GetUsersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUsers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetUsersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetUsersResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetUsers </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.GetUsersResult.html">GetUsersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.GetUsersArgs.html">GetUsersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetUsersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetUsersArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -142,49 +142,44 @@ The following arguments are supported:
             title="Optional">
         <span id="ignoremissing_csharp">
 <a href="#ignoremissing_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignore missing users and return users that were found. The data source will still fail if no users are found. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mailnicknames_csharp">
 <a href="#mailnicknames_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nicknames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objectids_csharp">
 <a href="#objectids_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userprincipalnames_csharp">
 <a href="#userprincipalnames_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -193,49 +188,44 @@ The following arguments are supported:
             title="Optional">
         <span id="ignoremissing_go">
 <a href="#ignoremissing_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignore missing users and return users that were found. The data source will still fail if no users are found. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mailnicknames_go">
 <a href="#mailnicknames_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nicknames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objectids_go">
 <a href="#objectids_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userprincipalnames_go">
 <a href="#userprincipalnames_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -244,49 +234,44 @@ The following arguments are supported:
             title="Optional">
         <span id="ignoremissing_nodejs">
 <a href="#ignoremissing_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Ignore missing users and return users that were found. The data source will still fail if no users are found. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mailnicknames_nodejs">
 <a href="#mailnicknames_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Nicknames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="objectids_nodejs">
 <a href="#objectids_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userprincipalnames_nodejs">
 <a href="#userprincipalnames_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -295,52 +280,44 @@ The following arguments are supported:
             title="Optional">
         <span id="ignore_missing_python">
 <a href="#ignore_missing_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignore missing users and return users that were found. The data source will still fail if no users are found. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mail_nicknames_python">
 <a href="#mail_nicknames_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>nicknames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="object_ids_python">
 <a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_principal_names_python">
 <a href="#user_principal_names_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -351,7 +328,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -359,70 +335,63 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mailnicknames_csharp">
 <a href="#mailnicknames_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nicknames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="objectids_csharp">
 <a href="#objectids_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="userprincipalnames_csharp">
 <a href="#userprincipalnames_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getusersuser">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Users<wbr>User&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An Array of Azure AD Users. Each `user` object consists of the fields documented below.
+    <dd>{{% md %}}A list of Azure AD Users. Each `user` object provides the attributes documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ignoremissing_csharp">
 <a href="#ignoremissing_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -431,70 +400,63 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mailnicknames_go">
 <a href="#mailnicknames_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nicknames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="objectids_go">
 <a href="#objectids_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="userprincipalnames_go">
 <a href="#userprincipalnames_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getusersuser">[]Get<wbr>Users<wbr>User</a></span>
     </dt>
-    <dd>{{% md %}}An Array of Azure AD Users. Each `user` object consists of the fields documented below.
+    <dd>{{% md %}}A list of Azure AD Users. Each `user` object provides the attributes documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ignoremissing_go">
 <a href="#ignoremissing_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -503,70 +465,63 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mailnicknames_nodejs">
 <a href="#mailnicknames_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Nicknames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="objectids_nodejs">
 <a href="#objectids_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="userprincipalnames_nodejs">
 <a href="#userprincipalnames_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getusersuser">Get<wbr>Users<wbr>User[]</a></span>
     </dt>
-    <dd>{{% md %}}An Array of Azure AD Users. Each `user` object consists of the fields documented below.
+    <dd>{{% md %}}A list of Azure AD Users. Each `user` object provides the attributes documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ignoremissing_nodejs">
 <a href="#ignoremissing_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -575,73 +530,63 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mail_nicknames_python">
 <a href="#mail_nicknames_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>nicknames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="object_ids_python">
 <a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="user_principal_names_python">
 <a href="#user_principal_names_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getusersuser">List[Get<wbr>Users<wbr>User]</a></span>
+        <span class="property-type"><a href="#getusersuser">Sequence[Get<wbr>Users<wbr>User]</a></span>
     </dt>
-    <dd>{{% md %}}An Array of Azure AD Users. Each `user` object consists of the fields documented below.
+    <dd>{{% md %}}A list of Azure AD Users. Each `user` object provides the attributes documented below.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ignore_missing_python">
 <a href="#ignore_missing_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -650,17 +595,6 @@ The following output properties are available:
 
 
 <h4 id="getusersuser">Get<wbr>Users<wbr>User</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetUsersUser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GetUsersUser">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.GetUsersUser.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -671,114 +605,104 @@ The following output properties are available:
             title="Required">
         <span id="accountenabled_csharp">
 <a href="#accountenabled_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`True` if the account is enabled; otherwise `False`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="immutableid_csharp">
 <a href="#immutableid_csharp" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mail_csharp">
 <a href="#mail_csharp" style="color: inherit; text-decoration: inherit;">Mail</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary email address of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mailnickname_csharp">
 <a href="#mailnickname_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nickname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email alias of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The Object ID of the Azure AD User.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="onpremisessamaccountname_csharp">
 <a href="#onpremisessamaccountname_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Sam<wbr>Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on premise sam account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="onpremisesuserprincipalname_csharp">
 <a href="#onpremisesuserprincipalname_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="usagelocation_csharp">
 <a href="#usagelocation_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The usage location of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="userprincipalname_csharp">
 <a href="#userprincipalname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User Principal Name of the Azure AD User.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -787,114 +711,104 @@ The following output properties are available:
             title="Required">
         <span id="accountenabled_go">
 <a href="#accountenabled_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`True` if the account is enabled; otherwise `False`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="immutableid_go">
 <a href="#immutableid_go" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mail_go">
 <a href="#mail_go" style="color: inherit; text-decoration: inherit;">Mail</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary email address of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mailnickname_go">
 <a href="#mailnickname_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nickname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email alias of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The Object ID of the Azure AD User.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="onpremisessamaccountname_go">
 <a href="#onpremisessamaccountname_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Sam<wbr>Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on premise sam account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="onpremisesuserprincipalname_go">
 <a href="#onpremisesuserprincipalname_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="usagelocation_go">
 <a href="#usagelocation_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The usage location of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="userprincipalname_go">
 <a href="#userprincipalname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User Principal Name of the Azure AD User.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -903,114 +817,104 @@ The following output properties are available:
             title="Required">
         <span id="accountenabled_nodejs">
 <a href="#accountenabled_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`True` if the account is enabled; otherwise `False`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="immutableid_nodejs">
 <a href="#immutableid_nodejs" style="color: inherit; text-decoration: inherit;">immutable<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mail_nodejs">
 <a href="#mail_nodejs" style="color: inherit; text-decoration: inherit;">mail</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary email address of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mailnickname_nodejs">
 <a href="#mailnickname_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Nickname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email alias of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The Object ID of the Azure AD User.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="onpremisessamaccountname_nodejs">
 <a href="#onpremisessamaccountname_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>Sam<wbr>Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on premise sam account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="onpremisesuserprincipalname_nodejs">
 <a href="#onpremisesuserprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The on premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="usagelocation_nodejs">
 <a href="#usagelocation_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The usage location of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="userprincipalname_nodejs">
 <a href="#userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User Principal Name of the Azure AD User.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1019,117 +923,104 @@ The following output properties are available:
             title="Required">
         <span id="account_enabled_python">
 <a href="#account_enabled_python" style="color: inherit; text-decoration: inherit;">account_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`True` if the account is enabled; otherwise `False`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="immutable_id_python">
 <a href="#immutable_id_python" style="color: inherit; text-decoration: inherit;">immutable_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mail_python">
 <a href="#mail_python" style="color: inherit; text-decoration: inherit;">mail</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary email address of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mail_nickname_python">
 <a href="#mail_nickname_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>nickname</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email alias of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}The Object ID of the Azure AD User.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="onpremises_sam_account_name_python">
 <a href="#onpremises_sam_account_name_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>sam_<wbr>account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The on premise sam account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="onpremises_user_principal_name_python">
 <a href="#onpremises_user_principal_name_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>user_<wbr>principal_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The on premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="usage_location_python">
 <a href="#usage_location_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The usage location of the Azure AD User.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="user_principal_name_python">
 <a href="#user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The User Principal Name of the Azure AD User.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

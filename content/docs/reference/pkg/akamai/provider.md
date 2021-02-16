@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package akamai"
-meta_desc: "Explore the Provider resource of the akamai package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the akamai package. By default, resources use package-wide configuration"
+title_tag: "Resource Provider | Package Akamai"
+meta_desc: "Explore the Provider resource of the Akamai package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the akamai package. By default, resources use package-wide configuration"
 ---
 
 
@@ -17,24 +17,25 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 
+
 ## Create a Provider Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/akamai/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/akamai/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/akamai/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/akamai/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_akamai/#pulumi_akamai.Provider">Provider</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>dns=None<span class="p">, </span>dns_section=None<span class="p">, </span>edgerc=None<span class="p">, </span>gtm_section=None<span class="p">, </span>gtms=None<span class="p">, </span>papi_section=None<span class="p">, </span>properties=None<span class="p">, </span>property_section=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_akamai/#pulumi_akamai.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">appsec_section</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">appsecs</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProviderAppsecArgs]]</span> = None<span class="p">, </span><span class="nx">cache_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">config</span><span class="p">:</span> <span class="nx">Optional[ProviderConfigArgs]</span> = None<span class="p">, </span><span class="nx">config_section</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[ProviderDnsArgs]</span> = None<span class="p">, </span><span class="nx">dns_section</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">edgerc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gtm</span><span class="p">:</span> <span class="nx">Optional[ProviderGtmArgs]</span> = None<span class="p">, </span><span class="nx">gtm_section</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">papi_section</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">property</span><span class="p">:</span> <span class="nx">Optional[ProviderPropertyArgs]</span> = None<span class="p">, </span><span class="nx">property_section</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Akamai.Provider.html">Provider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Pulumi.AkamaiArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Akamai.Provider.html">Provider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Pulumi.AkamaiArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -45,7 +46,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -114,7 +115,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -153,7 +154,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -194,363 +195,506 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="appsecsection_csharp">
+<a href="#appsecsection_csharp" style="color: inherit; text-decoration: inherit;">Appsec<wbr>Section</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;appsec_section&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="appsecs_csharp">
+<a href="#appsecs_csharp" style="color: inherit; text-decoration: inherit;">Appsecs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerappsec">List&lt;Provider<wbr>Appsec<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;appsec&#34; has been deprecated.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cacheenabled_csharp">
+<a href="#cacheenabled_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="configdetails_csharp">
+<a href="#configdetails_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerconfig">Provider<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="configsection_csharp">
+<a href="#configsection_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Section</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The section of the edgerc file to use for configuration
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dns_csharp">
 <a href="#dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerdn">List&lt;Provider<wbr>Dn<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#providerdns">Provider<wbr>Dns<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;dns&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dnssection_csharp">
 <a href="#dnssection_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;dns_section&#34; has been deprecated.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="edgerc_csharp">
 <a href="#edgerc_csharp" style="color: inherit; text-decoration: inherit;">Edgerc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="gtm_csharp">
+<a href="#gtm_csharp" style="color: inherit; text-decoration: inherit;">Gtm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providergtm">Provider<wbr>Gtm<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;gtm&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="gtmsection_csharp">
 <a href="#gtmsection_csharp" style="color: inherit; text-decoration: inherit;">Gtm<wbr>Section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="gtms_csharp">
-<a href="#gtms_csharp" style="color: inherit; text-decoration: inherit;">Gtms</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providergtm">List&lt;Provider<wbr>Gtm<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;gtm_section&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="papisection_csharp">
 <a href="#papisection_csharp" style="color: inherit; text-decoration: inherit;">Papi<wbr>Section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="properties_csharp">
-<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;papi_section&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="property_csharp">
+<a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerproperty">List&lt;Provider<wbr>Property<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#providerproperty">Provider<wbr>Property<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;property&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="propertysection_csharp">
 <a href="#propertysection_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;property_section&#34; has been deprecated.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="appsecsection_go">
+<a href="#appsecsection_go" style="color: inherit; text-decoration: inherit;">Appsec<wbr>Section</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;appsec_section&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="appsecs_go">
+<a href="#appsecs_go" style="color: inherit; text-decoration: inherit;">Appsecs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerappsec">[]Provider<wbr>Appsec</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;appsec&#34; has been deprecated.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cacheenabled_go">
+<a href="#cacheenabled_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="config_go">
+<a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerconfig">Provider<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="configsection_go">
+<a href="#configsection_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Section</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The section of the edgerc file to use for configuration
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dns_go">
 <a href="#dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerdn">[]Provider<wbr>Dn</a></span>
+        <span class="property-type"><a href="#providerdns">Provider<wbr>Dns</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;dns&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dnssection_go">
 <a href="#dnssection_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;dns_section&#34; has been deprecated.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="edgerc_go">
 <a href="#edgerc_go" style="color: inherit; text-decoration: inherit;">Edgerc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="gtm_go">
+<a href="#gtm_go" style="color: inherit; text-decoration: inherit;">Gtm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providergtm">Provider<wbr>Gtm</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;gtm&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="gtmsection_go">
 <a href="#gtmsection_go" style="color: inherit; text-decoration: inherit;">Gtm<wbr>Section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="gtms_go">
-<a href="#gtms_go" style="color: inherit; text-decoration: inherit;">Gtms</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providergtm">[]Provider<wbr>Gtm</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;gtm_section&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="papisection_go">
 <a href="#papisection_go" style="color: inherit; text-decoration: inherit;">Papi<wbr>Section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="properties_go">
-<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;papi_section&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="property_go">
+<a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerproperty">[]Provider<wbr>Property</a></span>
+        <span class="property-type"><a href="#providerproperty">Provider<wbr>Property</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;property&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="propertysection_go">
 <a href="#propertysection_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;property_section&#34; has been deprecated.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="appsecsection_nodejs">
+<a href="#appsecsection_nodejs" style="color: inherit; text-decoration: inherit;">appsec<wbr>Section</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;appsec_section&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="appsecs_nodejs">
+<a href="#appsecs_nodejs" style="color: inherit; text-decoration: inherit;">appsecs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerappsec">Provider<wbr>Appsec[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;appsec&#34; has been deprecated.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cacheenabled_nodejs">
+<a href="#cacheenabled_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="config_nodejs">
+<a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerconfig">Provider<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="configsection_nodejs">
+<a href="#configsection_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Section</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The section of the edgerc file to use for configuration
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dns_nodejs">
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerdn">Provider<wbr>Dn[]</a></span>
+        <span class="property-type"><a href="#providerdns">Provider<wbr>Dns</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;dns&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dnssection_nodejs">
 <a href="#dnssection_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;dns_section&#34; has been deprecated.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="edgerc_nodejs">
 <a href="#edgerc_nodejs" style="color: inherit; text-decoration: inherit;">edgerc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="gtm_nodejs">
+<a href="#gtm_nodejs" style="color: inherit; text-decoration: inherit;">gtm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providergtm">Provider<wbr>Gtm</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;gtm&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="gtmsection_nodejs">
 <a href="#gtmsection_nodejs" style="color: inherit; text-decoration: inherit;">gtm<wbr>Section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="gtms_nodejs">
-<a href="#gtms_nodejs" style="color: inherit; text-decoration: inherit;">gtms</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providergtm">Provider<wbr>Gtm[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;gtm_section&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="papisection_nodejs">
 <a href="#papisection_nodejs" style="color: inherit; text-decoration: inherit;">papi<wbr>Section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="properties_nodejs">
-<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;papi_section&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="property_nodejs">
+<a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerproperty">Provider<wbr>Property[]</a></span>
+        <span class="property-type"><a href="#providerproperty">Provider<wbr>Property</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;property&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="propertysection_nodejs">
 <a href="#propertysection_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;property_section&#34; has been deprecated.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="appsec_section_python">
+<a href="#appsec_section_python" style="color: inherit; text-decoration: inherit;">appsec_<wbr>section</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;appsec_section&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="appsecs_python">
+<a href="#appsecs_python" style="color: inherit; text-decoration: inherit;">appsecs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerappsec">Sequence[Provider<wbr>Appsec<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;appsec&#34; has been deprecated.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cache_enabled_python">
+<a href="#cache_enabled_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="config_python">
+<a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerconfig">Provider<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="config_section_python">
+<a href="#config_section_python" style="color: inherit; text-decoration: inherit;">config_<wbr>section</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The section of the edgerc file to use for configuration
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dns_python">
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerdn">List[Provider<wbr>Dn]</a></span>
+        <span class="property-type"><a href="#providerdns">Provider<wbr>Dns<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;dns&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dns_section_python">
 <a href="#dns_section_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;dns_section&#34; has been deprecated.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="edgerc_python">
 <a href="#edgerc_python" style="color: inherit; text-decoration: inherit;">edgerc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="gtm_python">
+<a href="#gtm_python" style="color: inherit; text-decoration: inherit;">gtm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providergtm">Provider<wbr>Gtm<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;gtm&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="gtm_section_python">
 <a href="#gtm_section_python" style="color: inherit; text-decoration: inherit;">gtm_<wbr>section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="gtms_python">
-<a href="#gtms_python" style="color: inherit; text-decoration: inherit;">gtms</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providergtm">List[Provider<wbr>Gtm]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;gtm_section&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="papi_section_python">
 <a href="#papi_section_python" style="color: inherit; text-decoration: inherit;">papi_<wbr>section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="properties_python">
-<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;papi_section&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="property_python">
+<a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#providerproperty">List[Provider<wbr>Property]</a></span>
+        <span class="property-type"><a href="#providerproperty">Provider<wbr>Property<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;property&#34; has been deprecated.{{% /md %}}</p></dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="property_section_python">
 <a href="#property_section_python" style="color: inherit; text-decoration: inherit;">property_<wbr>section</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The setting &#34;property_section&#34; has been deprecated.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Provider resource produces the following output properties:
-
 
 
 
@@ -561,15 +705,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -578,15 +720,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -595,15 +735,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -612,18 +750,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -634,19 +767,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
-<h4 id="providerdn">Provider<wbr>Dn</h4>
+
+<h4 id="providerappsec">Provider<wbr>Appsec</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#ProviderDn">input</a>   API doc for this type.
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#ProviderAppsec">input</a>   API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#ProviderDnArgs">input</a>   API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#ProviderAppsecArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Akamai.Inputs.ProviderDnArgs.html">input</a>   API doc for this type.
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Akamai.Inputs.ProviderAppsecArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -656,55 +789,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accesstoken_csharp">
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_csharp">
+<a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clienttoken_csharp">
 <a href="#clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbody_csharp">
 <a href="#maxbody_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -713,55 +849,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accesstoken_go">
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_go">
+<a href="#accountkey_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clienttoken_go">
 <a href="#clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbody_go">
 <a href="#maxbody_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -770,115 +909,626 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accesstoken_nodejs">
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_nodejs">
+<a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clienttoken_nodejs">
 <a href="#clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbody_nodejs">
 <a href="#maxbody_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesstoken_python">
-<a href="#accesstoken_python" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
-</span> 
+        <span id="access_token_python">
+<a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="clientsecret_python">
-<a href="#clientsecret_python" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
-</span> 
+        <span id="account_key_python">
+<a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="clienttoken_python">
-<a href="#clienttoken_python" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
-</span> 
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_token_python">
+<a href="#client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxbody_python">
-<a href="#maxbody_python" style="color: inherit; text-decoration: inherit;">max<wbr>Body</a>
-</span> 
+        <span id="max_body_python">
+<a href="#max_body_python" style="color: inherit; text-decoration: inherit;">max_<wbr>body</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="providerconfig">Provider<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#ProviderConfig">input</a>   API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#ProviderConfigArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Akamai.Inputs.ProviderConfigArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
 
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesstoken_csharp">
+<a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_csharp">
+<a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_csharp">
+<a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clienttoken_csharp">
+<a href="#clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxbody_csharp">
+<a href="#maxbody_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesstoken_go">
+<a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_go">
+<a href="#accountkey_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_go">
+<a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clienttoken_go">
+<a href="#clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxbody_go">
+<a href="#maxbody_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesstoken_nodejs">
+<a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_nodejs">
+<a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_nodejs">
+<a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clienttoken_nodejs">
+<a href="#clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxbody_nodejs">
+<a href="#maxbody_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="access_token_python">
+<a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_key_python">
+<a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_token_python">
+<a href="#client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_body_python">
+<a href="#max_body_python" style="color: inherit; text-decoration: inherit;">max_<wbr>body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="providerdns">Provider<wbr>Dns</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/akamai/types/input/#ProviderDns">input</a>   API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#ProviderDnsArgs">input</a>   API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Akamai.Inputs.ProviderDnsArgs.html">input</a>   API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesstoken_csharp">
+<a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_csharp">
+<a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_csharp">
+<a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clienttoken_csharp">
+<a href="#clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxbody_csharp">
+<a href="#maxbody_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesstoken_go">
+<a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_go">
+<a href="#accountkey_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_go">
+<a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clienttoken_go">
+<a href="#clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxbody_go">
+<a href="#maxbody_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accesstoken_nodejs">
+<a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_nodejs">
+<a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientsecret_nodejs">
+<a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clienttoken_nodejs">
+<a href="#clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxbody_nodejs">
+<a href="#maxbody_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="access_token_python">
+<a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_key_python">
+<a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_token_python">
+<a href="#client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_body_python">
+<a href="#max_body_python" style="color: inherit; text-decoration: inherit;">max_<wbr>body</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="providergtm">Provider<wbr>Gtm</h4>
 {{% choosable language nodejs %}}
@@ -888,11 +1538,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#ProviderGtmArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Akamai.Inputs.ProviderGtmArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -902,55 +1551,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accesstoken_csharp">
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_csharp">
+<a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clienttoken_csharp">
 <a href="#clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbody_csharp">
 <a href="#maxbody_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -959,55 +1611,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accesstoken_go">
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_go">
+<a href="#accountkey_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clienttoken_go">
 <a href="#clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbody_go">
 <a href="#maxbody_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1016,115 +1671,118 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accesstoken_nodejs">
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_nodejs">
+<a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clienttoken_nodejs">
 <a href="#clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbody_nodejs">
 <a href="#maxbody_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesstoken_python">
-<a href="#accesstoken_python" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
-</span> 
+        <span id="access_token_python">
+<a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="clientsecret_python">
-<a href="#clientsecret_python" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
-</span> 
+        <span id="account_key_python">
+<a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="clienttoken_python">
-<a href="#clienttoken_python" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
-</span> 
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_token_python">
+<a href="#client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxbody_python">
-<a href="#maxbody_python" style="color: inherit; text-decoration: inherit;">max<wbr>Body</a>
-</span> 
+        <span id="max_body_python">
+<a href="#max_body_python" style="color: inherit; text-decoration: inherit;">max_<wbr>body</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="providerproperty">Provider<wbr>Property</h4>
 {{% choosable language nodejs %}}
@@ -1134,11 +1792,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#ProviderPropertyArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Akamai.Inputs.ProviderPropertyArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1148,55 +1805,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accesstoken_csharp">
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_csharp">
+<a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clienttoken_csharp">
 <a href="#clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbody_csharp">
 <a href="#maxbody_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1205,55 +1865,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accesstoken_go">
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_go">
+<a href="#accountkey_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clienttoken_go">
 <a href="#clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbody_go">
 <a href="#maxbody_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1262,118 +1925,118 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accesstoken_nodejs">
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountkey_nodejs">
+<a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clienttoken_nodejs">
 <a href="#clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbody_nodejs">
 <a href="#maxbody_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="accesstoken_python">
-<a href="#accesstoken_python" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
-</span> 
+        <span id="access_token_python">
+<a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="clientsecret_python">
-<a href="#clientsecret_python" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
-</span> 
+        <span id="account_key_python">
+<a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="clienttoken_python">
-<a href="#clienttoken_python" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
-</span> 
+        <span id="client_secret_python">
+<a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_token_python">
+<a href="#client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="maxbody_python">
-<a href="#maxbody_python" style="color: inherit; text-decoration: inherit;">max<wbr>Body</a>
-</span> 
+        <span id="max_body_python">
+<a href="#max_body_python" style="color: inherit; text-decoration: inherit;">max_<wbr>body</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
@@ -1383,6 +2046,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/terraform-providers/terraform-provider-akamai).</dd>
+	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).</dd>
 </dl>
 

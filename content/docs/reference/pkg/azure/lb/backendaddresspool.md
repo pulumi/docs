@@ -1,8 +1,8 @@
 
 ---
 title: "BackendAddressPool"
-title_tag: "Resource BackendAddressPool | Module lb | Package Azure"
-meta_desc: "Explore the BackendAddressPool resource of the lb module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Load Balancer Backend Address Pool."
+title_tag: "azure.lb.BackendAddressPool"
+meta_desc: "Documentation for the azure.lb.BackendAddressPool resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -53,7 +53,6 @@ class MyStack : Stack
         });
         var exampleBackendAddressPool = new Azure.Lb.BackendAddressPool("exampleBackendAddressPool", new Azure.Lb.BackendAddressPoolArgs
         {
-            ResourceGroupName = exampleResourceGroup.Name,
             LoadbalancerId = exampleLoadBalancer.Id,
         });
     }
@@ -104,8 +103,7 @@ func main() {
 			return err
 		}
 		_, err = lb.NewBackendAddressPool(ctx, "exampleBackendAddressPool", &lb.BackendAddressPoolArgs{
-			ResourceGroupName: exampleResourceGroup.Name,
-			LoadbalancerId:    exampleLoadBalancer.ID(),
+			LoadbalancerId: exampleLoadBalancer.ID(),
 		})
 		if err != nil {
 			return err
@@ -130,13 +128,11 @@ example_public_ip = azure.network.PublicIp("examplePublicIp",
 example_load_balancer = azure.lb.LoadBalancer("exampleLoadBalancer",
     location="West US",
     resource_group_name=example_resource_group.name,
-    frontend_ip_configurations=[{
-        "name": "PublicIPAddress",
-        "public_ip_address_id": example_public_ip.id,
-    }])
-example_backend_address_pool = azure.lb.BackendAddressPool("exampleBackendAddressPool",
-    resource_group_name=example_resource_group.name,
-    loadbalancer_id=example_load_balancer.id)
+    frontend_ip_configurations=[azure.lb.LoadBalancerFrontendIpConfigurationArgs(
+        name="PublicIPAddress",
+        public_ip_address_id=example_public_ip.id,
+    )])
+example_backend_address_pool = azure.lb.BackendAddressPool("exampleBackendAddressPool", loadbalancer_id=example_load_balancer.id)
 ```
 
 {{% /example %}}
@@ -161,10 +157,7 @@ const exampleLoadBalancer = new azure.lb.LoadBalancer("exampleLoadBalancer", {
         publicIpAddressId: examplePublicIp.id,
     }],
 });
-const exampleBackendAddressPool = new azure.lb.BackendAddressPool("exampleBackendAddressPool", {
-    resourceGroupName: exampleResourceGroup.name,
-    loadbalancerId: exampleLoadBalancer.id,
-});
+const exampleBackendAddressPool = new azure.lb.BackendAddressPool("exampleBackendAddressPool", {loadbalancerId: exampleLoadBalancer.id});
 ```
 
 {{% /example %}}
@@ -177,19 +170,19 @@ const exampleBackendAddressPool = new azure.lb.BackendAddressPool("exampleBacken
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#BackendAddressPool">BackendAddressPool</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#BackendAddressPoolArgs">BackendAddressPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#BackendAddressPool">BackendAddressPool</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#BackendAddressPoolArgs">BackendAddressPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/lb/#pulumi_azure.lb.BackendAddressPool">BackendAddressPool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">loadbalancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/lb/#pulumi_azure.lb.BackendAddressPool">BackendAddressPool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendAddressPoolBackendAddressArgs]]</span> = None<span class="p">, </span><span class="nx">loadbalancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#BackendAddressPool">NewBackendAddressPool</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#BackendAddressPoolArgs">BackendAddressPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#BackendAddressPool">BackendAddressPool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#BackendAddressPool">NewBackendAddressPool</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#BackendAddressPoolArgs">BackendAddressPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#BackendAddressPool">BackendAddressPool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.BackendAddressPool.html">BackendAddressPool</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.BackendAddressPoolArgs.html">BackendAddressPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.BackendAddressPool.html">BackendAddressPool</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.BackendAddressPoolArgs.html">BackendAddressPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -200,7 +193,7 @@ const exampleBackendAddressPool = new azure.lb.BackendAddressPool("exampleBacken
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -269,7 +262,7 @@ const exampleBackendAddressPool = new azure.lb.BackendAddressPool("exampleBacken
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -308,7 +301,7 @@ const exampleBackendAddressPool = new azure.lb.BackendAddressPool("exampleBacken
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -349,7 +342,6 @@ The BackendAddressPool resource accepts the following [input]({{< relref "/docs/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -357,38 +349,43 @@ The BackendAddressPool resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="loadbalancerid_csharp">
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="resourcegroupname_csharp">
-<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendaddresses_csharp">
+<a href="#backendaddresses_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Addresses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="#backendaddresspoolbackendaddress">List&lt;Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the resource.
+    <dd>{{% md %}}An array of `backend_address` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backend Address Pool.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="resourcegroupname_csharp">
+<a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -397,38 +394,43 @@ The BackendAddressPool resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="loadbalancerid_go">
 <a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="resourcegroupname_go">
-<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendaddresses_go">
+<a href="#backendaddresses_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Addresses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="#backendaddresspoolbackendaddress">[]Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the resource.
+    <dd>{{% md %}}An array of `backend_address` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backend Address Pool.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="resourcegroupname_go">
+<a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -437,38 +439,43 @@ The BackendAddressPool resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="loadbalancerid_nodejs">
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="resourcegroupname_nodejs">
-<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendaddresses_nodejs">
+<a href="#backendaddresses_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Addresses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="#backendaddresspoolbackendaddress">Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address[]</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the resource.
+    <dd>{{% md %}}An array of `backend_address` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backend Address Pool.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="resourcegroupname_nodejs">
+<a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -477,47 +484,48 @@ The BackendAddressPool resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="loadbalancer_id_python">
 <a href="#loadbalancer_id_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="resource_group_name_python">
-<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backend_addresses_python">
+<a href="#backend_addresses_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>addresses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="#backendaddresspoolbackendaddress">Sequence[Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the resource.
+    <dd>{{% md %}}An array of `backend_address` block as defined below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backend Address Pool.
 {{% /md %}}</dd>
-
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span id="resource_group_name_python">
+<a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the BackendAddressPool resource produces the following output properties:
-
 
 
 
@@ -528,37 +536,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="backendipconfigurations_csharp">
 <a href="#backendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Ip<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Backend IP Configurations associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="loadbalancingrules_csharp">
 <a href="#loadbalancingrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="outboundrules_csharp">
+<a href="#outboundrules_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -567,37 +581,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="backendipconfigurations_go">
 <a href="#backendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Ip<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Backend IP Configurations associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="loadbalancingrules_go">
 <a href="#loadbalancingrules_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="outboundrules_go">
+<a href="#outboundrules_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -606,37 +626,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="backendipconfigurations_nodejs">
 <a href="#backendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Ip<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Backend IP Configurations associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="loadbalancingrules_nodejs">
 <a href="#loadbalancingrules_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="outboundrules_nodejs">
+<a href="#outboundrules_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -645,40 +671,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="backend_ip_configurations_python">
 <a href="#backend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>ip_<wbr>configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Backend IP Configurations associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="load_balancing_rules_python">
 <a href="#load_balancing_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
+    <dt class="property-"
+            title="">
+        <span id="outbound_rules_python">
+<a href="#outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -688,20 +717,20 @@ Get an existing BackendAddressPool resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#BackendAddressPoolState">BackendAddressPoolState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#BackendAddressPool">BackendAddressPool</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#BackendAddressPoolState">BackendAddressPoolState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#BackendAddressPool">BackendAddressPool</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_rules</span><span class="p">:</span> <span class="nx">Optional[List[str]]</span> = None<span class="p">, </span><span class="nx">loadbalancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> BackendAddressPool</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendAddressPoolBackendAddressArgs]]</span> = None<span class="p">, </span><span class="nx">backend_ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">loadbalancer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outbound_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> BackendAddressPool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackendAddressPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#BackendAddressPoolState">BackendAddressPoolState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#BackendAddressPool">BackendAddressPool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackendAddressPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#BackendAddressPoolState">BackendAddressPoolState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#BackendAddressPool">BackendAddressPool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.BackendAddressPool.html">BackendAddressPool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.BackendAddressPoolState.html">BackendAddressPoolState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.BackendAddressPool.html">BackendAddressPool</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.BackendAddressPoolState.html">BackendAddressPoolState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -803,251 +832,303 @@ Get an existing BackendAddressPool resource's state with the given name, ID, and
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_backendaddresses_csharp">
+<a href="#state_backendaddresses_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendaddresspoolbackendaddress">List&lt;Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of `backend_address` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_backendipconfigurations_csharp">
 <a href="#state_backendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Ip<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Backend IP Configurations associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingrules_csharp">
 <a href="#state_loadbalancingrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_csharp">
 <a href="#state_loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="state_outboundrules_csharp">
+<a href="#state_outboundrules_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the resource.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_backendaddresses_go">
+<a href="#state_backendaddresses_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendaddresspoolbackendaddress">[]Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address</a></span>
+    </dt>
+    <dd>{{% md %}}An array of `backend_address` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_backendipconfigurations_go">
 <a href="#state_backendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Ip<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Backend IP Configurations associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingrules_go">
 <a href="#state_loadbalancingrules_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_go">
 <a href="#state_loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="state_outboundrules_go">
+<a href="#state_outboundrules_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the resource.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_backendaddresses_nodejs">
+<a href="#state_backendaddresses_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendaddresspoolbackendaddress">Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of `backend_address` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_backendipconfigurations_nodejs">
 <a href="#state_backendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Ip<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Backend IP Configurations associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingrules_nodejs">
 <a href="#state_loadbalancingrules_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_nodejs">
 <a href="#state_loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="state_outboundrules_nodejs">
+<a href="#state_outboundrules_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the resource.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_backend_addresses_python">
+<a href="#state_backend_addresses_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendaddresspoolbackendaddress">Sequence[Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of `backend_address` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_backend_ip_configurations_python">
 <a href="#state_backend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>ip_<wbr>configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Backend IP Configurations associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_load_balancing_rules_python">
 <a href="#state_load_balancing_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_id_python">
 <a href="#state_loadbalancer_id_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer in which to create the Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backend Address Pool.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
+        <span id="state_outbound_rules_python">
+<a href="#state_outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array of the Load Balancing Outbound Rules associated with this Backend Address Pool.
+{{% /md %}}</dd>
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the resource.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is no longer used and will be removed in the next major version of the Azure Provider{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -1056,7 +1137,175 @@ The following state arguments are supported:
 
 
 
+## Supporting Types
 
+
+
+<h4 id="backendaddresspoolbackendaddress">Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendAddressPoolBackendAddress">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendAddressPoolBackendAddress">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#BackendAddressPoolBackendAddressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#BackendAddressPoolBackendAddressOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.Inputs.BackendAddressPoolBackendAddressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.Outputs.BackendAddressPoolBackendAddress.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP address pre-allocated for this Backend Address with in the Virtual Network of `virtual_network_id`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Backend Address.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkid_csharp">
+<a href="#virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Network that is pre-allocated for this Backend Address.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP address pre-allocated for this Backend Address with in the Virtual Network of `virtual_network_id`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Backend Address.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkid_go">
+<a href="#virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Network that is pre-allocated for this Backend Address.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP address pre-allocated for this Backend Address with in the Virtual Network of `virtual_network_id`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Backend Address.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkid_nodejs">
+<a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Network that is pre-allocated for this Backend Address.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IP address pre-allocated for this Backend Address with in the Virtual Network of `virtual_network_id`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Backend Address.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="virtual_network_id_python">
+<a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Network that is pre-allocated for this Backend Address.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+## Import
+
+
+Load Balancer Backend Address Pools can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:lb/backendAddressPool:BackendAddressPool example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Network/loadBalancers/lb1/backendAddressPools/pool1
+```
 
 
 

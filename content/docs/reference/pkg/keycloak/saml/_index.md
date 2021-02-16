@@ -21,6 +21,7 @@ Explore the resources and functions of the saml module in the Keycloak package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getclient" title="GetClient"><span class="symbol function"></span>GetClient</a></li>
     <li><a href="getclientinstallationprovider" title="GetClientInstallationProvider"><span class="symbol function"></span>GetClientInstallationProvider</a></li>
 </ul>
 
@@ -33,7 +34,7 @@ Explore the resources and functions of the saml module in the Keycloak package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 
 
@@ -44,7 +45,7 @@ Explore the resources and functions of the saml module in the Keycloak package.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Saml.html" title="Pulumi.Keycloak.Saml">Pulumi.Keycloak.Saml</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/saml?tab=doc#" title="keycloak/saml">keycloak/saml</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/saml?tab=doc#" title="keycloak/saml">keycloak/saml</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/saml/#" title="@pulumi/keycloak/saml">@pulumi/keycloak/saml</a></dd>

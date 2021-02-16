@@ -59,13 +59,23 @@ project = ado.core.Project("demo-project",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  ado "github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	ado "github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
 )
 
-project, _ := ado.NewProject(ctx, "test", &ado.ProjectArgs{
-  ProjectName: pulumi.String("my-project"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := ado.NewProject(ctx, "test", &ado.ProjectArgs{
+			ProjectName: pulumi.String("my-project"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

@@ -17,13 +17,16 @@ Explore the resources and functions of the iot module in the Azure package.
     <li><a href="endpointservicebusqueue" title="EndpointServicebusQueue"><span class="symbol resource"></span>EndpointServicebusQueue</a></li>
     <li><a href="endpointservicebustopic" title="EndpointServicebusTopic"><span class="symbol resource"></span>EndpointServicebusTopic</a></li>
     <li><a href="endpointstoragecontainer" title="EndpointStorageContainer"><span class="symbol resource"></span>EndpointStorageContainer</a></li>
+    <li><a href="enrichment" title="Enrichment"><span class="symbol resource"></span>Enrichment</a></li>
     <li><a href="fallbackroute" title="FallbackRoute"><span class="symbol resource"></span>FallbackRoute</a></li>
     <li><a href="iothub" title="IoTHub"><span class="symbol resource"></span>IoTHub</a></li>
     <li><a href="iothubcertificate" title="IotHubCertificate"><span class="symbol resource"></span>IotHubCertificate</a></li>
     <li><a href="iothubdps" title="IotHubDps"><span class="symbol resource"></span>IotHubDps</a></li>
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
+    <li><a href="securitysolution" title="SecuritySolution"><span class="symbol resource"></span>SecuritySolution</a></li>
     <li><a href="sharedaccesspolicy" title="SharedAccessPolicy"><span class="symbol resource"></span>SharedAccessPolicy</a></li>
     <li><a href="timeseriesinsightsaccesspolicy" title="TimeSeriesInsightsAccessPolicy"><span class="symbol resource"></span>TimeSeriesInsightsAccessPolicy</a></li>
+    <li><a href="timeseriesinsightsgen2environment" title="TimeSeriesInsightsGen2Environment"><span class="symbol resource"></span>TimeSeriesInsightsGen2Environment</a></li>
     <li><a href="timeseriesinsightsreferencedataset" title="TimeSeriesInsightsReferenceDataSet"><span class="symbol resource"></span>TimeSeriesInsightsReferenceDataSet</a></li>
     <li><a href="timeseriesinsightsstandardenvironment" title="TimeSeriesInsightsStandardEnvironment"><span class="symbol resource"></span>TimeSeriesInsightsStandardEnvironment</a></li>
 </ul>
@@ -32,6 +35,7 @@ Explore the resources and functions of the iot module in the Azure package.
 <ul class="api">
     <li><a href="getdps" title="GetDps"><span class="symbol function"></span>GetDps</a></li>
     <li><a href="getdpssharedaccesspolicy" title="GetDpsSharedAccessPolicy"><span class="symbol function"></span>GetDpsSharedAccessPolicy</a></li>
+    <li><a href="getiothub" title="GetIotHub"><span class="symbol function"></span>GetIotHub</a></li>
     <li><a href="getsharedaccesspolicy" title="GetSharedAccessPolicy"><span class="symbol function"></span>GetSharedAccessPolicy</a></li>
 </ul>
 
@@ -44,7 +48,7 @@ Explore the resources and functions of the iot module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.17.0</dd>
+	<dd>3.46.0</dd>
 </dl>
 
 

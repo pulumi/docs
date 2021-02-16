@@ -13,13 +13,17 @@ Explore the resources and functions of the wafv2 module in the AWS package.
 <ul class="api">
     <li><a href="ipset" title="IpSet"><span class="symbol resource"></span>IpSet</a></li>
     <li><a href="regexpatternset" title="RegexPatternSet"><span class="symbol resource"></span>RegexPatternSet</a></li>
+    <li><a href="rulegroup" title="RuleGroup"><span class="symbol resource"></span>RuleGroup</a></li>
+    <li><a href="webacl" title="WebAcl"><span class="symbol resource"></span>WebAcl</a></li>
     <li><a href="webaclassociation" title="WebAclAssociation"><span class="symbol resource"></span>WebAclAssociation</a></li>
+    <li><a href="webaclloggingconfiguration" title="WebAclLoggingConfiguration"><span class="symbol resource"></span>WebAclLoggingConfiguration</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getipset" title="GetIpSet"><span class="symbol function"></span>GetIpSet</a></li>
     <li><a href="getregexpatternset" title="GetRegexPatternSet"><span class="symbol function"></span>GetRegexPatternSet</a></li>
+    <li><a href="getrulegroup" title="GetRuleGroup"><span class="symbol function"></span>GetRuleGroup</a></li>
     <li><a href="getwebacl" title="GetWebAcl"><span class="symbol function"></span>GetWebAcl</a></li>
 </ul>
 
@@ -32,24 +36,6 @@ Explore the resources and functions of the wafv2 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.html" title="Pulumi.Aws.WafV2">Pulumi.Aws.WafV2</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#" title="aws/wafv2">aws/wafv2</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafv2/#" title="@pulumi/aws/wafv2">@pulumi/aws/wafv2</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/wafv2" title="pulumi_aws/wafv2">pulumi_aws/wafv2</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

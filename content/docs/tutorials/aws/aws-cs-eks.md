@@ -1,7 +1,7 @@
 ---
-title: "AWS Golang EKS Cluster | C#"
-h1: "AWS Golang EKS Cluster"
-linktitle: "AWS Golang EKS Cluster"
+title: "AWS C# EKS Cluster | C#"
+h1: "AWS C# EKS Cluster"
+linktitle: "AWS C# EKS Cluster"
 no_edit_this_page: true
 ---
 

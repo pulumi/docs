@@ -12,11 +12,13 @@ Explore the resources and functions of the guardduty module in the AWS package.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="detector" title="Detector"><span class="symbol resource"></span>Detector</a></li>
+    <li><a href="filter" title="Filter"><span class="symbol resource"></span>Filter</a></li>
     <li><a href="ipset" title="IPSet"><span class="symbol resource"></span>IPSet</a></li>
     <li><a href="inviteaccepter" title="InviteAccepter"><span class="symbol resource"></span>InviteAccepter</a></li>
     <li><a href="member" title="Member"><span class="symbol resource"></span>Member</a></li>
     <li><a href="organizationadminaccount" title="OrganizationAdminAccount"><span class="symbol resource"></span>OrganizationAdminAccount</a></li>
     <li><a href="organizationconfiguration" title="OrganizationConfiguration"><span class="symbol resource"></span>OrganizationConfiguration</a></li>
+    <li><a href="publishingdestination" title="PublishingDestination"><span class="symbol resource"></span>PublishingDestination</a></li>
     <li><a href="threatintelset" title="ThreatIntelSet"><span class="symbol resource"></span>ThreatIntelSet</a></li>
 </ul>
 
@@ -34,24 +36,6 @@ Explore the resources and functions of the guardduty module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GuardDuty.html" title="Pulumi.Aws.GuardDuty">Pulumi.Aws.GuardDuty</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/guardduty?tab=doc#" title="aws/guardduty">aws/guardduty</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/guardduty/#" title="@pulumi/aws/guardduty">@pulumi/aws/guardduty</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/guardduty" title="pulumi_aws/guardduty">pulumi_aws/guardduty</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

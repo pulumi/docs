@@ -43,14 +43,17 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
     <li><a href="userroles" title="UserRoles"><span class="symbol resource"></span>UserRoles</a></li>
     <li><a href="usertemplateimporteridentityprovidermapper" title="UserTemplateImporterIdentityProviderMapper"><span class="symbol resource"></span>UserTemplateImporterIdentityProviderMapper</a></li>
+    <li><a href="userspermissions" title="UsersPermissions"><span class="symbol resource"></span>UsersPermissions</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getauthenticationexecution" title="GetAuthenticationExecution"><span class="symbol function"></span>GetAuthenticationExecution</a></li>
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
     <li><a href="getrealm" title="GetRealm"><span class="symbol function"></span>GetRealm</a></li>
     <li><a href="getrealmkeys" title="GetRealmKeys"><span class="symbol function"></span>GetRealmKeys</a></li>
     <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
+    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -62,7 +65,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>2.4.0</dd>
+	<dd>3.4.0</dd>
 </dl>
 
 
@@ -73,7 +76,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.html" title="Pulumi.Keycloak">Pulumi.Keycloak</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/?tab=doc#" title="keycloak">keycloak</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#" title="keycloak">keycloak</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#" title="@pulumi/keycloak">@pulumi/keycloak</a></dd>

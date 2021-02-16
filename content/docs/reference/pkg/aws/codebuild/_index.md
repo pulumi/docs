@@ -12,6 +12,7 @@ Explore the resources and functions of the codebuild module in the AWS package.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
+    <li><a href="reportgroup" title="ReportGroup"><span class="symbol resource"></span>ReportGroup</a></li>
     <li><a href="sourcecredential" title="SourceCredential"><span class="symbol resource"></span>SourceCredential</a></li>
     <li><a href="webhook" title="Webhook"><span class="symbol resource"></span>Webhook</a></li>
 </ul>
@@ -25,24 +26,6 @@ Explore the resources and functions of the codebuild module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeBuild.html" title="Pulumi.Aws.CodeBuild">Pulumi.Aws.CodeBuild</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codebuild?tab=doc#" title="aws/codebuild">aws/codebuild</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/codebuild/#" title="@pulumi/aws/codebuild">@pulumi/aws/codebuild</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/codebuild" title="pulumi_aws/codebuild">pulumi_aws/codebuild</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

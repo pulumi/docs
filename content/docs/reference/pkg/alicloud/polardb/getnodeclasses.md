@@ -14,6 +14,7 @@ This data source provides the PolarDB node classes resource available info of Al
 
 > **NOTE:** Available in v1.81.0+
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -34,23 +35,59 @@ class MyStack : Stack
         }));
         var resourcesNodeClasses = resourcesZones.Apply(resourcesZones => Output.Create(AliCloud.PolarDB.GetNodeClasses.InvokeAsync(new AliCloud.PolarDB.GetNodeClassesArgs
         {
+            ZoneId = resourcesZones.Zones[0].Id,
+            PayType = "PostPaid",
             DbType = "MySQL",
             DbVersion = "5.6",
-            PayType = "Postpaid",
-            ZoneId = resourcesZones.Zones[0].Id,
         })));
-        this.FirstPolardbNodeClass = resourcesNodeClasses.Apply(resourcesNodeClasses => resourcesNodeClasses.Classes);
+        this.PolardbNodeClasses = resourcesNodeClasses.Apply(resourcesNodeClasses => resourcesNodeClasses.Classes);
     }
 
-    [Output("firstPolardbNodeClass")]
-    public Output<string> FirstPolardbNodeClass { get; set; }
+    [Output("polardbNodeClasses")]
+    public Output<string> PolardbNodeClasses { get; set; }
 }
 ```
 
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "PolarDB"
+		resourcesZones, err := alicloud.GetZones(ctx, &alicloud.GetZonesArgs{
+			AvailableResourceCreation: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		opt1 := resourcesZones.Zones[0].Id
+		opt2 := "MySQL"
+		opt3 := "5.6"
+		resourcesNodeClasses, err := polardb.GetNodeClasses(ctx, &polardb.GetNodeClassesArgs{
+			ZoneId:    &opt1,
+			PayType:   "PostPaid",
+			DbType:    &opt2,
+			DbVersion: &opt3,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("polardbNodeClasses", resourcesNodeClasses.Classes)
+		return nil
+	})
+}
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -59,11 +96,11 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 resources_zones = alicloud.get_zones(available_resource_creation="PolarDB")
-resources_node_classes = alicloud.polardb.get_node_classes(db_type="MySQL",
-    db_version="5.6",
-    pay_type="Postpaid",
-    zone_id=resources_zones.zones[0]["id"])
-pulumi.export("firstPolardbNodeClass", resources_node_classes.classes)
+resources_node_classes = alicloud.polardb.get_node_classes(zone_id=resources_zones.zones[0].id,
+    pay_type="PostPaid",
+    db_type="MySQL",
+    db_version="5.6")
+pulumi.export("polardbNodeClasses", resources_node_classes.classes)
 ```
 
 {{% /example %}}
@@ -74,17 +111,16 @@ pulumi.export("firstPolardbNodeClass", resources_node_classes.classes)
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const resourcesZones = pulumi.output(alicloud.getZones({
+const resourcesZones = alicloud.getZones({
     availableResourceCreation: "PolarDB",
-}, { async: true }));
-const resourcesNodeClasses = resourcesZones.apply(resourcesZones => alicloud.polardb.getNodeClasses({
+});
+const resourcesNodeClasses = resourcesZones.then(resourcesZones => alicloud.polardb.getNodeClasses({
+    zoneId: resourcesZones.zones[0].id,
+    payType: "PostPaid",
     dbType: "MySQL",
     dbVersion: "5.6",
-    payType: "Postpaid",
-    zoneId: resourcesZones.zones[0].id,
-}, { async: true }));
-
-export const firstPolardbNodeClass = resourcesNodeClasses.classes;
+}));
+export const polardbNodeClasses = resourcesNodeClasses.then(resourcesNodeClasses => resourcesNodeClasses.classes);
 ```
 
 {{% /example %}}
@@ -103,7 +139,7 @@ export const firstPolardbNodeClass = resourcesNodeClasses.classes;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_node_classes(</span>db_node_class=None<span class="p">, </span>db_type=None<span class="p">, </span>db_version=None<span class="p">, </span>output_file=None<span class="p">, </span>pay_type=None<span class="p">, </span>region_id=None<span class="p">, </span>zone_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_node_classes(</span><span class="nx">db_node_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">db_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNodeClassesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -124,7 +160,6 @@ export const firstPolardbNodeClass = resourcesNodeClasses.classes;
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -132,81 +167,73 @@ The following arguments are supported:
             title="Required">
         <span id="paytype_csharp">
 <a href="#paytype_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dbnodeclass_csharp">
 <a href="#dbnodeclass_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PolarDB node class type by the user.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dbtype_csharp">
 <a href="#dbtype_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database type. Options are `MySQL`, `PostgreSQL`, `Oracle`. If db_type is set, db_version also needs to be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dbversion_csharp">
 <a href="#dbversion_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version required by the user. Value options can refer to the latest docs [detail info](https://www.alibabacloud.com/help/doc-detail/98169.htm) `DBVersion`. If db_version is set, db_type also needs to be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regionid_csharp">
 <a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -215,81 +242,73 @@ The following arguments are supported:
             title="Required">
         <span id="paytype_go">
 <a href="#paytype_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dbnodeclass_go">
 <a href="#dbnodeclass_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PolarDB node class type by the user.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dbtype_go">
 <a href="#dbtype_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database type. Options are `MySQL`, `PostgreSQL`, `Oracle`. If db_type is set, db_version also needs to be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dbversion_go">
 <a href="#dbversion_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version required by the user. Value options can refer to the latest docs [detail info](https://www.alibabacloud.com/help/doc-detail/98169.htm) `DBVersion`. If db_version is set, db_type also needs to be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regionid_go">
 <a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -298,81 +317,73 @@ The following arguments are supported:
             title="Required">
         <span id="paytype_nodejs">
 <a href="#paytype_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dbnodeclass_nodejs">
 <a href="#dbnodeclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PolarDB node class type by the user.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dbtype_nodejs">
 <a href="#dbtype_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database type. Options are `MySQL`, `PostgreSQL`, `Oracle`. If db_type is set, db_version also needs to be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dbversion_nodejs">
 <a href="#dbversion_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version required by the user. Value options can refer to the latest docs [detail info](https://www.alibabacloud.com/help/doc-detail/98169.htm) `DBVersion`. If db_version is set, db_type also needs to be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regionid_nodejs">
 <a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -381,84 +392,73 @@ The following arguments are supported:
             title="Required">
         <span id="pay_type_python">
 <a href="#pay_type_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="db_node_class_python">
 <a href="#db_node_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PolarDB node class type by the user.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="db_type_python">
 <a href="#db_type_python" style="color: inherit; text-decoration: inherit;">db_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database type. Options are `MySQL`, `PostgreSQL`, `Oracle`. If db_type is set, db_version also needs to be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="db_version_python">
 <a href="#db_version_python" style="color: inherit; text-decoration: inherit;">db_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database version required by the user. Value options can refer to the latest docs [detail info](https://www.alibabacloud.com/help/doc-detail/98169.htm) `DBVersion`. If db_version is set, db_type also needs to be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_id_python">
 <a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Region to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -469,7 +469,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -477,99 +476,89 @@ The following output properties are available:
             title="">
         <span id="classes_csharp">
 <a href="#classes_csharp" style="color: inherit; text-decoration: inherit;">Classes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclass">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Outputs.<wbr>Get<wbr>Node<wbr>Classes<wbr>Class&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="paytype_csharp">
 <a href="#paytype_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dbnodeclass_csharp">
 <a href="#dbnodeclass_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PolarDB node available class.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dbtype_csharp">
 <a href="#dbtype_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dbversion_csharp">
 <a href="#dbversion_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="regionid_csharp">
 <a href="#regionid_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -578,99 +567,89 @@ The following output properties are available:
             title="">
         <span id="classes_go">
 <a href="#classes_go" style="color: inherit; text-decoration: inherit;">Classes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclass">[]Get<wbr>Node<wbr>Classes<wbr>Class</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="paytype_go">
 <a href="#paytype_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dbnodeclass_go">
 <a href="#dbnodeclass_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PolarDB node available class.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dbtype_go">
 <a href="#dbtype_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dbversion_go">
 <a href="#dbversion_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="regionid_go">
 <a href="#regionid_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -679,99 +658,89 @@ The following output properties are available:
             title="">
         <span id="classes_nodejs">
 <a href="#classes_nodejs" style="color: inherit; text-decoration: inherit;">classes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclass">Get<wbr>Node<wbr>Classes<wbr>Class[]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="paytype_nodejs">
 <a href="#paytype_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dbnodeclass_nodejs">
 <a href="#dbnodeclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PolarDB node available class.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dbtype_nodejs">
 <a href="#dbtype_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="dbversion_nodejs">
 <a href="#dbversion_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="regionid_nodejs">
 <a href="#regionid_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -780,102 +749,89 @@ The following output properties are available:
             title="">
         <span id="classes_python">
 <a href="#classes_python" style="color: inherit; text-decoration: inherit;">classes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodeclassesclass">List[Get<wbr>Node<wbr>Classes<wbr>Class]</a></span>
+        <span class="property-type"><a href="#getnodeclassesclass">Sequence[Get<wbr>Node<wbr>Classes<wbr>Class]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes. Each element contains the following attributes:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pay_type_python">
 <a href="#pay_type_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="db_node_class_python">
 <a href="#db_node_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PolarDB node available class.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="db_type_python">
 <a href="#db_type_python" style="color: inherit; text-decoration: inherit;">db_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="db_version_python">
 <a href="#db_version_python" style="color: inherit; text-decoration: inherit;">db_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="region_id_python">
 <a href="#region_id_python" style="color: inherit; text-decoration: inherit;">region_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -897,7 +853,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -905,27 +860,24 @@ The following output properties are available:
             title="Required">
         <span id="supportedengines_csharp">
 <a href="#supportedengines_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Engines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengine">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes in the zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -934,27 +886,24 @@ The following output properties are available:
             title="Required">
         <span id="supportedengines_go">
 <a href="#supportedengines_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Engines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengine">[]Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes in the zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -963,59 +912,50 @@ The following output properties are available:
             title="Required">
         <span id="supportedengines_nodejs">
 <a href="#supportedengines_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Engines</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengine">Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine[]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes in the zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="supportedengines_python">
-<a href="#supportedengines_python" style="color: inherit; text-decoration: inherit;">supported<wbr>Engines</a>
-</span> 
+        <span id="supported_engines_python">
+<a href="#supported_engines_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>engines</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodeclassesclasssupportedengine">List[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine]</a></span>
+        <span class="property-type"><a href="#getnodeclassesclasssupportedengine">Sequence[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node classes in the zone.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the PolarDB cluster.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getnodeclassesclasssupportedengine">Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine</h4>
 {{% choosable language nodejs %}}
@@ -1031,7 +971,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1039,27 +978,24 @@ The following output properties are available:
             title="Required">
         <span id="availableresources_csharp">
 <a href="#availableresources_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node available classes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In the zone, the database type supports classes in the following available_resources.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1068,27 +1004,24 @@ The following output properties are available:
             title="Required">
         <span id="availableresources_go">
 <a href="#availableresources_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">[]Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node available classes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In the zone, the database type supports classes in the following available_resources.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1097,59 +1030,50 @@ The following output properties are available:
             title="Required">
         <span id="availableresources_nodejs">
 <a href="#availableresources_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource[]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node available classes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In the zone, the database type supports classes in the following available_resources.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="availableresources_python">
-<a href="#availableresources_python" style="color: inherit; text-decoration: inherit;">available<wbr>Resources</a>
-</span> 
+        <span id="available_resources_python">
+<a href="#available_resources_python" style="color: inherit; text-decoration: inherit;">available_<wbr>resources</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">List[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource]</a></span>
+        <span class="property-type"><a href="#getnodeclassesclasssupportedengineavailableresource">Sequence[Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB node available classes.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}In the zone, the database type supports classes in the following available_resources.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getnodeclassesclasssupportedengineavailableresource">Get<wbr>Node<wbr>Classes<wbr>Class<wbr>Supported<wbr>Engine<wbr>Available<wbr>Resource</h4>
 {{% choosable language nodejs %}}
@@ -1165,7 +1089,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1173,16 +1096,14 @@ The following output properties are available:
             title="Required">
         <span id="dbnodeclass_csharp">
 <a href="#dbnodeclass_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PolarDB node class type by the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1191,16 +1112,14 @@ The following output properties are available:
             title="Required">
         <span id="dbnodeclass_go">
 <a href="#dbnodeclass_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Node<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PolarDB node class type by the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1209,16 +1128,14 @@ The following output properties are available:
             title="Required">
         <span id="dbnodeclass_nodejs">
 <a href="#dbnodeclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Node<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PolarDB node class type by the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1227,19 +1144,14 @@ The following output properties are available:
             title="Required">
         <span id="db_node_class_python">
 <a href="#db_node_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>node_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PolarDB node class type by the user.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1252,6 +1164,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 </dl>
 

@@ -12,6 +12,7 @@ Explore the resources and functions of the secretsmanager module in the AWS pack
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
+    <li><a href="secretpolicy" title="SecretPolicy"><span class="symbol resource"></span>SecretPolicy</a></li>
     <li><a href="secretrotation" title="SecretRotation"><span class="symbol resource"></span>SecretRotation</a></li>
     <li><a href="secretversion" title="SecretVersion"><span class="symbol resource"></span>SecretVersion</a></li>
 </ul>
@@ -32,24 +33,6 @@ Explore the resources and functions of the secretsmanager module in the AWS pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SecretsManager.html" title="Pulumi.Aws.SecretsManager">Pulumi.Aws.SecretsManager</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/secretsmanager?tab=doc#" title="aws/secretsmanager">aws/secretsmanager</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/secretsmanager/#" title="@pulumi/aws/secretsmanager">@pulumi/aws/secretsmanager</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws/secretsmanager" title="pulumi_aws/secretsmanager">pulumi_aws/secretsmanager</a></dd>
-
+	<dd>3.29.0</dd>
 </dl>
 

@@ -30,6 +30,7 @@ Explore the resources and functions of the app module in the Okta package.
 <ul class="api">
     <li><a href="getapp" title="GetApp"><span class="symbol function"></span>GetApp</a></li>
     <li><a href="getmetadatasaml" title="GetMetadataSaml"><span class="symbol function"></span>GetMetadataSaml</a></li>
+    <li><a href="getoauth" title="GetOauth"><span class="symbol function"></span>GetOauth</a></li>
     <li><a href="getsaml" title="GetSaml"><span class="symbol function"></span>GetSaml</a></li>
 </ul>
 
@@ -40,26 +41,8 @@ Explore the resources and functions of the app module in the Okta package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
+	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.html" title="Pulumi.Okta.App">Pulumi.Okta.App</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#" title="okta/app">okta/app</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#" title="@pulumi/okta/app">@pulumi/okta/app</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_okta/app" title="pulumi_okta/app">pulumi_okta/app</a></dd>
-
+	<dd>2.10.0</dd>
 </dl>
 

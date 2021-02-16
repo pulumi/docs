@@ -1,0 +1,10 @@
+id = "mitch-gerdisch"
+name = "Mitch Gerdisch"
+title = "Senior Sales Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "MitchellGerdisch"
+linkedin = "mitchgerdisch"

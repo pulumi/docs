@@ -13,6 +13,7 @@ Explore the resources and functions of the network module in the Azure package.
 <ul class="api">
     <li><a href="applicationgateway" title="ApplicationGateway"><span class="symbol resource"></span>ApplicationGateway</a></li>
     <li><a href="applicationsecuritygroup" title="ApplicationSecurityGroup"><span class="symbol resource"></span>ApplicationSecurityGroup</a></li>
+    <li><a href="bgpconnection" title="BgpConnection"><span class="symbol resource"></span>BgpConnection</a></li>
     <li><a href="ddosprotectionplan" title="DdosProtectionPlan"><span class="symbol resource"></span>DdosProtectionPlan</a></li>
     <li><a href="expressroutecircuit" title="ExpressRouteCircuit"><span class="symbol resource"></span>ExpressRouteCircuit</a></li>
     <li><a href="expressroutecircuitauthorization" title="ExpressRouteCircuitAuthorization"><span class="symbol resource"></span>ExpressRouteCircuitAuthorization</a></li>
@@ -22,6 +23,9 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="firewallapplicationrulecollection" title="FirewallApplicationRuleCollection"><span class="symbol resource"></span>FirewallApplicationRuleCollection</a></li>
     <li><a href="firewallnatrulecollection" title="FirewallNatRuleCollection"><span class="symbol resource"></span>FirewallNatRuleCollection</a></li>
     <li><a href="firewallnetworkrulecollection" title="FirewallNetworkRuleCollection"><span class="symbol resource"></span>FirewallNetworkRuleCollection</a></li>
+    <li><a href="firewallpolicy" title="FirewallPolicy"><span class="symbol resource"></span>FirewallPolicy</a></li>
+    <li><a href="firewallpolicyrulecollectiongroup" title="FirewallPolicyRuleCollectionGroup"><span class="symbol resource"></span>FirewallPolicyRuleCollectionGroup</a></li>
+    <li><a href="ipgroup" title="IPGroup"><span class="symbol resource"></span>IPGroup</a></li>
     <li><a href="localnetworkgateway" title="LocalNetworkGateway"><span class="symbol resource"></span>LocalNetworkGateway</a></li>
     <li><a href="natgateway" title="NatGateway"><span class="symbol resource"></span>NatGateway</a></li>
     <li><a href="natgatewaypublicipassociation" title="NatGatewayPublicIpAssociation"><span class="symbol resource"></span>NatGatewayPublicIpAssociation</a></li>
@@ -45,21 +49,27 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
     <li><a href="routefilter" title="RouteFilter"><span class="symbol resource"></span>RouteFilter</a></li>
     <li><a href="routetable" title="RouteTable"><span class="symbol resource"></span>RouteTable</a></li>
+    <li><a href="securitypartnerprovider" title="SecurityPartnerProvider"><span class="symbol resource"></span>SecurityPartnerProvider</a></li>
     <li><a href="subnet" title="Subnet"><span class="symbol resource"></span>Subnet</a></li>
     <li><a href="subnetnatgatewayassociation" title="SubnetNatGatewayAssociation"><span class="symbol resource"></span>SubnetNatGatewayAssociation</a></li>
     <li><a href="subnetnetworksecuritygroupassociation" title="SubnetNetworkSecurityGroupAssociation"><span class="symbol resource"></span>SubnetNetworkSecurityGroupAssociation</a></li>
     <li><a href="subnetroutetableassociation" title="SubnetRouteTableAssociation"><span class="symbol resource"></span>SubnetRouteTableAssociation</a></li>
+    <li><a href="subnetserviceendpointstoragepolicy" title="SubnetServiceEndpointStoragePolicy"><span class="symbol resource"></span>SubnetServiceEndpointStoragePolicy</a></li>
     <li><a href="trafficmanagerendpoint" title="TrafficManagerEndpoint"><span class="symbol resource"></span>TrafficManagerEndpoint</a></li>
     <li><a href="trafficmanagerprofile" title="TrafficManagerProfile"><span class="symbol resource"></span>TrafficManagerProfile</a></li>
     <li><a href="virtualhub" title="VirtualHub"><span class="symbol resource"></span>VirtualHub</a></li>
     <li><a href="virtualhubconnection" title="VirtualHubConnection"><span class="symbol resource"></span>VirtualHubConnection</a></li>
+    <li><a href="virtualhubip" title="VirtualHubIp"><span class="symbol resource"></span>VirtualHubIp</a></li>
+    <li><a href="virtualhubroutetable" title="VirtualHubRouteTable"><span class="symbol resource"></span>VirtualHubRouteTable</a></li>
     <li><a href="virtualnetwork" title="VirtualNetwork"><span class="symbol resource"></span>VirtualNetwork</a></li>
     <li><a href="virtualnetworkgateway" title="VirtualNetworkGateway"><span class="symbol resource"></span>VirtualNetworkGateway</a></li>
     <li><a href="virtualnetworkgatewayconnection" title="VirtualNetworkGatewayConnection"><span class="symbol resource"></span>VirtualNetworkGatewayConnection</a></li>
     <li><a href="virtualnetworkpeering" title="VirtualNetworkPeering"><span class="symbol resource"></span>VirtualNetworkPeering</a></li>
     <li><a href="virtualwan" title="VirtualWan"><span class="symbol resource"></span>VirtualWan</a></li>
     <li><a href="vpngateway" title="VpnGateway"><span class="symbol resource"></span>VpnGateway</a></li>
+    <li><a href="vpngatewayconnection" title="VpnGatewayConnection"><span class="symbol resource"></span>VpnGatewayConnection</a></li>
     <li><a href="vpnserverconfiguration" title="VpnServerConfiguration"><span class="symbol resource"></span>VpnServerConfiguration</a></li>
+    <li><a href="vpnsite" title="VpnSite"><span class="symbol resource"></span>VpnSite</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -67,7 +77,9 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="getapplicationsecuritygroup" title="GetApplicationSecurityGroup"><span class="symbol function"></span>GetApplicationSecurityGroup</a></li>
     <li><a href="getexpressroutecircuit" title="GetExpressRouteCircuit"><span class="symbol function"></span>GetExpressRouteCircuit</a></li>
     <li><a href="getfirewall" title="GetFirewall"><span class="symbol function"></span>GetFirewall</a></li>
+    <li><a href="getfirewallpolicy" title="GetFirewallPolicy"><span class="symbol function"></span>GetFirewallPolicy</a></li>
     <li><a href="getgatewayconnection" title="GetGatewayConnection"><span class="symbol function"></span>GetGatewayConnection</a></li>
+    <li><a href="getipgroup" title="GetIpGroup"><span class="symbol function"></span>GetIpGroup</a></li>
     <li><a href="getnatgateway" title="GetNatGateway"><span class="symbol function"></span>GetNatGateway</a></li>
     <li><a href="getnetworkddosprotectionplan" title="GetNetworkDdosProtectionPlan"><span class="symbol function"></span>GetNetworkDdosProtectionPlan</a></li>
     <li><a href="getnetworkinterface" title="GetNetworkInterface"><span class="symbol function"></span>GetNetworkInterface</a></li>
@@ -81,9 +93,11 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="getservicetags" title="GetServiceTags"><span class="symbol function"></span>GetServiceTags</a></li>
     <li><a href="getsubnet" title="GetSubnet"><span class="symbol function"></span>GetSubnet</a></li>
     <li><a href="gettrafficmanager" title="GetTrafficManager"><span class="symbol function"></span>GetTrafficManager</a></li>
+    <li><a href="gettrafficmanagerprofile" title="GetTrafficManagerProfile"><span class="symbol function"></span>GetTrafficManagerProfile</a></li>
     <li><a href="getvirtualhub" title="GetVirtualHub"><span class="symbol function"></span>GetVirtualHub</a></li>
     <li><a href="getvirtualnetwork" title="GetVirtualNetwork"><span class="symbol function"></span>GetVirtualNetwork</a></li>
     <li><a href="getvirtualnetworkgateway" title="GetVirtualNetworkGateway"><span class="symbol function"></span>GetVirtualNetworkGateway</a></li>
+    <li><a href="getvirtualwan" title="GetVirtualWan"><span class="symbol function"></span>GetVirtualWan</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -95,7 +109,7 @@ Explore the resources and functions of the network module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.17.0</dd>
+	<dd>3.46.0</dd>
 </dl>
 
 

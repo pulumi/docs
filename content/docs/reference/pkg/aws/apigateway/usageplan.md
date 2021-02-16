@@ -1,8 +1,8 @@
 
 ---
 title: "UsagePlan"
-title_tag: "Resource UsagePlan | Module apigateway | Package AWS"
-meta_desc: "Explore the UsagePlan resource of the apigateway module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an API Gateway Usage Plan."
+title_tag: "aws.apigateway.UsagePlan"
+meta_desc: "Documentation for the aws.apigateway.UsagePlan resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -12,215 +12,6 @@ meta_desc: "Explore the UsagePlan resource of the apigateway module, including e
 
 Provides an API Gateway Usage Plan.
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var myapi = new Aws.ApiGateway.RestApi("myapi", new Aws.ApiGateway.RestApiArgs
-        {
-        });
-        // ...
-        var dev = new Aws.ApiGateway.Deployment("dev", new Aws.ApiGateway.DeploymentArgs
-        {
-            RestApi = myapi.Id,
-            StageName = "dev",
-        });
-        var prod = new Aws.ApiGateway.Deployment("prod", new Aws.ApiGateway.DeploymentArgs
-        {
-            RestApi = myapi.Id,
-            StageName = "prod",
-        });
-        var myUsagePlan = new Aws.ApiGateway.UsagePlan("myUsagePlan", new Aws.ApiGateway.UsagePlanArgs
-        {
-            Description = "my description",
-            ProductCode = "MYCODE",
-            ApiStages = 
-            {
-                new Aws.ApiGateway.Inputs.UsagePlanApiStageArgs
-                {
-                    ApiId = myapi.Id,
-                    Stage = dev.StageName,
-                },
-                new Aws.ApiGateway.Inputs.UsagePlanApiStageArgs
-                {
-                    ApiId = myapi.Id,
-                    Stage = prod.StageName,
-                },
-            },
-            QuotaSettings = new Aws.ApiGateway.Inputs.UsagePlanQuotaSettingsArgs
-            {
-                Limit = 20,
-                Offset = 2,
-                Period = "WEEK",
-            },
-            ThrottleSettings = new Aws.ApiGateway.Inputs.UsagePlanThrottleSettingsArgs
-            {
-                BurstLimit = 5,
-                RateLimit = 10,
-            },
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		myapi, err := apigateway.NewRestApi(ctx, "myapi", nil)
-		if err != nil {
-			return err
-		}
-		dev, err := apigateway.NewDeployment(ctx, "dev", &apigateway.DeploymentArgs{
-			RestApi:   myapi.ID(),
-			StageName: pulumi.String("dev"),
-		})
-		if err != nil {
-			return err
-		}
-		prod, err := apigateway.NewDeployment(ctx, "prod", &apigateway.DeploymentArgs{
-			RestApi:   myapi.ID(),
-			StageName: pulumi.String("prod"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = apigateway.NewUsagePlan(ctx, "myUsagePlan", &apigateway.UsagePlanArgs{
-			Description: pulumi.String("my description"),
-			ProductCode: pulumi.String("MYCODE"),
-			ApiStages: apigateway.UsagePlanApiStageArray{
-				&apigateway.UsagePlanApiStageArgs{
-					ApiId: myapi.ID(),
-					Stage: dev.StageName,
-				},
-				&apigateway.UsagePlanApiStageArgs{
-					ApiId: myapi.ID(),
-					Stage: prod.StageName,
-				},
-			},
-			QuotaSettings: &apigateway.UsagePlanQuotaSettingsArgs{
-				Limit:  pulumi.Int(20),
-				Offset: pulumi.Int(2),
-				Period: pulumi.String("WEEK"),
-			},
-			ThrottleSettings: &apigateway.UsagePlanThrottleSettingsArgs{
-				BurstLimit: pulumi.Int(5),
-				RateLimit:  pulumi.Float64(10),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-myapi = aws.apigateway.RestApi("myapi")
-# ...
-dev = aws.apigateway.Deployment("dev",
-    rest_api=myapi.id,
-    stage_name="dev")
-prod = aws.apigateway.Deployment("prod",
-    rest_api=myapi.id,
-    stage_name="prod")
-my_usage_plan = aws.apigateway.UsagePlan("myUsagePlan",
-    description="my description",
-    product_code="MYCODE",
-    api_stages=[
-        {
-            "api_id": myapi.id,
-            "stage": dev.stage_name,
-        },
-        {
-            "api_id": myapi.id,
-            "stage": prod.stage_name,
-        },
-    ],
-    quota_settings={
-        "limit": 20,
-        "offset": 2,
-        "period": "WEEK",
-    },
-    throttle_settings={
-        "burstLimit": 5,
-        "rate_limit": 10,
-    })
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const myapi = new aws.apigateway.RestApi("myapi", {});
-// ...
-const dev = new aws.apigateway.Deployment("dev", {
-    restApi: myapi.id,
-    stageName: "dev",
-});
-const prod = new aws.apigateway.Deployment("prod", {
-    restApi: myapi.id,
-    stageName: "prod",
-});
-const myUsagePlan = new aws.apigateway.UsagePlan("myUsagePlan", {
-    description: "my description",
-    productCode: "MYCODE",
-    apiStages: [
-        {
-            apiId: myapi.id,
-            stage: dev.stageName,
-        },
-        {
-            apiId: myapi.id,
-            stage: prod.stageName,
-        },
-    ],
-    quotaSettings: {
-        limit: 20,
-        offset: 2,
-        period: "WEEK",
-    },
-    throttleSettings: {
-        burstLimit: 5,
-        rateLimit: 10,
-    },
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a UsagePlan Resource {#create}
@@ -228,19 +19,19 @@ const myUsagePlan = new aws.apigateway.UsagePlan("myUsagePlan", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#UsagePlan">UsagePlan</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#UsagePlanArgs">UsagePlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">UsagePlan</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">UsagePlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.UsagePlan">UsagePlan</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>api_stages=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>product_code=None<span class="p">, </span>quota_settings=None<span class="p">, </span>tags=None<span class="p">, </span>throttle_settings=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">UsagePlan</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_stages</span><span class="p">:</span> <span class="nx">Optional[Sequence[UsagePlanApiStageArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quota_settings</span><span class="p">:</span> <span class="nx">Optional[UsagePlanQuotaSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throttle_settings</span><span class="p">:</span> <span class="nx">Optional[UsagePlanThrottleSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#UsagePlan">NewUsagePlan</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#UsagePlanArgs">UsagePlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#UsagePlan">UsagePlan</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewUsagePlan</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">UsagePlanArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UsagePlan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.UsagePlan.html">UsagePlan</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.UsagePlanArgs.html">UsagePlanArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">UsagePlan</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">UsagePlanArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -251,7 +42,7 @@ const myUsagePlan = new aws.apigateway.UsagePlan("myUsagePlan", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -261,7 +52,7 @@ const myUsagePlan = new aws.apigateway.UsagePlan("myUsagePlan", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#UsagePlanArgs">UsagePlanArgs</a></span>
+        <span class="property-type"><a href="#inputs">UsagePlanArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -320,7 +111,7 @@ const myUsagePlan = new aws.apigateway.UsagePlan("myUsagePlan", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -330,7 +121,7 @@ const myUsagePlan = new aws.apigateway.UsagePlan("myUsagePlan", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#UsagePlanArgs">UsagePlanArgs</a></span>
+        <span class="property-type"><a href="#inputs">UsagePlanArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -359,7 +150,7 @@ const myUsagePlan = new aws.apigateway.UsagePlan("myUsagePlan", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -369,7 +160,7 @@ const myUsagePlan = new aws.apigateway.UsagePlan("myUsagePlan", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.UsagePlanArgs.html">UsagePlanArgs</a></span>
+        <span class="property-type"><a href="#inputs">UsagePlanArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -392,12 +183,11 @@ const myUsagePlan = new aws.apigateway.UsagePlan("myUsagePlan", {
 
 ## UsagePlan Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -408,82 +198,74 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
             title="Optional">
         <span id="apistages_csharp">
 <a href="#apistages_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanapistage">List&lt;Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="productcode_csharp">
 <a href="#productcode_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+    <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="quotasettings_csharp">
 <a href="#quotasettings_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttlesettings_csharp">
 <a href="#throttlesettings_csharp" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -492,82 +274,74 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
             title="Optional">
         <span id="apistages_go">
 <a href="#apistages_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanapistage">[]Usage<wbr>Plan<wbr>Api<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="productcode_go">
 <a href="#productcode_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+    <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="quotasettings_go">
 <a href="#quotasettings_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttlesettings_go">
 <a href="#throttlesettings_go" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -576,82 +350,74 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
             title="Optional">
         <span id="apistages_nodejs">
 <a href="#apistages_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanapistage">Usage<wbr>Plan<wbr>Api<wbr>Stage[]</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="productcode_nodejs">
 <a href="#productcode_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+    <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="quotasettings_nodejs">
 <a href="#quotasettings_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttlesettings_nodejs">
 <a href="#throttlesettings_nodejs" style="color: inherit; text-decoration: inherit;">throttle<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -660,91 +426,79 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
             title="Optional">
         <span id="api_stages_python">
 <a href="#api_stages_python" style="color: inherit; text-decoration: inherit;">api_<wbr>stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanapistage">List[Usage<wbr>Plan<wbr>Api<wbr>Stage]</a></span>
+        <span class="property-type"><a href="#usageplanapistage">Sequence[Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="product_code_python">
 <a href="#product_code_python" style="color: inherit; text-decoration: inherit;">product_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+    <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="quota_settings_python">
 <a href="#quota_settings_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanquotasettings">Dict[Usage<wbr>Plan<wbr>Quota<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttle_settings_python">
 <a href="#throttle_settings_python" style="color: inherit; text-decoration: inherit;">throttle_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanthrottlesettings">Dict[Usage<wbr>Plan<wbr>Throttle<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the UsagePlan resource produces the following output properties:
-
 
 
 
@@ -755,26 +509,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -783,26 +534,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -811,26 +559,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -839,29 +584,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -871,19 +610,20 @@ Get an existing UsagePlan resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#UsagePlanState">UsagePlanState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#UsagePlan">UsagePlan</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">UsagePlanState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">UsagePlan</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>api_stages=None<span class="p">, </span>arn=None<span class="p">, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>product_code=None<span class="p">, </span>quota_settings=None<span class="p">, </span>tags=None<span class="p">, </span>throttle_settings=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_stages</span><span class="p">:</span> <span class="nx">Optional[Sequence[UsagePlanApiStageArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">product_code</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">quota_settings</span><span class="p">:</span> <span class="nx">Optional[UsagePlanQuotaSettingsArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throttle_settings</span><span class="p">:</span> <span class="nx">Optional[UsagePlanThrottleSettingsArgs]</span> = None<span class="p">) -&gt;</span> UsagePlan</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUsagePlan<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#UsagePlanState">UsagePlanState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#UsagePlan">UsagePlan</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUsagePlan<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">UsagePlanState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">UsagePlan</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.UsagePlan.html">UsagePlan</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.UsagePlanState.html">UsagePlanState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">UsagePlan</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">UsagePlanState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -985,7 +725,6 @@ Get an existing UsagePlan resource's state with the given name, ID, and optional
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -993,93 +732,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_apistages_csharp">
 <a href="#state_apistages_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanapistage">List&lt;Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_productcode_csharp">
 <a href="#state_productcode_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+    <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_quotasettings_csharp">
 <a href="#state_quotasettings_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_throttlesettings_csharp">
 <a href="#state_throttlesettings_csharp" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1088,93 +818,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_apistages_go">
 <a href="#state_apistages_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanapistage">[]Usage<wbr>Plan<wbr>Api<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_productcode_go">
 <a href="#state_productcode_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+    <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_quotasettings_go">
 <a href="#state_quotasettings_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_throttlesettings_go">
 <a href="#state_throttlesettings_go" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1183,93 +904,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_apistages_nodejs">
 <a href="#state_apistages_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanapistage">Usage<wbr>Plan<wbr>Api<wbr>Stage[]</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_productcode_nodejs">
 <a href="#state_productcode_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+    <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_quotasettings_nodejs">
 <a href="#state_quotasettings_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_throttlesettings_nodejs">
 <a href="#state_throttlesettings_nodejs" style="color: inherit; text-decoration: inherit;">throttle<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1278,96 +990,84 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_api_stages_python">
 <a href="#state_api_stages_python" style="color: inherit; text-decoration: inherit;">api_<wbr>stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanapistage">List[Usage<wbr>Plan<wbr>Api<wbr>Stage]</a></span>
+        <span class="property-type"><a href="#usageplanapistage">Sequence[Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_product_code_python">
 <a href="#state_product_code_python" style="color: inherit; text-decoration: inherit;">product_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+    <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_quota_settings_python">
 <a href="#state_quota_settings_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanquotasettings">Dict[Usage<wbr>Plan<wbr>Quota<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_throttle_settings_python">
 <a href="#state_throttle_settings_python" style="color: inherit; text-decoration: inherit;">throttle_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#usageplanthrottlesettings">Dict[Usage<wbr>Plan<wbr>Throttle<wbr>Settings]</a></span>
+        <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1377,20 +1077,8 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="usageplanapistage">Usage<wbr>Plan<wbr>Api<wbr>Stage</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanApiStage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UsagePlanApiStage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#UsagePlanApiStageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#UsagePlanApiStageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Inputs.UsagePlanApiStageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Outputs.UsagePlanApiStage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1399,27 +1087,24 @@ The following state arguments are supported:
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Id of the associated API stage in a usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_csharp">
 <a href="#stage_csharp" style="color: inherit; text-decoration: inherit;">Stage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API stage name of the associated API stage in a usage plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1428,27 +1113,24 @@ The following state arguments are supported:
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Id of the associated API stage in a usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_go">
 <a href="#stage_go" style="color: inherit; text-decoration: inherit;">Stage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API stage name of the associated API stage in a usage plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1457,27 +1139,24 @@ The following state arguments are supported:
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Id of the associated API stage in a usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_nodejs">
 <a href="#stage_nodejs" style="color: inherit; text-decoration: inherit;">stage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API stage name of the associated API stage in a usage plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1486,45 +1165,26 @@ The following state arguments are supported:
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API Id of the associated API stage in a usage plan.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stage_python">
 <a href="#stage_python" style="color: inherit; text-decoration: inherit;">stage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API stage name of the associated API stage in a usage plan.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanQuotaSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UsagePlanQuotaSettings">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#UsagePlanQuotaSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#UsagePlanQuotaSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Inputs.UsagePlanQuotaSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Outputs.UsagePlanQuotaSettings.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1533,38 +1193,34 @@ The following state arguments are supported:
             title="Required">
         <span id="limit_csharp">
 <a href="#limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests that can be made in a given time period.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period in which the limit applies. Valid values are "DAY", "WEEK" or "MONTH".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offset_csharp">
 <a href="#offset_csharp" style="color: inherit; text-decoration: inherit;">Offset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of requests subtracted from the given limit in the initial time period.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1573,38 +1229,34 @@ The following state arguments are supported:
             title="Required">
         <span id="limit_go">
 <a href="#limit_go" style="color: inherit; text-decoration: inherit;">Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests that can be made in a given time period.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period in which the limit applies. Valid values are "DAY", "WEEK" or "MONTH".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offset_go">
 <a href="#offset_go" style="color: inherit; text-decoration: inherit;">Offset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of requests subtracted from the given limit in the initial time period.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1613,38 +1265,34 @@ The following state arguments are supported:
             title="Required">
         <span id="limit_nodejs">
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests that can be made in a given time period.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period in which the limit applies. Valid values are "DAY", "WEEK" or "MONTH".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offset_nodejs">
 <a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of requests subtracted from the given limit in the initial time period.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1653,56 +1301,36 @@ The following state arguments are supported:
             title="Required">
         <span id="limit_python">
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests that can be made in a given time period.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time period in which the limit applies. Valid values are "DAY", "WEEK" or "MONTH".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offset_python">
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of requests subtracted from the given limit in the initial time period.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UsagePlanThrottleSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UsagePlanThrottleSettings">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#UsagePlanThrottleSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#UsagePlanThrottleSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Inputs.UsagePlanThrottleSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Outputs.UsagePlanThrottleSettings.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1711,27 +1339,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="burstlimit_csharp">
 <a href="#burstlimit_csharp" style="color: inherit; text-decoration: inherit;">Burst<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ratelimit_csharp">
 <a href="#ratelimit_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The API request steady-state rate limit.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1740,27 +1365,24 @@ The following state arguments are supported:
             title="Optional">
         <span id="burstlimit_go">
 <a href="#burstlimit_go" style="color: inherit; text-decoration: inherit;">Burst<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ratelimit_go">
 <a href="#ratelimit_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The API request steady-state rate limit.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1769,60 +1391,58 @@ The following state arguments are supported:
             title="Optional">
         <span id="burstlimit_nodejs">
 <a href="#burstlimit_nodejs" style="color: inherit; text-decoration: inherit;">burst<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ratelimit_nodejs">
 <a href="#ratelimit_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The API request steady-state rate limit.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="burstlimit_python">
-<a href="#burstlimit_python" style="color: inherit; text-decoration: inherit;">burst<wbr>Limit</a>
-</span> 
+        <span id="burst_limit_python">
+<a href="#burst_limit_python" style="color: inherit; text-decoration: inherit;">burst_<wbr>limit</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rate_limit_python">
 <a href="#rate_limit_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The API request steady-state rate limit.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+AWS API Gateway Usage Plan can be imported using the `id`, e.g.
 
-
-
+```sh
+ $ pulumi import aws:apigateway/usagePlan:UsagePlan myusageplan <usage_plan_id>
+```
 
 
 

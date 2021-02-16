@@ -1,8 +1,8 @@
 
 ---
 title: "Pipeline"
-title_tag: "Resource Pipeline | Module codepipeline | Package AWS"
-meta_desc: "Explore the Pipeline resource of the codepipeline module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a CodePipeline."
+title_tag: "aws.codepipeline.Pipeline"
+meta_desc: "Documentation for the aws.codepipeline.Pipeline resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -12,6 +12,561 @@ meta_desc: "Explore the Pipeline resource of the codepipeline module, including 
 
 Provides a CodePipeline.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.CodeStarConnections.Connection("example", new Aws.CodeStarConnections.ConnectionArgs
+        {
+            ProviderType = "GitHub",
+        });
+        var codepipelineBucket = new Aws.S3.Bucket("codepipelineBucket", new Aws.S3.BucketArgs
+        {
+            Acl = "private",
+        });
+        var codepipelineRole = new Aws.Iam.Role("codepipelineRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = @"{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {
+      ""Effect"": ""Allow"",
+      ""Principal"": {
+        ""Service"": ""codepipeline.amazonaws.com""
+      },
+      ""Action"": ""sts:AssumeRole""
+    }
+  ]
+}
+",
+        });
+        var s3kmskey = Output.Create(Aws.Kms.GetAlias.InvokeAsync(new Aws.Kms.GetAliasArgs
+        {
+            Name = "alias/myKmsKey",
+        }));
+        var codepipeline = new Aws.CodePipeline.Pipeline("codepipeline", new Aws.CodePipeline.PipelineArgs
+        {
+            RoleArn = codepipelineRole.Arn,
+            ArtifactStore = new Aws.CodePipeline.Inputs.PipelineArtifactStoreArgs
+            {
+                Location = codepipelineBucket.BucketName,
+                Type = "S3",
+                EncryptionKey = new Aws.CodePipeline.Inputs.PipelineArtifactStoreEncryptionKeyArgs
+                {
+                    Id = s3kmskey.Apply(s3kmskey => s3kmskey.Arn),
+                    Type = "KMS",
+                },
+            },
+            Stages = 
+            {
+                new Aws.CodePipeline.Inputs.PipelineStageArgs
+                {
+                    Name = "Source",
+                    Actions = 
+                    {
+                        new Aws.CodePipeline.Inputs.PipelineStageActionArgs
+                        {
+                            Name = "Source",
+                            Category = "Source",
+                            Owner = "AWS",
+                            Provider = "CodeStarSourceConnection",
+                            Version = "1",
+                            OutputArtifacts = 
+                            {
+                                "source_output",
+                            },
+                            Configuration = 
+                            {
+                                { "ConnectionArn", example.Arn },
+                                { "FullRepositoryId", "my-organization/example" },
+                                { "BranchName", "main" },
+                            },
+                        },
+                    },
+                },
+                new Aws.CodePipeline.Inputs.PipelineStageArgs
+                {
+                    Name = "Build",
+                    Actions = 
+                    {
+                        new Aws.CodePipeline.Inputs.PipelineStageActionArgs
+                        {
+                            Name = "Build",
+                            Category = "Build",
+                            Owner = "AWS",
+                            Provider = "CodeBuild",
+                            InputArtifacts = 
+                            {
+                                "source_output",
+                            },
+                            OutputArtifacts = 
+                            {
+                                "build_output",
+                            },
+                            Version = "1",
+                            Configuration = 
+                            {
+                                { "ProjectName", "test" },
+                            },
+                        },
+                    },
+                },
+                new Aws.CodePipeline.Inputs.PipelineStageArgs
+                {
+                    Name = "Deploy",
+                    Actions = 
+                    {
+                        new Aws.CodePipeline.Inputs.PipelineStageActionArgs
+                        {
+                            Name = "Deploy",
+                            Category = "Deploy",
+                            Owner = "AWS",
+                            Provider = "CloudFormation",
+                            InputArtifacts = 
+                            {
+                                "build_output",
+                            },
+                            Version = "1",
+                            Configuration = 
+                            {
+                                { "ActionMode", "REPLACE_ON_FAILURE" },
+                                { "Capabilities", "CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM" },
+                                { "OutputFileName", "CreateStackOutput.json" },
+                                { "StackName", "MyStack" },
+                                { "TemplatePath", "build_output::sam-templated.yaml" },
+                            },
+                        },
+                    },
+                },
+            },
+        });
+        var codepipelinePolicy = new Aws.Iam.RolePolicy("codepipelinePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Role = codepipelineRole.Id,
+            Policy = Output.Tuple(codepipelineBucket.Arn, codepipelineBucket.Arn).Apply(values =>
+            {
+                var codepipelineBucketArn = values.Item1;
+                var codepipelineBucketArn1 = values.Item2;
+                return @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Effect"":""Allow"",
+      ""Action"": [
+        ""s3:GetObject"",
+        ""s3:GetObjectVersion"",
+        ""s3:GetBucketVersioning"",
+        ""s3:PutObject""
+      ],
+      ""Resource"": [
+        ""{codepipelineBucketArn}"",
+        ""{codepipelineBucketArn1}/*""
+      ]
+    }},
+    {{
+      ""Effect"": ""Allow"",
+      ""Action"": [
+        ""codebuild:BatchGetBuilds"",
+        ""codebuild:StartBuild""
+      ],
+      ""Resource"": ""*""
+    }}
+  ]
+}}
+";
+            }),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codestarconnections"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kms"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		example, err := codestarconnections.NewConnection(ctx, "example", &codestarconnections.ConnectionArgs{
+			ProviderType: pulumi.String("GitHub"),
+		})
+		if err != nil {
+			return err
+		}
+		codepipelineBucket, err := s3.NewBucket(ctx, "codepipelineBucket", &s3.BucketArgs{
+			Acl: pulumi.String("private"),
+		})
+		if err != nil {
+			return err
+		}
+		codepipelineRole, err := iam.NewRole(ctx, "codepipelineRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"codepipeline.amazonaws.com\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
+		s3kmskey, err := kms.LookupAlias(ctx, &kms.LookupAliasArgs{
+			Name: "alias/myKmsKey",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = codepipeline.NewPipeline(ctx, "codepipeline", &codepipeline.PipelineArgs{
+			RoleArn: codepipelineRole.Arn,
+			ArtifactStore: &codepipeline.PipelineArtifactStoreArgs{
+				Location: codepipelineBucket.Bucket,
+				Type:     pulumi.String("S3"),
+				EncryptionKey: &codepipeline.PipelineArtifactStoreEncryptionKeyArgs{
+					Id:   pulumi.String(s3kmskey.Arn),
+					Type: pulumi.String("KMS"),
+				},
+			},
+			Stages: codepipeline.PipelineStageArray{
+				&codepipeline.PipelineStageArgs{
+					Name: pulumi.String("Source"),
+					Actions: codepipeline.PipelineStageActionArray{
+						&codepipeline.PipelineStageActionArgs{
+							Name:     pulumi.String("Source"),
+							Category: pulumi.String("Source"),
+							Owner:    pulumi.String("AWS"),
+							Provider: pulumi.String("CodeStarSourceConnection"),
+							Version:  pulumi.String("1"),
+							OutputArtifacts: pulumi.StringArray{
+								pulumi.String("source_output"),
+							},
+							Configuration: pulumi.StringMap{
+								"ConnectionArn":    example.Arn,
+								"FullRepositoryId": pulumi.String("my-organization/example"),
+								"BranchName":       pulumi.String("main"),
+							},
+						},
+					},
+				},
+				&codepipeline.PipelineStageArgs{
+					Name: pulumi.String("Build"),
+					Actions: codepipeline.PipelineStageActionArray{
+						&codepipeline.PipelineStageActionArgs{
+							Name:     pulumi.String("Build"),
+							Category: pulumi.String("Build"),
+							Owner:    pulumi.String("AWS"),
+							Provider: pulumi.String("CodeBuild"),
+							InputArtifacts: pulumi.StringArray{
+								pulumi.String("source_output"),
+							},
+							OutputArtifacts: pulumi.StringArray{
+								pulumi.String("build_output"),
+							},
+							Version: pulumi.String("1"),
+							Configuration: pulumi.StringMap{
+								"ProjectName": pulumi.String("test"),
+							},
+						},
+					},
+				},
+				&codepipeline.PipelineStageArgs{
+					Name: pulumi.String("Deploy"),
+					Actions: codepipeline.PipelineStageActionArray{
+						&codepipeline.PipelineStageActionArgs{
+							Name:     pulumi.String("Deploy"),
+							Category: pulumi.String("Deploy"),
+							Owner:    pulumi.String("AWS"),
+							Provider: pulumi.String("CloudFormation"),
+							InputArtifacts: pulumi.StringArray{
+								pulumi.String("build_output"),
+							},
+							Version: pulumi.String("1"),
+							Configuration: pulumi.StringMap{
+								"ActionMode":     pulumi.String("REPLACE_ON_FAILURE"),
+								"Capabilities":   pulumi.String("CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM"),
+								"OutputFileName": pulumi.String("CreateStackOutput.json"),
+								"StackName":      pulumi.String("MyStack"),
+								"TemplatePath":   pulumi.String("build_output::sam-templated.yaml"),
+							},
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "codepipelinePolicy", &iam.RolePolicyArgs{
+			Role: codepipelineRole.ID(),
+			Policy: pulumi.All(codepipelineBucket.Arn, codepipelineBucket.Arn).ApplyT(func(_args []interface{}) (string, error) {
+				codepipelineBucketArn := _args[0].(string)
+				codepipelineBucketArn1 := _args[1].(string)
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\":\"Allow\",\n", "      \"Action\": [\n", "        \"s3:GetObject\",\n", "        \"s3:GetObjectVersion\",\n", "        \"s3:GetBucketVersioning\",\n", "        \"s3:PutObject\"\n", "      ],\n", "      \"Resource\": [\n", "        \"", codepipelineBucketArn, "\",\n", "        \"", codepipelineBucketArn1, "/*\"\n", "      ]\n", "    },\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Action\": [\n", "        \"codebuild:BatchGetBuilds\",\n", "        \"codebuild:StartBuild\"\n", "      ],\n", "      \"Resource\": \"*\"\n", "    }\n", "  ]\n", "}\n"), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.codestarconnections.Connection("example", provider_type="GitHub")
+codepipeline_bucket = aws.s3.Bucket("codepipelineBucket", acl="private")
+codepipeline_role = aws.iam.Role("codepipelineRole", assume_role_policy="""{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "codepipeline.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+""")
+s3kmskey = aws.kms.get_alias(name="alias/myKmsKey")
+codepipeline = aws.codepipeline.Pipeline("codepipeline",
+    role_arn=codepipeline_role.arn,
+    artifact_store=aws.codepipeline.PipelineArtifactStoreArgs(
+        location=codepipeline_bucket.bucket,
+        type="S3",
+        encryption_key={
+            "id": s3kmskey.arn,
+            "type": "KMS",
+        },
+    ),
+    stages=[
+        aws.codepipeline.PipelineStageArgs(
+            name="Source",
+            actions=[aws.codepipeline.PipelineStageActionArgs(
+                name="Source",
+                category="Source",
+                owner="AWS",
+                provider="CodeStarSourceConnection",
+                version="1",
+                output_artifacts=["source_output"],
+                configuration={
+                    "ConnectionArn": example.arn,
+                    "FullRepositoryId": "my-organization/example",
+                    "BranchName": "main",
+                },
+            )],
+        ),
+        aws.codepipeline.PipelineStageArgs(
+            name="Build",
+            actions=[aws.codepipeline.PipelineStageActionArgs(
+                name="Build",
+                category="Build",
+                owner="AWS",
+                provider="CodeBuild",
+                input_artifacts=["source_output"],
+                output_artifacts=["build_output"],
+                version="1",
+                configuration={
+                    "ProjectName": "test",
+                },
+            )],
+        ),
+        aws.codepipeline.PipelineStageArgs(
+            name="Deploy",
+            actions=[aws.codepipeline.PipelineStageActionArgs(
+                name="Deploy",
+                category="Deploy",
+                owner="AWS",
+                provider="CloudFormation",
+                input_artifacts=["build_output"],
+                version="1",
+                configuration={
+                    "ActionMode": "REPLACE_ON_FAILURE",
+                    "Capabilities": "CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM",
+                    "OutputFileName": "CreateStackOutput.json",
+                    "StackName": "MyStack",
+                    "TemplatePath": "build_output::sam-templated.yaml",
+                },
+            )],
+        ),
+    ])
+codepipeline_policy = aws.iam.RolePolicy("codepipelinePolicy",
+    role=codepipeline_role.id,
+    policy=pulumi.Output.all(codepipeline_bucket.arn, codepipeline_bucket.arn).apply(lambda codepipelineBucketArn, codepipelineBucketArn1: f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Effect":"Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:GetObjectVersion",
+        "s3:GetBucketVersioning",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "{codepipeline_bucket_arn}",
+        "{codepipeline_bucket_arn1}/*"
+      ]
+    }},
+    {{
+      "Effect": "Allow",
+      "Action": [
+        "codebuild:BatchGetBuilds",
+        "codebuild:StartBuild"
+      ],
+      "Resource": "*"
+    }}
+  ]
+}}
+"""))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.codestarconnections.Connection("example", {providerType: "GitHub"});
+const codepipelineBucket = new aws.s3.Bucket("codepipelineBucket", {acl: "private"});
+const codepipelineRole = new aws.iam.Role("codepipelineRole", {assumeRolePolicy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "codepipeline.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+`});
+const s3kmskey = aws.kms.getAlias({
+    name: "alias/myKmsKey",
+});
+const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
+    roleArn: codepipelineRole.arn,
+    artifactStore: {
+        location: codepipelineBucket.bucket,
+        type: "S3",
+        encryptionKey: {
+            id: s3kmskey.then(s3kmskey => s3kmskey.arn),
+            type: "KMS",
+        },
+    },
+    stages: [
+        {
+            name: "Source",
+            actions: [{
+                name: "Source",
+                category: "Source",
+                owner: "AWS",
+                provider: "CodeStarSourceConnection",
+                version: "1",
+                outputArtifacts: ["source_output"],
+                configuration: {
+                    ConnectionArn: example.arn,
+                    FullRepositoryId: "my-organization/example",
+                    BranchName: "main",
+                },
+            }],
+        },
+        {
+            name: "Build",
+            actions: [{
+                name: "Build",
+                category: "Build",
+                owner: "AWS",
+                provider: "CodeBuild",
+                inputArtifacts: ["source_output"],
+                outputArtifacts: ["build_output"],
+                version: "1",
+                configuration: {
+                    ProjectName: "test",
+                },
+            }],
+        },
+        {
+            name: "Deploy",
+            actions: [{
+                name: "Deploy",
+                category: "Deploy",
+                owner: "AWS",
+                provider: "CloudFormation",
+                inputArtifacts: ["build_output"],
+                version: "1",
+                configuration: {
+                    ActionMode: "REPLACE_ON_FAILURE",
+                    Capabilities: "CAPABILITY_AUTO_EXPAND,CAPABILITY_IAM",
+                    OutputFileName: "CreateStackOutput.json",
+                    StackName: "MyStack",
+                    TemplatePath: "build_output::sam-templated.yaml",
+                },
+            }],
+        },
+    ],
+});
+const codepipelinePolicy = new aws.iam.RolePolicy("codepipelinePolicy", {
+    role: codepipelineRole.id,
+    policy: pulumi.interpolate`{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect":"Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:GetObjectVersion",
+        "s3:GetBucketVersioning",
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "${codepipelineBucket.arn}",
+        "${codepipelineBucket.arn}/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "codebuild:BatchGetBuilds",
+        "codebuild:StartBuild"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Pipeline Resource {#create}
@@ -19,19 +574,19 @@ Provides a CodePipeline.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#Pipeline">Pipeline</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#PipelineArgs">PipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/codepipeline/#pulumi_aws.codepipeline.Pipeline">Pipeline</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>artifact_store=None<span class="p">, </span>name=None<span class="p">, </span>role_arn=None<span class="p">, </span>stages=None<span class="p">, </span>tags=None<span class="p">, </span>__props__=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">artifact_store</span><span class="p">:</span> <span class="nx">Optional[PipelineArtifactStoreArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineStageArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#Pipeline">NewPipeline</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#PipelineArgs">PipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#Pipeline">Pipeline</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipeline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Pipeline.html">Pipeline</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.PipelineArgs.html">PipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Pipeline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -42,7 +597,7 @@ Provides a CodePipeline.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -52,7 +607,7 @@ Provides a CodePipeline.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#PipelineArgs">PipelineArgs</a></span>
+        <span class="property-type"><a href="#inputs">PipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -111,7 +666,7 @@ Provides a CodePipeline.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -121,7 +676,7 @@ Provides a CodePipeline.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#PipelineArgs">PipelineArgs</a></span>
+        <span class="property-type"><a href="#inputs">PipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -150,7 +705,7 @@ Provides a CodePipeline.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -160,7 +715,7 @@ Provides a CodePipeline.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.PipelineArgs.html">PipelineArgs</a></span>
+        <span class="property-type"><a href="#inputs">PipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -183,12 +738,11 @@ Provides a CodePipeline.
 
 ## Pipeline Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Pipeline resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Pipeline resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -199,60 +753,54 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="artifactstore_csharp">
 <a href="#artifactstore_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stages_csharp">
 <a href="#stages_csharp" style="color: inherit; text-decoration: inherit;">Stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">List&lt;Pipeline<wbr>Stage<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -261,60 +809,54 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="artifactstore_go">
 <a href="#artifactstore_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stages_go">
 <a href="#stages_go" style="color: inherit; text-decoration: inherit;">Stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">[]Pipeline<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -323,60 +865,54 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="artifactstore_nodejs">
 <a href="#artifactstore_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stages_nodejs">
 <a href="#stages_nodejs" style="color: inherit; text-decoration: inherit;">stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">Pipeline<wbr>Stage[]</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -385,69 +921,59 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="artifact_store_python">
 <a href="#artifact_store_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineartifactstore">Dict[Pipeline<wbr>Artifact<wbr>Store]</a></span>
+        <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="stages_python">
 <a href="#stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestage">List[Pipeline<wbr>Stage]</a></span>
+        <span class="property-type"><a href="#pipelinestage">Sequence[Pipeline<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Pipeline resource produces the following output properties:
-
 
 
 
@@ -458,26 +984,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codepipeline ARN.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -486,26 +1009,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codepipeline ARN.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -514,26 +1034,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codepipeline ARN.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -542,29 +1059,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The codepipeline ARN.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -574,19 +1085,20 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#PipelineState">PipelineState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codepipeline/#Pipeline">Pipeline</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PipelineState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Pipeline</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>artifact_store=None<span class="p">, </span>name=None<span class="p">, </span>role_arn=None<span class="p">, </span>stages=None<span class="p">, </span>tags=None<span class="p">, __props__=None)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">artifact_store</span><span class="p">:</span> <span class="nx">Optional[PipelineArtifactStoreArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">stages</span><span class="p">:</span> <span class="nx">Optional[Sequence[PipelineStageArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Pipeline</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#PipelineState">PipelineState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#Pipeline">Pipeline</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PipelineState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Pipeline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Pipeline.html">Pipeline</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.PipelineState.html">PipelineState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Pipeline</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PipelineState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -688,7 +1200,6 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -696,71 +1207,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codepipeline ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_artifactstore_csharp">
 <a href="#state_artifactstore_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_csharp">
 <a href="#state_rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stages_csharp">
 <a href="#state_stages_csharp" style="color: inherit; text-decoration: inherit;">Stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">List&lt;Pipeline<wbr>Stage<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -769,71 +1273,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codepipeline ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_artifactstore_go">
 <a href="#state_artifactstore_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_go">
 <a href="#state_rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stages_go">
 <a href="#state_stages_go" style="color: inherit; text-decoration: inherit;">Stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">[]Pipeline<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -842,71 +1339,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codepipeline ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_artifactstore_nodejs">
 <a href="#state_artifactstore_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_nodejs">
 <a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stages_nodejs">
 <a href="#state_stages_nodejs" style="color: inherit; text-decoration: inherit;">stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestage">Pipeline<wbr>Stage[]</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -915,74 +1405,64 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The codepipeline ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_artifact_store_python">
 <a href="#state_artifact_store_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineartifactstore">Dict[Pipeline<wbr>Artifact<wbr>Store]</a></span>
+        <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_arn_python">
 <a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_stages_python">
 <a href="#state_stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestage">List[Pipeline<wbr>Stage]</a></span>
+        <span class="property-type"><a href="#pipelinestage">Sequence[Pipeline<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A stage block. Stages are documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -992,20 +1472,8 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineArtifactStore">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineArtifactStore">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#PipelineArtifactStoreArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#PipelineArtifactStoreOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.PipelineArtifactStoreArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.PipelineArtifactStore.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1014,49 +1482,44 @@ The following state arguments are supported:
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the artifact store, such as Amazon S3
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_csharp">
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don't specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1065,49 +1528,44 @@ The following state arguments are supported:
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the artifact store, such as Amazon S3
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_go">
 <a href="#encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don't specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1116,49 +1574,44 @@ The following state arguments are supported:
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the artifact store, such as Amazon S3
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encryptionkey_nodejs">
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don't specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1167,67 +1620,46 @@ The following state arguments are supported:
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the artifact store, such as Amazon S3
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="encryption_key_python">
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Dict[Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key]</a></span>
+        <span class="property-type"><a href="#pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don't specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineArtifactStoreEncryptionKey">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineArtifactStoreEncryptionKey">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#PipelineArtifactStoreEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#PipelineArtifactStoreEncryptionKeyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.PipelineArtifactStoreEncryptionKeyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.PipelineArtifactStoreEncryptionKey.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1236,27 +1668,24 @@ The following state arguments are supported:
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS key ARN or ID
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of key; currently only `KMS` is supported
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1265,27 +1694,24 @@ The following state arguments are supported:
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS key ARN or ID
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of key; currently only `KMS` is supported
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1294,27 +1720,24 @@ The following state arguments are supported:
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS key ARN or ID
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of key; currently only `KMS` is supported
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1323,45 +1746,26 @@ The following state arguments are supported:
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The KMS key ARN or ID
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of key; currently only `KMS` is supported
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="pipelinestage">Pipeline<wbr>Stage</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineStage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineStage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#PipelineStageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#PipelineStageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.PipelineStageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.PipelineStage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1370,27 +1774,24 @@ The following state arguments are supported:
             title="Required">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestageaction">List&lt;Pipeline<wbr>Stage<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The action(s) to include in the stage. Defined as an `action` block below
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stage.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1399,27 +1800,24 @@ The following state arguments are supported:
             title="Required">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestageaction">[]Pipeline<wbr>Stage<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action(s) to include in the stage. Defined as an `action` block below
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stage.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1428,27 +1826,24 @@ The following state arguments are supported:
             title="Required">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinestageaction">Pipeline<wbr>Stage<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}The action(s) to include in the stage. Defined as an `action` block below
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the stage.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1457,45 +1852,26 @@ The following state arguments are supported:
             title="Required">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinestageaction">List[Pipeline<wbr>Stage<wbr>Action]</a></span>
+        <span class="property-type"><a href="#pipelinestageaction">Sequence[Pipeline<wbr>Stage<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The action(s) to include in the stage. Defined as an `action` block below
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the stage.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="pipelinestageaction">Pipeline<wbr>Stage<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineStageAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineStageAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#PipelineStageActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/codepipeline?tab=doc#PipelineStageActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Inputs.PipelineStageActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodePipeline.Outputs.PipelineStageAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1504,137 +1880,124 @@ The following state arguments are supported:
             title="Required">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A category defines what kind of action can be taken in the stage, and constrains the provider type for the action. Possible values are `Approval`, `Build`, `Deploy`, `Invoke`, `Source` and `Test`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action declaration's name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the action being called. Possible values are `AWS`, `Custom` and `ThirdParty`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provider_csharp">
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider of the service being called by the action. Valid providers are determined by the action category. For example, an action in the Deploy category type might have a provider of AWS CodeDeploy, which would be specified as CodeDeploy.
+    <dd>{{% md %}}The provider of the service being called by the action. Valid providers are determined by the action category. Provider names are listed in the [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that identifies the action type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of the action declaration's configuration. Configurations options for action types and providers can be found in the [Pipeline Structure Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) and [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inputartifacts_csharp">
 <a href="#inputartifacts_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of artifact names to be worked on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace all output variables will be accessed from.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputartifacts_csharp">
 <a href="#outputartifacts_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of artifact names to output. Output artifact names must be unique within a pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to run the action.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM service role that will perform the declared action. This is assumed through the roleArn for the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runorder_csharp">
 <a href="#runorder_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Order</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order in which actions are run.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1643,137 +2006,124 @@ The following state arguments are supported:
             title="Required">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A category defines what kind of action can be taken in the stage, and constrains the provider type for the action. Possible values are `Approval`, `Build`, `Deploy`, `Invoke`, `Source` and `Test`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action declaration's name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the action being called. Possible values are `AWS`, `Custom` and `ThirdParty`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provider_go">
 <a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider of the service being called by the action. Valid providers are determined by the action category. For example, an action in the Deploy category type might have a provider of AWS CodeDeploy, which would be specified as CodeDeploy.
+    <dd>{{% md %}}The provider of the service being called by the action. Valid providers are determined by the action category. Provider names are listed in the [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that identifies the action type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of the action declaration's configuration. Configurations options for action types and providers can be found in the [Pipeline Structure Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) and [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inputartifacts_go">
 <a href="#inputartifacts_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of artifact names to be worked on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace all output variables will be accessed from.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputartifacts_go">
 <a href="#outputartifacts_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of artifact names to output. Output artifact names must be unique within a pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to run the action.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM service role that will perform the declared action. This is assumed through the roleArn for the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runorder_go">
 <a href="#runorder_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Order</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order in which actions are run.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1782,137 +2132,124 @@ The following state arguments are supported:
             title="Required">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A category defines what kind of action can be taken in the stage, and constrains the provider type for the action. Possible values are `Approval`, `Build`, `Deploy`, `Invoke`, `Source` and `Test`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action declaration's name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creator of the action being called. Possible values are `AWS`, `Custom` and `ThirdParty`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provider_nodejs">
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider of the service being called by the action. Valid providers are determined by the action category. For example, an action in the Deploy category type might have a provider of AWS CodeDeploy, which would be specified as CodeDeploy.
+    <dd>{{% md %}}The provider of the service being called by the action. Valid providers are determined by the action category. Provider names are listed in the [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that identifies the action type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of the action declaration's configuration. Configurations options for action types and providers can be found in the [Pipeline Structure Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) and [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inputartifacts_nodejs">
 <a href="#inputartifacts_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of artifact names to be worked on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace all output variables will be accessed from.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputartifacts_nodejs">
 <a href="#outputartifacts_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of artifact names to output. Output artifact names must be unique within a pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to run the action.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM service role that will perform the declared action. This is assumed through the roleArn for the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runorder_nodejs">
 <a href="#runorder_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Order</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The order in which actions are run.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1921,141 +2258,132 @@ The following state arguments are supported:
             title="Required">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A category defines what kind of action can be taken in the stage, and constrains the provider type for the action. Possible values are `Approval`, `Build`, `Deploy`, `Invoke`, `Source` and `Test`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action declaration's name.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creator of the action being called. Possible values are `AWS`, `Custom` and `ThirdParty`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provider_python">
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider of the service being called by the action. Valid providers are determined by the action category. For example, an action in the Deploy category type might have a provider of AWS CodeDeploy, which would be specified as CodeDeploy.
+    <dd>{{% md %}}The provider of the service being called by the action. Valid providers are determined by the action category. Provider names are listed in the [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string that identifies the action type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of the action declaration's configuration. Configurations options for action types and providers can be found in the [Pipeline Structure Reference](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements) and [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) documentation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="inputartifacts_python">
-<a href="#inputartifacts_python" style="color: inherit; text-decoration: inherit;">input<wbr>Artifacts</a>
-</span> 
+        <span id="input_artifacts_python">
+<a href="#input_artifacts_python" style="color: inherit; text-decoration: inherit;">input_<wbr>artifacts</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of artifact names to be worked on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace all output variables will be accessed from.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="outputartifacts_python">
-<a href="#outputartifacts_python" style="color: inherit; text-decoration: inherit;">output<wbr>Artifacts</a>
-</span> 
+        <span id="output_artifacts_python">
+<a href="#output_artifacts_python" style="color: inherit; text-decoration: inherit;">output_<wbr>artifacts</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of artifact names to output. Output artifact names must be unique within a pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which to run the action.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM service role that will perform the declared action. This is assumed through the roleArn for the pipeline.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="runorder_python">
-<a href="#runorder_python" style="color: inherit; text-decoration: inherit;">run<wbr>Order</a>
-</span> 
+        <span id="run_order_python">
+<a href="#run_order_python" style="color: inherit; text-decoration: inherit;">run_<wbr>order</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order in which actions are run.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+CodePipelines can be imported using the name, e.g.
 
-
-
+```sh
+ $ pulumi import aws:codepipeline/pipeline:Pipeline foo example
+```
 
 
 

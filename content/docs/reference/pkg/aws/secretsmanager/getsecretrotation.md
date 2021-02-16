@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSecretRotation function of the secretsmanager module,
 
 Retrieve information about a Secrets Manager secret rotation. To retrieve secret metadata, see the [`aws.secretsmanager.Secret` data source](https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret.html). To retrieve a secret value, see the [`aws.secretsmanager.SecretVersion` data source](https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret_version.html).
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -93,17 +94,17 @@ const example = aws.secretsmanager.getSecretRotation({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSecretRotation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/secretsmanager/#GetSecretRotationArgs">GetSecretRotationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/secretsmanager/#GetSecretRotationResult">GetSecretRotationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSecretRotation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSecretRotationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSecretRotationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_secret_rotation(</span>secret_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_secret_rotation(</span><span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSecretRotationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecretRotation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/secretsmanager?tab=doc#LookupSecretRotationArgs">LookupSecretRotationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/secretsmanager?tab=doc#LookupSecretRotationResult">LookupSecretRotationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecretRotation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSecretRotationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSecretRotationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSecretRotation` in the Go SDK.
 
@@ -112,14 +113,13 @@ const example = aws.secretsmanager.getSecretRotation({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSecretRotation </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Secretsmanager.GetSecretRotationResult.html">GetSecretRotationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SecretsManager.GetSecretRotationArgs.html">GetSecretRotationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSecretRotationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSecretRotationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -129,16 +129,14 @@ The following arguments are supported:
             title="Required">
         <span id="secretid_csharp">
 <a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the secret containing the version that you want to retrieve. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -147,16 +145,14 @@ The following arguments are supported:
             title="Required">
         <span id="secretid_go">
 <a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the secret containing the version that you want to retrieve. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -165,16 +161,14 @@ The following arguments are supported:
             title="Required">
         <span id="secretid_nodejs">
 <a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the secret containing the version that you want to retrieve. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -183,19 +177,14 @@ The following arguments are supported:
             title="Required">
         <span id="secret_id_python">
 <a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the secret containing the version that you want to retrieve. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -206,7 +195,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -214,59 +202,53 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rotationenabled_csharp">
 <a href="#rotationenabled_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The ARN of the secret.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rotationlambdaarn_csharp">
 <a href="#rotationlambdaarn_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Lambda<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The decrypted part of the protected secret information that was originally provided as a string.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rotationrules_csharp">
 <a href="#rotationrules_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecretrotationrotationrule">List&lt;Get<wbr>Secret<wbr>Rotation<wbr>Rotation<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="secretid_csharp">
 <a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -275,59 +257,53 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rotationenabled_go">
 <a href="#rotationenabled_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The ARN of the secret.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rotationlambdaarn_go">
 <a href="#rotationlambdaarn_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Lambda<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The decrypted part of the protected secret information that was originally provided as a string.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rotationrules_go">
 <a href="#rotationrules_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecretrotationrotationrule">[]Get<wbr>Secret<wbr>Rotation<wbr>Rotation<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="secretid_go">
 <a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -336,59 +312,53 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rotationenabled_nodejs">
 <a href="#rotationenabled_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The ARN of the secret.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rotationlambdaarn_nodejs">
 <a href="#rotationlambdaarn_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Lambda<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The decrypted part of the protected secret information that was originally provided as a string.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rotationrules_nodejs">
 <a href="#rotationrules_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecretrotationrotationrule">Get<wbr>Secret<wbr>Rotation<wbr>Rotation<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="secretid_nodejs">
 <a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -397,62 +367,53 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rotation_enabled_python">
 <a href="#rotation_enabled_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The ARN of the secret.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rotation_lambda_arn_python">
 <a href="#rotation_lambda_arn_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>lambda_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The decrypted part of the protected secret information that was originally provided as a string.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rotation_rules_python">
 <a href="#rotation_rules_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecretrotationrotationrule">List[Get<wbr>Secret<wbr>Rotation<wbr>Rotation<wbr>Rule]</a></span>
+        <span class="property-type"><a href="#getsecretrotationrotationrule">Sequence[Get<wbr>Secret<wbr>Rotation<wbr>Rotation<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}The decrypted part of the protected secret information that was originally provided as a binary. Base64 encoded.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="secret_id_python">
 <a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -461,17 +422,6 @@ The following output properties are available:
 
 
 <h4 id="getsecretrotationrotationrule">Get<wbr>Secret<wbr>Rotation<wbr>Rotation<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretRotationRotationRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/secretsmanager?tab=doc#GetSecretRotationRotationRule">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.SecretsManager.Outputs.GetSecretRotationRotationRule.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 
 
@@ -482,15 +432,13 @@ The following output properties are available:
             title="Required">
         <span id="automaticallyafterdays_csharp">
 <a href="#automaticallyafterdays_csharp" style="color: inherit; text-decoration: inherit;">Automatically<wbr>After<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -499,15 +447,13 @@ The following output properties are available:
             title="Required">
         <span id="automaticallyafterdays_go">
 <a href="#automaticallyafterdays_go" style="color: inherit; text-decoration: inherit;">Automatically<wbr>After<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -516,35 +462,28 @@ The following output properties are available:
             title="Required">
         <span id="automaticallyafterdays_nodejs">
 <a href="#automaticallyafterdays_nodejs" style="color: inherit; text-decoration: inherit;">automatically<wbr>After<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
-        <span id="automaticallyafterdays_python">
-<a href="#automaticallyafterdays_python" style="color: inherit; text-decoration: inherit;">automatically<wbr>After<wbr>Days</a>
-</span> 
+        <span id="automatically_after_days_python">
+<a href="#automatically_after_days_python" style="color: inherit; text-decoration: inherit;">automatically_<wbr>after_<wbr>days</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

@@ -5,13 +5,12 @@ meta_desc: An overview of how to use the Go language for infrastructure as code
 menu:
   intro:
     parent: languages
-    weight: 2
-
+    weight: 4
 ---
 
 <img src="/logos/tech/logo-golang.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
-Pulumi supports writing your infrastructure as code using the Go language.
+Pulumi supports writing your infrastructure as code using the Go language. Go 1.14 or later is required.
 
 <a class="btn" href="https://golang.org/doc/install" target="_blank" title="Install Go">INSTALL GO</a>
 
@@ -51,3 +50,7 @@ This `go` template is cloud agnostic, and you will need to install additional Go
 * `pulumi new aws-go`: creates a starter AWS Go project
 * `pulumi new azure-go`: creates a starter Azure Go project
 * `pulumi new gcp-go`: creates a starter Google Cloud Go project
+
+## Pulumi Programming Model
+
+The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with Go and Pulumi, and the [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.

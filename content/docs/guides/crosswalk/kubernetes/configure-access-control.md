@@ -278,7 +278,7 @@ $ kubectl delete --namespace=`pulumi stack output appsNamespaceName` pod/nginx s
 
 {{% choosable cloud aws %}}
 
-For a complete example of this in action, please see [Simplifying Kubernetes
+For a complete example of this in action, see [Simplifying Kubernetes
 RBAC in Amazon EKS][simplify-rbac].
 [simplify-rbac]: /blog/simplify-kubernetes-rbac-in-amazon-eks-with-open-source-pulumi-packages/
 

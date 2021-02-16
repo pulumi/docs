@@ -24,6 +24,7 @@ A Pulumi package for creating and managing CloudAMQP resources.
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="securityfirewall" title="SecurityFirewall"><span class="symbol resource"></span>SecurityFirewall</a></li>
     <li><a href="vpcpeering" title="VpcPeering"><span class="symbol resource"></span>VpcPeering</a></li>
+    <li><a href="webhook" title="Webhook"><span class="symbol resource"></span>Webhook</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -31,6 +32,7 @@ A Pulumi package for creating and managing CloudAMQP resources.
     <li><a href="getalarm" title="GetAlarm"><span class="symbol function"></span>GetAlarm</a></li>
     <li><a href="getcredentials" title="GetCredentials"><span class="symbol function"></span>GetCredentials</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
+    <li><a href="getnodes" title="GetNodes"><span class="symbol function"></span>GetNodes</a></li>
     <li><a href="getnotification" title="GetNotification"><span class="symbol function"></span>GetNotification</a></li>
     <li><a href="getplugins" title="GetPlugins"><span class="symbol function"></span>GetPlugins</a></li>
     <li><a href="getpluginscommunity" title="GetPluginsCommunity"><span class="symbol function"></span>GetPluginsCommunity</a></li>
@@ -46,24 +48,6 @@ A Pulumi package for creating and managing CloudAMQP resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).</dd>
 	<dt>Version</dt>
-	<dd>2.2.3</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.html" title="Pulumi.CloudAmqp">Pulumi.CloudAmqp</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#" title="cloudamqp">cloudamqp</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#" title="@pulumi/cloudamqp">@pulumi/cloudamqp</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_cloudamqp" title="pulumi_cloudamqp">pulumi_cloudamqp</a></dd>
-
+	<dd>2.7.1</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
 title: "AuthBackendLogin"
-title_tag: "Resource AuthBackendLogin | Module aws | Package Vault"
-meta_desc: "Explore the AuthBackendLogin resource of the aws module, including examples, input properties, output properties, lookup functions, and supporting types. Logs into a Vault server using an AWS auth backend. Login can be"
+title_tag: "vault.aws.AuthBackendLogin"
+meta_desc: "Documentation for the vault.aws.AuthBackendLogin resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -15,9 +15,66 @@ accomplished using a signed identity request from IAM or using ec2
 instance metadata. For more information, see the [Vault
 documentation](https://www.vaultproject.io/docs/auth/aws.html).
 
-{{% examples %}}
-{{% /examples %}}
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+Coming soon!
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+Coming soon!
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const aws = new vault.AuthBackend("aws", {
+    type: "aws",
+});
+const exampleAuthBackendClient = new vault.aws.AuthBackendClient("example", {
+    accessKey: "123456789012",
+    backend: aws.path,
+    secretKey: "AWSSECRETKEYGOESHERE",
+});
+const exampleAuthBackendRole = new vault.aws.AuthBackendRole("example", {
+    authType: "ec2",
+    backend: aws.path,
+    boundAccountId: "123456789012",
+    boundAmiId: "ami-8c1be5f6",
+    boundIamInstanceProfileArn: "arn:aws:iam::123456789012:instance-profile/MyProfile",
+    boundSubnetId: "vpc-133128f1",
+    boundVpcId: "vpc-b61106d4",
+    maxTtl: 120,
+    role: "test-role",
+    tokenPolicies: [
+        "default",
+        "dev",
+        "prod",
+    ],
+    ttl: 60,
+}, { dependsOn: [exampleAuthBackendClient] });
+const exampleAuthBackendLogin = new vault.aws.AuthBackendLogin("example", {
+    backend: vault_auth_backend_example.path,
+    identity: "BASE64ENCODEDIDENTITYDOCUMENT",
+    role: exampleAuthBackendRole.role,
+    signature: "BASE64ENCODEDSHA256IDENTITYDOCUMENTSIGNATURE",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AuthBackendLogin Resource {#create}
@@ -25,19 +82,19 @@ documentation](https://www.vaultproject.io/docs/auth/aws.html).
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendLogin">AuthBackendLogin</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendLoginArgs">AuthBackendLoginArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendLogin">AuthBackendLogin</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendLoginArgs">AuthBackendLoginArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/aws/#AuthBackendLogin">AuthBackendLogin</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>backend=None<span class="p">, </span>iam_http_request_method=None<span class="p">, </span>iam_request_body=None<span class="p">, </span>iam_request_headers=None<span class="p">, </span>iam_request_url=None<span class="p">, </span>identity=None<span class="p">, </span>nonce=None<span class="p">, </span>pkcs7=None<span class="p">, </span>role=None<span class="p">, </span>signature=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/aws/#pulumi_vault.aws.AuthBackendLogin">AuthBackendLogin</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_http_request_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_request_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_request_headers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_request_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nonce</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pkcs7</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendLogin">NewAuthBackendLogin</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendLoginArgs">AuthBackendLoginArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendLogin">AuthBackendLogin</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendLogin">NewAuthBackendLogin</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendLoginArgs">AuthBackendLoginArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendLogin">AuthBackendLogin</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendLogin.html">AuthBackendLogin</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendLoginArgs.html">AuthBackendLoginArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendLogin.html">AuthBackendLogin</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendLoginArgs.html">AuthBackendLoginArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -48,7 +105,7 @@ documentation](https://www.vaultproject.io/docs/auth/aws.html).
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -107,7 +164,7 @@ documentation](https://www.vaultproject.io/docs/auth/aws.html).
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -117,7 +174,7 @@ documentation](https://www.vaultproject.io/docs/auth/aws.html).
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -127,7 +184,7 @@ documentation](https://www.vaultproject.io/docs/auth/aws.html).
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendLoginArgs">AuthBackendLoginArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendLoginArgs">AuthBackendLoginArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -137,7 +194,7 @@ documentation](https://www.vaultproject.io/docs/auth/aws.html).
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -156,7 +213,7 @@ documentation](https://www.vaultproject.io/docs/auth/aws.html).
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -197,7 +254,6 @@ The AuthBackendLogin resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -205,129 +261,118 @@ The AuthBackendLogin resource accepts the following [input]({{< relref "/docs/in
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iamhttprequestmethod_csharp">
 <a href="#iamhttprequestmethod_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Http<wbr>Request<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iamrequestbody_csharp">
 <a href="#iamrequestbody_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iamrequestheaders_csharp">
 <a href="#iamrequestheaders_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iamrequesturl_csharp">
 <a href="#iamrequesturl_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nonce_csharp">
 <a href="#nonce_csharp" style="color: inherit; text-decoration: inherit;">Nonce</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique nonce to be used for login requests. Can be
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pkcs7_csharp">
 <a href="#pkcs7_csharp" style="color: inherit; text-decoration: inherit;">Pkcs7</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signature_csharp">
 <a href="#signature_csharp" style="color: inherit; text-decoration: inherit;">Signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -336,129 +381,118 @@ removed. Can be retrieved from the EC2 metadata server.
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iamhttprequestmethod_go">
 <a href="#iamhttprequestmethod_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Http<wbr>Request<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iamrequestbody_go">
 <a href="#iamrequestbody_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iamrequestheaders_go">
 <a href="#iamrequestheaders_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iamrequesturl_go">
 <a href="#iamrequesturl_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nonce_go">
 <a href="#nonce_go" style="color: inherit; text-decoration: inherit;">Nonce</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique nonce to be used for login requests. Can be
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pkcs7_go">
 <a href="#pkcs7_go" style="color: inherit; text-decoration: inherit;">Pkcs7</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signature_go">
 <a href="#signature_go" style="color: inherit; text-decoration: inherit;">Signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -467,129 +501,118 @@ removed. Can be retrieved from the EC2 metadata server.
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iamhttprequestmethod_nodejs">
 <a href="#iamhttprequestmethod_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Http<wbr>Request<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iamrequestbody_nodejs">
 <a href="#iamrequestbody_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iamrequestheaders_nodejs">
 <a href="#iamrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iamrequesturl_nodejs">
 <a href="#iamrequesturl_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nonce_nodejs">
 <a href="#nonce_nodejs" style="color: inherit; text-decoration: inherit;">nonce</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique nonce to be used for login requests. Can be
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pkcs7_nodejs">
 <a href="#pkcs7_nodejs" style="color: inherit; text-decoration: inherit;">pkcs7</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signature_nodejs">
 <a href="#signature_nodejs" style="color: inherit; text-decoration: inherit;">signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -598,138 +621,123 @@ removed. Can be retrieved from the EC2 metadata server.
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iam_http_request_method_python">
 <a href="#iam_http_request_method_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>http_<wbr>request_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iam_request_body_python">
 <a href="#iam_request_body_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iam_request_headers_python">
 <a href="#iam_request_headers_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iam_request_url_python">
 <a href="#iam_request_url_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nonce_python">
 <a href="#nonce_python" style="color: inherit; text-decoration: inherit;">nonce</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique nonce to be used for login requests. Can be
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pkcs7_python">
 <a href="#pkcs7_python" style="color: inherit; text-decoration: inherit;">pkcs7</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signature_python">
 <a href="#signature_python" style="color: inherit; text-decoration: inherit;">signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the AuthBackendLogin resource produces the following output properties:
-
 
 
 
@@ -740,105 +748,95 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="accessor_csharp">
 <a href="#accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="authtype_csharp">
 <a href="#authtype_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="clienttoken_csharp">
 <a href="#clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="leaseduration_csharp">
 <a href="#leaseduration_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="leasestarttime_csharp">
 <a href="#leasestarttime_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="renewable_csharp">
 <a href="#renewable_csharp" style="color: inherit; text-decoration: inherit;">Renewable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -847,105 +845,95 @@ authentication used to generate this token.
             title="">
         <span id="accessor_go">
 <a href="#accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="authtype_go">
 <a href="#authtype_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="clienttoken_go">
 <a href="#clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="leaseduration_go">
 <a href="#leaseduration_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="leasestarttime_go">
 <a href="#leasestarttime_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="renewable_go">
 <a href="#renewable_go" style="color: inherit; text-decoration: inherit;">Renewable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -954,105 +942,95 @@ authentication used to generate this token.
             title="">
         <span id="accessor_nodejs">
 <a href="#accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="authtype_nodejs">
 <a href="#authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="clienttoken_nodejs">
 <a href="#clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="leaseduration_nodejs">
 <a href="#leaseduration_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="leasestarttime_nodejs">
 <a href="#leasestarttime_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="renewable_nodejs">
 <a href="#renewable_nodejs" style="color: inherit; text-decoration: inherit;">renewable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1061,108 +1039,95 @@ authentication used to generate this token.
             title="">
         <span id="accessor_python">
 <a href="#accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="auth_type_python">
 <a href="#auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="client_token_python">
 <a href="#client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lease_duration_python">
 <a href="#lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lease_start_time_python">
 <a href="#lease_start_time_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>start_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="renewable_python">
 <a href="#renewable_python" style="color: inherit; text-decoration: inherit;">renewable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1172,19 +1137,20 @@ Get an existing AuthBackendLogin resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendLoginState">AuthBackendLoginState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendLogin">AuthBackendLogin</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendLoginState">AuthBackendLoginState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendLogin">AuthBackendLogin</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>accessor=None<span class="p">, </span>auth_type=None<span class="p">, </span>backend=None<span class="p">, </span>client_token=None<span class="p">, </span>iam_http_request_method=None<span class="p">, </span>iam_request_body=None<span class="p">, </span>iam_request_headers=None<span class="p">, </span>iam_request_url=None<span class="p">, </span>identity=None<span class="p">, </span>lease_duration=None<span class="p">, </span>lease_start_time=None<span class="p">, </span>metadata=None<span class="p">, </span>nonce=None<span class="p">, </span>pkcs7=None<span class="p">, </span>policies=None<span class="p">, </span>renewable=None<span class="p">, </span>role=None<span class="p">, </span>signature=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accessor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_http_request_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_request_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_request_headers</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_request_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lease_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">lease_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">nonce</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pkcs7</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">renewable</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signature</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AuthBackendLogin</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendLogin<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendLoginState">AuthBackendLoginState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendLogin">AuthBackendLogin</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendLogin<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendLoginState">AuthBackendLoginState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendLogin">AuthBackendLogin</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendLogin.html">AuthBackendLogin</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendLoginState.html">AuthBackendLoginState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendLogin.html">AuthBackendLogin</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendLoginState.html">AuthBackendLoginState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1286,7 +1252,6 @@ Get an existing AuthBackendLogin resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1294,219 +1259,200 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accessor_csharp">
 <a href="#state_accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authtype_csharp">
 <a href="#state_authtype_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clienttoken_csharp">
 <a href="#state_clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamhttprequestmethod_csharp">
 <a href="#state_iamhttprequestmethod_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Http<wbr>Request<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamrequestbody_csharp">
 <a href="#state_iamrequestbody_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamrequestheaders_csharp">
 <a href="#state_iamrequestheaders_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamrequesturl_csharp">
 <a href="#state_iamrequesturl_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_identity_csharp">
 <a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_leaseduration_csharp">
 <a href="#state_leaseduration_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_leasestarttime_csharp">
 <a href="#state_leasestarttime_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nonce_csharp">
 <a href="#state_nonce_csharp" style="color: inherit; text-decoration: inherit;">Nonce</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique nonce to be used for login requests. Can be
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pkcs7_csharp">
 <a href="#state_pkcs7_csharp" style="color: inherit; text-decoration: inherit;">Pkcs7</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_renewable_csharp">
 <a href="#state_renewable_csharp" style="color: inherit; text-decoration: inherit;">Renewable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_signature_csharp">
 <a href="#state_signature_csharp" style="color: inherit; text-decoration: inherit;">Signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1515,219 +1461,200 @@ removed. Can be retrieved from the EC2 metadata server.
             title="Optional">
         <span id="state_accessor_go">
 <a href="#state_accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authtype_go">
 <a href="#state_authtype_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clienttoken_go">
 <a href="#state_clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamhttprequestmethod_go">
 <a href="#state_iamhttprequestmethod_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Http<wbr>Request<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamrequestbody_go">
 <a href="#state_iamrequestbody_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamrequestheaders_go">
 <a href="#state_iamrequestheaders_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamrequesturl_go">
 <a href="#state_iamrequesturl_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Request<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_identity_go">
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_leaseduration_go">
 <a href="#state_leaseduration_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_leasestarttime_go">
 <a href="#state_leasestarttime_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nonce_go">
 <a href="#state_nonce_go" style="color: inherit; text-decoration: inherit;">Nonce</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique nonce to be used for login requests. Can be
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pkcs7_go">
 <a href="#state_pkcs7_go" style="color: inherit; text-decoration: inherit;">Pkcs7</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_renewable_go">
 <a href="#state_renewable_go" style="color: inherit; text-decoration: inherit;">Renewable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_signature_go">
 <a href="#state_signature_go" style="color: inherit; text-decoration: inherit;">Signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1736,219 +1663,200 @@ removed. Can be retrieved from the EC2 metadata server.
             title="Optional">
         <span id="state_accessor_nodejs">
 <a href="#state_accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authtype_nodejs">
 <a href="#state_authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clienttoken_nodejs">
 <a href="#state_clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamhttprequestmethod_nodejs">
 <a href="#state_iamhttprequestmethod_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Http<wbr>Request<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamrequestbody_nodejs">
 <a href="#state_iamrequestbody_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamrequestheaders_nodejs">
 <a href="#state_iamrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iamrequesturl_nodejs">
 <a href="#state_iamrequesturl_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Request<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_identity_nodejs">
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_leaseduration_nodejs">
 <a href="#state_leaseduration_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_leasestarttime_nodejs">
 <a href="#state_leasestarttime_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nonce_nodejs">
 <a href="#state_nonce_nodejs" style="color: inherit; text-decoration: inherit;">nonce</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique nonce to be used for login requests. Can be
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pkcs7_nodejs">
 <a href="#state_pkcs7_nodejs" style="color: inherit; text-decoration: inherit;">pkcs7</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_renewable_nodejs">
 <a href="#state_renewable_nodejs" style="color: inherit; text-decoration: inherit;">renewable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_signature_nodejs">
 <a href="#state_signature_nodejs" style="color: inherit; text-decoration: inherit;">signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1957,222 +1865,200 @@ removed. Can be retrieved from the EC2 metadata server.
             title="Optional">
         <span id="state_accessor_python">
 <a href="#state_accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_auth_type_python">
 <a href="#state_auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
 'aws'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_client_token_python">
 <a href="#state_client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iam_http_request_method_python">
 <a href="#state_iam_http_request_method_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>http_<wbr>request_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP method used in the signed IAM
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iam_request_body_python">
 <a href="#state_iam_request_body_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64-encoded body of the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iam_request_headers_python">
 <a href="#state_iam_request_headers_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64-encoded, JSON serialized
 representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_iam_request_url_python">
 <a href="#state_iam_request_url_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>request_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
 request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_identity_python">
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64-encoded EC2 instance identity document to
 authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lease_duration_python">
 <a href="#state_lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration in seconds the token will be valid, relative
 to the time in `lease_start_time`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lease_start_time_python">
 <a href="#state_lease_start_time_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>start_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of information returned by the Vault server about the
 authentication used to generate this token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nonce_python">
 <a href="#state_nonce_python" style="color: inherit; text-decoration: inherit;">nonce</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique nonce to be used for login requests. Can be
 set to a user-specified value, or will contain the server-generated value
 once a token is issued. EC2 instances can only acquire a single token until
 the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pkcs7_python">
 <a href="#state_pkcs7_python" style="color: inherit; text-decoration: inherit;">pkcs7</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PKCS#7 signature of the identity document to
 authenticate with, with all newline characters removed. Can be retrieved from
 the EC2 metadata server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_renewable_python">
 <a href="#state_renewable_python" style="color: inherit; text-decoration: inherit;">renewable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the AWS auth backend role to create tokens
 against.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_signature_python">
 <a href="#state_signature_python" style="color: inherit; text-decoration: inherit;">signature</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
 instance identity document to authenticate with, with all newline characters
 removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2187,6 +2073,6 @@ removed. Can be retrieved from the EC2 metadata server.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 </dl>
 

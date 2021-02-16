@@ -59,13 +59,23 @@ node = consul.Node("compute",
 
 ```go
 import (
-  "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-  consul "github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	consul "github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
 )
 
-node, _ := consul.NewNode(ctx, "compute", &consul.NodeArgs{
-  Address: pulumi.String("www.google.com"),
-})
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		node, err := consul.NewNode(ctx, "compute", &consul.NodeArgs{
+			Address: pulumi.String("www.google.com"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

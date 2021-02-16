@@ -45,6 +45,8 @@ A Pulumi package for creating and managing hcloud cloud resources.
     <li><a href="getlocations" title="GetLocations"><span class="symbol function"></span>GetLocations</a></li>
     <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
     <li><a href="getserver" title="GetServer"><span class="symbol function"></span>GetServer</a></li>
+    <li><a href="getservertype" title="GetServerType"><span class="symbol function"></span>GetServerType</a></li>
+    <li><a href="getservertypes" title="GetServerTypes"><span class="symbol function"></span>GetServerTypes</a></li>
     <li><a href="getsshkey" title="GetSshKey"><span class="symbol function"></span>GetSshKey</a></li>
     <li><a href="getsshkeys" title="GetSshKeys"><span class="symbol function"></span>GetSshKeys</a></li>
     <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
@@ -57,26 +59,8 @@ A Pulumi package for creating and managing hcloud cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-hcloud).</dd>
+	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 	<dt>Version</dt>
-	<dd>0.0.3</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.html" title="Pulumi.HCloud">Pulumi.HCloud</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/?tab=doc#" title="hcloud">hcloud</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/hcloud/#" title="@pulumi/hcloud">@pulumi/hcloud</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_hcloud" title="pulumi_hcloud">pulumi_hcloud</a></dd>
-
+	<dd>0.6.1</dd>
 </dl>
 

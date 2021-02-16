@@ -65,14 +65,25 @@ domain = linode.Domain("my-domain",
 
 ```go
 import (
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-    linode "github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	linode "github.com/pulumi/pulumi-linode/sdk/v2/go/linode"
 )
-domain, _ := linode.NewDomain(ctx, "test", &linode.DomainArgs{
-  Domain:   pulumi.String("foobar.example"),
-  SoaEmail: pulumi.String("example@foobar.example"),
-  Type:     pulumi.String("master"),
-})
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		domain, err := linode.NewDomain(ctx, "test", &linode.DomainArgs{
+			Domain:   pulumi.String("foobar.example"),
+			SoaEmail: pulumi.String("example@foobar.example"),
+			Type:     pulumi.String("master"),
+		})
+		if err != nil {
+			return err
+		}
+
+		return nil
+	})
+}
+
 ```
 
 {{% /choosable %}}

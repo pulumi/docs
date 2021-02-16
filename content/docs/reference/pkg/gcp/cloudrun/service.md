@@ -1,8 +1,8 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module cloudrun | Package GCP"
-meta_desc: "Explore the Service resource of the cloudrun module, including examples, input properties, output properties, lookup functions, and supporting types. Service acts as a top-level container that manages a set of Routes and"
+title_tag: "gcp.cloudrun.Service"
+meta_desc: "Documentation for the gcp.cloudrun.Service resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -55,7 +55,7 @@ class MyStack : Stack
                     {
                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
                         {
-                            Image = "gcr.io/cloudrun/hello",
+                            Image = "us-docker.pkg.dev/cloudrun/container/hello",
                         },
                     },
                 },
@@ -81,19 +81,19 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cloudrun.NewService(ctx, "default", &cloudrun.ServiceArgs{
+		_, err := cloudrun.NewService(ctx, "_default", &cloudrun.ServiceArgs{
 			Location: pulumi.String("us-central1"),
 			Template: &cloudrun.ServiceTemplateArgs{
 				Spec: &cloudrun.ServiceTemplateSpecArgs{
 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
 						&cloudrun.ServiceTemplateSpecContainerArgs{
-							Image: pulumi.String("gcr.io/cloudrun/hello"),
+							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
 						},
 					},
 				},
@@ -122,17 +122,17 @@ import pulumi_gcp as gcp
 
 default = gcp.cloudrun.Service("default",
     location="us-central1",
-    template={
-        "spec": {
-            "containers": [{
-                "image": "gcr.io/cloudrun/hello",
-            }],
-        },
-    },
-    traffics=[{
-        "latestRevision": True,
-        "percent": 100,
-    }])
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                image="us-docker.pkg.dev/cloudrun/container/hello",
+            )],
+        ),
+    ),
+    traffics=[gcp.cloudrun.ServiceTrafficArgs(
+        latest_revision=True,
+        percent=100,
+    )])
 ```
 
 {{% /example %}}
@@ -148,7 +148,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
     template: {
         spec: {
             containers: [{
-                image: "gcr.io/cloudrun/hello",
+                image: "us-docker.pkg.dev/cloudrun/container/hello",
             }],
         },
     },
@@ -156,6 +156,178 @@ const defaultService = new gcp.cloudrun.Service("default", {
         latestRevision: true,
         percent: 100,
     }],
+});
+```
+
+{{% /example %}}
+
+### Cloud Run Service Sql
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
+        {
+            Region = "us-east1",
+            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+            {
+                Tier = "db-f1-micro",
+            },
+            DeletionProtection = true,
+        });
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            Location = "us-central1",
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Image = "us-docker.pkg.dev/cloudrun/container/hello",
+                        },
+                    },
+                },
+                Metadata = new Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs
+                {
+                    Annotations = 
+                    {
+                        { "autoscaling.knative.dev/maxScale", "1000" },
+                        { "run.googleapis.com/cloudsql-instances", instance.ConnectionName },
+                        { "run.googleapis.com/client-name", "demo" },
+                    },
+                },
+            },
+            AutogenerateRevisionName = true,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := sql.NewDatabaseInstance(ctx, "instance", &sql.DatabaseInstanceArgs{
+			Region: pulumi.String("us-east1"),
+			Settings: &sql.DatabaseInstanceSettingsArgs{
+				Tier: pulumi.String("db-f1-micro"),
+			},
+			DeletionProtection: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudrun.NewService(ctx, "_default", &cloudrun.ServiceArgs{
+			Location: pulumi.String("us-central1"),
+			Template: &cloudrun.ServiceTemplateArgs{
+				Spec: &cloudrun.ServiceTemplateSpecArgs{
+					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+						&cloudrun.ServiceTemplateSpecContainerArgs{
+							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
+						},
+					},
+				},
+				Metadata: &cloudrun.ServiceTemplateMetadataArgs{
+					Annotations: pulumi.StringMap{
+						"autoscaling.knative.dev/maxScale":      pulumi.String("1000"),
+						"run.googleapis.com/cloudsql-instances": instance.ConnectionName,
+						"run.googleapis.com/client-name":        pulumi.String("demo"),
+					},
+				},
+			},
+			AutogenerateRevisionName: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.sql.DatabaseInstance("instance",
+    region="us-east1",
+    settings=gcp.sql.DatabaseInstanceSettingsArgs(
+        tier="db-f1-micro",
+    ),
+    deletion_protection=True)
+default = gcp.cloudrun.Service("default",
+    location="us-central1",
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                image="us-docker.pkg.dev/cloudrun/container/hello",
+            )],
+        ),
+        metadata=gcp.cloudrun.ServiceTemplateMetadataArgs(
+            annotations={
+                "autoscaling.knative.dev/maxScale": "1000",
+                "run.googleapis.com/cloudsql-instances": instance.connection_name,
+                "run.googleapis.com/client-name": "demo",
+            },
+        ),
+    ),
+    autogenerate_revision_name=True)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.sql.DatabaseInstance("instance", {
+    region: "us-east1",
+    settings: {
+        tier: "db-f1-micro",
+    },
+    deletionProtection: "true",
+});
+const _default = new gcp.cloudrun.Service("default", {
+    location: "us-central1",
+    template: {
+        spec: {
+            containers: [{
+                image: "us-docker.pkg.dev/cloudrun/container/hello",
+            }],
+        },
+        metadata: {
+            annotations: {
+                "autoscaling.knative.dev/maxScale": "1000",
+                "run.googleapis.com/cloudsql-instances": instance.connectionName,
+                "run.googleapis.com/client-name": "demo",
+            },
+        },
+    },
+    autogenerateRevisionName: true,
 });
 ```
 
@@ -173,7 +345,6 @@ class MyStack : Stack
     {
         var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
         {
-            AutogenerateRevisionName = true,
             Location = "us-central1",
             Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
             {
@@ -183,32 +354,40 @@ class MyStack : Stack
                     {
                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
                         {
-                            Env = 
+                            Image = "us-docker.pkg.dev/cloudrun/container/hello",
+                            Envs = 
                             {
-                                
+                                new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvArgs
                                 {
-                                    { "name", "SOURCE" },
-                                    { "value", "remote" },
+                                    Name = "SOURCE",
+                                    Value = "remote",
                                 },
-                                
+                                new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvArgs
                                 {
-                                    { "name", "TARGET" },
-                                    { "value", "home" },
+                                    Name = "TARGET",
+                                    Value = "home",
                                 },
                             },
-                            Image = "gcr.io/cloudrun/hello",
                         },
                     },
+                },
+            },
+            Metadata = new Gcp.CloudRun.Inputs.ServiceMetadataArgs
+            {
+                Annotations = 
+                {
+                    { "generated-by", "magic-modules" },
                 },
             },
             Traffics = 
             {
                 new Gcp.CloudRun.Inputs.ServiceTrafficArgs
                 {
-                    LatestRevision = true,
                     Percent = 100,
+                    LatestRevision = true,
                 },
             },
+            AutogenerateRevisionName = true,
         });
     }
 
@@ -222,40 +401,45 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cloudrun.NewService(ctx, "default", &cloudrun.ServiceArgs{
-			AutogenerateRevisionName: pulumi.Bool(true),
-			Location:                 pulumi.String("us-central1"),
+		_, err := cloudrun.NewService(ctx, "_default", &cloudrun.ServiceArgs{
+			Location: pulumi.String("us-central1"),
 			Template: &cloudrun.ServiceTemplateArgs{
 				Spec: &cloudrun.ServiceTemplateSpecArgs{
 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
 						&cloudrun.ServiceTemplateSpecContainerArgs{
-							Env: pulumi.MapArray{
-								pulumi.Map{
-									"name":  pulumi.String("SOURCE"),
-									"value": pulumi.String("remote"),
+							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
+							Envs: cloudrun.ServiceTemplateSpecContainerEnvArray{
+								&cloudrun.ServiceTemplateSpecContainerEnvArgs{
+									Name:  pulumi.String("SOURCE"),
+									Value: pulumi.String("remote"),
 								},
-								pulumi.Map{
-									"name":  pulumi.String("TARGET"),
-									"value": pulumi.String("home"),
+								&cloudrun.ServiceTemplateSpecContainerEnvArgs{
+									Name:  pulumi.String("TARGET"),
+									Value: pulumi.String("home"),
 								},
 							},
-							Image: pulumi.String("gcr.io/cloudrun/hello"),
 						},
 					},
 				},
 			},
-			Traffics: cloudrun.ServiceTrafficArray{
-				&cloudrun.ServiceTrafficArgs{
-					LatestRevision: pulumi.Bool(true),
-					Percent:        pulumi.Int(100),
+			Metadata: &cloudrun.ServiceMetadataArgs{
+				Annotations: pulumi.StringMap{
+					"generated-by": pulumi.String("magic-modules"),
 				},
 			},
+			Traffics: cloudrun.ServiceTrafficArray{
+				&cloudrun.ServiceTrafficArgs{
+					Percent:        pulumi.Int(100),
+					LatestRevision: pulumi.Bool(true),
+				},
+			},
+			AutogenerateRevisionName: pulumi.Bool(true),
 		})
 		if err != nil {
 			return err
@@ -273,29 +457,34 @@ import pulumi
 import pulumi_gcp as gcp
 
 default = gcp.cloudrun.Service("default",
-    autogenerate_revision_name=True,
     location="us-central1",
-    template={
-        "spec": {
-            "containers": [{
-                "env": [
-                    {
-                        "name": "SOURCE",
-                        "value": "remote",
-                    },
-                    {
-                        "name": "TARGET",
-                        "value": "home",
-                    },
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                image="us-docker.pkg.dev/cloudrun/container/hello",
+                envs=[
+                    gcp.cloudrun.ServiceTemplateSpecContainerEnvArgs(
+                        name="SOURCE",
+                        value="remote",
+                    ),
+                    gcp.cloudrun.ServiceTemplateSpecContainerEnvArgs(
+                        name="TARGET",
+                        value="home",
+                    ),
                 ],
-                "image": "gcr.io/cloudrun/hello",
-            }],
+            )],
+        ),
+    ),
+    metadata=gcp.cloudrun.ServiceMetadataArgs(
+        annotations={
+            "generated-by": "magic-modules",
         },
-    },
-    traffics=[{
-        "latestRevision": True,
-        "percent": 100,
-    }])
+    ),
+    traffics=[gcp.cloudrun.ServiceTrafficArgs(
+        percent=100,
+        latest_revision=True,
+    )],
+    autogenerate_revision_name=True)
 ```
 
 {{% /example %}}
@@ -306,12 +495,12 @@ default = gcp.cloudrun.Service("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const defaultService = new gcp.cloudrun.Service("default", {
-    autogenerateRevisionName: true,
+const _default = new gcp.cloudrun.Service("default", {
     location: "us-central1",
     template: {
         spec: {
             containers: [{
+                image: "us-docker.pkg.dev/cloudrun/container/hello",
                 envs: [
                     {
                         name: "SOURCE",
@@ -322,14 +511,19 @@ const defaultService = new gcp.cloudrun.Service("default", {
                         value: "home",
                     },
                 ],
-                image: "gcr.io/cloudrun/hello",
             }],
         },
     },
+    metadata: {
+        annotations: {
+            "generated-by": "magic-modules",
+        },
+    },
     traffics: [{
-        latestRevision: true,
         percent: 100,
+        latestRevision: true,
     }],
+    autogenerateRevisionName: true,
 });
 ```
 
@@ -360,7 +554,7 @@ class MyStack : Stack
                     {
                         new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
                         {
-                            Image = "gcr.io/cloudrun/hello",
+                            Image = "us-docker.pkg.dev/cloudrun/container/hello",
                         },
                     },
                 },
@@ -391,13 +585,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err = cloudrun.NewService(ctx, "default", &cloudrun.ServiceArgs{
+		_, err := cloudrun.NewService(ctx, "_default", &cloudrun.ServiceArgs{
 			Location: pulumi.String("us-central1"),
 			Template: &cloudrun.ServiceTemplateArgs{
 				Metadata: &cloudrun.ServiceTemplateMetadataArgs{
@@ -406,7 +600,7 @@ func main() {
 				Spec: &cloudrun.ServiceTemplateSpecArgs{
 					Containers: cloudrun.ServiceTemplateSpecContainerArray{
 						&cloudrun.ServiceTemplateSpecContainerArgs{
-							Image: pulumi.String("gcr.io/cloudrun/hello"),
+							Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
 						},
 					},
 				},
@@ -439,25 +633,25 @@ import pulumi_gcp as gcp
 
 default = gcp.cloudrun.Service("default",
     location="us-central1",
-    template={
-        "metadata": {
-            "name": "cloudrun-srv-green",
-        },
-        "spec": {
-            "containers": [{
-                "image": "gcr.io/cloudrun/hello",
-            }],
-        },
-    },
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        metadata=gcp.cloudrun.ServiceTemplateMetadataArgs(
+            name="cloudrun-srv-green",
+        ),
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                image="us-docker.pkg.dev/cloudrun/container/hello",
+            )],
+        ),
+    ),
     traffics=[
-        {
-            "percent": 25,
-            "revisionName": "cloudrun-srv-green",
-        },
-        {
-            "percent": 75,
-            "revisionName": "cloudrun-srv-blue",
-        },
+        gcp.cloudrun.ServiceTrafficArgs(
+            percent=25,
+            revision_name="cloudrun-srv-green",
+        ),
+        gcp.cloudrun.ServiceTrafficArgs(
+            percent=75,
+            revision_name="cloudrun-srv-blue",
+        ),
     ])
 ```
 
@@ -477,7 +671,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
         },
         spec: {
             containers: [{
-                image: "gcr.io/cloudrun/hello",
+                image: "us-docker.pkg.dev/cloudrun/container/hello",
             }],
         },
     },
@@ -505,19 +699,19 @@ const defaultService = new gcp.cloudrun.Service("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#Service">Service</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Service</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/cloudrun/#Service">Service</a></span><span class="p">(resource_name, </span>opts=None<span class="p">, </span>autogenerate_revision_name=None<span class="p">, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>template=None<span class="p">, </span>traffics=None<span class="p">, </span>__props__=None<span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[ServiceMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[ServiceTemplateArgs]</span> = None<span class="p">, </span><span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceTrafficArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#Service">NewService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.ServiceArgs.html">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Service</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -528,7 +722,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -538,7 +732,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#ServiceArgs">ServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -587,7 +781,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -597,7 +791,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -607,7 +801,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceArgs">ServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -617,7 +811,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -636,7 +830,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -646,7 +840,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.ServiceArgs.html">ServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">ServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -669,12 +863,11 @@ const defaultService = new gcp.cloudrun.Service("default", {
 
 ## Service Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Service resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
-
+The Service resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -685,68 +878,64 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autogeneraterevisionname_csharp">
 <a href="#autogeneraterevisionname_csharp" style="color: inherit; text-decoration: inherit;">Autogenerate<wbr>Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
 this field is set to false, the revision name will still autogenerate.)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
-and annotations.  Structure is documented below.
+and annotations.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="template_csharp">
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
@@ -758,24 +947,23 @@ spec doesn't otherwise change, a nonce label may be provided in the
 template metadata. For more details, see:
 https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
 Cloud Run does not currently support referencing a build that is
-responsible for materializing the container image from source.  Structure is documented below.
+responsible for materializing the container image from source.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="traffics_csharp">
 <a href="#traffics_csharp" style="color: inherit; text-decoration: inherit;">Traffics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">List&lt;Service<wbr>Traffic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
-and Configurations  Structure is documented below.
+and Configurations
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -784,68 +972,64 @@ and Configurations  Structure is documented below.
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autogeneraterevisionname_go">
 <a href="#autogeneraterevisionname_go" style="color: inherit; text-decoration: inherit;">Autogenerate<wbr>Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
 this field is set to false, the revision name will still autogenerate.)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
-and annotations.  Structure is documented below.
+and annotations.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="template_go">
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
@@ -857,24 +1041,23 @@ spec doesn't otherwise change, a nonce label may be provided in the
 template metadata. For more details, see:
 https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
 Cloud Run does not currently support referencing a build that is
-responsible for materializing the container image from source.  Structure is documented below.
+responsible for materializing the container image from source.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="traffics_go">
 <a href="#traffics_go" style="color: inherit; text-decoration: inherit;">Traffics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">[]Service<wbr>Traffic</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
-and Configurations  Structure is documented below.
+and Configurations
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -883,68 +1066,64 @@ and Configurations  Structure is documented below.
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autogeneraterevisionname_nodejs">
 <a href="#autogeneraterevisionname_nodejs" style="color: inherit; text-decoration: inherit;">autogenerate<wbr>Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
 this field is set to false, the revision name will still autogenerate.)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
-and annotations.  Structure is documented below.
+and annotations.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="template_nodejs">
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
@@ -956,24 +1135,23 @@ spec doesn't otherwise change, a nonce label may be provided in the
 template metadata. For more details, see:
 https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
 Cloud Run does not currently support referencing a build that is
-responsible for materializing the container image from source.  Structure is documented below.
+responsible for materializing the container image from source.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="traffics_nodejs">
 <a href="#traffics_nodejs" style="color: inherit; text-decoration: inherit;">traffics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
-and Configurations  Structure is documented below.
+and Configurations
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -982,70 +1160,66 @@ and Configurations  Structure is documented below.
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autogenerate_revision_name_python">
 <a href="#autogenerate_revision_name_python" style="color: inherit; text-decoration: inherit;">autogenerate_<wbr>revision_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
 this field is set to false, the revision name will still autogenerate.)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Dict[Service<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
-and annotations.  Structure is documented below.
+and annotations.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="template_python">
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Dict[Service<wbr>Template]</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to
 be stamped out. The template references the container image, and may also
@@ -1055,33 +1229,28 @@ spec doesn't otherwise change, a nonce label may be provided in the
 template metadata. For more details, see:
 https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
 Cloud Run does not currently support referencing a build that is
-responsible for materializing the container image from source.  Structure is documented below.
+responsible for materializing the container image from source.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="traffics_python">
 <a href="#traffics_python" style="color: inherit; text-decoration: inherit;">traffics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">List[Service<wbr>Traffic]</a></span>
+        <span class="property-type"><a href="#servicetraffic">Sequence[Service<wbr>Traffic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
-and Configurations  Structure is documented below.
+and Configurations
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Service resource produces the following output properties:
-
 
 
 
@@ -1092,26 +1261,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+        <span id="statuses_csharp">
+<a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Service<wbr>Status</a></span>
+        <span class="property-type"><a href="#servicestatus">List&lt;Service<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1120,26 +1286,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+        <span id="statuses_go">
+<a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Service<wbr>Status</a></span>
+        <span class="property-type"><a href="#servicestatus">[]Service<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1148,26 +1311,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+        <span id="statuses_nodejs">
+<a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Service<wbr>Status</a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1176,29 +1336,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+        <span id="statuses_python">
+<a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Dict[Service<wbr>Status]</a></span>
+        <span class="property-type"><a href="#servicestatus">Sequence[Service<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1208,19 +1362,20 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#Service">Service</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Service</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autogenerate_revision_name=None<span class="p">, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>status=None<span class="p">, </span>template=None<span class="p">, </span>traffics=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autogenerate_revision_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[ServiceMetadataArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceStatusArgs]]</span> = None<span class="p">, </span><span class="nx">template</span><span class="p">:</span> <span class="nx">Optional[ServiceTemplateArgs]</span> = None<span class="p">, </span><span class="nx">traffics</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceTrafficArgs]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Service</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.ServiceState.html">ServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Service</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1322,7 +1477,6 @@ Get an existing Service resource's state with the given name, ID, and optional e
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1330,79 +1484,74 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_autogeneraterevisionname_csharp">
 <a href="#state_autogeneraterevisionname_csharp" style="color: inherit; text-decoration: inherit;">Autogenerate<wbr>Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
 this field is set to false, the revision name will still autogenerate.)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
-and annotations.  Structure is documented below.
+and annotations.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_csharp">
-<a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+        <span id="state_statuses_csharp">
+<a href="#state_statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Service<wbr>Status<wbr>Args</a></span>
+        <span class="property-type"><a href="#servicestatus">List&lt;Service<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_csharp">
 <a href="#state_template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
@@ -1414,24 +1563,23 @@ spec doesn't otherwise change, a nonce label may be provided in the
 template metadata. For more details, see:
 https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
 Cloud Run does not currently support referencing a build that is
-responsible for materializing the container image from source.  Structure is documented below.
+responsible for materializing the container image from source.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_traffics_csharp">
 <a href="#state_traffics_csharp" style="color: inherit; text-decoration: inherit;">Traffics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">List&lt;Service<wbr>Traffic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
-and Configurations  Structure is documented below.
+and Configurations
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1440,79 +1588,74 @@ and Configurations  Structure is documented below.
             title="Optional">
         <span id="state_autogeneraterevisionname_go">
 <a href="#state_autogeneraterevisionname_go" style="color: inherit; text-decoration: inherit;">Autogenerate<wbr>Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
 this field is set to false, the revision name will still autogenerate.)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
-and annotations.  Structure is documented below.
+and annotations.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_go">
-<a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+        <span id="state_statuses_go">
+<a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Service<wbr>Status</a></span>
+        <span class="property-type"><a href="#servicestatus">[]Service<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_go">
 <a href="#state_template_go" style="color: inherit; text-decoration: inherit;">Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
@@ -1524,24 +1667,23 @@ spec doesn't otherwise change, a nonce label may be provided in the
 template metadata. For more details, see:
 https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
 Cloud Run does not currently support referencing a build that is
-responsible for materializing the container image from source.  Structure is documented below.
+responsible for materializing the container image from source.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_traffics_go">
 <a href="#state_traffics_go" style="color: inherit; text-decoration: inherit;">Traffics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">[]Service<wbr>Traffic</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
-and Configurations  Structure is documented below.
+and Configurations
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1550,79 +1692,74 @@ and Configurations  Structure is documented below.
             title="Optional">
         <span id="state_autogeneraterevisionname_nodejs">
 <a href="#state_autogeneraterevisionname_nodejs" style="color: inherit; text-decoration: inherit;">autogenerate<wbr>Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
 this field is set to false, the revision name will still autogenerate.)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
-and annotations.  Structure is documented below.
+and annotations.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_nodejs">
-<a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+        <span id="state_statuses_nodejs">
+<a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Service<wbr>Status</a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_nodejs">
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
@@ -1634,24 +1771,23 @@ spec doesn't otherwise change, a nonce label may be provided in the
 template metadata. For more details, see:
 https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
 Cloud Run does not currently support referencing a build that is
-responsible for materializing the container image from source.  Structure is documented below.
+responsible for materializing the container image from source.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_traffics_nodejs">
 <a href="#state_traffics_nodejs" style="color: inherit; text-decoration: inherit;">traffics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
-and Configurations  Structure is documented below.
+and Configurations
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1660,81 +1796,76 @@ and Configurations  Structure is documented below.
             title="Optional">
         <span id="state_autogenerate_revision_name_python">
 <a href="#state_autogenerate_revision_name_python" style="color: inherit; text-decoration: inherit;">autogenerate_<wbr>revision_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
 this field is set to false, the revision name will still autogenerate.)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Dict[Service<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
-and annotations.  Structure is documented below.
+and annotations.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="state_status_python">
-<a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+        <span id="state_statuses_python">
+<a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Dict[Service<wbr>Status]</a></span>
+        <span class="property-type"><a href="#servicestatus">Sequence[Service<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_template_python">
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Dict[Service<wbr>Template]</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to
 be stamped out. The template references the container image, and may also
@@ -1744,27 +1875,23 @@ spec doesn't otherwise change, a nonce label may be provided in the
 template metadata. For more details, see:
 https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions
 Cloud Run does not currently support referencing a build that is
-responsible for materializing the container image from source.  Structure is documented below.
+responsible for materializing the container image from source.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_traffics_python">
 <a href="#state_traffics_python" style="color: inherit; text-decoration: inherit;">traffics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">List[Service<wbr>Traffic]</a></span>
+        <span class="property-type"><a href="#servicetraffic">Sequence[Service<wbr>Traffic<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions
-and Configurations  Structure is documented below.
+and Configurations
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1774,20 +1901,8 @@ and Configurations  Structure is documented below.
 ## Supporting Types
 
 
+
 <h4 id="servicemetadata">Service<wbr>Metadata</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceMetadata">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceMetadata">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceMetadataOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceMetadata.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1796,32 +1911,27 @@ and Configurations  Structure is documented below.
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_csharp">
 <a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1830,26 +1940,24 @@ A sequence number representing a specific generation of the desired state.
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceversion_csharp">
 <a href="#resourceversion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -1860,36 +1968,32 @@ particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uid_csharp">
 <a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1898,32 +2002,27 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_go">
 <a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1932,26 +2031,24 @@ A sequence number representing a specific generation of the desired state.
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceversion_go">
 <a href="#resourceversion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -1962,36 +2059,32 @@ particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uid_go">
 <a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2000,32 +2093,27 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_nodejs">
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2034,26 +2122,24 @@ A sequence number representing a specific generation of the desired state.
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceversion_nodejs">
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -2064,36 +2150,32 @@ particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uid_nodejs">
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2102,60 +2184,53 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_python">
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="resourceversion_python">
-<a href="#resourceversion_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
-</span> 
+        <span id="resource_version_python">
+<a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -2166,54 +2241,34 @@ particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uid_python">
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicestatus">Service<wbr>Status</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceStatus">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceStatusOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceStatus.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2222,55 +2277,49 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicestatuscondition">List&lt;Service<wbr>Status<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latestcreatedrevisionname_csharp">
 <a href="#latestcreatedrevisionname_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Created<wbr>Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latestreadyrevisionname_csharp">
 <a href="#latestreadyrevisionname_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Ready<wbr>Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="observedgeneration_csharp">
 <a href="#observedgeneration_csharp" style="color: inherit; text-decoration: inherit;">Observed<wbr>Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2279,55 +2328,49 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="conditions_go">
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicestatuscondition">[]Service<wbr>Status<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latestcreatedrevisionname_go">
 <a href="#latestcreatedrevisionname_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Created<wbr>Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latestreadyrevisionname_go">
 <a href="#latestreadyrevisionname_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Ready<wbr>Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="observedgeneration_go">
 <a href="#observedgeneration_go" style="color: inherit; text-decoration: inherit;">Observed<wbr>Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2336,55 +2379,49 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicestatuscondition">Service<wbr>Status<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latestcreatedrevisionname_nodejs">
 <a href="#latestcreatedrevisionname_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Created<wbr>Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latestreadyrevisionname_nodejs">
 <a href="#latestreadyrevisionname_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Ready<wbr>Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="observedgeneration_nodejs">
 <a href="#observedgeneration_nodejs" style="color: inherit; text-decoration: inherit;">observed<wbr>Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2393,73 +2430,51 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatuscondition">List[Service<wbr>Status<wbr>Condition]</a></span>
+        <span class="property-type"><a href="#servicestatuscondition">Sequence[Service<wbr>Status<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="latestcreatedrevisionname_python">
-<a href="#latestcreatedrevisionname_python" style="color: inherit; text-decoration: inherit;">latest<wbr>Created<wbr>Revision<wbr>Name</a>
-</span> 
+        <span id="latest_created_revision_name_python">
+<a href="#latest_created_revision_name_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>created_<wbr>revision_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="latestreadyrevisionname_python">
-<a href="#latestreadyrevisionname_python" style="color: inherit; text-decoration: inherit;">latest<wbr>Ready<wbr>Revision<wbr>Name</a>
-</span> 
+        <span id="latest_ready_revision_name_python">
+<a href="#latest_ready_revision_name_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>ready_<wbr>revision_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="observedgeneration_python">
-<a href="#observedgeneration_python" style="color: inherit; text-decoration: inherit;">observed<wbr>Generation</a>
-</span> 
+        <span id="observed_generation_python">
+<a href="#observed_generation_python" style="color: inherit; text-decoration: inherit;">observed_<wbr>generation</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicestatuscondition">Service<wbr>Status<wbr>Condition</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceStatusCondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceStatusConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceStatusCondition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2468,45 +2483,40 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reason_csharp">
 <a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2515,45 +2525,40 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reason_go">
 <a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2562,45 +2567,40 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reason_nodejs">
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2609,63 +2609,42 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reason_python">
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicetemplate">Service<wbr>Template</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTemplate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2674,28 +2653,27 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
-and annotations.  Structure is documented below.
+and annotations.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="spec_csharp">
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).  Structure is documented below.
+    <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2704,28 +2682,27 @@ and annotations.  Structure is documented below.
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
-and annotations.  Structure is documented below.
+and annotations.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="spec_go">
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).  Structure is documented below.
+    <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2734,28 +2711,27 @@ and annotations.  Structure is documented below.
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
-and annotations.  Structure is documented below.
+and annotations.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="spec_nodejs">
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec</a></span>
     </dt>
-    <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).  Structure is documented below.
+    <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2764,46 +2740,29 @@ and annotations.  Structure is documented below.
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatemetadata">Dict[Service<wbr>Template<wbr>Metadata]</a></span>
+        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels,
-and annotations.  Structure is documented below.
+and annotations.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="spec_python">
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespec">Dict[Service<wbr>Template<wbr>Spec]</a></span>
+        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).  Structure is documented below.
+    <dd>{{% md %}}RevisionSpec holds the desired state of the Revision (from the client).
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicetemplatemetadata">Service<wbr>Template<wbr>Metadata</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplateMetadata">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTemplateMetadata">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateMetadataOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateMetadata.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2812,32 +2771,27 @@ and annotations.  Structure is documented below.
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_csharp">
 <a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -2846,37 +2800,34 @@ A sequence number representing a specific generation of the desired state.
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceversion_csharp">
 <a href="#resourceversion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -2887,36 +2838,32 @@ particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uid_csharp">
 <a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2925,32 +2872,27 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_go">
 <a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2959,37 +2901,34 @@ A sequence number representing a specific generation of the desired state.
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceversion_go">
 <a href="#resourceversion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -3000,36 +2939,32 @@ particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uid_go">
 <a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3038,32 +2973,27 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_nodejs">
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -3072,37 +3002,34 @@ A sequence number representing a specific generation of the desired state.
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourceversion_nodejs">
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -3113,36 +3040,32 @@ particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uid_nodejs">
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3151,71 +3074,63 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="generation_python">
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="resourceversion_python">
-<a href="#resourceversion_python" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
-</span> 
+        <span id="resource_version_python">
+<a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 An opaque value that represents the internal version of this object that
@@ -3226,54 +3141,34 @@ particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="uid_python">
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicetemplatespec">Service<wbr>Template<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplateSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTemplateSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3282,23 +3177,18 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
             title="Optional">
         <span id="containerconcurrency_csharp">
 <a href="#containerconcurrency_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Concurrency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
 requests per container of the Revision. Values are:
-- `0` thread-safe, the system should manage the max concurrency. This is
-the default value.
-- `1` not-thread-safe. Single concurrency
-- `2-N` thread-safe, max concurrency of N
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containers_csharp">
 <a href="#containers_csharp" style="color: inherit; text-decoration: inherit;">Containers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainer">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args&gt;</a></span>
     </dt>
@@ -3306,30 +3196,29 @@ the default value.
 In the context of a Revision, we disallow a number of the fields of
 this Container, including: name, ports, and volumeMounts.
 The runtime contract is documented here:
-https://github.com/knative/serving/blob/master/docs/runtime-contract.md  Structure is documented below.
+https://github.com/knative/serving/blob/master/docs/runtime-contract.md
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccountname_csharp">
 <a href="#serviceaccountname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the IAM service account associated with the revision of the
 service. The service account represents the identity of the running revision,
 and determines what permissions the revision has. If not provided, the revision
 will use the project's default service account.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="servingstate_csharp">
 <a href="#servingstate_csharp" style="color: inherit; text-decoration: inherit;">Serving<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 ServingState holds a value describing the state the resources
@@ -3337,21 +3226,18 @@ are in for this Revision.
 It is expected
 that the system will manipulate this based on routability and load.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_csharp">
 <a href="#timeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3360,23 +3246,18 @@ that the system will manipulate this based on routability and load.
             title="Optional">
         <span id="containerconcurrency_go">
 <a href="#containerconcurrency_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Concurrency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
 requests per container of the Revision. Values are:
-- `0` thread-safe, the system should manage the max concurrency. This is
-the default value.
-- `1` not-thread-safe. Single concurrency
-- `2-N` thread-safe, max concurrency of N
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containers_go">
 <a href="#containers_go" style="color: inherit; text-decoration: inherit;">Containers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainer">[]Service<wbr>Template<wbr>Spec<wbr>Container</a></span>
     </dt>
@@ -3384,30 +3265,29 @@ the default value.
 In the context of a Revision, we disallow a number of the fields of
 this Container, including: name, ports, and volumeMounts.
 The runtime contract is documented here:
-https://github.com/knative/serving/blob/master/docs/runtime-contract.md  Structure is documented below.
+https://github.com/knative/serving/blob/master/docs/runtime-contract.md
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccountname_go">
 <a href="#serviceaccountname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the IAM service account associated with the revision of the
 service. The service account represents the identity of the running revision,
 and determines what permissions the revision has. If not provided, the revision
 will use the project's default service account.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="servingstate_go">
 <a href="#servingstate_go" style="color: inherit; text-decoration: inherit;">Serving<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 ServingState holds a value describing the state the resources
@@ -3415,21 +3295,18 @@ are in for this Revision.
 It is expected
 that the system will manipulate this based on routability and load.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_go">
 <a href="#timeoutseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3438,23 +3315,18 @@ that the system will manipulate this based on routability and load.
             title="Optional">
         <span id="containerconcurrency_nodejs">
 <a href="#containerconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Concurrency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
 requests per container of the Revision. Values are:
-- `0` thread-safe, the system should manage the max concurrency. This is
-the default value.
-- `1` not-thread-safe. Single concurrency
-- `2-N` thread-safe, max concurrency of N
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containers_nodejs">
 <a href="#containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainer">Service<wbr>Template<wbr>Spec<wbr>Container[]</a></span>
     </dt>
@@ -3462,30 +3334,29 @@ the default value.
 In the context of a Revision, we disallow a number of the fields of
 this Container, including: name, ports, and volumeMounts.
 The runtime contract is documented here:
-https://github.com/knative/serving/blob/master/docs/runtime-contract.md  Structure is documented below.
+https://github.com/knative/serving/blob/master/docs/runtime-contract.md
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccountname_nodejs">
 <a href="#serviceaccountname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address of the IAM service account associated with the revision of the
 service. The service account represents the identity of the running revision,
 and determines what permissions the revision has. If not provided, the revision
 will use the project's default service account.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="servingstate_nodejs">
 <a href="#servingstate_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 ServingState holds a value describing the state the resources
@@ -3493,77 +3364,68 @@ are in for this Revision.
 It is expected
 that the system will manipulate this based on routability and load.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeoutseconds_nodejs">
 <a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="containerconcurrency_python">
-<a href="#containerconcurrency_python" style="color: inherit; text-decoration: inherit;">container<wbr>Concurrency</a>
-</span> 
+        <span id="container_concurrency_python">
+<a href="#container_concurrency_python" style="color: inherit; text-decoration: inherit;">container_<wbr>concurrency</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
 requests per container of the Revision. Values are:
-- `0` thread-safe, the system should manage the max concurrency. This is
-the default value.
-- `1` not-thread-safe. Single concurrency
-- `2-N` thread-safe, max concurrency of N
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containers_python">
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainer">List[Service<wbr>Template<wbr>Spec<wbr>Container]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainer">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Container defines the unit of execution for this Revision.
 In the context of a Revision, we disallow a number of the fields of
 this Container, including: name, ports, and volumeMounts.
 The runtime contract is documented here:
-https://github.com/knative/serving/blob/master/docs/runtime-contract.md  Structure is documented below.
+https://github.com/knative/serving/blob/master/docs/runtime-contract.md
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_account_name_python">
 <a href="#service_account_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address of the IAM service account associated with the revision of the
 service. The service account represents the identity of the running revision,
 and determines what permissions the revision has. If not provided, the revision
 will use the project's default service account.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="servingstate_python">
-<a href="#servingstate_python" style="color: inherit; text-decoration: inherit;">serving<wbr>State</a>
-</span> 
+        <span id="serving_state_python">
+<a href="#serving_state_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>state</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 ServingState holds a value describing the state the resources
@@ -3571,39 +3433,20 @@ are in for this Revision.
 It is expected
 that the system will manipulate this based on routability and load.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="timeoutseconds_python">
-<a href="#timeoutseconds_python" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
-</span> 
+        <span id="timeout_seconds_python">
+<a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicetemplatespeccontainer">Service<wbr>Template<wbr>Spec<wbr>Container</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplateSpecContainer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTemplateSpecContainer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainer.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3612,22 +3455,21 @@ that the system will manipulate this based on routability and load.
             title="Required">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker image name. This is most often a reference to a container located
 in the container registry, such as gcr.io/cloudrun/hello
 More info: https://kubernetes.io/docs/concepts/containers/images
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint.
 The docker image's CMD is used if this is not provided.
@@ -3639,14 +3481,13 @@ regardless of whether the variable exists or not.
 More info:
 https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commands_csharp">
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Entrypoint array. Not executed within a shell.
 The docker image's ENTRYPOINT is used if this is not provided.
@@ -3658,12 +3499,11 @@ regardless of whether the variable exists or not.
 More info:
 https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="envfroms_csharp">
 <a href="#envfroms_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>Froms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args&gt;</a></span>
     </dt>
@@ -3673,40 +3513,53 @@ List of sources to populate environment variables in the container.
 All invalid keys will be reported as an event when the container is starting.
 When a key exists in multiple sources, the value associated with the last source will
 take precedence. Values defined by an Env with a duplicate key will take
-precedence.  Structure is documented below.
+precedence.
+Structure is documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="envs_csharp">
 <a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenv">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of environment variables to set in the container.  Structure is documented below.
+    <dd>{{% md %}}List of environment variables to set in the container.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_csharp">
+<a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerport">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of open ports in the container.
+More Info:
+https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
 More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources  Structure is documented below.
+https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workingdir_csharp">
 <a href="#workingdir_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -3714,10 +3567,8 @@ Container's working directory.
 If not specified, the container runtime's default will be used, which
 might be configured in the container image.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3726,22 +3577,21 @@ might be configured in the container image.
             title="Required">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker image name. This is most often a reference to a container located
 in the container registry, such as gcr.io/cloudrun/hello
 More info: https://kubernetes.io/docs/concepts/containers/images
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint.
 The docker image's CMD is used if this is not provided.
@@ -3753,14 +3603,13 @@ regardless of whether the variable exists or not.
 More info:
 https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commands_go">
 <a href="#commands_go" style="color: inherit; text-decoration: inherit;">Commands</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Entrypoint array. Not executed within a shell.
 The docker image's ENTRYPOINT is used if this is not provided.
@@ -3772,12 +3621,11 @@ regardless of whether the variable exists or not.
 More info:
 https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="envfroms_go">
 <a href="#envfroms_go" style="color: inherit; text-decoration: inherit;">Env<wbr>Froms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">[]Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From</a></span>
     </dt>
@@ -3787,40 +3635,53 @@ List of sources to populate environment variables in the container.
 All invalid keys will be reported as an event when the container is starting.
 When a key exists in multiple sources, the value associated with the last source will
 take precedence. Values defined by an Env with a duplicate key will take
-precedence.  Structure is documented below.
+precedence.
+Structure is documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="envs_go">
 <a href="#envs_go" style="color: inherit; text-decoration: inherit;">Envs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenv">[]Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env</a></span>
     </dt>
-    <dd>{{% md %}}List of environment variables to set in the container.  Structure is documented below.
+    <dd>{{% md %}}List of environment variables to set in the container.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_go">
+<a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerport">[]Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port</a></span>
+    </dt>
+    <dd>{{% md %}}List of open ports in the container.
+More Info:
+https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
 More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources  Structure is documented below.
+https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workingdir_go">
 <a href="#workingdir_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -3828,10 +3689,8 @@ Container's working directory.
 If not specified, the container runtime's default will be used, which
 might be configured in the container image.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3840,22 +3699,21 @@ might be configured in the container image.
             title="Required">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker image name. This is most often a reference to a container located
 in the container registry, such as gcr.io/cloudrun/hello
 More info: https://kubernetes.io/docs/concepts/containers/images
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint.
 The docker image's CMD is used if this is not provided.
@@ -3867,14 +3725,13 @@ regardless of whether the variable exists or not.
 More info:
 https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commands_nodejs">
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Entrypoint array. Not executed within a shell.
 The docker image's ENTRYPOINT is used if this is not provided.
@@ -3886,12 +3743,11 @@ regardless of whether the variable exists or not.
 More info:
 https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="envfroms_nodejs">
 <a href="#envfroms_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Froms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From[]</a></span>
     </dt>
@@ -3901,40 +3757,53 @@ List of sources to populate environment variables in the container.
 All invalid keys will be reported as an event when the container is starting.
 When a key exists in multiple sources, the value associated with the last source will
 take precedence. Values defined by an Env with a duplicate key will take
-precedence.  Structure is documented below.
+precedence.
+Structure is documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="envs_nodejs">
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenv">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env[]</a></span>
     </dt>
-    <dd>{{% md %}}List of environment variables to set in the container.  Structure is documented below.
+    <dd>{{% md %}}List of environment variables to set in the container.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_nodejs">
+<a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerport">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of open ports in the container.
+More Info:
+https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
 More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources  Structure is documented below.
+https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="workingdir_nodejs">
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -3942,10 +3811,8 @@ Container's working directory.
 If not specified, the container runtime's default will be used, which
 might be configured in the container image.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3954,22 +3821,21 @@ might be configured in the container image.
             title="Required">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Docker image name. This is most often a reference to a container located
 in the container registry, such as gcr.io/cloudrun/hello
 More info: https://kubernetes.io/docs/concepts/containers/images
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint.
 The docker image's CMD is used if this is not provided.
@@ -3981,14 +3847,13 @@ regardless of whether the variable exists or not.
 More info:
 https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commands_python">
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Entrypoint array. Not executed within a shell.
 The docker image's ENTRYPOINT is used if this is not provided.
@@ -4000,14 +3865,13 @@ regardless of whether the variable exists or not.
 More info:
 https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="envfroms_python">
-<a href="#envfroms_python" style="color: inherit; text-decoration: inherit;">env<wbr>Froms</a>
-</span> 
+        <span id="env_froms_python">
+<a href="#env_froms_python" style="color: inherit; text-decoration: inherit;">env_<wbr>froms</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">List[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -4015,40 +3879,53 @@ List of sources to populate environment variables in the container.
 All invalid keys will be reported as an event when the container is starting.
 When a key exists in multiple sources, the value associated with the last source will
 take precedence. Values defined by an Env with a duplicate key will take
-precedence.  Structure is documented below.
+precedence.
+Structure is documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="envs_python">
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenv">List[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of environment variables to set in the container.  Structure is documented below.
+    <dd>{{% md %}}List of environment variables to set in the container.
+Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ports_python">
+<a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerport">Sequence[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of open ports in the container.
+More Info:
+https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Dict[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Compute Resources required by this container. Used to set values such as max memory
 More info:
-https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources  Structure is documented below.
+https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span id="workingdir_python">
-<a href="#workingdir_python" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
-</span> 
+        <span id="working_dir_python">
+<a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 (Optional, Deprecated)
@@ -4056,28 +3933,10 @@ Container's working directory.
 If not specified, the container runtime's default will be used, which
 might be configured in the container image.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicetemplatespeccontainerenv">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplateSpecContainerEnv">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTemplateSpecContainerEnv">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnv.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4086,20 +3945,19 @@ might be configured in the container image.
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable references $(VAR_NAME) are expanded
 using the previous defined environment variables in the container and
@@ -4110,10 +3968,8 @@ references will never be expanded, regardless of whether the variable
 exists or not.
 Defaults to "".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4122,20 +3978,19 @@ Defaults to "".
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable references $(VAR_NAME) are expanded
 using the previous defined environment variables in the container and
@@ -4146,10 +4001,8 @@ references will never be expanded, regardless of whether the variable
 exists or not.
 Defaults to "".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4158,20 +4011,19 @@ Defaults to "".
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable references $(VAR_NAME) are expanded
 using the previous defined environment variables in the container and
@@ -4182,10 +4034,8 @@ references will never be expanded, regardless of whether the variable
 exists or not.
 Defaults to "".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4194,20 +4044,19 @@ Defaults to "".
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Variable references $(VAR_NAME) are expanded
 using the previous defined environment variables in the container and
@@ -4218,28 +4067,10 @@ references will never be expanded, regardless of whether the variable
 exists or not.
 Defaults to "".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicetemplatespeccontainerenvfrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplateSpecContainerEnvFrom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTemplateSpecContainerEnvFrom">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvFromArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnvFrom.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4248,38 +4079,36 @@ Defaults to "".
             title="Optional">
         <span id="configmapref_csharp">
 <a href="#configmapref_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Map<wbr>Ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The ConfigMap to select from.  Structure is documented below.
+    <dd>{{% md %}}The ConfigMap to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secretref_csharp">
 <a href="#secretref_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+    <dd>{{% md %}}The Secret to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4288,38 +4117,36 @@ Defaults to "".
             title="Optional">
         <span id="configmapref_go">
 <a href="#configmapref_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Map<wbr>Ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</a></span>
     </dt>
-    <dd>{{% md %}}The ConfigMap to select from.  Structure is documented below.
+    <dd>{{% md %}}The ConfigMap to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secretref_go">
 <a href="#secretref_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+    <dd>{{% md %}}The Secret to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4328,96 +4155,76 @@ Defaults to "".
             title="Optional">
         <span id="configmapref_nodejs">
 <a href="#configmapref_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</a></span>
     </dt>
-    <dd>{{% md %}}The ConfigMap to select from.  Structure is documented below.
+    <dd>{{% md %}}The ConfigMap to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secretref_nodejs">
 <a href="#secretref_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+    <dd>{{% md %}}The Secret to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="configmapref_python">
-<a href="#configmapref_python" style="color: inherit; text-decoration: inherit;">config<wbr>Map<wbr>Ref</a>
-</span> 
+        <span id="config_map_ref_python">
+<a href="#config_map_ref_python" style="color: inherit; text-decoration: inherit;">config_<wbr>map_<wbr>ref</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Dict[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The ConfigMap to select from.  Structure is documented below.
+    <dd>{{% md %}}The ConfigMap to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional identifier to prepend to each key in the ConfigMap.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="secretref_python">
-<a href="#secretref_python" style="color: inherit; text-decoration: inherit;">secret<wbr>Ref</a>
-</span> 
+        <span id="secret_ref_python">
+<a href="#secret_ref_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>ref</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Dict[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+    <dd>{{% md %}}The Secret to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplateSpecContainerEnvFromConfigMapRef">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTemplateSpecContainerEnvFromConfigMapRef">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvFromConfigMapRefArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnvFromConfigMapRef.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4426,27 +4233,25 @@ Defaults to "".
             title="Optional">
         <span id="localobjectreference_csharp">
 <a href="#localobjectreference_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+    <dd>{{% md %}}The Secret to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optional_csharp">
 <a href="#optional_csharp" style="color: inherit; text-decoration: inherit;">Optional</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4455,27 +4260,25 @@ Defaults to "".
             title="Optional">
         <span id="localobjectreference_go">
 <a href="#localobjectreference_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+    <dd>{{% md %}}The Secret to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optional_go">
 <a href="#optional_go" style="color: inherit; text-decoration: inherit;">Optional</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4484,74 +4287,54 @@ Defaults to "".
             title="Optional">
         <span id="localobjectreference_nodejs">
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+    <dd>{{% md %}}The Secret to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optional_nodejs">
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localobjectreference_python">
-<a href="#localobjectreference_python" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
-</span> 
+        <span id="local_object_reference_python">
+<a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Dict[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+    <dd>{{% md %}}The Secret to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optional_python">
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4560,16 +4343,14 @@ Defaults to "".
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4578,16 +4359,14 @@ Defaults to "".
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4596,16 +4375,14 @@ Defaults to "".
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4614,34 +4391,16 @@ Defaults to "".
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplateSpecContainerEnvFromSecretRef">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTemplateSpecContainerEnvFromSecretRef">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvFromSecretRefArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnvFromSecretRef.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4650,27 +4409,25 @@ Defaults to "".
             title="Optional">
         <span id="localobjectreference_csharp">
 <a href="#localobjectreference_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+    <dd>{{% md %}}The Secret to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optional_csharp">
 <a href="#optional_csharp" style="color: inherit; text-decoration: inherit;">Optional</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4679,27 +4436,25 @@ Defaults to "".
             title="Optional">
         <span id="localobjectreference_go">
 <a href="#localobjectreference_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Object<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+    <dd>{{% md %}}The Secret to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optional_go">
 <a href="#optional_go" style="color: inherit; text-decoration: inherit;">Optional</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4708,74 +4463,54 @@ Defaults to "".
             title="Optional">
         <span id="localobjectreference_nodejs">
 <a href="#localobjectreference_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+    <dd>{{% md %}}The Secret to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optional_nodejs">
 <a href="#optional_nodejs" style="color: inherit; text-decoration: inherit;">optional</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
-        <span id="localobjectreference_python">
-<a href="#localobjectreference_python" style="color: inherit; text-decoration: inherit;">local<wbr>Object<wbr>Reference</a>
-</span> 
+        <span id="local_object_reference_python">
+<a href="#local_object_reference_python" style="color: inherit; text-decoration: inherit;">local_<wbr>object_<wbr>reference</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Dict[Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference]</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Secret to select from.  Structure is documented below.
+    <dd>{{% md %}}The Secret to select from.
+Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optional_python">
 <a href="#optional_python" style="color: inherit; text-decoration: inherit;">optional</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether the Secret must be defined
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4784,16 +4519,14 @@ Defaults to "".
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4802,16 +4535,14 @@ Defaults to "".
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4820,16 +4551,14 @@ Defaults to "".
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4838,34 +4567,162 @@ Defaults to "".
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the environment variable.
+    <dd>{{% md %}}Name of the port.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="servicetemplatespeccontainerport">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Port</h4>
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-
-
-<h4 id="servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTemplateSpecContainerResources">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTemplateSpecContainerResources">output</a> API doc for this type.
+    <dt class="property-required"
+            title="Required">
+        <span id="containerport_csharp">
+<a href="#containerport_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Port number.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the port.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protocol_csharp">
+<a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Protocol used on port. Defaults to TCP.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerResourcesOutput">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="containerport_go">
+<a href="#containerport_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Port number.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the port.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protocol_go">
+<a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Protocol used on port. Defaults to TCP.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerResourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTemplateSpecContainerResources.html">output</a> API doc for this type.
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="containerport_nodejs">
+<a href="#containerport_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Port number.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the port.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protocol_nodejs">
+<a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Protocol used on port. Defaults to TCP.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="container_port_python">
+<a href="#container_port_python" style="color: inherit; text-decoration: inherit;">container_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Port number.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the port.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protocol_python">
+<a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Protocol used on port. Defaults to TCP.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+<h4 id="servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4874,7 +4731,7 @@ Defaults to "".
             title="Optional">
         <span id="limits_csharp">
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -4882,12 +4739,11 @@ Defaults to "".
 The values of the map is string form of the 'quantity' k8s type:
 https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requests_csharp">
 <a href="#requests_csharp" style="color: inherit; text-decoration: inherit;">Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -4897,10 +4753,8 @@ explicitly specified, otherwise to an implementation-defined value.
 The values of the map is string form of the 'quantity' k8s type:
 https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4909,7 +4763,7 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
             title="Optional">
         <span id="limits_go">
 <a href="#limits_go" style="color: inherit; text-decoration: inherit;">Limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -4917,12 +4771,11 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
 The values of the map is string form of the 'quantity' k8s type:
 https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requests_go">
 <a href="#requests_go" style="color: inherit; text-decoration: inherit;">Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -4932,10 +4785,8 @@ explicitly specified, otherwise to an implementation-defined value.
 The values of the map is string form of the 'quantity' k8s type:
 https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4944,7 +4795,7 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
             title="Optional">
         <span id="limits_nodejs">
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -4952,12 +4803,11 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
 The values of the map is string form of the 'quantity' k8s type:
 https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requests_nodejs">
 <a href="#requests_nodejs" style="color: inherit; text-decoration: inherit;">requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -4967,10 +4817,8 @@ explicitly specified, otherwise to an implementation-defined value.
 The values of the map is string form of the 'quantity' k8s type:
 https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4979,22 +4827,21 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
             title="Optional">
         <span id="limits_python">
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed.
 The values of the map is string form of the 'quantity' k8s type:
 https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requests_python">
 <a href="#requests_python" style="color: inherit; text-decoration: inherit;">requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Requests describes the minimum amount of compute resources required.
 If Requests is omitted for a container, it defaults to Limits if that is
@@ -5002,28 +4849,10 @@ explicitly specified, otherwise to an implementation-defined value.
 The values of the map is string form of the 'quantity' k8s type:
 https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="servicetraffic">Service<wbr>Traffic</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ServiceTraffic">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ServiceTraffic">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTrafficArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTrafficOutput">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Inputs.ServiceTrafficArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Outputs.ServiceTraffic.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5032,41 +4861,37 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
             title="Required">
         <span id="percent_csharp">
 <a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latestrevision_csharp">
 <a href="#latestrevision_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Revision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready
 Revision of the Configuration should be used for this traffic target. When
 provided LatestRevision must be true if RevisionName is empty; it must be
 false when RevisionName is non-empty.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="revisionname_csharp">
 <a href="#revisionname_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5075,41 +4900,37 @@ false when RevisionName is non-empty.
             title="Required">
         <span id="percent_go">
 <a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latestrevision_go">
 <a href="#latestrevision_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Revision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready
 Revision of the Configuration should be used for this traffic target. When
 provided LatestRevision must be true if RevisionName is empty; it must be
 false when RevisionName is non-empty.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="revisionname_go">
 <a href="#revisionname_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5118,41 +4939,37 @@ false when RevisionName is non-empty.
             title="Required">
         <span id="percent_nodejs">
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="latestrevision_nodejs">
 <a href="#latestrevision_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Revision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready
 Revision of the Configuration should be used for this traffic target. When
 provided LatestRevision must be true if RevisionName is empty; it must be
 false when RevisionName is non-empty.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="revisionname_nodejs">
 <a href="#revisionname_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5161,45 +4978,53 @@ false when RevisionName is non-empty.
             title="Required">
         <span id="percent_python">
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percent specifies percent of the traffic to this Revision or Configuration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="latestrevision_python">
-<a href="#latestrevision_python" style="color: inherit; text-decoration: inherit;">latest<wbr>Revision</a>
-</span> 
+        <span id="latest_revision_python">
+<a href="#latest_revision_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>revision</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}LatestRevision may be optionally provided to indicate that the latest ready
 Revision of the Configuration should be used for this traffic target. When
 provided LatestRevision must be true if RevisionName is empty; it must be
 false when RevisionName is non-empty.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span id="revisionname_python">
-<a href="#revisionname_python" style="color: inherit; text-decoration: inherit;">revision<wbr>Name</a>
-</span> 
+        <span id="revision_name_python">
+<a href="#revision_name_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>name</a>
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RevisionName of a specific revision to which to send this portion of traffic.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+## Import
 
 
+Service can be imported using any of these accepted formats
 
+```sh
+ $ pulumi import gcp:cloudrun/service:Service default locations/{{location}}/namespaces/{{project}}/services/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:cloudrun/service:Service default {{location}}/{{project}}/{{name}}
+```
 
+```sh
+ $ pulumi import gcp:cloudrun/service:Service default {{location}}/{{name}}
+```
 
 
 
@@ -5211,6 +5036,6 @@ false when RevisionName is non-empty.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 </dl>
 

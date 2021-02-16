@@ -1,0 +1,11 @@
+id = "piers-karsenbarg"
+name = "Piers Karsenbarg"
+title = "Customer Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+github = "pierskarsenbarg"
+twitter = "pierskarsenbarg"
+linkedin = "piers-karsenbarg"

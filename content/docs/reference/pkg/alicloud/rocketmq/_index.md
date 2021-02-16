@@ -28,6 +28,7 @@ Explore the resources and functions of the rocketmq module in the AliCloud packa
 <ul class="api">
     <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
     <li><a href="gettopics" title="GetTopics"><span class="symbol function"></span>GetTopics</a></li>
 </ul>
 
@@ -38,26 +39,8 @@ Explore the resources and functions of the rocketmq module in the AliCloud packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.RocketMQ.html" title="Pulumi.AliCloud.RocketMQ">Pulumi.AliCloud.RocketMQ</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rocketmq?tab=doc#" title="alicloud/rocketmq">alicloud/rocketmq</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rocketmq/#" title="@pulumi/alicloud/rocketmq">@pulumi/alicloud/rocketmq</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud/rocketmq" title="pulumi_alicloud/rocketmq">pulumi_alicloud/rocketmq</a></dd>
-
+	<dd>2.35.0</dd>
 </dl>
 
